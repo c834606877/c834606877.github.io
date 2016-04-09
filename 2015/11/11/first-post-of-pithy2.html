@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="zh_cn">
+<html lang="zh_cn"  class="han-la" >
   <head>
-    <title>First post of pithy</title>
+    <title>First post of pithy - 面向大海,心暖花开</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -14,45 +14,42 @@
   <!--Font awesome-->
   <link href="/assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 
-  <!-- The pithy main css -->
-  <link rel="stylesheet" href="/assets/stylesheet/pithy.css">
+  <!-- The Iziy main css -->
+  <link rel="stylesheet" href="/assets/stylesheet/style.css">
 
 
   <!--[if lt IE 9]>
   <script src="https://cdn.bootcss.com/html5shiv/3.7.2/html5shiv-printshiv.js"></script>
   <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.js"></script>
   <![endif]-->
-  <link rel="alternate" type="application/rss+xml" title="" href="/feed.xml" />
+  <link rel="alternate" type="application/rss+xml" title="面向大海,心暖花开" href="/feed.xml" />
 </head>
 
-<body>
-  <nav class="navbar navbar-pithy" role="navigation">
-    <div class="container">
-        <div class="navbar-header">
-            <button aria-expanded="false" class="navbar-toggle collapsed" data-target="#pithy-navbar" data-toggle="collapse" type="button">
-                <i class="fa fa-bars"></i>
-            </button>
-            <a class="navbar-brand" href="/">Guovz</a>
+<body class="nav-open">
+  <div id="wrap">
+    <div id="preheader">notice_TOP</div>
+      <header id="header" class="clearfix">
+        <div class="head">
+          <h1><a href="/">面向大海,心暖花开</a></h1>
+          <p class="desc yahei"><span>从明天起,做一个幸福的人, 喂马、劈柴、周游世界。</span></p>
         </div>
-
-        <div class="collapse navbar-collapse" id="pithy-navbar">
-            <ul class="nav navbar-nav">
-                <li class="active">
-                    <a href="/">首页</a>
-                </li>
-                <li class="active">
-                    <a href="/about/">关于</a>
-                </li>
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container -->
+        <nav id="main-nav" class="clearfix yahei">
+    <ul class="nav">
+        <li class="active">
+            <a href="/">首页</a>
+        </li>
+        <li class="active">
+            <a href="/about/">关于</a>
+        </li>
+    </ul>
 </nav>
 
-
-  <div class="container page-content">
-    <div class="container">
+        <div id="announcement">
+          <a href="#" class="openpre close" title="Announcement"><i class="fa fa-star"></i></a>
+        </div>
+      </header>
+      <div id="container" class="clearfix">
+          <div id="content">
     <div class="col-md-9 col-content">
         <div id="post-content" class="panel panel-pithy post">
             <div class="panel-heading">
@@ -120,18 +117,150 @@
 
         
     </div>
-    <div class="col-md-3 col-sidebar">
-        <!-- sidebar:category list -->
-<div class="panel panel-default categories">
-    <div class="panel-heading title">
-        分类列表
+
+<article class="post format-standard">
+    <header class="entry-header">
+    <h2 class="entry-name">
+      <a href="" title="/First post of pithy" rel="bookmark">First post of pithy</a>
+    </h2>
+    <ul class="entry-meta">
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2015年11月11日</li>
+      <li><i class="fa fa-pencil-square-o"></i>
+          
+      </li>
+      <li><i class="fa fa-comments-o"></i> <a href="#post-comment">评论</a></li>
+      <li><i class="fa fa-eye"></i> ? </li>
+    </ul>
+    </header>
+    <div class="entry-content" itemprop="description">
+        <p>123</p>
+
     </div>
-    <div class="panel-body list">
+  <footer class="entry-footer clearfix">
+    <div class="post-share">
+      <a href="javascript:;"><i class="fa fa-share-alt"></i> 分享</a>
+      <ul>
+        <li><a href="http://service.weibo.com/share/share.php?title=<?php the_title(); ?>&url=<?php the_permalink(); ?>" target="_blank"><i class="fa fa-weibo"></i></a></li>
+        <li><a href="http://share.renren.com/share/buttonshare?link=<?php the_permalink(); ?>&title=<?php the_title(); ?>" target="_blank"><i class="fa fa-renren"></i></a></li>
+        <li><a href="http://twitter.com/share?url=<?php the_permalink(); ?>&text=<?php the_title(); ?>" target="_blank"><i class="fa fa-twitter"></i></a></li>
+      </ul>
+    </div>
+    <div class="post-love">
+      <a href="javascript:;" data-action="ding" data-id="<?php the_ID(); ?>" class="favorite post-love-link <?php if(isset($_COOKIE['mzw_ding_'.$post->ID])) echo ' done';?>" title="Love this"><i class="fa fa-heart-o"></i> 
+      <span class="love-count">
+        <?php if( get_post_meta($post->ID,'mzw_ding',true) ){            
+                    echo get_post_meta($post->ID,'mzw_ding',true);
+                 } else {
+                    echo '0';
+                 }?>
+      </span></a>
+    </div>
+    <div class="post-tags">
+      <?php if ( get_the_tags() ) { echo 'Tags: '; the_tags('', ', ', ' ');}?>
+    </div>
+  </footer>
+  <div class="prev-next clearfix">
+  <?php
+    $categories = get_the_category();
+    $categoryIDS = array();
+    foreach ($categories as $category) {
+      array_push($categoryIDS, $category->term_id);
+    }
+    $categoryIDS = implode(",", $categoryIDS);
+    
+    if (get_previous_post($categoryIDS)) {echo '<span class="prev">'; previous_post_link('<i class="fa fa-angle-left"></i>%link'); echo '</span>'; }
+    if (get_next_post($categoryIDS)) {echo '<span class="next">'; next_post_link('%link<i class="fa fa-angle-right"></i>'); echo '</span>';}
+  ?>
+  </div>
+</article>
+
+<div class="post-author box clearfix">
+  <?php echo get_avatar( get_the_author_email(), $size = '80' , '' );?>
+  <div class="author-meta">
+    <p class="name"><?php the_author(); ?></p>
+    <p class="description"><?php the_author_description(); ?></p>
+    
+  </div>
+  
+</div>
+
+
+
+
+</div><!-- ./content -->
+<div id="sidebar">
+  <!-- <div class="panel panel-pithy author">
+    <div class="panel-heading avastar">
+        <img src="/assets/images/logo.png" alt="Lan Bing"/>
+    </div>
+    <div class="panel-body">
+        My Press Iziy
+    </div>
+    <div class="panel-footer social">
+        <ul>
+            
+            <li>
+                <a href="http://weibo.com/u/2717952951" target="_blank"><i class="fa fa-weibo"></i></a>
+            </li>
+            
+            <li>
+                <a href="http://t.qq.com/c834606877" target="_blank"><i class="fa fa-tencent-weibo"></i></a>
+            </li>
+            
+            <li>
+                <a href="https://github.com/c834606877" target="_blank"><i class="fa fa-github"></i></a>
+            </li>
+            
+            <li>
+                <a href="mailto://c834606877@qq.com" target="_blank"><i class="fa fa-envelope"></i></a>
+            </li>
+            
+            <li>
+                <a href="/feed.xml" target="_blank"><i class="fa fa-rss"></i></a>
+            </li>
+            
+            <li>
+                <a href="/feed.xml" target="_blank"><i class="fa fa-rss"></i></a>
+            </li>
+        </ul>
+    </div>
+</div> -->
+
+<aside id="mzw_admin-2" class="widget mzw_admin">
+    <img src="/assets/images/bg_small.jpg">
+    <div class="author-body">
+        <div class="author_img">
+            <img src="/assets/images/logo.png" alt="Lan Bing"/>
+        </div>
+        <div class="author_bio">
+            <h3>Lan Bing </h3>
+            <p class="muted">My Press Iziy </p>
+        </div>
+    </div>
+
+    <div class="social">
+        
+            <a class="weibo" target="_blank" href="http://weibo.com/u/2717952951" target="_blank"><i class="fa fa-weibo"></i></a>
+        
+            <a class="tweibo" target="_blank" href="http://t.qq.com/c834606877" target="_blank"><i class="fa fa-tencent-weibo"></i></a>
+        
+            <a class="github" target="_blank" href="https://github.com/c834606877" target="_blank"><i class="fa fa-github"></i></a>
+        
+            <a class="mail" target="_blank" href="mailto://c834606877@qq.com" target="_blank"><i class="fa fa-envelope"></i></a>
+        
+            <a class="rss" target="_blank" href="/feed.xml" target="_blank"><i class="fa fa-rss"></i></a>
+        
+       
+    </div>
+</aside>
+  <!-- sidebar:category list -->
+<aside id="mzw_siderbar_categories" class="widget widget_mzw_siderbar_categories">
+    <h3 class="widget-title"><span>分类列表</span></h3>
         <ul>
           
           <li>
               <a class="catelink" href="/categories/first_categories">
-                  first_categories&nbsp;<span class="count">[2]</span>
+                  first_categories&nbsp;<span class="count">[1]</span>
               </a>
           </li>
 
@@ -165,15 +294,12 @@
 
           
         </ul>
-    </div>
-</div>
-
-        <!-- sidebar: tag list -->
-<div class="panel panel-default tags">
-    <div class="panel-heading title">
-        标签云
-    </div>
-    <div class="panel-body list">
+</aside>
+  <!-- sidebar: tag list -->
+<aside id="mzw_siderbar_tags-3" class="widget widget_mzw_siderbar_tags">
+    <h3 class="widget-title"><hanla></hanla><span>标签云</span></h3>
+    <div class="tagcloud">
+        <!-- <a href="http://lbing.sinaapp.com/archives/tag/%e6%a0%87%e7%ad%be1">标签<hanla></hanla>1</a> -->
         
             <a class="taglink" href="/tag/#first_tag" data-target-cate="#first_tag">
                 first_tag
@@ -184,28 +310,42 @@
             </a>
         
     </div>
-</div>
+</aside>
+</div><!-- ./sidebar -->
 
-    </div>
-</div>
 
-  </div>
+      </div><!-- ./container -->
 
-  <footer>
-  <div class="text-center">
-    © 2014-2030 All rights reserved.
-    Made with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a>
-    and <i class="fa fa-heart"></i> by <a href="https://github.com/guovz/jekyll-pithy" target="_blank">Pithy</a>
-  </div>
-  <div class="totop" data-toggle="totop">
-      <i class="fa fa-chevron-up"></i>
-  </div>
+    <footer id="footer" class="yahei clearfix">
+	<p class="right">Copyright © 2014 <a href="" >面向大海,心暖花开</a> Powered By <a href="http://jekyllrb.com/" target="_blank">Jekyll</a></p>
+	<p class="left"></p>
 </footer>
+  </div><!--./warp-->
 
-
+  <img id="qrimg" src="http://qr.liantu.com/api.php?text=/2015/11/11/first-post-of-pithy2"/>
+  <a id="qr" href="javascript:;"><i class="fa fa-qrcode"></i></a>
+  <a id="gotop" href="javascript:;"><i class="fa fa-arrow-up"></i></a>
   <!--the js include-->
-<script src="/assets/vendor/jquery/jquery.min.js"></script>
-<script src="/assets/script/pithy.js"></script>
+<!-- <script src="/assets/vendor/jquery/jquery.min.js"></script>
+ -->
+
+
+<script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://libs.cdnjs.net/jquery-migrate/1.2.1/jquery-migrate.min.js"></script>
+<script src="http://libs.cdnjs.net/flexslider/2.2.0/jquery.flexslider-min.js"></script>
+
+<script src="/assets/script/prettify.js"></script>
+<script src="/assets/script/global.js"></script>
+<script src="/assets/script/slimbox2.min.js"></script>
+<script src="/assets/script/jquery.jplayer.min.js"></script>
+<script src="/assets/script/ajax.js"></script>
+
+
+
+<script src="/assets/script/autospace.min.js"></script>
+
+
+
 
 <!--
   the site comment script
