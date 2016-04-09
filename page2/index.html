@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="zh_cn"  class="han-la" >
+  <head>
+    <title>面向大海,心暖花开</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="keywords" content=", ,Pithy" />
+    <meta name="description" content=",   从明天起,做一个幸福的人, 喂马、劈柴、周游世界。" />
+
+    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
+
+  <!--Font awesome-->
+  <link href="/assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- The Iziy main css -->
+  <link rel="stylesheet" href="/assets/stylesheet/style.css">
+
+
+  <!--[if lt IE 9]>
+  <script src="https://cdn.bootcss.com/html5shiv/3.7.2/html5shiv-printshiv.js"></script>
+  <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.js"></script>
+  <![endif]-->
+  <link rel="alternate" type="application/rss+xml" title="面向大海,心暖花开" href="/feed.xml" />
+</head>
+
+<body class="nav-open">
+  <div id="wrap">
+    <div id="preheader">notice_TOP</div>
+      <header id="header" class="clearfix">
+        <div class="head">
+          <h1><a href="/">面向大海,心暖花开</a></h1>
+          <p class="desc yahei"><span>从明天起,做一个幸福的人, 喂马、劈柴、周游世界。</span></p>
+        </div>
+        <nav id="main-nav" class="clearfix yahei">
+    <ul class="nav">
+        <li class="active">
+            <a href="/">首页</a>
+        </li>
+        <li class="active">
+            <a href="/about/">关于</a>
+        </li>
+    </ul>
+</nav>
+
+        <div id="announcement">
+          <a href="#" class="openpre close" title="Announcement"><i class="fa fa-star"></i></a>
+        </div>
+      </header>
+      <div id="container" class="clearfix">
+          <div id="content">
+  <div class="home blog">
+    
+      <!-- this is post list -->
+<article class="post type-post status-publish format-standard">
+    <header class="entry-header">
+    <h2 class="entry-name">
+      <a href="/2015/12/21/e8-bd-ac-linux-e4-b8-8b-e5-85-b3-e6-9c-ba-e5-91-bd-e4-bb-a4-e7-9a-84-e5-8c-ba-e5-88-ab-ef-bc-88haltpoweroffrebootshutdowninit-ef-bc-89" title="转 Linux下关机命令的区别 （halt,poweroff,reboot,shutdown,init）" rel="bookmark">转 Linux下关机命令的区别 （halt,poweroff,reboot,shutdown,init）</a>
+    </h2>
+    <ul class="entry-meta">
+      <li><i class="fa fa-clock-o"></i> 2015-12-21</li>
+      <li><i class="fa fa-pencil-square-o"></i>
+          
+            <a href="/categories/Linux系统">Linux系统</a>
+          
+      </li>
+      <li><i class="fa fa-comments-o"></i> <a href="/2015/12/21/e8-bd-ac-linux-e4-b8-8b-e5-85-b3-e6-9c-ba-e5-91-bd-e4-bb-a4-e7-9a-84-e5-8c-ba-e5-88-ab-ef-bc-88haltpoweroffrebootshutdowninit-ef-bc-89#post-comment">评论</a></li>
+      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
+    </ul>
+    </header>
+    <div class="entry-content" itemprop="description">
+        
+          <p class="wp-caption">在linux下一些常用的关机/重启命令。</p>
+<p><span style="font-size: large;">1.shutdown</span></p>
+<p><span style="font-size: medium;">    shutdown命令安全地将系统关机。</span><br />
+<span style="font-size: medium;">     有些用户会使用直接断掉电源的方式来关闭linux，这是十分危险的。因为linux与windows不同，其后台运行着许多进程，所以强制关机可能会导 致进程的数据丢失﹐使系统处于不稳定的状态﹐甚至在有的系统中会损坏硬件设备。而在系统关机前使用shutdown命令﹐系统管理员会通知所有登录的用户 系统将要关闭。并且login指令会被冻结﹐即新的用户不能再登录。直接关机或者延迟一定的时间才关机都是可能的﹐还可能重启。这是由所有进程 〔process〕都会收到系统所送达的信号〔signal〕决定的。这让像vi之类的程序有时间储存目前正在编辑的文档﹐而像处理邮件〔mail〕和新 闻〔news〕的程序则可以正常地离开等等。</span><br />
+<span style="font-size: medium;">      shutdown执行它的工作是送信号〔signal〕给init程序﹐要求它改变runlevel。Runlevel 0被用来停机〔halt〕﹐runlevel 6是用来重新激活〔reboot〕系统﹐而runlevel 1则是被用来让系统进入管理工作可以进行的状态﹔这是预设的﹐假定没有-h也没有-r参数给shutdown。要想了解在停机〔halt〕或者重新开机 〔reboot〕过程中做了哪些动作﹐你可以在这个文件/etc/inittab里看到这些runlevels相关的资料。</span></p>
+<p><span style="font-size: medium;">shutdown 参数说明:</span></p>
+<p><span style="font-size: medium;">    [-t] 在改变到其它runlevel之前﹐告诉init多久以后关机。</span><br />
+<span style="font-size: medium;">     [-r] 重启计算器。</span><br />
+<span style="font-size: medium;">     [-k] 并不真正关机﹐只是送警告信号给每位登录者〔login〕。</span><br />
+<span style="font-size: medium;">     [-h] 关机后关闭电源〔halt〕。</span><br />
+<span style="font-size: medium;">     [-n] 不用init﹐而是自己来关机。不鼓励使用这个选项﹐而且该选项所产生的后果往往不总是你所预期得到的。</span><br />
+<span style="font-size: medium;">     [-c] cancel current process取消目前正在执行的关机程序。所以这个选项当然没有时间参数﹐但是可以输入一个用来解释的讯息﹐而这信息将会送到每位使用者。</span><br />
+<span style="font-size: medium;">     [-f] 在重启计算器〔reboot〕时忽略fsck。</span><br />
+<span style="font-size: medium;">     [-F] 在重启计算器〔reboot〕时强迫fsck。</span><br />
+<span style="font-size: medium;">     [-time] 设定关机〔shutdown〕前的时间。</span></p>
+<p><span style="font-size: medium;">    例如：</span></p>
+<p><span style="font-size: medium;">         ／sbin／shutdown －h now－－－－－立即关机；</span><br />
+<span style="font-size: medium;"> 　　／sbin／shutdown －h 20：49－－－－20：49分关机</span><br />
+<span style="font-size: medium;"> 　　／sbin／shutdown －h ＋10－－－－－10分钟后关机</span><br />
+<span style="font-size: medium;"> 　　／sbin／shutdown －r now －－－－－立即重启</span><br />
+<span style="font-size: medium;"> 　　／sbin／shutdown －r ＋10 ‘The system will reboot'－－－－10分钟后系统重启并给每个登录用户发通知</span><br />
+<span style="font-size: medium;"> 　　／sbin／shutdown －k now ‘The system will reboot'－－－－仅给每个登录用户发通知并不真关机</span></p>
+<p><span style="font-size: large;">2.halt—-最简单的关机命令</span></p>
+<p><span style="font-size: medium;">其实halt就是调用shutdown -h。halt执行时﹐杀死应用进程﹐执行sync系统调用﹐文件系统写操作完成后就会停止内核。</span></p>
+<p><span style="font-size: medium;">参数说明:</span></p>
+<p><span style="font-size: medium;">[-n] 防止sync系统调用﹐它用在用fsck修补根分区之后﹐以阻止内核用老版本的超级块〔superblock〕覆盖修补过的超级块。</span></p>
+<p><span style="font-size: medium;">[-w] 并不是真正的重启或关机﹐只是写wtmp〔/var/log/wtmp〕纪录。</span><br />
+<span style="font-size: medium;"> [-d] 不写wtmp纪录〔已包含在选项[-n]中〕。</span><br />
+<span style="font-size: medium;"> [-f] 没有调用shutdown而强制关机或重启。</span><br />
+<span style="font-size: medium;"> [-i] 关机〔或重启〕前﹐关掉所有的网络接口。</span><br />
+<span style="font-size: medium;"> [-p] 该选项为缺省选项。就是关机时调用poweroff。</span></p>
+<p><span style="font-size: large;">3.reboot</span></p>
+<p><span style="font-size: medium;">reboot的工作过程差不多跟halt一样﹐不过它是引发主机重启﹐而halt是关机。它的参数与halt相差不多。</span></p>
+<p><span style="font-size: large;">4.init</span></p>
+<p><span style="font-size: medium;">init是所有进程的祖先﹐它的进程号始终为1﹐所以发送TERM信号给init会终止所有的用户进程﹑守护进程等。shutdown就是使用这种机制。 init定义了8个运行级别(runlevel)，init 0为关机﹐init1为重启。关于init可以长篇大论﹐这里就不再叙述。另外还有telinit命令可以改变init的运行级别﹐比如﹐telinit -iS可使系统进入单用户模式﹐并且得不到使用shutdown时的信息和等待时间。</span></p>
+<p><span style="font-size: large;">5.poweroff</span></p>
+<p><span style="font-size: medium;">关机,在多用户方式下(Runlevel 3)不建议使用.</span></p>
+
+        
+    </div>
+    <footer class="entry-footer clearfix">
+    <div class="post-love">
+      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
+      <span class="love-count">
+        0
+      </span></a>
+    </div>
+    <div class="post-more">
+      <a href="/2015/12/21/e8-bd-ac-linux-e4-b8-8b-e5-85-b3-e6-9c-ba-e5-91-bd-e4-bb-a4-e7-9a-84-e5-8c-ba-e5-88-ab-ef-bc-88haltpoweroffrebootshutdowninit-ef-bc-89">Read More</a>
+    </div>
+  </footer>
+</article>
+    
+      <!-- this is post list -->
+<article class="post type-post status-publish format-standard">
+    <header class="entry-header">
+    <h2 class="entry-name">
+      <a href="/2015/12/06/fedora-e5-b8-b8-e8-a7-81-e9-9f-b3-e8-a7-86-e9-a2-91-e8-a7-a3-e7-a0-81-e5-99-a8" title="Fedora 常见音视频解码器" rel="bookmark">Fedora 常见音视频解码器</a>
+    </h2>
+    <ul class="entry-meta">
+      <li><i class="fa fa-clock-o"></i> 2015-12-06</li>
+      <li><i class="fa fa-pencil-square-o"></i>
+          
+            <a href="/categories/Linux系统">Linux系统</a>
+          
+      </li>
+      <li><i class="fa fa-comments-o"></i> <a href="/2015/12/06/fedora-e5-b8-b8-e8-a7-81-e9-9f-b3-e8-a7-86-e9-a2-91-e8-a7-a3-e7-a0-81-e5-99-a8#post-comment">评论</a></li>
+      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
+    </ul>
+    </header>
+    <div class="entry-content" itemprop="description">
+        
+          <p>解决 Fedora 及其它linux 视频解码器 缺失的问题</p>
+<pre>sudo dnf install gstreamer1-libav
+sudo dnf install gstreamer1-plugins-bad-freeworld</pre>
+
+        
+    </div>
+    <footer class="entry-footer clearfix">
+    <div class="post-love">
+      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
+      <span class="love-count">
+        0
+      </span></a>
+    </div>
+    <div class="post-more">
+      <a href="/2015/12/06/fedora-e5-b8-b8-e8-a7-81-e9-9f-b3-e8-a7-86-e9-a2-91-e8-a7-a3-e7-a0-81-e5-99-a8">Read More</a>
+    </div>
+  </footer>
+</article>
+    
+      <!-- this is post list -->
+<article class="post type-post status-publish format-standard">
+    <header class="entry-header">
+    <h2 class="entry-name">
+      <a href="/2015/12/05/ros-pppoe-e6-8b-a8-e5-8f-b7-e4-b8-8a-e7-bd-91-e5-8d-95-e5-8f-a3-nat-e8-bd-ac-e5-8f-91-ef-bc-8b-ip-e4-bc-aa-e8-a3-85" title="Ros PPPoe 拨号上网 单口 Nat 转发 ＋ IP伪装" rel="bookmark">Ros PPPoe 拨号上网 单口 Nat 转发 ＋ IP伪装</a>
+    </h2>
+    <ul class="entry-meta">
+      <li><i class="fa fa-clock-o"></i> 2015-12-05</li>
+      <li><i class="fa fa-pencil-square-o"></i>
+          
+            <a href="/categories/网络应用">网络应用</a>
+          
+      </li>
+      <li><i class="fa fa-comments-o"></i> <a href="/2015/12/05/ros-pppoe-e6-8b-a8-e5-8f-b7-e4-b8-8a-e7-bd-91-e5-8d-95-e5-8f-a3-nat-e8-bd-ac-e5-8f-91-ef-bc-8b-ip-e4-bc-aa-e8-a3-85#post-comment">评论</a></li>
+      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
+    </ul>
+    </header>
+    <div class="entry-content" itemprop="description">
+        
+          <p>工作室网路由于使用二楼机房供教学使用的网络，一直受到与教学时段同步的限制，临近周末‘思诚杯’比赛，可能需要网络，所以改用PPPoe 拨号上网，<br />
+原使用Ros ＋ 无线路由做交换<br />
+原端口，被保安室 借用 需沟通，</p>
+<p>起先，想到PPPoe拨号 设置Ros 路由器，设置拨号一时可能解决不了，直接用 无线路由 做转发，<br />
+发现性能瓶颈明显，原来20m的带宽减少到了2m不到，估改用Ros 做 转发</p>
+<p>将保安室网线 网络中心网口 Ros 全接 无线路由器 交换口上</p>
+<p>禁用无线路由器DHCP服务，将其完全做为一个 交换设备<br />
+Ros 设置 PPPoe Client 增加默认路由 和用户Dns</p>
+<p>设置 DHCP Server 增加一个DHCP池 设置好 Ros IP 网关为网关IP 172.16.0.0 网段</p>
+<p><img class="aligncenter" src="http://imglf.nosdn.127.net/img/Z3ZvNUFuRWljSVBlRFRNTWREZmVuMWZ0dzFoMGoycHpjTGkyZ1FBSEVKUm9DMVVKaWFLWERBPT0.png?imageView&amp;thumbnail=1680x0&amp;quality=96&amp;stripmeta=0&amp;type=jpg" alt="" /><br />
+设置 Nat ip伪装<br />
+<code>Ip Firewall nat</code><br />
+增加一条 chain：srcnat 基于源 的Nat action：masquerade</p>
+<p><img class="aligncenter" src="http://imglf0.nosdn.127.net/img/Z3ZvNUFuRWljSVBlRFRNTWREZmVuNnhRQ3M1NnV3ZHRKZE1laHlxc0g5VUtNN2lFMkQvTkh3PT0.png?imageView&amp;thumbnail=1680x0&amp;quality=96&amp;stripmeta=0&amp;type=jpg" alt="" width="1465" height="509" /></p>
+<p>&nbsp;</p>
+<p>通过无线设备上网可自动获取到 IP和Ros网关</p>
+<p>可以上QQ，百度，但发现 其它大部分网页无法正常访问，<br />
+DNS无异常<br />
+此现象与电子楼机房故障一样， 认为可能学校 网络中心，对包过滤做了手脚，<br />
+后想来，无线路由器并无此问题，难道无线路由器，对Nat 数据包做加密处理？</p>
+<p>于情于理，网络中心既然学号帐号都开放了，应该没理由会做Nat过滤，Nat伪装之后的包应该是没法检测出来的，问题还是出在Ros本地<br />
+于是在<code>Ros ip firewall filter</code> 发现一条规则，只能接收数据量 及 速度 太少，却又有走动，原因 可能在此，将其禁用，</p>
+<p><img class="aligncenter" src="http://imglf.nosdn.127.net/img/Z3ZvNUFuRWljSVBlRFRNTWREZmVuNW9jek9Fek96Nlg0S1VKK3FFZFpBRVk4N0gzUldrVUNBPT0.png?imageView&amp;thumbnail=1680x0&amp;quality=96&amp;stripmeta=0&amp;type=jpg" alt="" width="1215" height="605" /><br />
+果不其然，网络访问正常。<br />
+于此，无线路由器瓶颈去除，网络恢复原有20M水平。</p>
+
+        
+    </div>
+    <footer class="entry-footer clearfix">
+    <div class="post-love">
+      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
+      <span class="love-count">
+        0
+      </span></a>
+    </div>
+    <div class="post-more">
+      <a href="/2015/12/05/ros-pppoe-e6-8b-a8-e5-8f-b7-e4-b8-8a-e7-bd-91-e5-8d-95-e5-8f-a3-nat-e8-bd-ac-e5-8f-91-ef-bc-8b-ip-e4-bc-aa-e8-a3-85">Read More</a>
+    </div>
+  </footer>
+</article>
+    
+      <!-- this is post list -->
+<article class="post type-post status-publish format-standard">
+    <header class="entry-header">
+    <h2 class="entry-name">
+      <a href="/2015/11/29/linux-e8-be-93-e5-87-ba-e9-87-8d-e5-ae-9a-e5-90-91-e9-97-ae-e9-a2-98" title="linux 输出重定向问题" rel="bookmark">linux 输出重定向问题</a>
+    </h2>
+    <ul class="entry-meta">
+      <li><i class="fa fa-clock-o"></i> 2015-11-29</li>
+      <li><i class="fa fa-pencil-square-o"></i>
+          
+            <a href="/categories/Linux系统">Linux系统</a>
+          
+      </li>
+      <li><i class="fa fa-comments-o"></i> <a href="/2015/11/29/linux-e8-be-93-e5-87-ba-e9-87-8d-e5-ae-9a-e5-90-91-e9-97-ae-e9-a2-98#post-comment">评论</a></li>
+      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
+    </ul>
+    </header>
+    <div class="entry-content" itemprop="description">
+        
+          <p>> ：用于左边指定描述符<br />
+&>/dev/null ：此处＆ 指所有输出 ，即全部重定向 至 文件</p>
+<p>2>1 ：用于将错误输出重写向至当前目录的文件名为1的文件中</p>
+<p>2>&1 ：用于将错误输出重写至 标准输出</p>
+<p>sudo 时 内部命令无法使用 IO重定向<br />
+调用 sh -c “command” 来运行命令</p>
+<pre>sudo sh -c "cat hosts >> /etc/hosts"</pre>
+
+        
+    </div>
+    <footer class="entry-footer clearfix">
+    <div class="post-love">
+      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
+      <span class="love-count">
+        0
+      </span></a>
+    </div>
+    <div class="post-more">
+      <a href="/2015/11/29/linux-e8-be-93-e5-87-ba-e9-87-8d-e5-ae-9a-e5-90-91-e9-97-ae-e9-a2-98">Read More</a>
+    </div>
+  </footer>
+</article>
+    
+      <!-- this is post list -->
+<article class="post type-post status-publish format-standard">
+    <header class="entry-header">
+    <h2 class="entry-name">
+      <a href="/2015/11/29/bash-e5-90-af-e5-8a-a8-e5-8f-82-e6-95-b0-e5-a4-8d-e4-b9-a0" title="bash 启动参数复习" rel="bookmark">bash 启动参数复习</a>
+    </h2>
+    <ul class="entry-meta">
+      <li><i class="fa fa-clock-o"></i> 2015-11-29</li>
+      <li><i class="fa fa-pencil-square-o"></i>
+          
+            <a href="/categories/Linux系统">Linux系统</a>
+          
+      </li>
+      <li><i class="fa fa-comments-o"></i> <a href="/2015/11/29/bash-e5-90-af-e5-8a-a8-e5-8f-82-e6-95-b0-e5-a4-8d-e4-b9-a0#post-comment">评论</a></li>
+      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
+    </ul>
+    </header>
+    <div class="entry-content" itemprop="description">
+        
+          <p><span style="font-size: medium;">BASH的参数可以用$加数字编号来访问。</span></p>
+<p><span style="font-size: medium;">如$1代表第一个参数，$2代表第二个参数，以此类推.</span></p>
+<p><span style="font-size: medium;">但不能用$10来访问第十个参数，如果遇到参数超过十个的情况，必须处理或保存第一个参数($1)，然后使用 shift命令删除参数1并将所有剩余的参数下移一位，因此$10就变成了$9.</span></p>
+<p><span style="font-size: medium;">$#的值将被更新以反映参数的剩余数量。</span></p>
+<pre>#!/bin/bash
+i=1;
+while (($#>0))
+do
+    echo $i, $1
+    shift
+    let i=i+1
+done</pre>
+<p>显示了所有参数</p>
+
+        
+    </div>
+    <footer class="entry-footer clearfix">
+    <div class="post-love">
+      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
+      <span class="love-count">
+        0
+      </span></a>
+    </div>
+    <div class="post-more">
+      <a href="/2015/11/29/bash-e5-90-af-e5-8a-a8-e5-8f-82-e6-95-b0-e5-a4-8d-e4-b9-a0">Read More</a>
+    </div>
+  </footer>
+</article>
+    
+    
+        <div class="pagination clearfix">
+            
+                <a href="/" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+            
+            
+                
+                  <a href="">1</a>
+                
+            
+                
+                  <a class="active current">2</a>
+                
+            
+                
+                  <a href="/page3">3</a>
+                
+            
+                
+                  <a href="/page4">4</a>
+                
+            
+                
+                  <a href="/page5">5</a>
+                
+            
+                
+                  <a href="/page6">6</a>
+                
+            
+                
+                  <a href="/page7">7</a>
+                
+            
+                
+                  <a href="/page8">8</a>
+                
+            
+                
+                  <a href="/page9">9</a>
+                
+            
+                
+                  <a href="/page10">10</a>
+                
+            
+                
+                  <a href="/page11">11</a>
+                
+            
+                
+                  <a href="/page12">12</a>
+                
+            
+                
+                  <a href="/page13">13</a>
+                
+            
+                
+                  <a href="/page14">14</a>
+                
+            
+                
+                  <a href="/page15">15</a>
+                
+            
+                
+                  <a href="/page16">16</a>
+                
+            
+                
+                  <a href="/page17">17</a>
+                
+            
+                
+                  <a href="/page18">18</a>
+                
+            
+                
+                  <a href="/page19">19</a>
+                
+            
+                
+                  <a href="/page20">20</a>
+                
+            
+                
+                  <a href="/page21">21</a>
+                
+            
+                
+                  <a href="/page22">22</a>
+                
+            
+                
+                  <a href="/page23">23</a>
+                
+            
+            
+                  <a href="/page3/" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+            
+        </div><!-- /.pagination -->
+    
+  </div><!-- /.div.home blog -->
+</div><!-- ./content -->
+<div id="sidebar">
+  <!-- <div class="panel panel-pithy author">
+    <div class="panel-heading avastar">
+        <img src="/assets/images/2.gif" alt="Lan Bing"/>
+    </div>
+    <div class="panel-body">
+        My Press Iziy
+    </div>
+    <div class="panel-footer social">
+        <ul>
+            
+            <li>
+                <a href="http://weibo.com/u/2717952951" target="_blank"><i class="fa fa-weibo"></i></a>
+            </li>
+            
+            <li>
+                <a href="http://t.qq.com/c834606877" target="_blank"><i class="fa fa-tencent-weibo"></i></a>
+            </li>
+            
+            <li>
+                <a href="https://github.com/c834606877" target="_blank"><i class="fa fa-github"></i></a>
+            </li>
+            
+            <li>
+                <a href="mailto://c834606877@qq.com" target="_blank"><i class="fa fa-envelope"></i></a>
+            </li>
+            
+            <li>
+                <a href="/feed.xml" target="_blank"><i class="fa fa-rss"></i></a>
+            </li>
+            
+            <li>
+                <a href="/feed.xml" target="_blank"><i class="fa fa-rss"></i></a>
+            </li>
+        </ul>
+    </div>
+</div> -->
+
+<aside id="mzw_admin-2" class="widget mzw_admin">
+    <img src="/assets/images/bg_small.jpg">
+    <div class="author-body">
+        <div class="author_img">
+            <img src="/assets/images/2.gif" alt="Lan Bing"/>
+        </div>
+        <div class="author_bio">
+            <h3>Lan Bing </h3>
+            <p class="muted">My Press Iziy </p>
+        </div>
+    </div>
+
+    <div class="social">
+        
+            <a class="weibo" target="_blank" href="http://weibo.com/u/2717952951" target="_blank"><i class="fa fa-weibo"></i></a>
+        
+            <a class="tweibo" target="_blank" href="http://t.qq.com/c834606877" target="_blank"><i class="fa fa-tencent-weibo"></i></a>
+        
+            <a class="github" target="_blank" href="https://github.com/c834606877" target="_blank"><i class="fa fa-github"></i></a>
+        
+            <a class="mail" target="_blank" href="mailto://c834606877@qq.com" target="_blank"><i class="fa fa-envelope"></i></a>
+        
+            <a class="rss" target="_blank" href="/feed.xml" target="_blank"><i class="fa fa-rss"></i></a>
+        
+       
+    </div>
+</aside>
+  <!-- sidebar:category list -->
+<aside id="mzw_siderbar_categories" class="widget widget_mzw_siderbar_categories">
+    <h3 class="widget-title"><span>分类列表</span></h3>
+        <ul>
+          
+          <li>
+              <a class="catelink" href="/categories/未分类">
+                  未分类&nbsp;<span class="count">[6]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/心情日记">
+                  心情日记&nbsp;<span class="count">[6]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/学习生涯">
+                  学习生涯&nbsp;<span class="count">[3]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/生活随笔">
+                  生活随笔&nbsp;<span class="count">[1]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/影视音乐">
+                  影视音乐&nbsp;<span class="count">[1]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/Linux就是这个范儿">
+                  Linux就是这个范儿&nbsp;<span class="count">[24]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/最新下载">
+                  最新下载&nbsp;<span class="count">[1]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/应用技巧">
+                  应用技巧&nbsp;<span class="count">[7]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/Linux系统">
+                  Linux系统&nbsp;<span class="count">[10]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/first_categories">
+                  first_categories&nbsp;<span class="count">[1]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/3categories">
+                  3categories&nbsp;<span class="count">[1]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/4categories">
+                  4categories&nbsp;<span class="count">[1]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/5categories">
+                  5categories&nbsp;<span class="count">[1]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/6categories">
+                  6categories&nbsp;<span class="count">[1]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/网络应用">
+                  网络应用&nbsp;<span class="count">[1]</span>
+              </a>
+          </li>
+
+          
+        </ul>
+</aside>
+  <!-- sidebar: tag list -->
+<aside id="mzw_siderbar_tags-3" class="widget widget_mzw_siderbar_tags">
+    <h3 class="widget-title"><hanla></hanla><span>标签云</span></h3>
+    <div class="tagcloud">
+        <!-- <a href="http://lbing.sinaapp.com/archives/tag/%e6%a0%87%e7%ad%be1">标签<hanla></hanla>1</a> -->
+        
+            <a class="taglink" href="/tag/#first_tag" data-target-cate="#first_tag">
+                first_tag
+            </a>
+        
+            <a class="taglink" href="/tag/#first tag" data-target-cate="#first tag">
+                first tag
+            </a>
+        
+            <a class="taglink" href="/tag/#标签1" data-target-cate="#标签1">
+                标签1
+            </a>
+        
+    </div>
+</aside>
+</div><!-- ./sidebar -->
+      </div><!-- ./container -->
+
+    <footer id="footer" class="yahei clearfix">
+	<p class="right">Copyright © 2014 <a href="" >面向大海,心暖花开</a> Powered By <a href="http://jekyllrb.com/" target="_blank">Jekyll</a></p>
+	<p class="left"></p>
+</footer>
+  </div><!--./warp-->
+
+  <img id="qrimg" src="http://qr.liantu.com/api.php?text=/page2/"/>
+  <a id="qr" href="javascript:;"><i class="fa fa-qrcode"></i></a>
+  <a id="gotop" href="javascript:;"><i class="fa fa-arrow-up"></i></a>
+  <!--the js include-->
+<!-- <script src="/assets/vendor/jquery/jquery.min.js"></script>
+ -->
+
+<script type="text/javascript">
+var ajax = {
+	'home': ''
+}
+</script>
+
+<script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://libs.cdnjs.net/jquery-migrate/1.2.1/jquery-migrate.min.js"></script>
+<script src="http://libs.cdnjs.net/flexslider/2.2.0/jquery.flexslider-min.js"></script>
+
+<script src="/assets/script/prettify.js"></script>
+<script src="/assets/script/global.js"></script>
+<script src="/assets/script/slimbox2.min.js"></script>
+<script src="/assets/script/jquery.jplayer.min.js"></script>
+<script src="/assets/script/ajax.js"></script>
+
+
+<script src="/assets/script/autospace.min.js"></script>
+
+
+
+
+<!--
+  the site comment script
+-->
+
+
+  <script id="dsq-count-scr" src="//iziy.disqus.com/count.js" async></script>
+<script>
+    // var disqus_config = function () {
+    //     this.page.url = '/page2/'; // Replace PAGE_URL with your page's canonical URL variable
+    //     this.page.identifier = ''; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    //     this.page.title = 'a unique title for each page where Disqus is present';
+    // };
+    (function () { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+
+        s.src = '//iziy.disqus.com/embed.js';
+
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+<!--
+  the site analysis script
+-->
+
+  <!-- baidu analysis -->
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?your baidu analysis token";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+
+
+</body>
+</html>

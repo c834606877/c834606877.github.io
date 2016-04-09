@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="zh_cn"  class="han-la" >
+  <head>
+    <title>面向大海,心暖花开</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="keywords" content=", ,Pithy" />
+    <meta name="description" content=",   从明天起,做一个幸福的人, 喂马、劈柴、周游世界。" />
+
+    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
+
+  <!--Font awesome-->
+  <link href="/assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- The Iziy main css -->
+  <link rel="stylesheet" href="/assets/stylesheet/style.css">
+
+
+  <!--[if lt IE 9]>
+  <script src="https://cdn.bootcss.com/html5shiv/3.7.2/html5shiv-printshiv.js"></script>
+  <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.js"></script>
+  <![endif]-->
+  <link rel="alternate" type="application/rss+xml" title="面向大海,心暖花开" href="/feed.xml" />
+</head>
+
+<body class="nav-open">
+  <div id="wrap">
+    <div id="preheader">notice_TOP</div>
+      <header id="header" class="clearfix">
+        <div class="head">
+          <h1><a href="/">面向大海,心暖花开</a></h1>
+          <p class="desc yahei"><span>从明天起,做一个幸福的人, 喂马、劈柴、周游世界。</span></p>
+        </div>
+        <nav id="main-nav" class="clearfix yahei">
+    <ul class="nav">
+        <li class="active">
+            <a href="/">首页</a>
+        </li>
+        <li class="active">
+            <a href="/about/">关于</a>
+        </li>
+    </ul>
+</nav>
+
+        <div id="announcement">
+          <a href="#" class="openpre close" title="Announcement"><i class="fa fa-star"></i></a>
+        </div>
+      </header>
+      <div id="container" class="clearfix">
+          <div id="content">
+  <div class="home blog">
+    
+      <!-- this is post list -->
+<article class="post type-post status-publish format-standard">
+    <header class="entry-header">
+    <h2 class="entry-name">
+      <a href="/2015/11/14/add-sublime-text-to-your-context-menu-on-right-click" title="Add Sublime Text to your context menu on right click" rel="bookmark">Add Sublime Text to your context menu on right click</a>
+    </h2>
+    <ul class="entry-meta">
+      <li><i class="fa fa-clock-o"></i> 2015-11-14</li>
+      <li><i class="fa fa-pencil-square-o"></i>
+          
+            <a href="/categories/应用技巧">应用技巧</a>
+          
+      </li>
+      <li><i class="fa fa-comments-o"></i> <a href="/2015/11/14/add-sublime-text-to-your-context-menu-on-right-click#post-comment">评论</a></li>
+      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
+    </ul>
+    </header>
+    <div class="entry-content" itemprop="description">
+        
+          <p>When opening a text file, you may be used to right click on the file to be opened and then choose the application which can open the file from the context menu. On the context menu, you may see a menu item like "Edit with Notepad++".</p>
+<p>Nowadays many people especially programmers like to use Sublime Text, but by default this application will not show on the context menu when you right click on a file. There is now frequent request to add this application to the context menu. Here we show a simple batch file which can help you achieve this.</p>
+<p>Below is the batch code :</p>
+<pre>@echo off
+SET sublimeTextPath=C:\Program Files\Sublime Text 3\sublime_text.exe
+
+REM ADD REGISTRY KEYS
+@reg add "HKEY_CLASSES_ROOT\*\shell\Open with Sublime Text 3"         /t REG_SZ /v "" /d "Open with Sublime Text 3"   /f
+@reg add "HKEY_CLASSES_ROOT\*\shell\Open with Sublime Text 3"         /t REG_EXPAND_SZ /v "Icon" /d "%sublimeTextPath%,0" /f
+@reg add "HKEY_CLASSES_ROOT\*\shell\Open with Sublime Text 3\command" /t REG_SZ /v "" /d "%sublimeTextPath% \"%%1\"" /f
+
+pause</pre>
+<p>You just need to copy above code into the text editor you like and save it as a batch file. Note, please change the sublimeTextPath to the sublime_text.exe on your system. Then, what you need to do is right click on the batch file you saved and "Run as administrator" and it should show below:</p>
+<p><img class="aligncenter" src="http://www.pixelstech.net/article/images/command-output.png" alt="" /></p>
+<p>This means you have successfully added Sublime Text to your context menu. Then you can verify this by right clicking on any text file and you should see below:</p>
+<p><img class="aligncenter" src="http://www.pixelstech.net/article/images/context-menu-sublime-text.PNG" alt="" /></p>
+<p>Please note that you need to run the batch file as administrator, otherwise you will see errors on the command line console.</p>
+
+        
+    </div>
+    <footer class="entry-footer clearfix">
+    <div class="post-love">
+      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
+      <span class="love-count">
+        0
+      </span></a>
+    </div>
+    <div class="post-more">
+      <a href="/2015/11/14/add-sublime-text-to-your-context-menu-on-right-click">Read More</a>
+    </div>
+  </footer>
+</article>
+    
+      <!-- this is post list -->
+<article class="post type-post status-publish format-standard">
+    <header class="entry-header">
+    <h2 class="entry-name">
+      <a href="/2015/11/14/vim-save-file-in-read-only-mode-without-restart-your-work" title="Vim: Save file in read-only mode without restart your work" rel="bookmark">Vim: Save file in read-only mode without restart your work</a>
+    </h2>
+    <ul class="entry-meta">
+      <li><i class="fa fa-clock-o"></i> 2015-11-14</li>
+      <li><i class="fa fa-pencil-square-o"></i>
+          
+            <a href="/categories/Linux系统">Linux系统</a>
+          
+            <a href="/categories/应用技巧">应用技巧</a>
+          
+      </li>
+      <li><i class="fa fa-comments-o"></i> <a href="/2015/11/14/vim-save-file-in-read-only-mode-without-restart-your-work#post-comment">评论</a></li>
+      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
+    </ul>
+    </header>
+    <div class="entry-content" itemprop="description">
+        
+          <p><span style="font-size: medium;">Open a file as normal, forgetting to use “sudo”, and therefore viewing a read-only file.</span></p>
+<p><span style="font-size: medium;">Then mistakenly try to edit the read-only file in the traditional manner.</span></p>
+<pre>:w !sudo tee%</pre>
+<p><span style="font-size: medium;">At this point we will be presented with the content of the file and a prompt to press ENTER or type another command. </span></p>
+<p><span style="font-size: medium;">To simply save the file and move on we just press ENTER, and then press the letter “O” (oh).</span></p>
+<blockquote><p>(NOTE: “L” seems to do pretty much the same thing.)</p></blockquote>
+<p><span style="font-size: medium;">The file will be saved but remains open in vi/vim for more editing or reading. </span></p>
+<p><span style="font-size: medium;">We can now exit normally by typing “:q!” since the file is still open as “read-only”.</span></p>
+<blockquote><p><span style="font-size: medium;">What the command does:</span><br />
+<span style="font-size: medium;"> :w = Write a file.</span><br />
+<span style="font-size: medium;"> !sudo = Call shell sudo command.</span><br />
+<span style="font-size: medium;"> tee = The output of the vi/vim write command is redirected using tee.</span><br />
+<span style="font-size: medium;"> % = Triggers the use of the current filename.</span><br />
+<span style="font-size: medium;"> Simply put, the ‘tee’ command is run as sudo and follows the vi/vim command on the current filename given.</span></p></blockquote>
+
+        
+    </div>
+    <footer class="entry-footer clearfix">
+    <div class="post-love">
+      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
+      <span class="love-count">
+        0
+      </span></a>
+    </div>
+    <div class="post-more">
+      <a href="/2015/11/14/vim-save-file-in-read-only-mode-without-restart-your-work">Read More</a>
+    </div>
+  </footer>
+</article>
+    
+      <!-- this is post list -->
+<article class="post type-post status-publish format-standard">
+    <header class="entry-header">
+    <h2 class="entry-name">
+      <a href="/2015/11/11/first-post-of-pithy9" title="First post of pithy" rel="bookmark">First post of pithy</a>
+    </h2>
+    <ul class="entry-meta">
+      <li><i class="fa fa-clock-o"></i> 2015-11-11</li>
+      <li><i class="fa fa-pencil-square-o"></i>
+          
+            <a href="/categories/6categories">6categories</a>
+          
+      </li>
+      <li><i class="fa fa-comments-o"></i> <a href="/2015/11/11/first-post-of-pithy9#post-comment">评论</a></li>
+      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
+    </ul>
+    </header>
+    <div class="entry-content" itemprop="description">
+        
+          First post of pithy
+        
+    </div>
+    <footer class="entry-footer clearfix">
+    <div class="post-love">
+      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
+      <span class="love-count">
+        0
+      </span></a>
+    </div>
+    <div class="post-more">
+      <a href="/2015/11/11/first-post-of-pithy9">Read More</a>
+    </div>
+  </footer>
+</article>
+    
+      <!-- this is post list -->
+<article class="post type-post status-publish format-standard">
+    <header class="entry-header">
+    <h2 class="entry-name">
+      <a href="/2015/11/11/first-post-of-pithy8" title="First post of pithy" rel="bookmark">First post of pithy</a>
+    </h2>
+    <ul class="entry-meta">
+      <li><i class="fa fa-clock-o"></i> 2015-11-11</li>
+      <li><i class="fa fa-pencil-square-o"></i>
+          
+            <a href="/categories/5categories">5categories</a>
+          
+      </li>
+      <li><i class="fa fa-comments-o"></i> <a href="/2015/11/11/first-post-of-pithy8#post-comment">评论</a></li>
+      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
+    </ul>
+    </header>
+    <div class="entry-content" itemprop="description">
+        
+          First post of pithy
+        
+    </div>
+    <footer class="entry-footer clearfix">
+    <div class="post-love">
+      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
+      <span class="love-count">
+        0
+      </span></a>
+    </div>
+    <div class="post-more">
+      <a href="/2015/11/11/first-post-of-pithy8">Read More</a>
+    </div>
+  </footer>
+</article>
+    
+      <!-- this is post list -->
+<article class="post type-post status-publish format-standard">
+    <header class="entry-header">
+    <h2 class="entry-name">
+      <a href="/2015/11/11/first-post-of-pithy7" title="First post of pithy" rel="bookmark">First post of pithy</a>
+    </h2>
+    <ul class="entry-meta">
+      <li><i class="fa fa-clock-o"></i> 2015-11-11</li>
+      <li><i class="fa fa-pencil-square-o"></i>
+          
+            <a href="/categories/4categories">4categories</a>
+          
+      </li>
+      <li><i class="fa fa-comments-o"></i> <a href="/2015/11/11/first-post-of-pithy7#post-comment">评论</a></li>
+      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
+    </ul>
+    </header>
+    <div class="entry-content" itemprop="description">
+        
+          First post of pithy
+        
+    </div>
+    <footer class="entry-footer clearfix">
+    <div class="post-love">
+      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
+      <span class="love-count">
+        0
+      </span></a>
+    </div>
+    <div class="post-more">
+      <a href="/2015/11/11/first-post-of-pithy7">Read More</a>
+    </div>
+  </footer>
+</article>
+    
+    
+        <div class="pagination clearfix">
+            
+                <a href="/page2/" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+            
+            
+                
+                  <a href="">1</a>
+                
+            
+                
+                  <a href="/page2">2</a>
+                
+            
+                
+                  <a class="active current">3</a>
+                
+            
+                
+                  <a href="/page4">4</a>
+                
+            
+                
+                  <a href="/page5">5</a>
+                
+            
+                
+                  <a href="/page6">6</a>
+                
+            
+                
+                  <a href="/page7">7</a>
+                
+            
+                
+                  <a href="/page8">8</a>
+                
+            
+                
+                  <a href="/page9">9</a>
+                
+            
+                
+                  <a href="/page10">10</a>
+                
+            
+                
+                  <a href="/page11">11</a>
+                
+            
+                
+                  <a href="/page12">12</a>
+                
+            
+                
+                  <a href="/page13">13</a>
+                
+            
+                
+                  <a href="/page14">14</a>
+                
+            
+                
+                  <a href="/page15">15</a>
+                
+            
+                
+                  <a href="/page16">16</a>
+                
+            
+                
+                  <a href="/page17">17</a>
+                
+            
+                
+                  <a href="/page18">18</a>
+                
+            
+                
+                  <a href="/page19">19</a>
+                
+            
+                
+                  <a href="/page20">20</a>
+                
+            
+                
+                  <a href="/page21">21</a>
+                
+            
+                
+                  <a href="/page22">22</a>
+                
+            
+                
+                  <a href="/page23">23</a>
+                
+            
+            
+                  <a href="/page4/" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+            
+        </div><!-- /.pagination -->
+    
+  </div><!-- /.div.home blog -->
+</div><!-- ./content -->
+<div id="sidebar">
+  <!-- <div class="panel panel-pithy author">
+    <div class="panel-heading avastar">
+        <img src="/assets/images/2.gif" alt="Lan Bing"/>
+    </div>
+    <div class="panel-body">
+        My Press Iziy
+    </div>
+    <div class="panel-footer social">
+        <ul>
+            
+            <li>
+                <a href="http://weibo.com/u/2717952951" target="_blank"><i class="fa fa-weibo"></i></a>
+            </li>
+            
+            <li>
+                <a href="http://t.qq.com/c834606877" target="_blank"><i class="fa fa-tencent-weibo"></i></a>
+            </li>
+            
+            <li>
+                <a href="https://github.com/c834606877" target="_blank"><i class="fa fa-github"></i></a>
+            </li>
+            
+            <li>
+                <a href="mailto://c834606877@qq.com" target="_blank"><i class="fa fa-envelope"></i></a>
+            </li>
+            
+            <li>
+                <a href="/feed.xml" target="_blank"><i class="fa fa-rss"></i></a>
+            </li>
+            
+            <li>
+                <a href="/feed.xml" target="_blank"><i class="fa fa-rss"></i></a>
+            </li>
+        </ul>
+    </div>
+</div> -->
+
+<aside id="mzw_admin-2" class="widget mzw_admin">
+    <img src="/assets/images/bg_small.jpg">
+    <div class="author-body">
+        <div class="author_img">
+            <img src="/assets/images/2.gif" alt="Lan Bing"/>
+        </div>
+        <div class="author_bio">
+            <h3>Lan Bing </h3>
+            <p class="muted">My Press Iziy </p>
+        </div>
+    </div>
+
+    <div class="social">
+        
+            <a class="weibo" target="_blank" href="http://weibo.com/u/2717952951" target="_blank"><i class="fa fa-weibo"></i></a>
+        
+            <a class="tweibo" target="_blank" href="http://t.qq.com/c834606877" target="_blank"><i class="fa fa-tencent-weibo"></i></a>
+        
+            <a class="github" target="_blank" href="https://github.com/c834606877" target="_blank"><i class="fa fa-github"></i></a>
+        
+            <a class="mail" target="_blank" href="mailto://c834606877@qq.com" target="_blank"><i class="fa fa-envelope"></i></a>
+        
+            <a class="rss" target="_blank" href="/feed.xml" target="_blank"><i class="fa fa-rss"></i></a>
+        
+       
+    </div>
+</aside>
+  <!-- sidebar:category list -->
+<aside id="mzw_siderbar_categories" class="widget widget_mzw_siderbar_categories">
+    <h3 class="widget-title"><span>分类列表</span></h3>
+        <ul>
+          
+          <li>
+              <a class="catelink" href="/categories/未分类">
+                  未分类&nbsp;<span class="count">[6]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/心情日记">
+                  心情日记&nbsp;<span class="count">[6]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/学习生涯">
+                  学习生涯&nbsp;<span class="count">[3]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/生活随笔">
+                  生活随笔&nbsp;<span class="count">[1]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/影视音乐">
+                  影视音乐&nbsp;<span class="count">[1]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/Linux就是这个范儿">
+                  Linux就是这个范儿&nbsp;<span class="count">[24]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/最新下载">
+                  最新下载&nbsp;<span class="count">[1]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/应用技巧">
+                  应用技巧&nbsp;<span class="count">[7]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/Linux系统">
+                  Linux系统&nbsp;<span class="count">[10]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/first_categories">
+                  first_categories&nbsp;<span class="count">[1]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/3categories">
+                  3categories&nbsp;<span class="count">[1]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/4categories">
+                  4categories&nbsp;<span class="count">[1]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/5categories">
+                  5categories&nbsp;<span class="count">[1]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/6categories">
+                  6categories&nbsp;<span class="count">[1]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/网络应用">
+                  网络应用&nbsp;<span class="count">[1]</span>
+              </a>
+          </li>
+
+          
+        </ul>
+</aside>
+  <!-- sidebar: tag list -->
+<aside id="mzw_siderbar_tags-3" class="widget widget_mzw_siderbar_tags">
+    <h3 class="widget-title"><hanla></hanla><span>标签云</span></h3>
+    <div class="tagcloud">
+        <!-- <a href="http://lbing.sinaapp.com/archives/tag/%e6%a0%87%e7%ad%be1">标签<hanla></hanla>1</a> -->
+        
+            <a class="taglink" href="/tag/#first_tag" data-target-cate="#first_tag">
+                first_tag
+            </a>
+        
+            <a class="taglink" href="/tag/#first tag" data-target-cate="#first tag">
+                first tag
+            </a>
+        
+            <a class="taglink" href="/tag/#标签1" data-target-cate="#标签1">
+                标签1
+            </a>
+        
+    </div>
+</aside>
+</div><!-- ./sidebar -->
+      </div><!-- ./container -->
+
+    <footer id="footer" class="yahei clearfix">
+	<p class="right">Copyright © 2014 <a href="" >面向大海,心暖花开</a> Powered By <a href="http://jekyllrb.com/" target="_blank">Jekyll</a></p>
+	<p class="left"></p>
+</footer>
+  </div><!--./warp-->
+
+  <img id="qrimg" src="http://qr.liantu.com/api.php?text=/page3/"/>
+  <a id="qr" href="javascript:;"><i class="fa fa-qrcode"></i></a>
+  <a id="gotop" href="javascript:;"><i class="fa fa-arrow-up"></i></a>
+  <!--the js include-->
+<!-- <script src="/assets/vendor/jquery/jquery.min.js"></script>
+ -->
+
+<script type="text/javascript">
+var ajax = {
+	'home': ''
+}
+</script>
+
+<script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://libs.cdnjs.net/jquery-migrate/1.2.1/jquery-migrate.min.js"></script>
+<script src="http://libs.cdnjs.net/flexslider/2.2.0/jquery.flexslider-min.js"></script>
+
+<script src="/assets/script/prettify.js"></script>
+<script src="/assets/script/global.js"></script>
+<script src="/assets/script/slimbox2.min.js"></script>
+<script src="/assets/script/jquery.jplayer.min.js"></script>
+<script src="/assets/script/ajax.js"></script>
+
+
+<script src="/assets/script/autospace.min.js"></script>
+
+
+
+
+<!--
+  the site comment script
+-->
+
+
+  <script id="dsq-count-scr" src="//iziy.disqus.com/count.js" async></script>
+<script>
+    // var disqus_config = function () {
+    //     this.page.url = '/page3/'; // Replace PAGE_URL with your page's canonical URL variable
+    //     this.page.identifier = ''; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    //     this.page.title = 'a unique title for each page where Disqus is present';
+    // };
+    (function () { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+
+        s.src = '//iziy.disqus.com/embed.js';
+
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+<!--
+  the site analysis script
+-->
+
+  <!-- baidu analysis -->
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?your baidu analysis token";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+
+
+</body>
+</html>

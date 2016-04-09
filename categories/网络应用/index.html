@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="zh_cn"  class="han-la" >
+  <head>
+    <title>面向大海,心暖花开</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="keywords" content=", ,Pithy" />
+    <meta name="description" content=",   从明天起,做一个幸福的人, 喂马、劈柴、周游世界。" />
+
+    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
+
+  <!--Font awesome-->
+  <link href="/assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- The Iziy main css -->
+  <link rel="stylesheet" href="/assets/stylesheet/style.css">
+
+
+  <!--[if lt IE 9]>
+  <script src="https://cdn.bootcss.com/html5shiv/3.7.2/html5shiv-printshiv.js"></script>
+  <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.js"></script>
+  <![endif]-->
+  <link rel="alternate" type="application/rss+xml" title="面向大海,心暖花开" href="/feed.xml" />
+</head>
+
+<body class="nav-open">
+  <div id="wrap">
+    <div id="preheader">notice_TOP</div>
+      <header id="header" class="clearfix">
+        <div class="head">
+          <h1><a href="/">面向大海,心暖花开</a></h1>
+          <p class="desc yahei"><span>从明天起,做一个幸福的人, 喂马、劈柴、周游世界。</span></p>
+        </div>
+        <nav id="main-nav" class="clearfix yahei">
+    <ul class="nav">
+        <li class="active">
+            <a href="/">首页</a>
+        </li>
+        <li class="active">
+            <a href="/about/">关于</a>
+        </li>
+    </ul>
+</nav>
+
+        <div id="announcement">
+          <a href="#" class="openpre close" title="Announcement"><i class="fa fa-star"></i></a>
+        </div>
+      </header>
+      <div id="container" class="clearfix">
+          <div id="content">
+	  <div class="box archive-meta">
+        <h3 class="title-meta">Category "网络应用":</h3>
+      </div>
+    
+            <!-- this is post list -->
+<article class="post type-post status-publish format-standard">
+    <header class="entry-header">
+    <h2 class="entry-name">
+      <a href="/2015/12/05/ros-pppoe-e6-8b-a8-e5-8f-b7-e4-b8-8a-e7-bd-91-e5-8d-95-e5-8f-a3-nat-e8-bd-ac-e5-8f-91-ef-bc-8b-ip-e4-bc-aa-e8-a3-85" title="Ros PPPoe 拨号上网 单口 Nat 转发 ＋ IP伪装" rel="bookmark">Ros PPPoe 拨号上网 单口 Nat 转发 ＋ IP伪装</a>
+    </h2>
+    <ul class="entry-meta">
+      <li><i class="fa fa-clock-o"></i> 2015-12-05</li>
+      <li><i class="fa fa-pencil-square-o"></i>
+          
+            <a href="/categories/网络应用">网络应用</a>
+          
+      </li>
+      <li><i class="fa fa-comments-o"></i> <a href="/2015/12/05/ros-pppoe-e6-8b-a8-e5-8f-b7-e4-b8-8a-e7-bd-91-e5-8d-95-e5-8f-a3-nat-e8-bd-ac-e5-8f-91-ef-bc-8b-ip-e4-bc-aa-e8-a3-85#post-comment">评论</a></li>
+      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
+    </ul>
+    </header>
+    <div class="entry-content" itemprop="description">
+        
+          <p>工作室网路由于使用二楼机房供教学使用的网络，一直受到与教学时段同步的限制，临近周末‘思诚杯’比赛，可能需要网络，所以改用PPPoe 拨号上网，<br />
+原使用Ros ＋ 无线路由做交换<br />
+原端口，被保安室 借用 需沟通，</p>
+<p>起先，想到PPPoe拨号 设置Ros 路由器，设置拨号一时可能解决不了，直接用 无线路由 做转发，<br />
+发现性能瓶颈明显，原来20m的带宽减少到了2m不到，估改用Ros 做 转发</p>
+<p>将保安室网线 网络中心网口 Ros 全接 无线路由器 交换口上</p>
+<p>禁用无线路由器DHCP服务，将其完全做为一个 交换设备<br />
+Ros 设置 PPPoe Client 增加默认路由 和用户Dns</p>
+<p>设置 DHCP Server 增加一个DHCP池 设置好 Ros IP 网关为网关IP 172.16.0.0 网段</p>
+<p><img class="aligncenter" src="http://imglf.nosdn.127.net/img/Z3ZvNUFuRWljSVBlRFRNTWREZmVuMWZ0dzFoMGoycHpjTGkyZ1FBSEVKUm9DMVVKaWFLWERBPT0.png?imageView&amp;thumbnail=1680x0&amp;quality=96&amp;stripmeta=0&amp;type=jpg" alt="" /><br />
+设置 Nat ip伪装<br />
+<code>Ip Firewall nat</code><br />
+增加一条 chain：srcnat 基于源 的Nat action：masquerade</p>
+<p><img class="aligncenter" src="http://imglf0.nosdn.127.net/img/Z3ZvNUFuRWljSVBlRFRNTWREZmVuNnhRQ3M1NnV3ZHRKZE1laHlxc0g5VUtNN2lFMkQvTkh3PT0.png?imageView&amp;thumbnail=1680x0&amp;quality=96&amp;stripmeta=0&amp;type=jpg" alt="" width="1465" height="509" /></p>
+<p>&nbsp;</p>
+<p>通过无线设备上网可自动获取到 IP和Ros网关</p>
+<p>可以上QQ，百度，但发现 其它大部分网页无法正常访问，<br />
+DNS无异常<br />
+此现象与电子楼机房故障一样， 认为可能学校 网络中心，对包过滤做了手脚，<br />
+后想来，无线路由器并无此问题，难道无线路由器，对Nat 数据包做加密处理？</p>
+<p>于情于理，网络中心既然学号帐号都开放了，应该没理由会做Nat过滤，Nat伪装之后的包应该是没法检测出来的，问题还是出在Ros本地<br />
+于是在<code>Ros ip firewall filter</code> 发现一条规则，只能接收数据量 及 速度 太少，却又有走动，原因 可能在此，将其禁用，</p>
+<p><img class="aligncenter" src="http://imglf.nosdn.127.net/img/Z3ZvNUFuRWljSVBlRFRNTWREZmVuNW9jek9Fek96Nlg0S1VKK3FFZFpBRVk4N0gzUldrVUNBPT0.png?imageView&amp;thumbnail=1680x0&amp;quality=96&amp;stripmeta=0&amp;type=jpg" alt="" width="1215" height="605" /><br />
+果不其然，网络访问正常。<br />
+于此，无线路由器瓶颈去除，网络恢复原有20M水平。</p>
+
+        
+    </div>
+    <footer class="entry-footer clearfix">
+    <div class="post-love">
+      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
+      <span class="love-count">
+        0
+      </span></a>
+    </div>
+    <div class="post-more">
+      <a href="/2015/12/05/ros-pppoe-e6-8b-a8-e5-8f-b7-e4-b8-8a-e7-bd-91-e5-8d-95-e5-8f-a3-nat-e8-bd-ac-e5-8f-91-ef-bc-8b-ip-e4-bc-aa-e8-a3-85">Read More</a>
+    </div>
+  </footer>
+</article>
+    
+
+</div>
+<div id="sidebar">
+    <!-- sidebar:category list -->
+<aside id="mzw_siderbar_categories" class="widget widget_mzw_siderbar_categories">
+    <h3 class="widget-title"><span>分类列表</span></h3>
+        <ul>
+          
+          <li>
+              <a class="catelink" href="/categories/未分类">
+                  未分类&nbsp;<span class="count">[6]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/心情日记">
+                  心情日记&nbsp;<span class="count">[6]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/学习生涯">
+                  学习生涯&nbsp;<span class="count">[3]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/生活随笔">
+                  生活随笔&nbsp;<span class="count">[1]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/影视音乐">
+                  影视音乐&nbsp;<span class="count">[1]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/Linux就是这个范儿">
+                  Linux就是这个范儿&nbsp;<span class="count">[24]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/最新下载">
+                  最新下载&nbsp;<span class="count">[1]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/应用技巧">
+                  应用技巧&nbsp;<span class="count">[7]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/Linux系统">
+                  Linux系统&nbsp;<span class="count">[10]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/first_categories">
+                  first_categories&nbsp;<span class="count">[1]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/3categories">
+                  3categories&nbsp;<span class="count">[1]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/4categories">
+                  4categories&nbsp;<span class="count">[1]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/5categories">
+                  5categories&nbsp;<span class="count">[1]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/6categories">
+                  6categories&nbsp;<span class="count">[1]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/网络应用">
+                  网络应用&nbsp;<span class="count">[1]</span>
+              </a>
+          </li>
+
+          
+        </ul>
+</aside>
+</div>
+
+      </div><!-- ./container -->
+
+    <footer id="footer" class="yahei clearfix">
+	<p class="right">Copyright © 2014 <a href="" >面向大海,心暖花开</a> Powered By <a href="http://jekyllrb.com/" target="_blank">Jekyll</a></p>
+	<p class="left"></p>
+</footer>
+  </div><!--./warp-->
+
+  <img id="qrimg" src="http://qr.liantu.com/api.php?text=/categories/%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8/"/>
+  <a id="qr" href="javascript:;"><i class="fa fa-qrcode"></i></a>
+  <a id="gotop" href="javascript:;"><i class="fa fa-arrow-up"></i></a>
+  <!--the js include-->
+<!-- <script src="/assets/vendor/jquery/jquery.min.js"></script>
+ -->
+
+<script type="text/javascript">
+var ajax = {
+	'home': ''
+}
+</script>
+
+<script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://libs.cdnjs.net/jquery-migrate/1.2.1/jquery-migrate.min.js"></script>
+<script src="http://libs.cdnjs.net/flexslider/2.2.0/jquery.flexslider-min.js"></script>
+
+<script src="/assets/script/prettify.js"></script>
+<script src="/assets/script/global.js"></script>
+<script src="/assets/script/slimbox2.min.js"></script>
+<script src="/assets/script/jquery.jplayer.min.js"></script>
+<script src="/assets/script/ajax.js"></script>
+
+
+<script src="/assets/script/autospace.min.js"></script>
+
+
+
+
+<!--
+  the site comment script
+-->
+
+
+  <script id="dsq-count-scr" src="//iziy.disqus.com/count.js" async></script>
+<script>
+    // var disqus_config = function () {
+    //     this.page.url = '/categories/%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8/'; // Replace PAGE_URL with your page's canonical URL variable
+    //     this.page.identifier = ''; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    //     this.page.title = 'a unique title for each page where Disqus is present';
+    // };
+    (function () { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+
+        s.src = '//iziy.disqus.com/embed.js';
+
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+<!--
+  the site analysis script
+-->
+
+  <!-- baidu analysis -->
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?your baidu analysis token";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+
+
+</body>
+</html>

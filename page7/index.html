@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="zh_cn"  class="han-la" >
+  <head>
+    <title>面向大海,心暖花开</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="keywords" content=", ,Pithy" />
+    <meta name="description" content=",   从明天起,做一个幸福的人, 喂马、劈柴、周游世界。" />
+
+    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
+
+  <!--Font awesome-->
+  <link href="/assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- The Iziy main css -->
+  <link rel="stylesheet" href="/assets/stylesheet/style.css">
+
+
+  <!--[if lt IE 9]>
+  <script src="https://cdn.bootcss.com/html5shiv/3.7.2/html5shiv-printshiv.js"></script>
+  <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.js"></script>
+  <![endif]-->
+  <link rel="alternate" type="application/rss+xml" title="面向大海,心暖花开" href="/feed.xml" />
+</head>
+
+<body class="nav-open">
+  <div id="wrap">
+    <div id="preheader">notice_TOP</div>
+      <header id="header" class="clearfix">
+        <div class="head">
+          <h1><a href="/">面向大海,心暖花开</a></h1>
+          <p class="desc yahei"><span>从明天起,做一个幸福的人, 喂马、劈柴、周游世界。</span></p>
+        </div>
+        <nav id="main-nav" class="clearfix yahei">
+    <ul class="nav">
+        <li class="active">
+            <a href="/">首页</a>
+        </li>
+        <li class="active">
+            <a href="/about/">关于</a>
+        </li>
+    </ul>
+</nav>
+
+        <div id="announcement">
+          <a href="#" class="openpre close" title="Announcement"><i class="fa fa-star"></i></a>
+        </div>
+      </header>
+      <div id="container" class="clearfix">
+          <div id="content">
+  <div class="home blog">
+    
+      <!-- this is post list -->
+<article class="post type-post status-publish format-standard">
+    <header class="entry-header">
+    <h2 class="entry-name">
+      <a href="/2014/10/05/1-4-e3-80-80-e8-bf-94-e7-92-9e-e5-bd-92-e7-9c-9f-e7-9a-84-e5-91-bd-e4-bb-a4-e8-a1-8c-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf" title="1.4　返璞归真的命令行 – Linux就是这个范儿" rel="bookmark">1.4　返璞归真的命令行 – Linux就是这个范儿</a>
+    </h2>
+    <ul class="entry-meta">
+      <li><i class="fa fa-clock-o"></i> 2014-10-05</li>
+      <li><i class="fa fa-pencil-square-o"></i>
+          
+            <a href="/categories/Linux就是这个范儿">Linux就是这个范儿</a>
+          
+      </li>
+      <li><i class="fa fa-comments-o"></i> <a href="/2014/10/05/1-4-e3-80-80-e8-bf-94-e7-92-9e-e5-bd-92-e7-9c-9f-e7-9a-84-e5-91-bd-e4-bb-a4-e8-a1-8c-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf#post-comment">评论</a></li>
+      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
+    </ul>
+    </header>
+    <div class="entry-content" itemprop="description">
+        
+          <p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	有一种说法，现代计算机不是靠电力驱动，而是靠&ldquo;鼠标&rdquo;。多少应用程序的界面都是需要移动和点击鼠标来执行的。计算机本来的用意是把人类从反复单调的工作中解放出来，但摆在我们身边的残酷现实是我们每个人每天不得不反复单调地移动和点击鼠标，以确保养家糊口的工作能够顺利正确地完成。</p>
+<p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	别叹气，存在另一个世界，那就是命令行，让你暂时远离鼠标。对那些苦哈哈的程序猿来讲，这也许是另一种情调的工作方式。我们突然之间拥有了另一种意想不到的收获，例如我想看看用户目录下的文件大小，然后按升序排列产生个报表。如果用C/C++完成这项工作，至少得用好几十行代码，但是用一句命令行就能完成上面的功能。</p>
+<pre>
+	du -s * | sort -nr &gt; $HOME/space_report.txt</pre>
+<p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	命令行有它的存在价值吧。还有把&nbsp;Linux&nbsp;桌面操作录制成一段视频，想起来就是一件复杂的任务，在Linux上用一句命令就能轻松搞定。</p>
+<pre>
+	ffmpeg -f x11grab -s wxga -r 25 -i :0.0 -sameq /tmp/out.mpg</pre>
+<p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	卖个关子，这个命令会在第18章作详细解释。</p>
+<p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	估计你可能会迫不及待地想要实验一下刚才所提到的命令，但是苦于现在都流行的图形界面，我们推荐的CentOS默认也进入了图形界面，看来要想做点实验还是有点难度的。不过不用着急，Linux的老手们一定是要命令行的，所以想通过键盘输入命令，一个合格的Linux发行版一定会做得十分方便，只是要先搞清楚一些概念。</p>
+<p style="text-align: right;">
+	<a href="http://hook.aliapp.com/?p=554" style="color: rgb(51, 51, 51); text-decoration: none; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; line-height: 28px; text-align: right; text-indent: 28px;">Linux就是这个范儿 &ndash; 本书目录&nbsp;</a></p>
+
+        
+    </div>
+    <footer class="entry-footer clearfix">
+    <div class="post-love">
+      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
+      <span class="love-count">
+        0
+      </span></a>
+    </div>
+    <div class="post-more">
+      <a href="/2014/10/05/1-4-e3-80-80-e8-bf-94-e7-92-9e-e5-bd-92-e7-9c-9f-e7-9a-84-e5-91-bd-e4-bb-a4-e8-a1-8c-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf">Read More</a>
+    </div>
+  </footer>
+</article>
+    
+      <!-- this is post list -->
+<article class="post type-post status-publish format-standard">
+    <header class="entry-header">
+    <h2 class="entry-name">
+      <a href="/2014/10/05/1-3-4-e3-80-80lxde-e6-9b-b4-e8-bd-bb-ef-bc-8c-e5-90-8c-e6-a0-b7-e7-b2-be-e6-82-8d-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf" title="1.3.4　LXDE——更轻，同样精悍 – Linux就是这个范儿" rel="bookmark">1.3.4　LXDE——更轻，同样精悍 – Linux就是这个范儿</a>
+    </h2>
+    <ul class="entry-meta">
+      <li><i class="fa fa-clock-o"></i> 2014-10-05</li>
+      <li><i class="fa fa-pencil-square-o"></i>
+          
+            <a href="/categories/Linux就是这个范儿">Linux就是这个范儿</a>
+          
+      </li>
+      <li><i class="fa fa-comments-o"></i> <a href="/2014/10/05/1-3-4-e3-80-80lxde-e6-9b-b4-e8-bd-bb-ef-bc-8c-e5-90-8c-e6-a0-b7-e7-b2-be-e6-82-8d-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf#post-comment">评论</a></li>
+      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
+    </ul>
+    </header>
+    <div class="entry-content" itemprop="description">
+        
+          <p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	如果对小巧精悍的桌面环境很有爱的话，那么LXDE则是另外一个十分值得推荐的选择。如果你是一个民族主义者，那么一定会十分喜爱LXDE，因为它完全是我们中国人开发的，虽然他们都是来自台湾省（这是我国领土不可分割的部分）。</p>
+<p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	LXDE相对于前面三个桌面环境会显得相当地年轻。它在2006年还只是一个文件管理器，后来才慢慢发展成为一个功能齐全的桌面环境。虽然LXDE是2006年的东西，但是它对<a class="keylink" href="http://www.2cto.com/os/" style="color: rgb(51, 51, 51); text-decoration: none;" target="_blank">系统</a>的要求却低得惊人，甚至在1999年的老电脑上不用3D加速也能流畅地运行。所以，在上网本、MID等低功耗移动电脑上拥有比较广泛的应用。这也十分对得起它的名字&mdash;&mdash;Lightweight X11 Desktop Environment，轻量级X11桌面环境，简称LXDE。</p>
+<p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	LXDE与前面三个桌面环境不同，它没有自己开发WM，而是选用了Openbox做为默认WM。这种选择使得它不必重新造轮子，还始终能够保持十分轻量。而且Openbox本身也是十分轻量的。这两者的强强组合，促成了LXDE的无比强大。其实在Linux世界，你所见到的大多数复杂软件<a class="keylink" href="http://www.2cto.com/os/" style="color: rgb(51, 51, 51); text-decoration: none;" target="_blank">系统</a>，都是这种强强组合的结果，像KDE、GNOME、XFCE这样的一应俱全的软件套件是非常罕见的。</p>
+<p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	LXDE同样是采用GTK+开发的，由此可见GTK+在开源图形领域的地位是多么地重要。单从这几方面的应用，几乎就可以让初学者确定到底应该学些什么了。但是我更加喜欢Qt，至于具体是为什么，也就是萝卜青菜的差别。</p>
+<p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px; text-align: right;">
+	<a href="http://hook.aliapp.com/?p=554" style="color: rgb(51, 51, 51); text-decoration: none; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(51, 51, 51); font-size: 14px; text-align: right; background-color: rgb(255, 255, 255); font-family: 宋体; line-height: 28px; text-indent: 28px;">Linux就是这个范儿 &ndash; 本书目录&nbsp;</a></p>
+
+        
+    </div>
+    <footer class="entry-footer clearfix">
+    <div class="post-love">
+      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
+      <span class="love-count">
+        0
+      </span></a>
+    </div>
+    <div class="post-more">
+      <a href="/2014/10/05/1-3-4-e3-80-80lxde-e6-9b-b4-e8-bd-bb-ef-bc-8c-e5-90-8c-e6-a0-b7-e7-b2-be-e6-82-8d-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf">Read More</a>
+    </div>
+  </footer>
+</article>
+    
+      <!-- this is post list -->
+<article class="post type-post status-publish format-standard">
+    <header class="entry-header">
+    <h2 class="entry-name">
+      <a href="/2014/10/05/1-3-3-e3-80-80xfce-e8-bd-bb-e9-87-8f-e3-80-81-e7-ae-80-e5-8d-95-e3-80-81-e9-ab-98-e6-95-88-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf" title="1.3.3　XFCE——轻量、简单、高效 – Linux就是这个范儿" rel="bookmark">1.3.3　XFCE——轻量、简单、高效 – Linux就是这个范儿</a>
+    </h2>
+    <ul class="entry-meta">
+      <li><i class="fa fa-clock-o"></i> 2014-10-05</li>
+      <li><i class="fa fa-pencil-square-o"></i>
+          
+            <a href="/categories/Linux就是这个范儿">Linux就是这个范儿</a>
+          
+      </li>
+      <li><i class="fa fa-comments-o"></i> <a href="/2014/10/05/1-3-3-e3-80-80xfce-e8-bd-bb-e9-87-8f-e3-80-81-e7-ae-80-e5-8d-95-e3-80-81-e9-ab-98-e6-95-88-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf#post-comment">评论</a></li>
+      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
+    </ul>
+    </header>
+    <div class="entry-content" itemprop="description">
+        
+          <p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	KDE和GNOME虽然雍容华贵，但是也恰恰就有些太过&ldquo;臃容&rdquo;，对于喜欢&ldquo;轻淡&rdquo;口味或只有&ldquo;小马力战车&rdquo;的屌丝们，XFCE是一个相当不错的选择。</p>
+<p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	XFCE是一个轻量级的Linux或类Unix的桌面<a class="keylink" href="http://www.2cto.com/os/" style="color: rgb(51, 51, 51); text-decoration: none;" target="_blank">系统</a>。XFCE的设计目的就是：快速加载并用来执行程序，且占用<a class="keylink" href="http://www.2cto.com/os/" style="color: rgb(51, 51, 51); text-decoration: none;" target="_blank">系统</a>资源少。从实际的使用效果上看，XFCE也的确做到了这一点。也正是因为如此，作为一个拥有很长历史（其源自1996年）的桌面环境，能够在很多U盘<a class="keylink" href="http://www.2cto.com/os/linux/" style="color: rgb(51, 51, 51); text-decoration: none;" target="_blank">Linux</a>中见到它的身影。</p>
+<p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	XFCE是使用率仅次于KDE和GNOME的桌面环境。各大发行版基本都会将其作为可选桌面提供。甚至一些发行版，如Xubuntu、SAM&nbsp;<a class="keylink" href="http://www.2cto.com/os/linux/" style="color: rgb(51, 51, 51); text-decoration: none;" target="_blank">Linux</a>&nbsp;Desktop等已经开始将XFCE作为默认桌面了。<br />
+	XFCE与GNOME一样，也是基于GTK+开发的，这首先保证了不会有任何授权问题。另外，XFCE不仅可以作为桌面环境使用，还能够作为程序库来开发第三方程序，比如文字编辑器Mousepad。</p>
+<p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	XFCE肯定是没有办法与GNOME和KDE相比的，但是简单和高效是它的特点，如果你已经修炼成了一个Linux行家里手，那么XFCE将会是你梦寐以求的选择。具体为什么，读完这本书你就知道了。</p>
+<p style="text-align: right;">
+	<br />
+	<a href="http://hook.aliapp.com/?p=554" style="color: rgb(51, 51, 51); text-decoration: none; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; line-height: 28px; text-align: right; text-indent: 28px;">Linux就是这个范儿 &ndash; 本书目录&nbsp;</a></p>
+
+        
+    </div>
+    <footer class="entry-footer clearfix">
+    <div class="post-love">
+      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
+      <span class="love-count">
+        0
+      </span></a>
+    </div>
+    <div class="post-more">
+      <a href="/2014/10/05/1-3-3-e3-80-80xfce-e8-bd-bb-e9-87-8f-e3-80-81-e7-ae-80-e5-8d-95-e3-80-81-e9-ab-98-e6-95-88-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf">Read More</a>
+    </div>
+  </footer>
+</article>
+    
+      <!-- this is post list -->
+<article class="post type-post status-publish format-standard">
+    <header class="entry-header">
+    <h2 class="entry-name">
+      <a href="/2014/10/04/1-3-2-e3-80-80gnome-e4-b8-8d-e5-8f-af-e7-a3-a8-e7-81-ad-e7-9a-84-e7-bb-8f-e5-85-b8-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf" title="1.3.2　GNOME不可磨灭的经典 – Linux就是这个范儿" rel="bookmark">1.3.2　GNOME不可磨灭的经典 – Linux就是这个范儿</a>
+    </h2>
+    <ul class="entry-meta">
+      <li><i class="fa fa-clock-o"></i> 2014-10-04</li>
+      <li><i class="fa fa-pencil-square-o"></i>
+          
+            <a href="/categories/Linux就是这个范儿">Linux就是这个范儿</a>
+          
+      </li>
+      <li><i class="fa fa-comments-o"></i> <a href="/2014/10/04/1-3-2-e3-80-80gnome-e4-b8-8d-e5-8f-af-e7-a3-a8-e7-81-ad-e7-9a-84-e7-bb-8f-e5-85-b8-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf#post-comment">评论</a></li>
+      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
+    </ul>
+    </header>
+    <div class="entry-content" itemprop="description">
+        
+          <p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	在KDE受版权困扰和没有新版可用的时候，陪伴在人们身边的是GNOME桌面环境。虽然GNOME3使得GNOME从能用变得不能用了，但是GNOME2则依然是不可磨灭的经典。</p>
+<p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	GNOME是GNU 网络对象模型环境&mdash;&mdash;The GNU Network Object Model Environment的英文缩写。它是GNU计划的一部分，开放<a class="keylink" href="http://www.2cto.com/ym" style="color: rgb(51, 51, 51); text-decoration: none;" target="_blank">源码</a>运动的重要组成部分。目标是基于自由软件，为Unix或者类Unix操作系统构造一个功能完善、操作简单以及界面友好的桌面环境，它是GNU计划的正式桌面。</p>
+<p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	如果说有那么一个桌面环境是为Linux而生的，那么就非GNOME莫属了，它被现代的大多数Linux发行版作为默认桌面使用。因为Linux是类Unix的缘故，GNOME虽出于Linux但胜于Linux，已经能够运行于各种类Unix系统了，所以就有了前面对GNOME的描述。</p>
+<p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	GNOME主要是为了当初使用没有采用GPL授权的Qt的KDE而出现的。GIMP Toolkit（GTK+，本书后面的章节会详细介绍）就成了Qt的替代者，担当GNOME桌面的基础。GTK+使用LGPL许可证授权，允许链接到此库的软件（例如GNOME的应用程序）使用任意的许可协议。GNOME的应用程序通常采用GPL许可证授权。</p>
+<p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	GNOME本身是使用C语言<a class="keylink" href="http://www.2cto.com/kf" style="color: rgb(51, 51, 51); text-decoration: none;" target="_blank">编程</a>的，但并不受限于C这种单一语言。GNOME使用CORBA（Common Object Request Broker Architecture）让各程序<a class="keylink" href="http://www.2cto.com/kf/all/zujian/" style="color: rgb(51, 51, 51); text-decoration: none;" target="_blank">组件</a>能够彼此协作，而又不需要考虑它们是何种语言所写成的，甚至是在何种<a class="keylink" href="http://www.2cto.com/os/" style="color: rgb(51, 51, 51); text-decoration: none;" target="_blank">系统</a>上执行的都不用考虑。</p>
+<p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	GNOME提供了两个东西。一是GNOME桌面环境，一个对最终用户来说符合直觉并十分吸引人的桌面。GNOME3做到了吸引人，但是我总觉得它不符合我的直觉，也就是我总是找不到我要找的东西（可能是智商问题）。二是GNOME开发平台，一个能使开发的应用程序与桌面其他部分集成的可扩展框架。这点GNOME做得相当好，CORBA就是非常典型的例子。</p>
+<p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	在GNOME之下还有很多子计划，它们不都是包含在GNOME中一同发布的。一些基于概念的纯粹实验性的项目，等稳定后会加入GNOME；还有一些是正在完善中，以便能够直接加入的，例如GNOME存储和D-BUS。</p>
+<p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	目前的主流发行版，如RHEL、CentOS和Ubuntu等都是以GNOME为默认桌面的，操作手感更像Mac OS X，但是属于完全不同的风格。这是绝对原汁原味的GNU。</p>
+<p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px; text-align: right;">
+	<a href="http://hook.aliapp.com/?p=554" style="color: rgb(51, 51, 51); text-decoration: none; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(51, 51, 51); font-size: 14px; text-align: right; font-family: 宋体; line-height: 28px; text-indent: 28px;">Linux就是这个范儿 &ndash; 本书目录&nbsp;</a></p>
+
+        
+    </div>
+    <footer class="entry-footer clearfix">
+    <div class="post-love">
+      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
+      <span class="love-count">
+        0
+      </span></a>
+    </div>
+    <div class="post-more">
+      <a href="/2014/10/04/1-3-2-e3-80-80gnome-e4-b8-8d-e5-8f-af-e7-a3-a8-e7-81-ad-e7-9a-84-e7-bb-8f-e5-85-b8-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf">Read More</a>
+    </div>
+  </footer>
+</article>
+    
+      <!-- this is post list -->
+<article class="post type-post status-publish format-standard">
+    <header class="entry-header">
+    <h2 class="entry-name">
+      <a href="/2014/10/03/1-3-1-e3-80-80kde-e5-88-9d-e5-ad-a6-e8-80-85-e7-9a-84-e9-a6-96-e9-80-89-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf" title="1.3.1　KDE初学者的首选 – Linux就是这个范儿" rel="bookmark">1.3.1　KDE初学者的首选 – Linux就是这个范儿</a>
+    </h2>
+    <ul class="entry-meta">
+      <li><i class="fa fa-clock-o"></i> 2014-10-03</li>
+      <li><i class="fa fa-pencil-square-o"></i>
+          
+            <a href="/categories/Linux就是这个范儿">Linux就是这个范儿</a>
+          
+      </li>
+      <li><i class="fa fa-comments-o"></i> <a href="/2014/10/03/1-3-1-e3-80-80kde-e5-88-9d-e5-ad-a6-e8-80-85-e7-9a-84-e9-a6-96-e9-80-89-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf#post-comment">评论</a></li>
+      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
+    </ul>
+    </header>
+    <div class="entry-content" itemprop="description">
+        
+          <p>
+	KDE是由德国人Matthias Ettrich于1996年就读于图宾根大学时开始的一个计划。当时的Unix桌面没有一个应用程序的外观、感受或工作方式与其他程序一样。于是Matthias Ettrich就建议不仅是创建一套应用程序，而是要创建一个桌面环境，能让用户拥有相同的外观、感受和工作方式，而且这个桌面应该是非常容易使用的。他的这个想法得到了很多人的支持，从此KDE计划就诞生了。</p>
+<p>
+	可能有人会疑惑，KDE是给Unix的，似乎跟Linux没有什么关系，为什么这本书要介绍它呢？其实不单单KDE是这样，剩下的三个桌面环境也是这样。甚至在这个星球上完全针对Linux编写的软件也是并不多的，那些在Linux下能够获得的软件大多不是针对Linux开发的。它们是针对Unix系统的，而Linux属于类Unix系统，所以就毫无歉意地坐享了这些成果。这就是Linux的优势，也是大家学习Linux的优势。学会了Linux，几乎就等同于学会了Unix或类Unix系统，它们在这个星球的应用范围就从来没有被Windows超越过。本书的内容也是如此，只有少数章节是专门针对Linux特性所特别设置的，大多数知识都是通用且极具实用价值的。好了，闲话不多说，我们继续介绍KDE。</p>
+<p>
+	追究KDE这个名字的由来是没有实际意义的，但是我们需要知道它是完全采用Qt程序库（后面的章节会有详细介绍）开发的。由于Qt多舛的命运<a href="#_ftn2" name="_ftnref2" title="">[②]</a>，注定了KDE同样会拥有风雨飘摇的艰辛历程。</p>
+<p>
+	虽然Qt是开放源代码的软件，但是在KDE早期的时候Qt并非是自由软件授权，这与KDE的自由软件授权相冲突，所以很多人会担心惹上版权麻烦，尽量避免使用KDE，这成为了KDE初期推广的障碍。</p>
+<p>
+	很庆幸的是1998年11月之后，Qt程序库所属的Trolltech公司发布了第一份自由软件许可Q&nbsp;Public License（QPL）的Qt程序库授权。同年不久，KDE Free Qt基金会<a href="#_ftn3" name="_ftnref3" title="">[③]</a>保证：若Trolltech在任意连续12个月内没有发布新的自由版本，那么Qt程序库将更改为基于BSD许可证的授权进行发布。但是很多人依然争论着，认为QPL授权与GPL（万恶的&ldquo;鸡屁儿&rdquo;）上的某些条款不相容。这导致了Red Hat公司始终无法将KDE当作默认桌面，而Mandriva&nbsp;Linux则趁此时机凭借KDE席卷了欧洲市场。</p>
+<p>
+	直到2000年9月，一个基于GPL协议的Qt程序库发布，大部分用户方才对KDE生出信心。此时的KDE已经日臻完善，国内的各大Linux发行版都纷纷采用KDE作为其默认桌面，甚至出现了&ldquo;阳春白雪<a href="#_ftn4" name="_ftnref4" title="">[④]</a>&rdquo;这样专门针对KDE的汉化美化套件。</p>
+<p>
+	2008年是一个非常重要的年景，奥运会第一次在中国召开，Qt升级到了4.0，并且采用了更加宽泛的LGPL授权（仅Qt4以后的版本）。但是KDE的好日子到头了。Qt4的LGPL授权固然招人喜欢，但是Qt4相对于Qt3做了较大幅度的调整，如果KDE转投Qt4，则必须做较大改动甚至重写。KDE的开发者们抱着有困难要上，没有困难制造困难也要上的必死决心毅然地转投Qt4的怀抱。这导致了很长一段时间人们没有新的KDE版本使用，那些不断放出的KDE4的各种版本几乎个个都是花瓶，中看不中用。直到KDE 4.2版本的发布，才彻底稳定了下来。于是就在Linux界流传了一段笑话：KDE从能用到不能用再到能用，之后GNOME从能用到不能用。至于GNOME的故事我们稍后再说，KDE的故事还在继续。</p>
+<p>
+	经过Qt3到Qt4转变的这么一折腾，损失大量粉丝是在所难免的了，而祸总是不单行的。就在KDE4准备发力接受市场的挑战之际，Qt的所属公司Trolltech被大名鼎鼎的Nokia收购了。原以为能够如虎添翼一下，可万没想到的是Nokia又是一个倒霉蛋，倒霉到不得不去抱微软的大腿。结果是大腿没等抱稳，就把Qt给弄丢了，出售给了Digia公司。但是不管怎么样，由于Qt是LGPL授权的，所以它就是属于全人类的了，我们能够永远都有免费的Qt使用。</p>
+<p>
+	Qt其实是一个非常优秀的C++跨平台图形界面开发库，几乎可以媲美Java的跨平台特性。不同的是Java能够一次编译到处运行，而Qt是可以一次编码到处编译。也正因为如此，KDE已经被移植到了几乎所有硬件和操作系统平台上。现在的KDE已经不单单是一个桌面环境，它几乎就是基于Qt开发的程序的庞大集合，是Qt的一个超级平台。这里拥有功能异常丰富的应用，包括各种跨平台组件、办公套件和开发套件等，几乎可以找到任何Qt应用的样板。而且从任何角度来看，Qt都是用C++开发跨平台图形应用的首选程序库，最新的WPS选择它就是非常好的佐证。对于学习和掌握Qt，KDE是非常理想的平台。</p>
+<p>
+	需要注意，如果你根据我们的推荐选择安装了CentOS，KDE是选装部分，需要在安装的时候选中它才可以，否则就需要根据下一章所介绍的内容去手动安装了。如果你选择的是SUSE，则默认就可以使用KDE了。我们推荐初学Linux的用户选择KDE，它的操作习惯与Windows更加接近。</p>
+<p style="text-align: right;">
+	<a href="http://hook.aliapp.com/?p=554" style="font-family: 宋体; font-size: 14px; line-height: 28px; text-align: right; text-indent: 28px;">Linux就是这个范儿 &ndash; 本书目录&nbsp;</a></p>
+<hr />
+<div id="ftn2">
+<p style="margin-left:12pt;">
+		<a href="#_ftnref2" name="_ftn2" title="">[②]</a>&nbsp;1991年由TrollTech公司开发，于2008年被Nokia所收购，2012年又卖给了Digia公司。曾数次修改授权方式。
+	</p>
+</div>
+<div id="ftn3">
+<p style="margin-left:12pt;">
+		<a href="#_ftnref3" name="_ftn3" title="">[③]</a>&nbsp;就是保证Qt和KDE在任何情况下都是自由软件的组织，最初有TrollTech和KDE开发者共同创立。
+	</p>
+</div>
+<div id="ftn4">
+<p style="margin-left:12pt;">
+		<a href="#_ftnref4" name="_ftn4" title="">[④]</a>&nbsp;2001年沈阳玳娜软件有限公司为了推动中文Linux的普及，针对Red Hat Linux 7.2推出的一款汉化美化套件，其中包括中文输入法和KDE的汉化美化部分。属于死在沙滩上的优秀前辈。
+	</p>
+</div>
+
+        
+    </div>
+    <footer class="entry-footer clearfix">
+    <div class="post-love">
+      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
+      <span class="love-count">
+        0
+      </span></a>
+    </div>
+    <div class="post-more">
+      <a href="/2014/10/03/1-3-1-e3-80-80kde-e5-88-9d-e5-ad-a6-e8-80-85-e7-9a-84-e9-a6-96-e9-80-89-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf">Read More</a>
+    </div>
+  </footer>
+</article>
+    
+    
+        <div class="pagination clearfix">
+            
+                <a href="/page6/" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+            
+            
+                
+                  <a href="">1</a>
+                
+            
+                
+                  <a href="/page2">2</a>
+                
+            
+                
+                  <a href="/page3">3</a>
+                
+            
+                
+                  <a href="/page4">4</a>
+                
+            
+                
+                  <a href="/page5">5</a>
+                
+            
+                
+                  <a href="/page6">6</a>
+                
+            
+                
+                  <a class="active current">7</a>
+                
+            
+                
+                  <a href="/page8">8</a>
+                
+            
+                
+                  <a href="/page9">9</a>
+                
+            
+                
+                  <a href="/page10">10</a>
+                
+            
+                
+                  <a href="/page11">11</a>
+                
+            
+                
+                  <a href="/page12">12</a>
+                
+            
+                
+                  <a href="/page13">13</a>
+                
+            
+                
+                  <a href="/page14">14</a>
+                
+            
+                
+                  <a href="/page15">15</a>
+                
+            
+                
+                  <a href="/page16">16</a>
+                
+            
+                
+                  <a href="/page17">17</a>
+                
+            
+                
+                  <a href="/page18">18</a>
+                
+            
+                
+                  <a href="/page19">19</a>
+                
+            
+                
+                  <a href="/page20">20</a>
+                
+            
+                
+                  <a href="/page21">21</a>
+                
+            
+                
+                  <a href="/page22">22</a>
+                
+            
+                
+                  <a href="/page23">23</a>
+                
+            
+            
+                  <a href="/page8/" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+            
+        </div><!-- /.pagination -->
+    
+  </div><!-- /.div.home blog -->
+</div><!-- ./content -->
+<div id="sidebar">
+  <!-- <div class="panel panel-pithy author">
+    <div class="panel-heading avastar">
+        <img src="/assets/images/2.gif" alt="Lan Bing"/>
+    </div>
+    <div class="panel-body">
+        My Press Iziy
+    </div>
+    <div class="panel-footer social">
+        <ul>
+            
+            <li>
+                <a href="http://weibo.com/u/2717952951" target="_blank"><i class="fa fa-weibo"></i></a>
+            </li>
+            
+            <li>
+                <a href="http://t.qq.com/c834606877" target="_blank"><i class="fa fa-tencent-weibo"></i></a>
+            </li>
+            
+            <li>
+                <a href="https://github.com/c834606877" target="_blank"><i class="fa fa-github"></i></a>
+            </li>
+            
+            <li>
+                <a href="mailto://c834606877@qq.com" target="_blank"><i class="fa fa-envelope"></i></a>
+            </li>
+            
+            <li>
+                <a href="/feed.xml" target="_blank"><i class="fa fa-rss"></i></a>
+            </li>
+            
+            <li>
+                <a href="/feed.xml" target="_blank"><i class="fa fa-rss"></i></a>
+            </li>
+        </ul>
+    </div>
+</div> -->
+
+<aside id="mzw_admin-2" class="widget mzw_admin">
+    <img src="/assets/images/bg_small.jpg">
+    <div class="author-body">
+        <div class="author_img">
+            <img src="/assets/images/2.gif" alt="Lan Bing"/>
+        </div>
+        <div class="author_bio">
+            <h3>Lan Bing </h3>
+            <p class="muted">My Press Iziy </p>
+        </div>
+    </div>
+
+    <div class="social">
+        
+            <a class="weibo" target="_blank" href="http://weibo.com/u/2717952951" target="_blank"><i class="fa fa-weibo"></i></a>
+        
+            <a class="tweibo" target="_blank" href="http://t.qq.com/c834606877" target="_blank"><i class="fa fa-tencent-weibo"></i></a>
+        
+            <a class="github" target="_blank" href="https://github.com/c834606877" target="_blank"><i class="fa fa-github"></i></a>
+        
+            <a class="mail" target="_blank" href="mailto://c834606877@qq.com" target="_blank"><i class="fa fa-envelope"></i></a>
+        
+            <a class="rss" target="_blank" href="/feed.xml" target="_blank"><i class="fa fa-rss"></i></a>
+        
+       
+    </div>
+</aside>
+  <!-- sidebar:category list -->
+<aside id="mzw_siderbar_categories" class="widget widget_mzw_siderbar_categories">
+    <h3 class="widget-title"><span>分类列表</span></h3>
+        <ul>
+          
+          <li>
+              <a class="catelink" href="/categories/未分类">
+                  未分类&nbsp;<span class="count">[6]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/心情日记">
+                  心情日记&nbsp;<span class="count">[6]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/学习生涯">
+                  学习生涯&nbsp;<span class="count">[3]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/生活随笔">
+                  生活随笔&nbsp;<span class="count">[1]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/影视音乐">
+                  影视音乐&nbsp;<span class="count">[1]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/Linux就是这个范儿">
+                  Linux就是这个范儿&nbsp;<span class="count">[24]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/最新下载">
+                  最新下载&nbsp;<span class="count">[1]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/应用技巧">
+                  应用技巧&nbsp;<span class="count">[7]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/Linux系统">
+                  Linux系统&nbsp;<span class="count">[10]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/first_categories">
+                  first_categories&nbsp;<span class="count">[1]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/3categories">
+                  3categories&nbsp;<span class="count">[1]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/4categories">
+                  4categories&nbsp;<span class="count">[1]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/5categories">
+                  5categories&nbsp;<span class="count">[1]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/6categories">
+                  6categories&nbsp;<span class="count">[1]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/网络应用">
+                  网络应用&nbsp;<span class="count">[1]</span>
+              </a>
+          </li>
+
+          
+        </ul>
+</aside>
+  <!-- sidebar: tag list -->
+<aside id="mzw_siderbar_tags-3" class="widget widget_mzw_siderbar_tags">
+    <h3 class="widget-title"><hanla></hanla><span>标签云</span></h3>
+    <div class="tagcloud">
+        <!-- <a href="http://lbing.sinaapp.com/archives/tag/%e6%a0%87%e7%ad%be1">标签<hanla></hanla>1</a> -->
+        
+            <a class="taglink" href="/tag/#first_tag" data-target-cate="#first_tag">
+                first_tag
+            </a>
+        
+            <a class="taglink" href="/tag/#first tag" data-target-cate="#first tag">
+                first tag
+            </a>
+        
+            <a class="taglink" href="/tag/#标签1" data-target-cate="#标签1">
+                标签1
+            </a>
+        
+    </div>
+</aside>
+</div><!-- ./sidebar -->
+      </div><!-- ./container -->
+
+    <footer id="footer" class="yahei clearfix">
+	<p class="right">Copyright © 2014 <a href="" >面向大海,心暖花开</a> Powered By <a href="http://jekyllrb.com/" target="_blank">Jekyll</a></p>
+	<p class="left"></p>
+</footer>
+  </div><!--./warp-->
+
+  <img id="qrimg" src="http://qr.liantu.com/api.php?text=/page7/"/>
+  <a id="qr" href="javascript:;"><i class="fa fa-qrcode"></i></a>
+  <a id="gotop" href="javascript:;"><i class="fa fa-arrow-up"></i></a>
+  <!--the js include-->
+<!-- <script src="/assets/vendor/jquery/jquery.min.js"></script>
+ -->
+
+<script type="text/javascript">
+var ajax = {
+	'home': ''
+}
+</script>
+
+<script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://libs.cdnjs.net/jquery-migrate/1.2.1/jquery-migrate.min.js"></script>
+<script src="http://libs.cdnjs.net/flexslider/2.2.0/jquery.flexslider-min.js"></script>
+
+<script src="/assets/script/prettify.js"></script>
+<script src="/assets/script/global.js"></script>
+<script src="/assets/script/slimbox2.min.js"></script>
+<script src="/assets/script/jquery.jplayer.min.js"></script>
+<script src="/assets/script/ajax.js"></script>
+
+
+<script src="/assets/script/autospace.min.js"></script>
+
+
+
+
+<!--
+  the site comment script
+-->
+
+
+  <script id="dsq-count-scr" src="//iziy.disqus.com/count.js" async></script>
+<script>
+    // var disqus_config = function () {
+    //     this.page.url = '/page7/'; // Replace PAGE_URL with your page's canonical URL variable
+    //     this.page.identifier = ''; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    //     this.page.title = 'a unique title for each page where Disqus is present';
+    // };
+    (function () { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+
+        s.src = '//iziy.disqus.com/embed.js';
+
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+<!--
+  the site analysis script
+-->
+
+  <!-- baidu analysis -->
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?your baidu analysis token";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="zh_cn"  class="han-la" >
+  <head>
+    <title>面向大海,心暖花开</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="keywords" content=", ,Pithy" />
+    <meta name="description" content=",   从明天起,做一个幸福的人, 喂马、劈柴、周游世界。" />
+
+    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
+
+  <!--Font awesome-->
+  <link href="/assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- The Iziy main css -->
+  <link rel="stylesheet" href="/assets/stylesheet/style.css">
+
+
+  <!--[if lt IE 9]>
+  <script src="https://cdn.bootcss.com/html5shiv/3.7.2/html5shiv-printshiv.js"></script>
+  <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.js"></script>
+  <![endif]-->
+  <link rel="alternate" type="application/rss+xml" title="面向大海,心暖花开" href="/feed.xml" />
+</head>
+
+<body class="nav-open">
+  <div id="wrap">
+    <div id="preheader">notice_TOP</div>
+      <header id="header" class="clearfix">
+        <div class="head">
+          <h1><a href="/">面向大海,心暖花开</a></h1>
+          <p class="desc yahei"><span>从明天起,做一个幸福的人, 喂马、劈柴、周游世界。</span></p>
+        </div>
+        <nav id="main-nav" class="clearfix yahei">
+    <ul class="nav">
+        <li class="active">
+            <a href="/">首页</a>
+        </li>
+        <li class="active">
+            <a href="/about/">关于</a>
+        </li>
+    </ul>
+</nav>
+
+        <div id="announcement">
+          <a href="#" class="openpre close" title="Announcement"><i class="fa fa-star"></i></a>
+        </div>
+      </header>
+      <div id="container" class="clearfix">
+          <div id="content">
+  <div class="home blog">
+    
+      <!-- this is post list -->
+<article class="post type-post status-publish format-standard">
+    <header class="entry-header">
+    <h2 class="entry-name">
+      <a href="/2015/09/29/e4-bf-ae-e5-a4-8d-fedora-docky-google-chrome-e5-90-af-e5-8a-a8-e5-90-8e-e5-87-ba-e7-8e-b0-e4-b8-a4-e4-b8-aa-e7-9b-b8-e5-90-8c-e5-9b-be-e6-a0-87" title="修复 Fedora Docky Google Chrome  启动后 出现两个相同图标" rel="bookmark">修复 Fedora Docky Google Chrome  启动后 出现两个相同图标</a>
+    </h2>
+    <ul class="entry-meta">
+      <li><i class="fa fa-clock-o"></i> 2015-09-29</li>
+      <li><i class="fa fa-pencil-square-o"></i>
+          
+            <a href="/categories/Linux系统">Linux系统</a>
+          
+      </li>
+      <li><i class="fa fa-comments-o"></i> <a href="/2015/09/29/e4-bf-ae-e5-a4-8d-fedora-docky-google-chrome-e5-90-af-e5-8a-a8-e5-90-8e-e5-87-ba-e7-8e-b0-e4-b8-a4-e4-b8-aa-e7-9b-b8-e5-90-8c-e5-9b-be-e6-a0-87#post-comment">评论</a></li>
+      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
+    </ul>
+    </header>
+    <div class="entry-content" itemprop="description">
+        
+          <p>在Fedora下,安装Google Chrome,并将其 add to Favorites Docky 中<br />
+并启动发现,两个相同的图标并未融合在一块,</p>
+<p>猜测应该是 <code>/usr/share/applications/</code> 下的 <code>.desktop</code> 文件有问题</p>
+<p>打开终端:</p>
+<pre>sudo gedit /usr/share/applications/google-chrome.desktop</pre>
+<p><!--more--><br />
+可以发现有三个节点</p>
+<p>在三个节点下面都增加如下内容:</p>
+<pre>StartupWMClass=Google-chrome-stable</pre>
+<p>保存并退出,</p>
+<p>删除用户目录下的 缓存</p>
+<p>也许需要重启 Gnome :</p>
+<pre>Alt+f2 
+r &lt;Enter&gt;</pre>
+<p>[information]Desktop file 里边涉及到的路径 不能有空格。[/information]</p>
+
+        
+    </div>
+    <footer class="entry-footer clearfix">
+    <div class="post-love">
+      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
+      <span class="love-count">
+        0
+      </span></a>
+    </div>
+    <div class="post-more">
+      <a href="/2015/09/29/e4-bf-ae-e5-a4-8d-fedora-docky-google-chrome-e5-90-af-e5-8a-a8-e5-90-8e-e5-87-ba-e7-8e-b0-e4-b8-a4-e4-b8-aa-e7-9b-b8-e5-90-8c-e5-9b-be-e6-a0-87">Read More</a>
+    </div>
+  </footer>
+</article>
+    
+      <!-- this is post list -->
+<article class="post type-post status-publish format-standard">
+    <header class="entry-header">
+    <h2 class="entry-name">
+      <a href="/2015/09/28/errors-in-upgrade-from-fedora-21-to-fedora-22" title="Errors in Upgrade from Fedora 21 to Fedora 22" rel="bookmark">Errors in Upgrade from Fedora 21 to Fedora 22</a>
+    </h2>
+    <ul class="entry-meta">
+      <li><i class="fa fa-clock-o"></i> 2015-09-28</li>
+      <li><i class="fa fa-pencil-square-o"></i>
+          
+            <a href="/categories/Linux系统">Linux系统</a>
+          
+      </li>
+      <li><i class="fa fa-comments-o"></i> <a href="/2015/09/28/errors-in-upgrade-from-fedora-21-to-fedora-22#post-comment">评论</a></li>
+      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
+    </ul>
+    </header>
+    <div class="entry-content" itemprop="description">
+        
+          <blockquote><strong>1. Make sure your current system is up-to-date and backed up</strong></p>
+<p>First up, ensure that you have the most up-to-date version of Fedora 21 by updating your system using the Software application, or running the following command in the terminal:</p>
+<pre>sudo dnf update</pre>
+<p><strong>2. Install the FedUp tool</strong></p>
+<p>Now, open up a Terminal and install FedUp package by using the following command line:</p>
+<pre>sudo dnf install fedup</pre>
+<p><strong>3. Start the update with FedUp</strong></p>
+<p>Now your system is fully up-to-date, start the upgrade using the following command:</p>
+<pre>sudo fedup --network 22</pre>
+<p>This command will tell FedUp to download all the appropriate packages from the Fedora repositories, and prep your system for the upgrade.<br />
+<strong>4. Reboot, and upgrade</strong></p>
+<p>Once the FedUp command from step 3 has completed without errors, reboot your system. In the Fedora Boot Menu (i.e. grub), there will be a menu item “System Upgrade”, select that and press enter.<br />
+Boot menu with System Upgrade (fedup) option selected<br />
+<code class="prettyprint">Boot menu with update option selected</code></p>
+<p>All the appropriate packages and upgrade tasks will now be completed automatically, and when completed you will be able to start using your newly upgraded Fedora system.</p></blockquote>
+<pre># fedup --network 22
+setting up repos...
+Error: can't get boot images.
+The installation repo isn't currently available.
+Try again later, or specify a repo using --instrepo.</pre>
+<p>Using --instrepo To special a repo :</p>
+<pre>[lanbing@LanBing-PC ~]$ setting up repos...
+getting boot images...
+
+Downloading failed: couldn't get boot images: No more mirrors to try.
+Last error was: [Errno 14] curl#56 - "Proxy CONNECT aborted"
+
+Change the <code>/etc/yum.conf</code> file to disable Proxy settings ,</pre>
+
+        
+    </div>
+    <footer class="entry-footer clearfix">
+    <div class="post-love">
+      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
+      <span class="love-count">
+        0
+      </span></a>
+    </div>
+    <div class="post-more">
+      <a href="/2015/09/28/errors-in-upgrade-from-fedora-21-to-fedora-22">Read More</a>
+    </div>
+  </footer>
+</article>
+    
+      <!-- this is post list -->
+<article class="post type-post status-publish format-standard">
+    <header class="entry-header">
+    <h2 class="entry-name">
+      <a href="/2014/10/10/must-issue-sudo-alsa-force-reload-on-reboot-ubuntu" title="Must issue sudo alsa force-reload on reboot (Ubuntu)" rel="bookmark">Must issue sudo alsa force-reload on reboot (Ubuntu)</a>
+    </h2>
+    <ul class="entry-meta">
+      <li><i class="fa fa-clock-o"></i> 2014-10-10</li>
+      <li><i class="fa fa-pencil-square-o"></i>
+          
+            <a href="/categories/应用技巧">应用技巧</a>
+          
+      </li>
+      <li><i class="fa fa-comments-o"></i> <a href="/2014/10/10/must-issue-sudo-alsa-force-reload-on-reboot-ubuntu#post-comment">评论</a></li>
+      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
+    </ul>
+    </header>
+    <div class="entry-content" itemprop="description">
+        
+          <p>
+	I have a problem, I have got sound working...</p>
+<p>
+	But only when I issue the Code:</p>
+<pre>
+sudo alsa force-reload</pre>
+<p>
+	It will when play the sound that was queued to play, like the login sound.</p>
+<p>
+	Everytime when I restart, I have to do Code:</p>
+<pre>
+sudo alsa force-reload </pre>
+<p>
+	in order for sound to work.</p>
+<p>
+	&nbsp;</p>
+<p>
+	Solution :</p>
+<pre>
+	sudo gedit /etc/default/acpi-support
+	# Add modules to this list to have them removed before suspend and reloaded<br />
+	# on resume. An example would be MODULES=&quot;em8300 yenta_socket&quot;<br />
+	#<br />
+	# Note that network cards and USB controllers will automatically be unloaded<br />
+	# unless they&#39;re listed in MODULES_WHITELIST<br />
+	MODULES=&quot;soundcore&quot;
+</pre>
+
+        
+    </div>
+    <footer class="entry-footer clearfix">
+    <div class="post-love">
+      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
+      <span class="love-count">
+        0
+      </span></a>
+    </div>
+    <div class="post-more">
+      <a href="/2014/10/10/must-issue-sudo-alsa-force-reload-on-reboot-ubuntu">Read More</a>
+    </div>
+  </footer>
+</article>
+    
+      <!-- this is post list -->
+<article class="post type-post status-publish format-standard">
+    <header class="entry-header">
+    <h2 class="entry-name">
+      <a href="/2014/10/05/1-4-7-e3-80-80-e8-87-b4-e5-91-bd-e7-9a-84linux-e5-91-bd-e4-bb-a4-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf" title="1.4.7　致命的Linux命令 – Linux就是这个范儿" rel="bookmark">1.4.7　致命的Linux命令 – Linux就是这个范儿</a>
+    </h2>
+    <ul class="entry-meta">
+      <li><i class="fa fa-clock-o"></i> 2014-10-05</li>
+      <li><i class="fa fa-pencil-square-o"></i>
+          
+            <a href="/categories/Linux就是这个范儿">Linux就是这个范儿</a>
+          
+      </li>
+      <li><i class="fa fa-comments-o"></i> <a href="/2014/10/05/1-4-7-e3-80-80-e8-87-b4-e5-91-bd-e7-9a-84linux-e5-91-bd-e4-bb-a4-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf#post-comment">评论</a></li>
+      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
+    </ul>
+    </header>
+    <div class="entry-content" itemprop="description">
+        
+          <p style="text-indent: 2em;">
+	别以为我是在开玩笑。有些Linux命令轻则造成数据丢失，重则导致系统瘫痪。你看这位同学漫不经心，以root身份敲入了rm -rf /，强制删除&nbsp;/&nbsp;目录下的所有文件，这代价可是很惨痛的（相当于系统自杀）。</p>
+<p style="text-indent: 2em;">
+	还有一个很好玩的例子，我用旺旺聊天的形式给你讲述：</p>
+<p style="text-indent: 2em;">
+	小雪2012-08-25 15:28:10：&nbsp;在你Linux系统上输入这串东西:(){ :|:&amp; };</p>
+<p style="text-indent: 2em;">
+	灰猫2012-08-25 15:28:34：&nbsp;长得这么怪？</p>
+<p style="text-indent: 2em;">
+	小雪2012-08-25 15:28:41：&nbsp;试试看看是什么结果。谢了。</p>
+<p style="text-indent: 2em;">
+	灰猫2012-08-25 15:28:44：&nbsp;不好了。终端一直出现下面的提示：</p>
+<pre>
+	-bash: fork: retry: Resource temporarily unavailable
+	-bash: fork: retry: Resource temporarily unavailable
+	-bash: fork: retry: Resource temporarily unavailable
+	-bash: fork: retry: Resource temporarily unavailable
+	-bash: fork: retry: Resource temporarily unavailable
+	-bash: fork: retry: Resource temporarily unavailable
+	-bash: fork: retry: Resource temporarily unavailable
+	-bash: fork: retry: Resource temporarily unavailable
+	-bash: fork: retry: Resource temporarily unavailable
+</pre>
+<p style="text-indent: 2em;">
+	很惨啊。</p>
+<p style="text-indent: 2em;">
+	小雪2012-08-25 15:29:02：&nbsp;哈哈，真的很惨。</p>
+<p style="text-indent: 2em;">
+	灰猫2012-08-25 15:29:21：&nbsp;Ctrl+C都是不管用的。</p>
+<p style="text-indent: 2em;">
+	小雪2012-08-25 15:29:21：&nbsp;即便退出这个终端也是没有用的。</p>
+<p style="text-indent: 2em;">
+	灰猫2012-08-25 15:29:31：&nbsp;最后全都是这个。</p>
+<pre>
+-bash: pipe error: Cannot allocate memory -bash: pipe error: Cannot allocate memory
+</pre></p>
+<p style="text-indent: 2em;">
+	root用户搞不定，因为killall的速度受到了影响，只能重启机器了。</p>
+<p style="text-indent: 2em;">
+	小雪2012-08-25 15:30:15：这就是著名fork炸弹。看来危害不小。</p>
+<p style="text-indent: 2em;">
+	灰猫2012-08-25 15:30:34：别幸灾乐祸了。能告诉我什么原理吗？</p>
+<p style="text-indent: 2em;">
+	小雪2012-08-25 15:31:43：&nbsp;把:(){ :|:&amp; };写成下面格式你就看懂了</p>
+<pre>
+:()
+{
+	:|:&amp;
+};
+</pre>
+<p style="text-indent: 2em;">
+	灰猫2012-08-25 15:32:13：&nbsp;明白了。&ldquo;:&rdquo;函数里面定义操作是后台执行&ldquo;:&rdquo;函数重定向到&ldquo;:&rdquo;函数，&ldquo;:&rdquo;函数的递归调用。</p>
+<p style="text-indent: 2em;">
+	小雪2012-08-25 15:32:15：&nbsp;是滴。系统执行海量的进程直到死亡。</p>
+<p style="text-indent: 2em;">
+	灰猫2012-08-25 15:32:43：&nbsp;这样的代码不好分析，主要是因为不清楚&ldquo;:&rdquo;是可以做为函数名的。</p>
+<p style="text-indent: 2em;">
+	小雪2012-08-25 15:33:12：&nbsp;Quite right。另外为了防止这个问题的出现，要限制赋予root权限的用户数量以及单用户的进程数。</p>
+<p style="text-indent: 2em;">
+	灰猫2012-08-25 15:34:12：&nbsp;哈哈。是的，拥有root权限的用户操作不慎很容易给系统造成破坏。</p>
+<p style="text-indent: 2em;">
+	故事还没有结束。如何限制用户的进程数呢？我们可以在/etc/security/limits.conf文件末尾加入一行：</p>
+<pre>
+	*&nbsp;&nbsp;&nbsp;hard&nbsp;&nbsp;&nbsp;nproc&nbsp;&nbsp;200
+</pre>
+<p style="text-indent: 2em;">
+	限制用户的进程数为200，但root用户不会受这个限制。</p>
+<p style="text-indent: 2em;">
+	这个命令行还涉及shell脚本编程，我们将在后面的章节来学习。</p>
+<p style="text-indent: 2em; text-align: right;">
+	<a href="http://hook.aliapp.com/?p=554" style="color: rgb(51, 51, 51); text-decoration: none; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(51, 51, 51); font-size: 14px; text-align: right; text-indent: 28px; font-family: 宋体; line-height: 28px;">Linux就是这个范儿 &ndash; 本书目录&nbsp;</a></p>
+
+        
+    </div>
+    <footer class="entry-footer clearfix">
+    <div class="post-love">
+      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
+      <span class="love-count">
+        0
+      </span></a>
+    </div>
+    <div class="post-more">
+      <a href="/2014/10/05/1-4-7-e3-80-80-e8-87-b4-e5-91-bd-e7-9a-84linux-e5-91-bd-e4-bb-a4-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf">Read More</a>
+    </div>
+  </footer>
+</article>
+    
+      <!-- this is post list -->
+<article class="post type-post status-publish format-standard">
+    <header class="entry-header">
+    <h2 class="entry-name">
+      <a href="/2014/10/05/1-4-6-e3-80-80-e8-81-94-e6-9c-ba-e5-b8-ae-e5-8a-a9-man-e5-be-88-e9-9d-a0-e8-b0-b1-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf" title="1.4.6　联机帮助——man很靠谱 – Linux就是这个范儿" rel="bookmark">1.4.6　联机帮助——man很靠谱 – Linux就是这个范儿</a>
+    </h2>
+    <ul class="entry-meta">
+      <li><i class="fa fa-clock-o"></i> 2014-10-05</li>
+      <li><i class="fa fa-pencil-square-o"></i>
+          
+            <a href="/categories/Linux就是这个范儿">Linux就是这个范儿</a>
+          
+      </li>
+      <li><i class="fa fa-comments-o"></i> <a href="/2014/10/05/1-4-6-e3-80-80-e8-81-94-e6-9c-ba-e5-b8-ae-e5-8a-a9-man-e5-be-88-e9-9d-a0-e8-b0-b1-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf#post-comment">评论</a></li>
+      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
+    </ul>
+    </header>
+    <div class="entry-content" itemprop="description">
+        
+          <p style="text-indent: 2em;">
+	遇到问题寻找帮助能加快解决问题的速度。在Linux系统上，有以下几个途径可以获得帮助：</p>
+<p style="text-indent: 2em;">
+	1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;遇到问题，男人（man，其实是&ldquo;手册&rdquo;的简称）的帮助很靠谱。需要某个命令或者配置文件的帮助，就在终端输入：</p>
+<pre>
+	man&nbsp;命令名
+</pre>
+<p style="text-indent: 2em;">
+	或</p>
+<pre>
+	man&nbsp;配置文件
+</pre>
+<p style="text-indent: 2em;">
+	屏幕就会显示对应命令系统的帮助手册。输入&ldquo;q&rdquo;退出帮助浏览器。</p>
+<p style="text-indent: 2em;">
+	2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;info&nbsp;和&nbsp;man&nbsp;功能相似，但是包含更多的最新信息。</p>
+<p style="text-indent: 2em;">
+	3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;使用&ldquo;命令名&nbsp;&ndash;help&rdquo;得到一个简略容易消化的命令帮助。</p>
+<p style="text-indent: 2em;">
+	4.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;程序自带README文件或者其他帮助信息文件，例如在/usr/share/doc下的一些手册。</p>
+<p style="text-indent: 2em;">
+	如何在man页中查找信息呢？浏览man页默认的工具是less。less的使用方法很简单。翻页用Space，查找用反斜杠&ldquo;/&rdquo;紧跟着正则表达式，用n查找下一个匹配项，用Shift+n查找前一个匹配项。如果这页里没有你感兴趣的，按Space翻到下页。更多的操作还是man一下less文档吧。</p>
+<p style="text-indent: 2em;">
+	很多命令的man帮助页中涉及shell命令、系统调用和编程接口等多方面，而这些内容很可能会拥有相同的名字。例如&ldquo;printf&rdquo;，它既是shell命令，又是库函数。为了能够精确找到你需要的帮助信息，人们为它们进行了分类编号。比如3代表库函数，我们要使用这样的命令才能找到库函数printf的帮助信息：</p>
+<pre>
+	$ man 3 printf
+</pre>
+<p style="text-indent: 2em;">
+	否则的话，你得到的帮助信息是shell命令printf的帮助信息。可是man对帮助信息做了哪些分类，分别都用什么编号来代表的呢？这个问题我们不用管，第3章再说。当前为了解决这种分类问题我们有一个折中的办法，就是使用&ldquo;-a&rdquo;命令选项，它会把所有跟你给定的命令名有关的帮助信息都列出来。例如：</p>
+<pre>
+	$ man -a printf
+</pre>
+<p style="text-indent: 2em;">
+	慢慢看吧，如果觉得当前的信息不是你需要的，按&ldquo;q&rdquo;之后会显示另外一个分类的信息，直到找到自己需要的为止。当然，有些时候你可能一无所获，最大的可能就是你记错了关键字。</p>
+<p style="text-indent: 2em;">
+	还有，帮助信息中的&ldquo;SEE ALSO&rdquo;经常是被遗忘的角落，但是我经常会在这里发现其他有用的命令或库函数，千万不要放过它。</p>
+<p style="text-indent: 2em; text-align: right;">
+	<a href="http://hook.aliapp.com/?p=554" style="color: rgb(51, 51, 51); text-decoration: none; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(51, 51, 51); font-size: 14px; text-align: right; text-indent: 28px; font-family: 宋体; line-height: 28px;">Linux就是这个范儿 &ndash; 本书目录&nbsp;</a></p>
+
+        
+    </div>
+    <footer class="entry-footer clearfix">
+    <div class="post-love">
+      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
+      <span class="love-count">
+        0
+      </span></a>
+    </div>
+    <div class="post-more">
+      <a href="/2014/10/05/1-4-6-e3-80-80-e8-81-94-e6-9c-ba-e5-b8-ae-e5-8a-a9-man-e5-be-88-e9-9d-a0-e8-b0-b1-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf">Read More</a>
+    </div>
+  </footer>
+</article>
+    
+    
+        <div class="pagination clearfix">
+            
+                <a href="/page4/" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+            
+            
+                
+                  <a href="">1</a>
+                
+            
+                
+                  <a href="/page2">2</a>
+                
+            
+                
+                  <a href="/page3">3</a>
+                
+            
+                
+                  <a href="/page4">4</a>
+                
+            
+                
+                  <a class="active current">5</a>
+                
+            
+                
+                  <a href="/page6">6</a>
+                
+            
+                
+                  <a href="/page7">7</a>
+                
+            
+                
+                  <a href="/page8">8</a>
+                
+            
+                
+                  <a href="/page9">9</a>
+                
+            
+                
+                  <a href="/page10">10</a>
+                
+            
+                
+                  <a href="/page11">11</a>
+                
+            
+                
+                  <a href="/page12">12</a>
+                
+            
+                
+                  <a href="/page13">13</a>
+                
+            
+                
+                  <a href="/page14">14</a>
+                
+            
+                
+                  <a href="/page15">15</a>
+                
+            
+                
+                  <a href="/page16">16</a>
+                
+            
+                
+                  <a href="/page17">17</a>
+                
+            
+                
+                  <a href="/page18">18</a>
+                
+            
+                
+                  <a href="/page19">19</a>
+                
+            
+                
+                  <a href="/page20">20</a>
+                
+            
+                
+                  <a href="/page21">21</a>
+                
+            
+                
+                  <a href="/page22">22</a>
+                
+            
+                
+                  <a href="/page23">23</a>
+                
+            
+            
+                  <a href="/page6/" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+            
+        </div><!-- /.pagination -->
+    
+  </div><!-- /.div.home blog -->
+</div><!-- ./content -->
+<div id="sidebar">
+  <!-- <div class="panel panel-pithy author">
+    <div class="panel-heading avastar">
+        <img src="/assets/images/2.gif" alt="Lan Bing"/>
+    </div>
+    <div class="panel-body">
+        My Press Iziy
+    </div>
+    <div class="panel-footer social">
+        <ul>
+            
+            <li>
+                <a href="http://weibo.com/u/2717952951" target="_blank"><i class="fa fa-weibo"></i></a>
+            </li>
+            
+            <li>
+                <a href="http://t.qq.com/c834606877" target="_blank"><i class="fa fa-tencent-weibo"></i></a>
+            </li>
+            
+            <li>
+                <a href="https://github.com/c834606877" target="_blank"><i class="fa fa-github"></i></a>
+            </li>
+            
+            <li>
+                <a href="mailto://c834606877@qq.com" target="_blank"><i class="fa fa-envelope"></i></a>
+            </li>
+            
+            <li>
+                <a href="/feed.xml" target="_blank"><i class="fa fa-rss"></i></a>
+            </li>
+            
+            <li>
+                <a href="/feed.xml" target="_blank"><i class="fa fa-rss"></i></a>
+            </li>
+        </ul>
+    </div>
+</div> -->
+
+<aside id="mzw_admin-2" class="widget mzw_admin">
+    <img src="/assets/images/bg_small.jpg">
+    <div class="author-body">
+        <div class="author_img">
+            <img src="/assets/images/2.gif" alt="Lan Bing"/>
+        </div>
+        <div class="author_bio">
+            <h3>Lan Bing </h3>
+            <p class="muted">My Press Iziy </p>
+        </div>
+    </div>
+
+    <div class="social">
+        
+            <a class="weibo" target="_blank" href="http://weibo.com/u/2717952951" target="_blank"><i class="fa fa-weibo"></i></a>
+        
+            <a class="tweibo" target="_blank" href="http://t.qq.com/c834606877" target="_blank"><i class="fa fa-tencent-weibo"></i></a>
+        
+            <a class="github" target="_blank" href="https://github.com/c834606877" target="_blank"><i class="fa fa-github"></i></a>
+        
+            <a class="mail" target="_blank" href="mailto://c834606877@qq.com" target="_blank"><i class="fa fa-envelope"></i></a>
+        
+            <a class="rss" target="_blank" href="/feed.xml" target="_blank"><i class="fa fa-rss"></i></a>
+        
+       
+    </div>
+</aside>
+  <!-- sidebar:category list -->
+<aside id="mzw_siderbar_categories" class="widget widget_mzw_siderbar_categories">
+    <h3 class="widget-title"><span>分类列表</span></h3>
+        <ul>
+          
+          <li>
+              <a class="catelink" href="/categories/未分类">
+                  未分类&nbsp;<span class="count">[6]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/心情日记">
+                  心情日记&nbsp;<span class="count">[6]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/学习生涯">
+                  学习生涯&nbsp;<span class="count">[3]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/生活随笔">
+                  生活随笔&nbsp;<span class="count">[1]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/影视音乐">
+                  影视音乐&nbsp;<span class="count">[1]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/Linux就是这个范儿">
+                  Linux就是这个范儿&nbsp;<span class="count">[24]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/最新下载">
+                  最新下载&nbsp;<span class="count">[1]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/应用技巧">
+                  应用技巧&nbsp;<span class="count">[7]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/Linux系统">
+                  Linux系统&nbsp;<span class="count">[10]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/first_categories">
+                  first_categories&nbsp;<span class="count">[1]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/3categories">
+                  3categories&nbsp;<span class="count">[1]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/4categories">
+                  4categories&nbsp;<span class="count">[1]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/5categories">
+                  5categories&nbsp;<span class="count">[1]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/6categories">
+                  6categories&nbsp;<span class="count">[1]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="/categories/网络应用">
+                  网络应用&nbsp;<span class="count">[1]</span>
+              </a>
+          </li>
+
+          
+        </ul>
+</aside>
+  <!-- sidebar: tag list -->
+<aside id="mzw_siderbar_tags-3" class="widget widget_mzw_siderbar_tags">
+    <h3 class="widget-title"><hanla></hanla><span>标签云</span></h3>
+    <div class="tagcloud">
+        <!-- <a href="http://lbing.sinaapp.com/archives/tag/%e6%a0%87%e7%ad%be1">标签<hanla></hanla>1</a> -->
+        
+            <a class="taglink" href="/tag/#first_tag" data-target-cate="#first_tag">
+                first_tag
+            </a>
+        
+            <a class="taglink" href="/tag/#first tag" data-target-cate="#first tag">
+                first tag
+            </a>
+        
+            <a class="taglink" href="/tag/#标签1" data-target-cate="#标签1">
+                标签1
+            </a>
+        
+    </div>
+</aside>
+</div><!-- ./sidebar -->
+      </div><!-- ./container -->
+
+    <footer id="footer" class="yahei clearfix">
+	<p class="right">Copyright © 2014 <a href="" >面向大海,心暖花开</a> Powered By <a href="http://jekyllrb.com/" target="_blank">Jekyll</a></p>
+	<p class="left"></p>
+</footer>
+  </div><!--./warp-->
+
+  <img id="qrimg" src="http://qr.liantu.com/api.php?text=/page5/"/>
+  <a id="qr" href="javascript:;"><i class="fa fa-qrcode"></i></a>
+  <a id="gotop" href="javascript:;"><i class="fa fa-arrow-up"></i></a>
+  <!--the js include-->
+<!-- <script src="/assets/vendor/jquery/jquery.min.js"></script>
+ -->
+
+<script type="text/javascript">
+var ajax = {
+	'home': ''
+}
+</script>
+
+<script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://libs.cdnjs.net/jquery-migrate/1.2.1/jquery-migrate.min.js"></script>
+<script src="http://libs.cdnjs.net/flexslider/2.2.0/jquery.flexslider-min.js"></script>
+
+<script src="/assets/script/prettify.js"></script>
+<script src="/assets/script/global.js"></script>
+<script src="/assets/script/slimbox2.min.js"></script>
+<script src="/assets/script/jquery.jplayer.min.js"></script>
+<script src="/assets/script/ajax.js"></script>
+
+
+<script src="/assets/script/autospace.min.js"></script>
+
+
+
+
+<!--
+  the site comment script
+-->
+
+
+  <script id="dsq-count-scr" src="//iziy.disqus.com/count.js" async></script>
+<script>
+    // var disqus_config = function () {
+    //     this.page.url = '/page5/'; // Replace PAGE_URL with your page's canonical URL variable
+    //     this.page.identifier = ''; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    //     this.page.title = 'a unique title for each page where Disqus is present';
+    // };
+    (function () { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+
+        s.src = '//iziy.disqus.com/embed.js';
+
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+<!--
+  the site analysis script
+-->
+
+  <!-- baidu analysis -->
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?your baidu analysis token";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+
+
+</body>
+</html>
