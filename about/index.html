@@ -22,7 +22,7 @@
   <script src="https://cdn.bootcss.com/html5shiv/3.7.2/html5shiv-printshiv.js"></script>
   <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.js"></script>
   <![endif]-->
-  <link rel="alternate" type="application/rss+xml" title="面向大海,心暖花开" href="http://iziy.mypre.cn/feed.xml" />
+  <link rel="alternate" type="application/rss+xml" title="面向大海,心暖花开" href="/feed.xml" />
 </head>
 
 <body class="nav-open">
@@ -49,47 +49,64 @@
         </div>
       </header>
       <div id="container" class="clearfix">
-          <div class="container">
-    <div id="post-content" class="panel panel-pithy post">
-      <div class="panel-heading">
-        <h3 class="title">
-          <i class="fa fa-bookmark-o"></i> 关于作者
-        </h3>
+          ---
+layout: default
+---
+<div id="content" style="width:100%">
+    <div class="single single-post postid-762 single-format-standard logged-in">
+      <article class="post format-standard">
+          <header class="entry-header">
+          <h2 class="entry-name">
+            <a href="" title="" rel="bookmark"></a>
+          </h2>
+          <ul class="entry-meta">
+            <li><i class="fa fa-clock-o"></i> 最后编辑 </li>
+            <li><i class="fa fa-pencil-square-o"></i>
+                
+            </li>
+            <li><i class="fa fa-comments-o"></i> <a href="#post-comment">评论</a></li>
+            <li><i class="fa fa-eye"></i> <a href="#disqus_thread"> link</a></li>
+          </ul>
+          </header>
+          <div class="entry-content" itemprop="description">
+              <p>The author’s info</p>
+
+          </div>
+        <footer class="entry-footer clearfix">
+          <div class="post-share">
+            <a href="javascript:;"><i class="fa fa-share-alt"></i> 分享</a>
+            <ul>
+              <li><a href="http://service.weibo.com/share/share.php?title=&url=" target="_blank"><i class="fa fa-weibo"></i></a></li>
+              <li><a href="http://share.renren.com/share/buttonshare?link=&title=" target="_blank"><i class="fa fa-renren"></i></a></li>
+              <li><a href="http://twitter.com/share?url=&text=" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            </ul>
+          </div>
+          <div class="post-love">
+            <a href="javascript:;" data-action="ding" data-id="the_ID()" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
+            <span class="love-count">
+              0
+            </span></a>
+          </div>
+          <div class="post-tags">
+            Tags:
+              
+          </div>
+        </footer>
+
+      </article>
+
+      <div class="post-author box clearfix">
+        <img class="avatar avatar-80 photo" src="/assets/images/logo.png" alt="Lan Bing" width="80px" height="80px" />
+        <div class="author-meta">
+          <p class="name">Lan Bing</p>
+          <p class="description">My Press Iziy</p>
+        </div>
       </div>
-      <div class="panel-body">
-        <p>The author’s info</p>
-
-      </div>
+      <!--
+          if config set comment enable,include comment
+      -->
       
-        <!--share-->
-<div class="panel-footer operate">
-    <div class="pull-left">
-        <div class="ds-share flat" data-thread-key="" data-title="" data-images=""
-             data-content="" data-url="http://iziy.mypre.cn/about/">
-            <div class="ds-share-inline">
-              <ul  class="ds-share-icons-16">
-
-                <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
-                <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
-                <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
-                <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
-                <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
-              </ul>
-              <div class="ds-share-icons-more">
-              </div>
-            </div>
-         </div>
-    </div>
-    <div class="clearfix"></div>
-</div>
-
-      
-  </div>
-  <!--
-      if config set comment enable,include comment
-  -->
-  
-      <!-- comment -->
+          <!-- comment -->
 <div class="comments box clearfix">
 	<h5 id="comments-title"><span> Comments</span></h5>
         
@@ -100,8 +117,10 @@
 
 </div>
 
-  
-</div>
+      
+    </div><!-- /.single -->
+</div><!-- ./content -->
+
 
       </div><!-- ./container -->
 
@@ -118,6 +137,11 @@
 <!-- <script src="/assets/vendor/jquery/jquery.min.js"></script>
  -->
 
+<script type="text/javascript">
+var ajax = {
+	'home': ''
+}
+</script>
 
 <script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="http://libs.cdnjs.net/jquery-migrate/1.2.1/jquery-migrate.min.js"></script>
@@ -143,11 +167,11 @@
 
   <script id="dsq-count-scr" src="//iziy.disqus.com/count.js" async></script>
 <script>
-    var disqus_config = function () {
-        this.page.url = 'http://iziy.mypre.cn/about/'; // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = ''; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-        this.page.title = 'a unique title for each page where Disqus is present';
-    };
+    // var disqus_config = function () {
+    //     this.page.url = '/about/'; // Replace PAGE_URL with your page's canonical URL variable
+    //     this.page.identifier = ''; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    //     this.page.title = 'a unique title for each page where Disqus is present';
+    // };
     (function () { // DON'T EDIT BELOW THIS LINE
         var d = document, s = d.createElement('script');
 
