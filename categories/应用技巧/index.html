@@ -26,6 +26,20 @@
 </head>
 
 <body class="nav-open">
+  <script type="text/javascript">
+  if(navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i)){
+    document.write('<div id="mobile-nav" class="f12 yahei">');
+    document.write('<ul class="nav">');
+    document.write('    <li class="active">');
+    document.write('        <a href="/">首页</a>');
+    document.write('    </li>');
+    document.write('    <li class="active">');
+    document.write('        <a href="/about/">关于</a>');
+    document.write('    </li>');
+    document.write('</ul>');
+    document.write('</div>');
+  }
+  </script>
   <div id="wrap">
     <div id="preheader">notice_TOP</div>
       <header id="header" class="clearfix">
@@ -33,16 +47,24 @@
           <h1><a href="/">面向大海,心暖花开</a></h1>
           <p class="desc yahei"><span>从明天起,做一个幸福的人, 喂马、劈柴、周游世界。</span></p>
         </div>
-        <nav id="main-nav" class="clearfix yahei">
-    <ul class="nav">
-        <li class="active">
-            <a href="/">首页</a>
-        </li>
-        <li class="active">
-            <a href="/about/">关于</a>
-        </li>
-    </ul>
-</nav>
+        <script type="text/javascript">
+if(navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i)){
+  document.write('<a href="javascript:;" class="open-nav icon-list"><i class="fa fa-bars"></i></a>');
+}
+else
+{
+	document.write('<nav id="main-nav" class="clearfix yahei">');
+    document.write('<ul class="nav">');
+    document.write('    <li class="active">');
+    document.write('        <a href="/">首页</a>');
+    document.write('    </li>');
+    document.write('    <li class="active">');
+    document.write('        <a href="/about/">关于</a>');
+    document.write('    </li>');
+    document.write('</ul>');
+    document.write('</nav>');
+}
+</script>
 
         <div id="announcement">
           <a href="#" class="openpre close" title="Announcement"><i class="fa fa-star"></i></a>
@@ -61,7 +83,7 @@
       <a href="/2016/03/20/bash-e5-bf-ab-e6-8d-b7-e9-94-ae-e8-ae-b0-e5-bd-95-e5-a4-87-e5-bf-98" title="Bash快捷键 记录备忘" rel="bookmark">Bash快捷键 记录备忘</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2016-03-20</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2016-03-20</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
             <a href="/categories/应用技巧">应用技巧</a>
@@ -72,8 +94,10 @@
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          <div>
+
+          
+          
+              <div>
 <blockquote><p><strong>生活在 Bash Shell 中，熟记以下快捷键，将极大的提高你的命令行操作效率。 </strong></p></blockquote>
 <h3>编辑命令</h3>
 <ul>
@@ -136,7 +160,8 @@
 </blockquote>
 </div>
 
-        
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -158,7 +183,7 @@
       <a href="/2015/12/26/win7-e4-b8-8b-e4-bf-ae-e6-94-b9-e7-9b-98-e7-ac-a6-e7-9a-84-e6-96-b9-e6-b3-95" title="Win7 下修改盘符的方法" rel="bookmark">Win7 下修改盘符的方法</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2015-12-26</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2015-12-26</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
             <a href="/categories/应用技巧">应用技巧</a>
@@ -169,15 +194,18 @@
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          <p>运行<code>regedit</code></p>
+
+          
+          
+              <p>运行<code>regedit</code></p>
 <p>找到
 <pre>HKEY_LOCAL_MACHINE\SYSTEM\MountedDevices</pre>
 <p>键</p>
 <p>在右边找到“\DosDevices\X:”等项，右键重命名到需要修改成的盘符，</p>
 <p>重启。</p>
 
-        
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -199,7 +227,7 @@
       <a href="/2015/11/14/add-sublime-text-to-your-context-menu-on-right-click" title="Add Sublime Text to your context menu on right click" rel="bookmark">Add Sublime Text to your context menu on right click</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2015-11-14</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2015-11-14</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
             <a href="/categories/应用技巧">应用技巧</a>
@@ -210,8 +238,10 @@
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          <p>When opening a text file, you may be used to right click on the file to be opened and then choose the application which can open the file from the context menu. On the context menu, you may see a menu item like "Edit with Notepad++".</p>
+
+          
+          
+              <p>When opening a text file, you may be used to right click on the file to be opened and then choose the application which can open the file from the context menu. On the context menu, you may see a menu item like "Edit with Notepad++".</p>
 <p>Nowadays many people especially programmers like to use Sublime Text, but by default this application will not show on the context menu when you right click on a file. There is now frequent request to add this application to the context menu. Here we show a simple batch file which can help you achieve this.</p>
 <p>Below is the batch code :</p>
 <pre>@echo off
@@ -229,7 +259,8 @@ pause</pre>
 <p><img class="aligncenter" src="http://www.pixelstech.net/article/images/context-menu-sublime-text.PNG" alt="" /></p>
 <p>Please note that you need to run the batch file as administrator, otherwise you will see errors on the command line console.</p>
 
-        
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -251,7 +282,7 @@ pause</pre>
       <a href="/2015/11/14/vim-save-file-in-read-only-mode-without-restart-your-work" title="Vim: Save file in read-only mode without restart your work" rel="bookmark">Vim: Save file in read-only mode without restart your work</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2015-11-14</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2015-11-14</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
             <a href="/categories/Linux系统">Linux系统</a>
@@ -264,8 +295,10 @@ pause</pre>
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          <p><span style="font-size: medium;">Open a file as normal, forgetting to use “sudo”, and therefore viewing a read-only file.</span></p>
+
+          
+          
+              <p><span style="font-size: medium;">Open a file as normal, forgetting to use “sudo”, and therefore viewing a read-only file.</span></p>
 <p><span style="font-size: medium;">Then mistakenly try to edit the read-only file in the traditional manner.</span></p>
 <pre>:w !sudo tee%</pre>
 <p><span style="font-size: medium;">At this point we will be presented with the content of the file and a prompt to press ENTER or type another command. </span></p>
@@ -280,7 +313,8 @@ pause</pre>
 <span style="font-size: medium;"> % = Triggers the use of the current filename.</span><br />
 <span style="font-size: medium;"> Simply put, the ‘tee’ command is run as sudo and follows the vi/vim command on the current filename given.</span></p></blockquote>
 
-        
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -302,7 +336,7 @@ pause</pre>
       <a href="/2015/10/31/use-your-own-vimrc-when-using-root" title="Use your own vimrc when using root" rel="bookmark">Use your own vimrc when using root</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2015-10-31</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2015-10-31</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
             <a href="/categories/应用技巧">应用技巧</a>
@@ -313,11 +347,14 @@ pause</pre>
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          <p>linking <code>/root/.vimrc</code> to <code>~/.vimrc</code></p>
+
+          
+          
+              <p>linking <code>/root/.vimrc</code> to <code>~/.vimrc</code></p>
 <pre>sudo ln -s /home/lanbing/.vimrc /root/.vimrc</pre>
 
-        
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -339,7 +376,7 @@ pause</pre>
       <a href="/2014/10/10/must-issue-sudo-alsa-force-reload-on-reboot-ubuntu" title="Must issue sudo alsa force-reload on reboot (Ubuntu)" rel="bookmark">Must issue sudo alsa force-reload on reboot (Ubuntu)</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2014-10-10</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2014-10-10</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
             <a href="/categories/应用技巧">应用技巧</a>
@@ -350,8 +387,10 @@ pause</pre>
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          <p>
+
+          
+          
+              <p>
 	I have a problem, I have got sound working...</p>
 <p>
 	But only when I issue the Code:</p>
@@ -379,7 +418,8 @@ sudo alsa force-reload </pre>
 	MODULES=&quot;soundcore&quot;
 </pre>
 
-        
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -401,7 +441,7 @@ sudo alsa force-reload </pre>
       <a href="/2014/09/15/e7-ae-80-e5-8d-95-e6-96-b9-e6-b3-95-e6-b7-bb-e5-8a-a0-e7-a8-8b-e5-ba-8f-e4-bd-bf-e5-85-b6-e5-bc-80-e6-9c-ba-e8-87-aa-e5-8a-a8-e5-90-af-e5-8a-a8" title="简单方法 添加程序使其开机自动启动" rel="bookmark">简单方法 添加程序使其开机自动启动</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2014-09-15</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2014-09-15</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
             <a href="/categories/应用技巧">应用技巧</a>
@@ -414,8 +454,10 @@ sudo alsa force-reload </pre>
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          <p>
+
+          
+          
+              <p>
 	有些时候,想<span style="font-family: arial; font-size: 13px; line-height: 20px;">使一些小程序在系统开始时候自动启动,程序本身却没有提供可以开机启动的设置.</span></p>
 <p>
 	<span style="font-family: arial; font-size: 13px; line-height: 20px;">所以，就需要我们自己手动为电脑添加开机启动项了。</span></p>
@@ -425,43 +467,11 @@ sudo alsa force-reload </pre>
 	为自己的电脑<span style="font-family: arial; font-size: 13px; line-height: 20px;">添加启动项的方法有很多，在这里就介绍一种简单的方法添加启动项。</span></p>
 <p>
 	&nbsp;</p>
-<p><!--more--></p>
-<pre>
-在此期间，有些安全软件可能会拦截，你的操作，可以直接点击通过，放行。或是关闭安全软件。</pre>
 <p>
-	&nbsp;</p>
-<p>
-	<span style="font-family: arial; font-size: 13px; line-height: 20px;">Step1 ：</span><span style="font-family: arial; line-height: 20px;">找到 想到 添加 开机</span><span style="font-family: arial; line-height: 20px;">启动 的程序，&nbsp;</span></p>
-<p>
-	<span style="font-family: arial; font-size: 13px; line-height: 20px;">右键 --&gt; 发送到 --&gt; 桌面快捷方式 &nbsp; &nbsp;</span></p>
-<p>
-	<font face="arial"><span style="line-height: 20px;">这时将会在桌面上添加一个 快捷方式。 图标和原来程序一样 但是 左下角会有一个小箭头</span></font></p>
-<p style="text-align: center;">
-	<img alt="" src="http://m2.img.srcdd.com/farm5/d/2014/0915/22/24024D4E3D461A9747EBE345719287D2_B1280_1280_495_585.png" style="width: 495px; height: 585px;" /></p>
-<p>
-	<span style="font-family: arial; font-size: 13px; line-height: 20px;">Step2：点击开始菜单 在 &rdquo;所有程序&ldquo; 中&nbsp;找到 &rdquo;启动&ldquo; 文件夹</span></p>
-<p style="text-align: center;">
-	<img alt="" src="http://m1.img.srcdd.com/farm5/d/2014/0915/22/6806497D4CE4B65B545D5A2455BB66D0_B1280_1280_408_555.png" style="width: 408px; height: 555px;" /></p>
-<p>
-	&nbsp;</p>
-<p>
-	Step<span style="font-size: 13px; line-height: 1.6em;">3</span><span style="font-size: 13px; line-height: 1.6em;">： 右键 &ldquo;启动&rdquo;文件夹 在弹出的菜单中 点击&ldquo;打开&rdquo;，将会打开 &ldquo;启动&rdquo;文件夹。</span></p>
-<p style="text-align: center;">
-	<a href="http://m2.img.srcdd.com/farm4/d/2014/0915/22/9F9035C141227E0554723F8625F3C1A0_B1280_1280_402_547.png"><img alt="" src="http://m2.img.srcdd.com/farm4/d/2014/0915/22/9F9035C141227E0554723F8625F3C1A0_B1280_1280_402_547.png" style="width: 402px; height: 547px;" /></a></p>
-<p>
-	Step4： 将 Step1 中所创建&nbsp;快捷方式 复制到 刚刚打开 的文件夹里边。</p>
-<p style="text-align: center;">
-	<img alt="" src="http://m2.img.srcdd.com/farm4/d/2014/0915/22/07538F1F1241C6E87D048B8E299BA098_B1280_1280_920_613.png" style="width: 920px; height: 613px;" /></p>
-<p>
-	&nbsp;</p>
-<p>
-	Step5：大功告成。</p>
-<p>
-	&nbsp;</p>
-<p>
-	可以重启一下电脑 ，测试测试，程序是否自动启动了！</p>
 
-        
+
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">

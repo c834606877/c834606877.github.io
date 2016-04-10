@@ -26,6 +26,20 @@
 </head>
 
 <body class="nav-open">
+  <script type="text/javascript">
+  if(navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i)){
+    document.write('<div id="mobile-nav" class="f12 yahei">');
+    document.write('<ul class="nav">');
+    document.write('    <li class="active">');
+    document.write('        <a href="/">首页</a>');
+    document.write('    </li>');
+    document.write('    <li class="active">');
+    document.write('        <a href="/about/">关于</a>');
+    document.write('    </li>');
+    document.write('</ul>');
+    document.write('</div>');
+  }
+  </script>
   <div id="wrap">
     <div id="preheader">notice_TOP</div>
       <header id="header" class="clearfix">
@@ -33,16 +47,24 @@
           <h1><a href="/">面向大海,心暖花开</a></h1>
           <p class="desc yahei"><span>从明天起,做一个幸福的人, 喂马、劈柴、周游世界。</span></p>
         </div>
-        <nav id="main-nav" class="clearfix yahei">
-    <ul class="nav">
-        <li class="active">
-            <a href="/">首页</a>
-        </li>
-        <li class="active">
-            <a href="/about/">关于</a>
-        </li>
-    </ul>
-</nav>
+        <script type="text/javascript">
+if(navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i)){
+  document.write('<a href="javascript:;" class="open-nav icon-list"><i class="fa fa-bars"></i></a>');
+}
+else
+{
+	document.write('<nav id="main-nav" class="clearfix yahei">');
+    document.write('<ul class="nav">');
+    document.write('    <li class="active">');
+    document.write('        <a href="/">首页</a>');
+    document.write('    </li>');
+    document.write('    <li class="active">');
+    document.write('        <a href="/about/">关于</a>');
+    document.write('    </li>');
+    document.write('</ul>');
+    document.write('</nav>');
+}
+</script>
 
         <div id="announcement">
           <a href="#" class="openpre close" title="Announcement"><i class="fa fa-star"></i></a>
@@ -59,7 +81,7 @@
       <a href="/2013/02/16/e6-83-a0-e6-99-ae-e5-8f-af-e8-83-bd-e8-a2-ab-e6-8b-86-e5-88-86-ef-bc-9a-e5-bf-ab-e4-b9-b0-e8-82-a1-e7-a5-a8-ef-bc-81" title="惠普可能被拆分：快买股票！" rel="bookmark">惠普可能被拆分：快买股票！</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2013-02-16</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2013-02-16</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
       </li>
@@ -68,9 +90,12 @@
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-           - 有些新闻标题是不能信的。 - the value of headlines
-        
+
+          
+          
+               - 有些新闻标题是不能信的。 - the value of headlines
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -92,7 +117,7 @@
       <a href="/2013/02/16/e6-9c-80-e9-9d-a0-e8-bf-91-e5-9c-b0-e7-90-83-e7-9a-84-e5-b0-8f-e8-a1-8c-e6-98-9f-e4-bb-8a-e6-97-a5-e5-87-8c-e6-99-a8-e6-8e-a0-e8-bf-87-e8-8b-8f-e9-97-a8-e7-ad-94-e8-85-8a-e5-b2-9b" title="最靠近地球的小行星 今日凌晨掠过苏门答腊岛" rel="bookmark">最靠近地球的小行星 今日凌晨掠过苏门答腊岛</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2013-02-16</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2013-02-16</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
       </li>
@@ -101,9 +126,12 @@
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          另据俄罗斯《消息报》网站报道，俄国防部几天前已收到有关坠落陨石的信息，但当时专家认为这颗陨石会在坠落地球前燃烧殆尽，因此没有发出警报。
-        
+
+          
+          
+              另据俄罗斯《消息报》网站报道，俄国防部几天前已收到有关坠落陨石的信息，但当时专家认为这颗陨石会在坠落地球前燃烧殆尽，因此没有发出警报。
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -125,7 +153,7 @@
       <a href="/2013/02/15/e4-bf-84-e7-bd-97-e6-96-af-e9-99-a8-e7-9f-b3-e5-9d-a0-e8-90-bd-e9-80-a0-e6-88-90-e8-bf-91500-e4-ba-ba-e5-8f-97-e4-bc-a4" title="俄罗斯陨石坠落造成近500人受伤" rel="bookmark">俄罗斯陨石坠落造成近500人受伤</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2013-02-15</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2013-02-15</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
       </li>
@@ -134,9 +162,12 @@
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          新华社莫斯科2月15日电 (记者贺颖骏)据俄新社报道，莫斯科时间15日早晨在俄罗斯车里雅宾斯克州坠落的陨石已造成近500人受伤。
-        
+
+          
+          
+              新华社莫斯科2月15日电 (记者贺颖骏)据俄新社报道，莫斯科时间15日早晨在俄罗斯车里雅宾斯克州坠落的陨石已造成近500人受伤。
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -158,7 +189,7 @@
       <a href="/2013/02/15/e5-8f-88-e6-8d-a2-e6-9c-8d-e5-8a-a1-e5-99-a8-e4-ba-86" title="又换服务器了" rel="bookmark">又换服务器了</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2013-02-15</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2013-02-15</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
       </li>
@@ -167,9 +198,12 @@
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          又换服务器了 …… 这次用的可是AppFog提供的云服务，和国内的sae有的一拼，可谓各有所长呵~
-        
+
+          
+          
+              又换服务器了 …… 这次用的可是AppFog提供的云服务，和国内的sae有的一拼，可谓各有所长呵~
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -191,7 +225,7 @@
       <a href="/2013/02/15/e6-96-b0-e5-8d-8e-e7-a4-be-ef-bc-9a-e4-b8-a5-e6-9f-a5-e5-85-ac-e6-ac-be-e5-90-83-e5-96-9d-e8-8c-85-e5-8f-b0-e7-ad-89-e5-ba-94-e5-a3-b0-e4-bb-b7-e8-b7-8c2-3-e6-88-90" title="新华社：严查公款吃喝 茅台等应声价跌2-3成" rel="bookmark">新华社：严查公款吃喝 茅台等应声价跌2-3成</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2013-02-15</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2013-02-15</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
       </li>
@@ -200,9 +234,12 @@
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          以往某些名酒价格“只涨不跌”并非“市场原因”，而是公款吃喝在为其“撑腰”，不仅导致了国内酒业的畸形发展，而且还助长了奢侈浪费之风的蔓延。
-        
+
+          
+          
+              以往某些名酒价格“只涨不跌”并非“市场原因”，而是公款吃喝在为其“撑腰”，不仅导致了国内酒业的畸形发展，而且还助长了奢侈浪费之风的蔓延。
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -224,7 +261,7 @@
             
             
                 
-                  <a href="">1</a>
+                  <a href="/">1</a>
                 
             
                 

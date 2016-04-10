@@ -26,6 +26,20 @@
 </head>
 
 <body class="nav-open">
+  <script type="text/javascript">
+  if(navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i)){
+    document.write('<div id="mobile-nav" class="f12 yahei">');
+    document.write('<ul class="nav">');
+    document.write('    <li class="active">');
+    document.write('        <a href="/">首页</a>');
+    document.write('    </li>');
+    document.write('    <li class="active">');
+    document.write('        <a href="/about/">关于</a>');
+    document.write('    </li>');
+    document.write('</ul>');
+    document.write('</div>');
+  }
+  </script>
   <div id="wrap">
     <div id="preheader">notice_TOP</div>
       <header id="header" class="clearfix">
@@ -33,16 +47,24 @@
           <h1><a href="/">面向大海,心暖花开</a></h1>
           <p class="desc yahei"><span>从明天起,做一个幸福的人, 喂马、劈柴、周游世界。</span></p>
         </div>
-        <nav id="main-nav" class="clearfix yahei">
-    <ul class="nav">
-        <li class="active">
-            <a href="/">首页</a>
-        </li>
-        <li class="active">
-            <a href="/about/">关于</a>
-        </li>
-    </ul>
-</nav>
+        <script type="text/javascript">
+if(navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i)){
+  document.write('<a href="javascript:;" class="open-nav icon-list"><i class="fa fa-bars"></i></a>');
+}
+else
+{
+	document.write('<nav id="main-nav" class="clearfix yahei">');
+    document.write('<ul class="nav">');
+    document.write('    <li class="active">');
+    document.write('        <a href="/">首页</a>');
+    document.write('    </li>');
+    document.write('    <li class="active">');
+    document.write('        <a href="/about/">关于</a>');
+    document.write('    </li>');
+    document.write('</ul>');
+    document.write('</nav>');
+}
+</script>
 
         <div id="announcement">
           <a href="#" class="openpre close" title="Announcement"><i class="fa fa-star"></i></a>
@@ -61,7 +83,7 @@
       <a href="/2015/12/05/ros-pppoe-e6-8b-a8-e5-8f-b7-e4-b8-8a-e7-bd-91-e5-8d-95-e5-8f-a3-nat-e8-bd-ac-e5-8f-91-ef-bc-8b-ip-e4-bc-aa-e8-a3-85" title="Ros PPPoe 拨号上网 单口 Nat 转发 ＋ IP伪装" rel="bookmark">Ros PPPoe 拨号上网 单口 Nat 转发 ＋ IP伪装</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2015-12-05</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2015-12-05</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
             <a href="/categories/网络应用">网络应用</a>
@@ -72,8 +94,10 @@
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          <p>工作室网路由于使用二楼机房供教学使用的网络，一直受到与教学时段同步的限制，临近周末‘思诚杯’比赛，可能需要网络，所以改用PPPoe 拨号上网，<br />
+
+          
+          
+              <p>工作室网路由于使用二楼机房供教学使用的网络，一直受到与教学时段同步的限制，临近周末‘思诚杯’比赛，可能需要网络，所以改用PPPoe 拨号上网，<br />
 原使用Ros ＋ 无线路由做交换<br />
 原端口，被保安室 借用 需沟通，</p>
 <p>起先，想到PPPoe拨号 设置Ros 路由器，设置拨号一时可能解决不了，直接用 无线路由 做转发，<br />
@@ -99,7 +123,8 @@ DNS无异常<br />
 果不其然，网络访问正常。<br />
 于此，无线路由器瓶颈去除，网络恢复原有20M水平。</p>
 
-        
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">

@@ -26,6 +26,20 @@
 </head>
 
 <body class="nav-open">
+  <script type="text/javascript">
+  if(navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i)){
+    document.write('<div id="mobile-nav" class="f12 yahei">');
+    document.write('<ul class="nav">');
+    document.write('    <li class="active">');
+    document.write('        <a href="/">首页</a>');
+    document.write('    </li>');
+    document.write('    <li class="active">');
+    document.write('        <a href="/about/">关于</a>');
+    document.write('    </li>');
+    document.write('</ul>');
+    document.write('</div>');
+  }
+  </script>
   <div id="wrap">
     <div id="preheader">notice_TOP</div>
       <header id="header" class="clearfix">
@@ -33,16 +47,24 @@
           <h1><a href="/">面向大海,心暖花开</a></h1>
           <p class="desc yahei"><span>从明天起,做一个幸福的人, 喂马、劈柴、周游世界。</span></p>
         </div>
-        <nav id="main-nav" class="clearfix yahei">
-    <ul class="nav">
-        <li class="active">
-            <a href="/">首页</a>
-        </li>
-        <li class="active">
-            <a href="/about/">关于</a>
-        </li>
-    </ul>
-</nav>
+        <script type="text/javascript">
+if(navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i)){
+  document.write('<a href="javascript:;" class="open-nav icon-list"><i class="fa fa-bars"></i></a>');
+}
+else
+{
+	document.write('<nav id="main-nav" class="clearfix yahei">');
+    document.write('<ul class="nav">');
+    document.write('    <li class="active">');
+    document.write('        <a href="/">首页</a>');
+    document.write('    </li>');
+    document.write('    <li class="active">');
+    document.write('        <a href="/about/">关于</a>');
+    document.write('    </li>');
+    document.write('</ul>');
+    document.write('</nav>');
+}
+</script>
 
         <div id="announcement">
           <a href="#" class="openpre close" title="Announcement"><i class="fa fa-star"></i></a>
@@ -59,7 +81,7 @@
       <a href="/2016/03/20/bash-e5-bf-ab-e6-8d-b7-e9-94-ae-e8-ae-b0-e5-bd-95-e5-a4-87-e5-bf-98" title="Bash快捷键 记录备忘" rel="bookmark">Bash快捷键 记录备忘</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2016-03-20</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2016-03-20</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
             <a href="/categories/应用技巧">应用技巧</a>
@@ -70,8 +92,10 @@
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          <div>
+
+          
+          
+              <div>
 <blockquote><p><strong>生活在 Bash Shell 中，熟记以下快捷键，将极大的提高你的命令行操作效率。 </strong></p></blockquote>
 <h3>编辑命令</h3>
 <ul>
@@ -134,7 +158,8 @@
 </blockquote>
 </div>
 
-        
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -156,7 +181,7 @@
       <a href="/2016/02/19/e5-8c-b9-e8-90-a8-e8-b0-83-e7-94-a8-e6-b1-89-e5-a0-a1-e5-b9-b6-e4-b8-94-e4-bc-a0-e5-85-a5-e4-ba-86-e5-8c-85-e5-ad-90" title="匹萨调用汉堡并且传入了包子!" rel="bookmark">匹萨调用汉堡并且传入了包子!</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2016-02-19</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2016-02-19</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
             <a href="/categories/心情日记">心情日记</a>
@@ -167,9 +192,12 @@
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          [xiami]24015[/xiami]
-        
+
+          
+          
+              [xiami]24015[/xiami]
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -191,7 +219,7 @@
       <a href="/2016/02/07/fedora-e5-ae-89-e8-a3-85-e5-90-8e-e6-98-be-e7-a4-ba-e4-b8-ad-e6-96-87-e5-ad-97-e4-bd-93-e5-a4-a7-e5-b0-8f-e4-b8-8d-e4-b8-80-e9-ab-98-e4-bd-8e-e4-b8-8d-e9-bd-90-e8-a7-a3-e5-86-b3-e6-96-b9" title="Fedora 安装后 显示 中文字体 大小不一 高低不齐 解决方法" rel="bookmark">Fedora 安装后 显示 中文字体 大小不一 高低不齐 解决方法</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2016-02-07</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2016-02-07</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
             <a href="/categories/Linux系统">Linux系统</a>
@@ -202,12 +230,15 @@
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          <pre>echo 'export LC_CTYPE="zh_CN.utf8"' &gt;&gt; ~/.bashrc
+
+          
+          
+              <pre>echo 'export LC_CTYPE="zh_CN.utf8"' &gt;&gt; ~/.bashrc
 
 主要原因是 在中文中 夹杂部分 日韩字体导致，</pre>
 
-        
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -229,7 +260,7 @@
       <a href="/2015/12/26/win7-e4-b8-8b-e4-bf-ae-e6-94-b9-e7-9b-98-e7-ac-a6-e7-9a-84-e6-96-b9-e6-b3-95" title="Win7 下修改盘符的方法" rel="bookmark">Win7 下修改盘符的方法</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2015-12-26</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2015-12-26</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
             <a href="/categories/应用技巧">应用技巧</a>
@@ -240,15 +271,18 @@
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          <p>运行<code>regedit</code></p>
+
+          
+          
+              <p>运行<code>regedit</code></p>
 <p>找到
 <pre>HKEY_LOCAL_MACHINE\SYSTEM\MountedDevices</pre>
 <p>键</p>
 <p>在右边找到“\DosDevices\X:”等项，右键重命名到需要修改成的盘符，</p>
 <p>重启。</p>
 
-        
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -270,7 +304,7 @@
       <a href="/2015/12/26/win7-e5-8a-a0-e5-9b-ba-e6-80-81-ef-bc-8c-e6-97-a0-e9-99-a8-e8-bf-81-e7-a7-bb-e5-90-8c-e6-97-b6-e6-94-b9-e4-b8-baefi-e5-90-af-e5-8a-a8" title="WIN7加固态，无陨迁移同时改为EFI 启动" rel="bookmark">WIN7加固态，无陨迁移同时改为EFI 启动</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2015-12-26</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2015-12-26</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
             <a href="/categories/Linux系统">Linux系统</a>
@@ -281,8 +315,10 @@
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          <p>前阵子买了块SSD后，一直打算鼓捣鼓捣EFI启动，全新安装明显不符合IT精神，所以打算把 无陨迁移 以及EFI启动同时做了，机械原C盘做Linux</p>
+
+          
+          
+              <p>前阵子买了块SSD后，一直打算鼓捣鼓捣EFI启动，全新安装明显不符合IT精神，所以打算把 无陨迁移 以及EFI启动同时做了，机械原C盘做Linux</p>
 <p>首先 在原win7下上固态后，4K ，删除自动生成的MBR分区，新建一个300M 的 ESP 分区 剩佘空间用做新系统盘，</p>
 <p>之后进入PE</p>
 <p>使用GHOST 将C盘  分区对分区 复制 到 固态的 系统盘上</p>
@@ -303,7 +339,8 @@
 <p>之后在gurb2的 grub.cfg 中 将 Windows 7 的引导文件路径 改成 bootmgfw_bak.efi 就可以从GRUB2 引导WIN7 了</p>
 <p><img src="http://imglf.nosdn.127.net/img/Z3ZvNUFuRWljSU5CVjVWV2w3YnVBaVp2YnRvcFdFbHVva3B4QU01RWhKM3hiZEc4ZEs1QmhnPT0.jpg?imageView&amp;thumbnail=2000y1500&amp;type=jpg&amp;quality=96&amp;stripmeta=0&amp;type=jpg" alt="" /></p>
 
-        
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">

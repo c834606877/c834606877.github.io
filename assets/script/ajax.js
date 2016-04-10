@@ -150,14 +150,10 @@ function ajaxloadPage(url, push, getData){
 						prettyPrint();
 
 						(function () { // add hint
-					        var d = document, s = d.createElement('script');
-
-					        s.src = 'https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js';
-
-					        s.setAttribute('data-timestamp', +new Date());
-					        (d.head || d.body).appendChild(s);
+							DISQUSWIDGETS.getCount({reset: true});
+							DISQUS.reset();
 					    })();
-						
+												
 						jQuery("img").unveil();
 						
 						ajaxloadPageInit("#" + ajaxcontent + " ");

@@ -26,6 +26,20 @@
 </head>
 
 <body class="nav-open">
+  <script type="text/javascript">
+  if(navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i)){
+    document.write('<div id="mobile-nav" class="f12 yahei">');
+    document.write('<ul class="nav">');
+    document.write('    <li class="active">');
+    document.write('        <a href="/">首页</a>');
+    document.write('    </li>');
+    document.write('    <li class="active">');
+    document.write('        <a href="/about/">关于</a>');
+    document.write('    </li>');
+    document.write('</ul>');
+    document.write('</div>');
+  }
+  </script>
   <div id="wrap">
     <div id="preheader">notice_TOP</div>
       <header id="header" class="clearfix">
@@ -33,16 +47,24 @@
           <h1><a href="/">面向大海,心暖花开</a></h1>
           <p class="desc yahei"><span>从明天起,做一个幸福的人, 喂马、劈柴、周游世界。</span></p>
         </div>
-        <nav id="main-nav" class="clearfix yahei">
-    <ul class="nav">
-        <li class="active">
-            <a href="/">首页</a>
-        </li>
-        <li class="active">
-            <a href="/about/">关于</a>
-        </li>
-    </ul>
-</nav>
+        <script type="text/javascript">
+if(navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i)){
+  document.write('<a href="javascript:;" class="open-nav icon-list"><i class="fa fa-bars"></i></a>');
+}
+else
+{
+	document.write('<nav id="main-nav" class="clearfix yahei">');
+    document.write('<ul class="nav">');
+    document.write('    <li class="active">');
+    document.write('        <a href="/">首页</a>');
+    document.write('    </li>');
+    document.write('    <li class="active">');
+    document.write('        <a href="/about/">关于</a>');
+    document.write('    </li>');
+    document.write('</ul>');
+    document.write('</nav>');
+}
+</script>
 
         <div id="announcement">
           <a href="#" class="openpre close" title="Announcement"><i class="fa fa-star"></i></a>
@@ -59,7 +81,7 @@
       <a href="/2012/12/08/e6-b9-96-e4-b8-8a-e6-99-9a-e5-bd-92-e5-a5-91-e5-b5-a9" title="湖上晚归  契嵩" rel="bookmark">湖上晚归  契嵩</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2012-12-08</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2012-12-08</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
       </li>
@@ -68,9 +90,12 @@
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          　              　湖上晚归　　人间薄游罢，归兴寻旧隐。　　春崖行未穷，夕阳看欲尽。　　岚光山际淡，天影水边近。　　自怜幽趣真，清吟更长引。         诗题中之湖指杭州西湖，为中国著名的名胜风景区。在今浙江省杭州市西。嵩公久居杭州西湖西畔之佛日山，虽然性格内向沉静，不喜外务，偶尔亦当有游湖之举，...
-        
+
+          
+          
+              　              　湖上晚归　　人间薄游罢，归兴寻旧隐。　　春崖行未穷，夕阳看欲尽。　　岚光山际淡，天影水边近。　　自怜幽趣真，清吟更长引。         诗题中之湖指杭州西湖，为中国著名的名胜风景区。在今浙江省杭州市西。嵩公久居杭州西湖西畔之佛日山，虽然性格内向沉静，不喜外务，偶尔亦当有游湖之举，...
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -92,7 +117,7 @@
       <a href="/2012/12/08/e8-87-aa-e7-84-b6-e7-be-8e-e4-b8-bd-e7-9a-84-e7-b2-be-e7-81-b5-e6-b4-92-e8-84-b1-e7-81-b5-e6-80-a7-e7-9a-84-e9-9b-aa-e8-8a-b1" title="自然美丽的精灵 洒脱灵性的雪花" rel="bookmark">自然美丽的精灵 洒脱灵性的雪花</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2012-12-08</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2012-12-08</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
       </li>
@@ -101,8 +126,10 @@
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          <p><strong>雪花是一种浪漫，是诗人划开尤物胸膛的武器。柔软的胸怀，透过丝丝的星月的光辉。清幽之地，出入意念的花园，我们被洗涤着灵魂，雪，是是飞扬着的美学幻想。</strong></p>
+
+          
+          
+              <p><strong>雪花是一种浪漫，是诗人划开尤物胸膛的武器。柔软的胸怀，透过丝丝的星月的光辉。清幽之地，出入意念的花园，我们被洗涤着灵魂，雪，是是飞扬着的美学幻想。</strong></p>
 <p style="text-align: center;">　　《雪花的快乐》</p>
 <p style="text-align: center;">　　假如我是一朵雪花，</p>
 <p style="text-align: center;">　　翩翩的在半空里潇洒，</p>
@@ -125,46 +152,11 @@
 <p style="text-align: center;">　　消溶，消溶，消溶——</p>
 <p style="text-align: center;">　　溶入了她柔波似的心胸!</p>
 <p style="text-align: center;">[singlepic id=1 h=400 w=300  float=none]</p>
-<p><!--more--></p>
-<p style="text-align: center;">[singlepic id=2 float=none]</p>
-<p><!--nextpage--></p>
-<p style="text-align: center;">[singlepic id=3 float=none]</p>
-<p style="text-align: center;">[singlepic id=4 float=none]</p>
-<p style="text-align: center;">[singlepic id=5 float=none]</p>
-<p style="text-align: center;">[singlepic id=6 float=none]</p>
-<p style="text-align: center;">[singlepic id=7 float=none]</p>
-<p style="text-align: center;">[singlepic id=8 float=none]</p>
-<p style="text-align: center;">[singlepic id=9 float=none]</p>
-<p style="text-align: center;">[singlepic id=10 float=none]</p>
-<p style="text-align: center;"><!--nextpage--></p>
-<p style="text-align: center;">[singlepic id=11 float=none]</p>
-<p style="text-align: center;">[singlepic id=12 float=none]</p>
-<p style="text-align: center;">[singlepic id=13 float=none]</p>
-<p style="text-align: center;">[singlepic id=14 float=none]</p>
-<p style="text-align: center;">[singlepic id=15 float=none]</p>
-<p style="text-align: center;">[singlepic id=16 float=none]</p>
-<p style="text-align: center;">[singlepic id=17 float=none]</p>
-<p style="text-align: center;">[singlepic id=18 float=none]</p>
-<p style="text-align: center;">[singlepic id=19 float=none]</p>
-<p style="text-align: center;">[singlepic id=20 float=none]</p>
-<p style="text-align: center;">[singlepic id=21 float=none]</p>
-<p style="text-align: center;"><!--nextpage-->[singlepic id=22 float=none]</p>
-<p style="text-align: center;">[singlepic id=23 float=none]</p>
-<p style="text-align: center;">[singlepic id=24 float=none]</p>
-<p style="text-align: center;">[singlepic id=25 float=none]</p>
-<p style="text-align: center;">[singlepic id=26 float=none]</p>
-<p style="text-align: center;">[singlepic id=27 float=none]</p>
-<p style="text-align: center;">[singlepic id=28 float=none]</p>
-<p style="text-align: center;">[singlepic id=29 float=none]</p>
-<p style="text-align: center;">[singlepic id=30 float=none]</p>
-<p style="text-align: center;"><!--nextpage-->[singlepic id=31 float=none]</p>
-<p style="text-align: center;">[singlepic id=32 float=none]</p>
-<p style="text-align: center;">[singlepic id=33 float=none]</p>
-<p style="text-align: center;">[singlepic id=34 float=none]</p>
-<p style="text-align: center;">[singlepic id=35 float=none]</p>
-<p style="text-align: center;">[singlepic id=36 float=none]</p>
+<p>
 
-        
+
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -186,7 +178,7 @@
       <a href="/2012/08/27/e5-93-88-e5-b0-94-e6-bb-a8-e5-9d-8d-e5-a1-8c-e5-a4-a7-e6-a1-a5-e6-96-bd-e5-b7-a5-e6-96-b9-e6-88-96-e4-b8-ba-e7-a6-8f-e5-bb-ba-e6-9f-90-e4-bc-81-e4-b8-9a" title="哈尔滨坍塌大桥施工方或为福建某企业" rel="bookmark">哈尔滨坍塌大桥施工方或为福建某企业</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2012-08-27</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2012-08-27</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
       </li>
@@ -195,9 +187,12 @@
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          哈尔滨市一座大桥发生事故，众多媒体报称这座大桥的施工方为中国铁建下属企业和中交二航局。
-        
+
+          
+          
+              哈尔滨市一座大桥发生事故，众多媒体报称这座大桥的施工方为中国铁建下属企业和中交二航局。
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -219,7 +214,7 @@
       <a href="/2012/08/14/e5-8c-97-e4-ba-ac-e8-a5-bf-e5-8d-95-e5-95-86-e5-9c-ba-e8-8b-b9-e6-9e-9c-e5-ba-97-e9-81-ad-e7-9b-97-e7-aa-83" title="北京西单商场苹果店遭盗窃" rel="bookmark">北京西单商场苹果店遭盗窃</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2012-08-14</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2012-08-14</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
       </li>
@@ -228,13 +223,16 @@
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          <p>据《京华时报》报道，8月12日凌晨，位于北京十里堡的西单商场有盗贼侵入，受损店铺为商场内的一家苹果体验店。当前，这家店仍在正常营业，但部分展品已经丢失。</p>
+
+          
+          
+              <p>据《京华时报》报道，8月12日凌晨，位于北京十里堡的西单商场有盗贼侵入，受损店铺为商场内的一家苹果体验店。当前，这家店仍在正常营业，但部分展品已经丢失。</p>
 <p>    记者在位于商场东侧一层外部的苹果体验店看到，这家店面西侧的玻璃墙被砸出了一个直径近1米的大洞，东南角一块约2平米的玻璃也被砸碎。盗贼很显然是通过这两个大洞进入店面进行盗窃的。同时，在店里，原本摆有苹果产品的展台已经空空如也。</p>
 <p>    监控录像显示，当日凌晨3点，两名男子将玻璃墙砸碎进入店内盗窃，作案持续15分钟。盗走苹果产品若干。由于当夜下雨，监控并没有拍摄到盗贼确切的体征和相貌。</p>
 <p>    目前，此事正在调查之中。</p>
 
-        
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -256,7 +254,7 @@
       <a href="/2012/08/12/e6-97-a5-e5-89-8d-e5-9b-bd-e5-8a-a1-e9-99-a2-e7-9d-a3-e6-9f-a516-e7-9c-81-e5-b8-82-e6-88-bf-e5-9c-b0-e4-ba-a7-e8-b0-83-e6-8e-a7-e5-b9-bf-e4-b8-9c-e6-b1-9f-e9-97-a8-e6-8c-a8-e6-89-b9" title="日前,国务院督查16省市房地产调控 广东江门挨批" rel="bookmark">日前,国务院督查16省市房地产调控 广东江门挨批</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2012-08-12</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2012-08-12</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
       </li>
@@ -265,9 +263,12 @@
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          7月下旬，国务院派出8个督查组奔赴16个省市对房地产调控政策落实情况进行专项督查。近日，督查组已督查结束陆续返京，督查结论也随之浮出水面，16省市中仅广东江门市挨批，“对江门落实调控政策出现的偏差与不到位之处，督促进行整改”。其余省市均获得积极评价。
-        
+
+          
+          
+              7月下旬，国务院派出8个督查组奔赴16个省市对房地产调控政策落实情况进行专项督查。近日，督查组已督查结束陆续返京，督查结论也随之浮出水面，16省市中仅广东江门市挨批，“对江门落实调控政策出现的偏差与不到位之处，督促进行整改”。其余省市均获得积极评价。
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -289,7 +290,7 @@
             
             
                 
-                  <a href="">1</a>
+                  <a href="/">1</a>
                 
             
                 

@@ -26,6 +26,20 @@
 </head>
 
 <body class="nav-open">
+  <script type="text/javascript">
+  if(navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i)){
+    document.write('<div id="mobile-nav" class="f12 yahei">');
+    document.write('<ul class="nav">');
+    document.write('    <li class="active">');
+    document.write('        <a href="/">首页</a>');
+    document.write('    </li>');
+    document.write('    <li class="active">');
+    document.write('        <a href="/about/">关于</a>');
+    document.write('    </li>');
+    document.write('</ul>');
+    document.write('</div>');
+  }
+  </script>
   <div id="wrap">
     <div id="preheader">notice_TOP</div>
       <header id="header" class="clearfix">
@@ -33,16 +47,24 @@
           <h1><a href="/">面向大海,心暖花开</a></h1>
           <p class="desc yahei"><span>从明天起,做一个幸福的人, 喂马、劈柴、周游世界。</span></p>
         </div>
-        <nav id="main-nav" class="clearfix yahei">
-    <ul class="nav">
-        <li class="active">
-            <a href="/">首页</a>
-        </li>
-        <li class="active">
-            <a href="/about/">关于</a>
-        </li>
-    </ul>
-</nav>
+        <script type="text/javascript">
+if(navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i)){
+  document.write('<a href="javascript:;" class="open-nav icon-list"><i class="fa fa-bars"></i></a>');
+}
+else
+{
+	document.write('<nav id="main-nav" class="clearfix yahei">');
+    document.write('<ul class="nav">');
+    document.write('    <li class="active">');
+    document.write('        <a href="/">首页</a>');
+    document.write('    </li>');
+    document.write('    <li class="active">');
+    document.write('        <a href="/about/">关于</a>');
+    document.write('    </li>');
+    document.write('</ul>');
+    document.write('</nav>');
+}
+</script>
 
         <div id="announcement">
           <a href="#" class="openpre close" title="Announcement"><i class="fa fa-star"></i></a>
@@ -61,7 +83,7 @@
       <a href="/2014/10/05/1-4-7-e3-80-80-e8-87-b4-e5-91-bd-e7-9a-84linux-e5-91-bd-e4-bb-a4-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf" title="1.4.7　致命的Linux命令 – Linux就是这个范儿" rel="bookmark">1.4.7　致命的Linux命令 – Linux就是这个范儿</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2014-10-05</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2014-10-05</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
             <a href="/categories/Linux就是这个范儿">Linux就是这个范儿</a>
@@ -72,8 +94,10 @@
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          <p style="text-indent: 2em;">
+
+          
+          
+              <p style="text-indent: 2em;">
 	别以为我是在开玩笑。有些Linux命令轻则造成数据丢失，重则导致系统瘫痪。你看这位同学漫不经心，以root身份敲入了rm -rf /，强制删除&nbsp;/&nbsp;目录下的所有文件，这代价可是很惨痛的（相当于系统自杀）。</p>
 <p style="text-indent: 2em;">
 	还有一个很好玩的例子，我用旺旺聊天的形式给你讲述：</p>
@@ -145,7 +169,8 @@
 <p style="text-indent: 2em; text-align: right;">
 	<a href="http://hook.aliapp.com/?p=554" style="color: rgb(51, 51, 51); text-decoration: none; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(51, 51, 51); font-size: 14px; text-align: right; text-indent: 28px; font-family: 宋体; line-height: 28px;">Linux就是这个范儿 &ndash; 本书目录&nbsp;</a></p>
 
-        
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -167,7 +192,7 @@
       <a href="/2014/10/05/1-4-6-e3-80-80-e8-81-94-e6-9c-ba-e5-b8-ae-e5-8a-a9-man-e5-be-88-e9-9d-a0-e8-b0-b1-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf" title="1.4.6　联机帮助——man很靠谱 – Linux就是这个范儿" rel="bookmark">1.4.6　联机帮助——man很靠谱 – Linux就是这个范儿</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2014-10-05</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2014-10-05</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
             <a href="/categories/Linux就是这个范儿">Linux就是这个范儿</a>
@@ -178,8 +203,10 @@
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          <p style="text-indent: 2em;">
+
+          
+          
+              <p style="text-indent: 2em;">
 	遇到问题寻找帮助能加快解决问题的速度。在Linux系统上，有以下几个途径可以获得帮助：</p>
 <p style="text-indent: 2em;">
 	1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;遇到问题，男人（man，其实是&ldquo;手册&rdquo;的简称）的帮助很靠谱。需要某个命令或者配置文件的帮助，就在终端输入：</p>
@@ -218,7 +245,8 @@
 <p style="text-indent: 2em; text-align: right;">
 	<a href="http://hook.aliapp.com/?p=554" style="color: rgb(51, 51, 51); text-decoration: none; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(51, 51, 51); font-size: 14px; text-align: right; text-indent: 28px; font-family: 宋体; line-height: 28px;">Linux就是这个范儿 &ndash; 本书目录&nbsp;</a></p>
 
-        
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -240,7 +268,7 @@
       <a href="/2014/10/05/1-4-5-e3-80-80-e9-94-99-e8-af-af-e4-bf-a1-e6-81-af-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf" title="1.4.5　错误信息 – Linux就是这个范儿" rel="bookmark">1.4.5　错误信息 – Linux就是这个范儿</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2014-10-05</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2014-10-05</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
             <a href="/categories/Linux就是这个范儿">Linux就是这个范儿</a>
@@ -251,8 +279,10 @@
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          <pre>
+
+          
+          
+              <pre>
 	$ %boast
 	bash: fg: %boast: No such job.
 </pre>
@@ -302,7 +332,8 @@ int main(intargc, char ** argv) {
 <p style="text-indent: 2em; text-align: right;">
 	<a href="http://hook.aliapp.com/?p=554" style="color: rgb(51, 51, 51); text-decoration: none; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(51, 51, 51); font-size: 14px; text-align: right; text-indent: 28px; font-family: 宋体; line-height: 28px;">Linux就是这个范儿 &ndash; 本书目录&nbsp;</a></p>
 
-        
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -324,7 +355,7 @@ int main(intargc, char ** argv) {
       <a href="/2014/10/05/1-4-4-e3-80-80-e5-bf-ab-e6-8d-b7-e9-94-ae-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf" title="1.4.4　快捷键 – Linux就是这个范儿" rel="bookmark">1.4.4　快捷键 – Linux就是这个范儿</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2014-10-05</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2014-10-05</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
             <a href="/categories/Linux就是这个范儿">Linux就是这个范儿</a>
@@ -335,8 +366,10 @@ int main(intargc, char ** argv) {
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          <p style="text-indent: 2em;">
+
+          
+          
+              <p style="text-indent: 2em;">
 	有位童鞋正在Linux系统上开发一个中文相似度匹配的项目，工作相当努力，已经达到了废寝忘食的地步，但是使用的TF-IDF<a href="#_ftn5" name="_ftnref5" title="">[⑤]</a>算法的计算速度还是不尽人意。这时候，他决定先停一停，换换思路，玩玩俄罗斯方块放松一下。突然老板走过来，他下意识地使用&lt;Ctrl&gt;&lt;Alt&gt;&lt;d&gt;快速隐藏桌面。还好有惊无险，没有被老板发觉在玩游戏，否则又需要一大堆的解释。老板拍了拍他的肩膀走了过去，随后他用&lt;Ctrl&gt;&lt;Alt&gt;&lt;d&gt;又恢复了原有功能的显示。</p>
 <p style="text-indent: 2em;">
 	举这个好玩的例子可不是让你照着做，而是为了告诉你Linux系统提供了很多快捷键提高命令行使用的工作效率，减少键盘的敲打以及拼写错误。说几个比较实用的快捷键，见表1-2所示，其他的你自己去挖掘。</p>
@@ -672,7 +705,8 @@ int main(intargc, char ** argv) {
 <p style="text-indent: 2em;">
 	<a href="#_ftnref5" name="_ftn5" title="">[⑤]</a>&nbsp;TF-IDF（term frequency-inverse document frequency）是一种用于信息检索与数据挖掘的常用加权技术。TF-IDF是一种统计方法，用以评估一个字词对于文件集或语料库中的一份文件的重要程度。</p>
 
-        
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -694,7 +728,7 @@ int main(intargc, char ** argv) {
       <a href="/2014/10/05/1-4-3-e3-80-80-e5-9f-ba-e7-a1-80-e5-91-bd-e4-bb-a4-e7-9a-84-e6-93-8d-e4-bd-9c-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf" title="1.4.3　基础命令的操作 – Linux就是这个范儿" rel="bookmark">1.4.3　基础命令的操作 – Linux就是这个范儿</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2014-10-05</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2014-10-05</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
             <a href="/categories/Linux就是这个范儿">Linux就是这个范儿</a>
@@ -705,8 +739,10 @@ int main(intargc, char ** argv) {
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          <p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
+
+          
+          
+              <p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
 	提及Linux基本命令，先给你讲述一个浪漫的故事。</p>
 <p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
 	曾经有个男孩很喜欢一个女孩，可是不敢表白。他想了一个办法，在Linux终端上输入：</p>
@@ -718,477 +754,11 @@ int main(intargc, char ** argv) {
 <pre>
 	$ cat pic.png love.txt &gt; pic1.png
 </pre>
-<p><!--more--></p>
-<p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
-	重新做了一个图片文件。他鼓起勇气给那个女孩写了封邮件，邮件内容只是：请查阅附件。</p>
-<p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
-	女孩收到邮件，用图片浏览器打开后，看到的只是一张美丽的风景图片，有点纳闷。但是聪明的她，立刻猜到了那个男孩的用意。她用<code>tail pic1.png</code>，很快发现了秘密。</p>
-<pre>
-	$ tail pic1.png
-</pre>
-<pre>
-	PNG
-	▒
-	IHDRm�▒tEXtSoftwareAdobe ImageReadyq�&lt;IDATxڼA0
-	[图片编码内容，一般人无法直接读懂&hellip;&hellip;]
-	)&#39;EDDD���q��q^�cDDD�/�GDDDDm�y�w/�}!&quot;&quot;&quot;&ldquo;这周六下午2:30，能在如嘉咖啡馆一起喝咖啡吗？&rdquo;
-</pre>
-<p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
-	太妙了，原来学好Linux通过Linux基础命令还可以交女朋友。（用这法注定孤独一生）加大马力，我们来认识更多的命令吧。不过我们会遇到一个问题，Linux命令太多了，数量至少有200多个，怎么记呀。其实谁也记不住这么多命令，剥茧抽丝抓重点，把重要的和经常使用的搞定了就行。按照它们在系统中所起的作用，我简单地做了一下分类说明，更为详细的下章还有。见表1-1的内容。</p>
 <p>
-	表　1-1</p>
-<table align="center" border="1" cellpadding="0" cellspacing="0" style="width:556px;line-height:normal;" width="556">
-<tbody>
-<tr>
-<td style="width:151px;">
-<p align="center">
-					命　　令
-				</p>
-</td>
-<td style="width:406px;">
-<p align="center">
-					说　　明
-				</p>
-</td>
-</tr>
-<tr>
-<td colspan="2" style="width:558px;">
-<p>
-					目录和文件处理
-				</p>
-</td>
-</tr>
-<tr>
-<td style="width:151px;">
-<p align="center">
-					mkdir
-				</p>
-</td>
-<td style="width:406px;">
-<p>
-					建立目录
-				</p>
-<p>
-					用法：mkdir [OPTION] DIRECTORY...
-				</p>
-<p>
-					例：$&nbsp;mkdir fangru
-				</p>
-</td>
-</tr>
-<tr>
-<td style="width:151px;">
-<p align="center">
-					ls
-				</p>
-</td>
-<td style="width:406px;">
-<p>
-					列出目录下的内容
-				</p>
-<p>
-					用法：ls [OPTION]...[FILE]...
-				</p>
-<p>
-					例：$&nbsp;ls &shy;al fangru
-				</p>
-</td>
-</tr>
-<tr>
-<td style="width:151px;">
-<p align="center">
-					cd
-				</p>
-</td>
-<td style="width:406px;">
-<p>
-					更换工作目录
-				</p>
-<p>
-					用法：cd [DIRECTORY]
-				</p>
-<p>
-					例：$&nbsp;cd fangru
-				</p>
-</td>
-</tr>
-<tr>
-<td style="width:151px;">
-<p align="center">
-					pwd
-				</p>
-</td>
-<td style="width:406px;">
-<p>
-					显示当前工作目录
-				</p>
-<p>
-					用法：pwd
-				</p>
-</td>
-</tr>
-</tbody>
-</table>
-<div style="clear:both;">
-	&nbsp;
-</div>
-<p align="right" style="margin-left:21pt;">
-	&nbsp;</p>
-<p align="right" style="margin-left:21pt;">
-	（续）</p>
-<table align="center" border="1" cellpadding="0" cellspacing="0" style="width:556px;line-height:normal;" width="556">
-<tbody>
-<tr>
-<td style="width:151px;">
-<p align="center">
-					命　　令
-				</p>
-</td>
-<td style="width:406px;">
-<p align="center">
-					说　　明
-				</p>
-</td>
-</tr>
-<tr>
-<td style="width:151px;">
-<p align="center">
-					cp
-				</p>
-</td>
-<td style="width:406px;">
-<p>
-					拷贝文件及其目录
-				</p>
-<p>
-					用法：cp [OPTION]&hellip; SOURCE DEST
-				</p>
-<p>
-					例：$&nbsp;cp jie.txt jie.bak
-				</p>
-</td>
-</tr>
-<tr>
-<td style="width:151px;">
-<p align="center">
-					mv
-				</p>
-</td>
-<td style="width:406px;">
-<p>
-					移动（重命名）文件
-				</p>
-<p>
-					用法：mv [OPTION]&hellip;SOURCE DEST
-				</p>
-<p>
-					例：$&nbsp;mv jieold jienew
-				</p>
-</td>
-</tr>
-<tr>
-<td style="width:151px;height:61px;">
-<p align="center">
-					rm
-				</p>
-</td>
-<td style="width:406px;height:61px;">
-<p>
-					删除文件或目录
-				</p>
-<p>
-					用法：rm [OPTION]&hellip;FILE&hellip;
-				</p>
-<p>
-					例：$&nbsp;rm &shy;rf jie_dir
-				</p>
-</td>
-</tr>
-<tr>
-<td colspan="2" style="width:558px;">
-<p>
-					文本处理
-				</p>
-</td>
-</tr>
-<tr>
-<td style="width:151px;">
-<p align="center">
-					cat
-				</p>
-</td>
-<td style="width:406px;">
-<p>
-					连结文件打印到标准输出
-				</p>
-<p>
-					用法：cat [OPTION] [FILE]&hellip;
-				</p>
-<p>
-					例：$cat pic.png love.txt &gt; pic1.png
-				</p>
-<p>
-					还记得那个命令行的故事吧？这个命令也常被用来查看小文件的内容
-				</p>
-</td>
-</tr>
-<tr>
-<td style="width:151px;">
-<p align="center">
-					More
-				</p>
-</td>
-<td style="width:406px;">
-<p>
-					查看文件内容，当画面在显示满一页的时候暂停，按空格继续或按Q结束
-				</p>
-<p>
-					用法：more [OPTIONS] FILE
-				</p>
-<p>
-					例：$ more /etc/group
-				</p>
-</td>
-</tr>
-<tr>
-<td style="width:151px;">
-<p align="center">
-					less
-				</p>
-</td>
-<td style="width:406px;">
-<p>
-					与more类似，但是less允许利用光标键上下卷动文本内容进行浏览
-				</p>
-<p>
-					用法: less [OPTIONS] FILE
-				</p>
-</td>
-</tr>
-<tr>
-<td style="width:151px;">
-<p align="center">
-					head
-				</p>
-</td>
-<td style="width:406px;">
-<p>
-					查看文件头部内容
-				</p>
-<p>
-					用法：head [OPTION]&hellip;&nbsp;[FILE]&nbsp;&hellip;
-				</p>
-<p>
-					例：$ head /etc/group
-				</p>
-</td>
-</tr>
-<tr>
-<td style="width:151px;">
-<p align="center">
-					tail
-				</p>
-</td>
-<td style="width:406px;">
-<p>
-					查看文件尾部内容
-				</p>
-<p>
-					用法：tail [OPTION]&nbsp;&hellip;&nbsp;[FILE]&nbsp;&hellip;
-				</p>
-<p>
-					例：tail /etc/group
-				</p>
-<p>
-					比较常用的一个命令选项是-f，它可以用于跟随文件的增长，显示文件的最新内容。对于在线监控软件日志非常有帮助
-				</p>
-</td>
-</tr>
-<tr>
-<td style="width:151px;">
-<p align="center">
-					Echo
-				</p>
-</td>
-<td style="width:406px;">
-<p>
-					显示一行文本
-				</p>
-<p>
-					用法：echo [OPTION] [string]
-				</p>
-<p>
-					例：echo $HOME
-				</p>
-</td>
-</tr>
-</tbody>
-</table>
-<div style="clear:both;">
-	&nbsp;
-</div>
-<p align="right" style="margin-left:21pt;">
-	&nbsp;</p>
-<p align="right" style="margin-left:21pt;">
-	&nbsp;</p>
-<p align="right" style="margin-left:21pt;">
-	（续）</p>
-<table align="center" border="1" cellpadding="0" cellspacing="0" style="width:556px;line-height:normal;" width="556">
-<tbody>
-<tr>
-<td style="width:151px;">
-<p align="center">
-					命　　令
-				</p>
-</td>
-<td style="width:406px;">
-<p align="center">
-					说　　明
-				</p>
-</td>
-</tr>
-<tr>
-<td colspan="2" style="width:558px;">
-<p>
-					系统管理
-				</p>
-</td>
-</tr>
-<tr>
-<td style="width:151px;">
-<p align="center">
-					ps
-				</p>
-</td>
-<td style="width:406px;">
-<p>
-					强悍的进程查看命令
-				</p>
-<p>
-					用法：ps [OPTION]
-				</p>
-<p>
-					例：ps&nbsp;&ndash;aef
-				</p>
-</td>
-</tr>
-<tr>
-<td style="width:151px;">
-<p align="center">
-					kill
-				</p>
-</td>
-<td style="width:406px;">
-<p>
-					删除执行中的程序或工作
-				</p>
-<p>
-					用法：kill [OPTION]
-				</p>
-<p>
-					例：kill&nbsp;&shy;9 3154
-				</p>
-</td>
-</tr>
-<tr>
-<td style="width:151px;">
-<p align="center">
-					jobs
-				</p>
-</td>
-<td style="width:406px;">
-<p>
-					通过jobs命令查到后台正在执行的命令的序号（非进程号pid）
-				</p>
-<p>
-					用法：jobs
-				</p>
-</td>
-</tr>
-<tr>
-<td style="width:151px;">
-<p align="center">
-					bg
-				</p>
-</td>
-<td style="width:406px;">
-<p>
-					指定号码（非进程号）的命令进程放到后台运行
-				</p>
-<p>
-					用法：输入&#39;ctrl+z&#39;&nbsp;然后输入&nbsp;&#39;bg&lt;job id&gt;&#39;
-				</p>
-<p>
-					例：bg &lt;job id&gt;
-				</p>
-</td>
-</tr>
-<tr>
-<td style="width:151px;">
-<p align="center">
-					fg
-				</p>
-</td>
-<td style="width:406px;">
-<p>
-					指定号码（非进程号）的命令进程放到前台运行
-				</p>
-<p>
-					用法：fg &lt;jobid&gt;
-				</p>
-</td>
-</tr>
-<tr>
-<td colspan="2" style="width:558px;">
-<p>
-					文件系统
-				</p>
-</td>
-</tr>
-<tr>
-<td style="width:151px;">
-<p align="center">
-					du
-				</p>
-</td>
-<td style="width:406px;">
-<p>
-					查看目录或文件所占用磁盘空间的大小
-				</p>
-<p>
-					用法：du [OPTION]&hellip;&hellip;[FILE]&hellip;&hellip;
-				</p>
-<p>
-					例：du
-				</p>
-</td>
-</tr>
-<tr>
-<td style="width:151px;height:4px;">
-<p align="center">
-					df
-				</p>
-</td>
-<td style="width:406px;height:4px;">
-<p>
-					检查文件系统的磁盘空间占用情况。
-				</p>
-<p>
-					用法：df [OPTION]&hellip;&hellip;[FILE]&hellip;&hellip;
-				</p>
-<p>
-					例：df
-				</p>
-</td>
-</tr>
-</tbody>
-</table>
-<p>
-	&nbsp;</p>
-<p style="text-align: right;">
-	<a href="http://hook.aliapp.com/?p=554" style="color: rgb(51, 51, 51); text-decoration: none; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; line-height: 28px; text-align: right; text-indent: 28px;">Linux就是这个范儿 &ndash; 本书目录&nbsp;</a></p>
 
-        
+
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -1210,7 +780,7 @@ int main(intargc, char ** argv) {
       <a href="/2014/10/05/1-4-2-e3-80-80-e6-96-87-e6-9c-ac-e5-92-8c-e5-9b-be-e5-bd-a2-e7-9a-84-e5-88-87-e6-8d-a2-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf" title="1.4.2　文本和图形的切换 – Linux就是这个范儿" rel="bookmark">1.4.2　文本和图形的切换 – Linux就是这个范儿</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2014-10-05</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2014-10-05</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
             <a href="/categories/Linux就是这个范儿">Linux就是这个范儿</a>
@@ -1221,8 +791,10 @@ int main(intargc, char ** argv) {
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          <p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
+
+          
+          
+              <p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
 	方才我们介绍的方法是目前最常用的在桌面环境下执行命令的方法，但是也有很多有&ldquo;洁癖&rdquo;的人喜欢使用纯粹的文本终端，这就需要进行图形和文本切换了，或者干脆就关闭图形界面。我们先搞定前者，后者会在后面的章节做十分详细的介绍。</p>
 <p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
 	要在文本和图形界面之间来回切换非常简单，只需要使用快捷键<code>&lt;Ctrl&gt;&lt;Alt&gt;&lt;F1&gt;~ &lt;F6&gt;</code>来回切换就行，具体什么效果大家可以自己实验，这个地方不同的Linux发行版会有不同的设定，所以本书就不好做定论。一般<code>&lt;Crtl&gt;&lt;Alt&gt;&lt;F1&gt;</code>代表图形界面，而剩下的5组快捷键对应5个不同的文本终端，我们推荐的CentOS就是这种设定。还有的设定是<code>&lt;Ctrl&gt;&lt;Alt&gt;&lt;F7&gt;</code>是图形界面，其他6组快捷键是6个不同的文本终端。</p>
@@ -1231,7 +803,8 @@ int main(intargc, char ** argv) {
 <p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px; text-align: right;">
 	<a href="http://hook.aliapp.com/?p=554" style="color: rgb(51, 51, 51); text-decoration: none; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; line-height: 28px; text-align: right; text-indent: 28px;">Linux就是这个范儿 &ndash; 本书目录&nbsp;</a></p>
 
-        
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -1253,7 +826,7 @@ int main(intargc, char ** argv) {
       <a href="/2014/10/05/1-4-1-e3-80-80-e5-bc-80-e5-a7-8b-e6-89-a7-e8-a1-8c-e5-91-bd-e4-bb-a4-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf" title="1.4.1　开始执行命令 – Linux就是这个范儿" rel="bookmark">1.4.1　开始执行命令 – Linux就是这个范儿</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2014-10-05</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2014-10-05</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
             <a href="/categories/Linux就是这个范儿">Linux就是这个范儿</a>
@@ -1264,8 +837,10 @@ int main(intargc, char ** argv) {
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          <p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
+
+          
+          
+              <p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
 	用户和系统不是直接打交道的，它们中间有个名字叫shell的联系人。我们从键盘中输入命令给shell，shell再把它交给操作系统去执行。</p>
 <p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
 	从哪里开始输入命令呢？当然你可以在字符界面输入命令（暂时先放放，稍后再看）。Linux系统还提供一个叫终端模拟器的程序。这个程序打开一个窗口，让我们与shell交流。Linux系统上的各种软件向来是百花齐放，模拟器终端也不例外，例如gnome-terminal、konsole、xterm、rxvt、kvt、nxterm和eterm等，而大多数Linux发行版会同时支持几种。</p>
@@ -1282,7 +857,8 @@ int main(intargc, char ** argv) {
 <p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px; text-align: right;">
 	<a href="http://hook.aliapp.com/?p=554" style="color: rgb(51, 51, 51); text-decoration: none; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; line-height: 28px; text-align: right; text-indent: 28px;">Linux就是这个范儿 &ndash; 本书目录&nbsp;</a></p>
 
-        
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -1304,7 +880,7 @@ int main(intargc, char ** argv) {
       <a href="/2014/10/05/1-4-e3-80-80-e8-bf-94-e7-92-9e-e5-bd-92-e7-9c-9f-e7-9a-84-e5-91-bd-e4-bb-a4-e8-a1-8c-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf" title="1.4　返璞归真的命令行 – Linux就是这个范儿" rel="bookmark">1.4　返璞归真的命令行 – Linux就是这个范儿</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2014-10-05</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2014-10-05</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
             <a href="/categories/Linux就是这个范儿">Linux就是这个范儿</a>
@@ -1315,8 +891,10 @@ int main(intargc, char ** argv) {
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          <p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
+
+          
+          
+              <p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
 	有一种说法，现代计算机不是靠电力驱动，而是靠&ldquo;鼠标&rdquo;。多少应用程序的界面都是需要移动和点击鼠标来执行的。计算机本来的用意是把人类从反复单调的工作中解放出来，但摆在我们身边的残酷现实是我们每个人每天不得不反复单调地移动和点击鼠标，以确保养家糊口的工作能够顺利正确地完成。</p>
 <p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
 	别叹气，存在另一个世界，那就是命令行，让你暂时远离鼠标。对那些苦哈哈的程序猿来讲，这也许是另一种情调的工作方式。我们突然之间拥有了另一种意想不到的收获，例如我想看看用户目录下的文件大小，然后按升序排列产生个报表。如果用C/C++完成这项工作，至少得用好几十行代码，但是用一句命令行就能完成上面的功能。</p>
@@ -1333,7 +911,8 @@ int main(intargc, char ** argv) {
 <p style="text-align: right;">
 	<a href="http://hook.aliapp.com/?p=554" style="color: rgb(51, 51, 51); text-decoration: none; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; line-height: 28px; text-align: right; text-indent: 28px;">Linux就是这个范儿 &ndash; 本书目录&nbsp;</a></p>
 
-        
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -1355,7 +934,7 @@ int main(intargc, char ** argv) {
       <a href="/2014/10/05/1-3-4-e3-80-80lxde-e6-9b-b4-e8-bd-bb-ef-bc-8c-e5-90-8c-e6-a0-b7-e7-b2-be-e6-82-8d-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf" title="1.3.4　LXDE——更轻，同样精悍 – Linux就是这个范儿" rel="bookmark">1.3.4　LXDE——更轻，同样精悍 – Linux就是这个范儿</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2014-10-05</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2014-10-05</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
             <a href="/categories/Linux就是这个范儿">Linux就是这个范儿</a>
@@ -1366,8 +945,10 @@ int main(intargc, char ** argv) {
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          <p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
+
+          
+          
+              <p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
 	如果对小巧精悍的桌面环境很有爱的话，那么LXDE则是另外一个十分值得推荐的选择。如果你是一个民族主义者，那么一定会十分喜爱LXDE，因为它完全是我们中国人开发的，虽然他们都是来自台湾省（这是我国领土不可分割的部分）。</p>
 <p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
 	LXDE相对于前面三个桌面环境会显得相当地年轻。它在2006年还只是一个文件管理器，后来才慢慢发展成为一个功能齐全的桌面环境。虽然LXDE是2006年的东西，但是它对<a class="keylink" href="http://www.2cto.com/os/" style="color: rgb(51, 51, 51); text-decoration: none;" target="_blank">系统</a>的要求却低得惊人，甚至在1999年的老电脑上不用3D加速也能流畅地运行。所以，在上网本、MID等低功耗移动电脑上拥有比较广泛的应用。这也十分对得起它的名字&mdash;&mdash;Lightweight X11 Desktop Environment，轻量级X11桌面环境，简称LXDE。</p>
@@ -1378,7 +959,8 @@ int main(intargc, char ** argv) {
 <p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px; text-align: right;">
 	<a href="http://hook.aliapp.com/?p=554" style="color: rgb(51, 51, 51); text-decoration: none; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(51, 51, 51); font-size: 14px; text-align: right; background-color: rgb(255, 255, 255); font-family: 宋体; line-height: 28px; text-indent: 28px;">Linux就是这个范儿 &ndash; 本书目录&nbsp;</a></p>
 
-        
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -1400,7 +982,7 @@ int main(intargc, char ** argv) {
       <a href="/2014/10/05/1-3-3-e3-80-80xfce-e8-bd-bb-e9-87-8f-e3-80-81-e7-ae-80-e5-8d-95-e3-80-81-e9-ab-98-e6-95-88-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf" title="1.3.3　XFCE——轻量、简单、高效 – Linux就是这个范儿" rel="bookmark">1.3.3　XFCE——轻量、简单、高效 – Linux就是这个范儿</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2014-10-05</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2014-10-05</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
             <a href="/categories/Linux就是这个范儿">Linux就是这个范儿</a>
@@ -1411,8 +993,10 @@ int main(intargc, char ** argv) {
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          <p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
+
+          
+          
+              <p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
 	KDE和GNOME虽然雍容华贵，但是也恰恰就有些太过&ldquo;臃容&rdquo;，对于喜欢&ldquo;轻淡&rdquo;口味或只有&ldquo;小马力战车&rdquo;的屌丝们，XFCE是一个相当不错的选择。</p>
 <p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
 	XFCE是一个轻量级的Linux或类Unix的桌面<a class="keylink" href="http://www.2cto.com/os/" style="color: rgb(51, 51, 51); text-decoration: none;" target="_blank">系统</a>。XFCE的设计目的就是：快速加载并用来执行程序，且占用<a class="keylink" href="http://www.2cto.com/os/" style="color: rgb(51, 51, 51); text-decoration: none;" target="_blank">系统</a>资源少。从实际的使用效果上看，XFCE也的确做到了这一点。也正是因为如此，作为一个拥有很长历史（其源自1996年）的桌面环境，能够在很多U盘<a class="keylink" href="http://www.2cto.com/os/linux/" style="color: rgb(51, 51, 51); text-decoration: none;" target="_blank">Linux</a>中见到它的身影。</p>
@@ -1425,7 +1009,8 @@ int main(intargc, char ** argv) {
 	<br />
 	<a href="http://hook.aliapp.com/?p=554" style="color: rgb(51, 51, 51); text-decoration: none; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; line-height: 28px; text-align: right; text-indent: 28px;">Linux就是这个范儿 &ndash; 本书目录&nbsp;</a></p>
 
-        
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -1447,7 +1032,7 @@ int main(intargc, char ** argv) {
       <a href="/2014/10/04/1-3-2-e3-80-80gnome-e4-b8-8d-e5-8f-af-e7-a3-a8-e7-81-ad-e7-9a-84-e7-bb-8f-e5-85-b8-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf" title="1.3.2　GNOME不可磨灭的经典 – Linux就是这个范儿" rel="bookmark">1.3.2　GNOME不可磨灭的经典 – Linux就是这个范儿</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2014-10-04</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2014-10-04</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
             <a href="/categories/Linux就是这个范儿">Linux就是这个范儿</a>
@@ -1458,8 +1043,10 @@ int main(intargc, char ** argv) {
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          <p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
+
+          
+          
+              <p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
 	在KDE受版权困扰和没有新版可用的时候，陪伴在人们身边的是GNOME桌面环境。虽然GNOME3使得GNOME从能用变得不能用了，但是GNOME2则依然是不可磨灭的经典。</p>
 <p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
 	GNOME是GNU 网络对象模型环境&mdash;&mdash;The GNU Network Object Model Environment的英文缩写。它是GNU计划的一部分，开放<a class="keylink" href="http://www.2cto.com/ym" style="color: rgb(51, 51, 51); text-decoration: none;" target="_blank">源码</a>运动的重要组成部分。目标是基于自由软件，为Unix或者类Unix操作系统构造一个功能完善、操作简单以及界面友好的桌面环境，它是GNU计划的正式桌面。</p>
@@ -1478,7 +1065,8 @@ int main(intargc, char ** argv) {
 <p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px; text-align: right;">
 	<a href="http://hook.aliapp.com/?p=554" style="color: rgb(51, 51, 51); text-decoration: none; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(51, 51, 51); font-size: 14px; text-align: right; font-family: 宋体; line-height: 28px; text-indent: 28px;">Linux就是这个范儿 &ndash; 本书目录&nbsp;</a></p>
 
-        
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -1500,7 +1088,7 @@ int main(intargc, char ** argv) {
       <a href="/2014/10/03/1-3-1-e3-80-80kde-e5-88-9d-e5-ad-a6-e8-80-85-e7-9a-84-e9-a6-96-e9-80-89-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf" title="1.3.1　KDE初学者的首选 – Linux就是这个范儿" rel="bookmark">1.3.1　KDE初学者的首选 – Linux就是这个范儿</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2014-10-03</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2014-10-03</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
             <a href="/categories/Linux就是这个范儿">Linux就是这个范儿</a>
@@ -1511,8 +1099,10 @@ int main(intargc, char ** argv) {
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          <p>
+
+          
+          
+              <p>
 	KDE是由德国人Matthias Ettrich于1996年就读于图宾根大学时开始的一个计划。当时的Unix桌面没有一个应用程序的外观、感受或工作方式与其他程序一样。于是Matthias Ettrich就建议不仅是创建一套应用程序，而是要创建一个桌面环境，能让用户拥有相同的外观、感受和工作方式，而且这个桌面应该是非常容易使用的。他的这个想法得到了很多人的支持，从此KDE计划就诞生了。</p>
 <p>
 	可能有人会疑惑，KDE是给Unix的，似乎跟Linux没有什么关系，为什么这本书要介绍它呢？其实不单单KDE是这样，剩下的三个桌面环境也是这样。甚至在这个星球上完全针对Linux编写的软件也是并不多的，那些在Linux下能够获得的软件大多不是针对Linux开发的。它们是针对Unix系统的，而Linux属于类Unix系统，所以就毫无歉意地坐享了这些成果。这就是Linux的优势，也是大家学习Linux的优势。学会了Linux，几乎就等同于学会了Unix或类Unix系统，它们在这个星球的应用范围就从来没有被Windows超越过。本书的内容也是如此，只有少数章节是专门针对Linux特性所特别设置的，大多数知识都是通用且极具实用价值的。好了，闲话不多说，我们继续介绍KDE。</p>
@@ -1551,7 +1141,8 @@ int main(intargc, char ** argv) {
 	</p>
 </div>
 
-        
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -1573,7 +1164,7 @@ int main(intargc, char ** argv) {
       <a href="/2014/09/04/1-3-e4-b8-bb-e6-b5-81-e6-a1-8c-e9-9d-a2-e7-8e-af-e5-a2-83" title="1.3 主流桌面环境 – Linux就是这个范儿" rel="bookmark">1.3 主流桌面环境 – Linux就是这个范儿</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2014-09-04</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2014-09-04</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
             <a href="/categories/Linux就是这个范儿">Linux就是这个范儿</a>
@@ -1584,15 +1175,18 @@ int main(intargc, char ** argv) {
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          <p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
+
+          
+          
+              <p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
 	Linux强大的适应性、创新性以及开放性在它的桌面环境方面得到了十分充盈的展现。目前比较流行的就有GNOME、KDE、XFCE和LXDE，它们并称为Linux图形界面四杰，个个美轮美奂，风格迥异。它们并不是单纯的单一软件，而是一套软件集合，比如WM、DM、应用框架库等。最近有传言称Linus Torvalds[ Linux之父啊，本书的读者要是不认识他是有些说不过去的。]大神在Google+上大骂GNOME3&ldquo;不能容忍的凌乱&rdquo;，并改投XFCE的怀抱。不管真假，至少我认为GNOME3是很考验智商的。其实这玩意没有好坏之分，只是口味不同，自己用着舒坦的就是最好的，是不是？</p>
 <p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
 	本书并不准备截图给各位欣赏，原因主要有三：一是印图成本太高，我也是屌丝一名，知道挣点钱不容易；二是大家可以通过Baidu或Google查询到非常多的截图，直接在电脑上看知道效果会更好；三是学习Linux最需要亲力亲为持之以恒，我们不希望浪费你去主动查询资料的好机会。望能够理解我们的良苦用心</p>
 <p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px; text-align: right;">
 	<a href="http://hook.aliapp.com/?p=554">Linux就是这个范儿 &ndash; 本书目录&nbsp;</a></p>
 
-        
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -1614,7 +1208,7 @@ int main(intargc, char ** argv) {
       <a href="/2014/09/03/1-2-2-e3-80-80-e6-9e-b6-e6-9e-84-e8-ae-be-e8-ae-a1-e7-ac-ac-ef-bc-91-e7-ab-a0-e7-ac-ac-e4-b8-80-e6-ac-a1-e4-ba-b2-e5-af-86-e6-8e-a5-e8-a7-a6-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa" title="1.2.2　架构设计 - Linux就是这个范儿" rel="bookmark">1.2.2　架构设计 - Linux就是这个范儿</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2014-09-03</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2014-09-03</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
             <a href="/categories/Linux就是这个范儿">Linux就是这个范儿</a>
@@ -1625,8 +1219,10 @@ int main(intargc, char ** argv) {
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          <p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
+
+          
+          
+              <p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
 	其实Linux系统的图形界面设计还是非常清晰的。让大家觉得乱的原因可能是有两个：一是我的写作水平有点问题，二是涉及的新鲜事儿太多。我总认为第一点是主要因素，所以干脆不写了，画个图给大家看看。下图展示了Linux界面的基本结构，同时提供了Windows图形界面基本结构进行对比。自我感觉画的比说的要好。</p>
 <p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px; text-align: center;">
 	<img alt="" src="http://m2.img.srcdd.com/farm5/d/2014/0828/17/E064541DE5967E7CCC4A042090B098E2_B1280_1280_650_409.png" style="width: 650px; height: 409px;" /></p>
@@ -1637,7 +1233,8 @@ int main(intargc, char ** argv) {
 <p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px; text-align: right;">
 	<a href="http://hook.aliapp.com/?p=554">Linux就是这个范儿 &ndash; 本书目录&nbsp;</a></p>
 
-        
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -1659,7 +1256,7 @@ int main(intargc, char ** argv) {
       <a href="/2014/09/02/1-2-1-e6-b2-a1-e6-9c-89-e5-9b-be-e5-bd-a2-e7-9a-84-e5-9b-be-e5-bd-a2-e7-ac-ac-ef-bc-91-e7-ab-a0-e7-ac-ac-e4-b8-80-e6-ac-a1-e4-ba-b2-e5-af-86-e6-8e-a5-e8-a7-a6-linux-e5-b0-b1-e6-98-af" title="1.2.1 没有图形的图形 - Linux就是这个范儿" rel="bookmark">1.2.1 没有图形的图形 - Linux就是这个范儿</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2014-09-02</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2014-09-02</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
             <a href="/categories/Linux就是这个范儿">Linux就是这个范儿</a>
@@ -1670,8 +1267,10 @@ int main(intargc, char ** argv) {
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          <p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
+
+          
+          
+              <p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
 	<strong style="text-align: center;">1.2　不一样的图形操作</strong></p>
 <p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
 	几乎所有Linux的新用户都会认为Linux的图形界面是相当地绚丽又多彩。因为这毕竟是一种全新的体验，那种超脱Windows俗套的快感就会油然而生。对于刚刚翻开这本书的人来说，如果对Linux是抱有这样认识的，那就太棒了，因为咱们又多了一个洗脑的对象了:P。此时此刻，真正的亲密接触就要开始啦&hellip;&hellip;</p>
@@ -1698,7 +1297,8 @@ $ startx</pre>
 <p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px; text-align: right;">
 	<a href="http://hook.aliapp.com/?p=554" style="font-family: 宋体; font-size: 14px; line-height: 28px; text-align: right; text-indent: 28px;">Linux就是这个范儿 &ndash; 本书目录&nbsp;</a></p>
 
-        
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -1720,7 +1320,7 @@ $ startx</pre>
       <a href="/2014/09/01/1-1-4-e7-99-bb-e5-bd-95-e7-b3-bb-e7-bb-9f-e7-ac-ac-ef-bc-91-e7-ab-a0-e7-ac-ac-e4-b8-80-e6-ac-a1-e4-ba-b2-e5-af-86-e6-8e-a5-e8-a7-a6-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83" title="1.1.4 登录系统 - Linux就是这个范儿" rel="bookmark">1.1.4 登录系统 - Linux就是这个范儿</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2014-09-01</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2014-09-01</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
             <a href="/categories/Linux就是这个范儿">Linux就是这个范儿</a>
@@ -1731,8 +1331,10 @@ $ startx</pre>
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          <p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
+
+          
+          
+              <p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
 	Linux与Windows有一个很大的不同就是很有可能你安装的Linux启动之后没有启动图形用户界面（刚刚安装完CentOS 6.4的人应该不会遇到这种情况）。这个时候你就必须得输入用户名和密码才能继续使用。即便你的Linux启动了图形界面，也很少有发行版让你能够自动登录系统。所以，你一定要搞清楚你的用户名和密码。虽然有人会觉得我这样提醒似乎有些弱智，但是的确有很多人忘记了给自己刚刚安装的Linux设置了什么密码。尽管本书会告诉你如何在这种情况下找回密码，但是在现在这个阶段，一旦有这种事情发生，那么你最好还是重新安装吧！</p>
 <p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
 	Linux的用户被划分为根用户和普通用户两种。其中根用户是系统内置用户，用户名永远都是root，所以也叫root用户。Linux的root用户与Windows的administrator用户是一样的，都拥有系统的最高控制权。普通用户一般是用户自己定义的，所以没有什么特别的权限。大家在使用Windows的时候大多数都会选择直接使用administrator用户，这是非常不好的习惯，也是Windows下病毒泛滥的推手之一。在Linux下不要随意使用root用户，因为它的权限大到能够自杀的地步。所以很多发行版，比如我们推荐的CentOS在图形界面登录时，并不会提示有root用户存在。要使用root登录，必须明确输入这个用户名。</p>
@@ -1743,7 +1345,8 @@ $ startx</pre>
 <p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px; text-align: right;">
 	<a href="/?p=554" style="font-family: 宋体; font-size: 14px; line-height: 28px; text-indent: 28px;">Linux就是这个范儿 - 本书目录&nbsp;</a></p>
 
-        
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -1765,7 +1368,7 @@ $ startx</pre>
       <a href="/2014/08/31/1-1-3-e3-80-80-e5-ae-89-e8-a3-85-e7-b3-bb-e7-bb-9f-e7-ac-ac-ef-bc-91-e7-ab-a0-e7-ac-ac-e4-b8-80-e6-ac-a1-e4-ba-b2-e5-af-86-e6-8e-a5-e8-a7-a6-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa" title="1.1.3　安装系统 - Linux就是这个范儿" rel="bookmark">1.1.3　安装系统 - Linux就是这个范儿</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2014-08-31</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2014-08-31</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
             <a href="/categories/Linux就是这个范儿">Linux就是这个范儿</a>
@@ -1776,8 +1379,10 @@ $ startx</pre>
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          <p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
+
+          
+          
+              <p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
 	到哪里去获得CentOS或RHEL，乃至其他Linux发行版呢？问Google或者百度好了。我不会像其他书籍那样提供一大堆URL列表，总感觉这样做是在辱没大家的智商。可能比较麻烦的事情是如何规划磁盘，本书的第3章会深入地探讨这个问题。那么现在这个阶段只要按照系统默认的安装设置就行了。如果你还想让Linux与Windows共存，只需要使用分区工具留下几十个GB的未分区的磁盘空间就行了，CentOS的安装程序可以自动使用你特意留下的空间。当然，安装的时候一定要慎重，看清楚提示，不要做一些蠢事。此外，我不是很建议你的Linux与Windows共存，还是在虚拟机上运行Windows吧（具体怎么弄我后面会告诉你）。</p>
 <p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
 	一个比较好的建议是使用64位版本，毕竟现在已经是21世纪又过了10多年了，老掉牙的32位系统应该在坟墓里歇息了！到本书截稿为止，最新版本的CentOS是6.4。为了安装方便，最好下载它的DVD镜像，前提是你安装的不是&ldquo;假宽带&rdquo;。</p>
@@ -1874,7 +1479,8 @@ $ startx</pre>
 <p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px; text-align: right;">
 	<a href="/?p=554" style="font-family: 宋体; font-size: 14px; line-height: 28px; text-align: right; text-indent: 28px;">Linux就是这个范儿 - 本书目录&nbsp;</a></p>
 
-        
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -1896,7 +1502,7 @@ $ startx</pre>
       <a href="/2014/08/30/1-1-2-e9-80-89-e6-8b-a9-e5-93-aa-e4-b8-aa-e5-8f-91-e8-a1-8c-e7-89-88-e7-ac-ac-ef-bc-91-e7-ab-a0-e7-ac-ac-e4-b8-80-e6-ac-a1-e4-ba-b2-e5-af-86-e6-8e-a5-e8-a7-a6-linux-e5-b0-b1-e6-98-af" title="1.1.2 选择哪个发行版 - Linux就是这个范儿" rel="bookmark">1.1.2 选择哪个发行版 - Linux就是这个范儿</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2014-08-30</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2014-08-30</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
             <a href="/categories/Linux就是这个范儿">Linux就是这个范儿</a>
@@ -1907,8 +1513,10 @@ $ startx</pre>
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          <p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
+
+          
+          
+              <p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
 	<strong style="text-align: center;">1.1.2　选择哪个发行版</strong></p>
 <p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
 	接下来我们将面临一个更为麻烦的问题，就是到底应该选择哪个Linux发行版。因为Linux的发行版实在太多了，用多如牛毛来形容一点都不夸张。可以想象，在牛毛中要选择出毛色最正、长短最合适、粗细最均匀的一根是多么纠结的事情啊。我们现在就要做这件事情，还要做好它！</p>
@@ -1936,7 +1544,8 @@ $ startx</pre>
 <p style="text-align: right;">
 	<a href="/?p=554" style="font-family: 宋体; font-size: 14px; line-height: 28px; text-align: right; text-indent: 28px;">Linux就是这个范儿 - 本书目录&nbsp;</a></p>
 
-        
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -1958,7 +1567,7 @@ $ startx</pre>
       <a href="/2014/08/29/1-1-1-e6-88-91-e4-bb-ac-e7-94-a8linux-e7-9a-84-e7-90-86-e7-94-b1-e7-ac-ac-ef-bc-91-e7-ab-a0-e7-ac-ac-e4-b8-80-e6-ac-a1-e4-ba-b2-e5-af-86-e6-8e-a5-e8-a7-a6-linux-e5-b0-b1-e6-98-af-e8-bf-99" title="1.1.1 我们用Linux的理由 - Linux就是这个范儿" rel="bookmark">1.1.1 我们用Linux的理由 - Linux就是这个范儿</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2014-08-29</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2014-08-29</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
             <a href="/categories/Linux就是这个范儿">Linux就是这个范儿</a>
@@ -1969,8 +1578,10 @@ $ startx</pre>
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          <p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
+
+          
+          
+              <p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
 	<strong style="text-align: center;">1.1.1　我们用Linux的理由</strong></p>
 <p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
 	很多人在决定让Linux入驻自己电脑的时候遇到了很大的障碍。我所了解到的大多数问题是担心没有可以替代的软件。</p>
@@ -1995,7 +1606,8 @@ $ startx</pre>
 <p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px; text-align: right;">
 	<a href="/?p=554" style="font-family: 宋体; font-size: 14px; line-height: 28px; text-align: right; text-indent: 28px;">Linux就是这个范儿 - 本书目录&nbsp;</a></p>
 
-        
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -2017,7 +1629,7 @@ $ startx</pre>
       <a href="/2014/08/28/1-1-e8-ae-a9linux-e5-85-a5-e9-a9-bb-e6-88-91-e4-bb-ac-e7-9a-84-e7-94-b5-e8-84-91-e7-ac-ac-ef-bc-91-e7-ab-a0-e7-ac-ac-e4-b8-80-e6-ac-a1-e4-ba-b2-e5-af-86-e6-8e-a5-e8-a7-a6-linux-e5-b0-b1-e6-98-af" title="1.1让Linux入驻我们的电脑 - Linux就是这个范儿" rel="bookmark">1.1让Linux入驻我们的电脑 - Linux就是这个范儿</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2014-08-28</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2014-08-28</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
             <a href="/categories/Linux就是这个范儿">Linux就是这个范儿</a>
@@ -2028,8 +1640,10 @@ $ startx</pre>
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          <p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
+
+          
+          
+              <p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
 	<strong style="text-align: center;">第一部分　基础篇</strong></p>
 <p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
 	<strong style="text-align: center;">第1章　第一次亲密接触</strong></p>
@@ -2054,7 +1668,8 @@ $ startx</pre>
 <p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px; text-align: right;">
 	<a href="/?p=554" style="font-family: 宋体; font-size: 14px; line-height: 28px; text-align: right; text-indent: 28px;">Linux就是这个范儿 - 本书目录&nbsp;</a></p>
 
-        
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -2076,7 +1691,7 @@ $ startx</pre>
       <a href="/2014/08/28/e5-ba-8f-e4-ba-8c-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf" title="序二 - Linux就是这个范儿" rel="bookmark">序二 - Linux就是这个范儿</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2014-08-28</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2014-08-28</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
             <a href="/categories/Linux就是这个范儿">Linux就是这个范儿</a>
@@ -2087,8 +1702,10 @@ $ startx</pre>
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          <p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
+
+          
+          
+              <p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
 	<strong style="text-align: center;">序二</strong></p>
 <p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
 	选择了IT为业，就选择了紧张而劳碌的生活方式，因为快速变化就是这个行业的基因。</p>
@@ -2111,7 +1728,8 @@ $ startx</pre>
 <p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px; text-align: right;">
 	<a href="/?p=554" style="font-family: 宋体; font-size: 14px; line-height: 28px; text-align: right; text-indent: 28px;">Linux就是这个范儿 - 本书目录&nbsp;</a></p>
 
-        
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -2133,7 +1751,7 @@ $ startx</pre>
       <a href="/2014/08/28/e5-ba-8f-e4-b8-80-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf" title="序一 - Linux就是这个范儿" rel="bookmark">序一 - Linux就是这个范儿</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2014-08-28</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2014-08-28</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
             <a href="/categories/Linux就是这个范儿">Linux就是这个范儿</a>
@@ -2144,8 +1762,10 @@ $ startx</pre>
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          <p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
+
+          
+          
+              <p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
 	<strong style="text-align: center;">序一</strong></p>
 <p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
 	Linux已有20多年历史，大部头著作一摞一摞。听到作者要写Linux，我真怀疑他们怎么能写出新意来，直到读过初稿以后&hellip;&hellip;</p>
@@ -2176,7 +1796,8 @@ $ startx</pre>
 <p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px; text-align: right;">
 	<a href="/?p=554" style="font-family: 宋体; font-size: 14px; line-height: 28px; text-align: right; text-indent: 28px;">Linux就是这个范儿 - 本书目录&nbsp;</a></p>
 
-        
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -2198,7 +1819,7 @@ $ startx</pre>
       <a href="/2014/08/28/e7-9b-ae-e5-bd-95-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf" title="目录 - Linux就是这个范儿" rel="bookmark">目录 - Linux就是这个范儿</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2014-08-28</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2014-08-28</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
             <a href="/categories/Linux就是这个范儿">Linux就是这个范儿</a>
@@ -2209,8 +1830,10 @@ $ startx</pre>
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          <p>
+
+          
+          
+              <p>
 	<span style="font-size: 13px;">　　</span>本书内容源自淘宝技术大学的培训实战。由来自阿里巴巴集团的资深Linux系统专家赵鑫磊和同样来自阿里巴巴集团的支付宝网络技术有限公司的高级专家Jie Zhang（张洁）共同著写。 两位作者用轻松、诙谐的语言讲解了高深的Linux特性。通俗易懂、深入浅出，从Linux设计思想的角度出发，授人以渔。同时，又密切结合应用案例，透彻展示出Linux的系统架构设计是如何在实际中贯穿的，从而让读者真正掌握Linux的强大之处。书中不含较为复杂的技术理论问题，一切从实际出发。</p>
 <p>
 	<span style="font-size: 13px;">　　全书共分为三个部分：基础篇、进阶篇和扩展篇。通过对Linux的版本选择与安装、基本使用与系统结构、设计哲学与思想、脚本编程与软件开发、内核编译、网络与认证，以及多媒体等几个方面的精彩讲解，将Linux操作系统的灵魂与运用教授给读者。</span></p>
@@ -2246,7 +1869,8 @@ $ startx</pre>
 <p>
 	&nbsp;</p>
 
-        
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -2268,7 +1892,7 @@ $ startx</pre>
       <a href="/2014/08/28/e5-89-8d-e8-a8-80-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf" title="前言 - Linux就是这个范儿" rel="bookmark">前言 - Linux就是这个范儿</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2014-08-28</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2014-08-28</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
             <a href="/categories/Linux就是这个范儿">Linux就是这个范儿</a>
@@ -2279,8 +1903,10 @@ $ startx</pre>
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          <blockquote>
+
+          
+          
+              <blockquote>
 <p>
 		《Linux就是这个范儿》本书内容源自淘宝技术大学的培训实战。由来自阿里巴巴集团的资深Linux系统专家赵鑫磊和同样来自阿里巴巴集团的支付宝网络技术有限公司的高级专家Jie Zhang（张洁）共同著写。本节为前言部分。
 	</p>
@@ -2359,7 +1985,8 @@ $ startx</pre>
 <p style="text-align: right;">
 	<a href="/?p=554" style="font-family: 宋体; font-size: 14px; line-height: 28px; text-align: right; text-indent: 28px;">Linux就是这个范儿 - 本书目录&nbsp;</a></p>
 
-        
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">

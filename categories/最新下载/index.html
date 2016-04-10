@@ -26,6 +26,20 @@
 </head>
 
 <body class="nav-open">
+  <script type="text/javascript">
+  if(navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i)){
+    document.write('<div id="mobile-nav" class="f12 yahei">');
+    document.write('<ul class="nav">');
+    document.write('    <li class="active">');
+    document.write('        <a href="/">首页</a>');
+    document.write('    </li>');
+    document.write('    <li class="active">');
+    document.write('        <a href="/about/">关于</a>');
+    document.write('    </li>');
+    document.write('</ul>');
+    document.write('</div>');
+  }
+  </script>
   <div id="wrap">
     <div id="preheader">notice_TOP</div>
       <header id="header" class="clearfix">
@@ -33,16 +47,24 @@
           <h1><a href="/">面向大海,心暖花开</a></h1>
           <p class="desc yahei"><span>从明天起,做一个幸福的人, 喂马、劈柴、周游世界。</span></p>
         </div>
-        <nav id="main-nav" class="clearfix yahei">
-    <ul class="nav">
-        <li class="active">
-            <a href="/">首页</a>
-        </li>
-        <li class="active">
-            <a href="/about/">关于</a>
-        </li>
-    </ul>
-</nav>
+        <script type="text/javascript">
+if(navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i)){
+  document.write('<a href="javascript:;" class="open-nav icon-list"><i class="fa fa-bars"></i></a>');
+}
+else
+{
+	document.write('<nav id="main-nav" class="clearfix yahei">');
+    document.write('<ul class="nav">');
+    document.write('    <li class="active">');
+    document.write('        <a href="/">首页</a>');
+    document.write('    </li>');
+    document.write('    <li class="active">');
+    document.write('        <a href="/about/">关于</a>');
+    document.write('    </li>');
+    document.write('</ul>');
+    document.write('</nav>');
+}
+</script>
 
         <div id="announcement">
           <a href="#" class="openpre close" title="Announcement"><i class="fa fa-star"></i></a>
@@ -61,7 +83,7 @@
       <a href="/2014/09/12/e5-8d-97-e5-b7-a5-e6-a0-a1-e5-9b-ad-e7-bd-91-e7-bb-bf-e8-89-b2-e4-b8-8a-e7-bd-91-e8-ae-a4-e8-af-81-e5-ae-a2-e6-88-b7-e7-ab-af" title="南工 - 校园网绿色上网认证客户端" rel="bookmark">南工 - 校园网绿色上网认证客户端</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2014-09-12</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2014-09-12</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
             <a href="/categories/最新下载">最新下载</a>
@@ -72,8 +94,10 @@
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          <p>
+
+          
+          
+              <p>
 	南工 - 校园网绿色上网认证客户端&nbsp;</p>
 <p>
 	完全代替 &quot;校园宽带认证客户端&quot; 登录 ,</p>
@@ -97,7 +121,8 @@
 <p style="text-align: center;">
 	&nbsp;</p>
 
-        
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">

@@ -26,6 +26,20 @@
 </head>
 
 <body class="nav-open">
+  <script type="text/javascript">
+  if(navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i)){
+    document.write('<div id="mobile-nav" class="f12 yahei">');
+    document.write('<ul class="nav">');
+    document.write('    <li class="active">');
+    document.write('        <a href="/">首页</a>');
+    document.write('    </li>');
+    document.write('    <li class="active">');
+    document.write('        <a href="/about/">关于</a>');
+    document.write('    </li>');
+    document.write('</ul>');
+    document.write('</div>');
+  }
+  </script>
   <div id="wrap">
     <div id="preheader">notice_TOP</div>
       <header id="header" class="clearfix">
@@ -33,16 +47,24 @@
           <h1><a href="/">面向大海,心暖花开</a></h1>
           <p class="desc yahei"><span>从明天起,做一个幸福的人, 喂马、劈柴、周游世界。</span></p>
         </div>
-        <nav id="main-nav" class="clearfix yahei">
-    <ul class="nav">
-        <li class="active">
-            <a href="/">首页</a>
-        </li>
-        <li class="active">
-            <a href="/about/">关于</a>
-        </li>
-    </ul>
-</nav>
+        <script type="text/javascript">
+if(navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i)){
+  document.write('<a href="javascript:;" class="open-nav icon-list"><i class="fa fa-bars"></i></a>');
+}
+else
+{
+	document.write('<nav id="main-nav" class="clearfix yahei">');
+    document.write('<ul class="nav">');
+    document.write('    <li class="active">');
+    document.write('        <a href="/">首页</a>');
+    document.write('    </li>');
+    document.write('    <li class="active">');
+    document.write('        <a href="/about/">关于</a>');
+    document.write('    </li>');
+    document.write('</ul>');
+    document.write('</nav>');
+}
+</script>
 
         <div id="announcement">
           <a href="#" class="openpre close" title="Announcement"><i class="fa fa-star"></i></a>
@@ -61,7 +83,7 @@
       <a href="/2014/09/15/e7-ae-80-e5-8d-95-e6-96-b9-e6-b3-95-e6-b7-bb-e5-8a-a0-e7-a8-8b-e5-ba-8f-e4-bd-bf-e5-85-b6-e5-bc-80-e6-9c-ba-e8-87-aa-e5-8a-a8-e5-90-af-e5-8a-a8" title="简单方法 添加程序使其开机自动启动" rel="bookmark">简单方法 添加程序使其开机自动启动</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2014-09-15</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2014-09-15</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
             <a href="/categories/应用技巧">应用技巧</a>
@@ -74,8 +96,10 @@
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          <p>
+
+          
+          
+              <p>
 	有些时候,想<span style="font-family: arial; font-size: 13px; line-height: 20px;">使一些小程序在系统开始时候自动启动,程序本身却没有提供可以开机启动的设置.</span></p>
 <p>
 	<span style="font-family: arial; font-size: 13px; line-height: 20px;">所以，就需要我们自己手动为电脑添加开机启动项了。</span></p>
@@ -85,43 +109,11 @@
 	为自己的电脑<span style="font-family: arial; font-size: 13px; line-height: 20px;">添加启动项的方法有很多，在这里就介绍一种简单的方法添加启动项。</span></p>
 <p>
 	&nbsp;</p>
-<p><!--more--></p>
-<pre>
-在此期间，有些安全软件可能会拦截，你的操作，可以直接点击通过，放行。或是关闭安全软件。</pre>
 <p>
-	&nbsp;</p>
-<p>
-	<span style="font-family: arial; font-size: 13px; line-height: 20px;">Step1 ：</span><span style="font-family: arial; line-height: 20px;">找到 想到 添加 开机</span><span style="font-family: arial; line-height: 20px;">启动 的程序，&nbsp;</span></p>
-<p>
-	<span style="font-family: arial; font-size: 13px; line-height: 20px;">右键 --&gt; 发送到 --&gt; 桌面快捷方式 &nbsp; &nbsp;</span></p>
-<p>
-	<font face="arial"><span style="line-height: 20px;">这时将会在桌面上添加一个 快捷方式。 图标和原来程序一样 但是 左下角会有一个小箭头</span></font></p>
-<p style="text-align: center;">
-	<img alt="" src="http://m2.img.srcdd.com/farm5/d/2014/0915/22/24024D4E3D461A9747EBE345719287D2_B1280_1280_495_585.png" style="width: 495px; height: 585px;" /></p>
-<p>
-	<span style="font-family: arial; font-size: 13px; line-height: 20px;">Step2：点击开始菜单 在 &rdquo;所有程序&ldquo; 中&nbsp;找到 &rdquo;启动&ldquo; 文件夹</span></p>
-<p style="text-align: center;">
-	<img alt="" src="http://m1.img.srcdd.com/farm5/d/2014/0915/22/6806497D4CE4B65B545D5A2455BB66D0_B1280_1280_408_555.png" style="width: 408px; height: 555px;" /></p>
-<p>
-	&nbsp;</p>
-<p>
-	Step<span style="font-size: 13px; line-height: 1.6em;">3</span><span style="font-size: 13px; line-height: 1.6em;">： 右键 &ldquo;启动&rdquo;文件夹 在弹出的菜单中 点击&ldquo;打开&rdquo;，将会打开 &ldquo;启动&rdquo;文件夹。</span></p>
-<p style="text-align: center;">
-	<a href="http://m2.img.srcdd.com/farm4/d/2014/0915/22/9F9035C141227E0554723F8625F3C1A0_B1280_1280_402_547.png"><img alt="" src="http://m2.img.srcdd.com/farm4/d/2014/0915/22/9F9035C141227E0554723F8625F3C1A0_B1280_1280_402_547.png" style="width: 402px; height: 547px;" /></a></p>
-<p>
-	Step4： 将 Step1 中所创建&nbsp;快捷方式 复制到 刚刚打开 的文件夹里边。</p>
-<p style="text-align: center;">
-	<img alt="" src="http://m2.img.srcdd.com/farm4/d/2014/0915/22/07538F1F1241C6E87D048B8E299BA098_B1280_1280_920_613.png" style="width: 920px; height: 613px;" /></p>
-<p>
-	&nbsp;</p>
-<p>
-	Step5：大功告成。</p>
-<p>
-	&nbsp;</p>
-<p>
-	可以重启一下电脑 ，测试测试，程序是否自动启动了！</p>
 
-        
+
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -143,7 +135,7 @@
       <a href="/2014/08/27/e4-bd-95-e4-b8-ba-e7-bd-91-e7-bb-9c-e8-ae-a1-e7-ae-97-e6-9c-ba-e4-b8-93-e4-b8-9a-e6-9c-af-e8-af-ad" title="何为“网络” - 计算机专业术语" rel="bookmark">何为“网络” - 计算机专业术语</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2014-08-27</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2014-08-27</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
             <a href="/categories/未分类">未分类</a>
@@ -154,21 +146,16 @@
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          <blockquote>在定义上非常简单﹕网络就是一群通过一定形式连接起来的计算机。</p></blockquote>
-<p>一个网络可以由两台计算机组成﹐也可以拥有在同一大楼里面的上千台计算机和用户。我们通常指这样的网络为<strong>局域网</strong>(LAN﹐ Local Area Network)﹐由LAN再延伸出去更大的范围﹐比如整个城市甚至整个国家﹐这样的网络我们称为<strong>广域网</strong>(WAN﹐ Wide Area Network)﹐当然您如果要再仔细划分的话﹐还可以有MAN(Metropolitan Area Network) 和 CAN(Citywide Area Network)﹐这些网络都需要有专门的管理人员进行维护。<br />
-<!--more--></p>
-<p><img class="aligncenter" src="http://www.study-area.org/network/net_def.png" alt="" width="362" height="100" /></p>
-<p>而我们最常触的<strong>Internet</strong>则是由这些无数的LAN和WAN共同组成的。Internet仅是提供了它们之间的连接﹐但却没有专门的人进行管理(除了维护连接和制定使用标准外)﹐可以说Internet是最自由和最没王管的地方了。在Internet上面是没有国界种族之分的﹐只要连上去﹐在地球另一边的计算机和您室友的计算机其实没有什么两样的。</p>
-<p>因为我们最常使用的还是LAN﹐(即使我们从家中连上Internet﹐其实也是先连上ISP的LAN)﹐所以这里我们主要讨论的还是以LAN为主。LAN可以说是众多网络里面的最基本单位了﹐等您对LAN有了一定的认识﹐再去了解WAN和Internet就比较容易入手了﹐只不过需要了解更多更复杂的通讯手段而已。</p>
-<p><strong>Internet? Intranet? Extranet?</strong></p>
-<p>接触过网络的朋友﹐或多或少都应该听过上面几个名词吧﹖不过﹐大家可知道它们之间的分别和如何定义吗﹖</p>
-<p>其实﹐最早出现的名词应该是 Internet﹐然后人民将 Internet 的概念和技巧引入到内部的专用网﹐可以是独立的一个 LAN 也可以是专属的 WAN ﹐于是就称为 Intranet 了。它们之间的最大分别是﹕开放性。Internet 是开放的﹐不属于任何人﹐只要能连接得到您就属于其中一员﹐也就能获得上面开放的资源﹔相对而言﹐Intranet 则是专属的﹑非开放的﹐它往往存在于于私有网络之上﹐只是其结构和服务方式和设计﹐都参考 Internet 的模式而已。</p>
-<p>[caption id="" align="aligncenter" width="384"]<img src="http://www.study-area.org/network/intranet.png" alt="Internet vs Intranet" width="384" height="130" /> Internet vs Intranet[/caption]</p>
-<p>至于 Extranet﹐算得上是针对 Intranet 而延伸出来的概念。既然 Intranet 是指内网络部而言﹐那么 Extranet 则指外部的网络了。Extranet 通常是企业和 Internet 连接﹐以向公共提供服务的网络。不过﹐这并非是单纯根据物理或逻辑位置来定义﹐主要是以连接的形式和功能来区分。例如某个外部网络﹐如果单纯的透过网络来连接我们的 Extranet 或 Intranet ﹐那它只是一个毫不相关的外部个体而已﹔但是﹐如果我们用 VPN 或其它信任形式将对方连接起来﹐那么对方也可以属于 Extranet 或 Internet 的部份。</p>
-<p>[caption id="" align="aligncenter" width="499"]<img src="http://www.study-area.org/network/extranet.png" alt="Intranet vs Extranet" width="499" height="329" /> Intranet vs Extranet[/caption]</p>
 
-        
+          
+          
+              <blockquote>在定义上非常简单﹕网络就是一群通过一定形式连接起来的计算机。</p></blockquote>
+<p>一个网络可以由两台计算机组成﹐也可以拥有在同一大楼里面的上千台计算机和用户。我们通常指这样的网络为<strong>局域网</strong>(LAN﹐ Local Area Network)﹐由LAN再延伸出去更大的范围﹐比如整个城市甚至整个国家﹐这样的网络我们称为<strong>广域网</strong>(WAN﹐ Wide Area Network)﹐当然您如果要再仔细划分的话﹐还可以有MAN(Metropolitan Area Network) 和 CAN(Citywide Area Network)﹐这些网络都需要有专门的管理人员进行维护。<br />
+
+
+
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -190,7 +177,7 @@
       <a href="/2014/08/25/e7-ba-a2-e8-b1-86-2" title="红豆" rel="bookmark">红豆</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2014-08-25</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2014-08-25</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
             <a href="/categories/影视音乐">影视音乐</a>
@@ -203,10 +190,13 @@
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          <p>[xiami]1773484891[/xiami]</p>
 
-        
+          
+          
+              <p>[xiami]1773484891[/xiami]</p>
+
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -228,7 +218,7 @@
       <a href="/2013/02/11/e5-85-a8-e7-90-83-e4-bb-85-e5-8d-8a-e6-95-b0-e4-ba-ba-e4-bd-bf-e7-94-a8-e5-ae-89-e5-8d-934-0" title="全球仅半数人使用安卓4.0+" rel="bookmark">全球仅半数人使用安卓4.0+</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2013-02-11</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2013-02-11</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
             <a href="/categories/未分类">未分类</a>
@@ -239,9 +229,12 @@
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          谷歌日前公布了近两周的Android系统版本分布比例，数据显示，截止2月4日，排名第一的版本依然是“姜饼”（Gingerbread）2.3.3-2.3.7，占据45.4%的比例；“冰淇林三明治”（Ice Cream Sandwich）4.0.4-4.0.4以29%的比例排名第二；“果冻豆”（Jelly Bean）...
-        
+
+          
+          
+              谷歌日前公布了近两周的Android系统版本分布比例，数据显示，截止2月4日，排名第一的版本依然是“姜饼”（Gingerbread）2.3.3-2.3.7，占据45.4%的比例；“冰淇林三明治”（Ice Cream Sandwich）4.0.4-4.0.4以29%的比例排名第二；“果冻豆”（Jelly Bean）...
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -263,7 +256,7 @@
       <a href="/2012/08/11/windows8-e4-b8-ad-e9-bb-98-e8-ae-a4-e7-9a-84-e9-94-81-e5-b1-8f-e5-a3-81-e7-ba-b8-e6-ac-a3-e8-b5-8f" title="Windows8 中默认的锁屏壁纸欣赏" rel="bookmark">Windows8 中默认的锁屏壁纸欣赏</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2012-08-11</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2012-08-11</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
             <a href="/categories/未分类">未分类</a>
@@ -274,8 +267,10 @@
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          <p>RTM版本的Windows 8相信已经有很多人试用过了，<strong>在新系统中加入了全新的锁屏界面，用户不仅可以使用Windows 8自带的默认图片当作锁屏壁纸也可以自定义一张图片。</strong>不过目前锁屏界面还不支持动态间隔播放壁纸，下面就是Windows 8自带的默认锁屏壁纸。</p>
+
+          
+          
+              <p>RTM版本的Windows 8相信已经有很多人试用过了，<strong>在新系统中加入了全新的锁屏界面，用户不仅可以使用Windows 8自带的默认图片当作锁屏壁纸也可以自定义一张图片。</strong>不过目前锁屏界面还不支持动态间隔播放壁纸，下面就是Windows 8自带的默认锁屏壁纸。</p>
 <p><img class="aligncenter" src="http://imglf2.nosdn.127.net/img/Z3ZvNUFuRWljSU5GVlNOUTJyaWVQM1VYOWNzdUFqSnJveWZQeVlpemJZSGZnc3JKUkhWSzV3PT0.jpg?imageView&amp;quality=96&amp;stripmeta=0&amp;type=jpg" alt="" /></p>
 <p><img class="aligncenter" src="http://imglf0.nosdn.127.net/img/Z3ZvNUFuRWljSU5GVlNOUTJyaWVQeTl5aTVjSkZrTjI0ZHpJM1hrTjI2V1VKOXBtTU5TdnlnPT0.jpg?imageView&amp;quality=96&amp;stripmeta=0&amp;type=jpg" alt="" /></p>
 <p><img class="aligncenter" src="http://imglf.nosdn.127.net/img/Z3ZvNUFuRWljSU5GVlNOUTJyaWVQMWszV3FWZWFrTVY4NVptQ0tpRWpZVkZ5a1A5RDJtU29BPT0.jpg?imageView&amp;quality=96&amp;stripmeta=0&amp;type=jpg" alt="" /></p>
@@ -287,7 +282,8 @@
 <p><img class="aligncenter" src="http://imglf1.nosdn.127.net/img/Z3ZvNUFuRWljSU5GVlNOUTJyaWVQNHhFVGJ5YlBtVHJ1ZXF3MDFzS2V3NVAxSEdDc1hCSVBnPT0.jpg?imageView&amp;quality=96&amp;stripmeta=0&amp;type=jpg" alt="" /></p>
 <p><img class="aligncenter" src="http://imglf2.nosdn.127.net/img/Z3ZvNUFuRWljSU5GVlNOUTJyaWVQN2p0WWQzWTA0a1doeXdGWGFvcFVJNzRSc3p2enJWcUlnPT0.jpg?imageView&amp;quality=96&amp;stripmeta=0&amp;type=jpg" alt="" /></p>
 
-        
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -309,7 +305,7 @@
       <a href="/2012/06/17/32-e4-bd-8dwin7-e7-aa-81-e7-a0-b4-e5-86-85-e5-ad-98-e9-99-90-e5-88-b6-e6-96-b9-e6-b3-95" title="32位win7突破内存限制方法" rel="bookmark">32位win7突破内存限制方法</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2012-06-17</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2012-06-17</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
             <a href="/categories/未分类">未分类</a>
@@ -320,9 +316,12 @@
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          有网友反映说他的32位win 7不能用4G的内存。其实32位的win7和vista都是不允许用4G内存的，那有没有让32位的win7/vista也用上4G的内存呢?
-        
+
+          
+          
+              有网友反映说他的32位win 7不能用4G的内存。其实32位的win7和vista都是不允许用4G内存的，那有没有让32位的win7/vista也用上4G的内存呢?
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">

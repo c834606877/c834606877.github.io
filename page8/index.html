@@ -26,6 +26,20 @@
 </head>
 
 <body class="nav-open">
+  <script type="text/javascript">
+  if(navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i)){
+    document.write('<div id="mobile-nav" class="f12 yahei">');
+    document.write('<ul class="nav">');
+    document.write('    <li class="active">');
+    document.write('        <a href="/">首页</a>');
+    document.write('    </li>');
+    document.write('    <li class="active">');
+    document.write('        <a href="/about/">关于</a>');
+    document.write('    </li>');
+    document.write('</ul>');
+    document.write('</div>');
+  }
+  </script>
   <div id="wrap">
     <div id="preheader">notice_TOP</div>
       <header id="header" class="clearfix">
@@ -33,16 +47,24 @@
           <h1><a href="/">面向大海,心暖花开</a></h1>
           <p class="desc yahei"><span>从明天起,做一个幸福的人, 喂马、劈柴、周游世界。</span></p>
         </div>
-        <nav id="main-nav" class="clearfix yahei">
-    <ul class="nav">
-        <li class="active">
-            <a href="/">首页</a>
-        </li>
-        <li class="active">
-            <a href="/about/">关于</a>
-        </li>
-    </ul>
-</nav>
+        <script type="text/javascript">
+if(navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i)){
+  document.write('<a href="javascript:;" class="open-nav icon-list"><i class="fa fa-bars"></i></a>');
+}
+else
+{
+	document.write('<nav id="main-nav" class="clearfix yahei">');
+    document.write('<ul class="nav">');
+    document.write('    <li class="active">');
+    document.write('        <a href="/">首页</a>');
+    document.write('    </li>');
+    document.write('    <li class="active">');
+    document.write('        <a href="/about/">关于</a>');
+    document.write('    </li>');
+    document.write('</ul>');
+    document.write('</nav>');
+}
+</script>
 
         <div id="announcement">
           <a href="#" class="openpre close" title="Announcement"><i class="fa fa-star"></i></a>
@@ -59,7 +81,7 @@
       <a href="/2014/09/15/e7-ae-80-e5-8d-95-e6-96-b9-e6-b3-95-e6-b7-bb-e5-8a-a0-e7-a8-8b-e5-ba-8f-e4-bd-bf-e5-85-b6-e5-bc-80-e6-9c-ba-e8-87-aa-e5-8a-a8-e5-90-af-e5-8a-a8" title="简单方法 添加程序使其开机自动启动" rel="bookmark">简单方法 添加程序使其开机自动启动</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2014-09-15</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2014-09-15</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
             <a href="/categories/应用技巧">应用技巧</a>
@@ -72,8 +94,10 @@
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          <p>
+
+          
+          
+              <p>
 	有些时候,想<span style="font-family: arial; font-size: 13px; line-height: 20px;">使一些小程序在系统开始时候自动启动,程序本身却没有提供可以开机启动的设置.</span></p>
 <p>
 	<span style="font-family: arial; font-size: 13px; line-height: 20px;">所以，就需要我们自己手动为电脑添加开机启动项了。</span></p>
@@ -83,43 +107,11 @@
 	为自己的电脑<span style="font-family: arial; font-size: 13px; line-height: 20px;">添加启动项的方法有很多，在这里就介绍一种简单的方法添加启动项。</span></p>
 <p>
 	&nbsp;</p>
-<p><!--more--></p>
-<pre>
-在此期间，有些安全软件可能会拦截，你的操作，可以直接点击通过，放行。或是关闭安全软件。</pre>
 <p>
-	&nbsp;</p>
-<p>
-	<span style="font-family: arial; font-size: 13px; line-height: 20px;">Step1 ：</span><span style="font-family: arial; line-height: 20px;">找到 想到 添加 开机</span><span style="font-family: arial; line-height: 20px;">启动 的程序，&nbsp;</span></p>
-<p>
-	<span style="font-family: arial; font-size: 13px; line-height: 20px;">右键 --&gt; 发送到 --&gt; 桌面快捷方式 &nbsp; &nbsp;</span></p>
-<p>
-	<font face="arial"><span style="line-height: 20px;">这时将会在桌面上添加一个 快捷方式。 图标和原来程序一样 但是 左下角会有一个小箭头</span></font></p>
-<p style="text-align: center;">
-	<img alt="" src="http://m2.img.srcdd.com/farm5/d/2014/0915/22/24024D4E3D461A9747EBE345719287D2_B1280_1280_495_585.png" style="width: 495px; height: 585px;" /></p>
-<p>
-	<span style="font-family: arial; font-size: 13px; line-height: 20px;">Step2：点击开始菜单 在 &rdquo;所有程序&ldquo; 中&nbsp;找到 &rdquo;启动&ldquo; 文件夹</span></p>
-<p style="text-align: center;">
-	<img alt="" src="http://m1.img.srcdd.com/farm5/d/2014/0915/22/6806497D4CE4B65B545D5A2455BB66D0_B1280_1280_408_555.png" style="width: 408px; height: 555px;" /></p>
-<p>
-	&nbsp;</p>
-<p>
-	Step<span style="font-size: 13px; line-height: 1.6em;">3</span><span style="font-size: 13px; line-height: 1.6em;">： 右键 &ldquo;启动&rdquo;文件夹 在弹出的菜单中 点击&ldquo;打开&rdquo;，将会打开 &ldquo;启动&rdquo;文件夹。</span></p>
-<p style="text-align: center;">
-	<a href="http://m2.img.srcdd.com/farm4/d/2014/0915/22/9F9035C141227E0554723F8625F3C1A0_B1280_1280_402_547.png"><img alt="" src="http://m2.img.srcdd.com/farm4/d/2014/0915/22/9F9035C141227E0554723F8625F3C1A0_B1280_1280_402_547.png" style="width: 402px; height: 547px;" /></a></p>
-<p>
-	Step4： 将 Step1 中所创建&nbsp;快捷方式 复制到 刚刚打开 的文件夹里边。</p>
-<p style="text-align: center;">
-	<img alt="" src="http://m2.img.srcdd.com/farm4/d/2014/0915/22/07538F1F1241C6E87D048B8E299BA098_B1280_1280_920_613.png" style="width: 920px; height: 613px;" /></p>
-<p>
-	&nbsp;</p>
-<p>
-	Step5：大功告成。</p>
-<p>
-	&nbsp;</p>
-<p>
-	可以重启一下电脑 ，测试测试，程序是否自动启动了！</p>
 
-        
+
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -141,7 +133,7 @@
       <a href="/2014/09/12/e5-8d-97-e5-b7-a5-e6-a0-a1-e5-9b-ad-e7-bd-91-e7-bb-bf-e8-89-b2-e4-b8-8a-e7-bd-91-e8-ae-a4-e8-af-81-e5-ae-a2-e6-88-b7-e7-ab-af" title="南工 - 校园网绿色上网认证客户端" rel="bookmark">南工 - 校园网绿色上网认证客户端</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2014-09-12</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2014-09-12</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
             <a href="/categories/最新下载">最新下载</a>
@@ -152,8 +144,10 @@
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          <p>
+
+          
+          
+              <p>
 	南工 - 校园网绿色上网认证客户端&nbsp;</p>
 <p>
 	完全代替 &quot;校园宽带认证客户端&quot; 登录 ,</p>
@@ -177,7 +171,8 @@
 <p style="text-align: center;">
 	&nbsp;</p>
 
-        
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -199,7 +194,7 @@
       <a href="/2014/09/04/1-3-e4-b8-bb-e6-b5-81-e6-a1-8c-e9-9d-a2-e7-8e-af-e5-a2-83" title="1.3 主流桌面环境 – Linux就是这个范儿" rel="bookmark">1.3 主流桌面环境 – Linux就是这个范儿</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2014-09-04</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2014-09-04</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
             <a href="/categories/Linux就是这个范儿">Linux就是这个范儿</a>
@@ -210,15 +205,18 @@
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          <p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
+
+          
+          
+              <p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
 	Linux强大的适应性、创新性以及开放性在它的桌面环境方面得到了十分充盈的展现。目前比较流行的就有GNOME、KDE、XFCE和LXDE，它们并称为Linux图形界面四杰，个个美轮美奂，风格迥异。它们并不是单纯的单一软件，而是一套软件集合，比如WM、DM、应用框架库等。最近有传言称Linus Torvalds[ Linux之父啊，本书的读者要是不认识他是有些说不过去的。]大神在Google+上大骂GNOME3&ldquo;不能容忍的凌乱&rdquo;，并改投XFCE的怀抱。不管真假，至少我认为GNOME3是很考验智商的。其实这玩意没有好坏之分，只是口味不同，自己用着舒坦的就是最好的，是不是？</p>
 <p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
 	本书并不准备截图给各位欣赏，原因主要有三：一是印图成本太高，我也是屌丝一名，知道挣点钱不容易；二是大家可以通过Baidu或Google查询到非常多的截图，直接在电脑上看知道效果会更好；三是学习Linux最需要亲力亲为持之以恒，我们不希望浪费你去主动查询资料的好机会。望能够理解我们的良苦用心</p>
 <p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px; text-align: right;">
 	<a href="http://hook.aliapp.com/?p=554">Linux就是这个范儿 &ndash; 本书目录&nbsp;</a></p>
 
-        
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -240,7 +238,7 @@
       <a href="/2014/09/03/1-2-2-e3-80-80-e6-9e-b6-e6-9e-84-e8-ae-be-e8-ae-a1-e7-ac-ac-ef-bc-91-e7-ab-a0-e7-ac-ac-e4-b8-80-e6-ac-a1-e4-ba-b2-e5-af-86-e6-8e-a5-e8-a7-a6-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa" title="1.2.2　架构设计 - Linux就是这个范儿" rel="bookmark">1.2.2　架构设计 - Linux就是这个范儿</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2014-09-03</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2014-09-03</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
             <a href="/categories/Linux就是这个范儿">Linux就是这个范儿</a>
@@ -251,8 +249,10 @@
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          <p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
+
+          
+          
+              <p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
 	其实Linux系统的图形界面设计还是非常清晰的。让大家觉得乱的原因可能是有两个：一是我的写作水平有点问题，二是涉及的新鲜事儿太多。我总认为第一点是主要因素，所以干脆不写了，画个图给大家看看。下图展示了Linux界面的基本结构，同时提供了Windows图形界面基本结构进行对比。自我感觉画的比说的要好。</p>
 <p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px; text-align: center;">
 	<img alt="" src="http://m2.img.srcdd.com/farm5/d/2014/0828/17/E064541DE5967E7CCC4A042090B098E2_B1280_1280_650_409.png" style="width: 650px; height: 409px;" /></p>
@@ -263,7 +263,8 @@
 <p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px; text-align: right;">
 	<a href="http://hook.aliapp.com/?p=554">Linux就是这个范儿 &ndash; 本书目录&nbsp;</a></p>
 
-        
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -285,7 +286,7 @@
       <a href="/2014/09/02/1-2-1-e6-b2-a1-e6-9c-89-e5-9b-be-e5-bd-a2-e7-9a-84-e5-9b-be-e5-bd-a2-e7-ac-ac-ef-bc-91-e7-ab-a0-e7-ac-ac-e4-b8-80-e6-ac-a1-e4-ba-b2-e5-af-86-e6-8e-a5-e8-a7-a6-linux-e5-b0-b1-e6-98-af" title="1.2.1 没有图形的图形 - Linux就是这个范儿" rel="bookmark">1.2.1 没有图形的图形 - Linux就是这个范儿</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2014-09-02</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2014-09-02</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
             <a href="/categories/Linux就是这个范儿">Linux就是这个范儿</a>
@@ -296,8 +297,10 @@
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          <p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
+
+          
+          
+              <p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
 	<strong style="text-align: center;">1.2　不一样的图形操作</strong></p>
 <p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
 	几乎所有Linux的新用户都会认为Linux的图形界面是相当地绚丽又多彩。因为这毕竟是一种全新的体验，那种超脱Windows俗套的快感就会油然而生。对于刚刚翻开这本书的人来说，如果对Linux是抱有这样认识的，那就太棒了，因为咱们又多了一个洗脑的对象了:P。此时此刻，真正的亲密接触就要开始啦&hellip;&hellip;</p>
@@ -324,7 +327,8 @@ $ startx</pre>
 <p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px; text-align: right;">
 	<a href="http://hook.aliapp.com/?p=554" style="font-family: 宋体; font-size: 14px; line-height: 28px; text-align: right; text-indent: 28px;">Linux就是这个范儿 &ndash; 本书目录&nbsp;</a></p>
 
-        
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -346,7 +350,7 @@ $ startx</pre>
             
             
                 
-                  <a href="">1</a>
+                  <a href="/">1</a>
                 
             
                 

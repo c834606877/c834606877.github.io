@@ -26,6 +26,20 @@
 </head>
 
 <body class="nav-open">
+  <script type="text/javascript">
+  if(navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i)){
+    document.write('<div id="mobile-nav" class="f12 yahei">');
+    document.write('<ul class="nav">');
+    document.write('    <li class="active">');
+    document.write('        <a href="/">首页</a>');
+    document.write('    </li>');
+    document.write('    <li class="active">');
+    document.write('        <a href="/about/">关于</a>');
+    document.write('    </li>');
+    document.write('</ul>');
+    document.write('</div>');
+  }
+  </script>
   <div id="wrap">
     <div id="preheader">notice_TOP</div>
       <header id="header" class="clearfix">
@@ -33,16 +47,24 @@
           <h1><a href="/">面向大海,心暖花开</a></h1>
           <p class="desc yahei"><span>从明天起,做一个幸福的人, 喂马、劈柴、周游世界。</span></p>
         </div>
-        <nav id="main-nav" class="clearfix yahei">
-    <ul class="nav">
-        <li class="active">
-            <a href="/">首页</a>
-        </li>
-        <li class="active">
-            <a href="/about/">关于</a>
-        </li>
-    </ul>
-</nav>
+        <script type="text/javascript">
+if(navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i)){
+  document.write('<a href="javascript:;" class="open-nav icon-list"><i class="fa fa-bars"></i></a>');
+}
+else
+{
+	document.write('<nav id="main-nav" class="clearfix yahei">');
+    document.write('<ul class="nav">');
+    document.write('    <li class="active">');
+    document.write('        <a href="/">首页</a>');
+    document.write('    </li>');
+    document.write('    <li class="active">');
+    document.write('        <a href="/about/">关于</a>');
+    document.write('    </li>');
+    document.write('</ul>');
+    document.write('</nav>');
+}
+</script>
 
         <div id="announcement">
           <a href="#" class="openpre close" title="Announcement"><i class="fa fa-star"></i></a>
@@ -59,7 +81,7 @@
       <a href="/2015/09/29/e4-bf-ae-e5-a4-8d-fedora-docky-google-chrome-e5-90-af-e5-8a-a8-e5-90-8e-e5-87-ba-e7-8e-b0-e4-b8-a4-e4-b8-aa-e7-9b-b8-e5-90-8c-e5-9b-be-e6-a0-87" title="修复 Fedora Docky Google Chrome  启动后 出现两个相同图标" rel="bookmark">修复 Fedora Docky Google Chrome  启动后 出现两个相同图标</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2015-09-29</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2015-09-29</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
             <a href="/categories/Linux系统">Linux系统</a>
@@ -70,24 +92,19 @@
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          <p>在Fedora下,安装Google Chrome,并将其 add to Favorites Docky 中<br />
+
+          
+          
+              <p>在Fedora下,安装Google Chrome,并将其 add to Favorites Docky 中<br />
 并启动发现,两个相同的图标并未融合在一块,</p>
 <p>猜测应该是 <code>/usr/share/applications/</code> 下的 <code>.desktop</code> 文件有问题</p>
 <p>打开终端:</p>
 <pre>sudo gedit /usr/share/applications/google-chrome.desktop</pre>
-<p><!--more--><br />
-可以发现有三个节点</p>
-<p>在三个节点下面都增加如下内容:</p>
-<pre>StartupWMClass=Google-chrome-stable</pre>
-<p>保存并退出,</p>
-<p>删除用户目录下的 缓存</p>
-<p>也许需要重启 Gnome :</p>
-<pre>Alt+f2 
-r &lt;Enter&gt;</pre>
-<p>[information]Desktop file 里边涉及到的路径 不能有空格。[/information]</p>
+<p>
 
-        
+
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -109,7 +126,7 @@ r &lt;Enter&gt;</pre>
       <a href="/2015/09/28/errors-in-upgrade-from-fedora-21-to-fedora-22" title="Errors in Upgrade from Fedora 21 to Fedora 22" rel="bookmark">Errors in Upgrade from Fedora 21 to Fedora 22</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2015-09-28</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2015-09-28</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
             <a href="/categories/Linux系统">Linux系统</a>
@@ -120,8 +137,10 @@ r &lt;Enter&gt;</pre>
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          <blockquote><strong>1. Make sure your current system is up-to-date and backed up</strong></p>
+
+          
+          
+              <blockquote><strong>1. Make sure your current system is up-to-date and backed up</strong></p>
 <p>First up, ensure that you have the most up-to-date version of Fedora 21 by updating your system using the Software application, or running the following command in the terminal:</p>
 <pre>sudo dnf update</pre>
 <p><strong>2. Install the FedUp tool</strong></p>
@@ -150,7 +169,8 @@ Last error was: [Errno 14] curl#56 - "Proxy CONNECT aborted"
 
 Change the <code>/etc/yum.conf</code> file to disable Proxy settings ,</pre>
 
-        
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -172,7 +192,7 @@ Change the <code>/etc/yum.conf</code> file to disable Proxy settings ,</pre>
       <a href="/2014/10/10/must-issue-sudo-alsa-force-reload-on-reboot-ubuntu" title="Must issue sudo alsa force-reload on reboot (Ubuntu)" rel="bookmark">Must issue sudo alsa force-reload on reboot (Ubuntu)</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2014-10-10</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2014-10-10</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
             <a href="/categories/应用技巧">应用技巧</a>
@@ -183,8 +203,10 @@ Change the <code>/etc/yum.conf</code> file to disable Proxy settings ,</pre>
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          <p>
+
+          
+          
+              <p>
 	I have a problem, I have got sound working...</p>
 <p>
 	But only when I issue the Code:</p>
@@ -212,7 +234,8 @@ sudo alsa force-reload </pre>
 	MODULES=&quot;soundcore&quot;
 </pre>
 
-        
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -234,7 +257,7 @@ sudo alsa force-reload </pre>
       <a href="/2014/10/05/1-4-7-e3-80-80-e8-87-b4-e5-91-bd-e7-9a-84linux-e5-91-bd-e4-bb-a4-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf" title="1.4.7　致命的Linux命令 – Linux就是这个范儿" rel="bookmark">1.4.7　致命的Linux命令 – Linux就是这个范儿</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2014-10-05</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2014-10-05</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
             <a href="/categories/Linux就是这个范儿">Linux就是这个范儿</a>
@@ -245,8 +268,10 @@ sudo alsa force-reload </pre>
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          <p style="text-indent: 2em;">
+
+          
+          
+              <p style="text-indent: 2em;">
 	别以为我是在开玩笑。有些Linux命令轻则造成数据丢失，重则导致系统瘫痪。你看这位同学漫不经心，以root身份敲入了rm -rf /，强制删除&nbsp;/&nbsp;目录下的所有文件，这代价可是很惨痛的（相当于系统自杀）。</p>
 <p style="text-indent: 2em;">
 	还有一个很好玩的例子，我用旺旺聊天的形式给你讲述：</p>
@@ -318,7 +343,8 @@ sudo alsa force-reload </pre>
 <p style="text-indent: 2em; text-align: right;">
 	<a href="http://hook.aliapp.com/?p=554" style="color: rgb(51, 51, 51); text-decoration: none; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(51, 51, 51); font-size: 14px; text-align: right; text-indent: 28px; font-family: 宋体; line-height: 28px;">Linux就是这个范儿 &ndash; 本书目录&nbsp;</a></p>
 
-        
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -340,7 +366,7 @@ sudo alsa force-reload </pre>
       <a href="/2014/10/05/1-4-6-e3-80-80-e8-81-94-e6-9c-ba-e5-b8-ae-e5-8a-a9-man-e5-be-88-e9-9d-a0-e8-b0-b1-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf" title="1.4.6　联机帮助——man很靠谱 – Linux就是这个范儿" rel="bookmark">1.4.6　联机帮助——man很靠谱 – Linux就是这个范儿</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2014-10-05</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2014-10-05</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
             <a href="/categories/Linux就是这个范儿">Linux就是这个范儿</a>
@@ -351,8 +377,10 @@ sudo alsa force-reload </pre>
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          <p style="text-indent: 2em;">
+
+          
+          
+              <p style="text-indent: 2em;">
 	遇到问题寻找帮助能加快解决问题的速度。在Linux系统上，有以下几个途径可以获得帮助：</p>
 <p style="text-indent: 2em;">
 	1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;遇到问题，男人（man，其实是&ldquo;手册&rdquo;的简称）的帮助很靠谱。需要某个命令或者配置文件的帮助，就在终端输入：</p>
@@ -391,7 +419,8 @@ sudo alsa force-reload </pre>
 <p style="text-indent: 2em; text-align: right;">
 	<a href="http://hook.aliapp.com/?p=554" style="color: rgb(51, 51, 51); text-decoration: none; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(51, 51, 51); font-size: 14px; text-align: right; text-indent: 28px; font-family: 宋体; line-height: 28px;">Linux就是这个范儿 &ndash; 本书目录&nbsp;</a></p>
 
-        
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -413,7 +442,7 @@ sudo alsa force-reload </pre>
             
             
                 
-                  <a href="">1</a>
+                  <a href="/">1</a>
                 
             
                 

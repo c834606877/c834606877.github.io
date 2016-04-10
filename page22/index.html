@@ -26,6 +26,20 @@
 </head>
 
 <body class="nav-open">
+  <script type="text/javascript">
+  if(navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i)){
+    document.write('<div id="mobile-nav" class="f12 yahei">');
+    document.write('<ul class="nav">');
+    document.write('    <li class="active">');
+    document.write('        <a href="/">首页</a>');
+    document.write('    </li>');
+    document.write('    <li class="active">');
+    document.write('        <a href="/about/">关于</a>');
+    document.write('    </li>');
+    document.write('</ul>');
+    document.write('</div>');
+  }
+  </script>
   <div id="wrap">
     <div id="preheader">notice_TOP</div>
       <header id="header" class="clearfix">
@@ -33,16 +47,24 @@
           <h1><a href="/">面向大海,心暖花开</a></h1>
           <p class="desc yahei"><span>从明天起,做一个幸福的人, 喂马、劈柴、周游世界。</span></p>
         </div>
-        <nav id="main-nav" class="clearfix yahei">
-    <ul class="nav">
-        <li class="active">
-            <a href="/">首页</a>
-        </li>
-        <li class="active">
-            <a href="/about/">关于</a>
-        </li>
-    </ul>
-</nav>
+        <script type="text/javascript">
+if(navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i)){
+  document.write('<a href="javascript:;" class="open-nav icon-list"><i class="fa fa-bars"></i></a>');
+}
+else
+{
+	document.write('<nav id="main-nav" class="clearfix yahei">');
+    document.write('<ul class="nav">');
+    document.write('    <li class="active">');
+    document.write('        <a href="/">首页</a>');
+    document.write('    </li>');
+    document.write('    <li class="active">');
+    document.write('        <a href="/about/">关于</a>');
+    document.write('    </li>');
+    document.write('</ul>');
+    document.write('</nav>');
+}
+</script>
 
         <div id="announcement">
           <a href="#" class="openpre close" title="Announcement"><i class="fa fa-star"></i></a>
@@ -59,7 +81,7 @@
       <a href="/2012/06/17/134" title="QQ2012 Beta 1(安全防护版)新版发布下载" rel="bookmark">QQ2012 Beta 1(安全防护版)新版发布下载</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2012-06-17</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2012-06-17</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
       </li>
@@ -68,8 +90,10 @@
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          <p>　　QQ2012 Beta1(安全防护版)V2.6日前正式发布，该版本增加危险程序详细描述，让你清楚知道其危害，并可调用管家进行清除，同时增加木马查杀功能及整合文件保护功能。</p>
+
+          
+          
+              <p>　　QQ2012 Beta1(安全防护版)V2.6日前正式发布，该版本增加危险程序详细描述，让你清楚知道其危害，并可调用管家进行清除，同时增加木马查杀功能及整合文件保护功能。</p>
 <p>　　QQ2012 Beta 1(安全防护版)V2.6  <a href="http://dl_dir.qq.com/qqfile/qd/QQ2012Beta1_QQProtect2.6.exe" target="_blank"><span style="color: #0000ff;">点此下载</span></a></p>
 <p>　　QQ2012 Beta1(安全防护版)V2.6主要更新：</p>
 <p>　　1、增加危险程序详细描述;</p>
@@ -77,7 +101,8 @@
 <p>　　3、整合文件保护功能，保护QQ核心文件不被木马篡改，降低盗号风险;</p>
 <p>　　4、整合QQ2012Beta1最新特性。</p>
 
-        
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -99,7 +124,7 @@
       <a href="/2012/06/17/e5-87-a0-e6-8b-9b-e8-ae-a9windows-xp-e5-8a-a0-e5-bf-ab-e5-90-af-e5-8a-a8-e7-9a-84-e6-96-b9-e6-b3-95_-e6-83-b3-e7-84-b6-e4-bd-a0-e7-9a-84-e7-94-b5-e8-84-91-e5-8a-a0-e5-90-af-e5-8a-a8-e5-90-97" title="几招让Windows XP加快启动的方法_想然你的电脑加启动吗?" rel="bookmark">几招让Windows XP加快启动的方法_想然你的电脑加启动吗?</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2012-06-17</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2012-06-17</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
       </li>
@@ -108,9 +133,12 @@
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-              一台电脑以及它的相关外接设备到手了，它的硬件实体就固定了，这时候所能操作的只有软件程序了，本文从硬件与软件，软件程序的安全与有一定风险，从简单与相对复杂几个方面就如何加快启动XP开机时间的问题，作一小结，以便让新手菜鸟也能简单安全地操作他。
-        
+
+          
+          
+                  一台电脑以及它的相关外接设备到手了，它的硬件实体就固定了，这时候所能操作的只有软件程序了，本文从硬件与软件，软件程序的安全与有一定风险，从简单与相对复杂几个方面就如何加快启动XP开机时间的问题，作一小结，以便让新手菜鸟也能简单安全地操作他。
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -132,7 +160,7 @@
       <a href="/2012/06/17/windows-e6-9c-ba-e5-af-86-e6-96-87-e4-bb-b6-e5-b1-9e-e6-80-a7-e6-97-b6-e9-97-b4-e6-88-b3-e7-9a-84-e6-bc-94-e5-8f-98" title="Windows 机密 文件属性时间戳的演变" rel="bookmark">Windows 机密 文件属性时间戳的演变</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2012-06-17</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2012-06-17</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
       </li>
@@ -141,9 +169,12 @@
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          　　在 Windows 95 中，文件属性表中的时间戳信息会显示当地时区的多个时间戳，即使在当时不使用该时区。例如，现在我们位于 Redmond，采用太平洋标准时间，因此 Windows 95 将显示所有与太平洋标准时间相关的时间戳。结果，对于在 7 月 4 日中午创建的文件上的时间戳，当您在冬季查看时显示创建时...
-        
+
+          
+          
+              　　在 Windows 95 中，文件属性表中的时间戳信息会显示当地时区的多个时间戳，即使在当时不使用该时区。例如，现在我们位于 Redmond，采用太平洋标准时间，因此 Windows 95 将显示所有与太平洋标准时间相关的时间戳。结果，对于在 7 月 4 日中午创建的文件上的时间戳，当您在冬季查看时显示创建时...
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -165,7 +196,7 @@
       <a href="/2012/06/16/e5-9b-9b-e5-8d-81-e5-9b-9b-e7-a7-8d-e9-a3-9f-e7-89-a9-e6-90-ad-e9-85-8d-e5-92-8c-e5-8d-81-e4-ba-94-e7-a7-8d-e4-b8-8d-e5-ae-9c-e5-90-83-e7-9a-84-e9-a3-9f-e7-89-a9" title="四十四种食物搭配和十五种不宜吃的食物" rel="bookmark">四十四种食物搭配和十五种不宜吃的食物</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2012-06-16</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2012-06-16</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
       </li>
@@ -174,8 +205,10 @@
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          <p>1、虾+维C=中毒<br />
+
+          
+          
+              <p>1、虾+维C=中毒<br />
 2、感冒药+可乐=中毒<br />
 3、鸡蛋忌糖精┄┄同食中毒、死亡<br />
 4、豆腐忌蜂蜜┄┄同食耳聋<br />
@@ -186,58 +219,11 @@
 9、羊肉忌田螺┄┄同食积食腹胀<br />
 10、芹菜忌兔肉┄┄同食脱头发<br />
 11、番茄忌绿豆┄┄同食伤元气<br />
-<!--more--><br />
-12、鹅肉忌鸭梨┄┄同食伤肾脏<br />
-13、洋葱忌蜂蜜┄┄同食伤眼睛<br />
-14、黑鱼忌茄子┄┄同食肚子痛<br />
-15、甲鱼忌苋菜┄┄同食中毒<br />
-16、皮蛋忌红糖┄┄同食作呕<br />
-17、人参忌萝卜┄┄同食积食滞气<br />
-18、白酒忌柿子┄┄同食心闷<br />
-19.红薯和柿子——会得结石<br />
-20.萝卜和木耳——皮肤发炎<br />
-21.芋头和香蕉——腹胀<br />
-22.花生和黄瓜——伤害肾脏<br />
-23、牛肉和栗子——引起呕吐<br />
-24.螃蟹和柿子——腹泻<br />
-25.鲤鱼和甘草——会中毒<br />
-26、羊肉忌西瓜———同食 伤元气<br />
-27、鹅肉忌鸡蛋———同食伤元气<br />
-28、猪肉忌菱角———同食肚子痛<br />
-29、狗肉忌绿豆———同食多吃易中毒<br />
-30、马肉忌木耳———同食得霍乱<br />
-31、牛肉忌毛姜———同食中毒死亡<br />
-32、羊肉忌梅干菜——同食生心闷<br />
-33、鸡肉忌芥菜———同食伤元气<br />
-34、驴肉忌黄花———同食心痛致命<br />
-35、兔肉忌小白菜——同食易呕吐<br />
-36、海蟹忌大枣———同食易得疟疾<br />
-37、芥菜忌鸭梨———同食发呕<br />
-38、 萝卜水果不利甲状腺；<br />
-39、甲鱼黄鳝与蟹孕妇忌<br />
-40、鸡蛋再吃消炎片相冲；<br />
-41、豆浆营养不宜冲鸡蛋<br />
-42、菠菜豆腐色美实不宜<br />
-43、胡萝卜白萝卜相互冲，<br />
-44、蕃茄黄瓜不能一起食。<br />
-不宜吃的食物 :<br />
-1、发芽、发青的土豆有毒，不能吃。<br />
-2、新鲜的黄花菜（金针菜）有毒，不能吃。<br />
-3、没有炒透的四季豆、扁豆有毒，吃不得。<br />
-4、老鸡头（5年以上鸡头）有大毒，吃不得。<br />
-5、嫩炒猪肝，含有毒素，不宜吃。<br />
-6、皮蛋、爆米花含铅特别多，儿童不宜吃。<br />
-7、烤焦的食物不能吃，吃后易患癌。<br />
-8、烂姜有极毒，能坏死肝细胞，切不可吃。<br />
-9、生豆油含有苯，会破坏造血系统，不可吃。<br />
-10、久煮的水含有亚硝酸盐，吃则易生癌。<br />
-11、太烫食物不能吃，易烫伤消化道引起癌变。<br />
-12、未熟透的豆浆不能吃，吃易中毒。<br />
-13、腌制的食物含有致癌物质，不宜多吃。<br />
-14、烘烤的肉串类、鱼片含致癌物，不宜多吃。<br />
-15、柿子空服易患胃内柿结石，千万不要吃。</p>
 
-        
+
+
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -259,7 +245,7 @@
       <a href="/2012/06/16/e8-80-83-e5-85-ac-e5-8a-a1-e5-91-98-e5-bf-85-e5-a4-87-e7-9a-84800-qa" title="考公务员必备的800 Q/A" rel="bookmark">考公务员必备的800 Q/A</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2012-06-16</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2012-06-16</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
       </li>
@@ -268,9 +254,12 @@
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          1. 世界四大洋中面积最小的是 :(D)太平洋 大西洋 印度洋 北冰洋2. 世界上海拔最高的山峰是哪一座 ?(B)乔戈里峰 珠穆朗玛峰 干城章嘉峰 公格尔山峰3. 下列海洋中哪一个是我国最大的海 ?(A)南海 东海 黄海 渤海4. 按年呑吐量算世界最大的港口是 :(C)纽约港 神户港 鹿特丹港 上海港5. 美国是...
-        
+
+          
+          
+              1. 世界四大洋中面积最小的是 :(D)太平洋 大西洋 印度洋 北冰洋2. 世界上海拔最高的山峰是哪一座 ?(B)乔戈里峰 珠穆朗玛峰 干城章嘉峰 公格尔山峰3. 下列海洋中哪一个是我国最大的海 ?(A)南海 东海 黄海 渤海4. 按年呑吐量算世界最大的港口是 :(C)纽约港 神户港 鹿特丹港 上海港5. 美国是...
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -292,7 +281,7 @@
             
             
                 
-                  <a href="">1</a>
+                  <a href="/">1</a>
                 
             
                 

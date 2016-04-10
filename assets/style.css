@@ -177,7 +177,7 @@ body {
 	font-family: Arial,Helvetica,sans-serif,"宋体","Microsoft YaHei";
 	font-size: 0.875rem;
 	background-color: #eee;
-	background-image: url('../images/bg.jpg');
+	background-image: url('images/bg.jpg');
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
@@ -615,7 +615,7 @@ blockquote cite a {
 }
 
 .entry-content img {
-	background: #ffffff url(images/loading.gif) no-repeat center center
+	background: #ffffff url('images/loading.gif') no-repeat center center
 }
 
 .entry-content>p {
@@ -1147,7 +1147,7 @@ thead tr {
 }
 
 .play-button {
-	background: url(images/iconfont-bofang.png) no-repeat center;
+	background: url('images/iconfont-bofang.png') no-repeat center;
 	height: 38px;
 	width: 38px;
 	position: absolute;
@@ -2025,7 +2025,7 @@ thead tr {
 }
 
 .lbLoading {
-	background: #fff url(images/loading.gif) no-repeat center;
+	background: #fff url("images/loading.gif") no-repeat center;
 	min-width: 100px;
 }
 
@@ -2050,7 +2050,7 @@ thead tr {
 }
 
 #lbPrevLink:hover {
-	background: transparent url(images/prevlabel.gif) no-repeat 0 15%;
+	background: transparent url("images/prevlabel.gif") no-repeat 0 15%;
 }
 
 #lbNextLink {
@@ -2058,7 +2058,7 @@ thead tr {
 }
 
 #lbNextLink:hover {
-	background: transparent url(images/nextlabel.gif) no-repeat 100% 15%;
+	background: transparent url("images/nextlabel.gif") no-repeat 100% 15%;
 }
 
 /*loading*/

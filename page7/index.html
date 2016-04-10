@@ -26,6 +26,20 @@
 </head>
 
 <body class="nav-open">
+  <script type="text/javascript">
+  if(navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i)){
+    document.write('<div id="mobile-nav" class="f12 yahei">');
+    document.write('<ul class="nav">');
+    document.write('    <li class="active">');
+    document.write('        <a href="/">首页</a>');
+    document.write('    </li>');
+    document.write('    <li class="active">');
+    document.write('        <a href="/about/">关于</a>');
+    document.write('    </li>');
+    document.write('</ul>');
+    document.write('</div>');
+  }
+  </script>
   <div id="wrap">
     <div id="preheader">notice_TOP</div>
       <header id="header" class="clearfix">
@@ -33,16 +47,24 @@
           <h1><a href="/">面向大海,心暖花开</a></h1>
           <p class="desc yahei"><span>从明天起,做一个幸福的人, 喂马、劈柴、周游世界。</span></p>
         </div>
-        <nav id="main-nav" class="clearfix yahei">
-    <ul class="nav">
-        <li class="active">
-            <a href="/">首页</a>
-        </li>
-        <li class="active">
-            <a href="/about/">关于</a>
-        </li>
-    </ul>
-</nav>
+        <script type="text/javascript">
+if(navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i)){
+  document.write('<a href="javascript:;" class="open-nav icon-list"><i class="fa fa-bars"></i></a>');
+}
+else
+{
+	document.write('<nav id="main-nav" class="clearfix yahei">');
+    document.write('<ul class="nav">');
+    document.write('    <li class="active">');
+    document.write('        <a href="/">首页</a>');
+    document.write('    </li>');
+    document.write('    <li class="active">');
+    document.write('        <a href="/about/">关于</a>');
+    document.write('    </li>');
+    document.write('</ul>');
+    document.write('</nav>');
+}
+</script>
 
         <div id="announcement">
           <a href="#" class="openpre close" title="Announcement"><i class="fa fa-star"></i></a>
@@ -59,7 +81,7 @@
       <a href="/2014/10/05/1-4-e3-80-80-e8-bf-94-e7-92-9e-e5-bd-92-e7-9c-9f-e7-9a-84-e5-91-bd-e4-bb-a4-e8-a1-8c-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf" title="1.4　返璞归真的命令行 – Linux就是这个范儿" rel="bookmark">1.4　返璞归真的命令行 – Linux就是这个范儿</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2014-10-05</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2014-10-05</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
             <a href="/categories/Linux就是这个范儿">Linux就是这个范儿</a>
@@ -70,8 +92,10 @@
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          <p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
+
+          
+          
+              <p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
 	有一种说法，现代计算机不是靠电力驱动，而是靠&ldquo;鼠标&rdquo;。多少应用程序的界面都是需要移动和点击鼠标来执行的。计算机本来的用意是把人类从反复单调的工作中解放出来，但摆在我们身边的残酷现实是我们每个人每天不得不反复单调地移动和点击鼠标，以确保养家糊口的工作能够顺利正确地完成。</p>
 <p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
 	别叹气，存在另一个世界，那就是命令行，让你暂时远离鼠标。对那些苦哈哈的程序猿来讲，这也许是另一种情调的工作方式。我们突然之间拥有了另一种意想不到的收获，例如我想看看用户目录下的文件大小，然后按升序排列产生个报表。如果用C/C++完成这项工作，至少得用好几十行代码，但是用一句命令行就能完成上面的功能。</p>
@@ -88,7 +112,8 @@
 <p style="text-align: right;">
 	<a href="http://hook.aliapp.com/?p=554" style="color: rgb(51, 51, 51); text-decoration: none; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; line-height: 28px; text-align: right; text-indent: 28px;">Linux就是这个范儿 &ndash; 本书目录&nbsp;</a></p>
 
-        
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -110,7 +135,7 @@
       <a href="/2014/10/05/1-3-4-e3-80-80lxde-e6-9b-b4-e8-bd-bb-ef-bc-8c-e5-90-8c-e6-a0-b7-e7-b2-be-e6-82-8d-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf" title="1.3.4　LXDE——更轻，同样精悍 – Linux就是这个范儿" rel="bookmark">1.3.4　LXDE——更轻，同样精悍 – Linux就是这个范儿</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2014-10-05</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2014-10-05</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
             <a href="/categories/Linux就是这个范儿">Linux就是这个范儿</a>
@@ -121,8 +146,10 @@
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          <p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
+
+          
+          
+              <p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
 	如果对小巧精悍的桌面环境很有爱的话，那么LXDE则是另外一个十分值得推荐的选择。如果你是一个民族主义者，那么一定会十分喜爱LXDE，因为它完全是我们中国人开发的，虽然他们都是来自台湾省（这是我国领土不可分割的部分）。</p>
 <p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
 	LXDE相对于前面三个桌面环境会显得相当地年轻。它在2006年还只是一个文件管理器，后来才慢慢发展成为一个功能齐全的桌面环境。虽然LXDE是2006年的东西，但是它对<a class="keylink" href="http://www.2cto.com/os/" style="color: rgb(51, 51, 51); text-decoration: none;" target="_blank">系统</a>的要求却低得惊人，甚至在1999年的老电脑上不用3D加速也能流畅地运行。所以，在上网本、MID等低功耗移动电脑上拥有比较广泛的应用。这也十分对得起它的名字&mdash;&mdash;Lightweight X11 Desktop Environment，轻量级X11桌面环境，简称LXDE。</p>
@@ -133,7 +160,8 @@
 <p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px; text-align: right;">
 	<a href="http://hook.aliapp.com/?p=554" style="color: rgb(51, 51, 51); text-decoration: none; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(51, 51, 51); font-size: 14px; text-align: right; background-color: rgb(255, 255, 255); font-family: 宋体; line-height: 28px; text-indent: 28px;">Linux就是这个范儿 &ndash; 本书目录&nbsp;</a></p>
 
-        
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -155,7 +183,7 @@
       <a href="/2014/10/05/1-3-3-e3-80-80xfce-e8-bd-bb-e9-87-8f-e3-80-81-e7-ae-80-e5-8d-95-e3-80-81-e9-ab-98-e6-95-88-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf" title="1.3.3　XFCE——轻量、简单、高效 – Linux就是这个范儿" rel="bookmark">1.3.3　XFCE——轻量、简单、高效 – Linux就是这个范儿</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2014-10-05</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2014-10-05</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
             <a href="/categories/Linux就是这个范儿">Linux就是这个范儿</a>
@@ -166,8 +194,10 @@
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          <p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
+
+          
+          
+              <p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
 	KDE和GNOME虽然雍容华贵，但是也恰恰就有些太过&ldquo;臃容&rdquo;，对于喜欢&ldquo;轻淡&rdquo;口味或只有&ldquo;小马力战车&rdquo;的屌丝们，XFCE是一个相当不错的选择。</p>
 <p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
 	XFCE是一个轻量级的Linux或类Unix的桌面<a class="keylink" href="http://www.2cto.com/os/" style="color: rgb(51, 51, 51); text-decoration: none;" target="_blank">系统</a>。XFCE的设计目的就是：快速加载并用来执行程序，且占用<a class="keylink" href="http://www.2cto.com/os/" style="color: rgb(51, 51, 51); text-decoration: none;" target="_blank">系统</a>资源少。从实际的使用效果上看，XFCE也的确做到了这一点。也正是因为如此，作为一个拥有很长历史（其源自1996年）的桌面环境，能够在很多U盘<a class="keylink" href="http://www.2cto.com/os/linux/" style="color: rgb(51, 51, 51); text-decoration: none;" target="_blank">Linux</a>中见到它的身影。</p>
@@ -180,7 +210,8 @@
 	<br />
 	<a href="http://hook.aliapp.com/?p=554" style="color: rgb(51, 51, 51); text-decoration: none; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; line-height: 28px; text-align: right; text-indent: 28px;">Linux就是这个范儿 &ndash; 本书目录&nbsp;</a></p>
 
-        
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -202,7 +233,7 @@
       <a href="/2014/10/04/1-3-2-e3-80-80gnome-e4-b8-8d-e5-8f-af-e7-a3-a8-e7-81-ad-e7-9a-84-e7-bb-8f-e5-85-b8-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf" title="1.3.2　GNOME不可磨灭的经典 – Linux就是这个范儿" rel="bookmark">1.3.2　GNOME不可磨灭的经典 – Linux就是这个范儿</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2014-10-04</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2014-10-04</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
             <a href="/categories/Linux就是这个范儿">Linux就是这个范儿</a>
@@ -213,8 +244,10 @@
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          <p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
+
+          
+          
+              <p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
 	在KDE受版权困扰和没有新版可用的时候，陪伴在人们身边的是GNOME桌面环境。虽然GNOME3使得GNOME从能用变得不能用了，但是GNOME2则依然是不可磨灭的经典。</p>
 <p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
 	GNOME是GNU 网络对象模型环境&mdash;&mdash;The GNU Network Object Model Environment的英文缩写。它是GNU计划的一部分，开放<a class="keylink" href="http://www.2cto.com/ym" style="color: rgb(51, 51, 51); text-decoration: none;" target="_blank">源码</a>运动的重要组成部分。目标是基于自由软件，为Unix或者类Unix操作系统构造一个功能完善、操作简单以及界面友好的桌面环境，它是GNU计划的正式桌面。</p>
@@ -233,7 +266,8 @@
 <p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px; text-align: right;">
 	<a href="http://hook.aliapp.com/?p=554" style="color: rgb(51, 51, 51); text-decoration: none; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(51, 51, 51); font-size: 14px; text-align: right; font-family: 宋体; line-height: 28px; text-indent: 28px;">Linux就是这个范儿 &ndash; 本书目录&nbsp;</a></p>
 
-        
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -255,7 +289,7 @@
       <a href="/2014/10/03/1-3-1-e3-80-80kde-e5-88-9d-e5-ad-a6-e8-80-85-e7-9a-84-e9-a6-96-e9-80-89-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf" title="1.3.1　KDE初学者的首选 – Linux就是这个范儿" rel="bookmark">1.3.1　KDE初学者的首选 – Linux就是这个范儿</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 2014-10-03</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2014-10-03</li>
       <li><i class="fa fa-pencil-square-o"></i>
           
             <a href="/categories/Linux就是这个范儿">Linux就是这个范儿</a>
@@ -266,8 +300,10 @@
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-        
-          <p>
+
+          
+          
+              <p>
 	KDE是由德国人Matthias Ettrich于1996年就读于图宾根大学时开始的一个计划。当时的Unix桌面没有一个应用程序的外观、感受或工作方式与其他程序一样。于是Matthias Ettrich就建议不仅是创建一套应用程序，而是要创建一个桌面环境，能让用户拥有相同的外观、感受和工作方式，而且这个桌面应该是非常容易使用的。他的这个想法得到了很多人的支持，从此KDE计划就诞生了。</p>
 <p>
 	可能有人会疑惑，KDE是给Unix的，似乎跟Linux没有什么关系，为什么这本书要介绍它呢？其实不单单KDE是这样，剩下的三个桌面环境也是这样。甚至在这个星球上完全针对Linux编写的软件也是并不多的，那些在Linux下能够获得的软件大多不是针对Linux开发的。它们是针对Unix系统的，而Linux属于类Unix系统，所以就毫无歉意地坐享了这些成果。这就是Linux的优势，也是大家学习Linux的优势。学会了Linux，几乎就等同于学会了Unix或类Unix系统，它们在这个星球的应用范围就从来没有被Windows超越过。本书的内容也是如此，只有少数章节是专门针对Linux特性所特别设置的，大多数知识都是通用且极具实用价值的。好了，闲话不多说，我们继续介绍KDE。</p>
@@ -306,7 +342,8 @@
 	</p>
 </div>
 
-        
+          
+
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -328,7 +365,7 @@
             
             
                 
-                  <a href="">1</a>
+                  <a href="/">1</a>
                 
             
                 
