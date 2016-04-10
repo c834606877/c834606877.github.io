@@ -150,9 +150,31 @@ function ajaxloadPage(url, push, getData){
 						prettyPrint();
 
 						(function () { // add hint
-							DISQUSWIDGETS.getCount({reset: true});
-							DISQUS.reset();
+					        var d = document, s = d.createElement('script');
+
+					        s.src = 'https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js';
+
+					        s.setAttribute('data-timestamp', +new Date());
+					        (d.head || d.body).appendChild(s);
 					    })();
+					    
+					        (function () { // DON'T EDIT BELOW THIS LINE
+						        var d = document, s = d.createElement('script');
+
+						        s.src = '//iziy.disqus.com/embed.js';
+
+						        s.setAttribute('data-timestamp', +new Date());
+						        (d.head || d.body).appendChild(s);
+						    })();
+						    (function () { // DON'T EDIT BELOW THIS LINE
+						        var d = document, s = d.createElement('script');
+
+						        s.src = '//iziy.disqus.com/count.js';
+
+						        s.setAttribute('data-timestamp', +new Date());
+						        (d.head || d.body).appendChild(s);
+						    })();
+						
 												
 						jQuery("img").unveil();
 						
