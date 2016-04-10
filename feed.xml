@@ -3,10 +3,10 @@
   <channel>
     <title>面向大海,心暖花开</title>
     <description>从明天起,做一个幸福的人, 喂马、劈柴、周游世界。</description>
-    <link>/</link>
-    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 10 Apr 2016 15:35:28 +0800</pubDate>
-    <lastBuildDate>Sun, 10 Apr 2016 15:35:28 +0800</lastBuildDate>
+    <link>http://mypre.cn/</link>
+    <atom:link href="http://mypre.cn/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sun, 10 Apr 2016 15:41:19 +0800</pubDate>
+    <lastBuildDate>Sun, 10 Apr 2016 15:41:19 +0800</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
     
       <item>
@@ -75,8 +75,8 @@
 &lt;/div&gt;
 </description>
         <pubDate>Sun, 20 Mar 2016 20:38:26 +0800</pubDate>
-        <link>/2016/03/20/bash-e5-bf-ab-e6-8d-b7-e9-94-ae-e8-ae-b0-e5-bd-95-e5-a4-87-e5-bf-98</link>
-        <guid isPermaLink="true">/2016/03/20/bash-e5-bf-ab-e6-8d-b7-e9-94-ae-e8-ae-b0-e5-bd-95-e5-a4-87-e5-bf-98</guid>
+        <link>http://mypre.cn/2016/03/20/bash-e5-bf-ab-e6-8d-b7-e9-94-ae-e8-ae-b0-e5-bd-95-e5-a4-87-e5-bf-98</link>
+        <guid isPermaLink="true">http://mypre.cn/2016/03/20/bash-e5-bf-ab-e6-8d-b7-e9-94-ae-e8-ae-b0-e5-bd-95-e5-a4-87-e5-bf-98</guid>
         
         <category>标签1</category>
         
@@ -90,8 +90,8 @@
         <description>&lt;p&gt;[xiami]24015[/xiami]&lt;/p&gt;
 </description>
         <pubDate>Fri, 19 Feb 2016 22:42:55 +0800</pubDate>
-        <link>/2016/02/19/e5-8c-b9-e8-90-a8-e8-b0-83-e7-94-a8-e6-b1-89-e5-a0-a1-e5-b9-b6-e4-b8-94-e4-bc-a0-e5-85-a5-e4-ba-86-e5-8c-85-e5-ad-90</link>
-        <guid isPermaLink="true">/2016/02/19/e5-8c-b9-e8-90-a8-e8-b0-83-e7-94-a8-e6-b1-89-e5-a0-a1-e5-b9-b6-e4-b8-94-e4-bc-a0-e5-85-a5-e4-ba-86-e5-8c-85-e5-ad-90</guid>
+        <link>http://mypre.cn/2016/02/19/e5-8c-b9-e8-90-a8-e8-b0-83-e7-94-a8-e6-b1-89-e5-a0-a1-e5-b9-b6-e4-b8-94-e4-bc-a0-e5-85-a5-e4-ba-86-e5-8c-85-e5-ad-90</link>
+        <guid isPermaLink="true">http://mypre.cn/2016/02/19/e5-8c-b9-e8-90-a8-e8-b0-83-e7-94-a8-e6-b1-89-e5-a0-a1-e5-b9-b6-e4-b8-94-e4-bc-a0-e5-85-a5-e4-ba-86-e5-8c-85-e5-ad-90</guid>
         
         
         <category>心情日记</category>
@@ -105,8 +105,8 @@
 主要原因是 在中文中 夹杂部分 日韩字体导致，&lt;/pre&gt;
 </description>
         <pubDate>Sun, 07 Feb 2016 15:31:58 +0800</pubDate>
-        <link>/2016/02/07/fedora-e5-ae-89-e8-a3-85-e5-90-8e-e6-98-be-e7-a4-ba-e4-b8-ad-e6-96-87-e5-ad-97-e4-bd-93-e5-a4-a7-e5-b0-8f-e4-b8-8d-e4-b8-80-e9-ab-98-e4-bd-8e-e4-b8-8d-e9-bd-90-e8-a7-a3-e5-86-b3-e6-96-b9</link>
-        <guid isPermaLink="true">/2016/02/07/fedora-e5-ae-89-e8-a3-85-e5-90-8e-e6-98-be-e7-a4-ba-e4-b8-ad-e6-96-87-e5-ad-97-e4-bd-93-e5-a4-a7-e5-b0-8f-e4-b8-8d-e4-b8-80-e9-ab-98-e4-bd-8e-e4-b8-8d-e9-bd-90-e8-a7-a3-e5-86-b3-e6-96-b9</guid>
+        <link>http://mypre.cn/2016/02/07/fedora-e5-ae-89-e8-a3-85-e5-90-8e-e6-98-be-e7-a4-ba-e4-b8-ad-e6-96-87-e5-ad-97-e4-bd-93-e5-a4-a7-e5-b0-8f-e4-b8-8d-e4-b8-80-e9-ab-98-e4-bd-8e-e4-b8-8d-e9-bd-90-e8-a7-a3-e5-86-b3-e6-96-b9</link>
+        <guid isPermaLink="true">http://mypre.cn/2016/02/07/fedora-e5-ae-89-e8-a3-85-e5-90-8e-e6-98-be-e7-a4-ba-e4-b8-ad-e6-96-87-e5-ad-97-e4-bd-93-e5-a4-a7-e5-b0-8f-e4-b8-8d-e4-b8-80-e9-ab-98-e4-bd-8e-e4-b8-8d-e9-bd-90-e8-a7-a3-e5-86-b3-e6-96-b9</guid>
         
         
         <category>Linux系统</category>
@@ -123,8 +123,8 @@
 &lt;p&gt;重启。&lt;/p&gt;
 </description>
         <pubDate>Sat, 26 Dec 2015 16:34:47 +0800</pubDate>
-        <link>/2015/12/26/win7-e4-b8-8b-e4-bf-ae-e6-94-b9-e7-9b-98-e7-ac-a6-e7-9a-84-e6-96-b9-e6-b3-95</link>
-        <guid isPermaLink="true">/2015/12/26/win7-e4-b8-8b-e4-bf-ae-e6-94-b9-e7-9b-98-e7-ac-a6-e7-9a-84-e6-96-b9-e6-b3-95</guid>
+        <link>http://mypre.cn/2015/12/26/win7-e4-b8-8b-e4-bf-ae-e6-94-b9-e7-9b-98-e7-ac-a6-e7-9a-84-e6-96-b9-e6-b3-95</link>
+        <guid isPermaLink="true">http://mypre.cn/2015/12/26/win7-e4-b8-8b-e4-bf-ae-e6-94-b9-e7-9b-98-e7-ac-a6-e7-9a-84-e6-96-b9-e6-b3-95</guid>
         
         
         <category>应用技巧</category>
@@ -155,8 +155,8 @@
 &lt;p&gt;&lt;img src=&quot;http://imglf.nosdn.127.net/img/Z3ZvNUFuRWljSU5CVjVWV2w3YnVBaVp2YnRvcFdFbHVva3B4QU01RWhKM3hiZEc4ZEs1QmhnPT0.jpg?imageView&amp;amp;thumbnail=2000y1500&amp;amp;type=jpg&amp;amp;quality=96&amp;amp;stripmeta=0&amp;amp;type=jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 </description>
         <pubDate>Sat, 26 Dec 2015 16:30:55 +0800</pubDate>
-        <link>/2015/12/26/win7-e5-8a-a0-e5-9b-ba-e6-80-81-ef-bc-8c-e6-97-a0-e9-99-a8-e8-bf-81-e7-a7-bb-e5-90-8c-e6-97-b6-e6-94-b9-e4-b8-baefi-e5-90-af-e5-8a-a8</link>
-        <guid isPermaLink="true">/2015/12/26/win7-e5-8a-a0-e5-9b-ba-e6-80-81-ef-bc-8c-e6-97-a0-e9-99-a8-e8-bf-81-e7-a7-bb-e5-90-8c-e6-97-b6-e6-94-b9-e4-b8-baefi-e5-90-af-e5-8a-a8</guid>
+        <link>http://mypre.cn/2015/12/26/win7-e5-8a-a0-e5-9b-ba-e6-80-81-ef-bc-8c-e6-97-a0-e9-99-a8-e8-bf-81-e7-a7-bb-e5-90-8c-e6-97-b6-e6-94-b9-e4-b8-baefi-e5-90-af-e5-8a-a8</link>
+        <guid isPermaLink="true">http://mypre.cn/2015/12/26/win7-e5-8a-a0-e5-9b-ba-e6-80-81-ef-bc-8c-e6-97-a0-e9-99-a8-e8-bf-81-e7-a7-bb-e5-90-8c-e6-97-b6-e6-94-b9-e4-b8-baefi-e5-90-af-e5-8a-a8</guid>
         
         
         <category>Linux系统</category>
@@ -204,8 +204,8 @@
 &lt;p&gt;&lt;span style=&quot;font-size: medium;&quot;&gt;关机,在多用户方式下(Runlevel 3)不建议使用.&lt;/span&gt;&lt;/p&gt;
 </description>
         <pubDate>Mon, 21 Dec 2015 10:11:09 +0800</pubDate>
-        <link>/2015/12/21/e8-bd-ac-linux-e4-b8-8b-e5-85-b3-e6-9c-ba-e5-91-bd-e4-bb-a4-e7-9a-84-e5-8c-ba-e5-88-ab-ef-bc-88haltpoweroffrebootshutdowninit-ef-bc-89</link>
-        <guid isPermaLink="true">/2015/12/21/e8-bd-ac-linux-e4-b8-8b-e5-85-b3-e6-9c-ba-e5-91-bd-e4-bb-a4-e7-9a-84-e5-8c-ba-e5-88-ab-ef-bc-88haltpoweroffrebootshutdowninit-ef-bc-89</guid>
+        <link>http://mypre.cn/2015/12/21/e8-bd-ac-linux-e4-b8-8b-e5-85-b3-e6-9c-ba-e5-91-bd-e4-bb-a4-e7-9a-84-e5-8c-ba-e5-88-ab-ef-bc-88haltpoweroffrebootshutdowninit-ef-bc-89</link>
+        <guid isPermaLink="true">http://mypre.cn/2015/12/21/e8-bd-ac-linux-e4-b8-8b-e5-85-b3-e6-9c-ba-e5-91-bd-e4-bb-a4-e7-9a-84-e5-8c-ba-e5-88-ab-ef-bc-88haltpoweroffrebootshutdowninit-ef-bc-89</guid>
         
         
         <category>Linux系统</category>
@@ -219,8 +219,8 @@
 sudo dnf install gstreamer1-plugins-bad-freeworld&lt;/pre&gt;
 </description>
         <pubDate>Sun, 06 Dec 2015 17:52:38 +0800</pubDate>
-        <link>/2015/12/06/fedora-e5-b8-b8-e8-a7-81-e9-9f-b3-e8-a7-86-e9-a2-91-e8-a7-a3-e7-a0-81-e5-99-a8</link>
-        <guid isPermaLink="true">/2015/12/06/fedora-e5-b8-b8-e8-a7-81-e9-9f-b3-e8-a7-86-e9-a2-91-e8-a7-a3-e7-a0-81-e5-99-a8</guid>
+        <link>http://mypre.cn/2015/12/06/fedora-e5-b8-b8-e8-a7-81-e9-9f-b3-e8-a7-86-e9-a2-91-e8-a7-a3-e7-a0-81-e5-99-a8</link>
+        <guid isPermaLink="true">http://mypre.cn/2015/12/06/fedora-e5-b8-b8-e8-a7-81-e9-9f-b3-e8-a7-86-e9-a2-91-e8-a7-a3-e7-a0-81-e5-99-a8</guid>
         
         
         <category>Linux系统</category>
@@ -256,8 +256,8 @@ DNS无异常&lt;br /&gt;
 于此，无线路由器瓶颈去除，网络恢复原有20M水平。&lt;/p&gt;
 </description>
         <pubDate>Sat, 05 Dec 2015 11:09:26 +0800</pubDate>
-        <link>/2015/12/05/ros-pppoe-e6-8b-a8-e5-8f-b7-e4-b8-8a-e7-bd-91-e5-8d-95-e5-8f-a3-nat-e8-bd-ac-e5-8f-91-ef-bc-8b-ip-e4-bc-aa-e8-a3-85</link>
-        <guid isPermaLink="true">/2015/12/05/ros-pppoe-e6-8b-a8-e5-8f-b7-e4-b8-8a-e7-bd-91-e5-8d-95-e5-8f-a3-nat-e8-bd-ac-e5-8f-91-ef-bc-8b-ip-e4-bc-aa-e8-a3-85</guid>
+        <link>http://mypre.cn/2015/12/05/ros-pppoe-e6-8b-a8-e5-8f-b7-e4-b8-8a-e7-bd-91-e5-8d-95-e5-8f-a3-nat-e8-bd-ac-e5-8f-91-ef-bc-8b-ip-e4-bc-aa-e8-a3-85</link>
+        <guid isPermaLink="true">http://mypre.cn/2015/12/05/ros-pppoe-e6-8b-a8-e5-8f-b7-e4-b8-8a-e7-bd-91-e5-8d-95-e5-8f-a3-nat-e8-bd-ac-e5-8f-91-ef-bc-8b-ip-e4-bc-aa-e8-a3-85</guid>
         
         
         <category>网络应用</category>
@@ -275,8 +275,8 @@ DNS无异常&lt;br /&gt;
 &lt;pre&gt;sudo sh -c &quot;cat hosts &gt;&gt; /etc/hosts&quot;&lt;/pre&gt;
 </description>
         <pubDate>Sun, 29 Nov 2015 16:21:03 +0800</pubDate>
-        <link>/2015/11/29/linux-e8-be-93-e5-87-ba-e9-87-8d-e5-ae-9a-e5-90-91-e9-97-ae-e9-a2-98</link>
-        <guid isPermaLink="true">/2015/11/29/linux-e8-be-93-e5-87-ba-e9-87-8d-e5-ae-9a-e5-90-91-e9-97-ae-e9-a2-98</guid>
+        <link>http://mypre.cn/2015/11/29/linux-e8-be-93-e5-87-ba-e9-87-8d-e5-ae-9a-e5-90-91-e9-97-ae-e9-a2-98</link>
+        <guid isPermaLink="true">http://mypre.cn/2015/11/29/linux-e8-be-93-e5-87-ba-e9-87-8d-e5-ae-9a-e5-90-91-e9-97-ae-e9-a2-98</guid>
         
         
         <category>Linux系统</category>
@@ -300,8 +300,8 @@ done&lt;/pre&gt;
 &lt;p&gt;显示了所有参数&lt;/p&gt;
 </description>
         <pubDate>Sun, 29 Nov 2015 10:12:32 +0800</pubDate>
-        <link>/2015/11/29/bash-e5-90-af-e5-8a-a8-e5-8f-82-e6-95-b0-e5-a4-8d-e4-b9-a0</link>
-        <guid isPermaLink="true">/2015/11/29/bash-e5-90-af-e5-8a-a8-e5-8f-82-e6-95-b0-e5-a4-8d-e4-b9-a0</guid>
+        <link>http://mypre.cn/2015/11/29/bash-e5-90-af-e5-8a-a8-e5-8f-82-e6-95-b0-e5-a4-8d-e4-b9-a0</link>
+        <guid isPermaLink="true">http://mypre.cn/2015/11/29/bash-e5-90-af-e5-8a-a8-e5-8f-82-e6-95-b0-e5-a4-8d-e4-b9-a0</guid>
         
         
         <category>Linux系统</category>
