@@ -166,14 +166,7 @@ function ajaxloadPage(url, push, getData){
 						        s.setAttribute('data-timestamp', +new Date());
 						        (d.head || d.body).appendChild(s);
 						    })();
-						    (function () { // DON'T EDIT BELOW THIS LINE
-						        var d = document, s = d.createElement('script');
-
-						        s.src = '//iziy.disqus.com/count.js';
-
-						        s.setAttribute('data-timestamp', +new Date());
-						        (d.head || d.body).appendChild(s);
-						    })();
+						    DISQUSWIDGETS.getCount({reset: true});
 						
 												
 						jQuery("img").unveil();

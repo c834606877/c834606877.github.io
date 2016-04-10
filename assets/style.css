@@ -593,14 +593,20 @@ blockquote cite a {
 	margin-right: 1.2rem;
 }
 
+.entry-header .entry-meta li .fa-comments-o,
+.entry-header .entry-meta li .fa-comments-o + a{
+	color: #47C2DC;
+	border-bottom: none;
+}
+
 .entry-header .entry-meta li a {
-	color: #BBB;
+	color: #bbb;
 	border-bottom: none;
 }
 
 .entry-header .entry-meta li a:hover {
-	color: #ccc;
-	border-bottom: 1px dotted #bbb;
+	color: #47C2DC;
+	border-bottom: 1px solid #47C2DC;
 }
 
 .entry-content {
