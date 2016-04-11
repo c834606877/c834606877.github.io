@@ -17,20 +17,22 @@ jQuery.fn.postLike = function() {
 	if (jQuery(this).hasClass('done')) {
 		return false;
 	} else {
+		var rateHolder = jQuery(this).children('.love-count');
+		jQuery(rateHolder).html(jQuery("#busuanzi_value_page_pv").html());
 		jQuery(this).addClass('done');
-		var id = jQuery(this).data("id"),
-		action = jQuery(this).data('action'),
-		rateHolder = jQuery(this).children('.love-count');
-		var ajax_data = {
-			action: "mzw_like",
-			um_id: id,
-			um_action: action
-		};
-		jQuery.post(ajax.ajax_url, ajax_data,
-		function(data) {
-			jQuery(rateHolder).html(data);
-		});
-		return false;
+		// var id = jQuery(this).data("id"),
+		// action = jQuery(this).data('action'),
+		// rateHolder = jQuery(this).children('.love-count');
+		// var ajax_data = {
+		// 	action: "mzw_like",
+		// 	um_id: id,
+		// 	um_action: action
+		// };
+		// jQuery.post(ajax.ajax_url, ajax_data,
+		// function(data) {
+		// 	jQuery(rateHolder).html(data);
+		// });
+		// return false;
 	}
 };
 jQuery(document).on("click", ".favorite",function(){jQuery(this).postLike()});
@@ -376,23 +378,42 @@ jQuery("#gotop").click(function() {
 });
 
 (function () {
-	//use strict
+	//use strict position: relative;
+	// var rollbox = $('#sidebar .widget'), rolllen = rollbox.length;
+	// if( 0<asr_1<=rolllen && 0<asr_2<=rolllen ){
+	// 	$(window).scroll(function(){
+	// 		var roll = document.documentElement.scrollTop+document.body.scrollTop;
+	// 		if( roll>rollbox.eq(rolllen-1).offset().top+rollbox.eq(rolllen-1).height() ){
+	// 			if( $('.widgetRoller').length==0 ){
+	// 				rollbox.parent().append( '<aside class="widgetRoller"></aside>' );
+	// 				rollbox.eq(asr_1-1).clone().appendTo('.widgetRoller');
+	// 				if( asr_1!==asr_2 )
+	// 					rollbox.eq(asr_2-1).clone().appendTo('.widgetRoller')
+	// 				$('.widgetRoller').css({position:'fixed',top:10});
+	// 			}else{
+	// 				$('.widgetRoller').fadeIn(300);
+	// 			}
+	// 		}else{
+	// 			$('.widgetRoller').hide();
+	// 		}
+	// 	})
+	// };
 	var rollbox = $('#sidebar .widget'), rolllen = rollbox.length;
 	if( 0<asr_1<=rolllen && 0<asr_2<=rolllen ){
 		$(window).scroll(function(){
 			var roll = document.documentElement.scrollTop+document.body.scrollTop;
+
 			if( roll>rollbox.eq(rolllen-1).offset().top+rollbox.eq(rolllen-1).height() ){
-				if( $('.widgetRoller').length==0 ){
-					rollbox.parent().append( '<aside class="widgetRoller"></aside>' );
-					rollbox.eq(asr_1-1).clone().appendTo('.widgetRoller');
+				rollbox.eq(asr_1-1).width(rollbox.eq(asr_1-1).width());
+					rollbox.eq(asr_1-1).css({position:'fixed',top:10}).addClass("widgetRoller");
 					if( asr_1!==asr_2 )
-						rollbox.eq(asr_2-1).clone().appendTo('.widgetRoller')
-					$('.widgetRoller').css({position:'fixed',top:10});
-				}else{
-					$('.widgetRoller').fadeIn(300);
-				}
+						rollbox.eq(asr_2-1).width(rollbox.eq(asr_2-1).width());
+						rollbox.eq(asr_2-1).css({position:'fixed',top:20+rollbox.eq(asr_1-1).height()}).addClass("widgetRoller");
+
 			}else{
-				$('.widgetRoller').hide();
+				rollbox.eq(asr_1-1).css({position:'relative', top:0}).removeClass('widgetRoller');
+				if( asr_1!==asr_2 )
+					rollbox.eq(asr_2-1).css({position:'relative',top:0}).removeClass('widgetRoller');
 			}
 		})
 	};

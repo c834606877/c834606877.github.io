@@ -5,9 +5,39 @@
     <description>这里是蓝冰的个人博客，记录着蓝冰的生活点滴.</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 11 Apr 2016 09:35:07 +0800</pubDate>
-    <lastBuildDate>Mon, 11 Apr 2016 09:35:07 +0800</lastBuildDate>
+    <pubDate>Mon, 11 Apr 2016 22:18:57 +0800</pubDate>
+    <lastBuildDate>Mon, 11 Apr 2016 22:18:57 +0800</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
+    
+      <item>
+        <title>Move To My New &#39;Stitac&#39; Blog and New Domain MyPre</title>
+        <description>&lt;p&gt;博客优化的还不错了，增加了一些页面，音乐专辑，相册专辑，&lt;/p&gt;
+
+&lt;p&gt;这些功能一直想在Wordpress 上实现，但确一直没有实现&lt;/p&gt;
+
+&lt;p&gt;许是从来没有这么专注的去学一些东西吧，&lt;/p&gt;
+
+&lt;p&gt;也许 Wordpress 提供的各种HOOK及 函数 太多，太复杂了，远没有 Jekyll 来得这么 简单&lt;/p&gt;
+
+&lt;p&gt;yaml ＋ liquid 语法，与Jinja2 大同小异，甚至不需要写函数，几个模板，和 简单的输出处理逻辑就搞定了，&lt;/p&gt;
+
+&lt;p&gt;若是 有一个强大的 flask 作为 引擎 再配上Jinja 语法，这也决不会比Wordpress差吧～&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 11 Apr 2016 00:00:00 +0800</pubDate>
+        <link>/2016/04/11/upgrade-my-blog-with-jekyll</link>
+        <guid isPermaLink="true">/2016/04/11/upgrade-my-blog-with-jekyll</guid>
+        
+        <category>jekyll</category>
+        
+        <category>MyPress</category>
+        
+        <category>Mypre.cn</category>
+        
+        
+        <category>本博动态</category>
+        
+      </item>
     
       <item>
         <title>TEST Gallery</title>
@@ -65,7 +95,6 @@
 对 提取 img 标签 如下：&lt;/p&gt;
 
 &lt;pre&gt;
-
                 {% assign images = content | split:&quot;&amp;lt;img &quot; %}
                 {% for image in images %}
                     {% assign html = image | split:&quot;&amp;gt;&quot; | first %}
@@ -73,11 +102,10 @@
                     {% for tag in tags %}
                       {% if tag contains &#39;src=&quot;&#39; or tag contains &quot;src=&#39;&quot; %}
                           {% assign src = tag | split: &#39;&quot;&#39; | last%}
-                        &lt;li data-thumb=&quot;{{src}}&quot;&gt;&lt;img src=&quot;{{src}}&quot; title=&quot;{{page.title| strip_newlines}}&quot; alt=&quot;{{page.title| strip_newlines}}&quot; /&gt;&lt;/li&gt;
+                          &amp;lt;li data-thumb=&quot;{{src}}&quot;&amp;gt;&amp;lt;img src=&quot;{{src}}&quot; title=&quot;{{page.title| strip_newlines}}&quot; alt=&quot;{{page.title| strip_newlines}}&quot;/&amp;gt;
                       {% endif %}
                     {% endfor %}
                 {% endfor %}
-
 &lt;/pre&gt;
 
 &lt;p&gt;取出 img 标签 里边的 属性组 对src 属性 按 ‘“’ 分割， 
@@ -309,43 +337,6 @@ sudo dnf install gstreamer1-plugins-bad-freeworld&lt;/pre&gt;
         
         
         <category>Linux系统</category>
-        
-      </item>
-    
-      <item>
-        <title>Ros PPPoe 拨号上网 单口 Nat 转发 ＋ IP伪装</title>
-        <description>&lt;p&gt;工作室网路由于使用二楼机房供教学使用的网络，一直受到与教学时段同步的限制，临近周末‘思诚杯’比赛，可能需要网络，所以改用PPPoe 拨号上网，&lt;br /&gt;
-原使用Ros ＋ 无线路由做交换&lt;br /&gt;
-原端口，被保安室 借用 需沟通，&lt;/p&gt;
-&lt;p&gt;起先，想到PPPoe拨号 设置Ros 路由器，设置拨号一时可能解决不了，直接用 无线路由 做转发，&lt;br /&gt;
-发现性能瓶颈明显，原来20m的带宽减少到了2m不到，估改用Ros 做 转发&lt;/p&gt;
-&lt;p&gt;将保安室网线 网络中心网口 Ros 全接 无线路由器 交换口上&lt;/p&gt;
-&lt;p&gt;禁用无线路由器DHCP服务，将其完全做为一个 交换设备&lt;br /&gt;
-Ros 设置 PPPoe Client 增加默认路由 和用户Dns&lt;/p&gt;
-&lt;p&gt;设置 DHCP Server 增加一个DHCP池 设置好 Ros IP 网关为网关IP 172.16.0.0 网段&lt;/p&gt;
-&lt;p&gt;&lt;img class=&quot;aligncenter&quot; src=&quot;http://imglf.nosdn.127.net/img/Z3ZvNUFuRWljSVBlRFRNTWREZmVuMWZ0dzFoMGoycHpjTGkyZ1FBSEVKUm9DMVVKaWFLWERBPT0.png?imageView&amp;amp;thumbnail=1680x0&amp;amp;quality=96&amp;amp;stripmeta=0&amp;amp;type=jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
-设置 Nat ip伪装&lt;br /&gt;
-&lt;code&gt;Ip Firewall nat&lt;/code&gt;&lt;br /&gt;
-增加一条 chain：srcnat 基于源 的Nat action：masquerade&lt;/p&gt;
-&lt;p&gt;&lt;img class=&quot;aligncenter&quot; src=&quot;http://imglf0.nosdn.127.net/img/Z3ZvNUFuRWljSVBlRFRNTWREZmVuNnhRQ3M1NnV3ZHRKZE1laHlxc0g5VUtNN2lFMkQvTkh3PT0.png?imageView&amp;amp;thumbnail=1680x0&amp;amp;quality=96&amp;amp;stripmeta=0&amp;amp;type=jpg&quot; alt=&quot;&quot; width=&quot;1465&quot; height=&quot;509&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
-&lt;p&gt;通过无线设备上网可自动获取到 IP和Ros网关&lt;/p&gt;
-&lt;p&gt;可以上QQ，百度，但发现 其它大部分网页无法正常访问，&lt;br /&gt;
-DNS无异常&lt;br /&gt;
-此现象与电子楼机房故障一样， 认为可能学校 网络中心，对包过滤做了手脚，&lt;br /&gt;
-后想来，无线路由器并无此问题，难道无线路由器，对Nat 数据包做加密处理？&lt;/p&gt;
-&lt;p&gt;于情于理，网络中心既然学号帐号都开放了，应该没理由会做Nat过滤，Nat伪装之后的包应该是没法检测出来的，问题还是出在Ros本地&lt;br /&gt;
-于是在&lt;code&gt;Ros ip firewall filter&lt;/code&gt; 发现一条规则，只能接收数据量 及 速度 太少，却又有走动，原因 可能在此，将其禁用，&lt;/p&gt;
-&lt;p&gt;&lt;img class=&quot;aligncenter&quot; src=&quot;http://imglf.nosdn.127.net/img/Z3ZvNUFuRWljSVBlRFRNTWREZmVuNW9jek9Fek96Nlg0S1VKK3FFZFpBRVk4N0gzUldrVUNBPT0.png?imageView&amp;amp;thumbnail=1680x0&amp;amp;quality=96&amp;amp;stripmeta=0&amp;amp;type=jpg&quot; alt=&quot;&quot; width=&quot;1215&quot; height=&quot;605&quot; /&gt;&lt;br /&gt;
-果不其然，网络访问正常。&lt;br /&gt;
-于此，无线路由器瓶颈去除，网络恢复原有20M水平。&lt;/p&gt;
-</description>
-        <pubDate>Sat, 05 Dec 2015 11:09:26 +0800</pubDate>
-        <link>/2015/12/05/ros-pppoe-e6-8b-a8-e5-8f-b7-e4-b8-8a-e7-bd-91-e5-8d-95-e5-8f-a3-nat-e8-bd-ac-e5-8f-91-ef-bc-8b-ip-e4-bc-aa-e8-a3-85</link>
-        <guid isPermaLink="true">/2015/12/05/ros-pppoe-e6-8b-a8-e5-8f-b7-e4-b8-8a-e7-bd-91-e5-8d-95-e5-8f-a3-nat-e8-bd-ac-e5-8f-91-ef-bc-8b-ip-e4-bc-aa-e8-a3-85</guid>
-        
-        
-        <category>网络应用</category>
         
       </item>
     
