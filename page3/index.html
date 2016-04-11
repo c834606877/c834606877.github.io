@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="zh_cn"  class="han-la" >
   <head>
-    <title>面向大海,心暖花开</title>
+    <title>Iziy MyPress - MyPre.Cn</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <meta name="keywords" content=", ,Pithy" />
-    <meta name="description" content=",   从明天起,做一个幸福的人, 喂马、劈柴、周游世界。" />
+    <meta name="keywords" content=", ,jekyll, Iziy, mypre, MyPress, LanBing" />
+    <meta name="description" content=",   这里是蓝冰的个人博客，记录着蓝冰的生活点滴." />
 
     <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
 
@@ -22,7 +22,7 @@
   <script src="https://cdn.bootcss.com/html5shiv/3.7.2/html5shiv-printshiv.js"></script>
   <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.js"></script>
   <![endif]-->
-  <link rel="alternate" type="application/rss+xml" title="面向大海,心暖花开" href="http://mypre.cn/feed.xml" />
+  <link rel="alternate" type="application/rss+xml" title="Iziy MyPress - MyPre.Cn" href="/feed.xml" />
 </head>
 
 <body class="nav-open">
@@ -31,10 +31,10 @@
     document.write('<div id="mobile-nav" class="f12 yahei">');
     document.write('<ul class="nav">');
     document.write('    <li class="active">');
-    document.write('        <a href="http://mypre.cn/">首页</a>');
+    document.write('        <a href="/">首页 MyPress</a>');
     document.write('    </li>');
     document.write('    <li class="active">');
-    document.write('        <a href="http://mypre.cn/about/">关于</a>');
+    document.write('        <a href="/about/">联系</a>');
     document.write('    </li>');
     document.write('</ul>');
     document.write('</div>');
@@ -44,10 +44,11 @@
     <div id="preheader">notice_TOP</div>
       <header id="header" class="clearfix">
         <div class="head">
-          <h1><a href="http://mypre.cn/">面向大海,心暖花开</a></h1>
-          <p class="desc yahei"><span>从明天起,做一个幸福的人, 喂马、劈柴、周游世界。</span></p>
+          <h1><a href="/">面向大海,心暖花开</a></h1>
+          <p class="desc yahei"><span>从明天起,做一个幸福的人, 喂马、劈柴、周游世界。 ---Iziy-蓝冰  </span></p>
         </div>
         <script type="text/javascript">
+//"mqqbrowser|operamobi|juc|iuc|fennec|ios|applewebKit/420|applewebkit/525|applewebkit/532|ipad|iphone|ipaq|ipod|iemobile|windows ce|240x320|480x640|acer|android|anywhereyougo.com|asus|audio|blackberry|blazer|coolpad|dopod|etouch|hitachi|htc|huawei|jbrowser|lenovo|lg|lg-|lge-|lge|mobi|moto|nokia|phone|samsung|sony|symbian|tablet|tianyu|wap|xda|xde|zte"
 if(navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i)){
   document.write('<a href="javascript:;" class="open-nav icon-list"><i class="fa fa-bars"></i></a>');
 }
@@ -56,10 +57,10 @@ else
 	document.write('<nav id="main-nav" class="clearfix yahei">');
     document.write('<ul class="nav">');
     document.write('    <li class="active">');
-    document.write('        <a href="/">首页</a>');
+    document.write('        <a href="/">首页 MyPress</a>');
     document.write('    </li>');
     document.write('    <li class="active">');
-    document.write('        <a href="/about/">关于</a>');
+    document.write('        <a href="/about/">联系</a>');
     document.write('    </li>');
     document.write('</ul>');
     document.write('</nav>');
@@ -75,191 +76,11 @@ else
   <div class="home blog">
     
       <!-- this is post list -->
-<article class="post type-post status-publish format-standard">
-    <header class="entry-header">
-    <h2 class="entry-name">
-      <a href="/2015/11/14/add-sublime-text-to-your-context-menu-on-right-click" title="Add Sublime Text to your context menu on right click" rel="bookmark">Add Sublime Text to your context menu on right click</a>
-    </h2>
-    <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 最后编辑 2015-11-14</li>
-      <li><i class="fa fa-pencil-square-o"></i>
-          
-            <a href="/categories/应用技巧">应用技巧</a>
-          
-      </li>
-      <li><i class="fa fa-comments-o"></i> <a href="/2015/11/14/add-sublime-text-to-your-context-menu-on-right-click#post-comment">评论</a></li>
-      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
-    </ul>
-    </header>
-    <div class="entry-content" itemprop="description">
 
-          
-          
-              <p>When opening a text file, you may be used to right click on the file to be opened and then choose the application which can open the file from the context menu. On the context menu, you may see a menu item like "Edit with Notepad++".</p>
-<p>Nowadays many people especially programmers like to use Sublime Text, but by default this application will not show on the context menu when you right click on a file. There is now frequent request to add this application to the context menu. Here we show a simple batch file which can help you achieve this.</p>
-<p>Below is the batch code :</p>
-<pre>@echo off
-SET sublimeTextPath=C:\Program Files\Sublime Text 3\sublime_text.exe
 
-REM ADD REGISTRY KEYS
-@reg add "HKEY_CLASSES_ROOT\*\shell\Open with Sublime Text 3"         /t REG_SZ /v "" /d "Open with Sublime Text 3"   /f
-@reg add "HKEY_CLASSES_ROOT\*\shell\Open with Sublime Text 3"         /t REG_EXPAND_SZ /v "Icon" /d "%sublimeTextPath%,0" /f
-@reg add "HKEY_CLASSES_ROOT\*\shell\Open with Sublime Text 3\command" /t REG_SZ /v "" /d "%sublimeTextPath% \"%%1\"" /f
 
-pause</pre>
-<p>You just need to copy above code into the text editor you like and save it as a batch file. Note, please change the sublimeTextPath to the sublime_text.exe on your system. Then, what you need to do is right click on the batch file you saved and "Run as administrator" and it should show below:</p>
-<p><img class="aligncenter" src="http://www.pixelstech.net/article/images/command-output.png" alt="" /></p>
-<p>This means you have successfully added Sublime Text to your context menu. Then you can verify this by right clicking on any text file and you should see below:</p>
-<p><img class="aligncenter" src="http://www.pixelstech.net/article/images/context-menu-sublime-text.PNG" alt="" /></p>
-<p>Please note that you need to run the batch file as administrator, otherwise you will see errors on the command line console.</p>
 
-          
-
-    </div>
-    <footer class="entry-footer clearfix">
-    <div class="post-love">
-      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
-      <span class="love-count">
-        0
-      </span></a>
-    </div>
-    <div class="post-more">
-      <a href="/2015/11/14/add-sublime-text-to-your-context-menu-on-right-click">Read More</a>
-    </div>
-  </footer>
-</article>
-    
-      <!-- this is post list -->
-<article class="post type-post status-publish format-standard">
-    <header class="entry-header">
-    <h2 class="entry-name">
-      <a href="/2015/11/14/vim-save-file-in-read-only-mode-without-restart-your-work" title="Vim: Save file in read-only mode without restart your work" rel="bookmark">Vim: Save file in read-only mode without restart your work</a>
-    </h2>
-    <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 最后编辑 2015-11-14</li>
-      <li><i class="fa fa-pencil-square-o"></i>
-          
-            <a href="/categories/Linux系统">Linux系统</a>
-          
-            <a href="/categories/应用技巧">应用技巧</a>
-          
-      </li>
-      <li><i class="fa fa-comments-o"></i> <a href="/2015/11/14/vim-save-file-in-read-only-mode-without-restart-your-work#post-comment">评论</a></li>
-      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
-    </ul>
-    </header>
-    <div class="entry-content" itemprop="description">
-
-          
-          
-              <p><span style="font-size: medium;">Open a file as normal, forgetting to use “sudo”, and therefore viewing a read-only file.</span></p>
-<p><span style="font-size: medium;">Then mistakenly try to edit the read-only file in the traditional manner.</span></p>
-<pre>:w !sudo tee%</pre>
-<p><span style="font-size: medium;">At this point we will be presented with the content of the file and a prompt to press ENTER or type another command. </span></p>
-<p><span style="font-size: medium;">To simply save the file and move on we just press ENTER, and then press the letter “O” (oh).</span></p>
-<blockquote><p>(NOTE: “L” seems to do pretty much the same thing.)</p></blockquote>
-<p><span style="font-size: medium;">The file will be saved but remains open in vi/vim for more editing or reading. </span></p>
-<p><span style="font-size: medium;">We can now exit normally by typing “:q!” since the file is still open as “read-only”.</span></p>
-<blockquote><p><span style="font-size: medium;">What the command does:</span><br />
-<span style="font-size: medium;"> :w = Write a file.</span><br />
-<span style="font-size: medium;"> !sudo = Call shell sudo command.</span><br />
-<span style="font-size: medium;"> tee = The output of the vi/vim write command is redirected using tee.</span><br />
-<span style="font-size: medium;"> % = Triggers the use of the current filename.</span><br />
-<span style="font-size: medium;"> Simply put, the ‘tee’ command is run as sudo and follows the vi/vim command on the current filename given.</span></p></blockquote>
-
-          
-
-    </div>
-    <footer class="entry-footer clearfix">
-    <div class="post-love">
-      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
-      <span class="love-count">
-        0
-      </span></a>
-    </div>
-    <div class="post-more">
-      <a href="/2015/11/14/vim-save-file-in-read-only-mode-without-restart-your-work">Read More</a>
-    </div>
-  </footer>
-</article>
-    
-      <!-- this is post list -->
-<article class="post type-post status-publish format-standard">
-    <header class="entry-header">
-    <h2 class="entry-name">
-      <a href="/2015/11/11/first-post-of-pithy9" title="First post of pithy" rel="bookmark">First post of pithy</a>
-    </h2>
-    <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 最后编辑 2015-11-11</li>
-      <li><i class="fa fa-pencil-square-o"></i>
-          
-            <a href="/categories/6categories">6categories</a>
-          
-      </li>
-      <li><i class="fa fa-comments-o"></i> <a href="/2015/11/11/first-post-of-pithy9#post-comment">评论</a></li>
-      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
-    </ul>
-    </header>
-    <div class="entry-content" itemprop="description">
-
-          
-          
-              First post of pithy
-          
-
-    </div>
-    <footer class="entry-footer clearfix">
-    <div class="post-love">
-      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
-      <span class="love-count">
-        0
-      </span></a>
-    </div>
-    <div class="post-more">
-      <a href="/2015/11/11/first-post-of-pithy9">Read More</a>
-    </div>
-  </footer>
-</article>
-    
-      <!-- this is post list -->
-<article class="post type-post status-publish format-standard">
-    <header class="entry-header">
-    <h2 class="entry-name">
-      <a href="/2015/11/11/first-post-of-pithy8" title="First post of pithy" rel="bookmark">First post of pithy</a>
-    </h2>
-    <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 最后编辑 2015-11-11</li>
-      <li><i class="fa fa-pencil-square-o"></i>
-          
-            <a href="/categories/5categories">5categories</a>
-          
-      </li>
-      <li><i class="fa fa-comments-o"></i> <a href="/2015/11/11/first-post-of-pithy8#post-comment">评论</a></li>
-      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
-    </ul>
-    </header>
-    <div class="entry-content" itemprop="description">
-
-          
-          
-              First post of pithy
-          
-
-    </div>
-    <footer class="entry-footer clearfix">
-    <div class="post-love">
-      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
-      <span class="love-count">
-        0
-      </span></a>
-    </div>
-    <div class="post-more">
-      <a href="/2015/11/11/first-post-of-pithy8">Read More</a>
-    </div>
-  </footer>
-</article>
-    
-      <!-- this is post list -->
+    <!-- this is post list -->
 <article class="post type-post status-publish format-standard">
     <header class="entry-header">
     <h2 class="entry-name">
@@ -272,17 +93,14 @@ pause</pre>
             <a href="/categories/4categories">4categories</a>
           
       </li>
-      <li><i class="fa fa-comments-o"></i> <a href="/2015/11/11/first-post-of-pithy7#post-comment">评论</a></li>
+      <li><i class="fa fa-comments-o"></i> <a href="/2015/11/11/first-post-of-pithy7#post-comment"><span class="disqus-comment-count" data-disqus-url="/2015/11/11/first-post-of-pithy7"></span> 评论</a></li>
       <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
     </ul>
     </header>
     <div class="entry-content" itemprop="description">
-
-          
           
               First post of pithy
           
-
     </div>
     <footer class="entry-footer clearfix">
     <div class="post-love">
@@ -296,19 +114,344 @@ pause</pre>
     </div>
   </footer>
 </article>
+
+
+    
+      <!-- this is post list -->
+
+
+
+
+    <!-- this is post list -->
+<article class="post type-post status-publish format-standard">
+    <header class="entry-header">
+    <h2 class="entry-name">
+      <a href="/2015/11/11/first-post-of-pithy6" title="First post of pithy" rel="bookmark">First post of pithy</a>
+    </h2>
+    <ul class="entry-meta">
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2015-11-11</li>
+      <li><i class="fa fa-pencil-square-o"></i>
+          
+            <a href="/categories/3categories">3categories</a>
+          
+      </li>
+      <li><i class="fa fa-comments-o"></i> <a href="/2015/11/11/first-post-of-pithy6#post-comment"><span class="disqus-comment-count" data-disqus-url="/2015/11/11/first-post-of-pithy6"></span> 评论</a></li>
+      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
+    </ul>
+    </header>
+    <div class="entry-content" itemprop="description">
+          
+              First post of pithy
+          
+    </div>
+    <footer class="entry-footer clearfix">
+    <div class="post-love">
+      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
+      <span class="love-count">
+        0
+      </span></a>
+    </div>
+    <div class="post-more">
+      <a href="/2015/11/11/first-post-of-pithy6">Read More</a>
+    </div>
+  </footer>
+</article>
+
+
+    
+      <!-- this is post list -->
+
+
+    <!-- this is post list -->
+<article class="post type-post status-publish format-status">
+  <div class="entry-content" itemprop="description">
+              <p>123</p>
+
+            </div>
+</article>
+
+
+
+
+    
+      <!-- this is post list -->
+
+
+
+
+    <!-- this is post list -->
+<article class="post type-post status-publish format-standard">
+    <header class="entry-header">
+    <h2 class="entry-name">
+      <a href="/2015/10/31/e5-90-91-e8-bf-9c-e6-96-b9-e5-87-ba-e5-8f-91" title="向远方出发" rel="bookmark">向远方出发</a>
+    </h2>
+    <ul class="entry-meta">
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2015-10-31</li>
+      <li><i class="fa fa-pencil-square-o"></i>
+          
+            <a href="/categories/心情日记">心情日记</a>
+          
+      </li>
+      <li><i class="fa fa-comments-o"></i> <a href="/2015/10/31/e5-90-91-e8-bf-9c-e6-96-b9-e5-87-ba-e5-8f-91#post-comment"><span class="disqus-comment-count" data-disqus-url="/2015/10/31/e5-90-91-e8-bf-9c-e6-96-b9-e5-87-ba-e5-8f-91"></span> 评论</a></li>
+      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
+    </ul>
+    </header>
+    <div class="entry-content" itemprop="description">
+          
+              <p style="text-align: center;">如此的相信无论什么都能做到</p>
+<p style="text-align: center;">如此的想要相信无论什么都能做到</p>
+<p style="text-align: center;">却开始意识到那是不可能的</p>
+<p style="text-align: center;">感觉被什么无形的东西所左右着</p>
+<p style="text-align: center;">想着要做些什么，不做些什么不行</p>
+<p style="text-align: center;">但是，却不知道到底该如何是好</p>
+<p style="text-align: center;">因此…向远方出发…</p>
+<p style="text-align: center;"><img src="http://imglf0.nosdn.127.net/img/Z3ZvNUFuRWljSU54cjNSY0YwTzNMbmUySnVKcXFYT1luZFZjamp4MWFHMmRtdzFkVEk2UjlRPT0.jpeg?imageView&amp;thumbnail=500x0&amp;quality=96&amp;stripmeta=0&amp;type=jpg" alt="" /></p>
+
+          
+    </div>
+    <footer class="entry-footer clearfix">
+    <div class="post-love">
+      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
+      <span class="love-count">
+        0
+      </span></a>
+    </div>
+    <div class="post-more">
+      <a href="/2015/10/31/e5-90-91-e8-bf-9c-e6-96-b9-e5-87-ba-e5-8f-91">Read More</a>
+    </div>
+  </footer>
+</article>
+
+
+    
+      <!-- this is post list -->
+
+
+
+
+    <!-- this is post list -->
+<article class="post type-post status-publish format-standard">
+    <header class="entry-header">
+    <h2 class="entry-name">
+      <a href="/2015/10/31/use-your-own-vimrc-when-using-root" title="Use your own vimrc when using root" rel="bookmark">Use your own vimrc when using root</a>
+    </h2>
+    <ul class="entry-meta">
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2015-10-31</li>
+      <li><i class="fa fa-pencil-square-o"></i>
+          
+            <a href="/categories/应用技巧">应用技巧</a>
+          
+      </li>
+      <li><i class="fa fa-comments-o"></i> <a href="/2015/10/31/use-your-own-vimrc-when-using-root#post-comment"><span class="disqus-comment-count" data-disqus-url="/2015/10/31/use-your-own-vimrc-when-using-root"></span> 评论</a></li>
+      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
+    </ul>
+    </header>
+    <div class="entry-content" itemprop="description">
+          
+              <p>linking <code>/root/.vimrc</code> to <code>~/.vimrc</code></p>
+<pre>sudo ln -s /home/lanbing/.vimrc /root/.vimrc</pre>
+
+          
+    </div>
+    <footer class="entry-footer clearfix">
+    <div class="post-love">
+      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
+      <span class="love-count">
+        0
+      </span></a>
+    </div>
+    <div class="post-more">
+      <a href="/2015/10/31/use-your-own-vimrc-when-using-root">Read More</a>
+    </div>
+  </footer>
+</article>
+
+
+    
+      <!-- this is post list -->
+
+
+
+
+    <!-- this is post list -->
+<article class="post type-post status-publish format-standard">
+    <header class="entry-header">
+    <h2 class="entry-name">
+      <a href="/2015/10/01/fedora-e5-bd-bb-e5-ba-95-e7-a7-bb-e9-99-a4nvidia-e6-98-be-e5-8d-a1-e9-a9-b1-e5-8a-a8-e4-bb-a5-e5-8f-8a-e6-81-a2-e5-a4-8d-e5-bc-80-e6-ba-90nouveau-e9-a9-b1-e5-8a-a8" title="Fedora彻底移除Nvidia显卡驱动,以及恢复开源Nouveau驱动" rel="bookmark">Fedora彻底移除Nvidia显卡驱动,以及恢复开源Nouveau驱动</a>
+    </h2>
+    <ul class="entry-meta">
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2015-10-01</li>
+      <li><i class="fa fa-pencil-square-o"></i>
+          
+            <a href="/categories/Linux系统">Linux系统</a>
+          
+      </li>
+      <li><i class="fa fa-comments-o"></i> <a href="/2015/10/01/fedora-e5-bd-bb-e5-ba-95-e7-a7-bb-e9-99-a4nvidia-e6-98-be-e5-8d-a1-e9-a9-b1-e5-8a-a8-e4-bb-a5-e5-8f-8a-e6-81-a2-e5-a4-8d-e5-bc-80-e6-ba-90nouveau-e9-a9-b1-e5-8a-a8#post-comment"><span class="disqus-comment-count" data-disqus-url="/2015/10/01/fedora-e5-bd-bb-e5-ba-95-e7-a7-bb-e9-99-a4nvidia-e6-98-be-e5-8d-a1-e9-a9-b1-e5-8a-a8-e4-bb-a5-e5-8f-8a-e6-81-a2-e5-a4-8d-e5-bc-80-e6-ba-90nouveau-e9-a9-b1-e5-8a-a8"></span> 评论</a></li>
+      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
+    </ul>
+    </header>
+    <div class="entry-content" itemprop="description">
+          
+              <blockquote>我首先提倡一种思维模式，就是用小白的眼光去看“高深”的问题！</p></blockquote>
+<p>在Fedora中安装Nvidia显卡驱动方法有很多:</p>
+<ol>
+<li>到Nvidia官网下载官方驱动并安装。</li>
+<li>使用第三方源中的软件包。</li>
+<li>使用Bumblebee<br />
+Bumblebee是为解决双显卡切换问题而存在的一个开源产品</li>
+</ol>
+<p>不幸的是以上三种方法安装之后，均出现同样失败的结局。<br />
+<img class="aligncenter" src="http://imglf2.nosdn.127.net/img/Z3ZvNUFuRWljSU8zbWg3YjRFQTFVME44SFl4OGQ3aTQxQU9QOGJlTm1NLzhEOGtrN1B3UG9nPT0.png?imageView&amp;thumbnail=1680x0&amp;quality=96&amp;stripmeta=0&amp;type=jpg" alt="" />
+
+
+          
+    </div>
+    <footer class="entry-footer clearfix">
+    <div class="post-love">
+      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
+      <span class="love-count">
+        0
+      </span></a>
+    </div>
+    <div class="post-more">
+      <a href="/2015/10/01/fedora-e5-bd-bb-e5-ba-95-e7-a7-bb-e9-99-a4nvidia-e6-98-be-e5-8d-a1-e9-a9-b1-e5-8a-a8-e4-bb-a5-e5-8f-8a-e6-81-a2-e5-a4-8d-e5-bc-80-e6-ba-90nouveau-e9-a9-b1-e5-8a-a8">Read More</a>
+    </div>
+  </footer>
+</article>
+
+
+    
+      <!-- this is post list -->
+
+
+
+
+    <!-- this is post list -->
+<article class="post type-post status-publish format-standard">
+    <header class="entry-header">
+    <h2 class="entry-name">
+      <a href="/2015/09/29/e4-bf-ae-e5-a4-8d-fedora-docky-google-chrome-e5-90-af-e5-8a-a8-e5-90-8e-e5-87-ba-e7-8e-b0-e4-b8-a4-e4-b8-aa-e7-9b-b8-e5-90-8c-e5-9b-be-e6-a0-87" title="修复 Fedora Docky Google Chrome  启动后 出现两个相同图标" rel="bookmark">修复 Fedora Docky Google Chrome  启动后 出现两个相同图标</a>
+    </h2>
+    <ul class="entry-meta">
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2015-09-29</li>
+      <li><i class="fa fa-pencil-square-o"></i>
+          
+            <a href="/categories/Linux系统">Linux系统</a>
+          
+      </li>
+      <li><i class="fa fa-comments-o"></i> <a href="/2015/09/29/e4-bf-ae-e5-a4-8d-fedora-docky-google-chrome-e5-90-af-e5-8a-a8-e5-90-8e-e5-87-ba-e7-8e-b0-e4-b8-a4-e4-b8-aa-e7-9b-b8-e5-90-8c-e5-9b-be-e6-a0-87#post-comment"><span class="disqus-comment-count" data-disqus-url="/2015/09/29/e4-bf-ae-e5-a4-8d-fedora-docky-google-chrome-e5-90-af-e5-8a-a8-e5-90-8e-e5-87-ba-e7-8e-b0-e4-b8-a4-e4-b8-aa-e7-9b-b8-e5-90-8c-e5-9b-be-e6-a0-87"></span> 评论</a></li>
+      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
+    </ul>
+    </header>
+    <div class="entry-content" itemprop="description">
+          
+              <p>在Fedora下,安装Google Chrome,并将其 add to Favorites Docky 中<br />
+并启动发现,两个相同的图标并未融合在一块,</p>
+<p>猜测应该是 <code>/usr/share/applications/</code> 下的 <code>.desktop</code> 文件有问题</p>
+<p>打开终端:</p>
+<pre>sudo gedit /usr/share/applications/google-chrome.desktop</pre>
+<p>
+
+
+          
+    </div>
+    <footer class="entry-footer clearfix">
+    <div class="post-love">
+      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
+      <span class="love-count">
+        0
+      </span></a>
+    </div>
+    <div class="post-more">
+      <a href="/2015/09/29/e4-bf-ae-e5-a4-8d-fedora-docky-google-chrome-e5-90-af-e5-8a-a8-e5-90-8e-e5-87-ba-e7-8e-b0-e4-b8-a4-e4-b8-aa-e7-9b-b8-e5-90-8c-e5-9b-be-e6-a0-87">Read More</a>
+    </div>
+  </footer>
+</article>
+
+
+    
+      <!-- this is post list -->
+
+
+
+
+    <!-- this is post list -->
+<article class="post type-post status-publish format-standard">
+    <header class="entry-header">
+    <h2 class="entry-name">
+      <a href="/2015/09/28/errors-in-upgrade-from-fedora-21-to-fedora-22" title="Errors in Upgrade from Fedora 21 to Fedora 22" rel="bookmark">Errors in Upgrade from Fedora 21 to Fedora 22</a>
+    </h2>
+    <ul class="entry-meta">
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2015-09-28</li>
+      <li><i class="fa fa-pencil-square-o"></i>
+          
+            <a href="/categories/Linux系统">Linux系统</a>
+          
+      </li>
+      <li><i class="fa fa-comments-o"></i> <a href="/2015/09/28/errors-in-upgrade-from-fedora-21-to-fedora-22#post-comment"><span class="disqus-comment-count" data-disqus-url="/2015/09/28/errors-in-upgrade-from-fedora-21-to-fedora-22"></span> 评论</a></li>
+      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
+    </ul>
+    </header>
+    <div class="entry-content" itemprop="description">
+          
+              <blockquote><strong>1. Make sure your current system is up-to-date and backed up</strong></p>
+<p>First up, ensure that you have the most up-to-date version of Fedora 21 by updating your system using the Software application, or running the following command in the terminal:</p>
+<pre>sudo dnf update</pre>
+<p><strong>2. Install the FedUp tool</strong></p>
+<p>Now, open up a Terminal and install FedUp package by using the following command line:</p>
+<pre>sudo dnf install fedup</pre>
+<p><strong>3. Start the update with FedUp</strong></p>
+<p>Now your system is fully up-to-date, start the upgrade using the following command:</p>
+<pre>sudo fedup --network 22</pre>
+<p>This command will tell FedUp to download all the appropriate packages from the Fedora repositories, and prep your system for the upgrade.<br />
+<strong>4. Reboot, and upgrade</strong></p>
+<p>Once the FedUp command from step 3 has completed without errors, reboot your system. In the Fedora Boot Menu (i.e. grub), there will be a menu item “System Upgrade”, select that and press enter.<br />
+Boot menu with System Upgrade (fedup) option selected<br />
+<code class="prettyprint">Boot menu with update option selected</code></p>
+<p>All the appropriate packages and upgrade tasks will now be completed automatically, and when completed you will be able to start using your newly upgraded Fedora system.</p></blockquote>
+<pre># fedup --network 22
+setting up repos...
+Error: can't get boot images.
+The installation repo isn't currently available.
+Try again later, or specify a repo using --instrepo.</pre>
+<p>Using --instrepo To special a repo :</p>
+<pre>[lanbing@LanBing-PC ~]$ setting up repos...
+getting boot images...
+
+Downloading failed: couldn't get boot images: No more mirrors to try.
+Last error was: [Errno 14] curl#56 - "Proxy CONNECT aborted"
+
+Change the <code>/etc/yum.conf</code> file to disable Proxy settings ,</pre>
+
+          
+    </div>
+    <footer class="entry-footer clearfix">
+    <div class="post-love">
+      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
+      <span class="love-count">
+        0
+      </span></a>
+    </div>
+    <div class="post-more">
+      <a href="/2015/09/28/errors-in-upgrade-from-fedora-21-to-fedora-22">Read More</a>
+    </div>
+  </footer>
+</article>
+
+
     
     
         <div class="pagination clearfix">
             
-                <a href="http://mypre.cn/page2/" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+                <a href="/page2/" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
             
             
                 
-                  <a href="http://mypre.cn/">1</a>
+                  <a href="/">1</a>
                 
             
                 
-                  <a href="http://mypre.cn/page2">2</a>
+                  <a href="/page2">2</a>
                 
             
                 
@@ -316,87 +459,55 @@ pause</pre>
                 
             
                 
-                  <a href="http://mypre.cn/page4">4</a>
+                  <a href="/page4">4</a>
                 
             
                 
-                  <a href="http://mypre.cn/page5">5</a>
+                  <a href="/page5">5</a>
                 
             
                 
-                  <a href="http://mypre.cn/page6">6</a>
+                  <a href="/page6">6</a>
                 
             
                 
-                  <a href="http://mypre.cn/page7">7</a>
+                  <a href="/page7">7</a>
                 
             
                 
-                  <a href="http://mypre.cn/page8">8</a>
+                  <a href="/page8">8</a>
                 
             
                 
-                  <a href="http://mypre.cn/page9">9</a>
+                  <a href="/page9">9</a>
                 
             
                 
-                  <a href="http://mypre.cn/page10">10</a>
+                  <a href="/page10">10</a>
                 
             
                 
-                  <a href="http://mypre.cn/page11">11</a>
+                  <a href="/page11">11</a>
                 
             
                 
-                  <a href="http://mypre.cn/page12">12</a>
+                  <a href="/page12">12</a>
                 
             
                 
-                  <a href="http://mypre.cn/page13">13</a>
+                  <a href="/page13">13</a>
                 
             
                 
-                  <a href="http://mypre.cn/page14">14</a>
+                  <a href="/page14">14</a>
                 
             
                 
-                  <a href="http://mypre.cn/page15">15</a>
-                
-            
-                
-                  <a href="http://mypre.cn/page16">16</a>
-                
-            
-                
-                  <a href="http://mypre.cn/page17">17</a>
-                
-            
-                
-                  <a href="http://mypre.cn/page18">18</a>
-                
-            
-                
-                  <a href="http://mypre.cn/page19">19</a>
-                
-            
-                
-                  <a href="http://mypre.cn/page20">20</a>
-                
-            
-                
-                  <a href="http://mypre.cn/page21">21</a>
-                
-            
-                
-                  <a href="http://mypre.cn/page22">22</a>
-                
-            
-                
-                  <a href="http://mypre.cn/page23">23</a>
+                  <a href="/page15">15</a>
                 
             
             
-                  <a href="http://mypre.cn/page4/" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+                  <a href="/page4/" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
             
         </div><!-- /.pagination -->
     
@@ -434,14 +545,14 @@ pause</pre>
             </li>
             
             <li>
-                <a href="http://mypre.cn/feed.xml" target="_blank"><i class="fa fa-rss"></i></a>
+                <a href="/feed.xml" target="_blank"><i class="fa fa-rss"></i></a>
             </li>
         </ul>
     </div>
 </div> -->
 
 <aside id="mzw_admin-2" class="widget mzw_admin">
-    <img src="http://mypre.cn/assets/images/bg_small.jpg">
+    <img src="/assets/images/bg_small.jpg">
     <div class="author-body">
         <div class="author_img">
             <img src="/assets/images/2.gif" alt="Lan Bing"/>
@@ -465,6 +576,289 @@ pause</pre>
             <a class="rss" target="_blank" href="/feed.xml" target="_blank"><i class="fa fa-rss"></i></a>
         
        
+    </div>
+</aside>
+  <!-- sidebar: related posts -->
+<aside class="widget">
+    <h3 class="widget-title"><span>相关文章</span></h3>
+    <div class="smart_post">
+        <ul>
+            
+            
+              <li class="clearfix">
+                  <div class="post-thumb">
+                          
+                          
+                          
+                            
+                                
+                                    
+                                    
+                                    
+                                      
+                                    
+                                    
+                                
+                            
+                          
+                            
+                                
+                            
+                          
+                            
+                                
+                            
+                          
+                          
+
+
+                  </div>
+                  <div class="post-right">
+                      <h3><a href="/2016/04/10/jekyll-get-the-img-src-or-get-rid-img-tag">提取一篇文章里边的 图片链接，以及除去文章里边的 img 标签</a></h3>
+                      <div class="post-meta">
+                          <a href="/2016/04/10/jekyll-get-the-img-src-or-get-rid-img-tag#post-comment" title="提取一篇文章里边的 图片链接，以及除去文章里边的 img 标签 上的评论">No Reply</a></span> | <span>? Views</span>
+                      </div>
+                  </div>
+              </li>
+            
+            
+            
+              <li class="clearfix">
+                  <div class="post-thumb">
+                          
+                          
+                          
+                            
+                          
+                          
+                          
+                            <img id="past_nail" class="rounded" src="/assets/images/random/1.jpg" title="Bash快捷键 记录备忘" alt="Bash快捷键 记录备忘" width="45" height="45" />
+                          
+
+
+                  </div>
+                  <div class="post-right">
+                      <h3><a href="/2016/03/20/bash-e5-bf-ab-e6-8d-b7-e9-94-ae-e8-ae-b0-e5-bd-95-e5-a4-87-e5-bf-98">Bash快捷键 记录备忘</a></h3>
+                      <div class="post-meta">
+                          <a href="/2016/03/20/bash-e5-bf-ab-e6-8d-b7-e9-94-ae-e8-ae-b0-e5-bd-95-e5-a4-87-e5-bf-98#post-comment" title="Bash快捷键 记录备忘 上的评论">No Reply</a></span> | <span>? Views</span>
+                      </div>
+                  </div>
+              </li>
+            
+            
+            
+            
+            
+              <li class="clearfix">
+                  <div class="post-thumb">
+                          
+                          
+                          
+                            
+                          
+                          
+                          
+                            <img id="past_nail" class="rounded" src="/assets/images/random/4.jpg" title="Fedora 安装后 显示 中文字体 大小不一 高低不齐 解决方法" alt="Fedora 安装后 显示 中文字体 大小不一 高低不齐 解决方法" width="45" height="45" />
+                          
+
+
+                  </div>
+                  <div class="post-right">
+                      <h3><a href="/2016/02/07/fedora-e5-ae-89-e8-a3-85-e5-90-8e-e6-98-be-e7-a4-ba-e4-b8-ad-e6-96-87-e5-ad-97-e4-bd-93-e5-a4-a7-e5-b0-8f-e4-b8-8d-e4-b8-80-e9-ab-98-e4-bd-8e-e4-b8-8d-e9-bd-90-e8-a7-a3-e5-86-b3-e6-96-b9">Fedora 安装后 显示 中文字体 大小不一 高低不齐 解决方法</a></h3>
+                      <div class="post-meta">
+                          <a href="/2016/02/07/fedora-e5-ae-89-e8-a3-85-e5-90-8e-e6-98-be-e7-a4-ba-e4-b8-ad-e6-96-87-e5-ad-97-e4-bd-93-e5-a4-a7-e5-b0-8f-e4-b8-8d-e4-b8-80-e9-ab-98-e4-bd-8e-e4-b8-8d-e9-bd-90-e8-a7-a3-e5-86-b3-e6-96-b9#post-comment" title="Fedora 安装后 显示 中文字体 大小不一 高低不齐 解决方法 上的评论">No Reply</a></span> | <span>? Views</span>
+                      </div>
+                  </div>
+              </li>
+            
+            
+            
+              <li class="clearfix">
+                  <div class="post-thumb">
+                          
+                          
+                          
+                            
+                          
+                          
+                          
+                            <img id="past_nail" class="rounded" src="/assets/images/random/4.jpg" title="Win7 下修改盘符的方法" alt="Win7 下修改盘符的方法" width="45" height="45" />
+                          
+
+
+                  </div>
+                  <div class="post-right">
+                      <h3><a href="/2015/12/26/win7-e4-b8-8b-e4-bf-ae-e6-94-b9-e7-9b-98-e7-ac-a6-e7-9a-84-e6-96-b9-e6-b3-95">Win7 下修改盘符的方法</a></h3>
+                      <div class="post-meta">
+                          <a href="/2015/12/26/win7-e4-b8-8b-e4-bf-ae-e6-94-b9-e7-9b-98-e7-ac-a6-e7-9a-84-e6-96-b9-e6-b3-95#post-comment" title="Win7 下修改盘符的方法 上的评论">No Reply</a></span> | <span>? Views</span>
+                      </div>
+                  </div>
+              </li>
+            
+            
+            
+              <li class="clearfix">
+                  <div class="post-thumb">
+                          
+                          
+                          
+                            
+                          
+                            
+                                
+                                    
+                                    
+                                    
+                                      
+                                        <img class="rounded" src="http://imglf1.nosdn.127.net/img/Z3ZvNUFuRWljSU5CVjVWV2w3YnVBcGhGajc1d3VxY0puNSt0amZONnBtdG80bTVTVUo1MGtBPT0.jpg?imageView&amp;thumbnail=2000y1500&amp;type=jpg&amp;quality=96&amp;stripmeta=0&amp;type=jpg" title="WIN7加固态，无陨迁移同时改为EFI 启动" alt="WIN7加固态，无陨迁移同时改为EFI 启动" width="45" height="45" />
+                                      
+                                    
+                                      
+                                    
+                                      
+                                    
+                                    
+                                
+                            
+                          
+                            
+                                
+                            
+                          
+                          
+
+
+                  </div>
+                  <div class="post-right">
+                      <h3><a href="/2015/12/26/win7-e5-8a-a0-e5-9b-ba-e6-80-81-ef-bc-8c-e6-97-a0-e9-99-a8-e8-bf-81-e7-a7-bb-e5-90-8c-e6-97-b6-e6-94-b9-e4-b8-baefi-e5-90-af-e5-8a-a8">WIN7加固态，无陨迁移同时改为EFI 启动</a></h3>
+                      <div class="post-meta">
+                          <a href="/2015/12/26/win7-e5-8a-a0-e5-9b-ba-e6-80-81-ef-bc-8c-e6-97-a0-e9-99-a8-e8-bf-81-e7-a7-bb-e5-90-8c-e6-97-b6-e6-94-b9-e4-b8-baefi-e5-90-af-e5-8a-a8#post-comment" title="WIN7加固态，无陨迁移同时改为EFI 启动 上的评论">No Reply</a></span> | <span>? Views</span>
+                      </div>
+                  </div>
+              </li>
+            
+            
+            
+              <li class="clearfix">
+                  <div class="post-thumb">
+                          
+                          
+                          
+                            
+                          
+                          
+                          
+                            <img id="past_nail" class="rounded" src="/assets/images/random/7.jpg" title="转 Linux下关机命令的区别 （halt,poweroff,reboot,shutdown,init）" alt="转 Linux下关机命令的区别 （halt,poweroff,reboot,shutdown,init）" width="45" height="45" />
+                          
+
+
+                  </div>
+                  <div class="post-right">
+                      <h3><a href="/2015/12/21/e8-bd-ac-linux-e4-b8-8b-e5-85-b3-e6-9c-ba-e5-91-bd-e4-bb-a4-e7-9a-84-e5-8c-ba-e5-88-ab-ef-bc-88haltpoweroffrebootshutdowninit-ef-bc-89">转 Linux下关机命令的区别 （halt,poweroff,reboot,shutdown,init）</a></h3>
+                      <div class="post-meta">
+                          <a href="/2015/12/21/e8-bd-ac-linux-e4-b8-8b-e5-85-b3-e6-9c-ba-e5-91-bd-e4-bb-a4-e7-9a-84-e5-8c-ba-e5-88-ab-ef-bc-88haltpoweroffrebootshutdowninit-ef-bc-89#post-comment" title="转 Linux下关机命令的区别 （halt,poweroff,reboot,shutdown,init） 上的评论">No Reply</a></span> | <span>? Views</span>
+                      </div>
+                  </div>
+              </li>
+            
+            
+            
+              <li class="clearfix">
+                  <div class="post-thumb">
+                          
+                          
+                          
+                            
+                          
+                          
+                          
+                            <img id="past_nail" class="rounded" src="/assets/images/random/4.jpg" title="Fedora 常见音视频解码器" alt="Fedora 常见音视频解码器" width="45" height="45" />
+                          
+
+
+                  </div>
+                  <div class="post-right">
+                      <h3><a href="/2015/12/06/fedora-e5-b8-b8-e8-a7-81-e9-9f-b3-e8-a7-86-e9-a2-91-e8-a7-a3-e7-a0-81-e5-99-a8">Fedora 常见音视频解码器</a></h3>
+                      <div class="post-meta">
+                          <a href="/2015/12/06/fedora-e5-b8-b8-e8-a7-81-e9-9f-b3-e8-a7-86-e9-a2-91-e8-a7-a3-e7-a0-81-e5-99-a8#post-comment" title="Fedora 常见音视频解码器 上的评论">No Reply</a></span> | <span>? Views</span>
+                      </div>
+                  </div>
+              </li>
+            
+            
+            
+              <li class="clearfix">
+                  <div class="post-thumb">
+                          
+                          
+                          
+                            
+                          
+                            
+                                
+                                    
+                                    
+                                    
+                                      
+                                    
+                                      
+                                        <img class="rounded" src="http://imglf.nosdn.127.net/img/Z3ZvNUFuRWljSVBlRFRNTWREZmVuMWZ0dzFoMGoycHpjTGkyZ1FBSEVKUm9DMVVKaWFLWERBPT0.png?imageView&amp;thumbnail=1680x0&amp;quality=96&amp;stripmeta=0&amp;type=jpg" title="Ros PPPoe 拨号上网 单口 Nat 转发 ＋ IP伪装" alt="Ros PPPoe 拨号上网 单口 Nat 转发 ＋ IP伪装" width="45" height="45" />
+                                      
+                                    
+                                      
+                                    
+                                      
+                                    
+                                    
+                                
+                            
+                          
+                            
+                                
+                            
+                          
+                            
+                                
+                            
+                          
+                          
+
+
+                  </div>
+                  <div class="post-right">
+                      <h3><a href="/2015/12/05/ros-pppoe-e6-8b-a8-e5-8f-b7-e4-b8-8a-e7-bd-91-e5-8d-95-e5-8f-a3-nat-e8-bd-ac-e5-8f-91-ef-bc-8b-ip-e4-bc-aa-e8-a3-85">Ros PPPoe 拨号上网 单口 Nat 转发 ＋ IP伪装</a></h3>
+                      <div class="post-meta">
+                          <a href="/2015/12/05/ros-pppoe-e6-8b-a8-e5-8f-b7-e4-b8-8a-e7-bd-91-e5-8d-95-e5-8f-a3-nat-e8-bd-ac-e5-8f-91-ef-bc-8b-ip-e4-bc-aa-e8-a3-85#post-comment" title="Ros PPPoe 拨号上网 单口 Nat 转发 ＋ IP伪装 上的评论">No Reply</a></span> | <span>? Views</span>
+                      </div>
+                  </div>
+              </li>
+            
+            
+            
+              <li class="clearfix">
+                  <div class="post-thumb">
+                          
+                          
+                          
+                            
+                          
+                          
+                          
+                            <img id="past_nail" class="rounded" src="/assets/images/random/5.jpg" title="linux 输出重定向问题" alt="linux 输出重定向问题" width="45" height="45" />
+                          
+
+
+                  </div>
+                  <div class="post-right">
+                      <h3><a href="/2015/11/29/linux-e8-be-93-e5-87-ba-e9-87-8d-e5-ae-9a-e5-90-91-e9-97-ae-e9-a2-98">linux 输出重定向问题</a></h3>
+                      <div class="post-meta">
+                          <a href="/2015/11/29/linux-e8-be-93-e5-87-ba-e9-87-8d-e5-ae-9a-e5-90-91-e9-97-ae-e9-a2-98#post-comment" title="linux 输出重定向问题 上的评论">No Reply</a></span> | <span>? Views</span>
+                      </div>
+                  </div>
+              </li>
+            
+            
+        </ul>
     </div>
 </aside>
   <!-- sidebar:category list -->
@@ -530,7 +924,7 @@ pause</pre>
           
           <li>
               <a class="catelink" href="/categories/Linux系统">
-                  Linux系统&nbsp;<span class="count">[10]</span>
+                  Linux系统&nbsp;<span class="count">[11]</span>
               </a>
           </li>
 
@@ -577,6 +971,13 @@ pause</pre>
           </li>
 
           
+          <li>
+              <a class="catelink" href="/categories/jekyll">
+                  jekyll&nbsp;<span class="count">[1]</span>
+              </a>
+          </li>
+
+          
         </ul>
 </aside>
   <!-- sidebar: tag list -->
@@ -597,13 +998,17 @@ pause</pre>
                 标签1
             </a>
         
+            <a class="taglink" href="/tag/#jekyll" data-target-cate="#jekyll">
+                jekyll
+            </a>
+        
     </div>
 </aside>
 </div><!-- ./sidebar -->
       </div><!-- ./container -->
 
     <footer id="footer" class="yahei clearfix">
-	<p class="right">Copyright © 2014 <a href="" >面向大海,心暖花开</a> Powered By <a href="http://jekyllrb.com/" target="_blank">Jekyll</a></p>
+	<p class="right">Copyright © 2014 <a href="" >Iziy MyPress - MyPre.Cn</a> Powered By <a href="http://jekyllrb.com/" target="_blank">Jekyll</a></p>
 	<p class="left"></p>
 </footer>
   </div><!--./warp-->
@@ -617,8 +1022,10 @@ pause</pre>
 
 <script type="text/javascript">
 var ajax = {
-	'home': 'http://mypre.cn'
+	'home': ''
 }
+var asr_1 = 1;
+var asr_2 = 2;
 </script>
 
 <script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -626,10 +1033,11 @@ var ajax = {
 <script src="http://libs.cdnjs.net/flexslider/2.2.0/jquery.flexslider-min.js"></script>
 <script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
+<script src="/assets/script/jquery.jplayer.min.js"></script>
 <script src="/assets/script/prettify.js"></script>
 <script src="/assets/script/global.js"></script>
 <script src="/assets/script/slimbox2.min.js"></script>
-<script src="/assets/script/jquery.jplayer.min.js"></script>
+
 <script src="/assets/script/ajax.js"></script>
 
 
@@ -646,7 +1054,7 @@ var ajax = {
   <script id="dsq-count-scr" src="//iziy.disqus.com/count.js" async></script>
 <script>
     var disqus_config = function () {
-        this.page.url = 'http://mypre.cn/page3/'; // Replace PAGE_URL with your page's canonical URL variable
+        this.page.url = '/page3/'; // Replace PAGE_URL with your page's canonical URL variable
         this.page.identifier = ''; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
         this.page.title = '';
     };
