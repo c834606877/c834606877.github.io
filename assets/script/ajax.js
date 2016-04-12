@@ -202,7 +202,6 @@ function ajaxreload_code() {
 	jQuery("img").unveil();
 
 
-	
 	jQuery('.entry-content pre').addClass('prettyprint linenums');
 	$('.entry-content code').addClass('prettyprint');
 	prettyPrint();
@@ -216,18 +215,8 @@ function ajaxreload_code() {
         (d.head || d.body).appendChild(s);
     })();
 
-
     
-        (function () { // DON'T EDIT BELOW THIS LINE
-	        var d = document, s = d.createElement('script');
-
-	        s.src = '//iziy.disqus.com/embed.js';
-
-	        s.setAttribute('data-timestamp', +new Date());
-	        (d.head || d.body).appendChild(s);
-	    })();
-		//DISQUS.reset();
-	    DISQUSWIDGETS.getCount({reset: true});
+    	loadDisqus();
 	
 }
 
