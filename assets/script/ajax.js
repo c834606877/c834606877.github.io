@@ -144,32 +144,14 @@ function ajaxloadPage(url, push, getData){
 						jQuery('#' + ajaxcontent).show();
 						
 						document.getElementById(ajaxqrimg).src = 'http://qr.liantu.com/api.php?text=' + url ;
-						
-						jQuery('.entry-content pre').addClass('prettyprint linenums');
-						$('.entry-content code').addClass('prettyprint');
-						prettyPrint();
 
-						(function () { // add hint
-					        var d = document, s = d.createElement('script');
 
-					        s.src = 'https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js';
+						disqus_config = function () {
+						    this.page.url = url; // Replace PAGE_URL with your page's canonical URL variable
+    						//this.page.identifier = ''; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+       						//this.page.title = '';
+       					};
 
-					        s.setAttribute('data-timestamp', +new Date());
-					        (d.head || d.body).appendChild(s);
-					    })();
-					    
-					        (function () { // DON'T EDIT BELOW THIS LINE
-						        var d = document, s = d.createElement('script');
-
-						        s.src = '//iziy.disqus.com/embed.js';
-
-						        s.setAttribute('data-timestamp', +new Date());
-						        (d.head || d.body).appendChild(s);
-						    })();
-							//DISQUS.reset();
-						    DISQUSWIDGETS.getCount({reset: true});
-						
-												
 						jQuery("img").unveil();
 						
 						ajaxloadPageInit("#" + ajaxcontent + " ");
@@ -218,6 +200,35 @@ function ajaxreload_code() {
 	initgallary();
 	initSlim();
 	jQuery("img").unveil();
+
+
+	
+	jQuery('.entry-content pre').addClass('prettyprint linenums');
+	$('.entry-content code').addClass('prettyprint');
+	prettyPrint();
+
+	(function () { // add hint
+        var d = document, s = d.createElement('script');
+
+        s.src = 'https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js';
+
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+
+
+    
+        (function () { // DON'T EDIT BELOW THIS LINE
+	        var d = document, s = d.createElement('script');
+
+	        s.src = '//iziy.disqus.com/embed.js';
+
+	        s.setAttribute('data-timestamp', +new Date());
+	        (d.head || d.body).appendChild(s);
+	    })();
+		//DISQUS.reset();
+	    DISQUSWIDGETS.getCount({reset: true});
+	
 }
 
 function ajaxclick_code(thiss) {
