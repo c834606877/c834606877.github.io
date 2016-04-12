@@ -324,14 +324,21 @@ else
 -->
 
 
-  <script id="dsq-count-scr" src="//iziy.disqus.com/count.js" async></script>
-<script>
+  <script>
     // var disqus_config = function () {
     //     this.page.url = 'http://mypre.cn/categories/%E4%B8%89%E5%9B%BD%E6%BC%94%E4%B9%89/'; // Replace PAGE_URL with your page's canonical URL variable
     //     this.page.identifier = ''; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     //     this.page.title = '';
     // };
     function loadDisqus(){
+        (function () { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+
+            s.src = '//iziy.disqus.com/count.js';
+
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
         (function () { // DON'T EDIT BELOW THIS LINE
             var d = document, s = d.createElement('script');
 
