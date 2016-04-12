@@ -5,9 +5,56 @@
     <description>这里是蓝冰的个人博客，记录着蓝冰的生活点滴.</description>
     <link>http://mypre.cn/</link>
     <atom:link href="http://mypre.cn/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 11 Apr 2016 22:20:39 +0800</pubDate>
-    <lastBuildDate>Mon, 11 Apr 2016 22:20:39 +0800</lastBuildDate>
+    <pubDate>Tue, 12 Apr 2016 11:20:54 +0800</pubDate>
+    <lastBuildDate>Tue, 12 Apr 2016 11:20:54 +0800</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
+    
+      <item>
+        <title>The Fourth Day, fix some small bugs</title>
+        <description>&lt;h3 id=&quot;section&quot;&gt;第四天&lt;/h3&gt;
+
+&lt;p&gt;修改了Blog一些细节，还修补一些代码逻辑Bug，
+Jplayer 循环播放页面音乐，
+Sidebar滚动固定box 单个box
+附着在jquery元素里边的对象在使用 jquery.clone 时，对象并不会clone，
+导致jplayer fixed box 里边的元素按钮没有反应，&lt;/p&gt;
+
+&lt;p&gt;另外 Gallery.html 下竟然在输出内容时还有使用 &lt;code&gt;{{content}}&lt;/code&gt;的，
+忘记了 &lt;code&gt;{{content}}&lt;/code&gt; 和 &lt;code&gt;{{content}}&lt;/code&gt;的使用了&lt;/p&gt;
+
+&lt;p&gt;之前由于没有分清 这两变量，导致 内容，死循环 输出，或者无内容输出，花了一个多小时，
+&lt;!--more--&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;blog-&quot;&gt;Blog 小记&lt;/h3&gt;
+&lt;p&gt;===&lt;/p&gt;
+
+&lt;p&gt;还是调试技巧没有掌握，碰到花费太多时间的Bug，还不如整理思路，重写一遍代码来的快了。&lt;/p&gt;
+
+&lt;p&gt;至此，花了四天的时间将Blog成功转化为静态，以及功能的增加，
+接下来就是找个好用的 Markdown Tool 安静的Log My Press 了。&lt;/p&gt;
+
+&lt;p&gt;===&lt;/p&gt;
+
+&lt;p&gt;能有如此效率还是归功于Jekyll功劳，
+&lt;a href=&quot;http://www.jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; 的 Free 精神，GNU 理念，
+组件的专一性与复用性，不用重新造轮子，
+节省了大量处理代码逻辑的时间，以及额外的学习成本，&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 12 Apr 2016 00:00:00 +0800</pubDate>
+        <link>http://mypre.cn/2016/04/12/fourth-day-fix-some-smarll-problem</link>
+        <guid isPermaLink="true">http://mypre.cn/2016/04/12/fourth-day-fix-some-smarll-problem</guid>
+        
+        <category>jekyll</category>
+        
+        <category>MyPress</category>
+        
+        <category>iziy</category>
+        
+        
+        <category>本博动态</category>
+        
+      </item>
     
       <item>
         <title>Move To My New &#39;Stitac&#39; Blog and New Domain MyPre</title>
@@ -73,39 +120,41 @@
 
 &lt;p&gt;因此记下方法
 去除 img 标签 如下：&lt;/p&gt;
+
 &lt;pre&gt;
 
-              {% for sp in content | split:&quot;&amp;lt;img &quot;%}
-                  {% for con in sp | split:&quot;&amp;gt;&quot; %}
-                      {% if con contains &#39;src=&quot;&#39; or con contains &quot;src=&#39;&quot; %}
-                      {% else %}
-                        {% if con contains &quot;href=&quot; %}
-                          {{con}}&amp;gt;
-                        {% else %}
-                          {{con}}
-                        {% endif %}
-                      {% endif %}
-                  {% endfor %}
-              {% endfor %}
+{% for sp in content | split:&quot;&amp;lt;img &quot;%}
+    {% for con in sp | split:&quot;&amp;gt;&quot; %}
+        {% if con contains &#39;src=&quot;&#39; or con contains &quot;src=&#39;&quot; %}
+        {% else %}
+          {% if con contains &quot;href=&quot; %}
+            {{con}}&amp;gt;
+          {% else %}
+            {{con}}
+          {% endif %}
+        {% endif %}
+    {% endfor %}
+{% endfor %}
 
 &lt;/pre&gt;
+
 &lt;p&gt;去除 IMG 方法就是 按 &lt;img 以及=&quot;&quot; /&gt; 切割 除去 含有 src 属性的 项 
 剩下的 对 因为 &amp;gt; 切割 破坏的a 标签 补上 &amp;gt;
 &lt;!--more--&gt;
 对 提取 img 标签 如下：&lt;/p&gt;
 
 &lt;pre&gt;
-                {% assign images = content | split:&quot;&amp;lt;img &quot; %}
-                {% for image in images %}
-                    {% assign html = image | split:&quot;&amp;gt;&quot; | first %}
-                    {% assign tags = html | split:&quot; &quot; %}
-                    {% for tag in tags %}
-                      {% if tag contains &#39;src=&quot;&#39; or tag contains &quot;src=&#39;&quot; %}
-                          {% assign src = tag | split: &#39;&quot;&#39; | last%}
-                          &amp;lt;li data-thumb=&quot;{{src}}&quot;&amp;gt;&amp;lt;img src=&quot;{{src}}&quot; title=&quot;{{page.title| strip_newlines}}&quot; alt=&quot;{{page.title| strip_newlines}}&quot;/&amp;gt;
-                      {% endif %}
-                    {% endfor %}
-                {% endfor %}
+{% assign images = content | split:&quot;&amp;lt;img &quot; %}
+{% for image in images %}
+    {% assign html = image | split:&quot;&amp;gt;&quot; | first %}
+    {% assign tags = html | split:&quot; &quot; %}
+    {% for tag in tags %}
+      {% if tag contains &#39;src=&quot;&#39; or tag contains &quot;src=&#39;&quot; %}
+          {% assign src = tag | split: &#39;&quot;&#39; | last%}
+          &amp;lt;li data-thumb=&quot;{{src}}&quot;&amp;gt;&amp;lt;img src=&quot;{{src}}&quot; title=&quot;{{page.title| strip_newlines}}&quot; alt=&quot;{{page.title| strip_newlines}}&quot;/&amp;gt;
+      {% endif %}
+    {% endfor %}
+{% endfor %}
 &lt;/pre&gt;
 
 &lt;p&gt;取出 img 标签 里边的 属性组 对src 属性 按 ‘“’ 分割， 
@@ -213,9 +262,9 @@
     
       <item>
         <title>Fedora 安装后 显示 中文字体 大小不一 高低不齐 解决方法</title>
-        <description>&lt;pre&gt;echo &#39;export LC_CTYPE=&quot;zh_CN.utf8&quot;&#39; &amp;gt;&amp;gt; ~/.bashrc
+        <description>&lt;pre&gt;echo &#39;export LC_CTYPE=&quot;zh_CN.utf8&quot;&#39; &amp;gt;&amp;gt; ~/.bashrc&lt;/pre&gt;
 
-主要原因是 在中文中 夹杂部分 日韩字体导致，&lt;/pre&gt;
+主要原因是 在中文中 夹杂部分 日韩字体导致，
 </description>
         <pubDate>Sun, 07 Feb 2016 15:31:58 +0800</pubDate>
         <link>http://mypre.cn/2016/02/07/fedora-e5-ae-89-e8-a3-85-e5-90-8e-e6-98-be-e7-a4-ba-e4-b8-ad-e6-96-87-e5-ad-97-e4-bd-93-e5-a4-a7-e5-b0-8f-e4-b8-8d-e4-b8-80-e9-ab-98-e4-bd-8e-e4-b8-8d-e9-bd-90-e8-a7-a3-e5-86-b3-e6-96-b9</link>
@@ -252,6 +301,7 @@
 &lt;p&gt;使用GHOST 将C盘  分区对分区 复制 到 固态的 系统盘上&lt;/p&gt;
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;http://imglf1.nosdn.127.net/img/Z3ZvNUFuRWljSU5CVjVWV2w3YnVBcGhGajc1d3VxY0puNSt0amZONnBtdG80bTVTVUo1MGtBPT0.jpg?imageView&amp;amp;thumbnail=2000y1500&amp;amp;type=jpg&amp;amp;quality=96&amp;amp;stripmeta=0&amp;amp;type=jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;!--more--&gt;
 &lt;p&gt;使用BCDBOOT 工具 在ESP 分区中 创建win7 引导 efi 文件&lt;/p&gt;
 &lt;p&gt;重启电脑使用 uefi 启动 将 固态 设为第一引导&lt;/p&gt;
 &lt;p&gt;此时系统应该可以启动&lt;/p&gt;
@@ -283,6 +333,7 @@
 &lt;p&gt;&lt;span style=&quot;font-size: medium;&quot;&gt;    shutdown命令安全地将系统关机。&lt;/span&gt;&lt;br /&gt;
 &lt;span style=&quot;font-size: medium;&quot;&gt;     有些用户会使用直接断掉电源的方式来关闭linux，这是十分危险的。因为linux与windows不同，其后台运行着许多进程，所以强制关机可能会导 致进程的数据丢失﹐使系统处于不稳定的状态﹐甚至在有的系统中会损坏硬件设备。而在系统关机前使用shutdown命令﹐系统管理员会通知所有登录的用户 系统将要关闭。并且login指令会被冻结﹐即新的用户不能再登录。直接关机或者延迟一定的时间才关机都是可能的﹐还可能重启。这是由所有进程 〔process〕都会收到系统所送达的信号〔signal〕决定的。这让像vi之类的程序有时间储存目前正在编辑的文档﹐而像处理邮件〔mail〕和新 闻〔news〕的程序则可以正常地离开等等。&lt;/span&gt;&lt;br /&gt;
 &lt;span style=&quot;font-size: medium;&quot;&gt;      shutdown执行它的工作是送信号〔signal〕给init程序﹐要求它改变runlevel。Runlevel 0被用来停机〔halt〕﹐runlevel 6是用来重新激活〔reboot〕系统﹐而runlevel 1则是被用来让系统进入管理工作可以进行的状态﹔这是预设的﹐假定没有-h也没有-r参数给shutdown。要想了解在停机〔halt〕或者重新开机 〔reboot〕过程中做了哪些动作﹐你可以在这个文件/etc/inittab里看到这些runlevels相关的资料。&lt;/span&gt;&lt;/p&gt;
+&lt;!--more--&gt;
 &lt;p&gt;&lt;span style=&quot;font-size: medium;&quot;&gt;shutdown 参数说明:&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span style=&quot;font-size: medium;&quot;&gt;    [-t] 在改变到其它runlevel之前﹐告诉init多久以后关机。&lt;/span&gt;&lt;br /&gt;
 &lt;span style=&quot;font-size: medium;&quot;&gt;     [-r] 重启计算器。&lt;/span&gt;&lt;br /&gt;
@@ -319,21 +370,6 @@
         <pubDate>Mon, 21 Dec 2015 10:11:09 +0800</pubDate>
         <link>http://mypre.cn/2015/12/21/e8-bd-ac-linux-e4-b8-8b-e5-85-b3-e6-9c-ba-e5-91-bd-e4-bb-a4-e7-9a-84-e5-8c-ba-e5-88-ab-ef-bc-88haltpoweroffrebootshutdowninit-ef-bc-89</link>
         <guid isPermaLink="true">http://mypre.cn/2015/12/21/e8-bd-ac-linux-e4-b8-8b-e5-85-b3-e6-9c-ba-e5-91-bd-e4-bb-a4-e7-9a-84-e5-8c-ba-e5-88-ab-ef-bc-88haltpoweroffrebootshutdowninit-ef-bc-89</guid>
-        
-        
-        <category>Linux系统</category>
-        
-      </item>
-    
-      <item>
-        <title>Fedora 常见音视频解码器</title>
-        <description>&lt;p&gt;解决 Fedora 及其它linux 视频解码器 缺失的问题&lt;/p&gt;
-&lt;pre&gt;sudo dnf install gstreamer1-libav
-sudo dnf install gstreamer1-plugins-bad-freeworld&lt;/pre&gt;
-</description>
-        <pubDate>Sun, 06 Dec 2015 17:52:38 +0800</pubDate>
-        <link>http://mypre.cn/2015/12/06/fedora-e5-b8-b8-e8-a7-81-e9-9f-b3-e8-a7-86-e9-a2-91-e8-a7-a3-e7-a0-81-e5-99-a8</link>
-        <guid isPermaLink="true">http://mypre.cn/2015/12/06/fedora-e5-b8-b8-e8-a7-81-e9-9f-b3-e8-a7-86-e9-a2-91-e8-a7-a3-e7-a0-81-e5-99-a8</guid>
         
         
         <category>Linux系统</category>

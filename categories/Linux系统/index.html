@@ -87,7 +87,7 @@ else
       <div id="container" class="clearfix">
           <div id="content">
 	  <div class="box archive-meta">
-        <h3 class="title-meta">Category "Linux系统":</h3>
+        <h3 class="title-meta">Linux系统</h3>
       </div>
     
             <!-- this is post list -->
@@ -197,9 +197,9 @@ else
     </header>
     <div class="entry-content" itemprop="description">
           
-              <pre>echo 'export LC_CTYPE="zh_CN.utf8"' &gt;&gt; ~/.bashrc
+              <pre>echo 'export LC_CTYPE="zh_CN.utf8"' &gt;&gt; ~/.bashrc</pre>
 
-主要原因是 在中文中 夹杂部分 日韩字体导致，</pre>
+主要原因是 在中文中 夹杂部分 日韩字体导致，
 
           
     </div>
@@ -245,20 +245,8 @@ else
 <p>使用GHOST 将C盘  分区对分区 复制 到 固态的 系统盘上</p>
 <p>&nbsp;</p>
 <p><img src="http://imglf1.nosdn.127.net/img/Z3ZvNUFuRWljSU5CVjVWV2w3YnVBcGhGajc1d3VxY0puNSt0amZONnBtdG80bTVTVUo1MGtBPT0.jpg?imageView&amp;thumbnail=2000y1500&amp;type=jpg&amp;quality=96&amp;stripmeta=0&amp;type=jpg" alt="" /></p>
-<p>使用BCDBOOT 工具 在ESP 分区中 创建win7 引导 efi 文件</p>
-<p>重启电脑使用 uefi 启动 将 固态 设为第一引导</p>
-<p>此时系统应该可以启动</p>
-<p>有两个问题：</p>
-<p>1.如果在WIN7下 对固态 进行的分区，可能启动后系统盘符不是C盘，如果迁移过Desktop或Users 的文件夹，会导致无法进入原帐户或桌面无文件的情况</p>
-<p>此时要通过修改注册表，将固态上的盘符修改为C，</p>
-<p>2.安装Linux 之后，如果要多系统启动的话，主板会默认自动启动Win7</p>
-<p>不管在linux下用efibootmgr 修改</p>
-<p>或Windows 下 用Easy  BCD或其它工具 修改 默认的 Grub2 引导都没有效果，</p>
-<p>网上有一部分 使用 另一个 rEFInd 进行 引导，这是一种可行的办法，不过安装起来也比较麻烦，后来想了一个办法</p>
-<p>将EFI/Microsoft/Boot/bootmgfw.efi 改名bootmgfw_bak.efi</p>
-<p>这样，主板找不到默认启动路径就乖乖按规则启动了，</p>
-<p>之后在gurb2的 grub.cfg 中 将 Windows 7 的引导文件路径 改成 bootmgfw_bak.efi 就可以从GRUB2 引导WIN7 了</p>
-<p><img src="http://imglf.nosdn.127.net/img/Z3ZvNUFuRWljSU5CVjVWV2w3YnVBaVp2YnRvcFdFbHVva3B4QU01RWhKM3hiZEc4ZEs1QmhnPT0.jpg?imageView&amp;thumbnail=2000y1500&amp;type=jpg&amp;quality=96&amp;stripmeta=0&amp;type=jpg" alt="" /></p>
+
+
 
           
     </div>
@@ -303,38 +291,8 @@ else
 <p><span style="font-size: medium;">    shutdown命令安全地将系统关机。</span><br />
 <span style="font-size: medium;">     有些用户会使用直接断掉电源的方式来关闭linux，这是十分危险的。因为linux与windows不同，其后台运行着许多进程，所以强制关机可能会导 致进程的数据丢失﹐使系统处于不稳定的状态﹐甚至在有的系统中会损坏硬件设备。而在系统关机前使用shutdown命令﹐系统管理员会通知所有登录的用户 系统将要关闭。并且login指令会被冻结﹐即新的用户不能再登录。直接关机或者延迟一定的时间才关机都是可能的﹐还可能重启。这是由所有进程 〔process〕都会收到系统所送达的信号〔signal〕决定的。这让像vi之类的程序有时间储存目前正在编辑的文档﹐而像处理邮件〔mail〕和新 闻〔news〕的程序则可以正常地离开等等。</span><br />
 <span style="font-size: medium;">      shutdown执行它的工作是送信号〔signal〕给init程序﹐要求它改变runlevel。Runlevel 0被用来停机〔halt〕﹐runlevel 6是用来重新激活〔reboot〕系统﹐而runlevel 1则是被用来让系统进入管理工作可以进行的状态﹔这是预设的﹐假定没有-h也没有-r参数给shutdown。要想了解在停机〔halt〕或者重新开机 〔reboot〕过程中做了哪些动作﹐你可以在这个文件/etc/inittab里看到这些runlevels相关的资料。</span></p>
-<p><span style="font-size: medium;">shutdown 参数说明:</span></p>
-<p><span style="font-size: medium;">    [-t] 在改变到其它runlevel之前﹐告诉init多久以后关机。</span><br />
-<span style="font-size: medium;">     [-r] 重启计算器。</span><br />
-<span style="font-size: medium;">     [-k] 并不真正关机﹐只是送警告信号给每位登录者〔login〕。</span><br />
-<span style="font-size: medium;">     [-h] 关机后关闭电源〔halt〕。</span><br />
-<span style="font-size: medium;">     [-n] 不用init﹐而是自己来关机。不鼓励使用这个选项﹐而且该选项所产生的后果往往不总是你所预期得到的。</span><br />
-<span style="font-size: medium;">     [-c] cancel current process取消目前正在执行的关机程序。所以这个选项当然没有时间参数﹐但是可以输入一个用来解释的讯息﹐而这信息将会送到每位使用者。</span><br />
-<span style="font-size: medium;">     [-f] 在重启计算器〔reboot〕时忽略fsck。</span><br />
-<span style="font-size: medium;">     [-F] 在重启计算器〔reboot〕时强迫fsck。</span><br />
-<span style="font-size: medium;">     [-time] 设定关机〔shutdown〕前的时间。</span></p>
-<p><span style="font-size: medium;">    例如：</span></p>
-<p><span style="font-size: medium;">         ／sbin／shutdown －h now－－－－－立即关机；</span><br />
-<span style="font-size: medium;"> 　　／sbin／shutdown －h 20：49－－－－20：49分关机</span><br />
-<span style="font-size: medium;"> 　　／sbin／shutdown －h ＋10－－－－－10分钟后关机</span><br />
-<span style="font-size: medium;"> 　　／sbin／shutdown －r now －－－－－立即重启</span><br />
-<span style="font-size: medium;"> 　　／sbin／shutdown －r ＋10 ‘The system will reboot'－－－－10分钟后系统重启并给每个登录用户发通知</span><br />
-<span style="font-size: medium;"> 　　／sbin／shutdown －k now ‘The system will reboot'－－－－仅给每个登录用户发通知并不真关机</span></p>
-<p><span style="font-size: large;">2.halt—-最简单的关机命令</span></p>
-<p><span style="font-size: medium;">其实halt就是调用shutdown -h。halt执行时﹐杀死应用进程﹐执行sync系统调用﹐文件系统写操作完成后就会停止内核。</span></p>
-<p><span style="font-size: medium;">参数说明:</span></p>
-<p><span style="font-size: medium;">[-n] 防止sync系统调用﹐它用在用fsck修补根分区之后﹐以阻止内核用老版本的超级块〔superblock〕覆盖修补过的超级块。</span></p>
-<p><span style="font-size: medium;">[-w] 并不是真正的重启或关机﹐只是写wtmp〔/var/log/wtmp〕纪录。</span><br />
-<span style="font-size: medium;"> [-d] 不写wtmp纪录〔已包含在选项[-n]中〕。</span><br />
-<span style="font-size: medium;"> [-f] 没有调用shutdown而强制关机或重启。</span><br />
-<span style="font-size: medium;"> [-i] 关机〔或重启〕前﹐关掉所有的网络接口。</span><br />
-<span style="font-size: medium;"> [-p] 该选项为缺省选项。就是关机时调用poweroff。</span></p>
-<p><span style="font-size: large;">3.reboot</span></p>
-<p><span style="font-size: medium;">reboot的工作过程差不多跟halt一样﹐不过它是引发主机重启﹐而halt是关机。它的参数与halt相差不多。</span></p>
-<p><span style="font-size: large;">4.init</span></p>
-<p><span style="font-size: medium;">init是所有进程的祖先﹐它的进程号始终为1﹐所以发送TERM信号给init会终止所有的用户进程﹑守护进程等。shutdown就是使用这种机制。 init定义了8个运行级别(runlevel)，init 0为关机﹐init1为重启。关于init可以长篇大论﹐这里就不再叙述。另外还有telinit命令可以改变init的运行级别﹐比如﹐telinit -iS可使系统进入单用户模式﹐并且得不到使用shutdown时的信息和等待时间。</span></p>
-<p><span style="font-size: large;">5.poweroff</span></p>
-<p><span style="font-size: medium;">关机,在多用户方式下(Runlevel 3)不建议使用.</span></p>
+
+
 
           
     </div>
@@ -714,6 +672,33 @@ Change the <code>/etc/yum.conf</code> file to disable Proxy settings ,</pre>
 
 </div>
 <div id="sidebar">
+	<aside id="mzw_admin-2" class="widget mzw_admin">
+    <img src="http://mypre.cn/assets/images/bg_small.jpg">
+    <div class="author-body">
+        <div class="author_img">
+            <img src="/assets/images/2.gif" alt="Lan Bing"/>
+        </div>
+        <div class="author_bio">
+            <h3>Lan Bing </h3>
+            <p class="muted">My Press Iziy </p>
+        </div>
+    </div>
+
+    <div class="social">
+        
+            <a class="weibo" target="_blank" href="http://weibo.com/u/2717952951" target="_blank"><i class="fa fa-weibo"></i></a>
+        
+            <a class="tweibo" target="_blank" href="http://t.qq.com/c834606877" target="_blank"><i class="fa fa-tencent-weibo"></i></a>
+        
+            <a class="github" target="_blank" href="https://github.com/c834606877" target="_blank"><i class="fa fa-github"></i></a>
+        
+            <a class="mail" target="_blank" href="mailto://c834606877@qq.com" target="_blank"><i class="fa fa-envelope"></i></a>
+        
+            <a class="rss" target="_blank" href="/feed.xml" target="_blank"><i class="fa fa-rss"></i></a>
+        
+       
+    </div>
+</aside>
     <!-- sidebar:category list -->
 <aside id="mzw_siderbar_categories" class="widget widget_mzw_siderbar_categories">
     <h3 class="widget-title"><span>分类列表</span></h3>
@@ -721,7 +706,7 @@ Change the <code>/etc/yum.conf</code> file to disable Proxy settings ,</pre>
           
           <li>
               <a class="catelink" href="http://mypre.cn/categories/本博动态">
-                  本博动态&nbsp;<span class="count">[4]</span>
+                  本博动态&nbsp;<span class="count">[5]</span>
               </a>
           </li>
 
@@ -905,7 +890,7 @@ Change the <code>/etc/yum.conf</code> file to disable Proxy settings ,</pre>
     var _hmt = _hmt || [];
     (function () {
         var hm = document.createElement("script");
-        hm.src = "//hm.baidu.com/hm.js?your baidu analysis token";
+        hm.src = "//hm.baidu.com/hm.js?c18ce105288bdc61337b1ff23ee5cf52";
         var s = document.getElementsByTagName("script")[0];
         s.parentNode.insertBefore(hm, s);
     })();

@@ -87,8 +87,60 @@ else
       <div id="container" class="clearfix">
           <div id="content">
 	  <div class="box archive-meta">
-        <h3 class="title-meta">Category "本博动态":</h3>
+        <h3 class="title-meta">本博动态</h3>
       </div>
+    
+            <!-- this is post list -->
+
+    <!-- this is post list -->
+<article class="post type-post status-publish format-standard">
+    <header class="entry-header">
+    <h2 class="entry-name">
+      <a href="http://mypre.cn/2016/04/12/fourth-day-fix-some-smarll-problem" title="The Fourth Day, fix some small bugs" rel="bookmark">The Fourth Day, fix some small bugs</a>
+    </h2>
+    <ul class="entry-meta">
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2016-04-12</li>
+      <li><i class="fa fa-pencil-square-o"></i>
+          
+            <a href="http://mypre.cn/categories/本博动态">本博动态</a>
+          
+      </li>
+      <li><i class="fa fa-comments-o"></i> <a href="http://mypre.cn/2016/04/12/fourth-day-fix-some-smarll-problem#post-comment"><span class="disqus-comment-count" data-disqus-url="http://mypre.cn/2016/04/12/fourth-day-fix-some-smarll-problem"></span> 评论</a></li>
+      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
+    </ul>
+    </header>
+    <div class="entry-content" itemprop="description">
+          
+              <h3 id="section">第四天</h3>
+
+<p>修改了Blog一些细节，还修补一些代码逻辑Bug，
+Jplayer 循环播放页面音乐，
+Sidebar滚动固定box 单个box
+附着在jquery元素里边的对象在使用 jquery.clone 时，对象并不会clone，
+导致jplayer fixed box 里边的元素按钮没有反应，</p>
+
+<p>另外 Gallery.html 下竟然在输出内容时还有使用 <code>{{content}}</code>的，
+忘记了 <code>{{content}}</code> 和 <code>{{content}}</code>的使用了</p>
+
+<p>之前由于没有分清 这两变量，导致 内容，死循环 输出，或者无内容输出，花了一个多小时，</p>
+
+
+          
+    </div>
+    <footer class="entry-footer clearfix">
+    <div class="post-love">
+      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
+      <span class="love-count">
+        0
+      </span></a>
+    </div>
+    <div class="post-more">
+      <a href="http://mypre.cn/2016/04/12/fourth-day-fix-some-smarll-problem">Read More</a>
+    </div>
+  </footer>
+</article>
+
+
     
             <!-- this is post list -->
 
@@ -262,6 +314,33 @@ else
 
 </div>
 <div id="sidebar">
+	<aside id="mzw_admin-2" class="widget mzw_admin">
+    <img src="http://mypre.cn/assets/images/bg_small.jpg">
+    <div class="author-body">
+        <div class="author_img">
+            <img src="/assets/images/2.gif" alt="Lan Bing"/>
+        </div>
+        <div class="author_bio">
+            <h3>Lan Bing </h3>
+            <p class="muted">My Press Iziy </p>
+        </div>
+    </div>
+
+    <div class="social">
+        
+            <a class="weibo" target="_blank" href="http://weibo.com/u/2717952951" target="_blank"><i class="fa fa-weibo"></i></a>
+        
+            <a class="tweibo" target="_blank" href="http://t.qq.com/c834606877" target="_blank"><i class="fa fa-tencent-weibo"></i></a>
+        
+            <a class="github" target="_blank" href="https://github.com/c834606877" target="_blank"><i class="fa fa-github"></i></a>
+        
+            <a class="mail" target="_blank" href="mailto://c834606877@qq.com" target="_blank"><i class="fa fa-envelope"></i></a>
+        
+            <a class="rss" target="_blank" href="/feed.xml" target="_blank"><i class="fa fa-rss"></i></a>
+        
+       
+    </div>
+</aside>
     <!-- sidebar:category list -->
 <aside id="mzw_siderbar_categories" class="widget widget_mzw_siderbar_categories">
     <h3 class="widget-title"><span>分类列表</span></h3>
@@ -269,7 +348,7 @@ else
           
           <li>
               <a class="catelink" href="http://mypre.cn/categories/本博动态">
-                  本博动态&nbsp;<span class="count">[4]</span>
+                  本博动态&nbsp;<span class="count">[5]</span>
               </a>
           </li>
 
@@ -453,7 +532,7 @@ else
     var _hmt = _hmt || [];
     (function () {
         var hm = document.createElement("script");
-        hm.src = "//hm.baidu.com/hm.js?your baidu analysis token";
+        hm.src = "//hm.baidu.com/hm.js?c18ce105288bdc61337b1ff23ee5cf52";
         var s = document.getElementsByTagName("script")[0];
         s.parentNode.insertBefore(hm, s);
     })();

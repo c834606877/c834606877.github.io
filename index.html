@@ -94,6 +94,58 @@ else
 <article class="post type-post status-publish format-standard">
     <header class="entry-header">
     <h2 class="entry-name">
+      <a href="http://mypre.cn/2016/04/12/fourth-day-fix-some-smarll-problem" title="The Fourth Day, fix some small bugs" rel="bookmark">The Fourth Day, fix some small bugs</a>
+    </h2>
+    <ul class="entry-meta">
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2016-04-12</li>
+      <li><i class="fa fa-pencil-square-o"></i>
+          
+            <a href="http://mypre.cn/categories/本博动态">本博动态</a>
+          
+      </li>
+      <li><i class="fa fa-comments-o"></i> <a href="http://mypre.cn/2016/04/12/fourth-day-fix-some-smarll-problem#post-comment"><span class="disqus-comment-count" data-disqus-url="http://mypre.cn/2016/04/12/fourth-day-fix-some-smarll-problem"></span> 评论</a></li>
+      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
+    </ul>
+    </header>
+    <div class="entry-content" itemprop="description">
+          
+              <h3 id="section">第四天</h3>
+
+<p>修改了Blog一些细节，还修补一些代码逻辑Bug，
+Jplayer 循环播放页面音乐，
+Sidebar滚动固定box 单个box
+附着在jquery元素里边的对象在使用 jquery.clone 时，对象并不会clone，
+导致jplayer fixed box 里边的元素按钮没有反应，</p>
+
+<p>另外 Gallery.html 下竟然在输出内容时还有使用 <code>{{content}}</code>的，
+忘记了 <code>{{content}}</code> 和 <code>{{content}}</code>的使用了</p>
+
+<p>之前由于没有分清 这两变量，导致 内容，死循环 输出，或者无内容输出，花了一个多小时，</p>
+
+
+          
+    </div>
+    <footer class="entry-footer clearfix">
+    <div class="post-love">
+      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
+      <span class="love-count">
+        0
+      </span></a>
+    </div>
+    <div class="post-more">
+      <a href="http://mypre.cn/2016/04/12/fourth-day-fix-some-smarll-problem">Read More</a>
+    </div>
+  </footer>
+</article>
+
+
+    
+      <!-- this is post list -->
+
+    <!-- this is post list -->
+<article class="post type-post status-publish format-standard">
+    <header class="entry-header">
+    <h2 class="entry-name">
       <a href="http://mypre.cn/2016/04/11/upgrade-my-blog-with-jekyll" title="Move To My New 'Stitac' Blog and New Domain MyPre" rel="bookmark">Move To My New 'Stitac' Blog and New Domain MyPre</a>
     </h2>
     <ul class="entry-meta">
@@ -263,22 +315,24 @@ else
 
 <p>因此记下方法
 去除 img 标签 如下：</p>
+
 <pre>
 
-              {% for sp in content | split:"&lt;img "%}
-                  {% for con in sp | split:"&gt;" %}
-                      {% if con contains 'src="' or con contains "src='" %}
-                      {% else %}
-                        {% if con contains "href=" %}
-                          {{con}}&gt;
-                        {% else %}
-                          {{con}}
-                        {% endif %}
-                      {% endif %}
-                  {% endfor %}
-              {% endfor %}
+{% for sp in content | split:"&lt;img "%}
+    {% for con in sp | split:"&gt;" %}
+        {% if con contains 'src="' or con contains "src='" %}
+        {% else %}
+          {% if con contains "href=" %}
+            {{con}}&gt;
+          {% else %}
+            {{con}}
+          {% endif %}
+        {% endif %}
+    {% endfor %}
+{% endfor %}
 
 </pre>
+
 <p>去除 IMG 方法就是 按 <img 以及="" /> 切割 除去 含有 src 属性的 项 
 剩下的 对 因为 &gt; 切割 破坏的a 标签 补上 &gt;</p>
 
@@ -411,9 +465,9 @@ else
     </header>
     <div class="entry-content" itemprop="description">
           
-              <pre>echo 'export LC_CTYPE="zh_CN.utf8"' &gt;&gt; ~/.bashrc
+              <pre>echo 'export LC_CTYPE="zh_CN.utf8"' &gt;&gt; ~/.bashrc</pre>
 
-主要原因是 在中文中 夹杂部分 日韩字体导致，</pre>
+主要原因是 在中文中 夹杂部分 日韩字体导致，
 
           
     </div>
@@ -471,65 +525,6 @@ else
     </div>
     <div class="post-more">
       <a href="http://mypre.cn/2015/12/26/win7-e4-b8-8b-e4-bf-ae-e6-94-b9-e7-9b-98-e7-ac-a6-e7-9a-84-e6-96-b9-e6-b3-95">Read More</a>
-    </div>
-  </footer>
-</article>
-
-
-    
-      <!-- this is post list -->
-
-    <!-- this is post list -->
-<article class="post type-post status-publish format-standard">
-    <header class="entry-header">
-    <h2 class="entry-name">
-      <a href="http://mypre.cn/2015/12/26/win7-e5-8a-a0-e5-9b-ba-e6-80-81-ef-bc-8c-e6-97-a0-e9-99-a8-e8-bf-81-e7-a7-bb-e5-90-8c-e6-97-b6-e6-94-b9-e4-b8-baefi-e5-90-af-e5-8a-a8" title="WIN7加固态，无陨迁移同时改为EFI 启动" rel="bookmark">WIN7加固态，无陨迁移同时改为EFI 启动</a>
-    </h2>
-    <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 最后编辑 2015-12-26</li>
-      <li><i class="fa fa-pencil-square-o"></i>
-          
-            <a href="http://mypre.cn/categories/Linux系统">Linux系统</a>
-          
-      </li>
-      <li><i class="fa fa-comments-o"></i> <a href="http://mypre.cn/2015/12/26/win7-e5-8a-a0-e5-9b-ba-e6-80-81-ef-bc-8c-e6-97-a0-e9-99-a8-e8-bf-81-e7-a7-bb-e5-90-8c-e6-97-b6-e6-94-b9-e4-b8-baefi-e5-90-af-e5-8a-a8#post-comment"><span class="disqus-comment-count" data-disqus-url="http://mypre.cn/2015/12/26/win7-e5-8a-a0-e5-9b-ba-e6-80-81-ef-bc-8c-e6-97-a0-e9-99-a8-e8-bf-81-e7-a7-bb-e5-90-8c-e6-97-b6-e6-94-b9-e4-b8-baefi-e5-90-af-e5-8a-a8"></span> 评论</a></li>
-      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
-    </ul>
-    </header>
-    <div class="entry-content" itemprop="description">
-          
-              <p>前阵子买了块SSD后，一直打算鼓捣鼓捣EFI启动，全新安装明显不符合IT精神，所以打算把 无陨迁移 以及EFI启动同时做了，机械原C盘做Linux</p>
-<p>首先 在原win7下上固态后，4K ，删除自动生成的MBR分区，新建一个300M 的 ESP 分区 剩佘空间用做新系统盘，</p>
-<p>之后进入PE</p>
-<p>使用GHOST 将C盘  分区对分区 复制 到 固态的 系统盘上</p>
-<p>&nbsp;</p>
-<p><img src="http://imglf1.nosdn.127.net/img/Z3ZvNUFuRWljSU5CVjVWV2w3YnVBcGhGajc1d3VxY0puNSt0amZONnBtdG80bTVTVUo1MGtBPT0.jpg?imageView&amp;thumbnail=2000y1500&amp;type=jpg&amp;quality=96&amp;stripmeta=0&amp;type=jpg" alt="" /></p>
-<p>使用BCDBOOT 工具 在ESP 分区中 创建win7 引导 efi 文件</p>
-<p>重启电脑使用 uefi 启动 将 固态 设为第一引导</p>
-<p>此时系统应该可以启动</p>
-<p>有两个问题：</p>
-<p>1.如果在WIN7下 对固态 进行的分区，可能启动后系统盘符不是C盘，如果迁移过Desktop或Users 的文件夹，会导致无法进入原帐户或桌面无文件的情况</p>
-<p>此时要通过修改注册表，将固态上的盘符修改为C，</p>
-<p>2.安装Linux 之后，如果要多系统启动的话，主板会默认自动启动Win7</p>
-<p>不管在linux下用efibootmgr 修改</p>
-<p>或Windows 下 用Easy  BCD或其它工具 修改 默认的 Grub2 引导都没有效果，</p>
-<p>网上有一部分 使用 另一个 rEFInd 进行 引导，这是一种可行的办法，不过安装起来也比较麻烦，后来想了一个办法</p>
-<p>将EFI/Microsoft/Boot/bootmgfw.efi 改名bootmgfw_bak.efi</p>
-<p>这样，主板找不到默认启动路径就乖乖按规则启动了，</p>
-<p>之后在gurb2的 grub.cfg 中 将 Windows 7 的引导文件路径 改成 bootmgfw_bak.efi 就可以从GRUB2 引导WIN7 了</p>
-<p><img src="http://imglf.nosdn.127.net/img/Z3ZvNUFuRWljSU5CVjVWV2w3YnVBaVp2YnRvcFdFbHVva3B4QU01RWhKM3hiZEc4ZEs1QmhnPT0.jpg?imageView&amp;thumbnail=2000y1500&amp;type=jpg&amp;quality=96&amp;stripmeta=0&amp;type=jpg" alt="" /></p>
-
-          
-    </div>
-    <footer class="entry-footer clearfix">
-    <div class="post-love">
-      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
-      <span class="love-count">
-        0
-      </span></a>
-    </div>
-    <div class="post-more">
-      <a href="http://mypre.cn/2015/12/26/win7-e5-8a-a0-e5-9b-ba-e6-80-81-ef-bc-8c-e6-97-a0-e9-99-a8-e8-bf-81-e7-a7-bb-e5-90-8c-e6-97-b6-e6-94-b9-e4-b8-baefi-e5-90-af-e5-8a-a8">Read More</a>
     </div>
   </footer>
 </article>
@@ -627,7 +622,7 @@ else
           
           <li>
               <a class="catelink" href="http://mypre.cn/categories/本博动态">
-                  本博动态&nbsp;<span class="count">[4]</span>
+                  本博动态&nbsp;<span class="count">[5]</span>
               </a>
           </li>
 
@@ -758,6 +753,10 @@ else
                 Mypre.cn
             </a>
         
+            <a class="taglink" href="http://mypre.cn/tag/#iziy" data-target-cate="#iziy">
+                iziy
+            </a>
+        
     </div>
 </aside>
 </div><!-- ./sidebar -->
@@ -838,7 +837,7 @@ else
     var _hmt = _hmt || [];
     (function () {
         var hm = document.createElement("script");
-        hm.src = "//hm.baidu.com/hm.js?your baidu analysis token";
+        hm.src = "//hm.baidu.com/hm.js?c18ce105288bdc61337b1ff23ee5cf52";
         var s = document.getElementsByTagName("script")[0];
         s.parentNode.insertBefore(hm, s);
     })();
