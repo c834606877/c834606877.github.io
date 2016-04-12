@@ -403,7 +403,7 @@ jQuery("#gotop").click(function() {
 		$(window).scroll(function(){
 			var roll = document.documentElement.scrollTop+document.body.scrollTop;
 
-			if( roll>rollbox.eq(rolllen-1).offset().top+rollbox.eq(rolllen-1).height() ){
+			if( roll>rollbox.eq(rolllen-1).offset().top+rollbox.eq(rolllen-1).height() || rolllen == 2){
 				rollbox.eq(asr_1-1).width(rollbox.eq(asr_1-1).width());
 					rollbox.eq(asr_1-1).css({position:'fixed',top:10}).addClass("widgetRoller");
 					if( asr_1!==asr_2 )
