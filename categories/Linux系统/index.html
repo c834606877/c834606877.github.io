@@ -16,7 +16,7 @@
 
   <!-- The Iziy main css -->
   <!-- <link rel="stylesheet" href="/assets/style.css"> -->
-<link rel="stylesheet" href="http://7xk05q.com1.z0.glb.clouddn.com/wp-content/themes/quench-master/style.css">
+  <link rel="stylesheet" href="http://7xk05q.com1.z0.glb.clouddn.com/assets/style.css">
 
   <!--[if lt IE 9]>
   <script src="https://cdn.bootcss.com/html5shiv/3.7.2/html5shiv-printshiv.js"></script>
@@ -89,6 +89,60 @@ else
 	  <div class="box archive-meta">
         <h3 class="title-meta">Linux系统</h3>
       </div>
+    
+            <!-- this is post list -->
+
+    <!-- this is post list -->
+<article class="post type-post status-publish format-standard">
+    <header class="entry-header">
+    <h2 class="entry-name">
+      <a href="http://mypre.cn/2016/04/14/open-here-in-terminal-from-nautilus" title="Open Here In Teminal From Nautilus" rel="bookmark">Open Here In Teminal From Nautilus</a>
+    </h2>
+    <ul class="entry-meta">
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2016-04-14</li>
+      <li><i class="fa fa-pencil-square-o"></i>
+          
+            <a href="http://mypre.cn/categories/Linux系统">Linux系统</a>
+          
+      </li>
+      <li><i class="fa fa-comments-o"></i> <a href="http://mypre.cn/2016/04/14/open-here-in-terminal-from-nautilus#post-comment"><span class="disqus-comment-count" data-disqus-url="http://mypre.cn/2016/04/14/open-here-in-terminal-from-nautilus"></span> 评论</a></li>
+      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
+    </ul>
+    </header>
+    <div class="entry-content" itemprop="description">
+          
+              <p>Linux 下的文件管理器 nautilus  可以很容易在终端中打开通过命令</p>
+<pre>[lanbing@LanBing-Laptop ~]$ nautilus .</pre>
+<p>但是要想在 nautilus 中打开 Terminal 却很麻烦
+于是google了一下
+发现软件包：<code>nautilus-open-terminal</code>
+功能如其名，果断：</p>
+<pre>[lanbing@localhost ~]$ sudo dnf search  nautilus-open-terminal
+[sudo] password for lanbing: 
+Last metadata expiration check performed 1 day, 5:43:29 ago on Wed Apr 13 14:49:06 2016.
+===================== N/S Matched: nautilus-open-terminal ======================
+nautilus-open-terminal.x86_64 : Nautilus extension for an open terminal shortcut
+[lanbing@localhost ~]$ sudo dnf install nautilus-open-terminal -y
+</pre>
+<p>安装后在 文件管理器 中右键 即可 方便打开 Terminal 了</p>
+
+
+          
+    </div>
+    <footer class="entry-footer clearfix">
+    <div class="post-love">
+      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
+      <span class="love-count">
+        0
+      </span></a>
+    </div>
+    <div class="post-more">
+      <a href="http://mypre.cn/2016/04/14/open-here-in-terminal-from-nautilus">Read More</a>
+    </div>
+  </footer>
+</article>
+
+
     
             <!-- this is post list -->
 
@@ -790,7 +844,7 @@ Change the <code>/etc/yum.conf</code> file to disable Proxy settings ,</pre>
           
           <li>
               <a class="catelink" href="http://mypre.cn/categories/Linux系统">
-                  Linux系统&nbsp;<span class="count">[11]</span>
+                  Linux系统&nbsp;<span class="count">[12]</span>
               </a>
           </li>
 

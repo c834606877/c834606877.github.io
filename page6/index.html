@@ -16,7 +16,7 @@
 
   <!-- The Iziy main css -->
   <!-- <link rel="stylesheet" href="/assets/style.css"> -->
-<link rel="stylesheet" href="http://7xk05q.com1.z0.glb.clouddn.com/wp-content/themes/quench-master/style.css">
+  <link rel="stylesheet" href="http://7xk05q.com1.z0.glb.clouddn.com/assets/style.css">
 
   <!--[if lt IE 9]>
   <script src="https://cdn.bootcss.com/html5shiv/3.7.2/html5shiv-printshiv.js"></script>
@@ -87,6 +87,55 @@ else
       <div id="container" class="clearfix">
           <div id="content">
   <div class="home blog">
+    
+      <!-- this is post list -->
+
+    <!-- this is post list -->
+<article class="post type-post status-publish format-standard">
+    <header class="entry-header">
+    <h2 class="entry-name">
+      <a href="http://mypre.cn/2014/09/01/1-1-4-e7-99-bb-e5-bd-95-e7-b3-bb-e7-bb-9f-e7-ac-ac-ef-bc-91-e7-ab-a0-e7-ac-ac-e4-b8-80-e6-ac-a1-e4-ba-b2-e5-af-86-e6-8e-a5-e8-a7-a6-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83" title="1.1.4 登录系统 - Linux就是这个范儿" rel="bookmark">1.1.4 登录系统 - Linux就是这个范儿</a>
+    </h2>
+    <ul class="entry-meta">
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2014-09-01</li>
+      <li><i class="fa fa-pencil-square-o"></i>
+          
+            <a href="http://mypre.cn/categories/Linux就是这个范儿">Linux就是这个范儿</a>
+          
+      </li>
+      <li><i class="fa fa-comments-o"></i> <a href="http://mypre.cn/2014/09/01/1-1-4-e7-99-bb-e5-bd-95-e7-b3-bb-e7-bb-9f-e7-ac-ac-ef-bc-91-e7-ab-a0-e7-ac-ac-e4-b8-80-e6-ac-a1-e4-ba-b2-e5-af-86-e6-8e-a5-e8-a7-a6-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83#post-comment"><span class="disqus-comment-count" data-disqus-url="http://mypre.cn/2014/09/01/1-1-4-e7-99-bb-e5-bd-95-e7-b3-bb-e7-bb-9f-e7-ac-ac-ef-bc-91-e7-ab-a0-e7-ac-ac-e4-b8-80-e6-ac-a1-e4-ba-b2-e5-af-86-e6-8e-a5-e8-a7-a6-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83"></span> 评论</a></li>
+      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
+    </ul>
+    </header>
+    <div class="entry-content" itemprop="description">
+          
+              <p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	Linux与Windows有一个很大的不同就是很有可能你安装的Linux启动之后没有启动图形用户界面（刚刚安装完CentOS 6.4的人应该不会遇到这种情况）。这个时候你就必须得输入用户名和密码才能继续使用。即便你的Linux启动了图形界面，也很少有发行版让你能够自动登录系统。所以，你一定要搞清楚你的用户名和密码。虽然有人会觉得我这样提醒似乎有些弱智，但是的确有很多人忘记了给自己刚刚安装的Linux设置了什么密码。尽管本书会告诉你如何在这种情况下找回密码，但是在现在这个阶段，一旦有这种事情发生，那么你最好还是重新安装吧！</p>
+<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	Linux的用户被划分为根用户和普通用户两种。其中根用户是系统内置用户，用户名永远都是root，所以也叫root用户。Linux的root用户与Windows的administrator用户是一样的，都拥有系统的最高控制权。普通用户一般是用户自己定义的，所以没有什么特别的权限。大家在使用Windows的时候大多数都会选择直接使用administrator用户，这是非常不好的习惯，也是Windows下病毒泛滥的推手之一。在Linux下不要随意使用root用户，因为它的权限大到能够自杀的地步。所以很多发行版，比如我们推荐的CentOS在图形界面登录时，并不会提示有root用户存在。要使用root登录，必须明确输入这个用户名。</p>
+<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	我们提供这部分内容其实是为另外一些人准备的。当然，你可能就是其中一员。他们在安装Linux系统的时候，并没有给自己的系统添加任何普通用户，如果他/她不知道还有root的时候，可能死活都登录不了系统。大家不要笑，这样的大有人在。我在第一次使用Linux的时候就这样，结果反复安装了3遍都没正常进入系统，最后经&ldquo;高人&rdquo;指点才解决问题:_(</p>
+<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	当你正常登录Linux系统后，就可以尝试这个对你来说还十分新鲜的玩意儿了。如果你的电脑没有什么特殊的硬件的话，应该可以上网、聊天、看电影了&hellip;&hellip;</p>
+<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px; text-align: right;">
+	<a href="/?p=554" style="font-family: 宋体; font-size: 14px; line-height: 28px; text-indent: 28px;">Linux就是这个范儿 - 本书目录&nbsp;</a></p>
+
+          
+    </div>
+    <footer class="entry-footer clearfix">
+    <div class="post-love">
+      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
+      <span class="love-count">
+        0
+      </span></a>
+    </div>
+    <div class="post-more">
+      <a href="http://mypre.cn/2014/09/01/1-1-4-e7-99-bb-e5-bd-95-e7-b3-bb-e7-bb-9f-e7-ac-ac-ef-bc-91-e7-ab-a0-e7-ac-ac-e4-b8-80-e6-ac-a1-e4-ba-b2-e5-af-86-e6-8e-a5-e8-a7-a6-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83">Read More</a>
+    </div>
+  </footer>
+</article>
+
+
     
       <!-- this is post list -->
 
@@ -619,123 +668,6 @@ else
 
 
     
-      <!-- this is post list -->
-
-    <!-- this is post list -->
-<article class="post type-post status-publish format-standard">
-    <header class="entry-header">
-    <h2 class="entry-name">
-      <a href="http://mypre.cn/2014/08/28/e5-89-8d-e8-a8-80-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf" title="前言 - Linux就是这个范儿" rel="bookmark">前言 - Linux就是这个范儿</a>
-    </h2>
-    <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 最后编辑 2014-08-28</li>
-      <li><i class="fa fa-pencil-square-o"></i>
-          
-            <a href="http://mypre.cn/categories/Linux就是这个范儿">Linux就是这个范儿</a>
-          
-      </li>
-      <li><i class="fa fa-comments-o"></i> <a href="http://mypre.cn/2014/08/28/e5-89-8d-e8-a8-80-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf#post-comment"><span class="disqus-comment-count" data-disqus-url="http://mypre.cn/2014/08/28/e5-89-8d-e8-a8-80-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf"></span> 评论</a></li>
-      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
-    </ul>
-    </header>
-    <div class="entry-content" itemprop="description">
-          
-              <blockquote>
-<p>
-		《Linux就是这个范儿》本书内容源自淘宝技术大学的培训实战。由来自阿里巴巴集团的资深Linux系统专家赵鑫磊和同样来自阿里巴巴集团的支付宝网络技术有限公司的高级专家Jie Zhang（张洁）共同著写。本节为前言部分。
-	</p>
-</blockquote>
-<h3>
-	前言<br />
-</h3>
-<p>
-	　　有个OS名叫Linux，它的故事耐人追寻。</p>
-<p>
-	　　小小系统，众人追寻，相识相恋，从不伤心&hellip;&hellip;</p>
-<p>
-	　　赵鑫磊：Hi，Jie，有人找我出书了，不过我觉得我在网络这方面有些欠缺。我知道你在Linux平台上做过不少项目，特别是网络这方面。你能来帮我一下，我们一起来完成这本书好吗？</p>
-<p>
-	　　Jie Zhang：真的吗？那太棒了，虽然现在有关Linux的书不少，但是我相信经过这么多年的风风雨雨我一定能写出另一种味道。很乐意跟你合作。</p>
-<p>
-	　　赵鑫磊：太好了，有了你的参与，我们这本书的技术性会更强！</p>
-<p>
-	　　Jie Zhang：Linux无毒、免费和稳定是它备受推崇的原因。</p>
-<p>
-	　　赵鑫磊：无毒、免费和稳定还不够给力啊！我觉得知识的保值性才是最主要的。在Linux中有些知识几十年都没过时。</p>
-<p>
-	　　Jie Zhang：对，这样的知识的投资回报率很高。学好Linux，面对如FreeBSD、Solaris等系统，就不犯愁了。</p>
-<p>
-	　　赵鑫磊：看完我们这本书，其他书都是小儿科了。哈哈。</p>
-<p>
-	　　Jie Zhang：你的口气也太大了吧&hellip;&hellip;</p>
-<p>
-	　　赵鑫磊：哈哈，你得抱有这个希望，我们试着在这么做。</p>
-<p>
-	　　Jie Zhang：好吧。不想当厨师的女程序员不是好媳妇儿！</p>
-<p>
-	　　Jie Zhang：那这本书就不是一本工具书了，它是我们多年工作经验积累下的感悟。不管读者喜欢与否，这种感觉就在那里，不多不少，不离不弃。</p>
-<p>
-	　　赵鑫磊：对，我们这本书不是用于入门，不是工具书。它是传道、授业、解惑的。</p>
-<p>
-	　　Jie Zhang：我觉得还是初中级比较好。曲高和寡，不一定好。初级最好。</p>
-<p>
-	　　赵鑫磊：我们的角度已经决定了无法定位在初级。我们并不曲高，但我们也不是初级。我们是传道的！</p>
-<p>
-	　　Jie Zhang：这点我同意。我们要讲述Linux的精髓，而不是简单的入门。</p>
-<p>
-	　　赵鑫磊：读者需要反复地推敲书中的内容。就像很多很牛的大师写科普读物，简单几句话里却有透彻的大道理。我们分为三大部分写，基础篇、进阶篇和扩展篇。基础篇能了解Linux的基本特点，进阶篇则从文件系统、进程通讯和网络等更深层次去挖掘Linux的思想内涵，扩展篇则要给读者打开Linux图形和多媒体的缤纷世界。不同层次和需求的读者都可以从中找到自己感兴趣的东西。最重要的是，我们所讲述的每一章，都在谈论机制。</p>
-<p>
-	　　Jie Zhang：你说的机制是指什么？</p>
-<p>
-	　　赵鑫磊：机制就是很难改变的、必须要做的事情。</p>
-<p>
-	　　Jie Zhang：光谈机制还不够，要有实际案例支持，否则看了等于白看。</p>
-<p>
-	　　赵鑫磊：但是你觉得我们书中的内容看了等于白看吗？</p>
-<p>
-	　　Jie Zhang：当然没有白看。因为除了谈机制，我们还有方法和实践进行论证。</p>
-<p>
-	　　赵鑫磊：终于达成共识了。我们每一章都会介绍很多种机制，甚至这种机制引入的来龙去脉都会谈到，并且会简洁清楚地介绍一下现行的方法。就这么干！</p>
-<h3>
-	致谢<br />
-</h3>
-<p>
-	赵鑫磊：</p>
-<p>
-	　　首先要感谢我所在的公司&mdash;&mdash;阿里巴巴集团，它给了我一个能成为布道者的机会，让我成为淘宝技术大学的讲师。更要感谢原图灵的杨海玲编辑，是她找到我要将我的讲义整理出书，虽然你由于工作原因不能参与本书的出版工作，但是我很期待我们下次的合作。还要感谢我的妻子和儿子，是你们一直在我身边支持我，不抱怨我没有时间陪你们，让我能将大把的时间投入到写作之中。感谢中国Linux公社的网友们，因为你们的鼓励和期盼，让我有了莫大的勇气来完成这本书。</p>
-<p>
-	Jie Zhang：</p>
-<p>
-	　　首先要感谢我的好友卢海峰，本书最初的排版是他一点一点地调整的，很多图表也是他精心绘制的，我想说有你这样的朋友真好！还要感谢爸妈、老公和小女，没有你们在我身边一直给我打气，不会有提笔写作的我，也不会有本书的存在。要感谢的人还有我的朋友曹景海、胡小东、林啸和常雪峰，你们给我提出了不少宝贵的建议。</p>
-<h3>
-	联系方式<br />
-</h3>
-<p>
-	　　赵鑫磊邮箱：jagen.zhao@gmail.com</p>
-<p>
-	　　Jie Zhang邮箱：jie_joy_zhang@yahoo.com</p>
-<p>
-	　　MagicLinux交流群的群号：41334777</p>
-<p style="text-align: right;">
-	<a href="/?p=554" style="font-family: 宋体; font-size: 14px; line-height: 28px; text-align: right; text-indent: 28px;">Linux就是这个范儿 - 本书目录&nbsp;</a></p>
-
-          
-    </div>
-    <footer class="entry-footer clearfix">
-    <div class="post-love">
-      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
-      <span class="love-count">
-        0
-      </span></a>
-    </div>
-    <div class="post-more">
-      <a href="http://mypre.cn/2014/08/28/e5-89-8d-e8-a8-80-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf">Read More</a>
-    </div>
-  </footer>
-</article>
-
-
-    
     
         <div class="pagination clearfix">
             
@@ -933,7 +865,7 @@ else
           
           <li>
               <a class="catelink" href="http://mypre.cn/categories/Linux系统">
-                  Linux系统&nbsp;<span class="count">[11]</span>
+                  Linux系统&nbsp;<span class="count">[12]</span>
               </a>
           </li>
 

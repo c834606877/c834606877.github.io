@@ -5,9 +5,36 @@
     <description>这里是蓝冰的个人博客，记录着蓝冰的生活点滴.</description>
     <link>http://mypre.cn/</link>
     <atom:link href="http://mypre.cn/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 12 Apr 2016 14:28:21 +0800</pubDate>
-    <lastBuildDate>Tue, 12 Apr 2016 14:28:21 +0800</lastBuildDate>
+    <pubDate>Fri, 15 Apr 2016 10:51:41 +0800</pubDate>
+    <lastBuildDate>Fri, 15 Apr 2016 10:51:41 +0800</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
+    
+      <item>
+        <title>Open Here In Teminal From Nautilus</title>
+        <description>&lt;p&gt;Linux 下的文件管理器 nautilus  可以很容易在终端中打开通过命令&lt;/p&gt;
+&lt;pre&gt;[lanbing@LanBing-Laptop ~]$ nautilus .&lt;/pre&gt;
+&lt;p&gt;但是要想在 nautilus 中打开 Terminal 却很麻烦
+于是google了一下
+发现软件包：&lt;code&gt;nautilus-open-terminal&lt;/code&gt;
+功能如其名，果断：&lt;/p&gt;
+&lt;pre&gt;[lanbing@localhost ~]$ sudo dnf search  nautilus-open-terminal
+[sudo] password for lanbing: 
+Last metadata expiration check performed 1 day, 5:43:29 ago on Wed Apr 13 14:49:06 2016.
+===================== N/S Matched: nautilus-open-terminal ======================
+nautilus-open-terminal.x86_64 : Nautilus extension for an open terminal shortcut
+[lanbing@localhost ~]$ sudo dnf install nautilus-open-terminal -y
+&lt;/pre&gt;
+&lt;p&gt;安装后在 文件管理器 中右键 即可 方便打开 Terminal 了&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 14 Apr 2016 00:00:00 +0800</pubDate>
+        <link>http://mypre.cn/2016/04/14/open-here-in-terminal-from-nautilus</link>
+        <guid isPermaLink="true">http://mypre.cn/2016/04/14/open-here-in-terminal-from-nautilus</guid>
+        
+        
+        <category>Linux系统</category>
+        
+      </item>
     
       <item>
         <title>The Fourth Day, fix some small bugs</title>
@@ -320,56 +347,6 @@ Sidebar滚动固定box 单个box
         <pubDate>Sat, 26 Dec 2015 16:30:55 +0800</pubDate>
         <link>http://mypre.cn/2015/12/26/win7-e5-8a-a0-e5-9b-ba-e6-80-81-ef-bc-8c-e6-97-a0-e9-99-a8-e8-bf-81-e7-a7-bb-e5-90-8c-e6-97-b6-e6-94-b9-e4-b8-baefi-e5-90-af-e5-8a-a8</link>
         <guid isPermaLink="true">http://mypre.cn/2015/12/26/win7-e5-8a-a0-e5-9b-ba-e6-80-81-ef-bc-8c-e6-97-a0-e9-99-a8-e8-bf-81-e7-a7-bb-e5-90-8c-e6-97-b6-e6-94-b9-e4-b8-baefi-e5-90-af-e5-8a-a8</guid>
-        
-        
-        <category>Linux系统</category>
-        
-      </item>
-    
-      <item>
-        <title>转 Linux下关机命令的区别 （halt,poweroff,reboot,shutdown,init）</title>
-        <description>&lt;p class=&quot;wp-caption&quot;&gt;在linux下一些常用的关机/重启命令。&lt;/p&gt;
-&lt;p&gt;&lt;span style=&quot;font-size: large;&quot;&gt;1.shutdown&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span style=&quot;font-size: medium;&quot;&gt;    shutdown命令安全地将系统关机。&lt;/span&gt;&lt;br /&gt;
-&lt;span style=&quot;font-size: medium;&quot;&gt;     有些用户会使用直接断掉电源的方式来关闭linux，这是十分危险的。因为linux与windows不同，其后台运行着许多进程，所以强制关机可能会导 致进程的数据丢失﹐使系统处于不稳定的状态﹐甚至在有的系统中会损坏硬件设备。而在系统关机前使用shutdown命令﹐系统管理员会通知所有登录的用户 系统将要关闭。并且login指令会被冻结﹐即新的用户不能再登录。直接关机或者延迟一定的时间才关机都是可能的﹐还可能重启。这是由所有进程 〔process〕都会收到系统所送达的信号〔signal〕决定的。这让像vi之类的程序有时间储存目前正在编辑的文档﹐而像处理邮件〔mail〕和新 闻〔news〕的程序则可以正常地离开等等。&lt;/span&gt;&lt;br /&gt;
-&lt;span style=&quot;font-size: medium;&quot;&gt;      shutdown执行它的工作是送信号〔signal〕给init程序﹐要求它改变runlevel。Runlevel 0被用来停机〔halt〕﹐runlevel 6是用来重新激活〔reboot〕系统﹐而runlevel 1则是被用来让系统进入管理工作可以进行的状态﹔这是预设的﹐假定没有-h也没有-r参数给shutdown。要想了解在停机〔halt〕或者重新开机 〔reboot〕过程中做了哪些动作﹐你可以在这个文件/etc/inittab里看到这些runlevels相关的资料。&lt;/span&gt;&lt;/p&gt;
-&lt;!--more--&gt;
-&lt;p&gt;&lt;span style=&quot;font-size: medium;&quot;&gt;shutdown 参数说明:&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span style=&quot;font-size: medium;&quot;&gt;    [-t] 在改变到其它runlevel之前﹐告诉init多久以后关机。&lt;/span&gt;&lt;br /&gt;
-&lt;span style=&quot;font-size: medium;&quot;&gt;     [-r] 重启计算器。&lt;/span&gt;&lt;br /&gt;
-&lt;span style=&quot;font-size: medium;&quot;&gt;     [-k] 并不真正关机﹐只是送警告信号给每位登录者〔login〕。&lt;/span&gt;&lt;br /&gt;
-&lt;span style=&quot;font-size: medium;&quot;&gt;     [-h] 关机后关闭电源〔halt〕。&lt;/span&gt;&lt;br /&gt;
-&lt;span style=&quot;font-size: medium;&quot;&gt;     [-n] 不用init﹐而是自己来关机。不鼓励使用这个选项﹐而且该选项所产生的后果往往不总是你所预期得到的。&lt;/span&gt;&lt;br /&gt;
-&lt;span style=&quot;font-size: medium;&quot;&gt;     [-c] cancel current process取消目前正在执行的关机程序。所以这个选项当然没有时间参数﹐但是可以输入一个用来解释的讯息﹐而这信息将会送到每位使用者。&lt;/span&gt;&lt;br /&gt;
-&lt;span style=&quot;font-size: medium;&quot;&gt;     [-f] 在重启计算器〔reboot〕时忽略fsck。&lt;/span&gt;&lt;br /&gt;
-&lt;span style=&quot;font-size: medium;&quot;&gt;     [-F] 在重启计算器〔reboot〕时强迫fsck。&lt;/span&gt;&lt;br /&gt;
-&lt;span style=&quot;font-size: medium;&quot;&gt;     [-time] 设定关机〔shutdown〕前的时间。&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span style=&quot;font-size: medium;&quot;&gt;    例如：&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span style=&quot;font-size: medium;&quot;&gt;         ／sbin／shutdown －h now－－－－－立即关机；&lt;/span&gt;&lt;br /&gt;
-&lt;span style=&quot;font-size: medium;&quot;&gt; 　　／sbin／shutdown －h 20：49－－－－20：49分关机&lt;/span&gt;&lt;br /&gt;
-&lt;span style=&quot;font-size: medium;&quot;&gt; 　　／sbin／shutdown －h ＋10－－－－－10分钟后关机&lt;/span&gt;&lt;br /&gt;
-&lt;span style=&quot;font-size: medium;&quot;&gt; 　　／sbin／shutdown －r now －－－－－立即重启&lt;/span&gt;&lt;br /&gt;
-&lt;span style=&quot;font-size: medium;&quot;&gt; 　　／sbin／shutdown －r ＋10 ‘The system will reboot&#39;－－－－10分钟后系统重启并给每个登录用户发通知&lt;/span&gt;&lt;br /&gt;
-&lt;span style=&quot;font-size: medium;&quot;&gt; 　　／sbin／shutdown －k now ‘The system will reboot&#39;－－－－仅给每个登录用户发通知并不真关机&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span style=&quot;font-size: large;&quot;&gt;2.halt—-最简单的关机命令&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span style=&quot;font-size: medium;&quot;&gt;其实halt就是调用shutdown -h。halt执行时﹐杀死应用进程﹐执行sync系统调用﹐文件系统写操作完成后就会停止内核。&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span style=&quot;font-size: medium;&quot;&gt;参数说明:&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span style=&quot;font-size: medium;&quot;&gt;[-n] 防止sync系统调用﹐它用在用fsck修补根分区之后﹐以阻止内核用老版本的超级块〔superblock〕覆盖修补过的超级块。&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span style=&quot;font-size: medium;&quot;&gt;[-w] 并不是真正的重启或关机﹐只是写wtmp〔/var/log/wtmp〕纪录。&lt;/span&gt;&lt;br /&gt;
-&lt;span style=&quot;font-size: medium;&quot;&gt; [-d] 不写wtmp纪录〔已包含在选项[-n]中〕。&lt;/span&gt;&lt;br /&gt;
-&lt;span style=&quot;font-size: medium;&quot;&gt; [-f] 没有调用shutdown而强制关机或重启。&lt;/span&gt;&lt;br /&gt;
-&lt;span style=&quot;font-size: medium;&quot;&gt; [-i] 关机〔或重启〕前﹐关掉所有的网络接口。&lt;/span&gt;&lt;br /&gt;
-&lt;span style=&quot;font-size: medium;&quot;&gt; [-p] 该选项为缺省选项。就是关机时调用poweroff。&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span style=&quot;font-size: large;&quot;&gt;3.reboot&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span style=&quot;font-size: medium;&quot;&gt;reboot的工作过程差不多跟halt一样﹐不过它是引发主机重启﹐而halt是关机。它的参数与halt相差不多。&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span style=&quot;font-size: large;&quot;&gt;4.init&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span style=&quot;font-size: medium;&quot;&gt;init是所有进程的祖先﹐它的进程号始终为1﹐所以发送TERM信号给init会终止所有的用户进程﹑守护进程等。shutdown就是使用这种机制。 init定义了8个运行级别(runlevel)，init 0为关机﹐init1为重启。关于init可以长篇大论﹐这里就不再叙述。另外还有telinit命令可以改变init的运行级别﹐比如﹐telinit -iS可使系统进入单用户模式﹐并且得不到使用shutdown时的信息和等待时间。&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span style=&quot;font-size: large;&quot;&gt;5.poweroff&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span style=&quot;font-size: medium;&quot;&gt;关机,在多用户方式下(Runlevel 3)不建议使用.&lt;/span&gt;&lt;/p&gt;
-</description>
-        <pubDate>Mon, 21 Dec 2015 10:11:09 +0800</pubDate>
-        <link>http://mypre.cn/2015/12/21/e8-bd-ac-linux-e4-b8-8b-e5-85-b3-e6-9c-ba-e5-91-bd-e4-bb-a4-e7-9a-84-e5-8c-ba-e5-88-ab-ef-bc-88haltpoweroffrebootshutdowninit-ef-bc-89</link>
-        <guid isPermaLink="true">http://mypre.cn/2015/12/21/e8-bd-ac-linux-e4-b8-8b-e5-85-b3-e6-9c-ba-e5-91-bd-e4-bb-a4-e7-9a-84-e5-8c-ba-e5-88-ab-ef-bc-88haltpoweroffrebootshutdowninit-ef-bc-89</guid>
         
         
         <category>Linux系统</category>
