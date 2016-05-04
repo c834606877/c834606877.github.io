@@ -634,21 +634,24 @@ Sidebar滚动固定box 单个box
     </header>
     <div class="entry-content" itemprop="description">
           
-              <p>Linux 下的文件管理器 nautilus  可以很容易在终端中打开通过命令</p>
-<pre>[lanbing@LanBing-Laptop ~]$ nautilus .</pre>
-<p>但是要想在 nautilus 中打开 Terminal 却很麻烦
-于是google了一下
-发现软件包：<code>nautilus-open-terminal</code>
-功能如其名，果断：</p>
-<pre>[lanbing@localhost ~]$ sudo dnf search  nautilus-open-terminal
+              <p>Linux 下的文件管理器 nautilus 可以很容易在终端中打开通过命令</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>[lanbing@LanBing-Laptop ~]$ nautilus .
+</code></pre>
+</div>
+
+<p>但是要想在 nautilus 中打开 Terminal 却很麻烦 于是google了一下 发现软件包：nautilus-open-terminal 功能如其名，果断：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>[lanbing@localhost ~]$ sudo dnf search  nautilus-open-terminal
 [sudo] password for lanbing: 
 Last metadata expiration check performed 1 day, 5:43:29 ago on Wed Apr 13 14:49:06 2016.
 ===================== N/S Matched: nautilus-open-terminal ======================
 nautilus-open-terminal.x86_64 : Nautilus extension for an open terminal shortcut
 [lanbing@localhost ~]$ sudo dnf install nautilus-open-terminal -y
-</pre>
-<p>安装后在 文件管理器 中右键 即可 方便打开 Terminal 了</p>
+</code></pre>
+</div>
 
+<p>安装后在 文件管理器 中右键 即可 方便打开 Terminal 了</p>
 
           
     </div>
@@ -661,6 +664,106 @@ nautilus-open-terminal.x86_64 : Nautilus extension for an open terminal shortcut
     </div>
     <div class="post-more">
       <a href="http://mypre.cn/2016/04/14/open-here-in-terminal-from-nautilus">Read More</a>
+    </div>
+  </footer>
+</article>
+
+
+      
+    
+      <div class="box archive-meta" id="机械键盘，背光，Scroll开关，">
+        <h3 class="title-meta">Tag "机械键盘，背光，Scroll开关，":</h3>
+      </div>
+      
+        <!-- this is post list -->
+
+    <!-- this is post list -->
+<article class="post type-post status-publish format-standard">
+    <header class="entry-header">
+    <h2 class="entry-name">
+      <a href="http://mypre.cn/2016/05/04/toggle-backlight-by-use-scroll" title="在Linux下 使用Scroll键开关键盘背光灯" rel="bookmark">在Linux下 使用Scroll键开关键盘背光灯</a>
+    </h2>
+    <ul class="entry-meta">
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2016-05-04</li>
+      <li><i class="fa fa-pencil-square-o"></i>
+          
+            <a href="http://mypre.cn/categories/Linux系统">Linux系统</a>
+          
+            <a href="http://mypre.cn/categories/MCU">MCU</a>
+          
+      </li>
+      <li><i class="fa fa-comments-o"></i> <a href="http://mypre.cn/2016/05/04/toggle-backlight-by-use-scroll#post-comment"><span class="disqus-comment-count" data-disqus-url="http://mypre.cn/2016/05/04/toggle-backlight-by-use-scroll"></span> 评论</a></li>
+      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
+    </ul>
+    </header>
+    <div class="entry-content" itemprop="description">
+          
+              <p>花了4天半的时间鼓捣好了一个机械键盘，
+找了一个老外大牛写的stm32－based 键盘矩阵扫描器，改改装在了键盘上边
+dfu功能，移植在keil下没有被识别，估计一阵子也没有多少时间来折腾，暂时先用着，
+因为io口不够用，多区背光给改成了Scroll键开关，
+但是，发现 Scroll 键 在高版本linux下给屏蔽了，
+国内百度了半天没找到好的解决方案
+转到google 发现
+<a href="http://unix.stackexchange.com/questions/164245/why-is-the-scroll-lock-key-disabled-in-cinnamon-linux-xorg">Why is the Scroll Lock key disabled in Cinnamon/Linux/Xorg?</a>
+一文给出了详细的方法</p>
+
+<p>通过</p>
+<pre>xmodmap -pm</pre>
+<p>查看当前系统 mod键映射情况</p>
+<pre>[lanbing@LanBing-Laptop ~]$ xmodmap -pm
+xmodmap:  up to 4 keys per modifier, (keycodes in parentheses):
+
+shift       Shift_L (0x32),  Shift_R (0x3e)
+lock        Caps_Lock (0x42)
+control     Control_L (0x25),  Control_R (0x69)
+mod1        Alt_L (0x40),  Alt_R (0x6c),  Meta_L (0xcd)
+mod2        Num_Lock (0x4d)
+mod3
+mod4        Super_L (0x85),  Super_R (0x86),  Super_L (0xce),  Hyper_L (0xcf)
+mod5        ISO_Level3_Shift (0x5c),  Mode_switch (0xcb)</pre>
+
+<p>其中mod3 这行是空的
+通过这 条命令启用 Scroll Lock：</p>
+<pre>modmap -e "add mod3 = Scroll_Lock"</pre>
+
+<p>测试ok</p>
+
+<pre>[lanbing@LanBing-Laptop ~]$ xmodmap -pm
+xmodmap:  up to 4 keys per modifier, (keycodes in parentheses):
+
+shift       Shift_L (0x32),  Shift_R (0x3e)
+lock        Caps_Lock (0x42)
+control     Control_L (0x25),  Control_R (0x69)
+mod1        Alt_L (0x40),  Alt_R (0x6c),  Meta_L (0xcd)
+mod2        Num_Lock (0x4d)
+mod3        Scroll_Lock (0x4e)
+mod4        Super_L (0x85),  Super_R (0x86),  Super_L (0xce),  Hyper_L (0xcf)
+mod5        ISO_Level3_Shift (0x5c),  Mode_switch (0xcb)
+</pre>
+
+<p>让它每回开机都自动运行，
+将这行放入~/.Xmodmap中</p>
+
+<pre>add mod3 = Scroll_Lock</pre>
+<p>或者</p>
+<pre>cd ~
+echo &gt;.Xmodmap "add mod3 = Scroll_Lock"</pre>
+<p>or</p>
+<pre>cd ~
+echo &gt;&gt; .bashrc 'modmap -e "add mod3 = Scroll_Lock" '</pre>
+
+          
+    </div>
+    <footer class="entry-footer clearfix">
+    <div class="post-love">
+      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
+      <span class="love-count">
+        0
+      </span></a>
+    </div>
+    <div class="post-more">
+      <a href="http://mypre.cn/2016/05/04/toggle-backlight-by-use-scroll">Read More</a>
     </div>
   </footer>
 </article>
@@ -703,6 +806,10 @@ nautilus-open-terminal.x86_64 : Nautilus extension for an open terminal shortcut
         
             <a class="taglink" href="http://mypre.cn/tag/#nautilus" data-target-cate="#nautilus">
                 nautilus
+            </a>
+        
+            <a class="taglink" href="http://mypre.cn/tag/#机械键盘，背光，Scroll开关，" data-target-cate="#机械键盘，背光，Scroll开关，">
+                机械键盘，背光，Scroll开关，
             </a>
         
     </div>

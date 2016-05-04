@@ -94,6 +94,62 @@ else
 <article class="post type-post status-publish format-standard">
     <header class="entry-header">
     <h2 class="entry-name">
+      <a href="http://mypre.cn/2015/11/14/add-sublime-text-to-your-context-menu-on-right-click" title="Add Sublime Text to your context menu on right click" rel="bookmark">Add Sublime Text to your context menu on right click</a>
+    </h2>
+    <ul class="entry-meta">
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2015-11-14</li>
+      <li><i class="fa fa-pencil-square-o"></i>
+          
+            <a href="http://mypre.cn/categories/应用技巧">应用技巧</a>
+          
+      </li>
+      <li><i class="fa fa-comments-o"></i> <a href="http://mypre.cn/2015/11/14/add-sublime-text-to-your-context-menu-on-right-click#post-comment"><span class="disqus-comment-count" data-disqus-url="http://mypre.cn/2015/11/14/add-sublime-text-to-your-context-menu-on-right-click"></span> 评论</a></li>
+      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
+    </ul>
+    </header>
+    <div class="entry-content" itemprop="description">
+          
+              <p>When opening a text file, you may be used to right click on the file to be opened and then choose the application which can open the file from the context menu. On the context menu, you may see a menu item like "Edit with Notepad++".</p>
+<p>Nowadays many people especially programmers like to use Sublime Text, but by default this application will not show on the context menu when you right click on a file. There is now frequent request to add this application to the context menu. Here we show a simple batch file which can help you achieve this.</p>
+<p>Below is the batch code :</p>
+<pre>@echo off
+SET sublimeTextPath=C:\Program Files\Sublime Text 3\sublime_text.exe
+
+REM ADD REGISTRY KEYS
+@reg add "HKEY_CLASSES_ROOT\*\shell\Open with Sublime Text 3"         /t REG_SZ /v "" /d "Open with Sublime Text 3"   /f
+@reg add "HKEY_CLASSES_ROOT\*\shell\Open with Sublime Text 3"         /t REG_EXPAND_SZ /v "Icon" /d "%sublimeTextPath%,0" /f
+@reg add "HKEY_CLASSES_ROOT\*\shell\Open with Sublime Text 3\command" /t REG_SZ /v "" /d "%sublimeTextPath% \"%%1\"" /f
+
+pause</pre>
+<p>You just need to copy above code into the text editor you like and save it as a batch file. Note, please change the sublimeTextPath to the sublime_text.exe on your system. Then, what you need to do is right click on the batch file you saved and "Run as administrator" and it should show below:</p>
+<p><img class="aligncenter" src="http://www.pixelstech.net/article/images/command-output.png" alt="" /></p>
+<p>This means you have successfully added Sublime Text to your context menu. Then you can verify this by right clicking on any text file and you should see below:</p>
+<p><img class="aligncenter" src="http://www.pixelstech.net/article/images/context-menu-sublime-text.PNG" alt="" /></p>
+<p>Please note that you need to run the batch file as administrator, otherwise you will see errors on the command line console.</p>
+
+          
+    </div>
+    <footer class="entry-footer clearfix">
+    <div class="post-love">
+      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
+      <span class="love-count">
+        0
+      </span></a>
+    </div>
+    <div class="post-more">
+      <a href="http://mypre.cn/2015/11/14/add-sublime-text-to-your-context-menu-on-right-click">Read More</a>
+    </div>
+  </footer>
+</article>
+
+
+    
+      <!-- this is post list -->
+
+    <!-- this is post list -->
+<article class="post type-post status-publish format-standard">
+    <header class="entry-header">
+    <h2 class="entry-name">
       <a href="http://mypre.cn/2015/11/14/vim-save-file-in-read-only-mode-without-restart-your-work" title="Vim: Save file in read-only mode without restart your work" rel="bookmark">Vim: Save file in read-only mode without restart your work</a>
     </h2>
     <ul class="entry-meta">
@@ -460,116 +516,6 @@ sudo alsa force-reload </pre>
 
 
     
-      <!-- this is post list -->
-
-    <!-- this is post list -->
-<article class="post type-post status-publish format-standard">
-    <header class="entry-header">
-    <h2 class="entry-name">
-      <a href="http://mypre.cn/2014/10/05/1-4-7-e3-80-80-e8-87-b4-e5-91-bd-e7-9a-84linux-e5-91-bd-e4-bb-a4-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf" title="1.4.7　致命的Linux命令 – Linux就是这个范儿" rel="bookmark">1.4.7　致命的Linux命令 – Linux就是这个范儿</a>
-    </h2>
-    <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 最后编辑 2014-10-05</li>
-      <li><i class="fa fa-pencil-square-o"></i>
-          
-            <a href="http://mypre.cn/categories/Linux就是这个范儿">Linux就是这个范儿</a>
-          
-      </li>
-      <li><i class="fa fa-comments-o"></i> <a href="http://mypre.cn/2014/10/05/1-4-7-e3-80-80-e8-87-b4-e5-91-bd-e7-9a-84linux-e5-91-bd-e4-bb-a4-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf#post-comment"><span class="disqus-comment-count" data-disqus-url="http://mypre.cn/2014/10/05/1-4-7-e3-80-80-e8-87-b4-e5-91-bd-e7-9a-84linux-e5-91-bd-e4-bb-a4-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf"></span> 评论</a></li>
-      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
-    </ul>
-    </header>
-    <div class="entry-content" itemprop="description">
-          
-              <p style="text-indent: 2em;">
-	别以为我是在开玩笑。有些Linux命令轻则造成数据丢失，重则导致系统瘫痪。你看这位同学漫不经心，以root身份敲入了rm -rf /，强制删除&nbsp;/&nbsp;目录下的所有文件，这代价可是很惨痛的（相当于系统自杀）。</p>
-<p style="text-indent: 2em;">
-	还有一个很好玩的例子，我用旺旺聊天的形式给你讲述：</p>
-<p style="text-indent: 2em;">
-	小雪2012-08-25 15:28:10：&nbsp;在你Linux系统上输入这串东西:(){ :|:&amp; };</p>
-<p style="text-indent: 2em;">
-	灰猫2012-08-25 15:28:34：&nbsp;长得这么怪？</p>
-<p style="text-indent: 2em;">
-	小雪2012-08-25 15:28:41：&nbsp;试试看看是什么结果。谢了。</p>
-<p style="text-indent: 2em;">
-	灰猫2012-08-25 15:28:44：&nbsp;不好了。终端一直出现下面的提示：</p>
-<pre>
-	-bash: fork: retry: Resource temporarily unavailable
-	-bash: fork: retry: Resource temporarily unavailable
-	-bash: fork: retry: Resource temporarily unavailable
-	-bash: fork: retry: Resource temporarily unavailable
-	-bash: fork: retry: Resource temporarily unavailable
-	-bash: fork: retry: Resource temporarily unavailable
-	-bash: fork: retry: Resource temporarily unavailable
-	-bash: fork: retry: Resource temporarily unavailable
-	-bash: fork: retry: Resource temporarily unavailable
-</pre>
-<p style="text-indent: 2em;">
-	很惨啊。</p>
-<p style="text-indent: 2em;">
-	小雪2012-08-25 15:29:02：&nbsp;哈哈，真的很惨。</p>
-<p style="text-indent: 2em;">
-	灰猫2012-08-25 15:29:21：&nbsp;Ctrl+C都是不管用的。</p>
-<p style="text-indent: 2em;">
-	小雪2012-08-25 15:29:21：&nbsp;即便退出这个终端也是没有用的。</p>
-<p style="text-indent: 2em;">
-	灰猫2012-08-25 15:29:31：&nbsp;最后全都是这个。</p>
-<pre>
--bash: pipe error: Cannot allocate memory -bash: pipe error: Cannot allocate memory
-</pre></p>
-<p style="text-indent: 2em;">
-	root用户搞不定，因为killall的速度受到了影响，只能重启机器了。</p>
-<p style="text-indent: 2em;">
-	小雪2012-08-25 15:30:15：这就是著名fork炸弹。看来危害不小。</p>
-<p style="text-indent: 2em;">
-	灰猫2012-08-25 15:30:34：别幸灾乐祸了。能告诉我什么原理吗？</p>
-<p style="text-indent: 2em;">
-	小雪2012-08-25 15:31:43：&nbsp;把:(){ :|:&amp; };写成下面格式你就看懂了</p>
-<pre>
-:()
-{
-	:|:&amp;
-};
-</pre>
-<p style="text-indent: 2em;">
-	灰猫2012-08-25 15:32:13：&nbsp;明白了。&ldquo;:&rdquo;函数里面定义操作是后台执行&ldquo;:&rdquo;函数重定向到&ldquo;:&rdquo;函数，&ldquo;:&rdquo;函数的递归调用。</p>
-<p style="text-indent: 2em;">
-	小雪2012-08-25 15:32:15：&nbsp;是滴。系统执行海量的进程直到死亡。</p>
-<p style="text-indent: 2em;">
-	灰猫2012-08-25 15:32:43：&nbsp;这样的代码不好分析，主要是因为不清楚&ldquo;:&rdquo;是可以做为函数名的。</p>
-<p style="text-indent: 2em;">
-	小雪2012-08-25 15:33:12：&nbsp;Quite right。另外为了防止这个问题的出现，要限制赋予root权限的用户数量以及单用户的进程数。</p>
-<p style="text-indent: 2em;">
-	灰猫2012-08-25 15:34:12：&nbsp;哈哈。是的，拥有root权限的用户操作不慎很容易给系统造成破坏。</p>
-<p style="text-indent: 2em;">
-	故事还没有结束。如何限制用户的进程数呢？我们可以在/etc/security/limits.conf文件末尾加入一行：</p>
-<pre>
-	*&nbsp;&nbsp;&nbsp;hard&nbsp;&nbsp;&nbsp;nproc&nbsp;&nbsp;200
-</pre>
-<p style="text-indent: 2em;">
-	限制用户的进程数为200，但root用户不会受这个限制。</p>
-<p style="text-indent: 2em;">
-	这个命令行还涉及shell脚本编程，我们将在后面的章节来学习。</p>
-<p style="text-indent: 2em; text-align: right;">
-	<a href="http://hook.aliapp.com/?p=554" style="color: rgb(51, 51, 51); text-decoration: none; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(51, 51, 51); font-size: 14px; text-align: right; text-indent: 28px; font-family: 宋体; line-height: 28px;">Linux就是这个范儿 &ndash; 本书目录&nbsp;</a></p>
-
-          
-    </div>
-    <footer class="entry-footer clearfix">
-    <div class="post-love">
-      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
-      <span class="love-count">
-        0
-      </span></a>
-    </div>
-    <div class="post-more">
-      <a href="http://mypre.cn/2014/10/05/1-4-7-e3-80-80-e8-87-b4-e5-91-bd-e7-9a-84linux-e5-91-bd-e4-bb-a4-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf">Read More</a>
-    </div>
-  </footer>
-</article>
-
-
-    
     
         <div class="pagination clearfix">
             
@@ -755,7 +701,7 @@ sudo alsa force-reload </pre>
           
           <li>
               <a class="catelink" href="http://mypre.cn/categories/Linux系统">
-                  Linux系统&nbsp;<span class="count">[12]</span>
+                  Linux系统&nbsp;<span class="count">[13]</span>
               </a>
           </li>
 
@@ -770,6 +716,13 @@ sudo alsa force-reload </pre>
           <li>
               <a class="catelink" href="http://mypre.cn/categories/jekyll">
                   jekyll&nbsp;<span class="count">[1]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="http://mypre.cn/categories/MCU">
+                  MCU&nbsp;<span class="count">[1]</span>
               </a>
           </li>
 
@@ -808,6 +761,10 @@ sudo alsa force-reload </pre>
         
             <a class="taglink" href="http://mypre.cn/tag/#nautilus" data-target-cate="#nautilus">
                 nautilus
+            </a>
+        
+            <a class="taglink" href="http://mypre.cn/tag/#机械键盘，背光，Scroll开关，" data-target-cate="#机械键盘，背光，Scroll开关，">
+                机械键盘，背光，Scroll开关，
             </a>
         
     </div>

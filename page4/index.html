@@ -94,6 +94,116 @@ else
 <article class="post type-post status-publish format-standard">
     <header class="entry-header">
     <h2 class="entry-name">
+      <a href="http://mypre.cn/2014/10/05/1-4-7-e3-80-80-e8-87-b4-e5-91-bd-e7-9a-84linux-e5-91-bd-e4-bb-a4-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf" title="1.4.7　致命的Linux命令 – Linux就是这个范儿" rel="bookmark">1.4.7　致命的Linux命令 – Linux就是这个范儿</a>
+    </h2>
+    <ul class="entry-meta">
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2014-10-05</li>
+      <li><i class="fa fa-pencil-square-o"></i>
+          
+            <a href="http://mypre.cn/categories/Linux就是这个范儿">Linux就是这个范儿</a>
+          
+      </li>
+      <li><i class="fa fa-comments-o"></i> <a href="http://mypre.cn/2014/10/05/1-4-7-e3-80-80-e8-87-b4-e5-91-bd-e7-9a-84linux-e5-91-bd-e4-bb-a4-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf#post-comment"><span class="disqus-comment-count" data-disqus-url="http://mypre.cn/2014/10/05/1-4-7-e3-80-80-e8-87-b4-e5-91-bd-e7-9a-84linux-e5-91-bd-e4-bb-a4-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf"></span> 评论</a></li>
+      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
+    </ul>
+    </header>
+    <div class="entry-content" itemprop="description">
+          
+              <p style="text-indent: 2em;">
+	别以为我是在开玩笑。有些Linux命令轻则造成数据丢失，重则导致系统瘫痪。你看这位同学漫不经心，以root身份敲入了rm -rf /，强制删除&nbsp;/&nbsp;目录下的所有文件，这代价可是很惨痛的（相当于系统自杀）。</p>
+<p style="text-indent: 2em;">
+	还有一个很好玩的例子，我用旺旺聊天的形式给你讲述：</p>
+<p style="text-indent: 2em;">
+	小雪2012-08-25 15:28:10：&nbsp;在你Linux系统上输入这串东西:(){ :|:&amp; };</p>
+<p style="text-indent: 2em;">
+	灰猫2012-08-25 15:28:34：&nbsp;长得这么怪？</p>
+<p style="text-indent: 2em;">
+	小雪2012-08-25 15:28:41：&nbsp;试试看看是什么结果。谢了。</p>
+<p style="text-indent: 2em;">
+	灰猫2012-08-25 15:28:44：&nbsp;不好了。终端一直出现下面的提示：</p>
+<pre>
+	-bash: fork: retry: Resource temporarily unavailable
+	-bash: fork: retry: Resource temporarily unavailable
+	-bash: fork: retry: Resource temporarily unavailable
+	-bash: fork: retry: Resource temporarily unavailable
+	-bash: fork: retry: Resource temporarily unavailable
+	-bash: fork: retry: Resource temporarily unavailable
+	-bash: fork: retry: Resource temporarily unavailable
+	-bash: fork: retry: Resource temporarily unavailable
+	-bash: fork: retry: Resource temporarily unavailable
+</pre>
+<p style="text-indent: 2em;">
+	很惨啊。</p>
+<p style="text-indent: 2em;">
+	小雪2012-08-25 15:29:02：&nbsp;哈哈，真的很惨。</p>
+<p style="text-indent: 2em;">
+	灰猫2012-08-25 15:29:21：&nbsp;Ctrl+C都是不管用的。</p>
+<p style="text-indent: 2em;">
+	小雪2012-08-25 15:29:21：&nbsp;即便退出这个终端也是没有用的。</p>
+<p style="text-indent: 2em;">
+	灰猫2012-08-25 15:29:31：&nbsp;最后全都是这个。</p>
+<pre>
+-bash: pipe error: Cannot allocate memory -bash: pipe error: Cannot allocate memory
+</pre></p>
+<p style="text-indent: 2em;">
+	root用户搞不定，因为killall的速度受到了影响，只能重启机器了。</p>
+<p style="text-indent: 2em;">
+	小雪2012-08-25 15:30:15：这就是著名fork炸弹。看来危害不小。</p>
+<p style="text-indent: 2em;">
+	灰猫2012-08-25 15:30:34：别幸灾乐祸了。能告诉我什么原理吗？</p>
+<p style="text-indent: 2em;">
+	小雪2012-08-25 15:31:43：&nbsp;把:(){ :|:&amp; };写成下面格式你就看懂了</p>
+<pre>
+:()
+{
+	:|:&amp;
+};
+</pre>
+<p style="text-indent: 2em;">
+	灰猫2012-08-25 15:32:13：&nbsp;明白了。&ldquo;:&rdquo;函数里面定义操作是后台执行&ldquo;:&rdquo;函数重定向到&ldquo;:&rdquo;函数，&ldquo;:&rdquo;函数的递归调用。</p>
+<p style="text-indent: 2em;">
+	小雪2012-08-25 15:32:15：&nbsp;是滴。系统执行海量的进程直到死亡。</p>
+<p style="text-indent: 2em;">
+	灰猫2012-08-25 15:32:43：&nbsp;这样的代码不好分析，主要是因为不清楚&ldquo;:&rdquo;是可以做为函数名的。</p>
+<p style="text-indent: 2em;">
+	小雪2012-08-25 15:33:12：&nbsp;Quite right。另外为了防止这个问题的出现，要限制赋予root权限的用户数量以及单用户的进程数。</p>
+<p style="text-indent: 2em;">
+	灰猫2012-08-25 15:34:12：&nbsp;哈哈。是的，拥有root权限的用户操作不慎很容易给系统造成破坏。</p>
+<p style="text-indent: 2em;">
+	故事还没有结束。如何限制用户的进程数呢？我们可以在/etc/security/limits.conf文件末尾加入一行：</p>
+<pre>
+	*&nbsp;&nbsp;&nbsp;hard&nbsp;&nbsp;&nbsp;nproc&nbsp;&nbsp;200
+</pre>
+<p style="text-indent: 2em;">
+	限制用户的进程数为200，但root用户不会受这个限制。</p>
+<p style="text-indent: 2em;">
+	这个命令行还涉及shell脚本编程，我们将在后面的章节来学习。</p>
+<p style="text-indent: 2em; text-align: right;">
+	<a href="http://hook.aliapp.com/?p=554" style="color: rgb(51, 51, 51); text-decoration: none; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(51, 51, 51); font-size: 14px; text-align: right; text-indent: 28px; font-family: 宋体; line-height: 28px;">Linux就是这个范儿 &ndash; 本书目录&nbsp;</a></p>
+
+          
+    </div>
+    <footer class="entry-footer clearfix">
+    <div class="post-love">
+      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
+      <span class="love-count">
+        0
+      </span></a>
+    </div>
+    <div class="post-more">
+      <a href="http://mypre.cn/2014/10/05/1-4-7-e3-80-80-e8-87-b4-e5-91-bd-e7-9a-84linux-e5-91-bd-e4-bb-a4-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf">Read More</a>
+    </div>
+  </footer>
+</article>
+
+
+    
+      <!-- this is post list -->
+
+    <!-- this is post list -->
+<article class="post type-post status-publish format-standard">
+    <header class="entry-header">
+    <h2 class="entry-name">
       <a href="http://mypre.cn/2014/10/05/1-4-6-e3-80-80-e8-81-94-e6-9c-ba-e5-b8-ae-e5-8a-a9-man-e5-be-88-e9-9d-a0-e8-b0-b1-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf" title="1.4.6　联机帮助——man很靠谱 – Linux就是这个范儿" rel="bookmark">1.4.6　联机帮助——man很靠谱 – Linux就是这个范儿</a>
     </h2>
     <ul class="entry-meta">
@@ -837,55 +947,6 @@ int main(intargc, char ** argv) {
 
 
     
-      <!-- this is post list -->
-
-    <!-- this is post list -->
-<article class="post type-post status-publish format-standard">
-    <header class="entry-header">
-    <h2 class="entry-name">
-      <a href="http://mypre.cn/2014/10/05/1-3-4-e3-80-80lxde-e6-9b-b4-e8-bd-bb-ef-bc-8c-e5-90-8c-e6-a0-b7-e7-b2-be-e6-82-8d-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf" title="1.3.4　LXDE——更轻，同样精悍 – Linux就是这个范儿" rel="bookmark">1.3.4　LXDE——更轻，同样精悍 – Linux就是这个范儿</a>
-    </h2>
-    <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 最后编辑 2014-10-05</li>
-      <li><i class="fa fa-pencil-square-o"></i>
-          
-            <a href="http://mypre.cn/categories/Linux就是这个范儿">Linux就是这个范儿</a>
-          
-      </li>
-      <li><i class="fa fa-comments-o"></i> <a href="http://mypre.cn/2014/10/05/1-3-4-e3-80-80lxde-e6-9b-b4-e8-bd-bb-ef-bc-8c-e5-90-8c-e6-a0-b7-e7-b2-be-e6-82-8d-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf#post-comment"><span class="disqus-comment-count" data-disqus-url="http://mypre.cn/2014/10/05/1-3-4-e3-80-80lxde-e6-9b-b4-e8-bd-bb-ef-bc-8c-e5-90-8c-e6-a0-b7-e7-b2-be-e6-82-8d-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf"></span> 评论</a></li>
-      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
-    </ul>
-    </header>
-    <div class="entry-content" itemprop="description">
-          
-              <p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
-	如果对小巧精悍的桌面环境很有爱的话，那么LXDE则是另外一个十分值得推荐的选择。如果你是一个民族主义者，那么一定会十分喜爱LXDE，因为它完全是我们中国人开发的，虽然他们都是来自台湾省（这是我国领土不可分割的部分）。</p>
-<p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
-	LXDE相对于前面三个桌面环境会显得相当地年轻。它在2006年还只是一个文件管理器，后来才慢慢发展成为一个功能齐全的桌面环境。虽然LXDE是2006年的东西，但是它对<a class="keylink" href="http://www.2cto.com/os/" style="color: rgb(51, 51, 51); text-decoration: none;" target="_blank">系统</a>的要求却低得惊人，甚至在1999年的老电脑上不用3D加速也能流畅地运行。所以，在上网本、MID等低功耗移动电脑上拥有比较广泛的应用。这也十分对得起它的名字&mdash;&mdash;Lightweight X11 Desktop Environment，轻量级X11桌面环境，简称LXDE。</p>
-<p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
-	LXDE与前面三个桌面环境不同，它没有自己开发WM，而是选用了Openbox做为默认WM。这种选择使得它不必重新造轮子，还始终能够保持十分轻量。而且Openbox本身也是十分轻量的。这两者的强强组合，促成了LXDE的无比强大。其实在Linux世界，你所见到的大多数复杂软件<a class="keylink" href="http://www.2cto.com/os/" style="color: rgb(51, 51, 51); text-decoration: none;" target="_blank">系统</a>，都是这种强强组合的结果，像KDE、GNOME、XFCE这样的一应俱全的软件套件是非常罕见的。</p>
-<p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
-	LXDE同样是采用GTK+开发的，由此可见GTK+在开源图形领域的地位是多么地重要。单从这几方面的应用，几乎就可以让初学者确定到底应该学些什么了。但是我更加喜欢Qt，至于具体是为什么，也就是萝卜青菜的差别。</p>
-<p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px; text-align: right;">
-	<a href="http://hook.aliapp.com/?p=554" style="color: rgb(51, 51, 51); text-decoration: none; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(51, 51, 51); font-size: 14px; text-align: right; background-color: rgb(255, 255, 255); font-family: 宋体; line-height: 28px; text-indent: 28px;">Linux就是这个范儿 &ndash; 本书目录&nbsp;</a></p>
-
-          
-    </div>
-    <footer class="entry-footer clearfix">
-    <div class="post-love">
-      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
-      <span class="love-count">
-        0
-      </span></a>
-    </div>
-    <div class="post-more">
-      <a href="http://mypre.cn/2014/10/05/1-3-4-e3-80-80lxde-e6-9b-b4-e8-bd-bb-ef-bc-8c-e5-90-8c-e6-a0-b7-e7-b2-be-e6-82-8d-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf">Read More</a>
-    </div>
-  </footer>
-</article>
-
-
-    
     
         <div class="pagination clearfix">
             
@@ -1075,7 +1136,7 @@ int main(intargc, char ** argv) {
           
           <li>
               <a class="catelink" href="http://mypre.cn/categories/Linux系统">
-                  Linux系统&nbsp;<span class="count">[12]</span>
+                  Linux系统&nbsp;<span class="count">[13]</span>
               </a>
           </li>
 
@@ -1090,6 +1151,13 @@ int main(intargc, char ** argv) {
           <li>
               <a class="catelink" href="http://mypre.cn/categories/jekyll">
                   jekyll&nbsp;<span class="count">[1]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="http://mypre.cn/categories/MCU">
+                  MCU&nbsp;<span class="count">[1]</span>
               </a>
           </li>
 
@@ -1128,6 +1196,10 @@ int main(intargc, char ** argv) {
         
             <a class="taglink" href="http://mypre.cn/tag/#nautilus" data-target-cate="#nautilus">
                 nautilus
+            </a>
+        
+            <a class="taglink" href="http://mypre.cn/tag/#机械键盘，背光，Scroll开关，" data-target-cate="#机械键盘，背光，Scroll开关，">
+                机械键盘，背光，Scroll开关，
             </a>
         
     </div>

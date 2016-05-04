@@ -733,6 +733,7 @@ blockquote cite a {
 .post-more a {
 	color: #47C2DC;
 	border: 1px solid #47C2DC;
+	word-wrap: break-word;
 /*	color: #bbb;
 	border: 1px solid #bbb;*/
 }
