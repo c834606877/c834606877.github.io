@@ -2,26 +2,81 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Iziy MyPress - MyPre.Cn</title>
-    <description>这里是蓝冰的个人博客，记录着蓝冰的生活点滴.</description>
+    <description>这里是Iziy/蓝冰的个人博客，记录着Iziy/蓝冰的生活点滴.</description>
     <link>http://mypre.cn/</link>
     <atom:link href="http://mypre.cn/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 04 May 2016 13:17:06 +0800</pubDate>
-    <lastBuildDate>Wed, 04 May 2016 13:17:06 +0800</lastBuildDate>
+    <pubDate>Sat, 14 May 2016 16:08:06 +0800</pubDate>
+    <lastBuildDate>Sat, 14 May 2016 16:08:06 +0800</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
     
       <item>
-        <title>在Linux下 使用Scroll键开关键盘背光灯</title>
-        <description>&lt;p&gt;花了4天半的时间鼓捣好了一个机械键盘，
-找了一个老外大牛写的stm32－based 键盘矩阵扫描器，改改装在了键盘上边
-dfu功能，移植在keil下没有被识别，估计一阵子也没有多少时间来折腾，暂时先用着，
-因为io口不够用，多区背光给改成了Scroll键开关，
-但是，发现 Scroll 键 在高版本linux下给屏蔽了，
-国内百度了半天没找到好的解决方案
-转到google 发现
-&lt;a href=&quot;http://unix.stackexchange.com/questions/164245/why-is-the-scroll-lock-key-disabled-in-cinnamon-linux-xorg&quot;&gt;Why is the Scroll Lock key disabled in Cinnamon/Linux/Xorg?&lt;/a&gt;
-一文给出了详细的方法&lt;/p&gt;
+        <title>卧榻将息，辗转之思</title>
+        <description>&lt;p&gt;&lt;img src=&quot;/post_res/abfaa40egx6BSi1xx0652&amp;amp;690.jpg&quot; alt=&quot;路漫漫&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;通过&lt;/p&gt;
+&lt;p&gt;入学之期，焉已三年，&lt;/p&gt;
+
+&lt;p&gt;情情景景，历历在目，&lt;/p&gt;
+
+&lt;p&gt;浮心年华，酒醉酩酊，&lt;/p&gt;
+
+&lt;p&gt;学之习之，聚之散之，&lt;/p&gt;
+
+&lt;p&gt;絮事繁多，忙忙之为。&lt;/p&gt;
+
+&lt;p&gt;今轻年已去，清心求学，&lt;/p&gt;
+
+&lt;p&gt;一心一意，无欲它思，&lt;/p&gt;
+
+&lt;p&gt;竟不想今时何日。&lt;/p&gt;
+
+&lt;p&gt;忆往昔年，&lt;/p&gt;
+
+&lt;p&gt;高中之季，意气风发，&lt;/p&gt;
+
+&lt;p&gt;夙兴夜寐，进士及第，&lt;/p&gt;
+
+&lt;p&gt;时过境迁，期期三年。&lt;/p&gt;
+
+&lt;p&gt;今朝之举，黄金榜上，&lt;/p&gt;
+
+&lt;p&gt;既无愧于心，何须论得丧。&lt;/p&gt;
+
+&lt;p&gt;夜明风清，记之感慨。&lt;/p&gt;
+
+&lt;p&gt;——蓝记&lt;/p&gt;
+</description>
+        <pubDate>Fri, 13 May 2016 00:00:00 +0800</pubDate>
+        <link>http://mypre.cn/2016/05/13/sleep-diary</link>
+        <guid isPermaLink="true">http://mypre.cn/2016/05/13/sleep-diary</guid>
+        
+        <category>心情日记，生活随笔</category>
+        
+        
+        <category>生活随笔</category>
+        
+        <category>心情日记</category>
+        
+      </item>
+    
+      <item>
+        <title>在Linux下 使用Scroll键开关键盘背光灯</title>
+        <description>&lt;p&gt;花了4天半的时间鼓捣好了一个机械键盘，&lt;/p&gt;
+
+&lt;p&gt;找了一个老外大牛写的stm32－based 键盘矩阵扫描器，改改装在了键盘上边&lt;/p&gt;
+
+&lt;p&gt;dfu功能，移植在keil下没有被识别，估计一阵子也没有多少时间来折腾，暂时先用着，&lt;/p&gt;
+
+&lt;p&gt;因为io口不够用，多区背光给改成了Scroll键开关，&lt;/p&gt;
+
+&lt;p&gt;但是，发现 Scroll 键 在高版本linux下给屏蔽了，&lt;/p&gt;
+
+&lt;p&gt;国内百度了半天没找到好的解决方案&lt;/p&gt;
+
+&lt;p&gt;转到google 发现
+&lt;a href=&quot;http://unix.stackexchange.com/questions/164245/why-is-the-scroll-lock-key-disabled-in-cinnamon-linux-xorg&quot;&gt;Why is the Scroll Lock key disabled in Cinnamon/Linux/Xorg?&lt;/a&gt;
+一文给出了详细的方法
+&lt;!--more--&gt;
+通过&lt;/p&gt;
 &lt;pre&gt;xmodmap -pm&lt;/pre&gt;
 &lt;p&gt;查看当前系统 mod键映射情况&lt;/p&gt;
 &lt;pre&gt;[lanbing@LanBing-Laptop ~]$ xmodmap -pm
@@ -65,6 +120,18 @@ echo &amp;gt;.Xmodmap &quot;add mod3 = Scroll_Lock&quot;&lt;/pre&gt;
 &lt;p&gt;or&lt;/p&gt;
 &lt;pre&gt;cd ~
 echo &amp;gt;&amp;gt; .bashrc &#39;modmap -e &quot;add mod3 = Scroll_Lock&quot; &#39;&lt;/pre&gt;
+
+&lt;p&gt;这种方式在系统启动之后，会自动载入配置，&lt;/p&gt;
+
+&lt;p&gt;但是在重新插拔USB键盘后，系统会清空配置，需要手动重新载入&lt;/p&gt;
+
+&lt;p&gt;通过修改 &lt;code&gt;/usr/share/X11/xkb/symbols/us&lt;/code&gt;文件&lt;/p&gt;
+
+&lt;p&gt;在 &lt;code&gt;xkb_symbols &quot;basic&quot; {&lt;/code&gt;区段尾部添加如下：&lt;/p&gt;
+
+&lt;pre&gt;modifier_map Mod3   { Scroll_Lock };&lt;/pre&gt;
+
+&lt;p&gt;使配置永久生效。&lt;/p&gt;
 </description>
         <pubDate>Wed, 04 May 2016 00:00:00 +0800</pubDate>
         <link>http://mypre.cn/2016/05/04/toggle-backlight-by-use-scroll</link>
@@ -374,24 +441,6 @@ Sidebar滚动固定box 单个box
         
         
         <category>Linux系统</category>
-        
-      </item>
-    
-      <item>
-        <title>Win7 下修改盘符的方法</title>
-        <description>&lt;p&gt;运行&lt;code&gt;regedit&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;找到
-&lt;pre&gt;HKEY_LOCAL_MACHINE\SYSTEM\MountedDevices&lt;/pre&gt;
-&lt;p&gt;键&lt;/p&gt;
-&lt;p&gt;在右边找到“\DosDevices\X:”等项，右键重命名到需要修改成的盘符，&lt;/p&gt;
-&lt;p&gt;重启。&lt;/p&gt;
-</description>
-        <pubDate>Sat, 26 Dec 2015 16:34:47 +0800</pubDate>
-        <link>http://mypre.cn/2015/12/26/win7-e4-b8-8b-e4-bf-ae-e6-94-b9-e7-9b-98-e7-ac-a6-e7-9a-84-e6-96-b9-e6-b3-95</link>
-        <guid isPermaLink="true">http://mypre.cn/2015/12/26/win7-e4-b8-8b-e4-bf-ae-e6-94-b9-e7-9b-98-e7-ac-a6-e7-9a-84-e6-96-b9-e6-b3-95</guid>
-        
-        
-        <category>应用技巧</category>
         
       </item>
     

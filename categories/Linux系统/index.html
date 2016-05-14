@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <meta name="keywords" content=", ,jekyll, Iziy, mypre, MyPress, LanBing" />
-    <meta name="description" content=",   这里是蓝冰的个人博客，记录着蓝冰的生活点滴." />
+    <meta name="keywords" content=", ,Iziy, mypre, MyPress, LanBing, jekyll" />
+    <meta name="description" content=",   这里是Iziy/蓝冰的个人博客，记录着Iziy/蓝冰的生活点滴." />
 
     <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
 
@@ -47,11 +47,11 @@
   }
   </script>
   <div id="wrap">
-    <div id="preheader">你是个细心的人，Iziy 祝您 学习愉快 工作顺利～</div>
+    <div id="preheader">有心人，Iziy 祝您学习愉快工作顺利～</div>
       <header id="header" class="clearfix">
         <div class="head">
           <h1><a href="http://mypre.cn/">面向大海,心暖花开</a></h1>
-          <p class="desc yahei"><span>从明天起,做一个幸福的人, 喂马、劈柴、周游世界。 ---Iziy-蓝冰  </span></p>
+          <p class="desc yahei"><span>从明天起,做一个幸福的人, 喂马、劈柴、周游世界。 ---Iziy 蓝冰   </span></p>
         </div>
         <script type="text/javascript">
 //"mqqbrowser|operamobi|juc|iuc|fennec|ios|applewebKit/420|applewebkit/525|applewebkit/532|ipad|iphone|ipaq|ipod|iemobile|windows ce|240x320|480x640|acer|android|anywhereyougo.com|asus|audio|blackberry|blazer|coolpad|dopod|etouch|hitachi|htc|huawei|jbrowser|lenovo|lg|lg-|lge-|lge|mobi|moto|nokia|phone|samsung|sony|symbian|tablet|tianyu|wap|xda|xde|zte"
@@ -113,60 +113,22 @@ else
     </header>
     <div class="entry-content" itemprop="description">
           
-              <p>花了4天半的时间鼓捣好了一个机械键盘，
-找了一个老外大牛写的stm32－based 键盘矩阵扫描器，改改装在了键盘上边
-dfu功能，移植在keil下没有被识别，估计一阵子也没有多少时间来折腾，暂时先用着，
-因为io口不够用，多区背光给改成了Scroll键开关，
-但是，发现 Scroll 键 在高版本linux下给屏蔽了，
-国内百度了半天没找到好的解决方案
-转到google 发现
+              <p>花了4天半的时间鼓捣好了一个机械键盘，</p>
+
+<p>找了一个老外大牛写的stm32－based 键盘矩阵扫描器，改改装在了键盘上边</p>
+
+<p>dfu功能，移植在keil下没有被识别，估计一阵子也没有多少时间来折腾，暂时先用着，</p>
+
+<p>因为io口不够用，多区背光给改成了Scroll键开关，</p>
+
+<p>但是，发现 Scroll 键 在高版本linux下给屏蔽了，</p>
+
+<p>国内百度了半天没找到好的解决方案</p>
+
+<p>转到google 发现
 <a href="http://unix.stackexchange.com/questions/164245/why-is-the-scroll-lock-key-disabled-in-cinnamon-linux-xorg">Why is the Scroll Lock key disabled in Cinnamon/Linux/Xorg?</a>
 一文给出了详细的方法</p>
 
-<p>通过</p>
-<pre>xmodmap -pm</pre>
-<p>查看当前系统 mod键映射情况</p>
-<pre>[lanbing@LanBing-Laptop ~]$ xmodmap -pm
-xmodmap:  up to 4 keys per modifier, (keycodes in parentheses):
-
-shift       Shift_L (0x32),  Shift_R (0x3e)
-lock        Caps_Lock (0x42)
-control     Control_L (0x25),  Control_R (0x69)
-mod1        Alt_L (0x40),  Alt_R (0x6c),  Meta_L (0xcd)
-mod2        Num_Lock (0x4d)
-mod3
-mod4        Super_L (0x85),  Super_R (0x86),  Super_L (0xce),  Hyper_L (0xcf)
-mod5        ISO_Level3_Shift (0x5c),  Mode_switch (0xcb)</pre>
-
-<p>其中mod3 这行是空的
-通过这 条命令启用 Scroll Lock：</p>
-<pre>modmap -e "add mod3 = Scroll_Lock"</pre>
-
-<p>测试ok</p>
-
-<pre>[lanbing@LanBing-Laptop ~]$ xmodmap -pm
-xmodmap:  up to 4 keys per modifier, (keycodes in parentheses):
-
-shift       Shift_L (0x32),  Shift_R (0x3e)
-lock        Caps_Lock (0x42)
-control     Control_L (0x25),  Control_R (0x69)
-mod1        Alt_L (0x40),  Alt_R (0x6c),  Meta_L (0xcd)
-mod2        Num_Lock (0x4d)
-mod3        Scroll_Lock (0x4e)
-mod4        Super_L (0x85),  Super_R (0x86),  Super_L (0xce),  Hyper_L (0xcf)
-mod5        ISO_Level3_Shift (0x5c),  Mode_switch (0xcb)
-</pre>
-
-<p>让它每回开机都自动运行，
-将这行放入~/.Xmodmap中</p>
-
-<pre>add mod3 = Scroll_Lock</pre>
-<p>或者</p>
-<pre>cd ~
-echo &gt;.Xmodmap "add mod3 = Scroll_Lock"</pre>
-<p>or</p>
-<pre>cd ~
-echo &gt;&gt; .bashrc 'modmap -e "add mod3 = Scroll_Lock" '</pre>
 
           
     </div>
@@ -865,7 +827,7 @@ Change the <code>/etc/yum.conf</code> file to disable Proxy settings ,</pre>
           
           <li>
               <a class="catelink" href="http://mypre.cn/categories/生活随笔">
-                  生活随笔&nbsp;<span class="count">[2]</span>
+                  生活随笔&nbsp;<span class="count">[3]</span>
               </a>
           </li>
 
@@ -900,7 +862,7 @@ Change the <code>/etc/yum.conf</code> file to disable Proxy settings ,</pre>
           
           <li>
               <a class="catelink" href="http://mypre.cn/categories/心情日记">
-                  心情日记&nbsp;<span class="count">[6]</span>
+                  心情日记&nbsp;<span class="count">[7]</span>
               </a>
           </li>
 

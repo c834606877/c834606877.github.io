@@ -400,10 +400,11 @@ jQuery("#gotop").click(function() {
 	// };
 	var rollbox = $('#sidebar .widget'), rolllen = rollbox.length;
 	if( 0<asr_1<=rolllen && 0<asr_2<=rolllen ){
+		var firstboxtop = rollbox.eq(0).offset().top;
 		$(window).scroll(function(){
 			var roll = document.documentElement.scrollTop+document.body.scrollTop;
 
-			if( roll>rollbox.eq(rolllen-1).offset().top+rollbox.eq(rolllen-1).height() || rolllen == 2){
+			if( roll>rollbox.eq(rolllen-1).offset().top+rollbox.eq(rolllen-1).height() || (rolllen == 2 && roll>firstboxtop)){
 				rollbox.eq(asr_1-1).width(rollbox.eq(asr_1-1).width());
 					rollbox.eq(asr_1-1).css({position:'fixed',top:10}).addClass("widgetRoller");
 					if( asr_1!==asr_2 )

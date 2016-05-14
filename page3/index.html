@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <meta name="keywords" content=", ,jekyll, Iziy, mypre, MyPress, LanBing" />
-    <meta name="description" content=",   这里是蓝冰的个人博客，记录着蓝冰的生活点滴." />
+    <meta name="keywords" content=", ,Iziy, mypre, MyPress, LanBing, jekyll" />
+    <meta name="description" content=",   这里是Iziy/蓝冰的个人博客，记录着Iziy/蓝冰的生活点滴." />
 
     <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
 
@@ -47,11 +47,11 @@
   }
   </script>
   <div id="wrap">
-    <div id="preheader">你是个细心的人，Iziy 祝您 学习愉快 工作顺利～</div>
+    <div id="preheader">有心人，Iziy 祝您学习愉快工作顺利～</div>
       <header id="header" class="clearfix">
         <div class="head">
           <h1><a href="http://mypre.cn/">面向大海,心暖花开</a></h1>
-          <p class="desc yahei"><span>从明天起,做一个幸福的人, 喂马、劈柴、周游世界。 ---Iziy-蓝冰  </span></p>
+          <p class="desc yahei"><span>从明天起,做一个幸福的人, 喂马、劈柴、周游世界。 ---Iziy 蓝冰   </span></p>
         </div>
         <script type="text/javascript">
 //"mqqbrowser|operamobi|juc|iuc|fennec|ios|applewebKit/420|applewebkit/525|applewebkit/532|ipad|iphone|ipaq|ipod|iemobile|windows ce|240x320|480x640|acer|android|anywhereyougo.com|asus|audio|blackberry|blazer|coolpad|dopod|etouch|hitachi|htc|huawei|jbrowser|lenovo|lg|lg-|lge-|lge|mobi|moto|nokia|phone|samsung|sony|symbian|tablet|tianyu|wap|xda|xde|zte"
@@ -87,6 +87,58 @@ else
       <div id="container" class="clearfix">
           <div id="content">
   <div class="home blog">
+    
+      <!-- this is post list -->
+
+    <!-- this is post list -->
+<article class="post type-post status-publish format-standard">
+    <header class="entry-header">
+    <h2 class="entry-name">
+      <a href="http://mypre.cn/2015/11/29/bash-e5-90-af-e5-8a-a8-e5-8f-82-e6-95-b0-e5-a4-8d-e4-b9-a0" title="bash 启动参数复习" rel="bookmark">bash 启动参数复习</a>
+    </h2>
+    <ul class="entry-meta">
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2015-11-29</li>
+      <li><i class="fa fa-pencil-square-o"></i>
+          
+            <a href="http://mypre.cn/categories/Linux系统">Linux系统</a>
+          
+      </li>
+      <li><i class="fa fa-comments-o"></i> <a href="http://mypre.cn/2015/11/29/bash-e5-90-af-e5-8a-a8-e5-8f-82-e6-95-b0-e5-a4-8d-e4-b9-a0#post-comment"><span class="disqus-comment-count" data-disqus-url="http://mypre.cn/2015/11/29/bash-e5-90-af-e5-8a-a8-e5-8f-82-e6-95-b0-e5-a4-8d-e4-b9-a0"></span> 评论</a></li>
+      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
+    </ul>
+    </header>
+    <div class="entry-content" itemprop="description">
+          
+              <p><span style="font-size: medium;">BASH的参数可以用$加数字编号来访问。</span></p>
+<p><span style="font-size: medium;">如$1代表第一个参数，$2代表第二个参数，以此类推.</span></p>
+<p><span style="font-size: medium;">但不能用$10来访问第十个参数，如果遇到参数超过十个的情况，必须处理或保存第一个参数($1)，然后使用 shift命令删除参数1并将所有剩余的参数下移一位，因此$10就变成了$9.</span></p>
+<p><span style="font-size: medium;">$#的值将被更新以反映参数的剩余数量。</span></p>
+<pre>#!/bin/bash
+i=1;
+while (($#>0))
+do
+    echo $i, $1
+    shift
+    let i=i+1
+done</pre>
+<p>显示了所有参数</p>
+
+          
+    </div>
+    <footer class="entry-footer clearfix">
+    <div class="post-love">
+      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
+      <span class="love-count">
+        0
+      </span></a>
+    </div>
+    <div class="post-more">
+      <a href="http://mypre.cn/2015/11/29/bash-e5-90-af-e5-8a-a8-e5-8f-82-e6-95-b0-e5-a4-8d-e4-b9-a0">Read More</a>
+    </div>
+  </footer>
+</article>
+
+
     
       <!-- this is post list -->
 
@@ -450,72 +502,6 @@ Change the <code>/etc/yum.conf</code> file to disable Proxy settings ,</pre>
 
 
     
-      <!-- this is post list -->
-
-    <!-- this is post list -->
-<article class="post type-post status-publish format-standard">
-    <header class="entry-header">
-    <h2 class="entry-name">
-      <a href="http://mypre.cn/2014/10/10/must-issue-sudo-alsa-force-reload-on-reboot-ubuntu" title="Must issue sudo alsa force-reload on reboot (Ubuntu)" rel="bookmark">Must issue sudo alsa force-reload on reboot (Ubuntu)</a>
-    </h2>
-    <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 最后编辑 2014-10-10</li>
-      <li><i class="fa fa-pencil-square-o"></i>
-          
-            <a href="http://mypre.cn/categories/应用技巧">应用技巧</a>
-          
-      </li>
-      <li><i class="fa fa-comments-o"></i> <a href="http://mypre.cn/2014/10/10/must-issue-sudo-alsa-force-reload-on-reboot-ubuntu#post-comment"><span class="disqus-comment-count" data-disqus-url="http://mypre.cn/2014/10/10/must-issue-sudo-alsa-force-reload-on-reboot-ubuntu"></span> 评论</a></li>
-      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
-    </ul>
-    </header>
-    <div class="entry-content" itemprop="description">
-          
-              <p>
-	I have a problem, I have got sound working...</p>
-<p>
-	But only when I issue the Code:</p>
-<pre>
-sudo alsa force-reload</pre>
-<p>
-	It will when play the sound that was queued to play, like the login sound.</p>
-<p>
-	Everytime when I restart, I have to do Code:</p>
-<pre>
-sudo alsa force-reload </pre>
-<p>
-	in order for sound to work.</p>
-<p>
-	&nbsp;</p>
-<p>
-	Solution :</p>
-<pre>
-	sudo gedit /etc/default/acpi-support
-	# Add modules to this list to have them removed before suspend and reloaded<br />
-	# on resume. An example would be MODULES=&quot;em8300 yenta_socket&quot;<br />
-	#<br />
-	# Note that network cards and USB controllers will automatically be unloaded<br />
-	# unless they&#39;re listed in MODULES_WHITELIST<br />
-	MODULES=&quot;soundcore&quot;
-</pre>
-
-          
-    </div>
-    <footer class="entry-footer clearfix">
-    <div class="post-love">
-      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
-      <span class="love-count">
-        0
-      </span></a>
-    </div>
-    <div class="post-more">
-      <a href="http://mypre.cn/2014/10/10/must-issue-sudo-alsa-force-reload-on-reboot-ubuntu">Read More</a>
-    </div>
-  </footer>
-</article>
-
-
-    
     
         <div class="pagination clearfix">
             
@@ -624,7 +610,7 @@ sudo alsa force-reload </pre>
           
           <li>
               <a class="catelink" href="http://mypre.cn/categories/生活随笔">
-                  生活随笔&nbsp;<span class="count">[2]</span>
+                  生活随笔&nbsp;<span class="count">[3]</span>
               </a>
           </li>
 
@@ -659,7 +645,7 @@ sudo alsa force-reload </pre>
           
           <li>
               <a class="catelink" href="http://mypre.cn/categories/心情日记">
-                  心情日记&nbsp;<span class="count">[6]</span>
+                  心情日记&nbsp;<span class="count">[7]</span>
               </a>
           </li>
 
@@ -765,6 +751,10 @@ sudo alsa force-reload </pre>
         
             <a class="taglink" href="http://mypre.cn/tag/#机械键盘，背光，Scroll开关，" data-target-cate="#机械键盘，背光，Scroll开关，">
                 机械键盘，背光，Scroll开关，
+            </a>
+        
+            <a class="taglink" href="http://mypre.cn/tag/#心情日记，生活随笔" data-target-cate="#心情日记，生活随笔">
+                心情日记，生活随笔
             </a>
         
     </div>

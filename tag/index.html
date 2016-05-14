@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <meta name="keywords" content=", ,jekyll, Iziy, mypre, MyPress, LanBing" />
-    <meta name="description" content=",   这里是蓝冰的个人博客，记录着蓝冰的生活点滴." />
+    <meta name="keywords" content=", ,Iziy, mypre, MyPress, LanBing, jekyll" />
+    <meta name="description" content=",   这里是Iziy/蓝冰的个人博客，记录着Iziy/蓝冰的生活点滴." />
 
     <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
 
@@ -47,11 +47,11 @@
   }
   </script>
   <div id="wrap">
-    <div id="preheader">你是个细心的人，Iziy 祝您 学习愉快 工作顺利～</div>
+    <div id="preheader">有心人，Iziy 祝您学习愉快工作顺利～</div>
       <header id="header" class="clearfix">
         <div class="head">
           <h1><a href="http://mypre.cn/">面向大海,心暖花开</a></h1>
-          <p class="desc yahei"><span>从明天起,做一个幸福的人, 喂马、劈柴、周游世界。 ---Iziy-蓝冰  </span></p>
+          <p class="desc yahei"><span>从明天起,做一个幸福的人, 喂马、劈柴、周游世界。 ---Iziy 蓝冰   </span></p>
         </div>
         <script type="text/javascript">
 //"mqqbrowser|operamobi|juc|iuc|fennec|ios|applewebKit/420|applewebkit/525|applewebkit/532|ipad|iphone|ipaq|ipod|iemobile|windows ce|240x320|480x640|acer|android|anywhereyougo.com|asus|audio|blackberry|blazer|coolpad|dopod|etouch|hitachi|htc|huawei|jbrowser|lenovo|lg|lg-|lge-|lge|mobi|moto|nokia|phone|samsung|sony|symbian|tablet|tianyu|wap|xda|xde|zte"
@@ -698,60 +698,22 @@ nautilus-open-terminal.x86_64 : Nautilus extension for an open terminal shortcut
     </header>
     <div class="entry-content" itemprop="description">
           
-              <p>花了4天半的时间鼓捣好了一个机械键盘，
-找了一个老外大牛写的stm32－based 键盘矩阵扫描器，改改装在了键盘上边
-dfu功能，移植在keil下没有被识别，估计一阵子也没有多少时间来折腾，暂时先用着，
-因为io口不够用，多区背光给改成了Scroll键开关，
-但是，发现 Scroll 键 在高版本linux下给屏蔽了，
-国内百度了半天没找到好的解决方案
-转到google 发现
+              <p>花了4天半的时间鼓捣好了一个机械键盘，</p>
+
+<p>找了一个老外大牛写的stm32－based 键盘矩阵扫描器，改改装在了键盘上边</p>
+
+<p>dfu功能，移植在keil下没有被识别，估计一阵子也没有多少时间来折腾，暂时先用着，</p>
+
+<p>因为io口不够用，多区背光给改成了Scroll键开关，</p>
+
+<p>但是，发现 Scroll 键 在高版本linux下给屏蔽了，</p>
+
+<p>国内百度了半天没找到好的解决方案</p>
+
+<p>转到google 发现
 <a href="http://unix.stackexchange.com/questions/164245/why-is-the-scroll-lock-key-disabled-in-cinnamon-linux-xorg">Why is the Scroll Lock key disabled in Cinnamon/Linux/Xorg?</a>
 一文给出了详细的方法</p>
 
-<p>通过</p>
-<pre>xmodmap -pm</pre>
-<p>查看当前系统 mod键映射情况</p>
-<pre>[lanbing@LanBing-Laptop ~]$ xmodmap -pm
-xmodmap:  up to 4 keys per modifier, (keycodes in parentheses):
-
-shift       Shift_L (0x32),  Shift_R (0x3e)
-lock        Caps_Lock (0x42)
-control     Control_L (0x25),  Control_R (0x69)
-mod1        Alt_L (0x40),  Alt_R (0x6c),  Meta_L (0xcd)
-mod2        Num_Lock (0x4d)
-mod3
-mod4        Super_L (0x85),  Super_R (0x86),  Super_L (0xce),  Hyper_L (0xcf)
-mod5        ISO_Level3_Shift (0x5c),  Mode_switch (0xcb)</pre>
-
-<p>其中mod3 这行是空的
-通过这 条命令启用 Scroll Lock：</p>
-<pre>modmap -e "add mod3 = Scroll_Lock"</pre>
-
-<p>测试ok</p>
-
-<pre>[lanbing@LanBing-Laptop ~]$ xmodmap -pm
-xmodmap:  up to 4 keys per modifier, (keycodes in parentheses):
-
-shift       Shift_L (0x32),  Shift_R (0x3e)
-lock        Caps_Lock (0x42)
-control     Control_L (0x25),  Control_R (0x69)
-mod1        Alt_L (0x40),  Alt_R (0x6c),  Meta_L (0xcd)
-mod2        Num_Lock (0x4d)
-mod3        Scroll_Lock (0x4e)
-mod4        Super_L (0x85),  Super_R (0x86),  Super_L (0xce),  Hyper_L (0xcf)
-mod5        ISO_Level3_Shift (0x5c),  Mode_switch (0xcb)
-</pre>
-
-<p>让它每回开机都自动运行，
-将这行放入~/.Xmodmap中</p>
-
-<pre>add mod3 = Scroll_Lock</pre>
-<p>或者</p>
-<pre>cd ~
-echo &gt;.Xmodmap "add mod3 = Scroll_Lock"</pre>
-<p>or</p>
-<pre>cd ~
-echo &gt;&gt; .bashrc 'modmap -e "add mod3 = Scroll_Lock" '</pre>
 
           
     </div>
@@ -764,6 +726,85 @@ echo &gt;&gt; .bashrc 'modmap -e "add mod3 = Scroll_Lock" '</pre>
     </div>
     <div class="post-more">
       <a href="http://mypre.cn/2016/05/04/toggle-backlight-by-use-scroll">Read More</a>
+    </div>
+  </footer>
+</article>
+
+
+      
+    
+      <div class="box archive-meta" id="心情日记，生活随笔">
+        <h3 class="title-meta">Tag "心情日记，生活随笔":</h3>
+      </div>
+      
+        <!-- this is post list -->
+
+    <!-- this is post list -->
+<article class="post type-post status-publish format-standard">
+    <header class="entry-header">
+    <h2 class="entry-name">
+      <a href="http://mypre.cn/2016/05/13/sleep-diary" title="卧榻将息，辗转之思" rel="bookmark">卧榻将息，辗转之思</a>
+    </h2>
+    <ul class="entry-meta">
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2016-05-13</li>
+      <li><i class="fa fa-pencil-square-o"></i>
+          
+            <a href="http://mypre.cn/categories/生活随笔">生活随笔</a>
+          
+            <a href="http://mypre.cn/categories/心情日记">心情日记</a>
+          
+      </li>
+      <li><i class="fa fa-comments-o"></i> <a href="http://mypre.cn/2016/05/13/sleep-diary#post-comment"><span class="disqus-comment-count" data-disqus-url="http://mypre.cn/2016/05/13/sleep-diary"></span> 评论</a></li>
+      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
+    </ul>
+    </header>
+    <div class="entry-content" itemprop="description">
+          
+              <p><img src="/post_res/abfaa40egx6BSi1xx0652&amp;690.jpg" alt="路漫漫" /></p>
+
+<p>入学之期，焉已三年，</p>
+
+<p>情情景景，历历在目，</p>
+
+<p>浮心年华，酒醉酩酊，</p>
+
+<p>学之习之，聚之散之，</p>
+
+<p>絮事繁多，忙忙之为。</p>
+
+<p>今轻年已去，清心求学，</p>
+
+<p>一心一意，无欲它思，</p>
+
+<p>竟不想今时何日。</p>
+
+<p>忆往昔年，</p>
+
+<p>高中之季，意气风发，</p>
+
+<p>夙兴夜寐，进士及第，</p>
+
+<p>时过境迁，期期三年。</p>
+
+<p>今朝之举，黄金榜上，</p>
+
+<p>既无愧于心，何须论得丧。</p>
+
+<p>夜明风清，记之感慨。</p>
+
+<p>——蓝记</p>
+
+          
+    </div>
+    <footer class="entry-footer clearfix">
+    <div class="post-love">
+      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
+      <span class="love-count">
+        0
+      </span></a>
+    </div>
+    <div class="post-more">
+      <a href="http://mypre.cn/2016/05/13/sleep-diary">Read More</a>
     </div>
   </footer>
 </article>
@@ -810,6 +851,10 @@ echo &gt;&gt; .bashrc 'modmap -e "add mod3 = Scroll_Lock" '</pre>
         
             <a class="taglink" href="http://mypre.cn/tag/#机械键盘，背光，Scroll开关，" data-target-cate="#机械键盘，背光，Scroll开关，">
                 机械键盘，背光，Scroll开关，
+            </a>
+        
+            <a class="taglink" href="http://mypre.cn/tag/#心情日记，生活随笔" data-target-cate="#心情日记，生活随笔">
+                心情日记，生活随笔
             </a>
         
     </div>
