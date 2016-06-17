@@ -94,6 +94,73 @@ else
 <article class="post type-post status-publish format-standard">
     <header class="entry-header">
     <h2 class="entry-name">
+      <a href="http://mypre.cn/2015/09/28/errors-in-upgrade-from-fedora-21-to-fedora-22" title="Errors in Upgrade from Fedora 21 to Fedora 22" rel="bookmark">Errors in Upgrade from Fedora 21 to Fedora 22</a>
+    </h2>
+    <ul class="entry-meta">
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2015-09-28</li>
+      <li><i class="fa fa-pencil-square-o"></i>
+          
+            <a href="http://mypre.cn/categories/Linux系统">Linux系统</a>
+          
+      </li>
+      <li><i class="fa fa-comments-o"></i> <a href="http://mypre.cn/2015/09/28/errors-in-upgrade-from-fedora-21-to-fedora-22#post-comment"><span class="disqus-comment-count" data-disqus-url="http://mypre.cn/2015/09/28/errors-in-upgrade-from-fedora-21-to-fedora-22"></span> 评论</a></li>
+      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
+    </ul>
+    </header>
+    <div class="entry-content" itemprop="description">
+          
+              <blockquote><strong>1. Make sure your current system is up-to-date and backed up</strong></p>
+<p>First up, ensure that you have the most up-to-date version of Fedora 21 by updating your system using the Software application, or running the following command in the terminal:</p>
+<pre>sudo dnf update</pre>
+<p><strong>2. Install the FedUp tool</strong></p>
+<p>Now, open up a Terminal and install FedUp package by using the following command line:</p>
+<pre>sudo dnf install fedup</pre>
+<p><strong>3. Start the update with FedUp</strong></p>
+<p>Now your system is fully up-to-date, start the upgrade using the following command:</p>
+<pre>sudo fedup --network 22</pre>
+<p>This command will tell FedUp to download all the appropriate packages from the Fedora repositories, and prep your system for the upgrade.<br />
+<strong>4. Reboot, and upgrade</strong></p>
+<p>Once the FedUp command from step 3 has completed without errors, reboot your system. In the Fedora Boot Menu (i.e. grub), there will be a menu item “System Upgrade”, select that and press enter.<br />
+Boot menu with System Upgrade (fedup) option selected<br />
+<code class="prettyprint">Boot menu with update option selected</code></p>
+<p>All the appropriate packages and upgrade tasks will now be completed automatically, and when completed you will be able to start using your newly upgraded Fedora system.</p></blockquote>
+<pre># fedup --network 22
+setting up repos...
+Error: can't get boot images.
+The installation repo isn't currently available.
+Try again later, or specify a repo using --instrepo.</pre>
+<p>Using --instrepo To special a repo :</p>
+<pre>[lanbing@LanBing-PC ~]$ setting up repos...
+getting boot images...
+
+Downloading failed: couldn't get boot images: No more mirrors to try.
+Last error was: [Errno 14] curl#56 - "Proxy CONNECT aborted"
+
+Change the <code>/etc/yum.conf</code> file to disable Proxy settings ,</pre>
+
+          
+    </div>
+    <footer class="entry-footer clearfix">
+    <div class="post-love">
+      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
+      <span class="love-count">
+        0
+      </span></a>
+    </div>
+    <div class="post-more">
+      <a href="http://mypre.cn/2015/09/28/errors-in-upgrade-from-fedora-21-to-fedora-22">Read More</a>
+    </div>
+  </footer>
+</article>
+
+
+    
+      <!-- this is post list -->
+
+    <!-- this is post list -->
+<article class="post type-post status-publish format-standard">
+    <header class="entry-header">
+    <h2 class="entry-name">
       <a href="http://mypre.cn/2014/10/10/must-issue-sudo-alsa-force-reload-on-reboot-ubuntu" title="Must issue sudo alsa force-reload on reboot (Ubuntu)" rel="bookmark">Must issue sudo alsa force-reload on reboot (Ubuntu)</a>
     </h2>
     <ul class="entry-meta">
@@ -903,61 +970,6 @@ int main(intargc, char ** argv) {
 
 
     
-      <!-- this is post list -->
-
-    <!-- this is post list -->
-<article class="post type-post status-publish format-standard">
-    <header class="entry-header">
-    <h2 class="entry-name">
-      <a href="http://mypre.cn/2014/10/05/1-4-1-e3-80-80-e5-bc-80-e5-a7-8b-e6-89-a7-e8-a1-8c-e5-91-bd-e4-bb-a4-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf" title="1.4.1　开始执行命令 – Linux就是这个范儿" rel="bookmark">1.4.1　开始执行命令 – Linux就是这个范儿</a>
-    </h2>
-    <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 最后编辑 2014-10-05</li>
-      <li><i class="fa fa-pencil-square-o"></i>
-          
-            <a href="http://mypre.cn/categories/Linux就是这个范儿">Linux就是这个范儿</a>
-          
-      </li>
-      <li><i class="fa fa-comments-o"></i> <a href="http://mypre.cn/2014/10/05/1-4-1-e3-80-80-e5-bc-80-e5-a7-8b-e6-89-a7-e8-a1-8c-e5-91-bd-e4-bb-a4-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf#post-comment"><span class="disqus-comment-count" data-disqus-url="http://mypre.cn/2014/10/05/1-4-1-e3-80-80-e5-bc-80-e5-a7-8b-e6-89-a7-e8-a1-8c-e5-91-bd-e4-bb-a4-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf"></span> 评论</a></li>
-      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
-    </ul>
-    </header>
-    <div class="entry-content" itemprop="description">
-          
-              <p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
-	用户和系统不是直接打交道的，它们中间有个名字叫shell的联系人。我们从键盘中输入命令给shell，shell再把它交给操作系统去执行。</p>
-<p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
-	从哪里开始输入命令呢？当然你可以在字符界面输入命令（暂时先放放，稍后再看）。Linux系统还提供一个叫终端模拟器的程序。这个程序打开一个窗口，让我们与shell交流。Linux系统上的各种软件向来是百花齐放，模拟器终端也不例外，例如gnome-terminal、konsole、xterm、rxvt、kvt、nxterm和eterm等，而大多数Linux发行版会同时支持几种。</p>
-<p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
-	使用过Windows操作系统的人，在登录Linux桌面系统后，应该也能轻松地从菜单中选择启动终端的图标，点击就可以进入终端模拟器。当然你也可以在文件浏览器中找到叫&ldquo;konsole&rdquo;（KDE桌面）或&ldquo;gnome-terminal&rdquo;(GNOME桌面)的程序双击执行以打开终端窗口。更有意思的是你可以打开任意多个窗口，每个窗口给你一个shell会话。你从中选择了一个窗口开始尝试输入这个命令：</p>
-<pre>
-	$ cp /etc/resolv.conf /etc/resolv.conf.bak
-	cp: cannot create regular file &#39;/etc/resolv.conf.bak&#39;: Permission denied
-</pre>
-<p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
-	太欺负人了吧，这么简单的命令都不让偶用。</p>
-<p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
-	你注意到没有，shell命令提示符是$，这意味着什么？这意味着你是普通用户，不是超级用户，你没有管理员权限。如果你是拥有管理员权限的root用户，提示符就变成#，你就可以在系统上做增加、删除和修改文件的操作。</p>
-<p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px; text-align: right;">
-	<a href="http://hook.aliapp.com/?p=554" style="color: rgb(51, 51, 51); text-decoration: none; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; line-height: 28px; text-align: right; text-indent: 28px;">Linux就是这个范儿 &ndash; 本书目录&nbsp;</a></p>
-
-          
-    </div>
-    <footer class="entry-footer clearfix">
-    <div class="post-love">
-      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
-      <span class="love-count">
-        0
-      </span></a>
-    </div>
-    <div class="post-more">
-      <a href="http://mypre.cn/2014/10/05/1-4-1-e3-80-80-e5-bc-80-e5-a7-8b-e6-89-a7-e8-a1-8c-e5-91-bd-e4-bb-a4-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf">Read More</a>
-    </div>
-  </footer>
-</article>
-
-
-    
     
         <div class="pagination clearfix">
             
@@ -1041,7 +1053,7 @@ int main(intargc, char ** argv) {
     </div>
 </aside>
   <aside id="sidebar-audio1" class="widget widget-audio">
-    <div class="sb-xiami" songid="375039">
+    <div class="sb-xiami" songid="2100452">
         <div class="sb-player">
             <div class="sb-cover"></div>
             <div class="sb-info clearfix">
@@ -1055,6 +1067,9 @@ int main(intargc, char ** argv) {
         </div>
         <div class="sb-jplayer"></div>
     </div>
+    <script type="text/javascript">
+        setTimeout(function(){$(".widget .sb-jplayer").jPlayer("play");},2000);
+    </script>
 </aside>
   <!-- sidebar:category list -->
 <aside id="mzw_siderbar_categories" class="widget widget_mzw_siderbar_categories">
@@ -1105,7 +1120,7 @@ int main(intargc, char ** argv) {
           
           <li>
               <a class="catelink" href="http://mypre.cn/categories/心情日记">
-                  心情日记&nbsp;<span class="count">[7]</span>
+                  心情日记&nbsp;<span class="count">[8]</span>
               </a>
           </li>
 
@@ -1119,7 +1134,7 @@ int main(intargc, char ** argv) {
           
           <li>
               <a class="catelink" href="http://mypre.cn/categories/影视音乐">
-                  影视音乐&nbsp;<span class="count">[1]</span>
+                  影视音乐&nbsp;<span class="count">[2]</span>
               </a>
           </li>
 
@@ -1259,6 +1274,22 @@ int main(intargc, char ** argv) {
 
 </script>
 
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
 <script src="/assets/script/global.js"></script>
 <script src="/assets/script/ajax.js"></script>
 
@@ -1268,35 +1299,19 @@ int main(intargc, char ** argv) {
   the site comment script
 -->
 
+  <script type="text/javascript">
+  var duoshuoQuery = {short_name:"iziy"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+       || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
 
-  <script id="dsq-count-scr" src="//iziy.disqus.com/count.js" async></script>
-<script>
-    // var disqus_config = function () {
-    //     this.page.url = 'http://mypre.cn/page4/'; // Replace PAGE_URL with your page's canonical URL variable
-    //     this.page.identifier = ''; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    //     this.page.title = '';
-    // };
-    function loadDisqus(){
-        (function () { // DON'T EDIT BELOW THIS LINE
-            var d = document, s = d.createElement('script');
 
-            s.src = '//iziy.disqus.com/count.js';
-            s.setAttribute('id', "dsq-count-scr");
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-        })();
-        (function () { // DON'T EDIT BELOW THIS LINE
-            var d = document, s = d.createElement('script');
-
-            s.src = '//iziy.disqus.com/embed.js';
-
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-        })();
-    }
-    loadDisqus();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
 
 <!--

@@ -216,8 +216,6 @@ function ajaxreload_code() {
     })();
 
     
-    	loadDisqus();
-	
 }
 
 function ajaxclick_code(thiss) {
