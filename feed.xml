@@ -5,9 +5,32 @@
     <description>这里是Iziy蓝冰的个人博客，记录着Iziy蓝冰的生活点滴.</description>
     <link>http://mypre.cn/</link>
     <atom:link href="http://mypre.cn/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 08 Jul 2016 16:00:21 +0800</pubDate>
-    <lastBuildDate>Fri, 08 Jul 2016 16:00:21 +0800</lastBuildDate>
+    <pubDate>Fri, 08 Jul 2016 18:28:17 +0800</pubDate>
+    <lastBuildDate>Fri, 08 Jul 2016 18:28:17 +0800</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
+    
+      <item>
+        <title>Keep Silence until 2017 Just like three half years ago</title>
+        <description>&lt;p&gt;Keep Silence until 2017 just like three half years ago&lt;/p&gt;
+
+&lt;p&gt;server years ago, i got a dream to go to colege&lt;/p&gt;
+
+&lt;p&gt;now,i am going to a better colege.&lt;/p&gt;
+
+&lt;p&gt;Just like three half years ago, Be in Silence.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 08 Jul 2016 00:00:00 +0800</pubDate>
+        <link>http://mypre.cn/2016/07/08/keep-silence-until-2017</link>
+        <guid isPermaLink="true">http://mypre.cn/2016/07/08/keep-silence-until-2017</guid>
+        
+        <category>心情日记，生活随笔</category>
+        
+        
+        <category>生活随笔</category>
+        
+        <category>心情日记</category>
+        
+      </item>
     
       <item>
         <title>My Heart Will Go On~</title>
@@ -367,82 +390,6 @@ Sidebar滚动固定box 单个box
         
         
         <category>jekyll</category>
-        
-      </item>
-    
-      <item>
-        <title>Bash快捷键 记录备忘</title>
-        <description>&lt;blockquote&gt;&lt;p&gt;&lt;strong&gt;生活在 Bash Shell 中，熟记以下快捷键，将极大的提高你的命令行操作效率。 &lt;/strong&gt;&lt;/p&gt;&lt;/blockquote&gt;
-&lt;h3&gt;编辑命令&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Ctrl + a ：移到命令行首&lt;/li&gt;
-&lt;li&gt;Ctrl + e ：移到命令行尾&lt;/li&gt;
-&lt;li&gt;Ctrl + f ：按字符前移（右向）&lt;/li&gt;
-&lt;li&gt;Ctrl + b ：按字符后移（左向）&lt;/li&gt;
-&lt;li&gt;Alt + f ：按单词前移（右向）&lt;/li&gt;
-&lt;li&gt;Alt + b ：按单词后移（左向）&lt;/li&gt;
-&lt;li&gt;Ctrl + xx：在命令行首和光标之间移动&lt;/li&gt;
-&lt;li&gt;Ctrl + u ：从光标处删除至命令行首&lt;/li&gt;
-&lt;li&gt;Ctrl + k ：从光标处删除至命令行尾&lt;/li&gt;
-&lt;li&gt;Ctrl + w ：从光标处删除至字首&lt;/li&gt;
-&lt;li&gt;Alt + d ：从光标处删除至字尾&lt;/li&gt;
-&lt;li&gt;Ctrl + d ：删除光标处的字符&lt;/li&gt;
-&lt;li&gt;Ctrl + h ：删除光标前的字符&lt;/li&gt;
-&lt;li&gt;Ctrl + y ：粘贴至光标后&lt;/li&gt;
-&lt;li&gt;Alt + c ：从光标处更改为首字母大写的单词&lt;/li&gt;
-&lt;li&gt;Alt + u ：从光标处更改为全部大写的单词&lt;/li&gt;
-&lt;li&gt;Alt + l ：从光标处更改为全部小写的单词&lt;/li&gt;
-&lt;li&gt;Ctrl + t ：交换光标处和之前的字符&lt;/li&gt;
-&lt;li&gt;Alt + t ：交换光标处和之前的单词&lt;/li&gt;
-&lt;li&gt;Alt + Backspace：与 Ctrl + w 相同类似，分隔符有些差别 [感谢 rezilla 指正]&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!--more--&gt;
-&lt;h3&gt;重新执行命令&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Ctrl + r：逆向搜索命令历史&lt;/li&gt;
-&lt;li&gt;Ctrl + g：从历史搜索模式退出&lt;/li&gt;
-&lt;li&gt;Ctrl + p：历史中的上一条命令&lt;/li&gt;
-&lt;li&gt;Ctrl + n：历史中的下一条命令&lt;/li&gt;
-&lt;li&gt;Alt + .：使用上一条命令的最后一个参数&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;控制命令&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Ctrl + l：清屏&lt;/li&gt;
-&lt;li&gt;Ctrl + o：执行当前命令，并选择上一条命令&lt;/li&gt;
-&lt;li&gt;Ctrl + s：阻止屏幕输出&lt;/li&gt;
-&lt;li&gt;Ctrl + q：允许屏幕输出&lt;/li&gt;
-&lt;li&gt;Ctrl + c：终止命令&lt;/li&gt;
-&lt;li&gt;Ctrl + z：挂起命令&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Bang (!) 命令&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;!!：执行上一条命令&lt;/li&gt;
-&lt;li&gt;!blah：执行最近的以 blah 开头的命令，如 !ls&lt;/li&gt;
-&lt;li&gt;!blah:p：仅打印输出，而不执行&lt;/li&gt;
-&lt;li&gt;!$：上一条命令的最后一个参数，与 Alt + . 相同&lt;/li&gt;
-&lt;li&gt;!$:p：打印输出 !$ 的内容&lt;/li&gt;
-&lt;li&gt;!*：上一条命令的所有参数&lt;/li&gt;
-&lt;li&gt;!*:p：打印输出 !* 的内容&lt;/li&gt;
-&lt;li&gt;^blah：删除上一条命令中的 blah&lt;/li&gt;
-&lt;li&gt;^blah^foo：将上一条命令中的 blah 替换为 foo&lt;/li&gt;
-&lt;li&gt;^blah^foo^：将上一条命令中所有的 blah 都替换为 foo&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;&lt;p&gt;&lt;strong&gt;友情提示：&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;以上介绍的大多数 Bash 快捷键仅当在 emacs 编辑模式时有效，若你将 Bash 配置为 vi 编辑模式，那将遵循 vi 的按键绑定。Bash 默认为 emacs 编辑模式。如果你的 Bash 不在 emacs 编辑模式，可通过 set -o emacs 设置。&lt;/li&gt;
-&lt;li&gt;^S、^Q、^C、^Z 是由终端设备处理的，可用 stty 命令设置。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/blockquote&gt;
-</description>
-        <pubDate>Sun, 20 Mar 2016 20:38:26 +0800</pubDate>
-        <link>http://mypre.cn/2016/03/20/bash-e5-bf-ab-e6-8d-b7-e9-94-ae-e8-ae-b0-e5-bd-95-e5-a4-87-e5-bf-98</link>
-        <guid isPermaLink="true">http://mypre.cn/2016/03/20/bash-e5-bf-ab-e6-8d-b7-e9-94-ae-e8-ae-b0-e5-bd-95-e5-a4-87-e5-bf-98</guid>
-        
-        <category>标签1</category>
-        
-        
-        <category>应用技巧</category>
         
       </item>
     
