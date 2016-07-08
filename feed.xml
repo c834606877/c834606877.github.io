@@ -1,17 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Iziy MyPress - MyPre.Cn</title>
-    <description>这里是Iziy/蓝冰的个人博客，记录着Iziy/蓝冰的生活点滴.</description>
+    <title>IziyIx&#39;s Files - MyPress - MyPre.Cn</title>
+    <description>这里是Iziy蓝冰的个人博客，记录着Iziy蓝冰的生活点滴.</description>
     <link>http://mypre.cn/</link>
     <atom:link href="http://mypre.cn/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 17 Jun 2016 20:10:52 +0800</pubDate>
-    <lastBuildDate>Fri, 17 Jun 2016 20:10:52 +0800</lastBuildDate>
+    <pubDate>Fri, 08 Jul 2016 16:00:21 +0800</pubDate>
+    <lastBuildDate>Fri, 08 Jul 2016 16:00:21 +0800</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
     
       <item>
         <title>My Heart Will Go On~</title>
-        <description>[xiami]2100452[/xiami]
+        <description>&lt;p&gt;[xiami]1283283[/xiami]&lt;/p&gt;
+</description>
+        <pubDate>Wed, 15 Jun 2016 00:00:00 +0800</pubDate>
+        <link>http://mypre.cn/2016/06/15/the-sound-of-silence</link>
+        <guid isPermaLink="true">http://mypre.cn/2016/06/15/the-sound-of-silence</guid>
+        
+        
+        <category>心情日记</category>
+        
+        <category>影视音乐</category>
+        
+      </item>
+    
+      <item>
+        <title>My Heart Will Go On~</title>
+        <description>&lt;p&gt;[xiami]2100452[/xiami]&lt;/p&gt;
 </description>
         <pubDate>Wed, 15 Jun 2016 00:00:00 +0800</pubDate>
         <link>http://mypre.cn/2016/06/15/My-Heart-Will-Go-On</link>
@@ -428,19 +443,6 @@ Sidebar滚动固定box 单个box
         
         
         <category>应用技巧</category>
-        
-      </item>
-    
-      <item>
-        <title>匹萨调用汉堡并且传入了包子!</title>
-        <description>[xiami]1769819218[/xiami]
-</description>
-        <pubDate>Fri, 19 Feb 2016 22:42:55 +0800</pubDate>
-        <link>http://mypre.cn/2016/02/19/e5-8c-b9-e8-90-a8-e8-b0-83-e7-94-a8-e6-b1-89-e5-a0-a1-e5-b9-b6-e4-b8-94-e4-bc-a0-e5-85-a5-e4-ba-86-e5-8c-85-e5-ad-90</link>
-        <guid isPermaLink="true">http://mypre.cn/2016/02/19/e5-8c-b9-e8-90-a8-e8-b0-83-e7-94-a8-e6-b1-89-e5-a0-a1-e5-b9-b6-e4-b8-94-e4-bc-a0-e5-85-a5-e4-ba-86-e5-8c-85-e5-ad-90</guid>
-        
-        
-        <category>心情日记</category>
         
       </item>
     

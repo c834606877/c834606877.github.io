@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="zh_cn" >
   <head>
-    <title>Iziy MyPress - MyPre.Cn</title>
+    <title>IziyIx's Files - MyPress - MyPre.Cn</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <meta name="keywords" content=", ,Iziy, mypre, MyPress, LanBing, jekyll" />
-    <meta name="description" content=",   这里是Iziy/蓝冰的个人博客，记录着Iziy/蓝冰的生活点滴." />
+    <meta name="description" content=",   这里是Iziy蓝冰的个人博客，记录着Iziy蓝冰的生活点滴." />
 
     <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
 
@@ -22,7 +22,7 @@
   <script src="https://cdn.bootcss.com/html5shiv/3.7.2/html5shiv-printshiv.js"></script>
   <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.js"></script>
   <![endif]-->
-  <link rel="alternate" type="application/rss+xml" title="Iziy MyPress - MyPre.Cn" href="http://mypre.cn/feed.xml" />
+  <link rel="alternate" type="application/rss+xml" title="IziyIx's Files - MyPress - MyPre.Cn" href="http://mypre.cn/feed.xml" />
 </head>
 
 <body class="nav-open">
@@ -47,10 +47,10 @@
   }
   </script>
   <div id="wrap">
-    <div id="preheader">有心人，Iziy 祝您学习愉快工作顺利～</div>
+    <div id="preheader">Iziy 祝您学习愉快工作顺利～</div>
       <header id="header" class="clearfix">
         <div class="head">
-          <h1><a href="http://mypre.cn/">面向大海,心暖花开</a></h1>
+          <h1><a href="http://mypre.cn/">IziyIx's Files</a></h1>
           <p class="desc yahei"><span>从明天起,做一个幸福的人, 喂马、劈柴、周游世界。 ---Iziy 蓝冰   </span></p>
         </div>
         <script type="text/javascript">
@@ -87,6 +87,83 @@ else
       <div id="container" class="clearfix">
           <div id="content">
   <div class="home blog">
+    
+      <!-- this is post list -->
+
+    <!-- this is post list -->
+<article class="post type-post status-publish format-standard">
+    <header class="entry-header">
+    <h2 class="entry-name">
+      <a href="http://mypre.cn/2016/04/10/jekyll-get-the-img-src-or-get-rid-img-tag" title="提取一篇文章里边的 图片链接，以及除去文章里边的 img 标签" rel="bookmark">提取一篇文章里边的 图片链接，以及除去文章里边的 img 标签</a>
+    </h2>
+    <ul class="entry-meta">
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2016-04-10</li>
+      <li><i class="fa fa-pencil-square-o"></i>
+          
+            <a href="http://mypre.cn/categories/jekyll">jekyll</a>
+          
+      </li>
+      <li><i class="fa fa-comments-o"></i> <a href="http://mypre.cn/2016/04/10/jekyll-get-the-img-src-or-get-rid-img-tag#post-comment"><span class="disqus-comment-count" data-disqus-url="http://mypre.cn/2016/04/10/jekyll-get-the-img-src-or-get-rid-img-tag"></span> 评论</a></li>
+      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
+    </ul>
+    </header>
+    <div class="entry-content" itemprop="description">
+          
+              <p>从接触 Jekyll 到现在有两整天了</p>
+
+<p>发现 Jekyll 对逻辑处理方面不太善长，许是我没有认真去了解吧，</p>
+
+<p>plugin 也许是很强大的东西 ， 虽然不会ruby，但是因为对python的熟悉，还是有很大的帮助的，</p>
+
+<p>之后打算结合国内七牛CDN对资源加速，估计要用到 plugin 希望ruby的语法对新手的亲和度不会让我太失望。</p>
+
+<p>因为 原主题支持不同类型的Post，所以 对Jekyll也想实现这个功能，</p>
+
+<p>做 完了标准的Post 接下来该做 Gallery 了
+碰到的问题是，该如何提取Post文章里边的 img 中的src 以及如何 去除 文章里边的img</p>
+
+<p>因为要挪动IMG的位置到文章最前面</p>
+
+<p>因此记下方法
+去除 img 标签 如下：</p>
+
+<pre>
+
+{% for sp in content | split:"&lt;img "%}
+    {% for con in sp | split:"&gt;" %}
+        {% if con contains 'src="' or con contains "src='" %}
+        {% else %}
+          {% if con contains "href=" %}
+            {{con}}&gt;
+          {% else %}
+            {{con}}
+          {% endif %}
+        {% endif %}
+    {% endfor %}
+{% endfor %}
+
+</pre>
+
+<p>去除 IMG 方法就是 按 <img 以及="" /> 切割 除去 含有 src 属性的 项 
+剩下的 对 因为 &gt; 切割 破坏的a 标签 补上 &gt;</p>
+
+
+          
+    </div>
+    <footer class="entry-footer clearfix">
+    <div class="post-love">
+      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
+      <span class="love-count">
+        0
+      </span></a>
+    </div>
+    <div class="post-more">
+      <a href="http://mypre.cn/2016/04/10/jekyll-get-the-img-src-or-get-rid-img-tag">Read More</a>
+    </div>
+  </footer>
+</article>
+
+
     
       <!-- this is post list -->
 
@@ -400,70 +477,6 @@ sudo dnf install gstreamer1-plugins-bad-freeworld</pre>
 
 
     
-      <!-- this is post list -->
-
-    <!-- this is post list -->
-<article class="post type-post status-publish format-standard">
-    <header class="entry-header">
-    <h2 class="entry-name">
-      <a href="http://mypre.cn/2015/12/05/ros-pppoe-e6-8b-a8-e5-8f-b7-e4-b8-8a-e7-bd-91-e5-8d-95-e5-8f-a3-nat-e8-bd-ac-e5-8f-91-ef-bc-8b-ip-e4-bc-aa-e8-a3-85" title="Ros PPPoe 拨号上网 单口 Nat 转发 ＋ IP伪装" rel="bookmark">Ros PPPoe 拨号上网 单口 Nat 转发 ＋ IP伪装</a>
-    </h2>
-    <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 最后编辑 2015-12-05</li>
-      <li><i class="fa fa-pencil-square-o"></i>
-          
-            <a href="http://mypre.cn/categories/网络应用">网络应用</a>
-          
-      </li>
-      <li><i class="fa fa-comments-o"></i> <a href="http://mypre.cn/2015/12/05/ros-pppoe-e6-8b-a8-e5-8f-b7-e4-b8-8a-e7-bd-91-e5-8d-95-e5-8f-a3-nat-e8-bd-ac-e5-8f-91-ef-bc-8b-ip-e4-bc-aa-e8-a3-85#post-comment"><span class="disqus-comment-count" data-disqus-url="http://mypre.cn/2015/12/05/ros-pppoe-e6-8b-a8-e5-8f-b7-e4-b8-8a-e7-bd-91-e5-8d-95-e5-8f-a3-nat-e8-bd-ac-e5-8f-91-ef-bc-8b-ip-e4-bc-aa-e8-a3-85"></span> 评论</a></li>
-      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
-    </ul>
-    </header>
-    <div class="entry-content" itemprop="description">
-          
-              <p>工作室网路由于使用二楼机房供教学使用的网络，一直受到与教学时段同步的限制，临近周末‘思诚杯’比赛，可能需要网络，所以改用PPPoe 拨号上网，<br />
-原使用Ros ＋ 无线路由做交换<br />
-原端口，被保安室 借用 需沟通，</p>
-<p>起先，想到PPPoe拨号 设置Ros 路由器，设置拨号一时可能解决不了，直接用 无线路由 做转发，<br />
-发现性能瓶颈明显，原来20m的带宽减少到了2m不到，估改用Ros 做 转发</p>
-<p>将保安室网线 网络中心网口 Ros 全接 无线路由器 交换口上</p>
-<p>禁用无线路由器DHCP服务，将其完全做为一个 交换设备<br />
-Ros 设置 PPPoe Client 增加默认路由 和用户Dns</p>
-<p>设置 DHCP Server 增加一个DHCP池 设置好 Ros IP 网关为网关IP 172.16.0.0 网段</p>
-<p><img class="aligncenter" src="http://imglf.nosdn.127.net/img/Z3ZvNUFuRWljSVBlRFRNTWREZmVuMWZ0dzFoMGoycHpjTGkyZ1FBSEVKUm9DMVVKaWFLWERBPT0.png?imageView&amp;thumbnail=1680x0&amp;quality=96&amp;stripmeta=0&amp;type=jpg" alt="" /><br />
-设置 Nat ip伪装<br />
-<code>Ip Firewall nat</code><br />
-增加一条 chain：srcnat 基于源 的Nat action：masquerade</p>
-<p><img class="aligncenter" src="http://imglf0.nosdn.127.net/img/Z3ZvNUFuRWljSVBlRFRNTWREZmVuNnhRQ3M1NnV3ZHRKZE1laHlxc0g5VUtNN2lFMkQvTkh3PT0.png?imageView&amp;thumbnail=1680x0&amp;quality=96&amp;stripmeta=0&amp;type=jpg" alt="" width="1465" height="509" /></p>
-<p>&nbsp;</p>
-<p>通过无线设备上网可自动获取到 IP和Ros网关</p>
-<p>可以上QQ，百度，但发现 其它大部分网页无法正常访问，<br />
-DNS无异常<br />
-此现象与电子楼机房故障一样， 认为可能学校 网络中心，对包过滤做了手脚，<br />
-后想来，无线路由器并无此问题，难道无线路由器，对Nat 数据包做加密处理？</p>
-<p>于情于理，网络中心既然学号帐号都开放了，应该没理由会做Nat过滤，Nat伪装之后的包应该是没法检测出来的，问题还是出在Ros本地<br />
-于是在<code>Ros ip firewall filter</code> 发现一条规则，只能接收数据量 及 速度 太少，却又有走动，原因 可能在此，将其禁用，</p>
-<p><img class="aligncenter" src="http://imglf.nosdn.127.net/img/Z3ZvNUFuRWljSVBlRFRNTWREZmVuNW9jek9Fek96Nlg0S1VKK3FFZFpBRVk4N0gzUldrVUNBPT0.png?imageView&amp;thumbnail=1680x0&amp;quality=96&amp;stripmeta=0&amp;type=jpg" alt="" width="1215" height="605" /><br />
-果不其然，网络访问正常。<br />
-于此，无线路由器瓶颈去除，网络恢复原有20M水平。</p>
-
-          
-    </div>
-    <footer class="entry-footer clearfix">
-    <div class="post-love">
-      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
-      <span class="love-count">
-        0
-      </span></a>
-    </div>
-    <div class="post-more">
-      <a href="http://mypre.cn/2015/12/05/ros-pppoe-e6-8b-a8-e5-8f-b7-e4-b8-8a-e7-bd-91-e5-8d-95-e5-8f-a3-nat-e8-bd-ac-e5-8f-91-ef-bc-8b-ip-e4-bc-aa-e8-a3-85">Read More</a>
-    </div>
-  </footer>
-</article>
-
-
-    
     
         <div class="pagination clearfix">
             
@@ -539,7 +552,7 @@ DNS无异常<br />
     </div>
 </aside>
   <aside id="sidebar-audio1" class="widget widget-audio">
-    <div class="sb-xiami" songid="2100452">
+    <div class="sb-xiami" songid="1283283">
         <div class="sb-player">
             <div class="sb-cover"></div>
             <div class="sb-info clearfix">
@@ -606,7 +619,7 @@ DNS无异常<br />
           
           <li>
               <a class="catelink" href="http://mypre.cn/categories/心情日记">
-                  心情日记&nbsp;<span class="count">[8]</span>
+                  心情日记&nbsp;<span class="count">[9]</span>
               </a>
           </li>
 
@@ -620,7 +633,7 @@ DNS无异常<br />
           
           <li>
               <a class="catelink" href="http://mypre.cn/categories/影视音乐">
-                  影视音乐&nbsp;<span class="count">[2]</span>
+                  影视音乐&nbsp;<span class="count">[3]</span>
               </a>
           </li>
 
@@ -724,7 +737,7 @@ DNS无异常<br />
       </div><!-- ./container -->
 
     <footer id="footer" class="yahei clearfix">
-	<p class="right">Copyright © 2014 <a href="http://mypre.cn" >Iziy MyPress - MyPre.Cn</a> Powered By <a href="http://jekyllrb.com/" target="_blank">Jekyll</a></p>
+	<p class="right">Copyright © 2014 <a href="http://mypre.cn" >IziyIx's Files - MyPress - MyPre.Cn</a> Powered By <a href="http://jekyllrb.com/" target="_blank">Jekyll</a></p>
 	<p class="left"></p>
 </footer>
   </div><!--./warp-->

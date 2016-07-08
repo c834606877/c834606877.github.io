@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="zh_cn" >
   <head>
-    <title>Iziy MyPress - MyPre.Cn</title>
+    <title>IziyIx's Files - MyPress - MyPre.Cn</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <meta name="keywords" content=", ,Iziy, mypre, MyPress, LanBing, jekyll" />
-    <meta name="description" content=",   这里是Iziy/蓝冰的个人博客，记录着Iziy/蓝冰的生活点滴." />
+    <meta name="description" content=",   这里是Iziy蓝冰的个人博客，记录着Iziy蓝冰的生活点滴." />
 
     <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
 
@@ -22,7 +22,7 @@
   <script src="https://cdn.bootcss.com/html5shiv/3.7.2/html5shiv-printshiv.js"></script>
   <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.js"></script>
   <![endif]-->
-  <link rel="alternate" type="application/rss+xml" title="Iziy MyPress - MyPre.Cn" href="http://mypre.cn/feed.xml" />
+  <link rel="alternate" type="application/rss+xml" title="IziyIx's Files - MyPress - MyPre.Cn" href="http://mypre.cn/feed.xml" />
 </head>
 
 <body class="nav-open">
@@ -47,10 +47,10 @@
   }
   </script>
   <div id="wrap">
-    <div id="preheader">有心人，Iziy 祝您学习愉快工作顺利～</div>
+    <div id="preheader">Iziy 祝您学习愉快工作顺利～</div>
       <header id="header" class="clearfix">
         <div class="head">
-          <h1><a href="http://mypre.cn/">面向大海,心暖花开</a></h1>
+          <h1><a href="http://mypre.cn/">IziyIx's Files</a></h1>
           <p class="desc yahei"><span>从明天起,做一个幸福的人, 喂马、劈柴、周游世界。 ---Iziy 蓝冰   </span></p>
         </div>
         <script type="text/javascript">
@@ -87,6 +87,30 @@ else
       <div id="container" class="clearfix">
           <div id="content">
   <div class="home blog">
+    
+      <!-- this is post list -->
+
+    <!-- this is post list -->
+<article class="post type-post status-publish format-audio">
+  <div class="entry-music">
+  	<div class="sb-xiami" songid="1283283">
+  		<div class="sb-player">
+  			<div class="sb-cover"></div>
+  			<div class="sb-info clearfix">
+  				<div class="sb-title left"></div>
+  				<div class="play-timer right">--:--</div>
+  			</div>
+  			<div class="play-button"> </div>
+  			<div class="play-prosess">
+  				<div class="play-prosess-bar"></div>
+  			</div>
+  		</div>
+  		<div class="sb-jplayer"></div>
+  	</div>
+  </div>
+</article>
+
+
     
       <!-- this is post list -->
 
@@ -489,83 +513,6 @@ Sidebar滚动固定box 单个box
 
 
     
-      <!-- this is post list -->
-
-    <!-- this is post list -->
-<article class="post type-post status-publish format-standard">
-    <header class="entry-header">
-    <h2 class="entry-name">
-      <a href="http://mypre.cn/2016/04/10/jekyll-get-the-img-src-or-get-rid-img-tag" title="提取一篇文章里边的 图片链接，以及除去文章里边的 img 标签" rel="bookmark">提取一篇文章里边的 图片链接，以及除去文章里边的 img 标签</a>
-    </h2>
-    <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 最后编辑 2016-04-10</li>
-      <li><i class="fa fa-pencil-square-o"></i>
-          
-            <a href="http://mypre.cn/categories/jekyll">jekyll</a>
-          
-      </li>
-      <li><i class="fa fa-comments-o"></i> <a href="http://mypre.cn/2016/04/10/jekyll-get-the-img-src-or-get-rid-img-tag#post-comment"><span class="disqus-comment-count" data-disqus-url="http://mypre.cn/2016/04/10/jekyll-get-the-img-src-or-get-rid-img-tag"></span> 评论</a></li>
-      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
-    </ul>
-    </header>
-    <div class="entry-content" itemprop="description">
-          
-              <p>从接触 Jekyll 到现在有两整天了</p>
-
-<p>发现 Jekyll 对逻辑处理方面不太善长，许是我没有认真去了解吧，</p>
-
-<p>plugin 也许是很强大的东西 ， 虽然不会ruby，但是因为对python的熟悉，还是有很大的帮助的，</p>
-
-<p>之后打算结合国内七牛CDN对资源加速，估计要用到 plugin 希望ruby的语法对新手的亲和度不会让我太失望。</p>
-
-<p>因为 原主题支持不同类型的Post，所以 对Jekyll也想实现这个功能，</p>
-
-<p>做 完了标准的Post 接下来该做 Gallery 了
-碰到的问题是，该如何提取Post文章里边的 img 中的src 以及如何 去除 文章里边的img</p>
-
-<p>因为要挪动IMG的位置到文章最前面</p>
-
-<p>因此记下方法
-去除 img 标签 如下：</p>
-
-<pre>
-
-{% for sp in content | split:"&lt;img "%}
-    {% for con in sp | split:"&gt;" %}
-        {% if con contains 'src="' or con contains "src='" %}
-        {% else %}
-          {% if con contains "href=" %}
-            {{con}}&gt;
-          {% else %}
-            {{con}}
-          {% endif %}
-        {% endif %}
-    {% endfor %}
-{% endfor %}
-
-</pre>
-
-<p>去除 IMG 方法就是 按 <img 以及="" /> 切割 除去 含有 src 属性的 项 
-剩下的 对 因为 &gt; 切割 破坏的a 标签 补上 &gt;</p>
-
-
-          
-    </div>
-    <footer class="entry-footer clearfix">
-    <div class="post-love">
-      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
-      <span class="love-count">
-        0
-      </span></a>
-    </div>
-    <div class="post-more">
-      <a href="http://mypre.cn/2016/04/10/jekyll-get-the-img-src-or-get-rid-img-tag">Read More</a>
-    </div>
-  </footer>
-</article>
-
-
-    
     
         <div class="pagination clearfix">
             
@@ -635,7 +582,7 @@ Sidebar滚动固定box 单个box
     </div>
 </aside>
   <aside id="sidebar-audio1" class="widget widget-audio">
-    <div class="sb-xiami" songid="2100452">
+    <div class="sb-xiami" songid="1283283">
         <div class="sb-player">
             <div class="sb-cover"></div>
             <div class="sb-info clearfix">
@@ -702,7 +649,7 @@ Sidebar滚动固定box 单个box
           
           <li>
               <a class="catelink" href="http://mypre.cn/categories/心情日记">
-                  心情日记&nbsp;<span class="count">[8]</span>
+                  心情日记&nbsp;<span class="count">[9]</span>
               </a>
           </li>
 
@@ -716,7 +663,7 @@ Sidebar滚动固定box 单个box
           
           <li>
               <a class="catelink" href="http://mypre.cn/categories/影视音乐">
-                  影视音乐&nbsp;<span class="count">[2]</span>
+                  影视音乐&nbsp;<span class="count">[3]</span>
               </a>
           </li>
 
@@ -820,7 +767,7 @@ Sidebar滚动固定box 单个box
       </div><!-- ./container -->
 
     <footer id="footer" class="yahei clearfix">
-	<p class="right">Copyright © 2014 <a href="http://mypre.cn" >Iziy MyPress - MyPre.Cn</a> Powered By <a href="http://jekyllrb.com/" target="_blank">Jekyll</a></p>
+	<p class="right">Copyright © 2014 <a href="http://mypre.cn" >IziyIx's Files - MyPress - MyPre.Cn</a> Powered By <a href="http://jekyllrb.com/" target="_blank">Jekyll</a></p>
 	<p class="left"></p>
 </footer>
   </div><!--./warp-->
