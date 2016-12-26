@@ -94,6 +94,83 @@ else
 <article class="post type-post status-publish format-standard">
     <header class="entry-header">
     <h2 class="entry-name">
+      <a href="http://mypre.cn/2014/10/03/1-3-1-e3-80-80kde-e5-88-9d-e5-ad-a6-e8-80-85-e7-9a-84-e9-a6-96-e9-80-89-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf" title="1.3.1　KDE初学者的首选 – Linux就是这个范儿" rel="bookmark">1.3.1　KDE初学者的首选 – Linux就是这个范儿</a>
+    </h2>
+    <ul class="entry-meta">
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2014-10-03</li>
+      <li><i class="fa fa-pencil-square-o"></i>
+          
+            <a href="http://mypre.cn/categories/Linux就是这个范儿">Linux就是这个范儿</a>
+          
+      </li>
+      <li><i class="fa fa-comments-o"></i> <a href="http://mypre.cn/2014/10/03/1-3-1-e3-80-80kde-e5-88-9d-e5-ad-a6-e8-80-85-e7-9a-84-e9-a6-96-e9-80-89-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf#post-comment"><span class="disqus-comment-count" data-disqus-url="http://mypre.cn/2014/10/03/1-3-1-e3-80-80kde-e5-88-9d-e5-ad-a6-e8-80-85-e7-9a-84-e9-a6-96-e9-80-89-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf"></span> 评论</a></li>
+      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
+    </ul>
+    </header>
+    <div class="entry-content" itemprop="description">
+          
+              <p>
+	KDE是由德国人Matthias Ettrich于1996年就读于图宾根大学时开始的一个计划。当时的Unix桌面没有一个应用程序的外观、感受或工作方式与其他程序一样。于是Matthias Ettrich就建议不仅是创建一套应用程序，而是要创建一个桌面环境，能让用户拥有相同的外观、感受和工作方式，而且这个桌面应该是非常容易使用的。他的这个想法得到了很多人的支持，从此KDE计划就诞生了。</p>
+<p>
+	可能有人会疑惑，KDE是给Unix的，似乎跟Linux没有什么关系，为什么这本书要介绍它呢？其实不单单KDE是这样，剩下的三个桌面环境也是这样。甚至在这个星球上完全针对Linux编写的软件也是并不多的，那些在Linux下能够获得的软件大多不是针对Linux开发的。它们是针对Unix系统的，而Linux属于类Unix系统，所以就毫无歉意地坐享了这些成果。这就是Linux的优势，也是大家学习Linux的优势。学会了Linux，几乎就等同于学会了Unix或类Unix系统，它们在这个星球的应用范围就从来没有被Windows超越过。本书的内容也是如此，只有少数章节是专门针对Linux特性所特别设置的，大多数知识都是通用且极具实用价值的。好了，闲话不多说，我们继续介绍KDE。</p>
+<p>
+	追究KDE这个名字的由来是没有实际意义的，但是我们需要知道它是完全采用Qt程序库（后面的章节会有详细介绍）开发的。由于Qt多舛的命运<a href="#_ftn2" name="_ftnref2" title="">[②]</a>，注定了KDE同样会拥有风雨飘摇的艰辛历程。</p>
+<p>
+	虽然Qt是开放源代码的软件，但是在KDE早期的时候Qt并非是自由软件授权，这与KDE的自由软件授权相冲突，所以很多人会担心惹上版权麻烦，尽量避免使用KDE，这成为了KDE初期推广的障碍。</p>
+<p>
+	很庆幸的是1998年11月之后，Qt程序库所属的Trolltech公司发布了第一份自由软件许可Q&nbsp;Public License（QPL）的Qt程序库授权。同年不久，KDE Free Qt基金会<a href="#_ftn3" name="_ftnref3" title="">[③]</a>保证：若Trolltech在任意连续12个月内没有发布新的自由版本，那么Qt程序库将更改为基于BSD许可证的授权进行发布。但是很多人依然争论着，认为QPL授权与GPL（万恶的&ldquo;鸡屁儿&rdquo;）上的某些条款不相容。这导致了Red Hat公司始终无法将KDE当作默认桌面，而Mandriva&nbsp;Linux则趁此时机凭借KDE席卷了欧洲市场。</p>
+<p>
+	直到2000年9月，一个基于GPL协议的Qt程序库发布，大部分用户方才对KDE生出信心。此时的KDE已经日臻完善，国内的各大Linux发行版都纷纷采用KDE作为其默认桌面，甚至出现了&ldquo;阳春白雪<a href="#_ftn4" name="_ftnref4" title="">[④]</a>&rdquo;这样专门针对KDE的汉化美化套件。</p>
+<p>
+	2008年是一个非常重要的年景，奥运会第一次在中国召开，Qt升级到了4.0，并且采用了更加宽泛的LGPL授权（仅Qt4以后的版本）。但是KDE的好日子到头了。Qt4的LGPL授权固然招人喜欢，但是Qt4相对于Qt3做了较大幅度的调整，如果KDE转投Qt4，则必须做较大改动甚至重写。KDE的开发者们抱着有困难要上，没有困难制造困难也要上的必死决心毅然地转投Qt4的怀抱。这导致了很长一段时间人们没有新的KDE版本使用，那些不断放出的KDE4的各种版本几乎个个都是花瓶，中看不中用。直到KDE 4.2版本的发布，才彻底稳定了下来。于是就在Linux界流传了一段笑话：KDE从能用到不能用再到能用，之后GNOME从能用到不能用。至于GNOME的故事我们稍后再说，KDE的故事还在继续。</p>
+<p>
+	经过Qt3到Qt4转变的这么一折腾，损失大量粉丝是在所难免的了，而祸总是不单行的。就在KDE4准备发力接受市场的挑战之际，Qt的所属公司Trolltech被大名鼎鼎的Nokia收购了。原以为能够如虎添翼一下，可万没想到的是Nokia又是一个倒霉蛋，倒霉到不得不去抱微软的大腿。结果是大腿没等抱稳，就把Qt给弄丢了，出售给了Digia公司。但是不管怎么样，由于Qt是LGPL授权的，所以它就是属于全人类的了，我们能够永远都有免费的Qt使用。</p>
+<p>
+	Qt其实是一个非常优秀的C++跨平台图形界面开发库，几乎可以媲美Java的跨平台特性。不同的是Java能够一次编译到处运行，而Qt是可以一次编码到处编译。也正因为如此，KDE已经被移植到了几乎所有硬件和操作系统平台上。现在的KDE已经不单单是一个桌面环境，它几乎就是基于Qt开发的程序的庞大集合，是Qt的一个超级平台。这里拥有功能异常丰富的应用，包括各种跨平台组件、办公套件和开发套件等，几乎可以找到任何Qt应用的样板。而且从任何角度来看，Qt都是用C++开发跨平台图形应用的首选程序库，最新的WPS选择它就是非常好的佐证。对于学习和掌握Qt，KDE是非常理想的平台。</p>
+<p>
+	需要注意，如果你根据我们的推荐选择安装了CentOS，KDE是选装部分，需要在安装的时候选中它才可以，否则就需要根据下一章所介绍的内容去手动安装了。如果你选择的是SUSE，则默认就可以使用KDE了。我们推荐初学Linux的用户选择KDE，它的操作习惯与Windows更加接近。</p>
+<p style="text-align: right;">
+	<a href="http://hook.aliapp.com/?p=554" style="font-family: 宋体; font-size: 14px; line-height: 28px; text-align: right; text-indent: 28px;">Linux就是这个范儿 &ndash; 本书目录&nbsp;</a></p>
+<hr />
+<div id="ftn2">
+<p style="margin-left:12pt;">
+		<a href="#_ftnref2" name="_ftn2" title="">[②]</a>&nbsp;1991年由TrollTech公司开发，于2008年被Nokia所收购，2012年又卖给了Digia公司。曾数次修改授权方式。
+	</p>
+</div>
+<div id="ftn3">
+<p style="margin-left:12pt;">
+		<a href="#_ftnref3" name="_ftn3" title="">[③]</a>&nbsp;就是保证Qt和KDE在任何情况下都是自由软件的组织，最初有TrollTech和KDE开发者共同创立。
+	</p>
+</div>
+<div id="ftn4">
+<p style="margin-left:12pt;">
+		<a href="#_ftnref4" name="_ftn4" title="">[④]</a>&nbsp;2001年沈阳玳娜软件有限公司为了推动中文Linux的普及，针对Red Hat Linux 7.2推出的一款汉化美化套件，其中包括中文输入法和KDE的汉化美化部分。属于死在沙滩上的优秀前辈。
+	</p>
+</div>
+
+          
+    </div>
+    <footer class="entry-footer clearfix">
+    <div class="post-love">
+      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
+      <span class="love-count">
+        0
+      </span></a>
+    </div>
+    <div class="post-more">
+      <a href="http://mypre.cn/2014/10/03/1-3-1-e3-80-80kde-e5-88-9d-e5-ad-a6-e8-80-85-e7-9a-84-e9-a6-96-e9-80-89-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf">Read More</a>
+    </div>
+  </footer>
+</article>
+
+
+    
+      <!-- this is post list -->
+
+    <!-- this is post list -->
+<article class="post type-post status-publish format-standard">
+    <header class="entry-header">
+    <h2 class="entry-name">
       <a href="http://mypre.cn/2014/09/15/e7-ae-80-e5-8d-95-e6-96-b9-e6-b3-95-e6-b7-bb-e5-8a-a0-e7-a8-8b-e5-ba-8f-e4-bd-bf-e5-85-b6-e5-bc-80-e6-9c-ba-e8-87-aa-e5-8a-a8-e5-90-af-e5-8a-a8" title="简单方法 添加程序使其开机自动启动" rel="bookmark">简单方法 添加程序使其开机自动启动</a>
     </h2>
     <ul class="entry-meta">
@@ -546,72 +623,6 @@ $ startx</pre>
 
 
     
-      <!-- this is post list -->
-
-    <!-- this is post list -->
-<article class="post type-post status-publish format-standard">
-    <header class="entry-header">
-    <h2 class="entry-name">
-      <a href="http://mypre.cn/2014/08/30/1-1-2-e9-80-89-e6-8b-a9-e5-93-aa-e4-b8-aa-e5-8f-91-e8-a1-8c-e7-89-88-e7-ac-ac-ef-bc-91-e7-ab-a0-e7-ac-ac-e4-b8-80-e6-ac-a1-e4-ba-b2-e5-af-86-e6-8e-a5-e8-a7-a6-linux-e5-b0-b1-e6-98-af" title="1.1.2 选择哪个发行版 - Linux就是这个范儿" rel="bookmark">1.1.2 选择哪个发行版 - Linux就是这个范儿</a>
-    </h2>
-    <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 最后编辑 2014-08-30</li>
-      <li><i class="fa fa-pencil-square-o"></i>
-          
-            <a href="http://mypre.cn/categories/Linux就是这个范儿">Linux就是这个范儿</a>
-          
-      </li>
-      <li><i class="fa fa-comments-o"></i> <a href="http://mypre.cn/2014/08/30/1-1-2-e9-80-89-e6-8b-a9-e5-93-aa-e4-b8-aa-e5-8f-91-e8-a1-8c-e7-89-88-e7-ac-ac-ef-bc-91-e7-ab-a0-e7-ac-ac-e4-b8-80-e6-ac-a1-e4-ba-b2-e5-af-86-e6-8e-a5-e8-a7-a6-linux-e5-b0-b1-e6-98-af#post-comment"><span class="disqus-comment-count" data-disqus-url="http://mypre.cn/2014/08/30/1-1-2-e9-80-89-e6-8b-a9-e5-93-aa-e4-b8-aa-e5-8f-91-e8-a1-8c-e7-89-88-e7-ac-ac-ef-bc-91-e7-ab-a0-e7-ac-ac-e4-b8-80-e6-ac-a1-e4-ba-b2-e5-af-86-e6-8e-a5-e8-a7-a6-linux-e5-b0-b1-e6-98-af"></span> 评论</a></li>
-      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
-    </ul>
-    </header>
-    <div class="entry-content" itemprop="description">
-          
-              <p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
-	<strong style="text-align: center;">1.1.2　选择哪个发行版</strong></p>
-<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
-	接下来我们将面临一个更为麻烦的问题，就是到底应该选择哪个Linux发行版。因为Linux的发行版实在太多了，用多如牛毛来形容一点都不夸张。可以想象，在牛毛中要选择出毛色最正、长短最合适、粗细最均匀的一根是多么纠结的事情啊。我们现在就要做这件事情，还要做好它！</p>
-<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
-	就目前的情形看，Linux发行版可以分为三个主要的分支：RedHat、Slackware和Debian。每一个分支都拥有一个最具代表性的商业服务器级的发行版，它们是：Red Hat Enterprise Linux，简称RHEL；SUSE Linux Enterprise，简称SUSE；Ubuntu Server，简称Ubuntu。</p>
-<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
-	看似好难选择的样子，但实际上也没什么，不管是谁家的Linux发行版，都不会有本质的区别。因为Linux本身就不是一个完整的系统，它实际上只是一个内核。所谓的发行版只不过是给这个内核加上一堆应用程序而攒成的系统。而且这些应用程序很大一部分都是来源于GNU社区，代码都是一样的，能有什么差别呢？</p>
-<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
-	虽然本质上没有什么不同，但是不同的发行版在细节上还是有一些差别的。这主要体现在管理工具的选用上。由于开源软件的绝对自由性，具有相同功能的系统管理类软件可以有很多种，不同的发行版可能会对某种特性有偏好。有些实力比较强大的发行商，比如Red Hat，自己也会为开源社区贡献很多这类软件，它的发行版自然也会首选自家的产品。当然，其他发行版也可以采用Red Hat开发的管理软件，实际上很多发行版也是这么做的。</p>
-<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
-	前面还说到发行版的分支，但是具体分支的归属并不取决于是否使用相同的系统管理工具。所谓的分支在软件层面上并没有十分严格的界限，只是这三个分支是历史最为悠久的发行版，而后续诞生的这些发行版大多都是从修改它们其中一种而发展起来的。实际上很多到目前为止已经跟其原有分支没有任何关联了，比如SUSE Linux已经跟Slackware没有任何联系了，但是最初的SUSE Linux是从Slackware修改而来的，所以现在依然认为它属于Slackware分支。现在，不同的分支之间互相也有借鉴，取长补短，所以分支概念在当前的发行版中越来越模糊了。现在比较清晰的是软件安装方法的不同，有些使用rpm，有些使用deb，有些甚至直接采用源代码。当然，这样的差别只有在使用不同安装方法的发行版之间才能感觉到。在日常使用中，Linux就是Linux，跟发行版没什么关系。</p>
-<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
-	花费了这么大的篇幅，依然没有讲清楚到底该选择哪个发行版，我感觉有点对不住各位。那么接下来就解决这个实际问题。大家可能有所察觉，我所列举的这些发行版有些人根本都没有听说过，现在流行的都是什么Fedora、Ubuntu。的确，如果你就是想自己装个Linux玩，它们都是很好的选择。但是我们都是实用主义者，同时还要排除一下个人偏好，所以从选择哪个发行版更适合找到好工作这个角度出发就比较靠谱了。比较理想的选择应该是&mdash;&mdash;CentOS。</p>
-<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
-	你绝对没看错，也不是我的脑袋让电梯夹了而语无伦次。虽然这之前完全没有提到过CentOS，但是当你知道它实际上是RHEL的一个克隆之后，就会稍微地理解我推荐它的原因了。</p>
-<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
-	RHEL由Red Hat发行，可以说系出名门，也是目前被众多品牌厂商支持得最为完善的Linux发行版。当然，SUSE和Ubuntu也未见得差到哪里，但是RHEL还有另外一个优势，就是对KVM虚拟机的支持。很多大型互联网公司为了充分利用服务器的硬件资源，都会大量采用虚拟机技术。而KVM的很多开发和测试工作都是在RHEL上进行的。这也导致了很多大型互联网公司都选择了RHEL作为其主要的服务器系统。既然RHEL这么优秀且又是大型互联网公司的选择，那么我们直接选择RHEL好了，为什么要选择它的克隆&mdash;&mdash;CentOS呢？</p>
-<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
-	原因非常简单，RHEL要收费。当然，RHEL也允许免费使用，但是你将得不到任何系统升级服务，也得不到任何技术支持。RHEL在对外发行的时候采用两种方式：一种就是收费的二进制方式，一种就是完全免费的源代码方式。CentOS就是利用完全免费的RHEL的源代码重新编译而成的，免费提供给大家，所以本质上与RHEL没什么区别。唯一的区别就是更新的频率没有付费的RHEL快。当然，如果你有足够的时间，也可以使用RHEL的源代码构建自己的发行版，至于是否收费，你自己说了算，给自己的公司用当然也不成问题。</p>
-<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
-	不管怎么样，要想吃Linux这碗饭，CentOS是非常好的选择。在免费的同时可以体验到大型互联网公司的服务器系统环境。如果有机会去这些公司面试，根据自己平时的学习经验就可以很好地回答面试官的问题了，而面试这种事儿，&ldquo;共同语言&rdquo;是很重要的。</p>
-<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
-	时刻不要忘记，学习Linux的本质还是要学习它最核心的那些机制。而CentOS并不会改变这些机制。掌握好了这些机制，对于掌握任何其他Linux发行版，乃至自己去制作发行版，都将是水到渠成的事情。而在这之前还有希望找到一份较为体面的工作，何乐而不为呢？<br style="clear: both; width: 0px; height: 0px;" /><br />
-	&nbsp;</p>
-<p style="text-align: right;">
-	<a href="/?p=554" style="font-family: 宋体; font-size: 14px; line-height: 28px; text-align: right; text-indent: 28px;">Linux就是这个范儿 - 本书目录&nbsp;</a></p>
-
-          
-    </div>
-    <footer class="entry-footer clearfix">
-    <div class="post-love">
-      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
-      <span class="love-count">
-        0
-      </span></a>
-    </div>
-    <div class="post-more">
-      <a href="http://mypre.cn/2014/08/30/1-1-2-e9-80-89-e6-8b-a9-e5-93-aa-e4-b8-aa-e5-8f-91-e8-a1-8c-e7-89-88-e7-ac-ac-ef-bc-91-e7-ab-a0-e7-ac-ac-e4-b8-80-e6-ac-a1-e4-ba-b2-e5-af-86-e6-8e-a5-e8-a7-a6-linux-e5-b0-b1-e6-98-af">Read More</a>
-    </div>
-  </footer>
-</article>
-
-
-    
     
         <div class="pagination clearfix">
             
@@ -735,7 +746,7 @@ $ startx</pre>
           
           <li>
               <a class="catelink" href="http://mypre.cn/categories/生活随笔">
-                  生活随笔&nbsp;<span class="count">[4]</span>
+                  生活随笔&nbsp;<span class="count">[5]</span>
               </a>
           </li>
 
@@ -770,7 +781,7 @@ $ startx</pre>
           
           <li>
               <a class="catelink" href="http://mypre.cn/categories/心情日记">
-                  心情日记&nbsp;<span class="count">[10]</span>
+                  心情日记&nbsp;<span class="count">[11]</span>
               </a>
           </li>
 

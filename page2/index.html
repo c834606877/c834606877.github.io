@@ -91,6 +91,57 @@ else
       <!-- this is post list -->
 
     <!-- this is post list -->
+<article class="post type-post status-publish format-standard">
+    <header class="entry-header">
+    <h2 class="entry-name">
+      <a href="http://mypre.cn/2016/04/11/upgrade-my-blog-with-jekyll" title="Move To My New 'Stitac' Blog and New Domain MyPre" rel="bookmark">Move To My New 'Stitac' Blog and New Domain MyPre</a>
+    </h2>
+    <ul class="entry-meta">
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2016-04-11</li>
+      <li><i class="fa fa-pencil-square-o"></i>
+          
+            <a href="http://mypre.cn/categories/本博动态">本博动态</a>
+          
+      </li>
+      <li><i class="fa fa-comments-o"></i> <a href="http://mypre.cn/2016/04/11/upgrade-my-blog-with-jekyll#post-comment"><span class="disqus-comment-count" data-disqus-url="http://mypre.cn/2016/04/11/upgrade-my-blog-with-jekyll"></span> 评论</a></li>
+      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
+    </ul>
+    </header>
+    <div class="entry-content" itemprop="description">
+          
+              <p>博客优化的还不错了，增加了一些页面，音乐专辑，相册专辑，</p>
+
+<p>这些功能一直想在Wordpress 上实现，但确一直没有实现</p>
+
+<p>许是从来没有这么专注的去学一些东西吧，</p>
+
+<p>也许 Wordpress 提供的各种HOOK及 函数 太多，太复杂了，远没有 Jekyll 来得这么 简单</p>
+
+<p>yaml ＋ liquid 语法，与Jinja2 大同小异，甚至不需要写函数，几个模板，和 简单的输出处理逻辑就搞定了，</p>
+
+<p>若是 有一个强大的 flask 作为 引擎 再配上Jinja 语法，这也决不会比Wordpress差吧～</p>
+
+
+          
+    </div>
+    <footer class="entry-footer clearfix">
+    <div class="post-love">
+      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
+      <span class="love-count">
+        0
+      </span></a>
+    </div>
+    <div class="post-more">
+      <a href="http://mypre.cn/2016/04/11/upgrade-my-blog-with-jekyll">Read More</a>
+    </div>
+  </footer>
+</article>
+
+
+    
+      <!-- this is post list -->
+
+    <!-- this is post list -->
 <article class="post type-post status-publish format-gallery">
     <header class="entry-header">
     <h2 class="entry-name">
@@ -475,52 +526,6 @@ else
 
 
     
-      <!-- this is post list -->
-
-    <!-- this is post list -->
-<article class="post type-post status-publish format-standard">
-    <header class="entry-header">
-    <h2 class="entry-name">
-      <a href="http://mypre.cn/2015/12/21/e8-bd-ac-linux-e4-b8-8b-e5-85-b3-e6-9c-ba-e5-91-bd-e4-bb-a4-e7-9a-84-e5-8c-ba-e5-88-ab-ef-bc-88haltpoweroffrebootshutdowninit-ef-bc-89" title="转 Linux下关机命令的区别 （halt,poweroff,reboot,shutdown,init）" rel="bookmark">转 Linux下关机命令的区别 （halt,poweroff,reboot,shutdown,init）</a>
-    </h2>
-    <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 最后编辑 2015-12-21</li>
-      <li><i class="fa fa-pencil-square-o"></i>
-          
-            <a href="http://mypre.cn/categories/Linux系统">Linux系统</a>
-          
-      </li>
-      <li><i class="fa fa-comments-o"></i> <a href="http://mypre.cn/2015/12/21/e8-bd-ac-linux-e4-b8-8b-e5-85-b3-e6-9c-ba-e5-91-bd-e4-bb-a4-e7-9a-84-e5-8c-ba-e5-88-ab-ef-bc-88haltpoweroffrebootshutdowninit-ef-bc-89#post-comment"><span class="disqus-comment-count" data-disqus-url="http://mypre.cn/2015/12/21/e8-bd-ac-linux-e4-b8-8b-e5-85-b3-e6-9c-ba-e5-91-bd-e4-bb-a4-e7-9a-84-e5-8c-ba-e5-88-ab-ef-bc-88haltpoweroffrebootshutdowninit-ef-bc-89"></span> 评论</a></li>
-      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
-    </ul>
-    </header>
-    <div class="entry-content" itemprop="description">
-          
-              <p class="wp-caption">在linux下一些常用的关机/重启命令。</p>
-<p><span style="font-size: large;">1.shutdown</span></p>
-<p><span style="font-size: medium;">    shutdown命令安全地将系统关机。</span><br />
-<span style="font-size: medium;">     有些用户会使用直接断掉电源的方式来关闭linux，这是十分危险的。因为linux与windows不同，其后台运行着许多进程，所以强制关机可能会导 致进程的数据丢失﹐使系统处于不稳定的状态﹐甚至在有的系统中会损坏硬件设备。而在系统关机前使用shutdown命令﹐系统管理员会通知所有登录的用户 系统将要关闭。并且login指令会被冻结﹐即新的用户不能再登录。直接关机或者延迟一定的时间才关机都是可能的﹐还可能重启。这是由所有进程 〔process〕都会收到系统所送达的信号〔signal〕决定的。这让像vi之类的程序有时间储存目前正在编辑的文档﹐而像处理邮件〔mail〕和新 闻〔news〕的程序则可以正常地离开等等。</span><br />
-<span style="font-size: medium;">      shutdown执行它的工作是送信号〔signal〕给init程序﹐要求它改变runlevel。Runlevel 0被用来停机〔halt〕﹐runlevel 6是用来重新激活〔reboot〕系统﹐而runlevel 1则是被用来让系统进入管理工作可以进行的状态﹔这是预设的﹐假定没有-h也没有-r参数给shutdown。要想了解在停机〔halt〕或者重新开机 〔reboot〕过程中做了哪些动作﹐你可以在这个文件/etc/inittab里看到这些runlevels相关的资料。</span></p>
-
-
-
-          
-    </div>
-    <footer class="entry-footer clearfix">
-    <div class="post-love">
-      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
-      <span class="love-count">
-        0
-      </span></a>
-    </div>
-    <div class="post-more">
-      <a href="http://mypre.cn/2015/12/21/e8-bd-ac-linux-e4-b8-8b-e5-85-b3-e6-9c-ba-e5-91-bd-e4-bb-a4-e7-9a-84-e5-8c-ba-e5-88-ab-ef-bc-88haltpoweroffrebootshutdowninit-ef-bc-89">Read More</a>
-    </div>
-  </footer>
-</article>
-
-
-    
     
         <div class="pagination clearfix">
             
@@ -628,7 +633,7 @@ else
           
           <li>
               <a class="catelink" href="http://mypre.cn/categories/生活随笔">
-                  生活随笔&nbsp;<span class="count">[4]</span>
+                  生活随笔&nbsp;<span class="count">[5]</span>
               </a>
           </li>
 
@@ -663,7 +668,7 @@ else
           
           <li>
               <a class="catelink" href="http://mypre.cn/categories/心情日记">
-                  心情日记&nbsp;<span class="count">[10]</span>
+                  心情日记&nbsp;<span class="count">[11]</span>
               </a>
           </li>
 
