@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <meta name="keywords" content=", ,Iziy, mypre, MyPress, LanBing, jekyll" />
-    <meta name="description" content=",   这里是Iziy蓝冰的个人博客，记录着Iziy蓝冰的生活点滴." />
+    <meta name="keywords" content=", ,Iziy, mypre, MyPress, LanBing, jekyll, iziyix" />
+    <meta name="description" content=",   这里是Iziy蓝冰的个人博客MyPress，记录着Iziy蓝冰的生活点滴." />
 
     <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
 
@@ -47,7 +47,7 @@
   }
   </script>
   <div id="wrap">
-    <div id="preheader">Iziy 祝您学习愉快工作顺利～</div>
+    <div id="preheader">一个人的角落,也许并没人会看到这里~~ anyway, 祝福你,工作顺心,学习快乐~</div>
       <header id="header" class="clearfix">
         <div class="head">
           <h1><a href="http://mypre.cn/">IziyIx's Files</a></h1>
@@ -87,6 +87,171 @@ else
       <div id="container" class="clearfix">
           <div id="content">
   <div class="home blog">
+    
+      <!-- this is post list -->
+
+    <!-- this is post list -->
+<article class="post type-post status-publish format-standard">
+    <header class="entry-header">
+    <h2 class="entry-name">
+      <a href="http://mypre.cn/2014/10/05/1-4-6-e3-80-80-e8-81-94-e6-9c-ba-e5-b8-ae-e5-8a-a9-man-e5-be-88-e9-9d-a0-e8-b0-b1-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf" title="1.4.6　联机帮助——man很靠谱 – Linux就是这个范儿" rel="bookmark">1.4.6　联机帮助——man很靠谱 – Linux就是这个范儿</a>
+    </h2>
+    <ul class="entry-meta">
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2014-10-05</li>
+      <li><i class="fa fa-pencil-square-o"></i>
+          
+            <a href="http://mypre.cn/categories/Linux就是这个范儿">Linux就是这个范儿</a>
+          
+      </li>
+      <li><i class="fa fa-comments-o"></i> <a href="http://mypre.cn/2014/10/05/1-4-6-e3-80-80-e8-81-94-e6-9c-ba-e5-b8-ae-e5-8a-a9-man-e5-be-88-e9-9d-a0-e8-b0-b1-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf#post-comment"><span class="disqus-comment-count" data-disqus-url="http://mypre.cn/2014/10/05/1-4-6-e3-80-80-e8-81-94-e6-9c-ba-e5-b8-ae-e5-8a-a9-man-e5-be-88-e9-9d-a0-e8-b0-b1-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf"></span> 评论</a></li>
+      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
+    </ul>
+    </header>
+    <div class="entry-content" itemprop="description">
+          
+              <p style="text-indent: 2em;">
+	遇到问题寻找帮助能加快解决问题的速度。在Linux系统上，有以下几个途径可以获得帮助：</p>
+<p style="text-indent: 2em;">
+	1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;遇到问题，男人（man，其实是&ldquo;手册&rdquo;的简称）的帮助很靠谱。需要某个命令或者配置文件的帮助，就在终端输入：</p>
+<pre>
+	man&nbsp;命令名
+</pre>
+<p style="text-indent: 2em;">
+	或</p>
+<pre>
+	man&nbsp;配置文件
+</pre>
+<p style="text-indent: 2em;">
+	屏幕就会显示对应命令系统的帮助手册。输入&ldquo;q&rdquo;退出帮助浏览器。</p>
+<p style="text-indent: 2em;">
+	2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;info&nbsp;和&nbsp;man&nbsp;功能相似，但是包含更多的最新信息。</p>
+<p style="text-indent: 2em;">
+	3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;使用&ldquo;命令名&nbsp;&ndash;help&rdquo;得到一个简略容易消化的命令帮助。</p>
+<p style="text-indent: 2em;">
+	4.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;程序自带README文件或者其他帮助信息文件，例如在/usr/share/doc下的一些手册。</p>
+<p style="text-indent: 2em;">
+	如何在man页中查找信息呢？浏览man页默认的工具是less。less的使用方法很简单。翻页用Space，查找用反斜杠&ldquo;/&rdquo;紧跟着正则表达式，用n查找下一个匹配项，用Shift+n查找前一个匹配项。如果这页里没有你感兴趣的，按Space翻到下页。更多的操作还是man一下less文档吧。</p>
+<p style="text-indent: 2em;">
+	很多命令的man帮助页中涉及shell命令、系统调用和编程接口等多方面，而这些内容很可能会拥有相同的名字。例如&ldquo;printf&rdquo;，它既是shell命令，又是库函数。为了能够精确找到你需要的帮助信息，人们为它们进行了分类编号。比如3代表库函数，我们要使用这样的命令才能找到库函数printf的帮助信息：</p>
+<pre>
+	$ man 3 printf
+</pre>
+<p style="text-indent: 2em;">
+	否则的话，你得到的帮助信息是shell命令printf的帮助信息。可是man对帮助信息做了哪些分类，分别都用什么编号来代表的呢？这个问题我们不用管，第3章再说。当前为了解决这种分类问题我们有一个折中的办法，就是使用&ldquo;-a&rdquo;命令选项，它会把所有跟你给定的命令名有关的帮助信息都列出来。例如：</p>
+<pre>
+	$ man -a printf
+</pre>
+<p style="text-indent: 2em;">
+	慢慢看吧，如果觉得当前的信息不是你需要的，按&ldquo;q&rdquo;之后会显示另外一个分类的信息，直到找到自己需要的为止。当然，有些时候你可能一无所获，最大的可能就是你记错了关键字。</p>
+<p style="text-indent: 2em;">
+	还有，帮助信息中的&ldquo;SEE ALSO&rdquo;经常是被遗忘的角落，但是我经常会在这里发现其他有用的命令或库函数，千万不要放过它。</p>
+<p style="text-indent: 2em; text-align: right;">
+	<a href="http://hook.aliapp.com/?p=554" style="color: rgb(51, 51, 51); text-decoration: none; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(51, 51, 51); font-size: 14px; text-align: right; text-indent: 28px; font-family: 宋体; line-height: 28px;">Linux就是这个范儿 &ndash; 本书目录&nbsp;</a></p>
+
+          
+    </div>
+    <footer class="entry-footer clearfix">
+    <div class="post-love">
+      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
+      <span class="love-count">
+        0
+      </span></a>
+    </div>
+    <div class="post-more">
+      <a href="http://mypre.cn/2014/10/05/1-4-6-e3-80-80-e8-81-94-e6-9c-ba-e5-b8-ae-e5-8a-a9-man-e5-be-88-e9-9d-a0-e8-b0-b1-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf">Read More</a>
+    </div>
+  </footer>
+</article>
+
+
+    
+      <!-- this is post list -->
+
+    <!-- this is post list -->
+<article class="post type-post status-publish format-standard">
+    <header class="entry-header">
+    <h2 class="entry-name">
+      <a href="http://mypre.cn/2014/10/05/1-4-5-e3-80-80-e9-94-99-e8-af-af-e4-bf-a1-e6-81-af-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf" title="1.4.5　错误信息 – Linux就是这个范儿" rel="bookmark">1.4.5　错误信息 – Linux就是这个范儿</a>
+    </h2>
+    <ul class="entry-meta">
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2014-10-05</li>
+      <li><i class="fa fa-pencil-square-o"></i>
+          
+            <a href="http://mypre.cn/categories/Linux就是这个范儿">Linux就是这个范儿</a>
+          
+      </li>
+      <li><i class="fa fa-comments-o"></i> <a href="http://mypre.cn/2014/10/05/1-4-5-e3-80-80-e9-94-99-e8-af-af-e4-bf-a1-e6-81-af-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf#post-comment"><span class="disqus-comment-count" data-disqus-url="http://mypre.cn/2014/10/05/1-4-5-e3-80-80-e9-94-99-e8-af-af-e4-bf-a1-e6-81-af-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf"></span> 评论</a></li>
+      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
+    </ul>
+    </header>
+    <div class="entry-content" itemprop="description">
+          
+              <pre>
+	$ %boast
+	bash: fg: %boast: No such job.
+</pre>
+<p style="text-indent: 2em;">
+	当命令执行成功的时候终端屏幕上不显示任何信息，但是当发生错误的时候它经常会以一定的形式汇报错误。上面我开了一个关于Linux错误信息提示的玩笑。boast是吹牛的意思。我在终端上敲入&ldquo;%boast&rdquo;后，终端返回错误提示&ldquo;No such job&rdquo;，意思是没有这样的工作。不同的命令返回的错误信息格式有所不同，但是经常有如下格式：</p>
+<p align="center">
+	<strong>命令名:&nbsp;</strong><strong>执行内容:&nbsp;</strong><strong>错误信息</strong></p>
+<p>
+	例如：</p>
+<pre>
+	$ rm jie
+</pre>
+<p style="text-indent: 2em;">
+	给出的错误返回是：</p>
+<pre>
+	rm: cannot remove &#39;jie&#39;: No such file or directory.
+</pre>
+<p style="text-indent: 2em;">
+	那究竟发生了什么情况？当rm命令要删除jie这个文件，jie这个文件不存在，产生了代号为2的错误。这个错误代号的意思就是找不到相应的文件或目录。错误代码就被自动翻译成No such file or directory。由于错误代码有限（大约有一百多种），有可能许多不同问题对应于同一个错误代码，所以理解要执行的命令和错误信息的关系很重要。得到错误信息，让我欢喜让我忧，喜的是知道发生什么样的错误，忧的是对错误信息有可能百思不得其解，不知道如何去解决，这时候就得凭经验了。</p>
+<p style="text-indent: 2em;">
+	errno.h包含一个完整的基本错误代码列表。除此之外，其他一些头文件（.h）也定义了自己的一些错误代码。代码1列出了系统定义的所有错误代码及错误描述。</p>
+<p>
+	代码1：</p>
+<pre>
+#include &lt;string.h&gt;
+#include &lt;errno.h&gt;
+#include &lt;stdio.h&gt;
+int main(intargc, char ** argv) {
+	int i = 0;
+	for(i = 0; i&lt; 256; i++)
+		printf (&quot;errno.%02d is: %s\n&quot;, i, strerror(i));
+	return 0;
+}
+</pre>
+<p>
+	编译此程序用命令：</p>
+<pre>
+	gcc -Wall strerror.c
+</pre>
+<p align="left" style="text-indent: 2em;">
+	执行程序：</p>
+<pre>
+	./a.out
+</pre>
+<p style="text-indent: 2em;">
+	这个程序的输出有点长，所以就不去浪费纸张了，你自己在电脑上看吧。</p>
+<p style="text-indent: 2em; text-align: right;">
+	<a href="http://hook.aliapp.com/?p=554" style="color: rgb(51, 51, 51); text-decoration: none; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(51, 51, 51); font-size: 14px; text-align: right; text-indent: 28px; font-family: 宋体; line-height: 28px;">Linux就是这个范儿 &ndash; 本书目录&nbsp;</a></p>
+
+          
+    </div>
+    <footer class="entry-footer clearfix">
+    <div class="post-love">
+      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
+      <span class="love-count">
+        0
+      </span></a>
+    </div>
+    <div class="post-more">
+      <a href="http://mypre.cn/2014/10/05/1-4-5-e3-80-80-e9-94-99-e8-af-af-e4-bf-a1-e6-81-af-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf">Read More</a>
+    </div>
+  </footer>
+</article>
+
+
     
       <!-- this is post list -->
 
@@ -721,114 +886,6 @@ else
 
 
     
-      <!-- this is post list -->
-
-    <!-- this is post list -->
-<article class="post type-post status-publish format-standard">
-    <header class="entry-header">
-    <h2 class="entry-name">
-      <a href="http://mypre.cn/2014/10/05/1-3-3-e3-80-80xfce-e8-bd-bb-e9-87-8f-e3-80-81-e7-ae-80-e5-8d-95-e3-80-81-e9-ab-98-e6-95-88-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf" title="1.3.3　XFCE——轻量、简单、高效 – Linux就是这个范儿" rel="bookmark">1.3.3　XFCE——轻量、简单、高效 – Linux就是这个范儿</a>
-    </h2>
-    <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 最后编辑 2014-10-05</li>
-      <li><i class="fa fa-pencil-square-o"></i>
-          
-            <a href="http://mypre.cn/categories/Linux就是这个范儿">Linux就是这个范儿</a>
-          
-      </li>
-      <li><i class="fa fa-comments-o"></i> <a href="http://mypre.cn/2014/10/05/1-3-3-e3-80-80xfce-e8-bd-bb-e9-87-8f-e3-80-81-e7-ae-80-e5-8d-95-e3-80-81-e9-ab-98-e6-95-88-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf#post-comment"><span class="disqus-comment-count" data-disqus-url="http://mypre.cn/2014/10/05/1-3-3-e3-80-80xfce-e8-bd-bb-e9-87-8f-e3-80-81-e7-ae-80-e5-8d-95-e3-80-81-e9-ab-98-e6-95-88-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf"></span> 评论</a></li>
-      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
-    </ul>
-    </header>
-    <div class="entry-content" itemprop="description">
-          
-              <p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
-	KDE和GNOME虽然雍容华贵，但是也恰恰就有些太过&ldquo;臃容&rdquo;，对于喜欢&ldquo;轻淡&rdquo;口味或只有&ldquo;小马力战车&rdquo;的屌丝们，XFCE是一个相当不错的选择。</p>
-<p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
-	XFCE是一个轻量级的Linux或类Unix的桌面<a class="keylink" href="http://www.2cto.com/os/" style="color: rgb(51, 51, 51); text-decoration: none;" target="_blank">系统</a>。XFCE的设计目的就是：快速加载并用来执行程序，且占用<a class="keylink" href="http://www.2cto.com/os/" style="color: rgb(51, 51, 51); text-decoration: none;" target="_blank">系统</a>资源少。从实际的使用效果上看，XFCE也的确做到了这一点。也正是因为如此，作为一个拥有很长历史（其源自1996年）的桌面环境，能够在很多U盘<a class="keylink" href="http://www.2cto.com/os/linux/" style="color: rgb(51, 51, 51); text-decoration: none;" target="_blank">Linux</a>中见到它的身影。</p>
-<p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
-	XFCE是使用率仅次于KDE和GNOME的桌面环境。各大发行版基本都会将其作为可选桌面提供。甚至一些发行版，如Xubuntu、SAM&nbsp;<a class="keylink" href="http://www.2cto.com/os/linux/" style="color: rgb(51, 51, 51); text-decoration: none;" target="_blank">Linux</a>&nbsp;Desktop等已经开始将XFCE作为默认桌面了。<br />
-	XFCE与GNOME一样，也是基于GTK+开发的，这首先保证了不会有任何授权问题。另外，XFCE不仅可以作为桌面环境使用，还能够作为程序库来开发第三方程序，比如文字编辑器Mousepad。</p>
-<p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
-	XFCE肯定是没有办法与GNOME和KDE相比的，但是简单和高效是它的特点，如果你已经修炼成了一个Linux行家里手，那么XFCE将会是你梦寐以求的选择。具体为什么，读完这本书你就知道了。</p>
-<p style="text-align: right;">
-	<br />
-	<a href="http://hook.aliapp.com/?p=554" style="color: rgb(51, 51, 51); text-decoration: none; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; line-height: 28px; text-align: right; text-indent: 28px;">Linux就是这个范儿 &ndash; 本书目录&nbsp;</a></p>
-
-          
-    </div>
-    <footer class="entry-footer clearfix">
-    <div class="post-love">
-      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
-      <span class="love-count">
-        0
-      </span></a>
-    </div>
-    <div class="post-more">
-      <a href="http://mypre.cn/2014/10/05/1-3-3-e3-80-80xfce-e8-bd-bb-e9-87-8f-e3-80-81-e7-ae-80-e5-8d-95-e3-80-81-e9-ab-98-e6-95-88-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf">Read More</a>
-    </div>
-  </footer>
-</article>
-
-
-    
-      <!-- this is post list -->
-
-    <!-- this is post list -->
-<article class="post type-post status-publish format-standard">
-    <header class="entry-header">
-    <h2 class="entry-name">
-      <a href="http://mypre.cn/2014/10/04/1-3-2-e3-80-80gnome-e4-b8-8d-e5-8f-af-e7-a3-a8-e7-81-ad-e7-9a-84-e7-bb-8f-e5-85-b8-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf" title="1.3.2　GNOME不可磨灭的经典 – Linux就是这个范儿" rel="bookmark">1.3.2　GNOME不可磨灭的经典 – Linux就是这个范儿</a>
-    </h2>
-    <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 最后编辑 2014-10-04</li>
-      <li><i class="fa fa-pencil-square-o"></i>
-          
-            <a href="http://mypre.cn/categories/Linux就是这个范儿">Linux就是这个范儿</a>
-          
-      </li>
-      <li><i class="fa fa-comments-o"></i> <a href="http://mypre.cn/2014/10/04/1-3-2-e3-80-80gnome-e4-b8-8d-e5-8f-af-e7-a3-a8-e7-81-ad-e7-9a-84-e7-bb-8f-e5-85-b8-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf#post-comment"><span class="disqus-comment-count" data-disqus-url="http://mypre.cn/2014/10/04/1-3-2-e3-80-80gnome-e4-b8-8d-e5-8f-af-e7-a3-a8-e7-81-ad-e7-9a-84-e7-bb-8f-e5-85-b8-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf"></span> 评论</a></li>
-      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
-    </ul>
-    </header>
-    <div class="entry-content" itemprop="description">
-          
-              <p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
-	在KDE受版权困扰和没有新版可用的时候，陪伴在人们身边的是GNOME桌面环境。虽然GNOME3使得GNOME从能用变得不能用了，但是GNOME2则依然是不可磨灭的经典。</p>
-<p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
-	GNOME是GNU 网络对象模型环境&mdash;&mdash;The GNU Network Object Model Environment的英文缩写。它是GNU计划的一部分，开放<a class="keylink" href="http://www.2cto.com/ym" style="color: rgb(51, 51, 51); text-decoration: none;" target="_blank">源码</a>运动的重要组成部分。目标是基于自由软件，为Unix或者类Unix操作系统构造一个功能完善、操作简单以及界面友好的桌面环境，它是GNU计划的正式桌面。</p>
-<p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
-	如果说有那么一个桌面环境是为Linux而生的，那么就非GNOME莫属了，它被现代的大多数Linux发行版作为默认桌面使用。因为Linux是类Unix的缘故，GNOME虽出于Linux但胜于Linux，已经能够运行于各种类Unix系统了，所以就有了前面对GNOME的描述。</p>
-<p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
-	GNOME主要是为了当初使用没有采用GPL授权的Qt的KDE而出现的。GIMP Toolkit（GTK+，本书后面的章节会详细介绍）就成了Qt的替代者，担当GNOME桌面的基础。GTK+使用LGPL许可证授权，允许链接到此库的软件（例如GNOME的应用程序）使用任意的许可协议。GNOME的应用程序通常采用GPL许可证授权。</p>
-<p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
-	GNOME本身是使用C语言<a class="keylink" href="http://www.2cto.com/kf" style="color: rgb(51, 51, 51); text-decoration: none;" target="_blank">编程</a>的，但并不受限于C这种单一语言。GNOME使用CORBA（Common Object Request Broker Architecture）让各程序<a class="keylink" href="http://www.2cto.com/kf/all/zujian/" style="color: rgb(51, 51, 51); text-decoration: none;" target="_blank">组件</a>能够彼此协作，而又不需要考虑它们是何种语言所写成的，甚至是在何种<a class="keylink" href="http://www.2cto.com/os/" style="color: rgb(51, 51, 51); text-decoration: none;" target="_blank">系统</a>上执行的都不用考虑。</p>
-<p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
-	GNOME提供了两个东西。一是GNOME桌面环境，一个对最终用户来说符合直觉并十分吸引人的桌面。GNOME3做到了吸引人，但是我总觉得它不符合我的直觉，也就是我总是找不到我要找的东西（可能是智商问题）。二是GNOME开发平台，一个能使开发的应用程序与桌面其他部分集成的可扩展框架。这点GNOME做得相当好，CORBA就是非常典型的例子。</p>
-<p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
-	在GNOME之下还有很多子计划，它们不都是包含在GNOME中一同发布的。一些基于概念的纯粹实验性的项目，等稳定后会加入GNOME；还有一些是正在完善中，以便能够直接加入的，例如GNOME存储和D-BUS。</p>
-<p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
-	目前的主流发行版，如RHEL、CentOS和Ubuntu等都是以GNOME为默认桌面的，操作手感更像Mac OS X，但是属于完全不同的风格。这是绝对原汁原味的GNU。</p>
-<p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px; text-align: right;">
-	<a href="http://hook.aliapp.com/?p=554" style="color: rgb(51, 51, 51); text-decoration: none; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(51, 51, 51); font-size: 14px; text-align: right; font-family: 宋体; line-height: 28px; text-indent: 28px;">Linux就是这个范儿 &ndash; 本书目录&nbsp;</a></p>
-
-          
-    </div>
-    <footer class="entry-footer clearfix">
-    <div class="post-love">
-      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
-      <span class="love-count">
-        0
-      </span></a>
-    </div>
-    <div class="post-more">
-      <a href="http://mypre.cn/2014/10/04/1-3-2-e3-80-80gnome-e4-b8-8d-e5-8f-af-e7-a3-a8-e7-81-ad-e7-9a-84-e7-bb-8f-e5-85-b8-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf">Read More</a>
-    </div>
-  </footer>
-</article>
-
-
-    
     
         <div class="pagination clearfix">
             
@@ -969,7 +1026,7 @@ else
           
           <li>
               <a class="catelink" href="http://mypre.cn/categories/系统技巧">
-                  系统技巧&nbsp;<span class="count">[1]</span>
+                  系统技巧&nbsp;<span class="count">[2]</span>
               </a>
           </li>
 
@@ -1018,14 +1075,14 @@ else
           
           <li>
               <a class="catelink" href="http://mypre.cn/categories/应用技巧">
-                  应用技巧&nbsp;<span class="count">[7]</span>
+                  应用技巧&nbsp;<span class="count">[8]</span>
               </a>
           </li>
 
           
           <li>
               <a class="catelink" href="http://mypre.cn/categories/Linux系统">
-                  Linux系统&nbsp;<span class="count">[13]</span>
+                  Linux系统&nbsp;<span class="count">[15]</span>
               </a>
           </li>
 
@@ -1093,6 +1150,22 @@ else
         
             <a class="taglink" href="http://mypre.cn/tag/#心情日记，生活随笔" data-target-cate="#心情日记，生活随笔">
                 心情日记，生活随笔
+            </a>
+        
+            <a class="taglink" href="http://mypre.cn/tag/#grub，os-prober" data-target-cate="#grub，os-prober">
+                grub，os-prober
+            </a>
+        
+            <a class="taglink" href="http://mypre.cn/tag/#windows" data-target-cate="#windows">
+                windows
+            </a>
+        
+            <a class="taglink" href="http://mypre.cn/tag/#Linux系统" data-target-cate="#Linux系统">
+                Linux系统
+            </a>
+        
+            <a class="taglink" href="http://mypre.cn/tag/#Fedora" data-target-cate="#Fedora">
+                Fedora
             </a>
         
     </div>

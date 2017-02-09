@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="zh_cn" >
   <head>
-    <title>提取一篇文章里边的 图片链接，以及除去文章里边的 img 标签 - IziyIx's Files - MyPress - MyPre.Cn</title>
+    <title>grub-mkconfig 没有Windows项 - IziyIx's Files - MyPress - MyPre.Cn</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <meta name="keywords" content="提取一篇文章里边的 图片链接，以及除去文章里边的 img 标签,jekyll, jekyll,,Iziy, mypre, MyPress, LanBing, jekyll, iziyix" />
-    <meta name="description" content="提取一篇文章里边的 图片链接，以及除去文章里边的 img 标签, jekyll, jekyll, 从接触 Jekyll 到现在有两整天了发现 Jekyll 对逻辑处理方面不太善长，许是我没有认真去了解吧，plugin 也许是很强大的东西 ， 虽然不会ruby，但是因为对python的熟悉，还是有很大的帮助的，之后打算结合国内七牛CDN对资源加速，估计要用到 plugin 希望ruby的语法对新手的亲和度不会让..." />
+    <meta name="keywords" content="grub-mkconfig 没有Windows项,Linux系统,应用技巧, grub，os-prober,windows,,Iziy, mypre, MyPress, LanBing, jekyll, iziyix" />
+    <meta name="description" content="grub-mkconfig 没有Windows项, Linux系统,应用技巧, grub，os-prober,windows, 不知道什么时候开始,我的&lt;pre&gt;grub2-mkconfig&lt;/pre&gt;找不到Windows的启动项了,说严重也不严重,但小问题堆起来也会成为大问题的于是乎,追根溯源,Windows 项原本是在&lt;pre&gt;/etc/grub.d/30_os-prober&lt;/pre&gt;..." />
 
     <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
 
@@ -90,87 +90,52 @@ else
       <article class="post format-standard">
           <header class="entry-header">
           <h2 class="entry-name">
-            <a href="http://mypre.cn/2016/04/10/jekyll-get-the-img-src-or-get-rid-img-tag" title="提取一篇文章里边的 图片链接，以及除去文章里边的 img 标签" rel="bookmark">提取一篇文章里边的 图片链接，以及除去文章里边的 img 标签</a>
+            <a href="http://mypre.cn/2017/02/09/grub-cannot-detect-windows" title="grub-mkconfig 没有Windows项" rel="bookmark">grub-mkconfig 没有Windows项</a>
           </h2>
           <ul class="entry-meta">
-            <li><i class="fa fa-clock-o"></i> 最后编辑 2016年04月10日</li>
+            <li><i class="fa fa-clock-o"></i> 最后编辑 2017年02月09日</li>
             <li><i class="fa fa-pencil-square-o"></i>
                 
-                    <a href="http://mypre.cn/categories/jekyll">jekyll</a>
+                    <a href="http://mypre.cn/categories/Linux系统">Linux系统</a>
+                
+                    <a href="http://mypre.cn/categories/应用技巧">应用技巧</a>
                 
             </li>
-            <li><i class="fa fa-comments-o"></i> <a href="http://mypre.cn/2016/04/10/jekyll-get-the-img-src-or-get-rid-img-tag#post-comment"><span class="disqus-comment-count ds-thread-count" data-disqus-url="http://mypre.cn/2016/04/10/jekyll-get-the-img-src-or-get-rid-img-tag"></span> 评论</a></li>
+            <li><i class="fa fa-comments-o"></i> <a href="http://mypre.cn/2017/02/09/grub-cannot-detect-windows#post-comment"><span class="disqus-comment-count ds-thread-count" data-disqus-url="http://mypre.cn/2017/02/09/grub-cannot-detect-windows"></span> 评论</a></li>
             <li><i class="fa fa-eye"></i><span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span></span> Views</li>
 
 
           </ul>
           </header>
           <div class="entry-content" itemprop="description">
-              <p>从接触 Jekyll 到现在有两整天了</p>
+              <p>不知道什么时候开始,我的&lt;pre&gt;grub2-mkconfig&lt;/pre&gt;</p>
 
-<p>发现 Jekyll 对逻辑处理方面不太善长，许是我没有认真去了解吧，</p>
+<p>找不到Windows的启动项了,
+说严重也不严重,但小问题堆起来也会成为大问题的
+于是乎,追根溯源,
+Windows 项原本是在&lt;pre&gt;/etc/grub.d/30_os-prober&lt;/pre&gt;生成</p>
 
-<p>plugin 也许是很强大的东西 ， 虽然不会ruby，但是因为对python的熟悉，还是有很大的帮助的，</p>
+<p>查看其代码,发现使用了&lt;pre&gt;os-prober&lt;/pre&gt;寻找其他系统.
+运行发现没有输出,可以确定是这个东西在抽风了</p>
 
-<p>之后打算结合国内七牛CDN对资源加速，估计要用到 plugin 希望ruby的语法对新手的亲和度不会让我太失望。</p>
+<p>回头一想,之前由于部分主板EFI记动的时候,会检测是否存在&lt;pre&gt;/EFI/Microsoft/Boot/bootmfgw.efi&lt;/pre&gt;,如果存在的话,会直接启动他,所以将其改名了.
+将其改回再测试,os-prober可心正常找到Windows项了</p>
 
-<p>因为 原主题支持不同类型的Post，所以 对Jekyll也想实现这个功能，</p>
+<p>于是乎,&lt;pre&gt;os-prober&lt;/pre&gt;要改的话基本没戏,还是写脚本吧,</p>
 
-<p>做 完了标准的Post 接下来该做 Gallery 了
-碰到的问题是，该如何提取Post文章里边的 img 中的src 以及如何 去除 文章里边的img</p>
+<p><code>/etc/grub.d/40_custom</code>
+直接将启动项加入就行了.</p>
 
-<p>因为要挪动IMG的位置到文章最前面</p>
-
-<p>因此记下方法
-去除 img 标签 如下：</p>
-
-<pre>
-
-{% for sp in content | split:"&lt;img "%}
-    {% for con in sp | split:"&gt;" %}
-        {% if con contains 'src="' or con contains "src='" %}
-        {% else %}
-          {% if con contains "href=" %}
-            {{con}}&gt;
-          {% else %}
-            {{con}}
-          {% endif %}
-        {% endif %}
-    {% endfor %}
-{% endfor %}
-
-</pre>
-
-<p>去除 IMG 方法就是 按 <img 以及="" /> 切割 除去 含有 src 属性的 项 
-剩下的 对 因为 &gt; 切割 破坏的a 标签 补上 &gt;
-<!--more-->
-对 提取 img 标签 如下：</p>
-
-<pre>
-{% assign images = content | split:"&lt;img " %}
-{% for image in images %}
-    {% assign html = image | split:"&gt;" | first %}
-    {% assign tags = html | split:" " %}
-    {% for tag in tags %}
-      {% if tag contains 'src="' or tag contains "src='" %}
-          {% assign src = tag | split: '"' | last%}
-          &lt;li data-thumb="{{src}}"&gt;&lt;img src="{{src}}" title="{{page.title| strip_newlines}}" alt="{{page.title| strip_newlines}}"/&gt;
-      {% endif %}
-    {% endfor %}
-{% endfor %}
-</pre>
-
-<p>取出 img 标签 里边的 属性组 对src 属性 按 ‘“’ 分割， 
-注意 此处不能用＝号分割 ， 因为 图片链接当中有可能有＝号</p>
+<p>关于 grub 请详见<a href="https://www.gnu.org/software/grub/manual/grub.html#">官方文档</a>!</p>
 
           </div>
         <footer class="entry-footer clearfix">
           <div class="post-share">
             <a href="javascript:;"><i class="fa fa-share-alt"></i> 分享</a>
             <ul>
-              <li><a href="http://service.weibo.com/share/share.php?title=提取一篇文章里边的 图片链接，以及除去文章里边的 img 标签&url=http://mypre.cn/2016/04/10/jekyll-get-the-img-src-or-get-rid-img-tag" target="_blank"><i class="fa fa-weibo"></i></a></li>
-              <li><a href="http://share.renren.com/share/buttonshare?link=http://mypre.cn/2016/04/10/jekyll-get-the-img-src-or-get-rid-img-tag&title=提取一篇文章里边的 图片链接，以及除去文章里边的 img 标签" target="_blank"><i class="fa fa-renren"></i></a></li>
-              <li><a href="http://twitter.com/share?url=http://mypre.cn/2016/04/10/jekyll-get-the-img-src-or-get-rid-img-tag&text=提取一篇文章里边的 图片链接，以及除去文章里边的 img 标签" target="_blank"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="http://service.weibo.com/share/share.php?title=grub-mkconfig 没有Windows项&url=http://mypre.cn/2017/02/09/grub-cannot-detect-windows" target="_blank"><i class="fa fa-weibo"></i></a></li>
+              <li><a href="http://share.renren.com/share/buttonshare?link=http://mypre.cn/2017/02/09/grub-cannot-detect-windows&title=grub-mkconfig 没有Windows项" target="_blank"><i class="fa fa-renren"></i></a></li>
+              <li><a href="http://twitter.com/share?url=http://mypre.cn/2017/02/09/grub-cannot-detect-windows&text=grub-mkconfig 没有Windows项" target="_blank"><i class="fa fa-twitter"></i></a></li>
             </ul>
           </div>
           <div class="post-love">
@@ -182,7 +147,9 @@ else
           <div class="post-tags">
             Tags:
               
-                  <a class="tag" href="http://mypre.cn/tag/#jekyll">jekyll</a>
+                  <a class="tag" href="http://mypre.cn/tag/#grub，os-prober">grub，os-prober</a>
+              
+                  <a class="tag" href="http://mypre.cn/tag/#windows">windows</a>
               
           </div>
         </footer>
@@ -204,8 +171,8 @@ else
 <div id="post-comment" class="comments box clearfix">
 	<h5 id="comments-title"><span> Comments</span></h5>
         
-        <div class="ds-thread" data-thread-key="/2016/04/10/jekyll-get-the-img-src-or-get-rid-img-tag"
-             data-title="提取一篇文章里边的 图片链接，以及除去文章里边的 img 标签" data-url="http://mypre.cn/2016/04/10/jekyll-get-the-img-src-or-get-rid-img-tag"></div>
+        <div class="ds-thread" data-thread-key="/2017/02/09/grub-cannot-detect-windows"
+             data-title="grub-mkconfig 没有Windows项" data-url="http://mypre.cn/2017/02/09/grub-cannot-detect-windows"></div>
         
 
         
@@ -259,7 +226,7 @@ else
                           
                           
                           
-                            <img id="past_nail" class="rounded" src="http://mypre.cn/assets/images/random/7.jpg" title="让 Grub2 记住上次选择的启动项" alt="让 Grub2 记住上次选择的启动项" width="45" height="45" />
+                            <img id="past_nail" class="rounded" src="http://mypre.cn/assets/images/random/5.jpg" title="让 Grub2 记住上次选择的启动项" alt="让 Grub2 记住上次选择的启动项" width="45" height="45" />
                           
 
 
@@ -283,31 +250,7 @@ else
                           
                           
                           
-                            <img id="past_nail" class="rounded" src="http://mypre.cn/assets/images/random/2.jpg" title="grub-mkconfig 没有Windows项" alt="grub-mkconfig 没有Windows项" width="45" height="45" />
-                          
-
-
-                  </div>
-                  <div class="post-right">
-                      <h3><a href="/2017/02/09/grub-cannot-detect-windows">grub-mkconfig 没有Windows项</a></h3>
-                      <div class="post-meta">
-                          <a href="/2017/02/09/grub-cannot-detect-windows#post-comment" title="grub-mkconfig 没有Windows项 上的评论">No Reply</a></span> | <span>? Views</span>
-                      </div>
-                  </div>
-              </li>
-            
-            
-            
-              <li class="clearfix">
-                  <div class="post-thumb">
-                          
-                          
-                          
-                            
-                          
-                          
-                          
-                            <img id="past_nail" class="rounded" src="http://mypre.cn/assets/images/random/2.jpg" title="On The Way, Forever~" alt="On The Way, Forever~" width="45" height="45" />
+                            <img id="past_nail" class="rounded" src="http://mypre.cn/assets/images/random/7.jpg" title="On The Way, Forever~" alt="On The Way, Forever~" width="45" height="45" />
                           
 
 
@@ -331,7 +274,7 @@ else
                           
                           
                           
-                            <img id="past_nail" class="rounded" src="http://mypre.cn/assets/images/random/7.jpg" title="Keep Silence until 2017 Just like three half years ago" alt="Keep Silence until 2017 Just like three half years ago" width="45" height="45" />
+                            <img id="past_nail" class="rounded" src="http://mypre.cn/assets/images/random/5.jpg" title="Keep Silence until 2017 Just like three half years ago" alt="Keep Silence until 2017 Just like three half years ago" width="45" height="45" />
                           
 
 
@@ -357,9 +300,24 @@ else
                           
                             
                           
+                            
+                                
+                                    
+                                    
+                                    
+                                      
+                                        <img class="rounded" src="/post_res/abfaa40egx6BSi1xx0652&amp;690.jpg" title="卧榻将息，辗转之思" alt="卧榻将息，辗转之思" width="45" height="45" />
+                                        
+                                      
+                                    
+                                      
+                                    
+                                      
+                                    
+                                    
+                                
+                            
                           
-                          
-                            <img id="past_nail" class="rounded" src="http://mypre.cn/assets/images/random/3.jpg" title="卧榻将息，辗转之思" alt="卧榻将息，辗转之思" width="45" height="45" />
                           
 
 
@@ -383,7 +341,7 @@ else
                           
                           
                           
-                            <img id="past_nail" class="rounded" src="http://mypre.cn/assets/images/random/5.jpg" title="在Linux下 使用Scroll键开关键盘背光灯" alt="在Linux下 使用Scroll键开关键盘背光灯" width="45" height="45" />
+                            <img id="past_nail" class="rounded" src="http://mypre.cn/assets/images/random/7.jpg" title="在Linux下 使用Scroll键开关键盘背光灯" alt="在Linux下 使用Scroll键开关键盘背光灯" width="45" height="45" />
                           
 
 
@@ -407,7 +365,7 @@ else
                           
                           
                           
-                            <img id="past_nail" class="rounded" src="http://mypre.cn/assets/images/random/2.jpg" title="Open Here In Teminal From Nautilus" alt="Open Here In Teminal From Nautilus" width="45" height="45" />
+                            <img id="past_nail" class="rounded" src="http://mypre.cn/assets/images/random/1.jpg" title="Open Here In Teminal From Nautilus" alt="Open Here In Teminal From Nautilus" width="45" height="45" />
                           
 
 
@@ -431,7 +389,7 @@ else
                           
                           
                           
-                            <img id="past_nail" class="rounded" src="http://mypre.cn/assets/images/random/4.jpg" title="The Fourth Day, fix some small bugs" alt="The Fourth Day, fix some small bugs" width="45" height="45" />
+                            <img id="past_nail" class="rounded" src="http://mypre.cn/assets/images/random/6.jpg" title="The Fourth Day, fix some small bugs" alt="The Fourth Day, fix some small bugs" width="45" height="45" />
                           
 
 
@@ -440,6 +398,30 @@ else
                       <h3><a href="/2016/04/12/fourth-day-fix-some-smarll-problem">The Fourth Day, fix some small bugs</a></h3>
                       <div class="post-meta">
                           <a href="/2016/04/12/fourth-day-fix-some-smarll-problem#post-comment" title="The Fourth Day, fix some small bugs 上的评论">No Reply</a></span> | <span>? Views</span>
+                      </div>
+                  </div>
+              </li>
+            
+            
+            
+              <li class="clearfix">
+                  <div class="post-thumb">
+                          
+                          
+                          
+                            
+                          
+                          
+                          
+                            <img id="past_nail" class="rounded" src="http://mypre.cn/assets/images/random/7.jpg" title="Move To My New 'Stitac' Blog and New Domain MyPre" alt="Move To My New 'Stitac' Blog and New Domain MyPre" width="45" height="45" />
+                          
+
+
+                  </div>
+                  <div class="post-right">
+                      <h3><a href="/2016/04/11/upgrade-my-blog-with-jekyll">Move To My New 'Stitac' Blog and New Domain MyPre</a></h3>
+                      <div class="post-meta">
+                          <a href="/2016/04/11/upgrade-my-blog-with-jekyll#post-comment" title="Move To My New 'Stitac' Blog and New Domain MyPre 上的评论">No Reply</a></span> | <span>? Views</span>
                       </div>
                   </div>
               </li>
@@ -638,7 +620,7 @@ else
 </footer>
   </div><!--./warp-->
 
-  <img id="qrimg" src="http://qr.liantu.com/api.php?text=http://mypre.cn/2016/04/10/jekyll-get-the-img-src-or-get-rid-img-tag"/>
+  <img id="qrimg" src="http://qr.liantu.com/api.php?text=http://mypre.cn/2017/02/09/grub-cannot-detect-windows"/>
   <a id="qr" href="javascript:;"><i class="fa fa-qrcode"></i></a>
   <a id="gotop" href="javascript:;"><i class="fa fa-arrow-up"></i></a>
   <!--the js include-->

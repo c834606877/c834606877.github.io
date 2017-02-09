@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="zh_cn" >
   <head>
-    <title>提取一篇文章里边的 图片链接，以及除去文章里边的 img 标签 - IziyIx's Files - MyPress - MyPre.Cn</title>
+    <title>让 Grub2 记住上次选择的启动项 - IziyIx's Files - MyPress - MyPre.Cn</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <meta name="keywords" content="提取一篇文章里边的 图片链接，以及除去文章里边的 img 标签,jekyll, jekyll,,Iziy, mypre, MyPress, LanBing, jekyll, iziyix" />
-    <meta name="description" content="提取一篇文章里边的 图片链接，以及除去文章里边的 img 标签, jekyll, jekyll, 从接触 Jekyll 到现在有两整天了发现 Jekyll 对逻辑处理方面不太善长，许是我没有认真去了解吧，plugin 也许是很强大的东西 ， 虽然不会ruby，但是因为对python的熟悉，还是有很大的帮助的，之后打算结合国内七牛CDN对资源加速，估计要用到 plugin 希望ruby的语法对新手的亲和度不会让..." />
+    <meta name="keywords" content="让 Grub2 记住上次选择的启动项,Linux系统,系统技巧, Linux系统,Fedora,,Iziy, mypre, MyPress, LanBing, jekyll, iziyix" />
+    <meta name="description" content="让 Grub2 记住上次选择的启动项, Linux系统,系统技巧, Linux系统,Fedora, linux 下可以碰到各种各样的问题,今天解决了一部分,明天也许又会冒出一些新的问题,但是,更重要的是,fix it and remenber it!linux 使用配置文件进行管理,其中gurb 的配置文件有, &lt;pre&gt;/etc/default/grub&lt;/pre&gt;和&lt;pre&g..." />
 
     <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
 
@@ -90,87 +90,59 @@ else
       <article class="post format-standard">
           <header class="entry-header">
           <h2 class="entry-name">
-            <a href="http://mypre.cn/2016/04/10/jekyll-get-the-img-src-or-get-rid-img-tag" title="提取一篇文章里边的 图片链接，以及除去文章里边的 img 标签" rel="bookmark">提取一篇文章里边的 图片链接，以及除去文章里边的 img 标签</a>
+            <a href="http://mypre.cn/2017/02/09/grub-set-default-boot-last-choise" title="让 Grub2 记住上次选择的启动项" rel="bookmark">让 Grub2 记住上次选择的启动项</a>
           </h2>
           <ul class="entry-meta">
-            <li><i class="fa fa-clock-o"></i> 最后编辑 2016年04月10日</li>
+            <li><i class="fa fa-clock-o"></i> 最后编辑 2017年02月09日</li>
             <li><i class="fa fa-pencil-square-o"></i>
                 
-                    <a href="http://mypre.cn/categories/jekyll">jekyll</a>
+                    <a href="http://mypre.cn/categories/Linux系统">Linux系统</a>
+                
+                    <a href="http://mypre.cn/categories/系统技巧">系统技巧</a>
                 
             </li>
-            <li><i class="fa fa-comments-o"></i> <a href="http://mypre.cn/2016/04/10/jekyll-get-the-img-src-or-get-rid-img-tag#post-comment"><span class="disqus-comment-count ds-thread-count" data-disqus-url="http://mypre.cn/2016/04/10/jekyll-get-the-img-src-or-get-rid-img-tag"></span> 评论</a></li>
+            <li><i class="fa fa-comments-o"></i> <a href="http://mypre.cn/2017/02/09/grub-set-default-boot-last-choise#post-comment"><span class="disqus-comment-count ds-thread-count" data-disqus-url="http://mypre.cn/2017/02/09/grub-set-default-boot-last-choise"></span> 评论</a></li>
             <li><i class="fa fa-eye"></i><span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span></span> Views</li>
 
 
           </ul>
           </header>
           <div class="entry-content" itemprop="description">
-              <p>从接触 Jekyll 到现在有两整天了</p>
+              <p>linux 下可以碰到各种各样的问题,今天解决了一部分,明天也许又会冒出一些新的问题,
+但是,更重要的是,fix it and remenber it!</p>
 
-<p>发现 Jekyll 对逻辑处理方面不太善长，许是我没有认真去了解吧，</p>
+<p>linux 使用配置文件进行管理,其中gurb 的配置文件有, &lt;pre&gt;/etc/default/grub&lt;/pre&gt;和&lt;pre&gt;/etc/grub.d/&lt;/pre&gt;</p>
 
-<p>plugin 也许是很强大的东西 ， 虽然不会ruby，但是因为对python的熟悉，还是有很大的帮助的，</p>
+<p>前者存储grub变量,后者为生成一个完整,grub.cfg配置的脚本,</p>
 
-<p>之后打算结合国内七牛CDN对资源加速，估计要用到 plugin 希望ruby的语法对新手的亲和度不会让我太失望。</p>
+<p>此外,还有一个官方给的&gt;/boot/grub2/grubenv&lt;/pre&gt;
+然而,在我的Fedora 24上 并没有&lt;pre&gt;/etc/default/grub&lt;/pre&gt;手动创建也没有用,原来需要使用
+<code>grub2-editenv /etc/default/grub create
+grub2-editenv /etc/default/grub set GRUB_DEFAULT=saved
+grub2-editenv /etc/default/grub set GRUB_SAVEDEFAULT=true
+</code></p>
 
-<p>因为 原主题支持不同类型的Post，所以 对Jekyll也想实现这个功能，</p>
+<p>这样才能被grub所识别,
+其实可以直接使用官方给的路径更简单,</p>
 
-<p>做 完了标准的Post 接下来该做 Gallery 了
-碰到的问题是，该如何提取Post文章里边的 img 中的src 以及如何 去除 文章里边的img</p>
+<p>重新生成grub.cfg 覆盖原有文件:
+<code>sudo grub2-mkconfig -o /boot/grub2/grub.cfg
+sudo cp /boot/grub2/grub.cfg /boot/efi/EFI/fedora/grub.cfg
+</code></p>
 
-<p>因为要挪动IMG的位置到文章最前面</p>
+<p>重启查看效果</p>
 
-<p>因此记下方法
-去除 img 标签 如下：</p>
-
-<pre>
-
-{% for sp in content | split:"&lt;img "%}
-    {% for con in sp | split:"&gt;" %}
-        {% if con contains 'src="' or con contains "src='" %}
-        {% else %}
-          {% if con contains "href=" %}
-            {{con}}&gt;
-          {% else %}
-            {{con}}
-          {% endif %}
-        {% endif %}
-    {% endfor %}
-{% endfor %}
-
-</pre>
-
-<p>去除 IMG 方法就是 按 <img 以及="" /> 切割 除去 含有 src 属性的 项 
-剩下的 对 因为 &gt; 切割 破坏的a 标签 补上 &gt;
-<!--more-->
-对 提取 img 标签 如下：</p>
-
-<pre>
-{% assign images = content | split:"&lt;img " %}
-{% for image in images %}
-    {% assign html = image | split:"&gt;" | first %}
-    {% assign tags = html | split:" " %}
-    {% for tag in tags %}
-      {% if tag contains 'src="' or tag contains "src='" %}
-          {% assign src = tag | split: '"' | last%}
-          &lt;li data-thumb="{{src}}"&gt;&lt;img src="{{src}}" title="{{page.title| strip_newlines}}" alt="{{page.title| strip_newlines}}"/&gt;
-      {% endif %}
-    {% endfor %}
-{% endfor %}
-</pre>
-
-<p>取出 img 标签 里边的 属性组 对src 属性 按 ‘“’ 分割， 
-注意 此处不能用＝号分割 ， 因为 图片链接当中有可能有＝号</p>
+<p>文档是个好东西,就看会不会使用了
+<a href="https://www.gnu.org/software/grub/manual/grub.html#">官方文档</a></p>
 
           </div>
         <footer class="entry-footer clearfix">
           <div class="post-share">
             <a href="javascript:;"><i class="fa fa-share-alt"></i> 分享</a>
             <ul>
-              <li><a href="http://service.weibo.com/share/share.php?title=提取一篇文章里边的 图片链接，以及除去文章里边的 img 标签&url=http://mypre.cn/2016/04/10/jekyll-get-the-img-src-or-get-rid-img-tag" target="_blank"><i class="fa fa-weibo"></i></a></li>
-              <li><a href="http://share.renren.com/share/buttonshare?link=http://mypre.cn/2016/04/10/jekyll-get-the-img-src-or-get-rid-img-tag&title=提取一篇文章里边的 图片链接，以及除去文章里边的 img 标签" target="_blank"><i class="fa fa-renren"></i></a></li>
-              <li><a href="http://twitter.com/share?url=http://mypre.cn/2016/04/10/jekyll-get-the-img-src-or-get-rid-img-tag&text=提取一篇文章里边的 图片链接，以及除去文章里边的 img 标签" target="_blank"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="http://service.weibo.com/share/share.php?title=让 Grub2 记住上次选择的启动项&url=http://mypre.cn/2017/02/09/grub-set-default-boot-last-choise" target="_blank"><i class="fa fa-weibo"></i></a></li>
+              <li><a href="http://share.renren.com/share/buttonshare?link=http://mypre.cn/2017/02/09/grub-set-default-boot-last-choise&title=让 Grub2 记住上次选择的启动项" target="_blank"><i class="fa fa-renren"></i></a></li>
+              <li><a href="http://twitter.com/share?url=http://mypre.cn/2017/02/09/grub-set-default-boot-last-choise&text=让 Grub2 记住上次选择的启动项" target="_blank"><i class="fa fa-twitter"></i></a></li>
             </ul>
           </div>
           <div class="post-love">
@@ -182,7 +154,9 @@ else
           <div class="post-tags">
             Tags:
               
-                  <a class="tag" href="http://mypre.cn/tag/#jekyll">jekyll</a>
+                  <a class="tag" href="http://mypre.cn/tag/#Linux系统">Linux系统</a>
+              
+                  <a class="tag" href="http://mypre.cn/tag/#Fedora">Fedora</a>
               
           </div>
         </footer>
@@ -204,8 +178,8 @@ else
 <div id="post-comment" class="comments box clearfix">
 	<h5 id="comments-title"><span> Comments</span></h5>
         
-        <div class="ds-thread" data-thread-key="/2016/04/10/jekyll-get-the-img-src-or-get-rid-img-tag"
-             data-title="提取一篇文章里边的 图片链接，以及除去文章里边的 img 标签" data-url="http://mypre.cn/2016/04/10/jekyll-get-the-img-src-or-get-rid-img-tag"></div>
+        <div class="ds-thread" data-thread-key="/2017/02/09/grub-set-default-boot-last-choise"
+             data-title="让 Grub2 记住上次选择的启动项" data-url="http://mypre.cn/2017/02/09/grub-set-default-boot-last-choise"></div>
         
 
         
@@ -259,31 +233,7 @@ else
                           
                           
                           
-                            <img id="past_nail" class="rounded" src="http://mypre.cn/assets/images/random/7.jpg" title="让 Grub2 记住上次选择的启动项" alt="让 Grub2 记住上次选择的启动项" width="45" height="45" />
-                          
-
-
-                  </div>
-                  <div class="post-right">
-                      <h3><a href="/2017/02/09/grub-set-default-boot-last-choise">让 Grub2 记住上次选择的启动项</a></h3>
-                      <div class="post-meta">
-                          <a href="/2017/02/09/grub-set-default-boot-last-choise#post-comment" title="让 Grub2 记住上次选择的启动项 上的评论">No Reply</a></span> | <span>? Views</span>
-                      </div>
-                  </div>
-              </li>
-            
-            
-            
-              <li class="clearfix">
-                  <div class="post-thumb">
-                          
-                          
-                          
-                            
-                          
-                          
-                          
-                            <img id="past_nail" class="rounded" src="http://mypre.cn/assets/images/random/2.jpg" title="grub-mkconfig 没有Windows项" alt="grub-mkconfig 没有Windows项" width="45" height="45" />
+                            <img id="past_nail" class="rounded" src="http://mypre.cn/assets/images/random/3.jpg" title="grub-mkconfig 没有Windows项" alt="grub-mkconfig 没有Windows项" width="45" height="45" />
                           
 
 
@@ -307,7 +257,7 @@ else
                           
                           
                           
-                            <img id="past_nail" class="rounded" src="http://mypre.cn/assets/images/random/2.jpg" title="On The Way, Forever~" alt="On The Way, Forever~" width="45" height="45" />
+                            <img id="past_nail" class="rounded" src="http://mypre.cn/assets/images/random/4.jpg" title="On The Way, Forever~" alt="On The Way, Forever~" width="45" height="45" />
                           
 
 
@@ -331,7 +281,7 @@ else
                           
                           
                           
-                            <img id="past_nail" class="rounded" src="http://mypre.cn/assets/images/random/7.jpg" title="Keep Silence until 2017 Just like three half years ago" alt="Keep Silence until 2017 Just like three half years ago" width="45" height="45" />
+                            <img id="past_nail" class="rounded" src="http://mypre.cn/assets/images/random/4.jpg" title="Keep Silence until 2017 Just like three half years ago" alt="Keep Silence until 2017 Just like three half years ago" width="45" height="45" />
                           
 
 
@@ -357,9 +307,24 @@ else
                           
                             
                           
+                            
+                                
+                                    
+                                    
+                                    
+                                      
+                                        <img class="rounded" src="/post_res/abfaa40egx6BSi1xx0652&amp;690.jpg" title="卧榻将息，辗转之思" alt="卧榻将息，辗转之思" width="45" height="45" />
+                                        
+                                      
+                                    
+                                      
+                                    
+                                      
+                                    
+                                    
+                                
+                            
                           
-                          
-                            <img id="past_nail" class="rounded" src="http://mypre.cn/assets/images/random/3.jpg" title="卧榻将息，辗转之思" alt="卧榻将息，辗转之思" width="45" height="45" />
                           
 
 
@@ -383,7 +348,7 @@ else
                           
                           
                           
-                            <img id="past_nail" class="rounded" src="http://mypre.cn/assets/images/random/5.jpg" title="在Linux下 使用Scroll键开关键盘背光灯" alt="在Linux下 使用Scroll键开关键盘背光灯" width="45" height="45" />
+                            <img id="past_nail" class="rounded" src="http://mypre.cn/assets/images/random/7.jpg" title="在Linux下 使用Scroll键开关键盘背光灯" alt="在Linux下 使用Scroll键开关键盘背光灯" width="45" height="45" />
                           
 
 
@@ -407,7 +372,7 @@ else
                           
                           
                           
-                            <img id="past_nail" class="rounded" src="http://mypre.cn/assets/images/random/2.jpg" title="Open Here In Teminal From Nautilus" alt="Open Here In Teminal From Nautilus" width="45" height="45" />
+                            <img id="past_nail" class="rounded" src="http://mypre.cn/assets/images/random/4.jpg" title="Open Here In Teminal From Nautilus" alt="Open Here In Teminal From Nautilus" width="45" height="45" />
                           
 
 
@@ -431,7 +396,7 @@ else
                           
                           
                           
-                            <img id="past_nail" class="rounded" src="http://mypre.cn/assets/images/random/4.jpg" title="The Fourth Day, fix some small bugs" alt="The Fourth Day, fix some small bugs" width="45" height="45" />
+                            <img id="past_nail" class="rounded" src="http://mypre.cn/assets/images/random/7.jpg" title="The Fourth Day, fix some small bugs" alt="The Fourth Day, fix some small bugs" width="45" height="45" />
                           
 
 
@@ -440,6 +405,30 @@ else
                       <h3><a href="/2016/04/12/fourth-day-fix-some-smarll-problem">The Fourth Day, fix some small bugs</a></h3>
                       <div class="post-meta">
                           <a href="/2016/04/12/fourth-day-fix-some-smarll-problem#post-comment" title="The Fourth Day, fix some small bugs 上的评论">No Reply</a></span> | <span>? Views</span>
+                      </div>
+                  </div>
+              </li>
+            
+            
+            
+              <li class="clearfix">
+                  <div class="post-thumb">
+                          
+                          
+                          
+                            
+                          
+                          
+                          
+                            <img id="past_nail" class="rounded" src="http://mypre.cn/assets/images/random/1.jpg" title="Move To My New 'Stitac' Blog and New Domain MyPre" alt="Move To My New 'Stitac' Blog and New Domain MyPre" width="45" height="45" />
+                          
+
+
+                  </div>
+                  <div class="post-right">
+                      <h3><a href="/2016/04/11/upgrade-my-blog-with-jekyll">Move To My New 'Stitac' Blog and New Domain MyPre</a></h3>
+                      <div class="post-meta">
+                          <a href="/2016/04/11/upgrade-my-blog-with-jekyll#post-comment" title="Move To My New 'Stitac' Blog and New Domain MyPre 上的评论">No Reply</a></span> | <span>? Views</span>
                       </div>
                   </div>
               </li>
@@ -638,7 +627,7 @@ else
 </footer>
   </div><!--./warp-->
 
-  <img id="qrimg" src="http://qr.liantu.com/api.php?text=http://mypre.cn/2016/04/10/jekyll-get-the-img-src-or-get-rid-img-tag"/>
+  <img id="qrimg" src="http://qr.liantu.com/api.php?text=http://mypre.cn/2017/02/09/grub-set-default-boot-last-choise"/>
   <a id="qr" href="javascript:;"><i class="fa fa-qrcode"></i></a>
   <a id="gotop" href="javascript:;"><i class="fa fa-arrow-up"></i></a>
   <!--the js include-->

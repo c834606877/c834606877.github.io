@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <meta name="keywords" content=", ,Iziy, mypre, MyPress, LanBing, jekyll" />
-    <meta name="description" content=",   这里是Iziy蓝冰的个人博客，记录着Iziy蓝冰的生活点滴." />
+    <meta name="keywords" content=", ,Iziy, mypre, MyPress, LanBing, jekyll, iziyix" />
+    <meta name="description" content=",   这里是Iziy蓝冰的个人博客MyPress，记录着Iziy蓝冰的生活点滴." />
 
     <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
 
@@ -47,7 +47,7 @@
   }
   </script>
   <div id="wrap">
-    <div id="preheader">Iziy 祝您学习愉快工作顺利～</div>
+    <div id="preheader">一个人的角落,也许并没人会看到这里~~ anyway, 祝福你,工作顺心,学习快乐~</div>
       <header id="header" class="clearfix">
         <div class="head">
           <h1><a href="http://mypre.cn/">IziyIx's Files</a></h1>
@@ -89,6 +89,66 @@ else
 	  <div class="box archive-meta">
         <h3 class="title-meta">应用技巧</h3>
       </div>
+    
+            <!-- this is post list -->
+
+    <!-- this is post list -->
+<article class="post type-post status-publish format-standard">
+    <header class="entry-header">
+    <h2 class="entry-name">
+      <a href="http://mypre.cn/2017/02/09/grub-cannot-detect-windows" title="grub-mkconfig 没有Windows项" rel="bookmark">grub-mkconfig 没有Windows项</a>
+    </h2>
+    <ul class="entry-meta">
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2017-02-09</li>
+      <li><i class="fa fa-pencil-square-o"></i>
+          
+            <a href="http://mypre.cn/categories/Linux系统">Linux系统</a>
+          
+            <a href="http://mypre.cn/categories/应用技巧">应用技巧</a>
+          
+      </li>
+      <li><i class="fa fa-comments-o"></i> <a href="http://mypre.cn/2017/02/09/grub-cannot-detect-windows#post-comment"><span class="disqus-comment-count" data-disqus-url="http://mypre.cn/2017/02/09/grub-cannot-detect-windows"></span> 评论</a></li>
+      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
+    </ul>
+    </header>
+    <div class="entry-content" itemprop="description">
+          
+              <p>不知道什么时候开始,我的&lt;pre&gt;grub2-mkconfig&lt;/pre&gt;</p>
+
+<p>找不到Windows的启动项了,
+说严重也不严重,但小问题堆起来也会成为大问题的
+于是乎,追根溯源,
+Windows 项原本是在&lt;pre&gt;/etc/grub.d/30_os-prober&lt;/pre&gt;生成</p>
+
+<p>查看其代码,发现使用了&lt;pre&gt;os-prober&lt;/pre&gt;寻找其他系统.
+运行发现没有输出,可以确定是这个东西在抽风了</p>
+
+<p>回头一想,之前由于部分主板EFI记动的时候,会检测是否存在&lt;pre&gt;/EFI/Microsoft/Boot/bootmfgw.efi&lt;/pre&gt;,如果存在的话,会直接启动他,所以将其改名了.
+将其改回再测试,os-prober可心正常找到Windows项了</p>
+
+<p>于是乎,&lt;pre&gt;os-prober&lt;/pre&gt;要改的话基本没戏,还是写脚本吧,</p>
+
+<p><code>/etc/grub.d/40_custom</code>
+直接将启动项加入就行了.</p>
+
+<p>关于 grub 请详见<a href="https://www.gnu.org/software/grub/manual/grub.html#">官方文档</a>!</p>
+
+          
+    </div>
+    <footer class="entry-footer clearfix">
+    <div class="post-love">
+      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
+      <span class="love-count">
+        0
+      </span></a>
+    </div>
+    <div class="post-more">
+      <a href="http://mypre.cn/2017/02/09/grub-cannot-detect-windows">Read More</a>
+    </div>
+  </footer>
+</article>
+
+
     
             <!-- this is post list -->
 
@@ -537,7 +597,7 @@ sudo alsa force-reload </pre>
           
           <li>
               <a class="catelink" href="http://mypre.cn/categories/系统技巧">
-                  系统技巧&nbsp;<span class="count">[1]</span>
+                  系统技巧&nbsp;<span class="count">[2]</span>
               </a>
           </li>
 
@@ -586,14 +646,14 @@ sudo alsa force-reload </pre>
           
           <li>
               <a class="catelink" href="http://mypre.cn/categories/应用技巧">
-                  应用技巧&nbsp;<span class="count">[7]</span>
+                  应用技巧&nbsp;<span class="count">[8]</span>
               </a>
           </li>
 
           
           <li>
               <a class="catelink" href="http://mypre.cn/categories/Linux系统">
-                  Linux系统&nbsp;<span class="count">[13]</span>
+                  Linux系统&nbsp;<span class="count">[15]</span>
               </a>
           </li>
 

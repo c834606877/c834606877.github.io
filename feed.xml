@@ -2,12 +2,93 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>IziyIx&#39;s Files - MyPress - MyPre.Cn</title>
-    <description>这里是Iziy蓝冰的个人博客，记录着Iziy蓝冰的生活点滴.</description>
+    <description>这里是Iziy蓝冰的个人博客MyPress，记录着Iziy蓝冰的生活点滴.</description>
     <link>http://mypre.cn/</link>
     <atom:link href="http://mypre.cn/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 26 Dec 2016 22:24:59 +0800</pubDate>
-    <lastBuildDate>Mon, 26 Dec 2016 22:24:59 +0800</lastBuildDate>
+    <pubDate>Thu, 09 Feb 2017 21:25:51 +0800</pubDate>
+    <lastBuildDate>Thu, 09 Feb 2017 21:25:51 +0800</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
+    
+      <item>
+        <title>让 Grub2 记住上次选择的启动项</title>
+        <description>&lt;p&gt;linux 下可以碰到各种各样的问题,今天解决了一部分,明天也许又会冒出一些新的问题,
+但是,更重要的是,fix it and remenber it!&lt;/p&gt;
+
+&lt;p&gt;linux 使用配置文件进行管理,其中gurb 的配置文件有, &amp;lt;pre&amp;gt;/etc/default/grub&amp;lt;/pre&amp;gt;和&amp;lt;pre&amp;gt;/etc/grub.d/&amp;lt;/pre&amp;gt;&lt;/p&gt;
+
+&lt;p&gt;前者存储grub变量,后者为生成一个完整,grub.cfg配置的脚本,&lt;/p&gt;
+
+&lt;p&gt;此外,还有一个官方给的&amp;gt;/boot/grub2/grubenv&amp;lt;/pre&amp;gt;
+然而,在我的Fedora 24上 并没有&amp;lt;pre&amp;gt;/etc/default/grub&amp;lt;/pre&amp;gt;手动创建也没有用,原来需要使用
+&lt;code&gt;grub2-editenv /etc/default/grub create
+grub2-editenv /etc/default/grub set GRUB_DEFAULT=saved
+grub2-editenv /etc/default/grub set GRUB_SAVEDEFAULT=true
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;这样才能被grub所识别,
+其实可以直接使用官方给的路径更简单,&lt;/p&gt;
+
+&lt;p&gt;重新生成grub.cfg 覆盖原有文件:
+&lt;code&gt;sudo grub2-mkconfig -o /boot/grub2/grub.cfg
+sudo cp /boot/grub2/grub.cfg /boot/efi/EFI/fedora/grub.cfg
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;重启查看效果&lt;/p&gt;
+
+&lt;p&gt;文档是个好东西,就看会不会使用了
+&lt;a href=&quot;https://www.gnu.org/software/grub/manual/grub.html#&quot;&gt;官方文档&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Thu, 09 Feb 2017 00:00:00 +0800</pubDate>
+        <link>http://mypre.cn/2017/02/09/grub-set-default-boot-last-choise</link>
+        <guid isPermaLink="true">http://mypre.cn/2017/02/09/grub-set-default-boot-last-choise</guid>
+        
+        <category>Linux系统</category>
+        
+        <category>Fedora</category>
+        
+        
+        <category>Linux系统</category>
+        
+        <category>系统技巧</category>
+        
+      </item>
+    
+      <item>
+        <title>grub-mkconfig 没有Windows项</title>
+        <description>&lt;p&gt;不知道什么时候开始,我的&amp;lt;pre&amp;gt;grub2-mkconfig&amp;lt;/pre&amp;gt;&lt;/p&gt;
+
+&lt;p&gt;找不到Windows的启动项了,
+说严重也不严重,但小问题堆起来也会成为大问题的
+于是乎,追根溯源,
+Windows 项原本是在&amp;lt;pre&amp;gt;/etc/grub.d/30_os-prober&amp;lt;/pre&amp;gt;生成&lt;/p&gt;
+
+&lt;p&gt;查看其代码,发现使用了&amp;lt;pre&amp;gt;os-prober&amp;lt;/pre&amp;gt;寻找其他系统.
+运行发现没有输出,可以确定是这个东西在抽风了&lt;/p&gt;
+
+&lt;p&gt;回头一想,之前由于部分主板EFI记动的时候,会检测是否存在&amp;lt;pre&amp;gt;/EFI/Microsoft/Boot/bootmfgw.efi&amp;lt;/pre&amp;gt;,如果存在的话,会直接启动他,所以将其改名了.
+将其改回再测试,os-prober可心正常找到Windows项了&lt;/p&gt;
+
+&lt;p&gt;于是乎,&amp;lt;pre&amp;gt;os-prober&amp;lt;/pre&amp;gt;要改的话基本没戏,还是写脚本吧,&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;/etc/grub.d/40_custom&lt;/code&gt;
+直接将启动项加入就行了.&lt;/p&gt;
+
+&lt;p&gt;关于 grub 请详见&lt;a href=&quot;https://www.gnu.org/software/grub/manual/grub.html#&quot;&gt;官方文档&lt;/a&gt;!&lt;/p&gt;
+</description>
+        <pubDate>Thu, 09 Feb 2017 00:00:00 +0800</pubDate>
+        <link>http://mypre.cn/2017/02/09/grub-cannot-detect-windows</link>
+        <guid isPermaLink="true">http://mypre.cn/2017/02/09/grub-cannot-detect-windows</guid>
+        
+        <category>grub，os-prober</category>
+        
+        <category>windows</category>
+        
+        
+        <category>Linux系统</category>
+        
+        <category>应用技巧</category>
+        
+      </item>
     
       <item>
         <title>On The Way, Forever~</title>
@@ -23,6 +104,8 @@
 
 &lt;h2 id=&quot;section&quot;&gt;2016-12-26 清晨&lt;/h2&gt;
 &lt;p&gt;当被不知道什么时候定好的闹钟惊醒的那一刻,仍然有一种莫名的冲动,结束了吗?结束了,就这样结束了.不知道多少个像这样的日日夜夜夜过去,不知道以后还会有多少个像这样的日日夜夜–我的心,仍在路上.&lt;/p&gt;
+
+&lt;!--more--&gt;
 
 &lt;h2 id=&quot;section-1&quot;&gt;2016-12-6&lt;/h2&gt;
 &lt;p&gt;结业前,最后一段充实的日子,也许以后都不会再有了,&lt;/p&gt;
@@ -44,43 +127,8 @@
 
 &lt;h2 id=&quot;section-4&quot;&gt;2016-7-17 22:46&lt;/h2&gt;
 
-&lt;p&gt;如泍春风!感谢老师,感谢东华,给我们这次机会,南昌四人一行已安全返回,此次夏令营获颇丰,交流基金.短短两天,有些同学甚至不知道名字,还望海涵.我是照片第五排右数第九个 陈子炎,我志在上海,有缘怎能相(再)见.再次感谢老师以及志愿工作的同学.&lt;/p&gt;
+&lt;p&gt;如沐春风!感谢老师,感谢东华,给我们这次机会,南昌四人一行已安全返回,此次夏令营获颇丰,交流基金.短短两天,有些同学甚至不知道名字,还望海涵.我是照片第五排右数第九个 陈子炎,我志在上海,有缘怎能相(再)见.再次感谢老师以及志愿工作的同学.&lt;/p&gt;
 
-&lt;h2 id=&quot;section-5&quot;&gt;2016-05-14 00:25&lt;/h2&gt;
-
-&lt;p&gt;卧榻将息,辗转之思:&lt;/p&gt;
-
-&lt;p&gt;入学之期,焉已三年,&lt;/p&gt;
-
-&lt;p&gt;情情景景,历历在目,&lt;/p&gt;
-
-&lt;p&gt;浮心年华,酒醉酩酊,&lt;/p&gt;
-
-&lt;p&gt;学之习之,聚之散之,&lt;/p&gt;
-
-&lt;p&gt;絮事繁多,忙忙之为.&lt;/p&gt;
-
-&lt;p&gt;今轻年已去,清心求学,&lt;/p&gt;
-
-&lt;p&gt;一心一意,无欲他思,&lt;/p&gt;
-
-&lt;p&gt;竟不想今时何日.&lt;/p&gt;
-
-&lt;p&gt;忆往昔年,&lt;/p&gt;
-
-&lt;p&gt;高中之季,意气风发,&lt;/p&gt;
-
-&lt;p&gt;夙兴夜寐,进士及第,&lt;/p&gt;
-
-&lt;p&gt;时过境迁,期期三年.&lt;/p&gt;
-
-&lt;p&gt;今朝之举,黄金榜上,&lt;/p&gt;
-
-&lt;p&gt;既无愧于心,何须论得丧.&lt;/p&gt;
-
-&lt;p&gt;夜明风清,记之感慨.&lt;/p&gt;
-
-&lt;p&gt;–蓝记&lt;/p&gt;
 </description>
         <pubDate>Mon, 26 Dec 2016 00:00:00 +0800</pubDate>
         <link>http://mypre.cn/2016/12/26/on-the-way-forever</link>
@@ -361,51 +409,6 @@ Sidebar滚动固定box 单个box
         
         
         <category>本博动态</category>
-        
-      </item>
-    
-      <item>
-        <title>Move To My New &#39;Stitac&#39; Blog and New Domain MyPre</title>
-        <description>&lt;p&gt;博客优化的还不错了，增加了一些页面，音乐专辑，相册专辑，&lt;/p&gt;
-
-&lt;p&gt;这些功能一直想在Wordpress 上实现，但确一直没有实现&lt;/p&gt;
-
-&lt;p&gt;许是从来没有这么专注的去学一些东西吧，&lt;/p&gt;
-
-&lt;p&gt;也许 Wordpress 提供的各种HOOK及 函数 太多，太复杂了，远没有 Jekyll 来得这么 简单&lt;/p&gt;
-
-&lt;p&gt;yaml ＋ liquid 语法，与Jinja2 大同小异，甚至不需要写函数，几个模板，和 简单的输出处理逻辑就搞定了，&lt;/p&gt;
-
-&lt;p&gt;若是 有一个强大的 flask 作为 引擎 再配上Jinja 语法，这也决不会比Wordpress差吧～&lt;/p&gt;
-
-</description>
-        <pubDate>Mon, 11 Apr 2016 00:00:00 +0800</pubDate>
-        <link>http://mypre.cn/2016/04/11/upgrade-my-blog-with-jekyll</link>
-        <guid isPermaLink="true">http://mypre.cn/2016/04/11/upgrade-my-blog-with-jekyll</guid>
-        
-        <category>jekyll</category>
-        
-        <category>MyPress</category>
-        
-        <category>Mypre.cn</category>
-        
-        
-        <category>本博动态</category>
-        
-      </item>
-    
-      <item>
-        <title>TEST Gallery</title>
-        <description>&lt;p&gt;&lt;img src=&quot;http://imglf1.nosdn.127.net/img/Z3ZvNUFuRWljSU5CVjVWV2w3YnVBcGhGajc1d3VxY0puNSt0amZONnBtdG80bTVTVUo1MGtBPT0.jpg?imageView&amp;amp;thumbnail=2000y1500&amp;amp;type=jpg&amp;amp;quality=96&amp;amp;stripmeta=0&amp;amp;type=jpg&quot; alt=&quot;oneimg&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://imglf.nosdn.127.net/img/Z3ZvNUFuRWljSU5CVjVWV2w3YnVBaVp2YnRvcFdFbHVva3B4QU01RWhKM3hiZEc4ZEs1QmhnPT0.jpg?imageView&amp;amp;thumbnail=2000y1500&amp;amp;type=jpg&amp;amp;quality=96&amp;amp;stripmeta=0&amp;amp;type=jpg&quot; alt=&quot;twoimg&quot; /&gt;&lt;/p&gt;
-</description>
-        <pubDate>Sun, 10 Apr 2016 16:30:55 +0800</pubDate>
-        <link>http://mypre.cn/2016/04/10/test-gallery</link>
-        <guid isPermaLink="true">http://mypre.cn/2016/04/10/test-gallery</guid>
-        
-        
-        <category>Linux系统</category>
         
       </item>
     
