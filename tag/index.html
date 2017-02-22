@@ -941,23 +941,23 @@ nautilus-open-terminal.x86_64 : Nautilus extension for an open terminal shortcut
     </header>
     <div class="entry-content" itemprop="description">
           
-              <p>不知道什么时候开始,我的&lt;pre&gt;grub2-mkconfig&lt;/pre&gt;</p>
+              <p>不知道什么时候开始,我的<code>grub2-mkconfig</code></p>
 
 <p>找不到Windows的启动项了,
 说严重也不严重,但小问题堆起来也会成为大问题的
 于是乎,追根溯源,
-Windows 项原本是在&lt;pre&gt;/etc/grub.d/30_os-prober&lt;/pre&gt;生成</p>
+Windows 项原本是在<code>/etc/grub.d/30_os-prober</code>生成</p>
 
-<p>查看其代码,发现使用了&lt;pre&gt;os-prober&lt;/pre&gt;寻找其他系统.
+<p>查看其代码,发现使用了<code>os-prober</code>寻找其他系统.
 运行发现没有输出,可以确定是这个东西在抽风了</p>
 
-<p>回头一想,之前由于部分主板EFI记动的时候,会检测是否存在&lt;pre&gt;/EFI/Microsoft/Boot/bootmfgw.efi&lt;/pre&gt;,如果存在的话,会直接启动他,所以将其改名了.
+<p>回头一想,之前由于部分主板EFI记动的时候,会检测是否存在<code>/EFI/Microsoft/Boot/bootmfgw.efi</code>,如果存在的话,会直接启动他,所以将其改名了.
 将其改回再测试,os-prober可心正常找到Windows项了</p>
 
-<p>于是乎,&lt;pre&gt;os-prober&lt;/pre&gt;要改的话基本没戏,还是写脚本吧,</p>
+<p>于是乎,<code>os-prober</code>要改的话基本没戏,还是写脚本吧,</p>
 
-<p><code>/etc/grub.d/40_custom</code>
-直接将启动项加入就行了.</p>
+<pre> vi /etc/grub.d/40_custom</pre>
+<p>直接将启动项加入就行了.</p>
 
 <p>关于 grub 请详见<a href="https://www.gnu.org/software/grub/manual/grub.html#">官方文档</a>!</p>
 
@@ -1006,23 +1006,23 @@ Windows 项原本是在&lt;pre&gt;/etc/grub.d/30_os-prober&lt;/pre&gt;生成</p>
     </header>
     <div class="entry-content" itemprop="description">
           
-              <p>不知道什么时候开始,我的&lt;pre&gt;grub2-mkconfig&lt;/pre&gt;</p>
+              <p>不知道什么时候开始,我的<code>grub2-mkconfig</code></p>
 
 <p>找不到Windows的启动项了,
 说严重也不严重,但小问题堆起来也会成为大问题的
 于是乎,追根溯源,
-Windows 项原本是在&lt;pre&gt;/etc/grub.d/30_os-prober&lt;/pre&gt;生成</p>
+Windows 项原本是在<code>/etc/grub.d/30_os-prober</code>生成</p>
 
-<p>查看其代码,发现使用了&lt;pre&gt;os-prober&lt;/pre&gt;寻找其他系统.
+<p>查看其代码,发现使用了<code>os-prober</code>寻找其他系统.
 运行发现没有输出,可以确定是这个东西在抽风了</p>
 
-<p>回头一想,之前由于部分主板EFI记动的时候,会检测是否存在&lt;pre&gt;/EFI/Microsoft/Boot/bootmfgw.efi&lt;/pre&gt;,如果存在的话,会直接启动他,所以将其改名了.
+<p>回头一想,之前由于部分主板EFI记动的时候,会检测是否存在<code>/EFI/Microsoft/Boot/bootmfgw.efi</code>,如果存在的话,会直接启动他,所以将其改名了.
 将其改回再测试,os-prober可心正常找到Windows项了</p>
 
-<p>于是乎,&lt;pre&gt;os-prober&lt;/pre&gt;要改的话基本没戏,还是写脚本吧,</p>
+<p>于是乎,<code>os-prober</code>要改的话基本没戏,还是写脚本吧,</p>
 
-<p><code>/etc/grub.d/40_custom</code>
-直接将启动项加入就行了.</p>
+<pre> vi /etc/grub.d/40_custom</pre>
+<p>直接将启动项加入就行了.</p>
 
 <p>关于 grub 请详见<a href="https://www.gnu.org/software/grub/manual/grub.html#">官方文档</a>!</p>
 
@@ -1074,29 +1074,12 @@ Windows 项原本是在&lt;pre&gt;/etc/grub.d/30_os-prober&lt;/pre&gt;生成</p>
               <p>linux 下可以碰到各种各样的问题,今天解决了一部分,明天也许又会冒出一些新的问题,
 但是,更重要的是,fix it and remenber it!</p>
 
-<p>linux 使用配置文件进行管理,其中gurb 的配置文件有, &lt;pre&gt;/etc/default/grub&lt;/pre&gt;和&lt;pre&gt;/etc/grub.d/&lt;/pre&gt;</p>
+<p>linux 使用配置文件进行管理,其中gurb 的配置文件有, <code>/etc/default/grub</code>和<code>/etc/grub.d/</code></p>
 
 <p>前者存储grub变量,后者为生成一个完整,grub.cfg配置的脚本,</p>
 
-<p>此外,还有一个官方给的&gt;/boot/grub2/grubenv&lt;/pre&gt;
-然而,在我的Fedora 24上 并没有&lt;pre&gt;/etc/default/grub&lt;/pre&gt;手动创建也没有用,原来需要使用
-<code>grub2-editenv /etc/default/grub create
-grub2-editenv /etc/default/grub set GRUB_DEFAULT=saved
-grub2-editenv /etc/default/grub set GRUB_SAVEDEFAULT=true
-</code></p>
+<p>此外,还有一个官方给的<code>/boot/grub2/grubenv</code></p>
 
-<p>这样才能被grub所识别,
-其实可以直接使用官方给的路径更简单,</p>
-
-<p>重新生成grub.cfg 覆盖原有文件:
-<code>sudo grub2-mkconfig -o /boot/grub2/grub.cfg
-sudo cp /boot/grub2/grub.cfg /boot/efi/EFI/fedora/grub.cfg
-</code></p>
-
-<p>重启查看效果</p>
-
-<p>文档是个好东西,就看会不会使用了
-<a href="https://www.gnu.org/software/grub/manual/grub.html#">官方文档</a></p>
 
           
     </div>
@@ -1146,29 +1129,12 @@ sudo cp /boot/grub2/grub.cfg /boot/efi/EFI/fedora/grub.cfg
               <p>linux 下可以碰到各种各样的问题,今天解决了一部分,明天也许又会冒出一些新的问题,
 但是,更重要的是,fix it and remenber it!</p>
 
-<p>linux 使用配置文件进行管理,其中gurb 的配置文件有, &lt;pre&gt;/etc/default/grub&lt;/pre&gt;和&lt;pre&gt;/etc/grub.d/&lt;/pre&gt;</p>
+<p>linux 使用配置文件进行管理,其中gurb 的配置文件有, <code>/etc/default/grub</code>和<code>/etc/grub.d/</code></p>
 
 <p>前者存储grub变量,后者为生成一个完整,grub.cfg配置的脚本,</p>
 
-<p>此外,还有一个官方给的&gt;/boot/grub2/grubenv&lt;/pre&gt;
-然而,在我的Fedora 24上 并没有&lt;pre&gt;/etc/default/grub&lt;/pre&gt;手动创建也没有用,原来需要使用
-<code>grub2-editenv /etc/default/grub create
-grub2-editenv /etc/default/grub set GRUB_DEFAULT=saved
-grub2-editenv /etc/default/grub set GRUB_SAVEDEFAULT=true
-</code></p>
+<p>此外,还有一个官方给的<code>/boot/grub2/grubenv</code></p>
 
-<p>这样才能被grub所识别,
-其实可以直接使用官方给的路径更简单,</p>
-
-<p>重新生成grub.cfg 覆盖原有文件:
-<code>sudo grub2-mkconfig -o /boot/grub2/grub.cfg
-sudo cp /boot/grub2/grub.cfg /boot/efi/EFI/fedora/grub.cfg
-</code></p>
-
-<p>重启查看效果</p>
-
-<p>文档是个好东西,就看会不会使用了
-<a href="https://www.gnu.org/software/grub/manual/grub.html#">官方文档</a></p>
 
           
     </div>
@@ -1181,6 +1147,95 @@ sudo cp /boot/grub2/grub.cfg /boot/efi/EFI/fedora/grub.cfg
     </div>
     <div class="post-more">
       <a href="http://mypre.cn/2017/02/09/grub-set-default-boot-last-choise">Read More</a>
+    </div>
+  </footer>
+</article>
+
+
+      
+    
+      <div class="box archive-meta" id="心情日记，考研心得">
+        <h3 class="title-meta">Tag "心情日记，考研心得":</h3>
+      </div>
+      
+        <!-- this is post list -->
+
+    <!-- this is post list -->
+<article class="post type-post status-publish format-standard">
+    <header class="entry-header">
+    <h2 class="entry-name">
+      <a href="http://mypre.cn/2017/02/22/the-path-to-graduate" title="考研日记" rel="bookmark">考研日记</a>
+    </h2>
+    <ul class="entry-meta">
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2017-02-22</li>
+      <li><i class="fa fa-pencil-square-o"></i>
+          
+            <a href="http://mypre.cn/categories/生活随笔">生活随笔</a>
+          
+            <a href="http://mypre.cn/categories/考研心得">考研心得</a>
+          
+      </li>
+      <li><i class="fa fa-comments-o"></i> <a href="http://mypre.cn/2017/02/22/the-path-to-graduate#post-comment"><span class="disqus-comment-count" data-disqus-url="http://mypre.cn/2017/02/22/the-path-to-graduate"></span> 评论</a></li>
+      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
+    </ul>
+    </header>
+    <div class="entry-content" itemprop="description">
+          
+              <blockquote>
+  <p>如果已经决定要打一场战了的话，那么就做好充足的准备吧，</p>
+</blockquote>
+
+<p>随手日记，不忘青春，虽然其中也写了一些废话吧，回头细想，一路过来，也不失为人生中一段乐趣。虽无苦尽甘来之想，人生仍在路上呐。</p>
+
+<hr />
+
+<p>本着自由贡献的精神，
+给某某某以及即将踏上2018年考研孩子们的一些经验吧，希望能有哪怕是一点点的帮助也好。</p>
+
+<p>决定考研是一件比较艰难的事，要面临各种选择与得失、父母和老师们的期盼、为自己的前程的负责，</p>
+
+<p>随着时间的推移，真正要面临这个选择了，</p>
+
+<p>想着三年来一直生活在一个小圈子里边，班上几个同学，学校几个朋友，讨论的话题永远是哪个游戏好玩，新出了哪部电影，哪个人怎么样，肤浅的观点在小圈子里边传播，</p>
+
+<p>过着象牙塔般的生活 好像世界就是这么安逸了。过完四年，连学校有哪些个专业,发生了什么大的事情都不知道。</p>
+
+<p>想想毕业后就是另一番景象，没有学到什么真东西，在小公司里边摸爬滚打一辈子。
+最后把自己的青春浪费在一般人走过的路上，我不甘心，于是。</p>
+
+<p>在作出决定之前，也是一往反对考研的。然而，后来会发现， 这是一个正确的选择，
+前提是，找到了一个合适的大学，</p>
+
+<p>现在回想以前的对考研看法，甚至有些幼稚，</p>
+
+<hr />
+
+<p>时至今日 2017-02-16</p>
+
+<p>我查到了我的成绩，像之前假装能考上的一样，所做的努力，可以暂时告一段落了。</p>
+
+<p>即将面临着的两条路，复试还是实习，至少，接下来一段时间，也有了着落。</p>
+
+<p>英语政治 考得不太理想，一来是没有正确把握好时间，二来是报了考研班就掉以轻心了</p>
+
+<p>数学 粗心大意，错了个填空题，还好大题目比较稳，最后关头检查出了两个错误</p>
+
+<p>专业 难度超乎想象，三个小时没有停过笔，12页答题纸也没写完的题。</p>
+
+<p>还是来总结一下经验吧，回想起来，不管是成功的失败的都有些值得借鉴的地方，</p>
+
+
+          
+    </div>
+    <footer class="entry-footer clearfix">
+    <div class="post-love">
+      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
+      <span class="love-count">
+        0
+      </span></a>
+    </div>
+    <div class="post-more">
+      <a href="http://mypre.cn/2017/02/22/the-path-to-graduate">Read More</a>
     </div>
   </footer>
 </article>
@@ -1247,6 +1302,10 @@ sudo cp /boot/grub2/grub.cfg /boot/efi/EFI/fedora/grub.cfg
         
             <a class="taglink" href="http://mypre.cn/tag/#Fedora" data-target-cate="#Fedora">
                 Fedora
+            </a>
+        
+            <a class="taglink" href="http://mypre.cn/tag/#心情日记，考研心得" data-target-cate="#心情日记，考研心得">
+                心情日记，考研心得
             </a>
         
     </div>

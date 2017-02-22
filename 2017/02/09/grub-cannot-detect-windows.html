@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <meta name="keywords" content="grub-mkconfig 没有Windows项,Linux系统,应用技巧, grub，os-prober,windows,,Iziy, mypre, MyPress, LanBing, jekyll, iziyix" />
-    <meta name="description" content="grub-mkconfig 没有Windows项, Linux系统,应用技巧, grub，os-prober,windows, 不知道什么时候开始,我的&lt;pre&gt;grub2-mkconfig&lt;/pre&gt;找不到Windows的启动项了,说严重也不严重,但小问题堆起来也会成为大问题的于是乎,追根溯源,Windows 项原本是在&lt;pre&gt;/etc/grub.d/30_os-prober&lt;/pre&gt;..." />
+    <meta name="description" content="grub-mkconfig 没有Windows项, Linux系统,应用技巧, grub，os-prober,windows, 不知道什么时候开始,我的grub2-mkconfig找不到Windows的启动项了,说严重也不严重,但小问题堆起来也会成为大问题的于是乎,追根溯源,Windows 项原本是在/etc/grub.d/30_os-prober生成查看其代码,发现使用了os-prober寻找其他系统.运行发现没有输出,可以确定是这个东..." />
 
     <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
 
@@ -108,23 +108,23 @@ else
           </ul>
           </header>
           <div class="entry-content" itemprop="description">
-              <p>不知道什么时候开始,我的&lt;pre&gt;grub2-mkconfig&lt;/pre&gt;</p>
+              <p>不知道什么时候开始,我的<code>grub2-mkconfig</code></p>
 
 <p>找不到Windows的启动项了,
 说严重也不严重,但小问题堆起来也会成为大问题的
 于是乎,追根溯源,
-Windows 项原本是在&lt;pre&gt;/etc/grub.d/30_os-prober&lt;/pre&gt;生成</p>
+Windows 项原本是在<code>/etc/grub.d/30_os-prober</code>生成</p>
 
-<p>查看其代码,发现使用了&lt;pre&gt;os-prober&lt;/pre&gt;寻找其他系统.
+<p>查看其代码,发现使用了<code>os-prober</code>寻找其他系统.
 运行发现没有输出,可以确定是这个东西在抽风了</p>
 
-<p>回头一想,之前由于部分主板EFI记动的时候,会检测是否存在&lt;pre&gt;/EFI/Microsoft/Boot/bootmfgw.efi&lt;/pre&gt;,如果存在的话,会直接启动他,所以将其改名了.
+<p>回头一想,之前由于部分主板EFI记动的时候,会检测是否存在<code>/EFI/Microsoft/Boot/bootmfgw.efi</code>,如果存在的话,会直接启动他,所以将其改名了.
 将其改回再测试,os-prober可心正常找到Windows项了</p>
 
-<p>于是乎,&lt;pre&gt;os-prober&lt;/pre&gt;要改的话基本没戏,还是写脚本吧,</p>
+<p>于是乎,<code>os-prober</code>要改的话基本没戏,还是写脚本吧,</p>
 
-<p><code>/etc/grub.d/40_custom</code>
-直接将启动项加入就行了.</p>
+<pre> vi /etc/grub.d/40_custom</pre>
+<p>直接将启动项加入就行了.</p>
 
 <p>关于 grub 请详见<a href="https://www.gnu.org/software/grub/manual/grub.html#">官方文档</a>!</p>
 
@@ -217,6 +217,30 @@ Windows 项原本是在&lt;pre&gt;/etc/grub.d/30_os-prober&lt;/pre&gt;生成</p>
         <ul>
             
             
+              <li class="clearfix">
+                  <div class="post-thumb">
+                          
+                          
+                          
+                            
+                          
+                          
+                          
+                            <img id="past_nail" class="rounded" src="http://mypre.cn/assets/images/random/2.jpg" title="考研日记" alt="考研日记" width="45" height="45" />
+                          
+
+
+                  </div>
+                  <div class="post-right">
+                      <h3><a href="/2017/02/22/the-path-to-graduate">考研日记</a></h3>
+                      <div class="post-meta">
+                          <a href="/2017/02/22/the-path-to-graduate#post-comment" title="考研日记 上的评论">No Reply</a></span> | <span>? Views</span>
+                      </div>
+                  </div>
+              </li>
+            
+            
+            
             
             
               <li class="clearfix">
@@ -228,7 +252,7 @@ Windows 项原本是在&lt;pre&gt;/etc/grub.d/30_os-prober&lt;/pre&gt;生成</p>
                           
                           
                           
-                            <img id="past_nail" class="rounded" src="http://mypre.cn/assets/images/random/4.jpg" title="让 Grub2 记住上次选择的启动项" alt="让 Grub2 记住上次选择的启动项" width="45" height="45" />
+                            <img id="past_nail" class="rounded" src="http://mypre.cn/assets/images/random/6.jpg" title="让 Grub2 记住上次选择的启动项" alt="让 Grub2 记住上次选择的启动项" width="45" height="45" />
                           
 
 
@@ -252,7 +276,7 @@ Windows 项原本是在&lt;pre&gt;/etc/grub.d/30_os-prober&lt;/pre&gt;生成</p>
                           
                           
                           
-                            <img id="past_nail" class="rounded" src="http://mypre.cn/assets/images/random/7.jpg" title="On The Way, Forever~" alt="On The Way, Forever~" width="45" height="45" />
+                            <img id="past_nail" class="rounded" src="http://mypre.cn/assets/images/random/4.jpg" title="On The Way, Forever~" alt="On The Way, Forever~" width="45" height="45" />
                           
 
 
@@ -276,7 +300,7 @@ Windows 项原本是在&lt;pre&gt;/etc/grub.d/30_os-prober&lt;/pre&gt;生成</p>
                           
                           
                           
-                            <img id="past_nail" class="rounded" src="http://mypre.cn/assets/images/random/2.jpg" title="Keep Silence until 2017 Just like three half years ago" alt="Keep Silence until 2017 Just like three half years ago" width="45" height="45" />
+                            <img id="past_nail" class="rounded" src="http://mypre.cn/assets/images/random/3.jpg" title="Keep Silence until 2017 Just like three half years ago" alt="Keep Silence until 2017 Just like three half years ago" width="45" height="45" />
                           
 
 
@@ -367,7 +391,7 @@ Windows 项原本是在&lt;pre&gt;/etc/grub.d/30_os-prober&lt;/pre&gt;生成</p>
                           
                           
                           
-                            <img id="past_nail" class="rounded" src="http://mypre.cn/assets/images/random/6.jpg" title="Open Here In Teminal From Nautilus" alt="Open Here In Teminal From Nautilus" width="45" height="45" />
+                            <img id="past_nail" class="rounded" src="http://mypre.cn/assets/images/random/1.jpg" title="Open Here In Teminal From Nautilus" alt="Open Here In Teminal From Nautilus" width="45" height="45" />
                           
 
 
@@ -376,30 +400,6 @@ Windows 项原本是在&lt;pre&gt;/etc/grub.d/30_os-prober&lt;/pre&gt;生成</p>
                       <h3><a href="/2016/04/14/open-here-in-terminal-from-nautilus">Open Here In Teminal From Nautilus</a></h3>
                       <div class="post-meta">
                           <a href="/2016/04/14/open-here-in-terminal-from-nautilus#post-comment" title="Open Here In Teminal From Nautilus 上的评论">No Reply</a></span> | <span>? Views</span>
-                      </div>
-                  </div>
-              </li>
-            
-            
-            
-              <li class="clearfix">
-                  <div class="post-thumb">
-                          
-                          
-                          
-                            
-                          
-                          
-                          
-                            <img id="past_nail" class="rounded" src="http://mypre.cn/assets/images/random/3.jpg" title="The Fourth Day, fix some small bugs" alt="The Fourth Day, fix some small bugs" width="45" height="45" />
-                          
-
-
-                  </div>
-                  <div class="post-right">
-                      <h3><a href="/2016/04/12/fourth-day-fix-some-smarll-problem">The Fourth Day, fix some small bugs</a></h3>
-                      <div class="post-meta">
-                          <a href="/2016/04/12/fourth-day-fix-some-smarll-problem#post-comment" title="The Fourth Day, fix some small bugs 上的评论">No Reply</a></span> | <span>? Views</span>
                       </div>
                   </div>
               </li>
@@ -422,7 +422,7 @@ Windows 项原本是在&lt;pre&gt;/etc/grub.d/30_os-prober&lt;/pre&gt;生成</p>
           
           <li>
               <a class="catelink" href="http://mypre.cn/categories/生活随笔">
-                  生活随笔&nbsp;<span class="count">[5]</span>
+                  生活随笔&nbsp;<span class="count">[6]</span>
               </a>
           </li>
 
@@ -525,6 +525,13 @@ Windows 项原本是在&lt;pre&gt;/etc/grub.d/30_os-prober&lt;/pre&gt;生成</p>
           </li>
 
           
+          <li>
+              <a class="catelink" href="http://mypre.cn/categories/考研心得">
+                  考研心得&nbsp;<span class="count">[1]</span>
+              </a>
+          </li>
+
+          
         </ul>
 </aside>
   <!-- sidebar: tag list -->
@@ -583,6 +590,10 @@ Windows 项原本是在&lt;pre&gt;/etc/grub.d/30_os-prober&lt;/pre&gt;生成</p>
         
             <a class="taglink" href="http://mypre.cn/tag/#Fedora" data-target-cate="#Fedora">
                 Fedora
+            </a>
+        
+            <a class="taglink" href="http://mypre.cn/tag/#心情日记，考研心得" data-target-cate="#心情日记，考研心得">
+                心情日记，考研心得
             </a>
         
     </div>

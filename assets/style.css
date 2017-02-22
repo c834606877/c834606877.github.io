@@ -635,14 +635,18 @@ blockquote cite a {
 	padding-bottom: 0.5rem;
 }
 
-.entry-content h2,.entry-content h3 {
+.entry-content h1, .entry-content h2, .entry-content h3 {
 	margin-bottom: 8px;
 	padding-bottom: 5px;
 	border-bottom: 1px dotted #4682B4;
 }
 
+.entry-content h1 {
+	font-size: 1.7rem;
+}
+
 .entry-content h2 {
-	font-size: 1.5rem;
+	font-size: 1.45rem;
 }
 
 .entry-content h3 {

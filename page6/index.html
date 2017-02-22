@@ -94,6 +94,61 @@ else
 <article class="post type-post status-publish format-standard">
     <header class="entry-header">
     <h2 class="entry-name">
+      <a href="http://mypre.cn/2014/10/05/1-4-e3-80-80-e8-bf-94-e7-92-9e-e5-bd-92-e7-9c-9f-e7-9a-84-e5-91-bd-e4-bb-a4-e8-a1-8c-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf" title="1.4　返璞归真的命令行 – Linux就是这个范儿" rel="bookmark">1.4　返璞归真的命令行 – Linux就是这个范儿</a>
+    </h2>
+    <ul class="entry-meta">
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2014-10-05</li>
+      <li><i class="fa fa-pencil-square-o"></i>
+          
+            <a href="http://mypre.cn/categories/Linux就是这个范儿">Linux就是这个范儿</a>
+          
+      </li>
+      <li><i class="fa fa-comments-o"></i> <a href="http://mypre.cn/2014/10/05/1-4-e3-80-80-e8-bf-94-e7-92-9e-e5-bd-92-e7-9c-9f-e7-9a-84-e5-91-bd-e4-bb-a4-e8-a1-8c-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf#post-comment"><span class="disqus-comment-count" data-disqus-url="http://mypre.cn/2014/10/05/1-4-e3-80-80-e8-bf-94-e7-92-9e-e5-bd-92-e7-9c-9f-e7-9a-84-e5-91-bd-e4-bb-a4-e8-a1-8c-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf"></span> 评论</a></li>
+      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
+    </ul>
+    </header>
+    <div class="entry-content" itemprop="description">
+          
+              <p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	有一种说法，现代计算机不是靠电力驱动，而是靠&ldquo;鼠标&rdquo;。多少应用程序的界面都是需要移动和点击鼠标来执行的。计算机本来的用意是把人类从反复单调的工作中解放出来，但摆在我们身边的残酷现实是我们每个人每天不得不反复单调地移动和点击鼠标，以确保养家糊口的工作能够顺利正确地完成。</p>
+<p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	别叹气，存在另一个世界，那就是命令行，让你暂时远离鼠标。对那些苦哈哈的程序猿来讲，这也许是另一种情调的工作方式。我们突然之间拥有了另一种意想不到的收获，例如我想看看用户目录下的文件大小，然后按升序排列产生个报表。如果用C/C++完成这项工作，至少得用好几十行代码，但是用一句命令行就能完成上面的功能。</p>
+<pre>
+	du -s * | sort -nr &gt; $HOME/space_report.txt</pre>
+<p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	命令行有它的存在价值吧。还有把&nbsp;Linux&nbsp;桌面操作录制成一段视频，想起来就是一件复杂的任务，在Linux上用一句命令就能轻松搞定。</p>
+<pre>
+	ffmpeg -f x11grab -s wxga -r 25 -i :0.0 -sameq /tmp/out.mpg</pre>
+<p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	卖个关子，这个命令会在第18章作详细解释。</p>
+<p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	估计你可能会迫不及待地想要实验一下刚才所提到的命令，但是苦于现在都流行的图形界面，我们推荐的CentOS默认也进入了图形界面，看来要想做点实验还是有点难度的。不过不用着急，Linux的老手们一定是要命令行的，所以想通过键盘输入命令，一个合格的Linux发行版一定会做得十分方便，只是要先搞清楚一些概念。</p>
+<p style="text-align: right;">
+	<a href="http://hook.aliapp.com/?p=554" style="color: rgb(51, 51, 51); text-decoration: none; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; line-height: 28px; text-align: right; text-indent: 28px;">Linux就是这个范儿 &ndash; 本书目录&nbsp;</a></p>
+
+          
+    </div>
+    <footer class="entry-footer clearfix">
+    <div class="post-love">
+      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
+      <span class="love-count">
+        0
+      </span></a>
+    </div>
+    <div class="post-more">
+      <a href="http://mypre.cn/2014/10/05/1-4-e3-80-80-e8-bf-94-e7-92-9e-e5-bd-92-e7-9c-9f-e7-9a-84-e5-91-bd-e4-bb-a4-e8-a1-8c-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf">Read More</a>
+    </div>
+  </footer>
+</article>
+
+
+    
+      <!-- this is post list -->
+
+    <!-- this is post list -->
+<article class="post type-post status-publish format-standard">
+    <header class="entry-header">
+    <h2 class="entry-name">
       <a href="http://mypre.cn/2014/10/05/1-3-4-e3-80-80lxde-e6-9b-b4-e8-bd-bb-ef-bc-8c-e5-90-8c-e6-a0-b7-e7-b2-be-e6-82-8d-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa-e8-8c-83-e5-84-bf" title="1.3.4　LXDE——更轻，同样精悍 – Linux就是这个范儿" rel="bookmark">1.3.4　LXDE——更轻，同样精悍 – Linux就是这个范儿</a>
     </h2>
     <ul class="entry-meta">
@@ -482,55 +537,6 @@ else
 
 
     
-      <!-- this is post list -->
-
-    <!-- this is post list -->
-<article class="post type-post status-publish format-standard">
-    <header class="entry-header">
-    <h2 class="entry-name">
-      <a href="http://mypre.cn/2014/09/03/1-2-2-e3-80-80-e6-9e-b6-e6-9e-84-e8-ae-be-e8-ae-a1-e7-ac-ac-ef-bc-91-e7-ab-a0-e7-ac-ac-e4-b8-80-e6-ac-a1-e4-ba-b2-e5-af-86-e6-8e-a5-e8-a7-a6-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa" title="1.2.2　架构设计 - Linux就是这个范儿" rel="bookmark">1.2.2　架构设计 - Linux就是这个范儿</a>
-    </h2>
-    <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 最后编辑 2014-09-03</li>
-      <li><i class="fa fa-pencil-square-o"></i>
-          
-            <a href="http://mypre.cn/categories/Linux就是这个范儿">Linux就是这个范儿</a>
-          
-      </li>
-      <li><i class="fa fa-comments-o"></i> <a href="http://mypre.cn/2014/09/03/1-2-2-e3-80-80-e6-9e-b6-e6-9e-84-e8-ae-be-e8-ae-a1-e7-ac-ac-ef-bc-91-e7-ab-a0-e7-ac-ac-e4-b8-80-e6-ac-a1-e4-ba-b2-e5-af-86-e6-8e-a5-e8-a7-a6-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa#post-comment"><span class="disqus-comment-count" data-disqus-url="http://mypre.cn/2014/09/03/1-2-2-e3-80-80-e6-9e-b6-e6-9e-84-e8-ae-be-e8-ae-a1-e7-ac-ac-ef-bc-91-e7-ab-a0-e7-ac-ac-e4-b8-80-e6-ac-a1-e4-ba-b2-e5-af-86-e6-8e-a5-e8-a7-a6-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa"></span> 评论</a></li>
-      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
-    </ul>
-    </header>
-    <div class="entry-content" itemprop="description">
-          
-              <p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
-	其实Linux系统的图形界面设计还是非常清晰的。让大家觉得乱的原因可能是有两个：一是我的写作水平有点问题，二是涉及的新鲜事儿太多。我总认为第一点是主要因素，所以干脆不写了，画个图给大家看看。下图展示了Linux界面的基本结构，同时提供了Windows图形界面基本结构进行对比。自我感觉画的比说的要好。</p>
-<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px; text-align: center;">
-	<img alt="" src="http://m2.img.srcdd.com/farm5/d/2014/0828/17/E064541DE5967E7CCC4A042090B098E2_B1280_1280_650_409.png" style="width: 650px; height: 409px;" /></p>
-<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
-	当结构清晰的时候，问题随之就会来，不知道你发现问题了没有？最大的问题就是从结构上看Linux的图形界面效率肯定比Windows的要差。因为Linux需要很多层的软件互相协作才能实现图形界面，而Windows则相当直接，不拖泥带水的就搞定了图形界面。在计算机科学领域很少有实践结果与理论预期出现相反结论的情况，但是，可是，可但是，但可是&hellip;&hellip;小概率事件还是会发生的，偏偏这个就是典型的一例。众所周知的Mac OS X的图形效果是目前任何操作系统都无法比拟的，自然也包括Windows的任何版本。而Mac OS X是一种类Unix操作系统，采用的恰恰就是这种架构。只是Mac OS X的&ldquo;X协议&rdquo;与Linux所采用的X协议有很大不同，前者是二进制的，后者使用的是纯文本。从纯粹学术理论上来讲，纯文本虽然在效率上会有些损失，但在其他方面会更具优势。这个问题在本书的第4章将会继续探讨，这里就先说这么多。</p>
-<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
-	正因为Linux的图形界面得益于这种优良的架构设计，虽然在效率上不及Mac OS X那样优秀，但是图像效果和功能的丰富程度绝对不会比Windows差，至少它拥有很多种桌面环境可以选择，可以说每一种都会让你有完全不一样的体验。看惯了Windows的&ldquo;老气横秋&rdquo;，不妨去感受一下Linux的小清新吧！</p>
-<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px; text-align: right;">
-	<a href="http://hook.aliapp.com/?p=554">Linux就是这个范儿 &ndash; 本书目录&nbsp;</a></p>
-
-          
-    </div>
-    <footer class="entry-footer clearfix">
-    <div class="post-love">
-      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
-      <span class="love-count">
-        0
-      </span></a>
-    </div>
-    <div class="post-more">
-      <a href="http://mypre.cn/2014/09/03/1-2-2-e3-80-80-e6-9e-b6-e6-9e-84-e8-ae-be-e8-ae-a1-e7-ac-ac-ef-bc-91-e7-ab-a0-e7-ac-ac-e4-b8-80-e6-ac-a1-e4-ba-b2-e5-af-86-e6-8e-a5-e8-a7-a6-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa">Read More</a>
-    </div>
-  </footer>
-</article>
-
-
-    
     
         <div class="pagination clearfix">
             
@@ -654,7 +660,7 @@ else
           
           <li>
               <a class="catelink" href="http://mypre.cn/categories/生活随笔">
-                  生活随笔&nbsp;<span class="count">[5]</span>
+                  生活随笔&nbsp;<span class="count">[6]</span>
               </a>
           </li>
 
@@ -757,6 +763,13 @@ else
           </li>
 
           
+          <li>
+              <a class="catelink" href="http://mypre.cn/categories/考研心得">
+                  考研心得&nbsp;<span class="count">[1]</span>
+              </a>
+          </li>
+
+          
         </ul>
 </aside>
   <!-- sidebar: tag list -->
@@ -815,6 +828,10 @@ else
         
             <a class="taglink" href="http://mypre.cn/tag/#Fedora" data-target-cate="#Fedora">
                 Fedora
+            </a>
+        
+            <a class="taglink" href="http://mypre.cn/tag/#心情日记，考研心得" data-target-cate="#心情日记，考研心得">
+                心情日记，考研心得
             </a>
         
     </div>

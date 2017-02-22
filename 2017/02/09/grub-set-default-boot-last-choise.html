@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <meta name="keywords" content="让 Grub2 记住上次选择的启动项,Linux系统,系统技巧, Linux系统,Fedora,,Iziy, mypre, MyPress, LanBing, jekyll, iziyix" />
-    <meta name="description" content="让 Grub2 记住上次选择的启动项, Linux系统,系统技巧, Linux系统,Fedora, linux 下可以碰到各种各样的问题,今天解决了一部分,明天也许又会冒出一些新的问题,但是,更重要的是,fix it and remenber it!linux 使用配置文件进行管理,其中gurb 的配置文件有, &lt;pre&gt;/etc/default/grub&lt;/pre&gt;和&lt;pre&g..." />
+    <meta name="description" content="让 Grub2 记住上次选择的启动项, Linux系统,系统技巧, Linux系统,Fedora, linux 下可以碰到各种各样的问题,今天解决了一部分,明天也许又会冒出一些新的问题,但是,更重要的是,fix it and remenber it!linux 使用配置文件进行管理,其中gurb 的配置文件有, /etc/default/grub和/etc/grub.d/前者存储grub变量,后者为生成一个完整..." />
 
     <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
 
@@ -111,24 +111,28 @@ else
               <p>linux 下可以碰到各种各样的问题,今天解决了一部分,明天也许又会冒出一些新的问题,
 但是,更重要的是,fix it and remenber it!</p>
 
-<p>linux 使用配置文件进行管理,其中gurb 的配置文件有, &lt;pre&gt;/etc/default/grub&lt;/pre&gt;和&lt;pre&gt;/etc/grub.d/&lt;/pre&gt;</p>
+<p>linux 使用配置文件进行管理,其中gurb 的配置文件有, <code>/etc/default/grub</code>和<code>/etc/grub.d/</code></p>
 
 <p>前者存储grub变量,后者为生成一个完整,grub.cfg配置的脚本,</p>
 
-<p>此外,还有一个官方给的&gt;/boot/grub2/grubenv&lt;/pre&gt;
-然而,在我的Fedora 24上 并没有&lt;pre&gt;/etc/default/grub&lt;/pre&gt;手动创建也没有用,原来需要使用
-<code>grub2-editenv /etc/default/grub create
+<p>此外,还有一个官方给的<code>/boot/grub2/grubenv</code></p>
+
+<!--more-->
+<p>然而,在我的Fedora 24上 并没有<code>/etc/default/grub</code>手动创建也没有用,原来需要使用</p>
+
+<pre>grub2-editenv /etc/default/grub create
 grub2-editenv /etc/default/grub set GRUB_DEFAULT=saved
 grub2-editenv /etc/default/grub set GRUB_SAVEDEFAULT=true
-</code></p>
+</pre>
 
 <p>这样才能被grub所识别,
 其实可以直接使用官方给的路径更简单,</p>
 
-<p>重新生成grub.cfg 覆盖原有文件:
-<code>sudo grub2-mkconfig -o /boot/grub2/grub.cfg
+<p>重新生成grub.cfg 覆盖原有文件:</p>
+
+<pre>sudo grub2-mkconfig -o /boot/grub2/grub.cfg
 sudo cp /boot/grub2/grub.cfg /boot/efi/EFI/fedora/grub.cfg
-</code></p>
+</pre>
 
 <p>重启查看效果</p>
 
@@ -224,6 +228,30 @@ sudo cp /boot/grub2/grub.cfg /boot/efi/EFI/fedora/grub.cfg
         <ul>
             
             
+              <li class="clearfix">
+                  <div class="post-thumb">
+                          
+                          
+                          
+                            
+                          
+                          
+                          
+                            <img id="past_nail" class="rounded" src="http://mypre.cn/assets/images/random/2.jpg" title="考研日记" alt="考研日记" width="45" height="45" />
+                          
+
+
+                  </div>
+                  <div class="post-right">
+                      <h3><a href="/2017/02/22/the-path-to-graduate">考研日记</a></h3>
+                      <div class="post-meta">
+                          <a href="/2017/02/22/the-path-to-graduate#post-comment" title="考研日记 上的评论">No Reply</a></span> | <span>? Views</span>
+                      </div>
+                  </div>
+              </li>
+            
+            
+            
             
             
               <li class="clearfix">
@@ -235,7 +263,7 @@ sudo cp /boot/grub2/grub.cfg /boot/efi/EFI/fedora/grub.cfg
                           
                           
                           
-                            <img id="past_nail" class="rounded" src="http://mypre.cn/assets/images/random/6.jpg" title="grub-mkconfig 没有Windows项" alt="grub-mkconfig 没有Windows项" width="45" height="45" />
+                            <img id="past_nail" class="rounded" src="http://mypre.cn/assets/images/random/4.jpg" title="grub-mkconfig 没有Windows项" alt="grub-mkconfig 没有Windows项" width="45" height="45" />
                           
 
 
@@ -259,7 +287,7 @@ sudo cp /boot/grub2/grub.cfg /boot/efi/EFI/fedora/grub.cfg
                           
                           
                           
-                            <img id="past_nail" class="rounded" src="http://mypre.cn/assets/images/random/2.jpg" title="On The Way, Forever~" alt="On The Way, Forever~" width="45" height="45" />
+                            <img id="past_nail" class="rounded" src="http://mypre.cn/assets/images/random/6.jpg" title="On The Way, Forever~" alt="On The Way, Forever~" width="45" height="45" />
                           
 
 
@@ -283,7 +311,7 @@ sudo cp /boot/grub2/grub.cfg /boot/efi/EFI/fedora/grub.cfg
                           
                           
                           
-                            <img id="past_nail" class="rounded" src="http://mypre.cn/assets/images/random/6.jpg" title="Keep Silence until 2017 Just like three half years ago" alt="Keep Silence until 2017 Just like three half years ago" width="45" height="45" />
+                            <img id="past_nail" class="rounded" src="http://mypre.cn/assets/images/random/4.jpg" title="Keep Silence until 2017 Just like three half years ago" alt="Keep Silence until 2017 Just like three half years ago" width="45" height="45" />
                           
 
 
@@ -350,7 +378,7 @@ sudo cp /boot/grub2/grub.cfg /boot/efi/EFI/fedora/grub.cfg
                           
                           
                           
-                            <img id="past_nail" class="rounded" src="http://mypre.cn/assets/images/random/5.jpg" title="在Linux下 使用Scroll键开关键盘背光灯" alt="在Linux下 使用Scroll键开关键盘背光灯" width="45" height="45" />
+                            <img id="past_nail" class="rounded" src="http://mypre.cn/assets/images/random/1.jpg" title="在Linux下 使用Scroll键开关键盘背光灯" alt="在Linux下 使用Scroll键开关键盘背光灯" width="45" height="45" />
                           
 
 
@@ -374,7 +402,7 @@ sudo cp /boot/grub2/grub.cfg /boot/efi/EFI/fedora/grub.cfg
                           
                           
                           
-                            <img id="past_nail" class="rounded" src="http://mypre.cn/assets/images/random/1.jpg" title="Open Here In Teminal From Nautilus" alt="Open Here In Teminal From Nautilus" width="45" height="45" />
+                            <img id="past_nail" class="rounded" src="http://mypre.cn/assets/images/random/6.jpg" title="Open Here In Teminal From Nautilus" alt="Open Here In Teminal From Nautilus" width="45" height="45" />
                           
 
 
@@ -383,30 +411,6 @@ sudo cp /boot/grub2/grub.cfg /boot/efi/EFI/fedora/grub.cfg
                       <h3><a href="/2016/04/14/open-here-in-terminal-from-nautilus">Open Here In Teminal From Nautilus</a></h3>
                       <div class="post-meta">
                           <a href="/2016/04/14/open-here-in-terminal-from-nautilus#post-comment" title="Open Here In Teminal From Nautilus 上的评论">No Reply</a></span> | <span>? Views</span>
-                      </div>
-                  </div>
-              </li>
-            
-            
-            
-              <li class="clearfix">
-                  <div class="post-thumb">
-                          
-                          
-                          
-                            
-                          
-                          
-                          
-                            <img id="past_nail" class="rounded" src="http://mypre.cn/assets/images/random/1.jpg" title="The Fourth Day, fix some small bugs" alt="The Fourth Day, fix some small bugs" width="45" height="45" />
-                          
-
-
-                  </div>
-                  <div class="post-right">
-                      <h3><a href="/2016/04/12/fourth-day-fix-some-smarll-problem">The Fourth Day, fix some small bugs</a></h3>
-                      <div class="post-meta">
-                          <a href="/2016/04/12/fourth-day-fix-some-smarll-problem#post-comment" title="The Fourth Day, fix some small bugs 上的评论">No Reply</a></span> | <span>? Views</span>
                       </div>
                   </div>
               </li>
@@ -429,7 +433,7 @@ sudo cp /boot/grub2/grub.cfg /boot/efi/EFI/fedora/grub.cfg
           
           <li>
               <a class="catelink" href="http://mypre.cn/categories/生活随笔">
-                  生活随笔&nbsp;<span class="count">[5]</span>
+                  生活随笔&nbsp;<span class="count">[6]</span>
               </a>
           </li>
 
@@ -532,6 +536,13 @@ sudo cp /boot/grub2/grub.cfg /boot/efi/EFI/fedora/grub.cfg
           </li>
 
           
+          <li>
+              <a class="catelink" href="http://mypre.cn/categories/考研心得">
+                  考研心得&nbsp;<span class="count">[1]</span>
+              </a>
+          </li>
+
+          
         </ul>
 </aside>
   <!-- sidebar: tag list -->
@@ -590,6 +601,10 @@ sudo cp /boot/grub2/grub.cfg /boot/efi/EFI/fedora/grub.cfg
         
             <a class="taglink" href="http://mypre.cn/tag/#Fedora" data-target-cate="#Fedora">
                 Fedora
+            </a>
+        
+            <a class="taglink" href="http://mypre.cn/tag/#心情日记，考研心得" data-target-cate="#心情日记，考研心得">
+                心情日记，考研心得
             </a>
         
     </div>

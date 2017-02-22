@@ -116,29 +116,12 @@ else
               <p>linux 下可以碰到各种各样的问题,今天解决了一部分,明天也许又会冒出一些新的问题,
 但是,更重要的是,fix it and remenber it!</p>
 
-<p>linux 使用配置文件进行管理,其中gurb 的配置文件有, &lt;pre&gt;/etc/default/grub&lt;/pre&gt;和&lt;pre&gt;/etc/grub.d/&lt;/pre&gt;</p>
+<p>linux 使用配置文件进行管理,其中gurb 的配置文件有, <code>/etc/default/grub</code>和<code>/etc/grub.d/</code></p>
 
 <p>前者存储grub变量,后者为生成一个完整,grub.cfg配置的脚本,</p>
 
-<p>此外,还有一个官方给的&gt;/boot/grub2/grubenv&lt;/pre&gt;
-然而,在我的Fedora 24上 并没有&lt;pre&gt;/etc/default/grub&lt;/pre&gt;手动创建也没有用,原来需要使用
-<code>grub2-editenv /etc/default/grub create
-grub2-editenv /etc/default/grub set GRUB_DEFAULT=saved
-grub2-editenv /etc/default/grub set GRUB_SAVEDEFAULT=true
-</code></p>
+<p>此外,还有一个官方给的<code>/boot/grub2/grubenv</code></p>
 
-<p>这样才能被grub所识别,
-其实可以直接使用官方给的路径更简单,</p>
-
-<p>重新生成grub.cfg 覆盖原有文件:
-<code>sudo grub2-mkconfig -o /boot/grub2/grub.cfg
-sudo cp /boot/grub2/grub.cfg /boot/efi/EFI/fedora/grub.cfg
-</code></p>
-
-<p>重启查看效果</p>
-
-<p>文档是个好东西,就看会不会使用了
-<a href="https://www.gnu.org/software/grub/manual/grub.html#">官方文档</a></p>
 
           
     </div>
@@ -240,7 +223,7 @@ sudo cp /boot/grub2/grub.cfg /boot/efi/EFI/fedora/grub.cfg
           
           <li>
               <a class="catelink" href="http://mypre.cn/categories/生活随笔">
-                  生活随笔&nbsp;<span class="count">[5]</span>
+                  生活随笔&nbsp;<span class="count">[6]</span>
               </a>
           </li>
 
@@ -339,6 +322,13 @@ sudo cp /boot/grub2/grub.cfg /boot/efi/EFI/fedora/grub.cfg
           <li>
               <a class="catelink" href="http://mypre.cn/categories/MCU">
                   MCU&nbsp;<span class="count">[1]</span>
+              </a>
+          </li>
+
+          
+          <li>
+              <a class="catelink" href="http://mypre.cn/categories/考研心得">
+                  考研心得&nbsp;<span class="count">[1]</span>
               </a>
           </li>
 
