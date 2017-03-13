@@ -1243,6 +1243,370 @@ Windows 项原本是在<code>/etc/grub.d/30_os-prober</code>生成</p>
 
       
     
+      <div class="box archive-meta" id="数据结构算法，动态规划">
+        <h3 class="title-meta">Tag "数据结构算法，动态规划":</h3>
+      </div>
+      
+        <!-- this is post list -->
+
+    <!-- this is post list -->
+<article class="post type-post status-publish format-standard">
+    <header class="entry-header">
+    <h2 class="entry-name">
+      <a href="http://mypre.cn/2017/03/13/longest-increasing-subsequence" title="动态规划-最长增长子序列" rel="bookmark">动态规划-最长增长子序列</a>
+    </h2>
+    <ul class="entry-meta">
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2017-03-13</li>
+      <li><i class="fa fa-pencil-square-o"></i>
+          
+            <a href="http://mypre.cn/categories/数据结构算法">数据结构算法</a>
+          
+      </li>
+      <li><i class="fa fa-comments-o"></i> <a href="http://mypre.cn/2017/03/13/longest-increasing-subsequence#post-comment"><span class="disqus-comment-count" data-disqus-url="http://mypre.cn/2017/03/13/longest-increasing-subsequence"></span> 评论</a></li>
+      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
+    </ul>
+    </header>
+    <div class="entry-content" itemprop="description">
+          
+              <p>最长递增子序列（LIS）的问题是要找到一个给定序列的最长子序列的长度，使得子序列中的所有元素被排序的顺序增加。</p>
+
+<p>例如，{2,1,0,5,4,8,9} LIS为{2,4,8,9},{2,4,8,9},{1,5,8,9}….最长长度为4。</p>
+
+<p>这里存在一个局部前后无关性的规律：</p>
+
+<p>设 arr[0..m..m+1] 其中arr[0..m] 的最长子序列是包含于arr[0..m+1]的，且长度包含</p>
+
+<p>所以，求arr[0..m]的最长子序列，只需要找出{ arr[0..m-i],其中m=&gt;i&gt;=1}的LIS，</p>
+
+<p>此时，设{ arr[0..m-i],其中m=&gt;i&gt;=1}的最长子序列:i = k;</p>
+
+<p>如果arr[k] &lt; arr[m]的话，则arr[m]的LIS长度为arr[0..k]的LIS长度+1；</p>
+
+<p>LIS = LIS + arr[m];</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>int arr[10] = 2;
+int n = sizeof(arr) / sizeof(arr[0]);
+
+//返回包含第n个元素作为最后一个元素的子序列的最长长度，
+//a用于记录最长长度，
+int lis(int n, int &amp;a)
+{
+    if(n == 1) return 1;
+    int cmax = 0;
+    for(int i = 1; i &lt; n; i++)
+    {
+        //第n个元素有可能不是LIS的最后一个元素,所以这里的递归不能放进if里面。
+        int r = lis(i,a);
+        if(arr[i-1]&lt;arr[n-1])
+        {
+            if(r &gt; cmax) cmax = r;
+        }
+    }
+    a = max(a,cmax+1);
+    return cmax + 1;
+}
+</code></pre>
+</div>
+
+<p>可以看到，每次lis(n)的执行都会调用n-1次lis，时间复杂度为O(n^2)，
+下面进行优化：
+方法与之前的背包问题和整分拆分问题非常相似。</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>int arr[10] = 2;
+int nSize = sizeof(arr) / sizeof(arr[0]);
+int lis2(int nSize)
+{
+    int *c;
+    c = (int *) malloc(sizeof(int)*nSize);
+    c[0] = 1;
+
+    int gmax=0;
+    for(int n = 1; n &lt; nSize; n++ )
+    {
+        int cmax = 0;
+        for ( int i = 0; i &lt; n; i++ )
+        {
+            if ( arr[i]&lt;arr[n] &amp;&amp; c[i]&gt;cmax ) 
+                cmax = c[i];
+        }
+        c[n] = cmax + 1;
+
+        if ( c[n] &gt; gmax ) gmax = c[n];
+    }
+
+    free( c );
+    return gmax;
+}
+</code></pre>
+</div>
+
+          
+    </div>
+    <footer class="entry-footer clearfix">
+    <div class="post-love">
+      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
+      <span class="love-count">
+        0
+      </span></a>
+    </div>
+    <div class="post-more">
+      <a href="http://mypre.cn/2017/03/13/longest-increasing-subsequence">Read More</a>
+    </div>
+  </footer>
+</article>
+
+
+      
+        <!-- this is post list -->
+
+    <!-- this is post list -->
+<article class="post type-post status-publish format-standard">
+    <header class="entry-header">
+    <h2 class="entry-name">
+      <a href="http://mypre.cn/2017/03/12/integer-division" title="整数拆分" rel="bookmark">整数拆分</a>
+    </h2>
+    <ul class="entry-meta">
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2017-03-12</li>
+      <li><i class="fa fa-pencil-square-o"></i>
+          
+            <a href="http://mypre.cn/categories/数据结构算法">数据结构算法</a>
+          
+      </li>
+      <li><i class="fa fa-comments-o"></i> <a href="http://mypre.cn/2017/03/12/integer-division#post-comment"><span class="disqus-comment-count" data-disqus-url="http://mypre.cn/2017/03/12/integer-division"></span> 评论</a></li>
+      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
+    </ul>
+    </header>
+    <div class="entry-content" itemprop="description">
+          
+              <p>将一个整数拆分成2的幂相加，比如</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>7=1+2+4</td>
+    </tr>
+    <tr>
+      <td>7=1+2+2+2</td>
+    </tr>
+    <tr>
+      <td>7=1+1+1+4</td>
+    </tr>
+    <tr>
+      <td>7=1+1+1+2+2</td>
+    </tr>
+    <tr>
+      <td>7=1+1+1+1+1+2</td>
+    </tr>
+    <tr>
+      <td>7=1+1+1+1+1+1+1</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>4 = 4</p>
+
+<p>4 = 2 + 2</p>
+
+<p>4 = 1 + 1 + 2</p>
+
+<p>4 = 1 + 1 + 1 + 1</p>
+
+<p>奇数情况： f(2n+1) = f(2n)</p>
+
+<p>故只需要算偶数</p>
+
+<p>核心思想在于，想到相邻两个偶数有关系，或者利用已知结果推导进行推导，</p>
+
+<p>已经想到的有，将拆分分成两种情况讨论，即拆分多项式里边有1和没1的情况。</p>
+
+<p>有1的项，必至少有两个1：比如10 = 8 + 1 + 1 故这里只需要等于8的数量。</p>
+
+<p>无1的项，最小的项是2，所以整个项必可以除2，</p>
+
+<p>所以 10 = 5 * 2 这里只需要算等于5的数量。</p>
+
+<p>所以当 f(2n+1) = f(2n)</p>
+
+<p>而f（2n）= f(2n-2) +f(n),利用递推可以很轻松算出结果即：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>int f(int i)
+{
+    if(i%2) return f(i-1);
+    if (i == 1) return 1;
+    else
+    {
+        return f(i-2) + f(i/2);
+    }
+}
+</code></pre>
+</div>
+
+<p>此时，函数复杂度为 O(2^n)</p>
+
+<p>f可以优化成非递归的形式，即利用空间数组：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>int n[MAX];
+n[1] = 1;
+for(int i=2; i&lt;MAX; i++)
+{
+    if(i%2) return n[i] = n[i-1];
+    else
+    {
+        n[i] = n[i-2] + n[i/2];
+    }
+}
+</code></pre>
+</div>
+
+          
+    </div>
+    <footer class="entry-footer clearfix">
+    <div class="post-love">
+      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
+      <span class="love-count">
+        0
+      </span></a>
+    </div>
+    <div class="post-more">
+      <a href="http://mypre.cn/2017/03/12/integer-division">Read More</a>
+    </div>
+  </footer>
+</article>
+
+
+      
+        <!-- this is post list -->
+
+    <!-- this is post list -->
+<article class="post type-post status-publish format-standard">
+    <header class="entry-header">
+    <h2 class="entry-name">
+      <a href="http://mypre.cn/2017/03/11/c-01bag-problem" title="01背包问题" rel="bookmark">01背包问题</a>
+    </h2>
+    <ul class="entry-meta">
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2017-03-11</li>
+      <li><i class="fa fa-pencil-square-o"></i>
+          
+            <a href="http://mypre.cn/categories/数据结构算法">数据结构算法</a>
+          
+      </li>
+      <li><i class="fa fa-comments-o"></i> <a href="http://mypre.cn/2017/03/11/c-01bag-problem#post-comment"><span class="disqus-comment-count" data-disqus-url="http://mypre.cn/2017/03/11/c-01bag-problem"></span> 评论</a></li>
+      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
+    </ul>
+    </header>
+    <div class="entry-content" itemprop="description">
+          
+              <p>恕在下愚钝，01背包问题学了两仨天才搞懂，其中也是断断续续了，</p>
+
+<p>这个问题也是讲烂了的一个知识点，但是由于没有找到一个适合以自己的思维来理解的，所以现在总结一下</p>
+
+<p>大家都说这是一个关于动态规划的问题，但在下才疏学浅，始终无法，理会这其中的关系，</p>
+
+<p>唯一能联想到的就是高中的时候，学过的几何绘画动态规划了，特征是：给出限制条件，求最值。看来应该是这类题目了。</p>
+
+<p>现在只考虑01背包的情况，至于动态规划的思想还要再接触几个相应的题目才能掌握。</p>
+
+<p>首先，在网上找了大量文章，有些人上来就是给个状态方程，或者表格之类的，研究了好多，还是一知半解。好吧，路子野的人没有听说过什么叫状态方程。</p>
+
+<p>后来才发现，其实是隐含一个递归思想的，然而这个思想被大多数人所熟知，那就是利用汉诺塔思想，</p>
+
+<p>涉及到在01背包的最优解问题中，最优解是可以一步一步分成其子问题的最优解的。</p>
+
+<p>子问题是包含于问题的，且解决方法是相同的。</p>
+
+<p><em>注意，这里的拆分是一层一层的剥开，而不是一块一块的分开，后者是分治的思想。类似归并，快速排序</em></p>
+
+<p>且这里假设子问题最优解已知，</p>
+
+<p>问题（包括n个物品）- 部分 = 子问题（包括n-1个物品）；</p>
+
+<p>部分即第n个物品存在与不存在的问题：</p>
+
+<p>1、如果最优解里边存在第n个物品的话，那么子问题背包总重量限制将减去第n个物品总重量，而子问题最优解价值也将也将减去第n个物品的价值。</p>
+
+<p>2、如果最优解里边__不存在__第n个物品的话那么子问题背包总重量限制与原来一样。</p>
+
+<p>这个部分是选1还是选2 看两个条件：</p>
+
+<p>一是当前问题的 重量限制能否放得下，如不能则直接进入选2；</p>
+
+<p>二是如果能放下，刚判断1和2中（存在n与不存在n）子问题（n-1个物品）的价值哪个大，选出那个大的给来就反过来决定了选不选第n个物品。</p>
+
+<p>另外，最内边层的子问题：第0个物品的价值是0，</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+</span>
+<span class="kt">int</span> <span class="n">w</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">};</span> <span class="c1">//weight
+</span><span class="kt">int</span> <span class="n">v</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">13</span><span class="p">};</span>  <span class="c1">//value
+//第n个物品weight和value存储在w[n-1]和v[n-1]中
+</span><span class="kt">int</span> <span class="nf">c</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="kt">int</span> <span class="n">wei</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">if</span><span class="p">(</span><span class="n">n</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">if</span><span class="p">(</span><span class="n">wei</span><span class="o">&lt;</span><span class="n">w</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">c</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">wei</span><span class="p">);</span>
+  <span class="k">else</span>
+    <span class="k">return</span>  <span class="n">max</span><span class="p">(</span> <span class="n">v</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">c</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">wei</span><span class="o">-</span><span class="n">w</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]),</span><span class="n">c</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">wei</span><span class="p">));</span>
+<span class="p">}</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">c</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>这是最原始的理解，可以看出，在大部分情况下，每次函数执行都会产生两次递归调用，时间复杂度为 O(2^n)</p>
+
+<p>因为递归的方式要调用 2^n 次c，</p>
+
+<p>而关于c的参数n，wei的组合只有n*wei种，</p>
+
+<p>此时必定会有大量重复的递归，</p>
+
+<p>现在进行优化：构造一个c关于n和wei的表格，对不同参数的n和wei的组合进行列表，这样就可以减少大量的运算。</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="c1">//构造数组
+</span><span class="kt">int</span> <span class="n">c</span><span class="p">[</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="n">wei</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="err">，</span>
+<span class="c1">//递归调用是从外向里进行调用的，而内层并不与外层相关。故从c[0][0]开始填表；
+</span>
+<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">w</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">w</span> <span class="o">&lt;=</span> <span class="n">wei</span><span class="p">;</span> <span class="n">w</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">w</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">else</span>
+        <span class="p">{</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">w</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">&gt;</span><span class="n">w</span> <span class="p">)</span> <span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">w</span><span class="p">]</span> <span class="o">=</span> <span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">w</span><span class="p">];</span>
+            <span class="k">else</span>
+            <span class="p">{</span>
+                <span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">w</span><span class="p">]</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">w</span><span class="p">],</span><span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">w</span><span class="o">-</span><span class="n">weight</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span><span class="o">+</span><span class="n">value</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+                <span class="c1">//对应上部分1和部分2，选取价值高的子问题。
+</span>                <span class="c1">//第i个物品weight和value存储在weight[i-1]和value[i-1]中
+</span>            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+          
+    </div>
+    <footer class="entry-footer clearfix">
+    <div class="post-love">
+      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
+      <span class="love-count">
+        0
+      </span></a>
+    </div>
+    <div class="post-more">
+      <a href="http://mypre.cn/2017/03/11/c-01bag-problem">Read More</a>
+    </div>
+  </footer>
+</article>
+
+
+      
+    
 
 </div>
 <div id="sidebar">
@@ -1306,6 +1670,10 @@ Windows 项原本是在<code>/etc/grub.d/30_os-prober</code>生成</p>
         
             <a class="taglink" href="http://mypre.cn/tag/#心情日记，考研心得" data-target-cate="#心情日记，考研心得">
                 心情日记，考研心得
+            </a>
+        
+            <a class="taglink" href="http://mypre.cn/tag/#数据结构算法，动态规划" data-target-cate="#数据结构算法，动态规划">
+                数据结构算法，动态规划
             </a>
         
     </div>

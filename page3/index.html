@@ -91,6 +91,235 @@ else
       <!-- this is post list -->
 
     <!-- this is post list -->
+<article class="post type-post status-publish format-gallery">
+    <header class="entry-header">
+    <h2 class="entry-name">
+      <a href="http://mypre.cn/2016/04/10/test-gallery" title="TEST Gallery" rel="bookmark">TEST Gallery</a>
+    </h2>
+    <ul class="entry-meta">
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2016-04-10</li>
+      <li><i class="fa fa-pencil-square-o"></i>
+          
+            <a href="http://mypre.cn/categories/Linux系统">Linux系统</a>
+          
+      </li>
+      <li><i class="fa fa-comments-o"></i> <a href="http://mypre.cn/2016/04/10/test-gallery#post-comment"><span class="disqus-comment-count" data-disqus-url="http://mypre.cn/2016/04/10/test-gallery"></span> 评论</a></li>
+      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
+    </ul>
+    </header>
+
+
+    <div class="flexslider">
+      <ul class="slides">
+        
+        
+            
+            
+            
+              
+            
+        
+            
+            
+            
+              
+                  
+                <li data-thumb="http://imglf1.nosdn.127.net/img/Z3ZvNUFuRWljSU5CVjVWV2w3YnVBcGhGajc1d3VxY0puNSt0amZONnBtdG80bTVTVUo1MGtBPT0.jpg?imageView&amp;thumbnail=2000y1500&amp;type=jpg&amp;quality=96&amp;stripmeta=0&amp;type=jpg"><img src="http://imglf1.nosdn.127.net/img/Z3ZvNUFuRWljSU5CVjVWV2w3YnVBcGhGajc1d3VxY0puNSt0amZONnBtdG80bTVTVUo1MGtBPT0.jpg?imageView&amp;thumbnail=2000y1500&amp;type=jpg&amp;quality=96&amp;stripmeta=0&amp;type=jpg" title="TEST Gallery" alt="TEST Gallery"/></li>
+              
+            
+              
+            
+              
+            
+        
+            
+            
+            
+              
+                  
+                <li data-thumb="http://imglf.nosdn.127.net/img/Z3ZvNUFuRWljSU5CVjVWV2w3YnVBaVp2YnRvcFdFbHVva3B4QU01RWhKM3hiZEc4ZEs1QmhnPT0.jpg?imageView&amp;thumbnail=2000y1500&amp;type=jpg&amp;quality=96&amp;stripmeta=0&amp;type=jpg"><img src="http://imglf.nosdn.127.net/img/Z3ZvNUFuRWljSU5CVjVWV2w3YnVBaVp2YnRvcFdFbHVva3B4QU01RWhKM3hiZEc4ZEs1QmhnPT0.jpg?imageView&amp;thumbnail=2000y1500&amp;type=jpg&amp;quality=96&amp;stripmeta=0&amp;type=jpg" title="TEST Gallery" alt="TEST Gallery"/></li>
+              
+            
+              
+            
+              
+            
+        
+      </ul>
+    </div>
+
+
+    <div class="entry-content" itemprop="description">
+  
+        
+            
+                
+                
+            
+        
+
+    </div>
+    <footer class="entry-footer clearfix">
+    <div class="post-love">
+      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
+      <span class="love-count">
+        0
+      </span></a>
+    </div>
+    <div class="post-more">
+      <a href="http://mypre.cn/2016/04/10/test-gallery">Read More</a>
+    </div>
+  </footer>
+</article>
+
+
+    
+      <!-- this is post list -->
+
+    <!-- this is post list -->
+<article class="post type-post status-publish format-standard">
+    <header class="entry-header">
+    <h2 class="entry-name">
+      <a href="http://mypre.cn/2016/04/10/jekyll-get-the-img-src-or-get-rid-img-tag" title="提取一篇文章里边的 图片链接，以及除去文章里边的 img 标签" rel="bookmark">提取一篇文章里边的 图片链接，以及除去文章里边的 img 标签</a>
+    </h2>
+    <ul class="entry-meta">
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2016-04-10</li>
+      <li><i class="fa fa-pencil-square-o"></i>
+          
+            <a href="http://mypre.cn/categories/jekyll">jekyll</a>
+          
+      </li>
+      <li><i class="fa fa-comments-o"></i> <a href="http://mypre.cn/2016/04/10/jekyll-get-the-img-src-or-get-rid-img-tag#post-comment"><span class="disqus-comment-count" data-disqus-url="http://mypre.cn/2016/04/10/jekyll-get-the-img-src-or-get-rid-img-tag"></span> 评论</a></li>
+      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
+    </ul>
+    </header>
+    <div class="entry-content" itemprop="description">
+          
+              <p>从接触 Jekyll 到现在有两整天了</p>
+
+<p>发现 Jekyll 对逻辑处理方面不太善长，许是我没有认真去了解吧，</p>
+
+<p>plugin 也许是很强大的东西 ， 虽然不会ruby，但是因为对python的熟悉，还是有很大的帮助的，</p>
+
+<p>之后打算结合国内七牛CDN对资源加速，估计要用到 plugin 希望ruby的语法对新手的亲和度不会让我太失望。</p>
+
+<p>因为 原主题支持不同类型的Post，所以 对Jekyll也想实现这个功能，</p>
+
+<p>做 完了标准的Post 接下来该做 Gallery 了
+碰到的问题是，该如何提取Post文章里边的 img 中的src 以及如何 去除 文章里边的img</p>
+
+<p>因为要挪动IMG的位置到文章最前面</p>
+
+<p>因此记下方法
+去除 img 标签 如下：</p>
+
+<pre>
+
+{% for sp in content | split:"&lt;img "%}
+    {% for con in sp | split:"&gt;" %}
+        {% if con contains 'src="' or con contains "src='" %}
+        {% else %}
+          {% if con contains "href=" %}
+            {{con}}&gt;
+          {% else %}
+            {{con}}
+          {% endif %}
+        {% endif %}
+    {% endfor %}
+{% endfor %}
+
+</pre>
+
+<p>去除 IMG 方法就是 按 <img 以及="" /> 切割 除去 含有 src 属性的 项 
+剩下的 对 因为 &gt; 切割 破坏的a 标签 补上 &gt;</p>
+
+
+          
+    </div>
+    <footer class="entry-footer clearfix">
+    <div class="post-love">
+      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
+      <span class="love-count">
+        0
+      </span></a>
+    </div>
+    <div class="post-more">
+      <a href="http://mypre.cn/2016/04/10/jekyll-get-the-img-src-or-get-rid-img-tag">Read More</a>
+    </div>
+  </footer>
+</article>
+
+
+    
+      <!-- this is post list -->
+
+    <!-- this is post list -->
+<article class="post type-post status-publish format-standard">
+    <header class="entry-header">
+    <h2 class="entry-name">
+      <a href="http://mypre.cn/2016/03/20/bash-e5-bf-ab-e6-8d-b7-e9-94-ae-e8-ae-b0-e5-bd-95-e5-a4-87-e5-bf-98" title="Bash快捷键 记录备忘" rel="bookmark">Bash快捷键 记录备忘</a>
+    </h2>
+    <ul class="entry-meta">
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2016-03-20</li>
+      <li><i class="fa fa-pencil-square-o"></i>
+          
+            <a href="http://mypre.cn/categories/应用技巧">应用技巧</a>
+          
+      </li>
+      <li><i class="fa fa-comments-o"></i> <a href="http://mypre.cn/2016/03/20/bash-e5-bf-ab-e6-8d-b7-e9-94-ae-e8-ae-b0-e5-bd-95-e5-a4-87-e5-bf-98#post-comment"><span class="disqus-comment-count" data-disqus-url="http://mypre.cn/2016/03/20/bash-e5-bf-ab-e6-8d-b7-e9-94-ae-e8-ae-b0-e5-bd-95-e5-a4-87-e5-bf-98"></span> 评论</a></li>
+      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
+    </ul>
+    </header>
+    <div class="entry-content" itemprop="description">
+          
+              <blockquote><p><strong>生活在 Bash Shell 中，熟记以下快捷键，将极大的提高你的命令行操作效率。 </strong></p></blockquote>
+<h3>编辑命令</h3>
+<ul>
+<li>Ctrl + a ：移到命令行首</li>
+<li>Ctrl + e ：移到命令行尾</li>
+<li>Ctrl + f ：按字符前移（右向）</li>
+<li>Ctrl + b ：按字符后移（左向）</li>
+<li>Alt + f ：按单词前移（右向）</li>
+<li>Alt + b ：按单词后移（左向）</li>
+<li>Ctrl + xx：在命令行首和光标之间移动</li>
+<li>Ctrl + u ：从光标处删除至命令行首</li>
+<li>Ctrl + k ：从光标处删除至命令行尾</li>
+<li>Ctrl + w ：从光标处删除至字首</li>
+<li>Alt + d ：从光标处删除至字尾</li>
+<li>Ctrl + d ：删除光标处的字符</li>
+<li>Ctrl + h ：删除光标前的字符</li>
+<li>Ctrl + y ：粘贴至光标后</li>
+<li>Alt + c ：从光标处更改为首字母大写的单词</li>
+<li>Alt + u ：从光标处更改为全部大写的单词</li>
+<li>Alt + l ：从光标处更改为全部小写的单词</li>
+<li>Ctrl + t ：交换光标处和之前的字符</li>
+<li>Alt + t ：交换光标处和之前的单词</li>
+<li>Alt + Backspace：与 Ctrl + w 相同类似，分隔符有些差别 [感谢 rezilla 指正]</li>
+</ul>
+
+
+
+
+          
+    </div>
+    <footer class="entry-footer clearfix">
+    <div class="post-love">
+      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
+      <span class="love-count">
+        0
+      </span></a>
+    </div>
+    <div class="post-more">
+      <a href="http://mypre.cn/2016/03/20/bash-e5-bf-ab-e6-8d-b7-e9-94-ae-e8-ae-b0-e5-bd-95-e5-a4-87-e5-bf-98">Read More</a>
+    </div>
+  </footer>
+</article>
+
+
+    
+      <!-- this is post list -->
+
+    <!-- this is post list -->
 <article class="post type-post status-publish format-audio">
   <div class="entry-music">
   	<div class="sb-xiami" songid="1769819218">
@@ -286,158 +515,6 @@ else
     </div>
     <div class="post-more">
       <a href="http://mypre.cn/2015/12/21/e8-bd-ac-linux-e4-b8-8b-e5-85-b3-e6-9c-ba-e5-91-bd-e4-bb-a4-e7-9a-84-e5-8c-ba-e5-88-ab-ef-bc-88haltpoweroffrebootshutdowninit-ef-bc-89">Read More</a>
-    </div>
-  </footer>
-</article>
-
-
-    
-      <!-- this is post list -->
-
-    <!-- this is post list -->
-<article class="post type-post status-publish format-standard">
-    <header class="entry-header">
-    <h2 class="entry-name">
-      <a href="http://mypre.cn/2015/12/06/fedora-e5-b8-b8-e8-a7-81-e9-9f-b3-e8-a7-86-e9-a2-91-e8-a7-a3-e7-a0-81-e5-99-a8" title="Fedora 常见音视频解码器" rel="bookmark">Fedora 常见音视频解码器</a>
-    </h2>
-    <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 最后编辑 2015-12-06</li>
-      <li><i class="fa fa-pencil-square-o"></i>
-          
-            <a href="http://mypre.cn/categories/Linux系统">Linux系统</a>
-          
-      </li>
-      <li><i class="fa fa-comments-o"></i> <a href="http://mypre.cn/2015/12/06/fedora-e5-b8-b8-e8-a7-81-e9-9f-b3-e8-a7-86-e9-a2-91-e8-a7-a3-e7-a0-81-e5-99-a8#post-comment"><span class="disqus-comment-count" data-disqus-url="http://mypre.cn/2015/12/06/fedora-e5-b8-b8-e8-a7-81-e9-9f-b3-e8-a7-86-e9-a2-91-e8-a7-a3-e7-a0-81-e5-99-a8"></span> 评论</a></li>
-      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
-    </ul>
-    </header>
-    <div class="entry-content" itemprop="description">
-          
-              <p>解决 Fedora 及其它linux 视频解码器 缺失的问题</p>
-<pre>sudo dnf install gstreamer1-libav
-sudo dnf install gstreamer1-plugins-bad-freeworld</pre>
-
-          
-    </div>
-    <footer class="entry-footer clearfix">
-    <div class="post-love">
-      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
-      <span class="love-count">
-        0
-      </span></a>
-    </div>
-    <div class="post-more">
-      <a href="http://mypre.cn/2015/12/06/fedora-e5-b8-b8-e8-a7-81-e9-9f-b3-e8-a7-86-e9-a2-91-e8-a7-a3-e7-a0-81-e5-99-a8">Read More</a>
-    </div>
-  </footer>
-</article>
-
-
-    
-      <!-- this is post list -->
-
-    <!-- this is post list -->
-<article class="post type-post status-publish format-standard">
-    <header class="entry-header">
-    <h2 class="entry-name">
-      <a href="http://mypre.cn/2015/12/05/ros-pppoe-e6-8b-a8-e5-8f-b7-e4-b8-8a-e7-bd-91-e5-8d-95-e5-8f-a3-nat-e8-bd-ac-e5-8f-91-ef-bc-8b-ip-e4-bc-aa-e8-a3-85" title="Ros PPPoe 拨号上网 单口 Nat 转发 ＋ IP伪装" rel="bookmark">Ros PPPoe 拨号上网 单口 Nat 转发 ＋ IP伪装</a>
-    </h2>
-    <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 最后编辑 2015-12-05</li>
-      <li><i class="fa fa-pencil-square-o"></i>
-          
-            <a href="http://mypre.cn/categories/网络应用">网络应用</a>
-          
-      </li>
-      <li><i class="fa fa-comments-o"></i> <a href="http://mypre.cn/2015/12/05/ros-pppoe-e6-8b-a8-e5-8f-b7-e4-b8-8a-e7-bd-91-e5-8d-95-e5-8f-a3-nat-e8-bd-ac-e5-8f-91-ef-bc-8b-ip-e4-bc-aa-e8-a3-85#post-comment"><span class="disqus-comment-count" data-disqus-url="http://mypre.cn/2015/12/05/ros-pppoe-e6-8b-a8-e5-8f-b7-e4-b8-8a-e7-bd-91-e5-8d-95-e5-8f-a3-nat-e8-bd-ac-e5-8f-91-ef-bc-8b-ip-e4-bc-aa-e8-a3-85"></span> 评论</a></li>
-      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
-    </ul>
-    </header>
-    <div class="entry-content" itemprop="description">
-          
-              <p>工作室网路由于使用二楼机房供教学使用的网络，一直受到与教学时段同步的限制，临近周末‘思诚杯’比赛，可能需要网络，所以改用PPPoe 拨号上网，<br />
-原使用Ros ＋ 无线路由做交换<br />
-原端口，被保安室 借用 需沟通，</p>
-<p>起先，想到PPPoe拨号 设置Ros 路由器，设置拨号一时可能解决不了，直接用 无线路由 做转发，<br />
-发现性能瓶颈明显，原来20m的带宽减少到了2m不到，估改用Ros 做 转发</p>
-<p>将保安室网线 网络中心网口 Ros 全接 无线路由器 交换口上</p>
-<p>禁用无线路由器DHCP服务，将其完全做为一个 交换设备<br />
-Ros 设置 PPPoe Client 增加默认路由 和用户Dns</p>
-<p>设置 DHCP Server 增加一个DHCP池 设置好 Ros IP 网关为网关IP 172.16.0.0 网段</p>
-<p><img class="aligncenter" src="http://imglf.nosdn.127.net/img/Z3ZvNUFuRWljSVBlRFRNTWREZmVuMWZ0dzFoMGoycHpjTGkyZ1FBSEVKUm9DMVVKaWFLWERBPT0.png?imageView&amp;thumbnail=1680x0&amp;quality=96&amp;stripmeta=0&amp;type=jpg" alt="" /><br />
-设置 Nat ip伪装<br />
-<code>Ip Firewall nat</code><br />
-增加一条 chain：srcnat 基于源 的Nat action：masquerade</p>
-<p><img class="aligncenter" src="http://imglf0.nosdn.127.net/img/Z3ZvNUFuRWljSVBlRFRNTWREZmVuNnhRQ3M1NnV3ZHRKZE1laHlxc0g5VUtNN2lFMkQvTkh3PT0.png?imageView&amp;thumbnail=1680x0&amp;quality=96&amp;stripmeta=0&amp;type=jpg" alt="" width="1465" height="509" /></p>
-<p>&nbsp;</p>
-<p>通过无线设备上网可自动获取到 IP和Ros网关</p>
-<p>可以上QQ，百度，但发现 其它大部分网页无法正常访问，<br />
-DNS无异常<br />
-此现象与电子楼机房故障一样， 认为可能学校 网络中心，对包过滤做了手脚，<br />
-后想来，无线路由器并无此问题，难道无线路由器，对Nat 数据包做加密处理？</p>
-<p>于情于理，网络中心既然学号帐号都开放了，应该没理由会做Nat过滤，Nat伪装之后的包应该是没法检测出来的，问题还是出在Ros本地<br />
-于是在<code>Ros ip firewall filter</code> 发现一条规则，只能接收数据量 及 速度 太少，却又有走动，原因 可能在此，将其禁用，</p>
-<p><img class="aligncenter" src="http://imglf.nosdn.127.net/img/Z3ZvNUFuRWljSVBlRFRNTWREZmVuNW9jek9Fek96Nlg0S1VKK3FFZFpBRVk4N0gzUldrVUNBPT0.png?imageView&amp;thumbnail=1680x0&amp;quality=96&amp;stripmeta=0&amp;type=jpg" alt="" width="1215" height="605" /><br />
-果不其然，网络访问正常。<br />
-于此，无线路由器瓶颈去除，网络恢复原有20M水平。</p>
-
-          
-    </div>
-    <footer class="entry-footer clearfix">
-    <div class="post-love">
-      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
-      <span class="love-count">
-        0
-      </span></a>
-    </div>
-    <div class="post-more">
-      <a href="http://mypre.cn/2015/12/05/ros-pppoe-e6-8b-a8-e5-8f-b7-e4-b8-8a-e7-bd-91-e5-8d-95-e5-8f-a3-nat-e8-bd-ac-e5-8f-91-ef-bc-8b-ip-e4-bc-aa-e8-a3-85">Read More</a>
-    </div>
-  </footer>
-</article>
-
-
-    
-      <!-- this is post list -->
-
-    <!-- this is post list -->
-<article class="post type-post status-publish format-standard">
-    <header class="entry-header">
-    <h2 class="entry-name">
-      <a href="http://mypre.cn/2015/11/29/linux-e8-be-93-e5-87-ba-e9-87-8d-e5-ae-9a-e5-90-91-e9-97-ae-e9-a2-98" title="linux 输出重定向问题" rel="bookmark">linux 输出重定向问题</a>
-    </h2>
-    <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 最后编辑 2015-11-29</li>
-      <li><i class="fa fa-pencil-square-o"></i>
-          
-            <a href="http://mypre.cn/categories/Linux系统">Linux系统</a>
-          
-      </li>
-      <li><i class="fa fa-comments-o"></i> <a href="http://mypre.cn/2015/11/29/linux-e8-be-93-e5-87-ba-e9-87-8d-e5-ae-9a-e5-90-91-e9-97-ae-e9-a2-98#post-comment"><span class="disqus-comment-count" data-disqus-url="http://mypre.cn/2015/11/29/linux-e8-be-93-e5-87-ba-e9-87-8d-e5-ae-9a-e5-90-91-e9-97-ae-e9-a2-98"></span> 评论</a></li>
-      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
-    </ul>
-    </header>
-    <div class="entry-content" itemprop="description">
-          
-              <p>> ：用于左边指定描述符<br />
-&>/dev/null ：此处＆ 指所有输出 ，即全部重定向 至 文件</p>
-<p>2>1 ：用于将错误输出重写向至当前目录的文件名为1的文件中</p>
-<p>2>&1 ：用于将错误输出重写至 标准输出</p>
-<p>sudo 时 内部命令无法使用 IO重定向<br />
-调用 sh -c “command” 来运行命令</p>
-<pre>sudo sh -c "cat hosts >> /etc/hosts"</pre>
-
-          
-    </div>
-    <footer class="entry-footer clearfix">
-    <div class="post-love">
-      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
-      <span class="love-count">
-        0
-      </span></a>
-    </div>
-    <div class="post-more">
-      <a href="http://mypre.cn/2015/11/29/linux-e8-be-93-e5-87-ba-e9-87-8d-e5-ae-9a-e5-90-91-e9-97-ae-e9-a2-98">Read More</a>
     </div>
   </footer>
 </article>
@@ -665,6 +742,13 @@ DNS无异常<br />
           </li>
 
           
+          <li>
+              <a class="catelink" href="http://mypre.cn/categories/数据结构算法">
+                  数据结构算法&nbsp;<span class="count">[3]</span>
+              </a>
+          </li>
+
+          
         </ul>
 </aside>
   <!-- sidebar: tag list -->
@@ -727,6 +811,10 @@ DNS无异常<br />
         
             <a class="taglink" href="http://mypre.cn/tag/#心情日记，考研心得" data-target-cate="#心情日记，考研心得">
                 心情日记，考研心得
+            </a>
+        
+            <a class="taglink" href="http://mypre.cn/tag/#数据结构算法，动态规划" data-target-cate="#数据结构算法，动态规划">
+                数据结构算法，动态规划
             </a>
         
     </div>

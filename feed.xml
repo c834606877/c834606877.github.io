@@ -5,9 +5,293 @@
     <description>这里是Iziy蓝冰的个人博客MyPress，记录着Iziy蓝冰的生活点滴.</description>
     <link>http://mypre.cn/</link>
     <atom:link href="http://mypre.cn/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 22 Feb 2017 13:54:48 +0800</pubDate>
-    <lastBuildDate>Wed, 22 Feb 2017 13:54:48 +0800</lastBuildDate>
+    <pubDate>Mon, 13 Mar 2017 22:23:32 +0800</pubDate>
+    <lastBuildDate>Mon, 13 Mar 2017 22:23:32 +0800</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
+    
+      <item>
+        <title>动态规划-最长增长子序列</title>
+        <description>&lt;p&gt;最长递增子序列（LIS）的问题是要找到一个给定序列的最长子序列的长度，使得子序列中的所有元素被排序的顺序增加。&lt;/p&gt;
+
+&lt;p&gt;例如，{2,1,0,5,4,8,9} LIS为{2,4,8,9},{2,4,8,9},{1,5,8,9}….最长长度为4。&lt;/p&gt;
+
+&lt;p&gt;这里存在一个局部前后无关性的规律：&lt;/p&gt;
+
+&lt;p&gt;设 arr[0..m..m+1] 其中arr[0..m] 的最长子序列是包含于arr[0..m+1]的，且长度包含&lt;/p&gt;
+
+&lt;p&gt;所以，求arr[0..m]的最长子序列，只需要找出{ arr[0..m-i],其中m=&amp;gt;i&amp;gt;=1}的LIS，&lt;/p&gt;
+
+&lt;p&gt;此时，设{ arr[0..m-i],其中m=&amp;gt;i&amp;gt;=1}的最长子序列:i = k;&lt;/p&gt;
+
+&lt;p&gt;如果arr[k] &amp;lt; arr[m]的话，则arr[m]的LIS长度为arr[0..k]的LIS长度+1；&lt;/p&gt;
+
+&lt;p&gt;LIS = LIS + arr[m];&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;int arr[10] = 2;
+int n = sizeof(arr) / sizeof(arr[0]);
+
+//返回包含第n个元素作为最后一个元素的子序列的最长长度，
+//a用于记录最长长度，
+int lis(int n, int &amp;amp;a)
+{
+    if(n == 1) return 1;
+    int cmax = 0;
+    for(int i = 1; i &amp;lt; n; i++)
+    {
+        //第n个元素有可能不是LIS的最后一个元素,所以这里的递归不能放进if里面。
+        int r = lis(i,a);
+        if(arr[i-1]&amp;lt;arr[n-1])
+        {
+            if(r &amp;gt; cmax) cmax = r;
+        }
+    }
+    a = max(a,cmax+1);
+    return cmax + 1;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;可以看到，每次lis(n)的执行都会调用n-1次lis，时间复杂度为O(n^2)，
+下面进行优化：
+方法与之前的背包问题和整分拆分问题非常相似。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;int arr[10] = 2;
+int nSize = sizeof(arr) / sizeof(arr[0]);
+int lis2(int nSize)
+{
+    int *c;
+    c = (int *) malloc(sizeof(int)*nSize);
+    c[0] = 1;
+
+    int gmax=0;
+    for(int n = 1; n &amp;lt; nSize; n++ )
+    {
+        int cmax = 0;
+        for ( int i = 0; i &amp;lt; n; i++ )
+        {
+            if ( arr[i]&amp;lt;arr[n] &amp;amp;&amp;amp; c[i]&amp;gt;cmax ) 
+                cmax = c[i];
+        }
+        c[n] = cmax + 1;
+
+        if ( c[n] &amp;gt; gmax ) gmax = c[n];
+    }
+
+    free( c );
+    return gmax;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Mon, 13 Mar 2017 00:00:00 +0800</pubDate>
+        <link>http://mypre.cn/2017/03/13/longest-increasing-subsequence</link>
+        <guid isPermaLink="true">http://mypre.cn/2017/03/13/longest-increasing-subsequence</guid>
+        
+        <category>数据结构算法，动态规划</category>
+        
+        
+        <category>数据结构算法</category>
+        
+      </item>
+    
+      <item>
+        <title>整数拆分</title>
+        <description>&lt;p&gt;将一个整数拆分成2的幂相加，比如&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;7=1+2+4&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;7=1+2+2+2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;7=1+1+1+4&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;7=1+1+1+2+2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;7=1+1+1+1+1+2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;7=1+1+1+1+1+1+1&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;4 = 4&lt;/p&gt;
+
+&lt;p&gt;4 = 2 + 2&lt;/p&gt;
+
+&lt;p&gt;4 = 1 + 1 + 2&lt;/p&gt;
+
+&lt;p&gt;4 = 1 + 1 + 1 + 1&lt;/p&gt;
+
+&lt;p&gt;奇数情况： f(2n+1) = f(2n)&lt;/p&gt;
+
+&lt;p&gt;故只需要算偶数&lt;/p&gt;
+
+&lt;p&gt;核心思想在于，想到相邻两个偶数有关系，或者利用已知结果推导进行推导，&lt;/p&gt;
+
+&lt;p&gt;已经想到的有，将拆分分成两种情况讨论，即拆分多项式里边有1和没1的情况。&lt;/p&gt;
+
+&lt;p&gt;有1的项，必至少有两个1：比如10 = 8 + 1 + 1 故这里只需要等于8的数量。&lt;/p&gt;
+
+&lt;p&gt;无1的项，最小的项是2，所以整个项必可以除2，&lt;/p&gt;
+
+&lt;p&gt;所以 10 = 5 * 2 这里只需要算等于5的数量。&lt;/p&gt;
+
+&lt;p&gt;所以当 f(2n+1) = f(2n)&lt;/p&gt;
+
+&lt;p&gt;而f（2n）= f(2n-2) +f(n),利用递推可以很轻松算出结果即：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;int f(int i)
+{
+    if(i%2) return f(i-1);
+    if (i == 1) return 1;
+    else
+    {
+        return f(i-2) + f(i/2);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;此时，函数复杂度为 O(2^n)&lt;/p&gt;
+
+&lt;p&gt;f可以优化成非递归的形式，即利用空间数组：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;int n[MAX];
+n[1] = 1;
+for(int i=2; i&amp;lt;MAX; i++)
+{
+    if(i%2) return n[i] = n[i-1];
+    else
+    {
+        n[i] = n[i-2] + n[i/2];
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Sun, 12 Mar 2017 00:00:00 +0800</pubDate>
+        <link>http://mypre.cn/2017/03/12/integer-division</link>
+        <guid isPermaLink="true">http://mypre.cn/2017/03/12/integer-division</guid>
+        
+        <category>数据结构算法，动态规划</category>
+        
+        
+        <category>数据结构算法</category>
+        
+      </item>
+    
+      <item>
+        <title>01背包问题</title>
+        <description>&lt;p&gt;恕在下愚钝，01背包问题学了两仨天才搞懂，其中也是断断续续了，&lt;/p&gt;
+
+&lt;p&gt;这个问题也是讲烂了的一个知识点，但是由于没有找到一个适合以自己的思维来理解的，所以现在总结一下&lt;/p&gt;
+
+&lt;p&gt;大家都说这是一个关于动态规划的问题，但在下才疏学浅，始终无法，理会这其中的关系，&lt;/p&gt;
+
+&lt;p&gt;唯一能联想到的就是高中的时候，学过的几何绘画动态规划了，特征是：给出限制条件，求最值。看来应该是这类题目了。&lt;/p&gt;
+
+&lt;p&gt;现在只考虑01背包的情况，至于动态规划的思想还要再接触几个相应的题目才能掌握。&lt;/p&gt;
+
+&lt;p&gt;首先，在网上找了大量文章，有些人上来就是给个状态方程，或者表格之类的，研究了好多，还是一知半解。好吧，路子野的人没有听说过什么叫状态方程。&lt;/p&gt;
+
+&lt;p&gt;后来才发现，其实是隐含一个递归思想的，然而这个思想被大多数人所熟知，那就是利用汉诺塔思想，&lt;/p&gt;
+
+&lt;p&gt;涉及到在01背包的最优解问题中，最优解是可以一步一步分成其子问题的最优解的。&lt;/p&gt;
+
+&lt;p&gt;子问题是包含于问题的，且解决方法是相同的。&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;注意，这里的拆分是一层一层的剥开，而不是一块一块的分开，后者是分治的思想。类似归并，快速排序&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;且这里假设子问题最优解已知，&lt;/p&gt;
+
+&lt;p&gt;问题（包括n个物品）- 部分 = 子问题（包括n-1个物品）；&lt;/p&gt;
+
+&lt;p&gt;部分即第n个物品存在与不存在的问题：&lt;/p&gt;
+
+&lt;p&gt;1、如果最优解里边存在第n个物品的话，那么子问题背包总重量限制将减去第n个物品总重量，而子问题最优解价值也将也将减去第n个物品的价值。&lt;/p&gt;
+
+&lt;p&gt;2、如果最优解里边__不存在__第n个物品的话那么子问题背包总重量限制与原来一样。&lt;/p&gt;
+
+&lt;p&gt;这个部分是选1还是选2 看两个条件：&lt;/p&gt;
+
+&lt;p&gt;一是当前问题的 重量限制能否放得下，如不能则直接进入选2；&lt;/p&gt;
+
+&lt;p&gt;二是如果能放下，刚判断1和2中（存在n与不存在n）子问题（n-1个物品）的价值哪个大，选出那个大的给来就反过来决定了选不选第n个物品。&lt;/p&gt;
+
+&lt;p&gt;另外，最内边层的子问题：第0个物品的价值是0，&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;iostream&amp;gt;
+&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//weight
+&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;13&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;//value
+//第n个物品weight和value存储在w[n-1]和v[n-1]中
+&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wei&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;wei&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;wei&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;wei&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;wei&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;这是最原始的理解，可以看出，在大部分情况下，每次函数执行都会产生两次递归调用，时间复杂度为 O(2^n)&lt;/p&gt;
+
+&lt;p&gt;因为递归的方式要调用 2^n 次c，&lt;/p&gt;
+
+&lt;p&gt;而关于c的参数n，wei的组合只有n*wei种，&lt;/p&gt;
+
+&lt;p&gt;此时必定会有大量重复的递归，&lt;/p&gt;
+
+&lt;p&gt;现在进行优化：构造一个c关于n和wei的表格，对不同参数的n和wei的组合进行列表，这样就可以减少大量的运算。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;//构造数组
+&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;wei&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;，&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//递归调用是从外向里进行调用的，而内层并不与外层相关。故从c[0][0]开始填表；
+&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;w&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;w&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wei&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;weight&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+                &lt;span class=&quot;c1&quot;&gt;//对应上部分1和部分2，选取价值高的子问题。
+&lt;/span&gt;                &lt;span class=&quot;c1&quot;&gt;//第i个物品weight和value存储在weight[i-1]和value[i-1]中
+&lt;/span&gt;            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Sat, 11 Mar 2017 00:00:00 +0800</pubDate>
+        <link>http://mypre.cn/2017/03/11/c-01bag-problem</link>
+        <guid isPermaLink="true">http://mypre.cn/2017/03/11/c-01bag-problem</guid>
+        
+        <category>数据结构算法，动态规划</category>
+        
+        
+        <category>数据结构算法</category>
+        
+      </item>
     
       <item>
         <title>考研日记</title>
@@ -368,158 +652,6 @@ Windows 项原本是在&lt;code&gt;/etc/grub.d/30_os-prober&lt;/code&gt;生成&l
         <category>心情日记</category>
         
         <category>影视音乐</category>
-        
-      </item>
-    
-      <item>
-        <title>My Heart Will Go On~</title>
-        <description>&lt;p&gt;[xiami]2100452[/xiami]&lt;/p&gt;
-</description>
-        <pubDate>Wed, 15 Jun 2016 00:00:00 +0800</pubDate>
-        <link>http://mypre.cn/2016/06/15/My-Heart-Will-Go-On</link>
-        <guid isPermaLink="true">http://mypre.cn/2016/06/15/My-Heart-Will-Go-On</guid>
-        
-        
-        <category>心情日记</category>
-        
-        <category>影视音乐</category>
-        
-      </item>
-    
-      <item>
-        <title>卧榻将息，辗转之思</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/post_res/abfaa40egx6BSi1xx0652&amp;amp;690.jpg&quot; alt=&quot;路漫漫&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;入学之期，焉已三年，&lt;/p&gt;
-
-&lt;p&gt;情情景景，历历在目，&lt;/p&gt;
-
-&lt;p&gt;浮心年华，酒醉酩酊，&lt;/p&gt;
-
-&lt;p&gt;学之习之，聚之散之，&lt;/p&gt;
-
-&lt;p&gt;絮事繁多，忙忙之为。&lt;/p&gt;
-
-&lt;p&gt;今轻年已去，清心求学，&lt;/p&gt;
-
-&lt;p&gt;一心一意，无欲它思，&lt;/p&gt;
-
-&lt;p&gt;竟不想今时何日。&lt;/p&gt;
-
-&lt;p&gt;忆往昔年，&lt;/p&gt;
-
-&lt;p&gt;高中之季，意气风发，&lt;/p&gt;
-
-&lt;p&gt;夙兴夜寐，进士及第，&lt;/p&gt;
-
-&lt;p&gt;时过境迁，期期三年。&lt;/p&gt;
-
-&lt;p&gt;今朝之举，黄金榜上，&lt;/p&gt;
-
-&lt;p&gt;既无愧于心，何须论得丧。&lt;/p&gt;
-
-&lt;p&gt;夜明风清，记之感慨。&lt;/p&gt;
-
-&lt;p&gt;——蓝记&lt;/p&gt;
-</description>
-        <pubDate>Fri, 13 May 2016 00:00:00 +0800</pubDate>
-        <link>http://mypre.cn/2016/05/13/sleep-diary</link>
-        <guid isPermaLink="true">http://mypre.cn/2016/05/13/sleep-diary</guid>
-        
-        <category>心情日记，生活随笔</category>
-        
-        
-        <category>生活随笔</category>
-        
-        <category>心情日记</category>
-        
-      </item>
-    
-      <item>
-        <title>在Linux下 使用Scroll键开关键盘背光灯</title>
-        <description>&lt;p&gt;花了4天半的时间鼓捣好了一个机械键盘，&lt;/p&gt;
-
-&lt;p&gt;找了一个老外大牛写的stm32－based 键盘矩阵扫描器，改改装在了键盘上边&lt;/p&gt;
-
-&lt;p&gt;dfu功能，移植在keil下没有被识别，估计一阵子也没有多少时间来折腾，暂时先用着，&lt;/p&gt;
-
-&lt;p&gt;因为io口不够用，多区背光给改成了Scroll键开关，&lt;/p&gt;
-
-&lt;p&gt;但是，发现 Scroll 键 在高版本linux下给屏蔽了，&lt;/p&gt;
-
-&lt;p&gt;国内百度了半天没找到好的解决方案&lt;/p&gt;
-
-&lt;p&gt;转到google 发现
-&lt;a href=&quot;http://unix.stackexchange.com/questions/164245/why-is-the-scroll-lock-key-disabled-in-cinnamon-linux-xorg&quot;&gt;Why is the Scroll Lock key disabled in Cinnamon/Linux/Xorg?&lt;/a&gt;
-一文给出了详细的方法
-&lt;!--more--&gt;
-通过&lt;/p&gt;
-&lt;pre&gt;xmodmap -pm&lt;/pre&gt;
-&lt;p&gt;查看当前系统 mod键映射情况&lt;/p&gt;
-&lt;pre&gt;[lanbing@LanBing-Laptop ~]$ xmodmap -pm
-xmodmap:  up to 4 keys per modifier, (keycodes in parentheses):
-
-shift       Shift_L (0x32),  Shift_R (0x3e)
-lock        Caps_Lock (0x42)
-control     Control_L (0x25),  Control_R (0x69)
-mod1        Alt_L (0x40),  Alt_R (0x6c),  Meta_L (0xcd)
-mod2        Num_Lock (0x4d)
-mod3
-mod4        Super_L (0x85),  Super_R (0x86),  Super_L (0xce),  Hyper_L (0xcf)
-mod5        ISO_Level3_Shift (0x5c),  Mode_switch (0xcb)&lt;/pre&gt;
-
-&lt;p&gt;其中mod3 这行是空的
-通过这 条命令启用 Scroll Lock：&lt;/p&gt;
-&lt;pre&gt;modmap -e &quot;add mod3 = Scroll_Lock&quot;&lt;/pre&gt;
-
-&lt;p&gt;测试ok&lt;/p&gt;
-
-&lt;pre&gt;[lanbing@LanBing-Laptop ~]$ xmodmap -pm
-xmodmap:  up to 4 keys per modifier, (keycodes in parentheses):
-
-shift       Shift_L (0x32),  Shift_R (0x3e)
-lock        Caps_Lock (0x42)
-control     Control_L (0x25),  Control_R (0x69)
-mod1        Alt_L (0x40),  Alt_R (0x6c),  Meta_L (0xcd)
-mod2        Num_Lock (0x4d)
-mod3        Scroll_Lock (0x4e)
-mod4        Super_L (0x85),  Super_R (0x86),  Super_L (0xce),  Hyper_L (0xcf)
-mod5        ISO_Level3_Shift (0x5c),  Mode_switch (0xcb)
-&lt;/pre&gt;
-
-&lt;p&gt;让它每回开机都自动运行，
-将这行放入~/.Xmodmap中&lt;/p&gt;
-
-&lt;pre&gt;add mod3 = Scroll_Lock&lt;/pre&gt;
-&lt;p&gt;或者&lt;/p&gt;
-&lt;pre&gt;cd ~
-echo &amp;gt;.Xmodmap &quot;add mod3 = Scroll_Lock&quot;&lt;/pre&gt;
-&lt;p&gt;or&lt;/p&gt;
-&lt;pre&gt;cd ~
-echo &amp;gt;&amp;gt; .bashrc &#39;modmap -e &quot;add mod3 = Scroll_Lock&quot; &#39;&lt;/pre&gt;
-
-&lt;p&gt;这种方式在系统启动之后，会自动载入配置，&lt;/p&gt;
-
-&lt;p&gt;但是在重新插拔USB键盘后，系统会清空配置，需要手动重新载入&lt;/p&gt;
-
-&lt;p&gt;通过修改 &lt;code&gt;/usr/share/X11/xkb/symbols/us&lt;/code&gt;文件&lt;/p&gt;
-
-&lt;p&gt;在 &lt;code&gt;xkb_symbols &quot;basic&quot; {&lt;/code&gt;区段尾部添加如下：&lt;/p&gt;
-
-&lt;pre&gt;modifier_map Mod3   { Scroll_Lock };&lt;/pre&gt;
-
-&lt;p&gt;使配置永久生效。&lt;/p&gt;
-</description>
-        <pubDate>Wed, 04 May 2016 00:00:00 +0800</pubDate>
-        <link>http://mypre.cn/2016/05/04/toggle-backlight-by-use-scroll</link>
-        <guid isPermaLink="true">http://mypre.cn/2016/05/04/toggle-backlight-by-use-scroll</guid>
-        
-        <category>机械键盘，背光，Scroll开关，</category>
-        
-        
-        <category>Linux系统</category>
-        
-        <category>MCU</category>
         
       </item>
     
