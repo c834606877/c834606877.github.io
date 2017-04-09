@@ -94,6 +94,207 @@ else
 <article class="post type-post status-publish format-standard">
     <header class="entry-header">
     <h2 class="entry-name">
+      <a href="http://mypre.cn/2014/08/31/1-1-3-e3-80-80-e5-ae-89-e8-a3-85-e7-b3-bb-e7-bb-9f-e7-ac-ac-ef-bc-91-e7-ab-a0-e7-ac-ac-e4-b8-80-e6-ac-a1-e4-ba-b2-e5-af-86-e6-8e-a5-e8-a7-a6-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa" title="1.1.3　安装系统 - Linux就是这个范儿" rel="bookmark">1.1.3　安装系统 - Linux就是这个范儿</a>
+    </h2>
+    <ul class="entry-meta">
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2014-08-31</li>
+      <li><i class="fa fa-pencil-square-o"></i>
+          
+            <a href="http://mypre.cn/categories/Linux就是这个范儿">Linux就是这个范儿</a>
+          
+      </li>
+      <li><i class="fa fa-comments-o"></i> <a href="http://mypre.cn/2014/08/31/1-1-3-e3-80-80-e5-ae-89-e8-a3-85-e7-b3-bb-e7-bb-9f-e7-ac-ac-ef-bc-91-e7-ab-a0-e7-ac-ac-e4-b8-80-e6-ac-a1-e4-ba-b2-e5-af-86-e6-8e-a5-e8-a7-a6-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa#post-comment"><span class="disqus-comment-count" data-disqus-url="http://mypre.cn/2014/08/31/1-1-3-e3-80-80-e5-ae-89-e8-a3-85-e7-b3-bb-e7-bb-9f-e7-ac-ac-ef-bc-91-e7-ab-a0-e7-ac-ac-e4-b8-80-e6-ac-a1-e4-ba-b2-e5-af-86-e6-8e-a5-e8-a7-a6-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa"></span> 评论</a></li>
+      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
+    </ul>
+    </header>
+    <div class="entry-content" itemprop="description">
+          
+              <p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	到哪里去获得CentOS或RHEL，乃至其他Linux发行版呢？问Google或者百度好了。我不会像其他书籍那样提供一大堆URL列表，总感觉这样做是在辱没大家的智商。可能比较麻烦的事情是如何规划磁盘，本书的第3章会深入地探讨这个问题。那么现在这个阶段只要按照系统默认的安装设置就行了。如果你还想让Linux与Windows共存，只需要使用分区工具留下几十个GB的未分区的磁盘空间就行了，CentOS的安装程序可以自动使用你特意留下的空间。当然，安装的时候一定要慎重，看清楚提示，不要做一些蠢事。此外，我不是很建议你的Linux与Windows共存，还是在虚拟机上运行Windows吧（具体怎么弄我后面会告诉你）。</p>
+<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	一个比较好的建议是使用64位版本，毕竟现在已经是21世纪又过了10多年了，老掉牙的32位系统应该在坟墓里歇息了！到本书截稿为止，最新版本的CentOS是6.4。为了安装方便，最好下载它的DVD镜像，前提是你安装的不是&ldquo;假宽带&rdquo;。</p>
+<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	为了方便现在身边没有电脑的人能够尽早体验到Linux系统的一些魅力，这里我们准备了一些截图来讲述一下CentOS 6.4的安装过程，以期能够图文并茂地让你对Linux有一个好印象。出于成本考虑，当然也是为了帮助你省钱，我不打算使用彩色图片。但是即便是黑白二色，依然无法掩盖Linux系统的美。不过不要高兴得太早，你若想在安装CentOS 6.4的时候与我所描述的内容相符，那么必须保证你的机器内存大于628M，因为低于这个要求不会启动图形安装模式。幸运的是，文本安装模式不支持自定义分区，也不支持自定义软件包，这使得安装过程十分简洁，也造成了我没得可讲的境地。而不幸的是你也无法得到拥有图形环境的Linux系统。不过我倒十分希望你有这&ldquo;下场&rdquo;，因为在我看来只有坚持使用命令行才能学好Linux。</p>
+<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	CentOS 6.4系统镜像有两个，只需要下载第一个镜像就能完成安装。第二个镜像是一些附加的软件包，基本上就没什么用。因为我们安装新的软件基本上都是从&ldquo;云端&rdquo;下载的，所以第二个镜像你都没有理由下载它。</p>
+<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	接下来的步骤就是刻盘、启动和引导了，如果没有问题，应该出现这样的界面：</p>
+<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	&nbsp;</p>
+<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px; text-align: center;">
+	<img alt="图1.1" src="http://m2.img.srcdd.com/farm4/d/2014/0828/16/B237943D73855F296EA9F6592F0E9D77_B1280_1280_660_520.png" style="width: 660px; height: 520px;" /></p>
+<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	这个界面展示了5个功能让你选，如果1分钟内你选择不出来，它就帮你选。选谁呢？选第一个，因为99.99%的人都会选这个。其他的功能我就不介绍了，因为当你成为那万分之一之后，基本上都懒得理我了，我还费什么事呢？</p>
+<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	一分钟不用等啦，直接按回车，应该出现这样的界面：</p>
+<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px; text-align: center;">
+	<img alt="图1.2" src="http://m1.img.srcdd.com/farm4/d/2014/0828/16/F88B23DE98512F2490BB25F5111746CA_B1280_1280_594_368.png" style="width: 594px; height: 368px;" /></p>
+<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px; text-align: center;">
+	&nbsp;</p>
+<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	这是要检测一下安装介质是不是有损坏。对于时间比较宽裕的同学可以测测，测测更健康嘛（第二个镜像就必须得下载了）。如果你认为浪费时间就等于浪费生命，那就选Skip吧。</p>
+<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	不管你是选择检测还是选择跳过，最终你都要进入这个界面：</p>
+<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	&nbsp;</p>
+<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px; text-align: center;">
+	<img alt="图1.3" src="http://m1.img.srcdd.com/farm5/d/2014/0828/16/1EE384A9DD7723948DC5869897BB470C_B1280_1280_577_428.png" style="width: 577px; height: 428px;" /></p>
+<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	&nbsp;</p>
+<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px; text-align: center;">
+	没啥实际意义，Next继续。<br style="clear: both; width: 0px; height: 0px;" /></p>
+<p>	<img alt="图1.4" src="http://m1.img.srcdd.com/farm4/d/2014/0828/16/D0F34C37B6B429D08F14F60B6A73AECD_B1280_1280_532_432.png" style="width: 532px; height: 432px;" /></p>
+<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px; text-align: center;">
+	&nbsp;</p>
+<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	这里是干什么的，大家应该懂的，我是选择母语的。Next继续。</p>
+<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px; text-align: center;">
+	<img alt="图1.5" src="http://m1.img.srcdd.com/farm4/d/2014/0828/16/F462029756B0AC70612A454546471F3A_B1280_1280_537_438.png" style="width: 537px; height: 438px;" /></p>
+<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	这里是让你选择你的键盘类型，在中国选择美国英语式就行了，别的样式的键盘估计你不熟悉。默认情况下也就是这样给你选的，所以直接下一步就行了。</p>
+<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px; text-align: center;">
+	<img alt="图1.6" src="http://m2.img.srcdd.com/farm4/d/2014/0828/16/37590172E40FC385A9BEDD280DCBD5E9_B1280_1280_470_392.png" style="width: 470px; height: 392px;" /></p>
+<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	这个就是让你选择使用的磁盘类型，基本没别的选择，99.9999%的人都不用选择，就是这个默认的基本存储设备。别的那些东西，估计这辈子你都无缘见到，所以下一步就行了。</p>
+<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	&nbsp;</p>
+<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px; text-align: center;">
+	<img alt="图1.7" src="http://m2.img.srcdd.com/farm4/d/2014/0828/16/093A2C3F3B45CD69F18FF35435B356AC_B1280_1280_471_395.png" style="width: 471px; height: 395px;" /></p>
+<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	&nbsp;</p>
+<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	这里设置主机名，也就是给你的电脑起个名字。要是没啥好名字，用这个默认的也是不错的。另外，这个地方可以进行一下网络配置，感兴趣的同学可以点开看看。如果觉得自己还不太靠谱，那就下一步好了。</p>
+<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	&nbsp;</p>
+<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px; text-align: center;">
+	<img alt="" src="http://m2.img.srcdd.com/farm5/d/2014/0828/16/ED61AC3E634E3079EF655F7AC2F102F6_B1280_1280_457_378.png" style="width: 457px; height: 378px;" /></p>
+<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	&nbsp;</p>
+<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px; text-align: center;">
+	这里确定你的时区。还要告诉你一个秘密：在这个星球上别的国家是不知道有&ldquo;北京时间&rdquo;的，但是他们都知道有&ldquo;上海时间&rdquo;。有些人是不是要自豪一下呢？<br style="clear: both; width: 0px; height: 0px;" /></p>
+<p>	<img alt="" src="http://m3.img.srcdd.com/farm4/d/2014/0828/16/506DE68E3E3437296357529E04D9242D_B1280_1280_453_377.png" style="width: 453px; height: 377px;" /></p>
+<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	输入管理员密码，尽量弄复杂点。当然，你一定要用你老婆的生日我也没办法不是？</p>
+<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px; text-align: center;">
+	<img alt="" src="http://m1.img.srcdd.com/farm4/d/2014/0828/16/69A6ED50AFA14165CC02DD9F2AD7467F_B1280_1280_469_378.png" style="width: 469px; height: 378px;" /></p>
+<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	这里有这么多的选项，我们认为最有用的就是第一项&ldquo;使用所有空间&rdquo;了，但是你现在未必有胆量这样干。所以，如果之前给Linux预留空间了，就选择&ldquo;使用剩余空间&rdquo;，或者使用&ldquo;创建自定义布局&rdquo;也行。</p>
+<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	&ldquo;自定义布局&rdquo;的界面是这样的：</p>
+<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px; text-align: center;">
+	<img alt="" src="http://m3.img.srcdd.com/farm5/d/2014/0828/16/45913151E25C60249D044E984A57165E_B1280_1280_467_383.png" style="width: 467px; height: 383px;" /></p>
+<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	我们划定的磁盘分区就是上图这样，虽然不是很符合Linux的设计思路，但是操作起来比较简单。作为初学者就这样好了，反正第3章会告诉你做Linux磁盘分区的技巧。</p>
+<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px; text-align: center;">
+	<img alt="" src="http://m2.img.srcdd.com/farm5/d/2014/0828/16/AED723705BB203C3E48016C835C3D56C_B1280_1280_498_399.png" style="width: 498px; height: 399px;" /></p>
+<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	没什么能让你设置的，下一步就行了。</p>
+<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px; text-align: center;">
+	<img alt="" src="http://m2.img.srcdd.com/farm5/d/2014/0828/16/81E105472E25C3D8963F901D470D2EF0_B1280_1280_493_407.png" style="width: 493px; height: 407px;" /></p>
+<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	&nbsp;</p>
+<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	来到这里就是定制你的Linux系统要安装哪些套件。默认的是&ldquo;Minimal&rdquo;，只是装个基本系统。我们推荐你选择&ldquo;Desktop&rdquo;，这样你就有图形界面的Linux用了。下一步就是安装过程了&hellip;&hellip;</p>
+<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px; text-align: center;">
+	<img alt="" src="http://m1.img.srcdd.com/farm5/d/2014/0828/16/A1D3BD441F641BFAE2A8370998E0347C_B1280_1280_496_405.png" style="width: 496px; height: 405px;" /></p>
+<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	你不再有点按&ldquo;下一步&rdquo;的机会了，等待的结果就是最后的成功。</p>
+<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px; text-align: center;">
+	<img alt="" src="http://m1.img.srcdd.com/farm5/d/2014/0828/16/566D789E0BC3A866B82CCF210D836361_B1280_1280_468_372.png" style="width: 468px; height: 372px;" /></p>
+<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	到了这个阶段，Linux已经进驻你的电脑了，重新引导就可以开始享用了！第一次引导的时候是要进行系统初始化设置的，也是非常简单的，基本上一路&ldquo;下一步&rdquo;就能搞定。</p>
+<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px; text-align: right;">
+	<a href="/?p=554" style="font-family: 宋体; font-size: 14px; line-height: 28px; text-align: right; text-indent: 28px;">Linux就是这个范儿 - 本书目录&nbsp;</a></p>
+
+          
+    </div>
+    <footer class="entry-footer clearfix">
+    <div class="post-love">
+      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
+      <span class="love-count">
+        0
+      </span></a>
+    </div>
+    <div class="post-more">
+      <a href="http://mypre.cn/2014/08/31/1-1-3-e3-80-80-e5-ae-89-e8-a3-85-e7-b3-bb-e7-bb-9f-e7-ac-ac-ef-bc-91-e7-ab-a0-e7-ac-ac-e4-b8-80-e6-ac-a1-e4-ba-b2-e5-af-86-e6-8e-a5-e8-a7-a6-linux-e5-b0-b1-e6-98-af-e8-bf-99-e4-b8-aa">Read More</a>
+    </div>
+  </footer>
+</article>
+
+
+    
+      <!-- this is post list -->
+
+    <!-- this is post list -->
+<article class="post type-post status-publish format-standard">
+    <header class="entry-header">
+    <h2 class="entry-name">
+      <a href="http://mypre.cn/2014/08/30/1-1-2-e9-80-89-e6-8b-a9-e5-93-aa-e4-b8-aa-e5-8f-91-e8-a1-8c-e7-89-88-e7-ac-ac-ef-bc-91-e7-ab-a0-e7-ac-ac-e4-b8-80-e6-ac-a1-e4-ba-b2-e5-af-86-e6-8e-a5-e8-a7-a6-linux-e5-b0-b1-e6-98-af" title="1.1.2 选择哪个发行版 - Linux就是这个范儿" rel="bookmark">1.1.2 选择哪个发行版 - Linux就是这个范儿</a>
+    </h2>
+    <ul class="entry-meta">
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2014-08-30</li>
+      <li><i class="fa fa-pencil-square-o"></i>
+          
+            <a href="http://mypre.cn/categories/Linux就是这个范儿">Linux就是这个范儿</a>
+          
+      </li>
+      <li><i class="fa fa-comments-o"></i> <a href="http://mypre.cn/2014/08/30/1-1-2-e9-80-89-e6-8b-a9-e5-93-aa-e4-b8-aa-e5-8f-91-e8-a1-8c-e7-89-88-e7-ac-ac-ef-bc-91-e7-ab-a0-e7-ac-ac-e4-b8-80-e6-ac-a1-e4-ba-b2-e5-af-86-e6-8e-a5-e8-a7-a6-linux-e5-b0-b1-e6-98-af#post-comment"><span class="disqus-comment-count" data-disqus-url="http://mypre.cn/2014/08/30/1-1-2-e9-80-89-e6-8b-a9-e5-93-aa-e4-b8-aa-e5-8f-91-e8-a1-8c-e7-89-88-e7-ac-ac-ef-bc-91-e7-ab-a0-e7-ac-ac-e4-b8-80-e6-ac-a1-e4-ba-b2-e5-af-86-e6-8e-a5-e8-a7-a6-linux-e5-b0-b1-e6-98-af"></span> 评论</a></li>
+      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
+    </ul>
+    </header>
+    <div class="entry-content" itemprop="description">
+          
+              <p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	<strong style="text-align: center;">1.1.2　选择哪个发行版</strong></p>
+<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	接下来我们将面临一个更为麻烦的问题，就是到底应该选择哪个Linux发行版。因为Linux的发行版实在太多了，用多如牛毛来形容一点都不夸张。可以想象，在牛毛中要选择出毛色最正、长短最合适、粗细最均匀的一根是多么纠结的事情啊。我们现在就要做这件事情，还要做好它！</p>
+<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	就目前的情形看，Linux发行版可以分为三个主要的分支：RedHat、Slackware和Debian。每一个分支都拥有一个最具代表性的商业服务器级的发行版，它们是：Red Hat Enterprise Linux，简称RHEL；SUSE Linux Enterprise，简称SUSE；Ubuntu Server，简称Ubuntu。</p>
+<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	看似好难选择的样子，但实际上也没什么，不管是谁家的Linux发行版，都不会有本质的区别。因为Linux本身就不是一个完整的系统，它实际上只是一个内核。所谓的发行版只不过是给这个内核加上一堆应用程序而攒成的系统。而且这些应用程序很大一部分都是来源于GNU社区，代码都是一样的，能有什么差别呢？</p>
+<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	虽然本质上没有什么不同，但是不同的发行版在细节上还是有一些差别的。这主要体现在管理工具的选用上。由于开源软件的绝对自由性，具有相同功能的系统管理类软件可以有很多种，不同的发行版可能会对某种特性有偏好。有些实力比较强大的发行商，比如Red Hat，自己也会为开源社区贡献很多这类软件，它的发行版自然也会首选自家的产品。当然，其他发行版也可以采用Red Hat开发的管理软件，实际上很多发行版也是这么做的。</p>
+<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	前面还说到发行版的分支，但是具体分支的归属并不取决于是否使用相同的系统管理工具。所谓的分支在软件层面上并没有十分严格的界限，只是这三个分支是历史最为悠久的发行版，而后续诞生的这些发行版大多都是从修改它们其中一种而发展起来的。实际上很多到目前为止已经跟其原有分支没有任何关联了，比如SUSE Linux已经跟Slackware没有任何联系了，但是最初的SUSE Linux是从Slackware修改而来的，所以现在依然认为它属于Slackware分支。现在，不同的分支之间互相也有借鉴，取长补短，所以分支概念在当前的发行版中越来越模糊了。现在比较清晰的是软件安装方法的不同，有些使用rpm，有些使用deb，有些甚至直接采用源代码。当然，这样的差别只有在使用不同安装方法的发行版之间才能感觉到。在日常使用中，Linux就是Linux，跟发行版没什么关系。</p>
+<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	花费了这么大的篇幅，依然没有讲清楚到底该选择哪个发行版，我感觉有点对不住各位。那么接下来就解决这个实际问题。大家可能有所察觉，我所列举的这些发行版有些人根本都没有听说过，现在流行的都是什么Fedora、Ubuntu。的确，如果你就是想自己装个Linux玩，它们都是很好的选择。但是我们都是实用主义者，同时还要排除一下个人偏好，所以从选择哪个发行版更适合找到好工作这个角度出发就比较靠谱了。比较理想的选择应该是&mdash;&mdash;CentOS。</p>
+<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	你绝对没看错，也不是我的脑袋让电梯夹了而语无伦次。虽然这之前完全没有提到过CentOS，但是当你知道它实际上是RHEL的一个克隆之后，就会稍微地理解我推荐它的原因了。</p>
+<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	RHEL由Red Hat发行，可以说系出名门，也是目前被众多品牌厂商支持得最为完善的Linux发行版。当然，SUSE和Ubuntu也未见得差到哪里，但是RHEL还有另外一个优势，就是对KVM虚拟机的支持。很多大型互联网公司为了充分利用服务器的硬件资源，都会大量采用虚拟机技术。而KVM的很多开发和测试工作都是在RHEL上进行的。这也导致了很多大型互联网公司都选择了RHEL作为其主要的服务器系统。既然RHEL这么优秀且又是大型互联网公司的选择，那么我们直接选择RHEL好了，为什么要选择它的克隆&mdash;&mdash;CentOS呢？</p>
+<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	原因非常简单，RHEL要收费。当然，RHEL也允许免费使用，但是你将得不到任何系统升级服务，也得不到任何技术支持。RHEL在对外发行的时候采用两种方式：一种就是收费的二进制方式，一种就是完全免费的源代码方式。CentOS就是利用完全免费的RHEL的源代码重新编译而成的，免费提供给大家，所以本质上与RHEL没什么区别。唯一的区别就是更新的频率没有付费的RHEL快。当然，如果你有足够的时间，也可以使用RHEL的源代码构建自己的发行版，至于是否收费，你自己说了算，给自己的公司用当然也不成问题。</p>
+<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	不管怎么样，要想吃Linux这碗饭，CentOS是非常好的选择。在免费的同时可以体验到大型互联网公司的服务器系统环境。如果有机会去这些公司面试，根据自己平时的学习经验就可以很好地回答面试官的问题了，而面试这种事儿，&ldquo;共同语言&rdquo;是很重要的。</p>
+<p style="margin: 10px 0px; padding: 0px; text-indent: 28px; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	时刻不要忘记，学习Linux的本质还是要学习它最核心的那些机制。而CentOS并不会改变这些机制。掌握好了这些机制，对于掌握任何其他Linux发行版，乃至自己去制作发行版，都将是水到渠成的事情。而在这之前还有希望找到一份较为体面的工作，何乐而不为呢？<br style="clear: both; width: 0px; height: 0px;" /><br />
+	&nbsp;</p>
+<p style="text-align: right;">
+	<a href="/?p=554" style="font-family: 宋体; font-size: 14px; line-height: 28px; text-align: right; text-indent: 28px;">Linux就是这个范儿 - 本书目录&nbsp;</a></p>
+
+          
+    </div>
+    <footer class="entry-footer clearfix">
+    <div class="post-love">
+      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
+      <span class="love-count">
+        0
+      </span></a>
+    </div>
+    <div class="post-more">
+      <a href="http://mypre.cn/2014/08/30/1-1-2-e9-80-89-e6-8b-a9-e5-93-aa-e4-b8-aa-e5-8f-91-e8-a1-8c-e7-89-88-e7-ac-ac-ef-bc-91-e7-ab-a0-e7-ac-ac-e4-b8-80-e6-ac-a1-e4-ba-b2-e5-af-86-e6-8e-a5-e8-a7-a6-linux-e5-b0-b1-e6-98-af">Read More</a>
+    </div>
+  </footer>
+</article>
+
+
+    
+      <!-- this is post list -->
+
+    <!-- this is post list -->
+<article class="post type-post status-publish format-standard">
+    <header class="entry-header">
+    <h2 class="entry-name">
       <a href="http://mypre.cn/2014/08/29/1-1-1-e6-88-91-e4-bb-ac-e7-94-a8linux-e7-9a-84-e7-90-86-e7-94-b1-e7-ac-ac-ef-bc-91-e7-ab-a0-e7-ac-ac-e4-b8-80-e6-ac-a1-e4-ba-b2-e5-af-86-e6-8e-a5-e8-a7-a6-linux-e5-b0-b1-e6-98-af-e8-bf-99" title="1.1.1 我们用Linux的理由 - Linux就是这个范儿" rel="bookmark">1.1.1 我们用Linux的理由 - Linux就是这个范儿</a>
     </h2>
     <ul class="entry-meta">
@@ -535,73 +736,6 @@ else
 
 
     
-      <!-- this is post list -->
-
-    <!-- this is post list -->
-<article class="post type-post status-publish format-standard">
-    <header class="entry-header">
-    <h2 class="entry-name">
-      <a href="http://mypre.cn/2014/08/27/e4-bd-95-e4-b8-ba-e7-bd-91-e7-bb-9c-e8-ae-a1-e7-ae-97-e6-9c-ba-e4-b8-93-e4-b8-9a-e6-9c-af-e8-af-ad" title="何为“网络” - 计算机专业术语" rel="bookmark">何为“网络” - 计算机专业术语</a>
-    </h2>
-    <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 最后编辑 2014-08-27</li>
-      <li><i class="fa fa-pencil-square-o"></i>
-          
-            <a href="http://mypre.cn/categories/未分类">未分类</a>
-          
-      </li>
-      <li><i class="fa fa-comments-o"></i> <a href="http://mypre.cn/2014/08/27/e4-bd-95-e4-b8-ba-e7-bd-91-e7-bb-9c-e8-ae-a1-e7-ae-97-e6-9c-ba-e4-b8-93-e4-b8-9a-e6-9c-af-e8-af-ad#post-comment"><span class="disqus-comment-count" data-disqus-url="http://mypre.cn/2014/08/27/e4-bd-95-e4-b8-ba-e7-bd-91-e7-bb-9c-e8-ae-a1-e7-ae-97-e6-9c-ba-e4-b8-93-e4-b8-9a-e6-9c-af-e8-af-ad"></span> 评论</a></li>
-      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
-    </ul>
-    </header>
-    <div class="entry-content" itemprop="description">
-          
-              <blockquote>在定义上非常简单﹕网络就是一群通过一定形式连接起来的计算机。</p></blockquote>
-<p>一个网络可以由两台计算机组成﹐也可以拥有在同一大楼里面的上千台计算机和用户。我们通常指这样的网络为<strong>局域网</strong>(LAN﹐ Local Area Network)﹐由LAN再延伸出去更大的范围﹐比如整个城市甚至整个国家﹐这样的网络我们称为<strong>广域网</strong>(WAN﹐ Wide Area Network)﹐当然您如果要再仔细划分的话﹐还可以有MAN(Metropolitan Area Network) 和 CAN(Citywide Area Network)﹐这些网络都需要有专门的管理人员进行维护。<br />
-
-
-
-          
-    </div>
-    <footer class="entry-footer clearfix">
-    <div class="post-love">
-      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
-      <span class="love-count">
-        0
-      </span></a>
-    </div>
-    <div class="post-more">
-      <a href="http://mypre.cn/2014/08/27/e4-bd-95-e4-b8-ba-e7-bd-91-e7-bb-9c-e8-ae-a1-e7-ae-97-e6-9c-ba-e4-b8-93-e4-b8-9a-e6-9c-af-e8-af-ad">Read More</a>
-    </div>
-  </footer>
-</article>
-
-
-    
-      <!-- this is post list -->
-
-    <!-- this is post list -->
-<article class="post type-post status-publish format-audio">
-  <div class="entry-music">
-  	<div class="sb-xiami" songid="1773484891">
-  		<div class="sb-player">
-  			<div class="sb-cover"></div>
-  			<div class="sb-info clearfix">
-  				<div class="sb-title left"></div>
-  				<div class="play-timer right">--:--</div>
-  			</div>
-  			<div class="play-button"> </div>
-  			<div class="play-prosess">
-  				<div class="play-prosess-bar"></div>
-  			</div>
-  		</div>
-  		<div class="sb-jplayer"></div>
-  	</div>
-  </div>
-</article>
-
-
-    
     
         <div class="pagination clearfix">
             
@@ -725,7 +859,7 @@ else
           
           <li>
               <a class="catelink" href="http://mypre.cn/categories/生活随笔">
-                  生活随笔&nbsp;<span class="count">[6]</span>
+                  生活随笔&nbsp;<span class="count">[7]</span>
               </a>
           </li>
 
@@ -760,7 +894,7 @@ else
           
           <li>
               <a class="catelink" href="http://mypre.cn/categories/心情日记">
-                  心情日记&nbsp;<span class="count">[12]</span>
+                  心情日记&nbsp;<span class="count">[13]</span>
               </a>
           </li>
 
@@ -830,7 +964,7 @@ else
           
           <li>
               <a class="catelink" href="http://mypre.cn/categories/考研心得">
-                  考研心得&nbsp;<span class="count">[1]</span>
+                  考研心得&nbsp;<span class="count">[2]</span>
               </a>
           </li>
 

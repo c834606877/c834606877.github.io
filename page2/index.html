@@ -94,6 +94,120 @@ else
 <article class="post type-post status-publish format-standard">
     <header class="entry-header">
     <h2 class="entry-name">
+      <a href="http://mypre.cn/2017/02/09/grub-cannot-detect-windows" title="grub-mkconfig 没有Windows项" rel="bookmark">grub-mkconfig 没有Windows项</a>
+    </h2>
+    <ul class="entry-meta">
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2017-02-09</li>
+      <li><i class="fa fa-pencil-square-o"></i>
+          
+            <a href="http://mypre.cn/categories/Linux系统">Linux系统</a>
+          
+            <a href="http://mypre.cn/categories/应用技巧">应用技巧</a>
+          
+      </li>
+      <li><i class="fa fa-comments-o"></i> <a href="http://mypre.cn/2017/02/09/grub-cannot-detect-windows#post-comment"><span class="disqus-comment-count" data-disqus-url="http://mypre.cn/2017/02/09/grub-cannot-detect-windows"></span> 评论</a></li>
+      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
+    </ul>
+    </header>
+    <div class="entry-content" itemprop="description">
+          
+              <p>不知道什么时候开始,我的<code>grub2-mkconfig</code></p>
+
+<p>找不到Windows的启动项了,
+说严重也不严重,但小问题堆起来也会成为大问题的
+于是乎,追根溯源,
+Windows 项原本是在<code>/etc/grub.d/30_os-prober</code>生成</p>
+
+<p>查看其代码,发现使用了<code>os-prober</code>寻找其他系统.
+运行发现没有输出,可以确定是这个东西在抽风了</p>
+
+<p>回头一想,之前由于部分主板EFI记动的时候,会检测是否存在<code>/EFI/Microsoft/Boot/bootmfgw.efi</code>,如果存在的话,会直接启动他,所以将其改名了.
+将其改回再测试,os-prober可心正常找到Windows项了</p>
+
+<p>于是乎,<code>os-prober</code>要改的话基本没戏,还是写脚本吧,</p>
+
+<pre> vi /etc/grub.d/40_custom</pre>
+<p>直接将启动项加入就行了.</p>
+
+<p>关于 grub 请详见<a href="https://www.gnu.org/software/grub/manual/grub.html#">官方文档</a>!</p>
+
+          
+    </div>
+    <footer class="entry-footer clearfix">
+    <div class="post-love">
+      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
+      <span class="love-count">
+        0
+      </span></a>
+    </div>
+    <div class="post-more">
+      <a href="http://mypre.cn/2017/02/09/grub-cannot-detect-windows">Read More</a>
+    </div>
+  </footer>
+</article>
+
+
+    
+      <!-- this is post list -->
+
+    <!-- this is post list -->
+<article class="post type-post status-publish format-standard">
+    <header class="entry-header">
+    <h2 class="entry-name">
+      <a href="http://mypre.cn/2016/12/26/on-the-way-forever" title="On The Way, Forever~" rel="bookmark">On The Way, Forever~</a>
+    </h2>
+    <ul class="entry-meta">
+      <li><i class="fa fa-clock-o"></i> 最后编辑 2016-12-26</li>
+      <li><i class="fa fa-pencil-square-o"></i>
+          
+            <a href="http://mypre.cn/categories/生活随笔">生活随笔</a>
+          
+            <a href="http://mypre.cn/categories/心情日记">心情日记</a>
+          
+      </li>
+      <li><i class="fa fa-comments-o"></i> <a href="http://mypre.cn/2016/12/26/on-the-way-forever#post-comment"><span class="disqus-comment-count" data-disqus-url="http://mypre.cn/2016/12/26/on-the-way-forever"></span> 评论</a></li>
+      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
+    </ul>
+    </header>
+    <div class="entry-content" itemprop="description">
+          
+              <p>一直都挂念着这个地方,想来写一点东西,然而……</p>
+
+<p>也不知道以后会如何回忆这段的日子,</p>
+
+<p>原以为一心考研,却只是想的太简单,</p>
+
+<p>一直想着平静的生活,然而,自从那年高考结束之后,就已经不一样了,</p>
+
+<p>那种一年两个长徦,除了周未每天都要去上课的时光,不需要自己去决定什么的日子早就再了,</p>
+
+<h2 id="section">2016-12-26 清晨</h2>
+<p>当被不知道什么时候定好的闹钟惊醒的那一刻,仍然有一种莫名的冲动,结束了吗?结束了,就这样结束了.不知道多少个像这样的日日夜夜夜过去,不知道以后还会有多少个像这样的日日夜夜–我的心,仍在路上.</p>
+
+
+          
+    </div>
+    <footer class="entry-footer clearfix">
+    <div class="post-love">
+      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
+      <span class="love-count">
+        0
+      </span></a>
+    </div>
+    <div class="post-more">
+      <a href="http://mypre.cn/2016/12/26/on-the-way-forever">Read More</a>
+    </div>
+  </footer>
+</article>
+
+
+    
+      <!-- this is post list -->
+
+    <!-- this is post list -->
+<article class="post type-post status-publish format-standard">
+    <header class="entry-header">
+    <h2 class="entry-name">
       <a href="http://mypre.cn/2016/07/08/keep-silence-until-2017" title="Keep Silence until 2017 Just like three half years ago" rel="bookmark">Keep Silence until 2017 Just like three half years ago</a>
     </h2>
     <ul class="entry-meta">
@@ -372,109 +486,6 @@ nautilus-open-terminal.x86_64 : Nautilus extension for an open terminal shortcut
 
 
     
-      <!-- this is post list -->
-
-    <!-- this is post list -->
-<article class="post type-post status-publish format-standard">
-    <header class="entry-header">
-    <h2 class="entry-name">
-      <a href="http://mypre.cn/2016/04/12/fourth-day-fix-some-smarll-problem" title="The Fourth Day, fix some small bugs" rel="bookmark">The Fourth Day, fix some small bugs</a>
-    </h2>
-    <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 最后编辑 2016-04-12</li>
-      <li><i class="fa fa-pencil-square-o"></i>
-          
-            <a href="http://mypre.cn/categories/本博动态">本博动态</a>
-          
-      </li>
-      <li><i class="fa fa-comments-o"></i> <a href="http://mypre.cn/2016/04/12/fourth-day-fix-some-smarll-problem#post-comment"><span class="disqus-comment-count" data-disqus-url="http://mypre.cn/2016/04/12/fourth-day-fix-some-smarll-problem"></span> 评论</a></li>
-      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
-    </ul>
-    </header>
-    <div class="entry-content" itemprop="description">
-          
-              <h3 id="section">第四天</h3>
-
-<p>修改了Blog一些细节，还修补一些代码逻辑Bug，
-Jplayer 循环播放页面音乐，
-Sidebar滚动固定box 单个box
-附着在jquery元素里边的对象在使用 jquery.clone 时，对象并不会clone，
-导致jplayer fixed box 里边的元素按钮没有反应，</p>
-
-<p>另外 Gallery.html 下竟然在输出内容时还有使用 <code>{{content}}</code>的，
-忘记了 <code>{{content}}</code> 和 <code>{{content}}</code>的使用了</p>
-
-<p>之前由于没有分清 这两变量，导致 内容，死循环 输出，或者无内容输出，花了一个多小时，</p>
-
-
-          
-    </div>
-    <footer class="entry-footer clearfix">
-    <div class="post-love">
-      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
-      <span class="love-count">
-        0
-      </span></a>
-    </div>
-    <div class="post-more">
-      <a href="http://mypre.cn/2016/04/12/fourth-day-fix-some-smarll-problem">Read More</a>
-    </div>
-  </footer>
-</article>
-
-
-    
-      <!-- this is post list -->
-
-    <!-- this is post list -->
-<article class="post type-post status-publish format-standard">
-    <header class="entry-header">
-    <h2 class="entry-name">
-      <a href="http://mypre.cn/2016/04/11/upgrade-my-blog-with-jekyll" title="Move To My New 'Stitac' Blog and New Domain MyPre" rel="bookmark">Move To My New 'Stitac' Blog and New Domain MyPre</a>
-    </h2>
-    <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> 最后编辑 2016-04-11</li>
-      <li><i class="fa fa-pencil-square-o"></i>
-          
-            <a href="http://mypre.cn/categories/本博动态">本博动态</a>
-          
-      </li>
-      <li><i class="fa fa-comments-o"></i> <a href="http://mypre.cn/2016/04/11/upgrade-my-blog-with-jekyll#post-comment"><span class="disqus-comment-count" data-disqus-url="http://mypre.cn/2016/04/11/upgrade-my-blog-with-jekyll"></span> 评论</a></li>
-      <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
-    </ul>
-    </header>
-    <div class="entry-content" itemprop="description">
-          
-              <p>博客优化的还不错了，增加了一些页面，音乐专辑，相册专辑，</p>
-
-<p>这些功能一直想在Wordpress 上实现，但确一直没有实现</p>
-
-<p>许是从来没有这么专注的去学一些东西吧，</p>
-
-<p>也许 Wordpress 提供的各种HOOK及 函数 太多，太复杂了，远没有 Jekyll 来得这么 简单</p>
-
-<p>yaml ＋ liquid 语法，与Jinja2 大同小异，甚至不需要写函数，几个模板，和 简单的输出处理逻辑就搞定了，</p>
-
-<p>若是 有一个强大的 flask 作为 引擎 再配上Jinja 语法，这也决不会比Wordpress差吧～</p>
-
-
-          
-    </div>
-    <footer class="entry-footer clearfix">
-    <div class="post-love">
-      <a href="javascript:;" data-action="ding" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
-      <span class="love-count">
-        0
-      </span></a>
-    </div>
-    <div class="post-more">
-      <a href="http://mypre.cn/2016/04/11/upgrade-my-blog-with-jekyll">Read More</a>
-    </div>
-  </footer>
-</article>
-
-
-    
     
         <div class="pagination clearfix">
             
@@ -582,7 +593,7 @@ Sidebar滚动固定box 单个box
           
           <li>
               <a class="catelink" href="http://mypre.cn/categories/生活随笔">
-                  生活随笔&nbsp;<span class="count">[6]</span>
+                  生活随笔&nbsp;<span class="count">[7]</span>
               </a>
           </li>
 
@@ -617,7 +628,7 @@ Sidebar滚动固定box 单个box
           
           <li>
               <a class="catelink" href="http://mypre.cn/categories/心情日记">
-                  心情日记&nbsp;<span class="count">[12]</span>
+                  心情日记&nbsp;<span class="count">[13]</span>
               </a>
           </li>
 
@@ -687,7 +698,7 @@ Sidebar滚动固定box 单个box
           
           <li>
               <a class="catelink" href="http://mypre.cn/categories/考研心得">
-                  考研心得&nbsp;<span class="count">[1]</span>
+                  考研心得&nbsp;<span class="count">[2]</span>
               </a>
           </li>
 
