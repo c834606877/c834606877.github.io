@@ -1,0 +1,26 @@
+<script type="text/javascript">
+//"mqqbrowser|operamobi|juc|iuc|fennec|ios|applewebKit/420|applewebkit/525|applewebkit/532|ipad|iphone|ipaq|ipod|iemobile|windows ce|240x320|480x640|acer|android|anywhereyougo.com|asus|audio|blackberry|blazer|coolpad|dopod|etouch|hitachi|htc|huawei|jbrowser|lenovo|lg|lg-|lge-|lge|mobi|moto|nokia|phone|samsung|sony|symbian|tablet|tianyu|wap|xda|xde|zte"
+if(navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i)){
+  document.write('<a href="javascript:;" class="open-nav icon-list"><i class="fa fa-bars"></i></a>');
+}
+else
+{
+	document.write('<nav id="main-nav" class="clearfix yahei">');
+    document.write('<ul class="nav">');
+    document.write('    <li class="active">');
+    document.write('        <a href="{{site.url}}/">{{ 'menu.home' | translate }}</a>');
+    document.write('    </li>');
+    document.write('    <li class="active">');
+    document.write('        <a href="{{site.url}}/audios/">{{ 'menu.music' | translate }}</a>');
+    document.write('    </li>');
+    document.write('    <li class="active">');
+    document.write('        <a href="{{site.url}}/photos/">{{ 'menu.gallery' | translate }}</a>');
+    document.write('    </li>');
+    document.write('    <li class="active">');
+    document.write('        <a href="{{site.url}}/about/">{{ 'menu.about' | translate }}</a>');
+    document.write('    </li>');
+
+    document.write('</ul>');
+    document.write('</nav>');
+}
+</script>

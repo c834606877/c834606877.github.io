@@ -1,0 +1,36 @@
+---
+layout: post
+title: "修复 Fedora Docky Google Chrome  启动后 出现两个相同图标"
+date: 2015-09-29 20:17:13.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- Linux系统
+tags: []
+meta:
+  _edit_last: '1'
+  views: '27'
+  mzw_ding: '2'
+author:
+  login: lanbing
+  email: c834606877@163.com
+  display_name: lanbing
+  first_name: ''
+  last_name: ''
+---
+<p>在Fedora下,安装Google Chrome,并将其 add to Favorites Docky 中<br />
+并启动发现,两个相同的图标并未融合在一块,</p>
+<p>猜测应该是 <code>/usr/share/applications/</code> 下的 <code>.desktop</code> 文件有问题</p>
+<p>打开终端:</p>
+<pre>sudo gedit /usr/share/applications/google-chrome.desktop</pre>
+<p><!--more--><br />
+可以发现有三个节点</p>
+<p>在三个节点下面都增加如下内容:</p>
+<pre>StartupWMClass=Google-chrome-stable</pre>
+<p>保存并退出,</p>
+<p>删除用户目录下的 缓存</p>
+<p>也许需要重启 Gnome :</p>
+<pre>Alt+f2 
+r &lt;Enter&gt;</pre>
+<p>[information]Desktop file 里边涉及到的路径 不能有空格。[/information]</p>

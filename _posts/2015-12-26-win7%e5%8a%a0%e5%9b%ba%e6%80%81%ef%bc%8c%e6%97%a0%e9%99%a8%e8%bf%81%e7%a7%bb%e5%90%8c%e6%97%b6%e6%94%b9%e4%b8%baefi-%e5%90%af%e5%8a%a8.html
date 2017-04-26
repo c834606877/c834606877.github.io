@@ -1,0 +1,41 @@
+---
+layout: post
+title: WIN7加固态，无陨迁移同时改为EFI 启动
+date: 2015-12-26 16:30:55.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- Linux系统
+tags: []
+meta:
+  _edit_last: '1'
+  views: '8'
+author:
+  login: lanbing
+  email: c834606877@163.com
+  display_name: lanbing
+  first_name: ''
+  last_name: ''
+---
+<p>前阵子买了块SSD后，一直打算鼓捣鼓捣EFI启动，全新安装明显不符合IT精神，所以打算把 无陨迁移 以及EFI启动同时做了，机械原C盘做Linux</p>
+<p>首先 在原win7下上固态后，4K ，删除自动生成的MBR分区，新建一个300M 的 ESP 分区 剩佘空间用做新系统盘，</p>
+<p>之后进入PE</p>
+<p>使用GHOST 将C盘  分区对分区 复制 到 固态的 系统盘上</p>
+<p>&nbsp;</p>
+<p><img src="http://imglf1.nosdn.127.net/img/Z3ZvNUFuRWljSU5CVjVWV2w3YnVBcGhGajc1d3VxY0puNSt0amZONnBtdG80bTVTVUo1MGtBPT0.jpg?imageView&amp;thumbnail=2000y1500&amp;type=jpg&amp;quality=96&amp;stripmeta=0&amp;type=jpg" alt="" /></p>
+<!--more-->
+<p>使用BCDBOOT 工具 在ESP 分区中 创建win7 引导 efi 文件</p>
+<p>重启电脑使用 uefi 启动 将 固态 设为第一引导</p>
+<p>此时系统应该可以启动</p>
+<p>有两个问题：</p>
+<p>1.如果在WIN7下 对固态 进行的分区，可能启动后系统盘符不是C盘，如果迁移过Desktop或Users 的文件夹，会导致无法进入原帐户或桌面无文件的情况</p>
+<p>此时要通过修改注册表，将固态上的盘符修改为C，</p>
+<p>2.安装Linux 之后，如果要多系统启动的话，主板会默认自动启动Win7</p>
+<p>不管在linux下用efibootmgr 修改</p>
+<p>或Windows 下 用Easy  BCD或其它工具 修改 默认的 Grub2 引导都没有效果，</p>
+<p>网上有一部分 使用 另一个 rEFInd 进行 引导，这是一种可行的办法，不过安装起来也比较麻烦，后来想了一个办法</p>
+<p>将EFI/Microsoft/Boot/bootmgfw.efi 改名bootmgfw_bak.efi</p>
+<p>这样，主板找不到默认启动路径就乖乖按规则启动了，</p>
+<p>之后在gurb2的 grub.cfg 中 将 Windows 7 的引导文件路径 改成 bootmgfw_bak.efi 就可以从GRUB2 引导WIN7 了</p>
+<p><img src="http://imglf.nosdn.127.net/img/Z3ZvNUFuRWljSU5CVjVWV2w3YnVBaVp2YnRvcFdFbHVva3B4QU01RWhKM3hiZEc4ZEs1QmhnPT0.jpg?imageView&amp;thumbnail=2000y1500&amp;type=jpg&amp;quality=96&amp;stripmeta=0&amp;type=jpg" alt="" /></p>

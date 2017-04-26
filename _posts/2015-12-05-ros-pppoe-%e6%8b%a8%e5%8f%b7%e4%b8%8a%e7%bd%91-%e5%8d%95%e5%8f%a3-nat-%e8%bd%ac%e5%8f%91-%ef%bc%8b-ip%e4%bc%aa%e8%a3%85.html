@@ -1,0 +1,45 @@
+---
+layout: post
+title: Ros PPPoe 拨号上网 单口 Nat 转发 ＋ IP伪装
+date: 2015-12-05 11:09:26.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- "网络应用"
+tags: []
+meta:
+  _edit_last: '1'
+  views: '44'
+author:
+  login: lanbing
+  email: c834606877@163.com
+  display_name: lanbing
+  first_name: ''
+  last_name: ''
+---
+<p>工作室网路由于使用二楼机房供教学使用的网络，一直受到与教学时段同步的限制，临近周末‘思诚杯’比赛，可能需要网络，所以改用PPPoe 拨号上网，<br />
+原使用Ros ＋ 无线路由做交换<br />
+原端口，被保安室 借用 需沟通，</p>
+<p>起先，想到PPPoe拨号 设置Ros 路由器，设置拨号一时可能解决不了，直接用 无线路由 做转发，<br />
+发现性能瓶颈明显，原来20m的带宽减少到了2m不到，估改用Ros 做 转发</p>
+<p>将保安室网线 网络中心网口 Ros 全接 无线路由器 交换口上</p>
+<p>禁用无线路由器DHCP服务，将其完全做为一个 交换设备<br />
+Ros 设置 PPPoe Client 增加默认路由 和用户Dns</p>
+<p>设置 DHCP Server 增加一个DHCP池 设置好 Ros IP 网关为网关IP 172.16.0.0 网段</p>
+<p><img class="aligncenter" src="http://imglf.nosdn.127.net/img/Z3ZvNUFuRWljSVBlRFRNTWREZmVuMWZ0dzFoMGoycHpjTGkyZ1FBSEVKUm9DMVVKaWFLWERBPT0.png?imageView&amp;thumbnail=1680x0&amp;quality=96&amp;stripmeta=0&amp;type=jpg" alt="" /><br />
+设置 Nat ip伪装<br />
+<code>Ip Firewall nat</code><br />
+增加一条 chain：srcnat 基于源 的Nat action：masquerade</p>
+<p><img class="aligncenter" src="http://imglf0.nosdn.127.net/img/Z3ZvNUFuRWljSVBlRFRNTWREZmVuNnhRQ3M1NnV3ZHRKZE1laHlxc0g5VUtNN2lFMkQvTkh3PT0.png?imageView&amp;thumbnail=1680x0&amp;quality=96&amp;stripmeta=0&amp;type=jpg" alt="" width="1465" height="509" /></p>
+<p>&nbsp;</p>
+<p>通过无线设备上网可自动获取到 IP和Ros网关</p>
+<p>可以上QQ，百度，但发现 其它大部分网页无法正常访问，<br />
+DNS无异常<br />
+此现象与电子楼机房故障一样， 认为可能学校 网络中心，对包过滤做了手脚，<br />
+后想来，无线路由器并无此问题，难道无线路由器，对Nat 数据包做加密处理？</p>
+<p>于情于理，网络中心既然学号帐号都开放了，应该没理由会做Nat过滤，Nat伪装之后的包应该是没法检测出来的，问题还是出在Ros本地<br />
+于是在<code>Ros ip firewall filter</code> 发现一条规则，只能接收数据量 及 速度 太少，却又有走动，原因 可能在此，将其禁用，</p>
+<p><img class="aligncenter" src="http://imglf.nosdn.127.net/img/Z3ZvNUFuRWljSVBlRFRNTWREZmVuNW9jek9Fek96Nlg0S1VKK3FFZFpBRVk4N0gzUldrVUNBPT0.png?imageView&amp;thumbnail=1680x0&amp;quality=96&amp;stripmeta=0&amp;type=jpg" alt="" width="1215" height="605" /><br />
+果不其然，网络访问正常。<br />
+于此，无线路由器瓶颈去除，网络恢复原有20M水平。</p>

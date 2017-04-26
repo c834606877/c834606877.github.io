@@ -1,0 +1,58 @@
+---
+layout: post
+title: 1.3.1　KDE初学者的首选 – Linux就是这个范儿
+date: 2014-10-03 09:30:43.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- Linux就是这个范儿
+tags: []
+meta:
+  _edit_last: '1'
+  views: '51'
+author:
+  login: lanbing
+  email: c834606877@163.com
+  display_name: lanbing
+  first_name: ''
+  last_name: ''
+---
+<p>
+	KDE是由德国人Matthias Ettrich于1996年就读于图宾根大学时开始的一个计划。当时的Unix桌面没有一个应用程序的外观、感受或工作方式与其他程序一样。于是Matthias Ettrich就建议不仅是创建一套应用程序，而是要创建一个桌面环境，能让用户拥有相同的外观、感受和工作方式，而且这个桌面应该是非常容易使用的。他的这个想法得到了很多人的支持，从此KDE计划就诞生了。</p>
+<p>
+	可能有人会疑惑，KDE是给Unix的，似乎跟Linux没有什么关系，为什么这本书要介绍它呢？其实不单单KDE是这样，剩下的三个桌面环境也是这样。甚至在这个星球上完全针对Linux编写的软件也是并不多的，那些在Linux下能够获得的软件大多不是针对Linux开发的。它们是针对Unix系统的，而Linux属于类Unix系统，所以就毫无歉意地坐享了这些成果。这就是Linux的优势，也是大家学习Linux的优势。学会了Linux，几乎就等同于学会了Unix或类Unix系统，它们在这个星球的应用范围就从来没有被Windows超越过。本书的内容也是如此，只有少数章节是专门针对Linux特性所特别设置的，大多数知识都是通用且极具实用价值的。好了，闲话不多说，我们继续介绍KDE。</p>
+<p>
+	追究KDE这个名字的由来是没有实际意义的，但是我们需要知道它是完全采用Qt程序库（后面的章节会有详细介绍）开发的。由于Qt多舛的命运<a href="#_ftn2" name="_ftnref2" title="">[②]</a>，注定了KDE同样会拥有风雨飘摇的艰辛历程。</p>
+<p>
+	虽然Qt是开放源代码的软件，但是在KDE早期的时候Qt并非是自由软件授权，这与KDE的自由软件授权相冲突，所以很多人会担心惹上版权麻烦，尽量避免使用KDE，这成为了KDE初期推广的障碍。</p>
+<p>
+	很庆幸的是1998年11月之后，Qt程序库所属的Trolltech公司发布了第一份自由软件许可Q&nbsp;Public License（QPL）的Qt程序库授权。同年不久，KDE Free Qt基金会<a href="#_ftn3" name="_ftnref3" title="">[③]</a>保证：若Trolltech在任意连续12个月内没有发布新的自由版本，那么Qt程序库将更改为基于BSD许可证的授权进行发布。但是很多人依然争论着，认为QPL授权与GPL（万恶的&ldquo;鸡屁儿&rdquo;）上的某些条款不相容。这导致了Red Hat公司始终无法将KDE当作默认桌面，而Mandriva&nbsp;Linux则趁此时机凭借KDE席卷了欧洲市场。</p>
+<p>
+	直到2000年9月，一个基于GPL协议的Qt程序库发布，大部分用户方才对KDE生出信心。此时的KDE已经日臻完善，国内的各大Linux发行版都纷纷采用KDE作为其默认桌面，甚至出现了&ldquo;阳春白雪<a href="#_ftn4" name="_ftnref4" title="">[④]</a>&rdquo;这样专门针对KDE的汉化美化套件。</p>
+<p>
+	2008年是一个非常重要的年景，奥运会第一次在中国召开，Qt升级到了4.0，并且采用了更加宽泛的LGPL授权（仅Qt4以后的版本）。但是KDE的好日子到头了。Qt4的LGPL授权固然招人喜欢，但是Qt4相对于Qt3做了较大幅度的调整，如果KDE转投Qt4，则必须做较大改动甚至重写。KDE的开发者们抱着有困难要上，没有困难制造困难也要上的必死决心毅然地转投Qt4的怀抱。这导致了很长一段时间人们没有新的KDE版本使用，那些不断放出的KDE4的各种版本几乎个个都是花瓶，中看不中用。直到KDE 4.2版本的发布，才彻底稳定了下来。于是就在Linux界流传了一段笑话：KDE从能用到不能用再到能用，之后GNOME从能用到不能用。至于GNOME的故事我们稍后再说，KDE的故事还在继续。</p>
+<p>
+	经过Qt3到Qt4转变的这么一折腾，损失大量粉丝是在所难免的了，而祸总是不单行的。就在KDE4准备发力接受市场的挑战之际，Qt的所属公司Trolltech被大名鼎鼎的Nokia收购了。原以为能够如虎添翼一下，可万没想到的是Nokia又是一个倒霉蛋，倒霉到不得不去抱微软的大腿。结果是大腿没等抱稳，就把Qt给弄丢了，出售给了Digia公司。但是不管怎么样，由于Qt是LGPL授权的，所以它就是属于全人类的了，我们能够永远都有免费的Qt使用。</p>
+<p>
+	Qt其实是一个非常优秀的C++跨平台图形界面开发库，几乎可以媲美Java的跨平台特性。不同的是Java能够一次编译到处运行，而Qt是可以一次编码到处编译。也正因为如此，KDE已经被移植到了几乎所有硬件和操作系统平台上。现在的KDE已经不单单是一个桌面环境，它几乎就是基于Qt开发的程序的庞大集合，是Qt的一个超级平台。这里拥有功能异常丰富的应用，包括各种跨平台组件、办公套件和开发套件等，几乎可以找到任何Qt应用的样板。而且从任何角度来看，Qt都是用C++开发跨平台图形应用的首选程序库，最新的WPS选择它就是非常好的佐证。对于学习和掌握Qt，KDE是非常理想的平台。</p>
+<p>
+	需要注意，如果你根据我们的推荐选择安装了CentOS，KDE是选装部分，需要在安装的时候选中它才可以，否则就需要根据下一章所介绍的内容去手动安装了。如果你选择的是SUSE，则默认就可以使用KDE了。我们推荐初学Linux的用户选择KDE，它的操作习惯与Windows更加接近。</p>
+<p style="text-align: right;">
+	<a href="http://hook.aliapp.com/?p=554" style="font-family: 宋体; font-size: 14px; line-height: 28px; text-align: right; text-indent: 28px;">Linux就是这个范儿 &ndash; 本书目录&nbsp;</a></p>
+<hr />
+<div id="ftn2">
+<p style="margin-left:12pt;">
+		<a href="#_ftnref2" name="_ftn2" title="">[②]</a>&nbsp;1991年由TrollTech公司开发，于2008年被Nokia所收购，2012年又卖给了Digia公司。曾数次修改授权方式。
+	</p>
+</div>
+<div id="ftn3">
+<p style="margin-left:12pt;">
+		<a href="#_ftnref3" name="_ftn3" title="">[③]</a>&nbsp;就是保证Qt和KDE在任何情况下都是自由软件的组织，最初有TrollTech和KDE开发者共同创立。
+	</p>
+</div>
+<div id="ftn4">
+<p style="margin-left:12pt;">
+		<a href="#_ftnref4" name="_ftn4" title="">[④]</a>&nbsp;2001年沈阳玳娜软件有限公司为了推动中文Linux的普及，针对Red Hat Linux 7.2推出的一款汉化美化套件，其中包括中文输入法和KDE的汉化美化部分。属于死在沙滩上的优秀前辈。
+	</p>
+</div>

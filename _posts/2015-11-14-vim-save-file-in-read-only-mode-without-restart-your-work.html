@@ -1,0 +1,36 @@
+---
+layout: post
+title: 'Vim: Save file in read-only mode without restart your work'
+date: 2015-11-14 10:55:13.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- Linux系统
+- "应用技巧"
+tags: []
+meta:
+  _edit_last: '1'
+  views: '21'
+  mzw_ding: '1'
+author:
+  login: lanbing
+  email: c834606877@163.com
+  display_name: lanbing
+  first_name: ''
+  last_name: ''
+---
+<p><span style="font-size: medium;">Open a file as normal, forgetting to use “sudo”, and therefore viewing a read-only file.</span></p>
+<p><span style="font-size: medium;">Then mistakenly try to edit the read-only file in the traditional manner.</span></p>
+<pre>:w !sudo tee%</pre>
+<p><span style="font-size: medium;">At this point we will be presented with the content of the file and a prompt to press ENTER or type another command. </span></p>
+<p><span style="font-size: medium;">To simply save the file and move on we just press ENTER, and then press the letter “O” (oh).</span></p>
+<blockquote><p>(NOTE: “L” seems to do pretty much the same thing.)</p></blockquote>
+<p><span style="font-size: medium;">The file will be saved but remains open in vi/vim for more editing or reading. </span></p>
+<p><span style="font-size: medium;">We can now exit normally by typing “:q!” since the file is still open as “read-only”.</span></p>
+<blockquote><p><span style="font-size: medium;">What the command does:</span><br />
+<span style="font-size: medium;"> :w = Write a file.</span><br />
+<span style="font-size: medium;"> !sudo = Call shell sudo command.</span><br />
+<span style="font-size: medium;"> tee = The output of the vi/vim write command is redirected using tee.</span><br />
+<span style="font-size: medium;"> % = Triggers the use of the current filename.</span><br />
+<span style="font-size: medium;"> Simply put, the ‘tee’ command is run as sudo and follows the vi/vim command on the current filename given.</span></p></blockquote>

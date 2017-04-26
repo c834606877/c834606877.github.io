@@ -1,0 +1,36 @@
+---
+layout: post
+title: 1.4　返璞归真的命令行 – Linux就是这个范儿
+date: 2014-10-05 14:25:27.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- Linux就是这个范儿
+tags: []
+meta:
+  _edit_last: '1'
+  views: '63'
+author:
+  login: lanbing
+  email: c834606877@163.com
+  display_name: lanbing
+  first_name: ''
+  last_name: ''
+---
+<p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	有一种说法，现代计算机不是靠电力驱动，而是靠&ldquo;鼠标&rdquo;。多少应用程序的界面都是需要移动和点击鼠标来执行的。计算机本来的用意是把人类从反复单调的工作中解放出来，但摆在我们身边的残酷现实是我们每个人每天不得不反复单调地移动和点击鼠标，以确保养家糊口的工作能够顺利正确地完成。</p>
+<p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	别叹气，存在另一个世界，那就是命令行，让你暂时远离鼠标。对那些苦哈哈的程序猿来讲，这也许是另一种情调的工作方式。我们突然之间拥有了另一种意想不到的收获，例如我想看看用户目录下的文件大小，然后按升序排列产生个报表。如果用C/C++完成这项工作，至少得用好几十行代码，但是用一句命令行就能完成上面的功能。</p>
+<pre>
+	du -s * | sort -nr &gt; $HOME/space_report.txt</pre>
+<p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	命令行有它的存在价值吧。还有把&nbsp;Linux&nbsp;桌面操作录制成一段视频，想起来就是一件复杂的任务，在Linux上用一句命令就能轻松搞定。</p>
+<pre>
+	ffmpeg -f x11grab -s wxga -r 25 -i :0.0 -sameq /tmp/out.mpg</pre>
+<p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	卖个关子，这个命令会在第18章作详细解释。</p>
+<p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	估计你可能会迫不及待地想要实验一下刚才所提到的命令，但是苦于现在都流行的图形界面，我们推荐的CentOS默认也进入了图形界面，看来要想做点实验还是有点难度的。不过不用着急，Linux的老手们一定是要命令行的，所以想通过键盘输入命令，一个合格的Linux发行版一定会做得十分方便，只是要先搞清楚一些概念。</p>
+<p style="text-align: right;">
+	<a href="http://hook.aliapp.com/?p=554" style="color: rgb(51, 51, 51); text-decoration: none; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; line-height: 28px; text-align: right; text-indent: 28px;">Linux就是这个范儿 &ndash; 本书目录&nbsp;</a></p>

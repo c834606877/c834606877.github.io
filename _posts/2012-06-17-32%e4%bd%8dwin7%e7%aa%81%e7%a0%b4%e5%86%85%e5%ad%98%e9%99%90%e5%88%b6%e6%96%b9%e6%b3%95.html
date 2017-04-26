@@ -1,0 +1,40 @@
+---
+layout: post
+title: 32位win7突破内存限制方法
+date: 2012-06-17 17:35:16.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- "系统技巧"
+tags: []
+meta:
+  views: '13'
+  _edit_last: '1'
+author:
+  login: lanbing
+  email: c834606877@163.com
+  display_name: lanbing
+  first_name: ''
+  last_name: ''
+excerpt: "有网友反映说他的32位win 7不能用4G的内存。其实32位的win7和vista都是不允许用4G内存的，那有没有让32位的win7/vista也用上4G的内存呢?"
+---
+<p><strong>有网友反映说他的32位win 7不能用4G的内存。其实32位的win7和vista都是不允许用4G内存</strong><strong>的</strong>，那有没有让32位的win7/vista也用上4G的内存呢? 答案是可以，<strong>但是这样做的话很可能会破坏系统的稳定性。</strong></p>
+<p>我们先来看看如何让32位的win7用上4G内存。首先，我们需要下载一款名叫Readyfor 4GB的软件，用户可以在搜索工具上搜索，下载地址有很多。</p>
+<p>下载解压后，先运行Readyfor 4GB，当程序打开后，依次点击检查和应用选项，此时程序会告诉你所用系统能够支持最大内存容量和当前内存容量。然后运行压缩包里面的AddBootMenu程序，当弹出对话框时，输入Y回车即可，此时系统提示破解操作成功完成。注意该步骤必须以管理员身份运行</p>
+<div style="text-align: center;"><img class="ngg-singlepic ngg-none" src="http://imglf.nosdn.127.net/img/Z3ZvNUFuRWljSU5GVlNOUTJyaWVQeGY2MFdQeTRoVmYxODlMczIrVDYrRm0wd3creTlXSjVnPT0.jpg?imageView&thumbnail=500x0&quality=96&stripmeta=0&type=jpg" alt="1" /><!--more--></div>
+<p>第三步依次选择我的电脑右键→属性→高级系统设置→启动和故障恢复→设置→选择那个破解的启动系统就可以，如下图。</p>
+<div style="text-align: center;"><img class="ngg-singlepic ngg-none" src="http://imglf2.nosdn.127.net/img/Z3ZvNUFuRWljSU5GVlNOUTJyaWVQM0JweGVwalZSaGtXOGExeGYyWWx1alFOK3h4Vk5iUExBPT0.jpg?imageView&thumbnail=500x0&quality=96&stripmeta=0&type=jpg" alt="2" /></div>
+<p style="text-align: center;">　　选择破解后的程序</p>
+<p>　　最后重新启动计算机，在选择我的电脑属性后，内存被识别成4GB容量，如下图所示。</p>
+<div style="text-align: center;"><img class="ngg-singlepic ngg-none" src="http://imglf.nosdn.127.net/img/Z3ZvNUFuRWljSU5GVlNOUTJyaWVQN09ZYU0wM1hCVzM4WGk4Rm5IZk9YL2dLU1lTcnM5dnZBPT0.jpg?imageView&thumbnail=500x0&quality=96&stripmeta=0&type=jpg" alt="3" /></div>
+<p style="text-align: center;">　　内存被识别成4GB</p>
+<p>　　<strong>但是这里有个提醒：这样做的话会导致系统不稳定，有可能会导致系统经常无故蓝屏，或者是启动异常等原因。</strong>因为Readyfor 4GB这个软件是破解Windows PAE 内核文件 ntkrnlpa.exe，绕过 ZwQueryLicenseValue API 函数的许可限制，使32位 x86 的Vista/Windows 7 支持超过4GB 物理内存的。这样的做法是否妥当还是有待验证，而该软件说明中关于蓝屏现象的说明是：</p>
+<table style="background-color: #cccccc; width: 95%;" border="0" cellspacing="0" cellpadding="6" align="center">
+<tbody>
+<tr>
+<td bgcolor="#f0f0f0">  　部分旧式驱动程序不支持超过4GB内存寻址，从而导致不能正常工作，甚至蓝屏死机。　　请设置系统错误报告生成内存转存文件*.dmp，分析dmp，找出是哪个驱动程序有问题，更新之，或禁用之。　　部分主板的附加功能也会不支持4GB而造成蓝屏。　　蓝屏与Windows、以及补丁没有直接关系。Windows Vista/7 自身完全支持超过4GB大内存。　　同样的硬件在2003或2008上也会出现同样问题。</td>
+</tr>
+</tbody>
+</table>
+<p>由此看来，出现这些问题应该是和驱动或者是某些主板有关系。再次在这里提醒一下网友，<strong>如果用这种方法让32位win7用上了4G内存，很可能会使系统出现各种问题，请谨慎使用!</strong></p>

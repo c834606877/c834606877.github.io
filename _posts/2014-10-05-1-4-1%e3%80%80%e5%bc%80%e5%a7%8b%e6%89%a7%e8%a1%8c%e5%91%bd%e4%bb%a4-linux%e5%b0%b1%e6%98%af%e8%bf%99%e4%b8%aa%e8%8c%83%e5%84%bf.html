@@ -1,0 +1,36 @@
+---
+layout: post
+title: 1.4.1　开始执行命令 – Linux就是这个范儿
+date: 2014-10-05 14:35:26.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- Linux就是这个范儿
+tags: []
+meta:
+  _edit_last: '1'
+  views: '55'
+author:
+  login: lanbing
+  email: c834606877@163.com
+  display_name: lanbing
+  first_name: ''
+  last_name: ''
+---
+<p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	用户和系统不是直接打交道的，它们中间有个名字叫shell的联系人。我们从键盘中输入命令给shell，shell再把它交给操作系统去执行。</p>
+<p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	从哪里开始输入命令呢？当然你可以在字符界面输入命令（暂时先放放，稍后再看）。Linux系统还提供一个叫终端模拟器的程序。这个程序打开一个窗口，让我们与shell交流。Linux系统上的各种软件向来是百花齐放，模拟器终端也不例外，例如gnome-terminal、konsole、xterm、rxvt、kvt、nxterm和eterm等，而大多数Linux发行版会同时支持几种。</p>
+<p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	使用过Windows操作系统的人，在登录Linux桌面系统后，应该也能轻松地从菜单中选择启动终端的图标，点击就可以进入终端模拟器。当然你也可以在文件浏览器中找到叫&ldquo;konsole&rdquo;（KDE桌面）或&ldquo;gnome-terminal&rdquo;(GNOME桌面)的程序双击执行以打开终端窗口。更有意思的是你可以打开任意多个窗口，每个窗口给你一个shell会话。你从中选择了一个窗口开始尝试输入这个命令：</p>
+<pre>
+	$ cp /etc/resolv.conf /etc/resolv.conf.bak
+	cp: cannot create regular file &#39;/etc/resolv.conf.bak&#39;: Permission denied
+</pre>
+<p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	太欺负人了吧，这么简单的命令都不让偶用。</p>
+<p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	你注意到没有，shell命令提示符是$，这意味着什么？这意味着你是普通用户，不是超级用户，你没有管理员权限。如果你是拥有管理员权限的root用户，提示符就变成#，你就可以在系统上做增加、删除和修改文件的操作。</p>
+<p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px; text-align: right;">
+	<a href="http://hook.aliapp.com/?p=554" style="color: rgb(51, 51, 51); text-decoration: none; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; line-height: 28px; text-align: right; text-indent: 28px;">Linux就是这个范儿 &ndash; 本书目录&nbsp;</a></p>

@@ -1,0 +1,23 @@
+---
+layout: post
+title: Fedora 安装后 显示 中文字体 大小不一 高低不齐 解决方法
+date: 2016-02-07 15:31:58.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- Linux系统
+tags: []
+meta:
+  _edit_last: '1'
+  views: '13'
+author:
+  login: lanbing
+  email: c834606877@163.com
+  display_name: lanbing
+  first_name: ''
+  last_name: ''
+---
+<pre>echo 'export LC_CTYPE="zh_CN.utf8"' &gt;&gt; ~/.bashrc</pre>
+
+主要原因是 在中文中 夹杂部分 日韩字体导致，

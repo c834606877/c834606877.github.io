@@ -1,0 +1,41 @@
+---
+layout: post
+title: Fedora彻底移除Nvidia显卡驱动,以及恢复开源Nouveau驱动
+date: 2015-10-01 23:17:33.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- Linux系统
+tags: []
+meta:
+  _edit_last: '1'
+  views: '22'
+  mzw_ding: '1'
+author:
+  login: lanbing
+  email: c834606877@163.com
+  display_name: lanbing
+  first_name: ''
+  last_name: ''
+---
+<blockquote>我首先提倡一种思维模式，就是用小白的眼光去看“高深”的问题！</p></blockquote>
+<p>在Fedora中安装Nvidia显卡驱动方法有很多:</p>
+<ol>
+<li>到Nvidia官网下载官方驱动并安装。</li>
+<li>使用第三方源中的软件包。</li>
+<li>使用Bumblebee<br />
+Bumblebee是为解决双显卡切换问题而存在的一个开源产品</li>
+</ol>
+<p>不幸的是以上三种方法安装之后，均出现同样失败的结局。<br />
+<img class="aligncenter" src="http://imglf2.nosdn.127.net/img/Z3ZvNUFuRWljSU8zbWg3YjRFQTFVME44SFl4OGQ3aTQxQU9QOGJlTm1NLzhEOGtrN1B3UG9nPT0.png?imageView&amp;thumbnail=1680x0&amp;quality=96&amp;stripmeta=0&amp;type=jpg" alt="" /><!--more--><br />
+导致系统引导后都是无显卡驱动的状态，分辨率很低，开机进度显示为蓝白条。</p>
+<p>所以需要原装开源驱动<code>Nouveau</code>，</p>
+<p>首先卸载Nvidia驱动：</p>
+<pre>sudo dnf remove *nvidia*</pre>
+<p>删除 nvidia 驱动安装程序的 禁用 Nouveau 配置文件</p>
+<pre>sudo rm /etc/modprobe.d/nvidia-installer-disable-nouveau.conf
+sudo rm /lib/modprobe.d/nvidia-installer-disable-nouveau.conf</pre>
+<p>最后重新编译:</p>
+<pre>dracut -f /boot/initramfs-`uname -r`.img</pre>
+<p>大功告成~</p>

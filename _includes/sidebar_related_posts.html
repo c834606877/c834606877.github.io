@@ -1,0 +1,45 @@
+<!-- sidebar: related posts -->
+<aside class="widget">
+    <h3 class="widget-title"><span>{{ "sidebar.relatedpost" | translate }}</span></h3>
+    <div class="smart_post">
+        <ul>
+            {% for post in site.related_posts %}
+            {% if post.layout == "post" or post.layout == "gallery" %}
+              <li class="clearfix">
+                  <div class="post-thumb">
+                          {% assign foundImage = 0 %}
+                          {% assign images = post.content | split:"<img " %}
+                          {% for image in images %}
+                            {% if image contains 'src="' or image contains "src='" %}
+                                {% if foundImage == 0 %}
+                                    {% assign html = image | split:">" | first %}
+                                    {% assign tags = html | split:" " %}
+                                    {% for tag in tags %}
+                                      {% if tag contains 'src="' or tag contains "src='" %}
+                                        <img class="rounded" {{ tag }} title="{{post.title}}" alt="{{post.title}}" width="45" height="45" />
+                                        {% assign foundImage = 1 %}
+                                      {% endif %}
+                                    {% endfor %}
+                                    
+                                {% endif %}
+                            {% endif %}
+                          {% endfor %}
+                          {% if foundImage == 0 %}
+                          {% assign nums = "1 2 3 4 5 6 7"| split:" " %}
+                            <img id="past_nail" class="rounded" src="{{ site.url}}/assets/images/random/{{ nums | sample }}.jpg" title="{{post.title}}" alt="{{post.title}}" width="45" height="45" />
+                          {% endif %}
+
+
+                  </div>
+                  <div class="post-right">
+                      <h3><a href="{{post.url}}">{{post.title}}</a></h3>
+                      <div class="post-meta">
+                          <a href="{{post.url}}#post-comment" title="{{post.title}} 上的评论">No Reply</a></span> | <span>? Views</span>
+                      </div>
+                  </div>
+              </li>
+            {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+</aside>

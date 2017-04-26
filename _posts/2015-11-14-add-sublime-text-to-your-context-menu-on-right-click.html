@@ -1,0 +1,37 @@
+---
+layout: post
+title: Add Sublime Text to your context menu on right click
+date: 2015-11-14 22:28:39.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- "应用技巧"
+tags: []
+meta:
+  _edit_last: '1'
+  views: '5'
+author:
+  login: lanbing
+  email: c834606877@163.com
+  display_name: lanbing
+  first_name: ''
+  last_name: ''
+---
+<p>When opening a text file, you may be used to right click on the file to be opened and then choose the application which can open the file from the context menu. On the context menu, you may see a menu item like "Edit with Notepad++".</p>
+<p>Nowadays many people especially programmers like to use Sublime Text, but by default this application will not show on the context menu when you right click on a file. There is now frequent request to add this application to the context menu. Here we show a simple batch file which can help you achieve this.</p>
+<p>Below is the batch code :</p>
+<pre>@echo off
+SET sublimeTextPath=C:\Program Files\Sublime Text 3\sublime_text.exe
+
+REM ADD REGISTRY KEYS
+@reg add "HKEY_CLASSES_ROOT\*\shell\Open with Sublime Text 3"         /t REG_SZ /v "" /d "Open with Sublime Text 3"   /f
+@reg add "HKEY_CLASSES_ROOT\*\shell\Open with Sublime Text 3"         /t REG_EXPAND_SZ /v "Icon" /d "%sublimeTextPath%,0" /f
+@reg add "HKEY_CLASSES_ROOT\*\shell\Open with Sublime Text 3\command" /t REG_SZ /v "" /d "%sublimeTextPath% \"%%1\"" /f
+
+pause</pre>
+<p>You just need to copy above code into the text editor you like and save it as a batch file. Note, please change the sublimeTextPath to the sublime_text.exe on your system. Then, what you need to do is right click on the batch file you saved and "Run as administrator" and it should show below:</p>
+<p><img class="aligncenter" src="http://www.pixelstech.net/article/images/command-output.png" alt="" /></p>
+<p>This means you have successfully added Sublime Text to your context menu. Then you can verify this by right clicking on any text file and you should see below:</p>
+<p><img class="aligncenter" src="http://www.pixelstech.net/article/images/context-menu-sublime-text.PNG" alt="" /></p>
+<p>Please note that you need to run the batch file as administrator, otherwise you will see errors on the command line console.</p>

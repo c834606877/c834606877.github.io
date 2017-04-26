@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh_cn" {% if site.autospace %} class="han-la" {% endif %}>
+  {% include head.html %}
+<body class="nav-open">
+  <script type="text/javascript">
+  if(navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i)){
+    document.write('<div id="mobile-nav" class="f12 yahei">');
+    document.write('<ul class="nav">');
+    document.write('    <li class="active">');
+    document.write('        <a href="{{site.url}}/">{{ 'menu.home' | translate }}</a>');
+    document.write('    </li>');
+    document.write('    <li class="active">');
+    document.write('        <a href="{{site.url}}/audios/">{{ 'menu.music' | translate }}</a>');
+    document.write('    </li>');
+    document.write('    <li class="active">');
+    document.write('        <a href="{{site.url}}/photos/">{{ 'menu.gallery' | translate }}</a>');
+    document.write('    </li>');
+    document.write('    <li class="active">');
+    document.write('        <a href="{{site.url}}/about/">{{ 'menu.about' | translate }}</a>');
+    document.write('    </li>');
+    document.write('</ul>');
+    document.write('</div>');
+  }
+  </script>
+  <div id="wrap">
+    <div id="preheader">{{ site.notice }}</div>
+      <header id="header" class="clearfix">
+        <div class="head">
+          <h1><a href="{{site.url}}/">{{ site.head_title }}</a></h1>
+          <p class="desc yahei"><span>{{ site.head_subtitle }}</span></p>
+        </div>
+        {% include navbar.html%}
+        <div id="announcement">
+          <a href="#" class="openpre close" title="Announcement"><i class="fa fa-star"></i></a>
+        </div>
+      </header>
+      <div id="container" class="clearfix">
+          {{ content }}
+      </div><!-- ./container -->
+
+    {% include footer.html%}
+  </div><!--./warp-->
+
+  <img id="qrimg" src="http://qr.liantu.com/api.php?text={{ page.url | prepend: site.url}}"/>
+  <a id="qr" href="javascript:;"><i class="fa fa-qrcode"></i></a>
+  <a id="gotop" href="javascript:;"><i class="fa fa-arrow-up"></i></a>
+  {% include script.html %}
+</body>
+</html>

@@ -1,0 +1,18 @@
+---
+layout: default
+permalink: /tag/
+---
+<div id="content">
+    {% for tag in site.tags%}
+      <div class="box archive-meta" id="{{tag.first}}">
+        <h3 class="title-meta">Tag "{{tag.first}}":</h3>
+      </div>
+      {% for post in tag.last %}
+        {% include posts.html %}
+      {% endfor %}
+    {% endfor %}
+
+</div>
+<div id="sidebar">
+    {% include sidebar_tags.html %}
+</div>

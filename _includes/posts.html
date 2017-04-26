@@ -1,0 +1,11 @@
+<!-- this is post list -->
+{% case post.layout %}
+{% when "gallery" %}
+    {% include posts_gallery.html %}
+{% when "status" %}
+    {% include posts_status.html %}
+{% when "audio" %}
+    {% include posts_audio.html %}
+{% else %}
+    {% include posts_standard.html %}
+{% endcase %}

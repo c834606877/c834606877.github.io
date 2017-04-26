@@ -1,0 +1,24 @@
+---
+zh_CN:
+  menu:
+    home: "MyPress"
+    about: "联系"
+    music: "我的音乐"
+    gallery: "我的相册"
+
+  list:
+    read_more: "阅读全文"
+    comment: "评论"
+
+  sidebar:
+    categories: "分类列表"
+    tags: "标签云"
+    relatedpost: "相关文章"
+
+  post:
+    author: "作者"
+    update_date: "最后编辑"
+    tags: "tag"
+
+  about:
+    title: "关于作者"

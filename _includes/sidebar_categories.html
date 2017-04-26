@@ -1,0 +1,14 @@
+<!-- sidebar:category list -->
+<aside id="mzw_siderbar_categories" class="widget widget_mzw_siderbar_categories">
+    <h3 class="widget-title"><span>{{ "sidebar.categories" | translate }}</span></h3>
+        <ul>
+          {% for category in site.categories %}
+          <li>
+              <a class="catelink" href="{{site.url}}/categories/{{category.first}}">
+                  {{ category.first }}&nbsp;<span class="count">[{{ category.last.size }}]</span>
+              </a>
+          </li>
+
+          {% endfor %}
+        </ul>
+</aside>

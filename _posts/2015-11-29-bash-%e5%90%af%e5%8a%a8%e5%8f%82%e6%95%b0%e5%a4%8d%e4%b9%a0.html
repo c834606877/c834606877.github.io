@@ -1,0 +1,33 @@
+---
+layout: post
+title: bash 启动参数复习
+date: 2015-11-29 10:12:32.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- Linux系统
+tags: []
+meta:
+  _edit_last: '1'
+  views: '2'
+author:
+  login: lanbing
+  email: c834606877@163.com
+  display_name: lanbing
+  first_name: ''
+  last_name: ''
+---
+<p><span style="font-size: medium;">BASH的参数可以用$加数字编号来访问。</span></p>
+<p><span style="font-size: medium;">如$1代表第一个参数，$2代表第二个参数，以此类推.</span></p>
+<p><span style="font-size: medium;">但不能用$10来访问第十个参数，如果遇到参数超过十个的情况，必须处理或保存第一个参数($1)，然后使用 shift命令删除参数1并将所有剩余的参数下移一位，因此$10就变成了$9.</span></p>
+<p><span style="font-size: medium;">$#的值将被更新以反映参数的剩余数量。</span></p>
+<pre>#!/bin/bash
+i=1;
+while (($#>0))
+do
+    echo $i, $1
+    shift
+    let i=i+1
+done</pre>
+<p>显示了所有参数</p>

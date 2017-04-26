@@ -1,0 +1,26 @@
+---
+layout: post
+title: Win7 下修改盘符的方法
+date: 2015-12-26 16:34:47.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- "应用技巧"
+tags: []
+meta:
+  _edit_last: '1'
+  views: '10'
+author:
+  login: lanbing
+  email: c834606877@163.com
+  display_name: lanbing
+  first_name: ''
+  last_name: ''
+---
+<p>运行<code>regedit</code></p>
+<p>找到
+<pre>HKEY_LOCAL_MACHINE\SYSTEM\MountedDevices</pre>
+<p>键</p>
+<p>在右边找到“\DosDevices\X:”等项，右键重命名到需要修改成的盘符，</p>
+<p>重启。</p>

@@ -1,3 +1,5 @@
+---
+---
 var ajaxcontent = 'content';
 var ajaxsearch_class = 'searchform';
 var ajaxqrimg = 'qrimg';
@@ -148,8 +150,8 @@ function ajaxloadPage(url, push, getData){
 
 						disqus_config = function () {
 						    this.page.url = url; // Replace PAGE_URL with your page's canonical URL variable
-    						//this.page.identifier = ''; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-       						//this.page.title = '';
+    						//this.page.identifier = '{{ page.id }}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+       						//this.page.title = '{{ page.title | strip_newlines}}';
        					};
 
 						jQuery("img").unveil();
@@ -215,7 +217,9 @@ function ajaxreload_code() {
         (d.head || d.body).appendChild(s);
     })();
 
-    
+    {% if site.disqus.enable %}
+    	loadDisqus();
+	{% endif %}
 }
 
 function ajaxclick_code(thiss) {

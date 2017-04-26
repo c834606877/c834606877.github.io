@@ -1,0 +1,58 @@
+---
+layout: default
+---
+<div id="content" style="width:100%">
+    <div class="single single-post postid-762 single-format-standard logged-in">
+      <article class="post format-standard">
+          <header class="entry-header">
+          <h2 class="entry-name">
+            <a href="{{ post.url | prepend: site.url }}" title="{{page.title}}" rel="bookmark">{{page.title}}</a>
+          </h2>
+          <ul class="entry-meta">
+            <li><i class="fa fa-clock-o"></i> {{ 'post.update_date' | translate }} {{ page.date | date: "%Y年%m月%d日" }}</li>
+            <li><i class="fa fa-pencil-square-o"></i>
+                {% for category in page.categories %}
+                    <a href="{{site.url}}/categories/{{category}}">{{category}}</a>
+                {% endfor %}
+            </li>
+            <li><i class="fa fa-comments-o"></i> <a href="{{ page.url | prepend: site.url }}#post-comment"><span class="disqus-comment-count" data-disqus-url="{{ page.url | prepend: site.url }}"></span> {{ 'list.comment' | translate }}</a></li>
+            <li><i class="fa fa-eye"></i><span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span></span> Views</li>
+          </ul>
+          </header>
+          <div class="entry-content" itemprop="description">
+              {{ content }}
+          </div>
+        <footer class="entry-footer clearfix">
+          <div class="post-share">
+            <a href="javascript:;"><i class="fa fa-share-alt"></i> 分享</a>
+            <ul>
+              <li><a href="http://service.weibo.com/share/share.php?title={{ page.title }}&url={{ post.url | prepend: site.url }}" target="_blank"><i class="fa fa-weibo"></i></a></li>
+              <li><a href="http://share.renren.com/share/buttonshare?link={{ post.url | prepend: site.url }}&title={{ page.title }}" target="_blank"><i class="fa fa-renren"></i></a></li>
+              <li><a href="http://twitter.com/share?url={{ post.url | prepend: site.url }}&text={{ page.title }}" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            </ul>
+          </div>
+          <div class="post-love">
+            <a href="javascript:;" data-action="ding" data-id="the_ID()" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
+            <span class="love-count">
+              
+            </span></a>
+          </div>
+          <div class="post-tags">
+            Tags:
+              {% for tag in page.tags %}
+                  <a class="tag" href="{{site.url}}/tag/#{{ tag }}">{{ tag }}</a>
+              {% endfor %}
+          </div>
+        </footer>
+
+      </article>
+
+      <!--
+          if config set comment enable,include comment
+      -->
+      {% if site.comment.enable %}
+          {% include comment.html%}
+      {% endif %}
+    </div><!-- /.single -->
+</div><!-- ./content -->
+

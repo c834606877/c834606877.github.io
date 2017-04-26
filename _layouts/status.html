@@ -1,0 +1,73 @@
+---
+layout: default
+---
+<div id="content">
+    <div class="single single-post single-format-status">
+      <article class="post format-status">
+          <header class="entry-header">
+          <h2 class="entry-name">
+            <a href="{{ page.url | prepend: site.url }}" title="{{page.title}}" rel="bookmark">{{page.title}}</a>
+          </h2>
+          <ul class="entry-meta">
+            <li><i class="fa fa-clock-o"></i> {{ 'post.update_date' | translate }} {{ page.date | date: "%Y年%m月%d日" }}</li>
+            <li><i class="fa fa-pencil-square-o"></i>
+                {% for category in page.categories %}
+                    <a href="{{site.url}}/categories/{{category}}">{{category}}</a>
+                {% endfor %}
+            </li>
+            <li><i class="fa fa-comments-o"></i> <a href="{{ page.url | prepend: site.url }}#post-comment"><span class="disqus-comment-count ds-thread-count" data-disqus-url="{{ page.url | prepend: site.url }}"></span> {{ 'list.comment' | translate }}</a></li>
+            <li><i class="fa fa-eye"></i><span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span></span> Views</li>
+
+
+          </ul>
+          </header>
+          <div class="entry-content" itemprop="description">
+              {{ content }}
+          </div>
+        <footer class="entry-footer clearfix">
+          <div class="post-share">
+            <a href="javascript:;"><i class="fa fa-share-alt"></i> 分享</a>
+            <ul>
+              <li><a href="http://service.weibo.com/share/share.php?title={{ page.title }}&url={{ page.url | prepend: site.url }}" target="_blank"><i class="fa fa-weibo"></i></a></li>
+              <li><a href="http://share.renren.com/share/buttonshare?link={{ page.url | prepend: site.url }}&title={{ page.title }}" target="_blank"><i class="fa fa-renren"></i></a></li>
+              <li><a href="http://twitter.com/share?url={{ page.url | prepend: site.url }}&text={{ page.title }}" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            </ul>
+          </div>
+          <div class="post-love">
+            <a href="javascript:;" data-action="ding" data-id="the_ID()" class="favorite post-love-link" title="Love this"><i class="fa fa-heart-o"></i> 
+            <span class="love-count">
+              <span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span>
+            </span></a>
+          </div>
+          <div class="post-tags">
+            Tags:
+              {% for tag in page.tags %}
+                  <a class="tag" href="{{site.url}}/tag/#{{ tag }}">{{ tag }}</a>
+              {% endfor %}
+          </div>
+        </footer>
+
+      </article>
+
+      <div class="post-author box clearfix">
+        <img class="avatar avatar-80 photo" src="{{ site.author.avatar }}" alt="{{ site.author.name }}" width="80px" height="80px" />
+        <div class="author-meta">
+          <p class="name">{{ site.author.name }}</p>
+          <p class="description">{{ site.author.motto }}</p>
+        </div>
+      </div>
+      <!--
+          if config set comment enable,include comment
+      -->
+      {% if site.comment.enable %}
+          {% include comment.html%}
+      {% endif %}
+    </div><!-- /.single -->
+</div><!-- ./content -->
+<div id="sidebar">
+  {% include sidebar_author.html%}
+  {% include sidebar_related_posts.html%}
+  {% include sidebar_categories.html%}
+  {% include sidebar_tags.html%}
+</div><!-- ./sidebar -->
+

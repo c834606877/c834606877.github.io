@@ -1,0 +1,91 @@
+---
+layout: post
+title: 1.4.7　致命的Linux命令 – Linux就是这个范儿
+date: 2014-10-05 16:11:30.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- Linux就是这个范儿
+tags: []
+meta:
+  _edit_last: '1'
+  views: '145'
+author:
+  login: lanbing
+  email: c834606877@163.com
+  display_name: lanbing
+  first_name: ''
+  last_name: ''
+---
+<p style="text-indent: 2em;">
+	别以为我是在开玩笑。有些Linux命令轻则造成数据丢失，重则导致系统瘫痪。你看这位同学漫不经心，以root身份敲入了rm -rf /，强制删除&nbsp;/&nbsp;目录下的所有文件，这代价可是很惨痛的（相当于系统自杀）。</p>
+<p style="text-indent: 2em;">
+	还有一个很好玩的例子，我用旺旺聊天的形式给你讲述：</p>
+<p style="text-indent: 2em;">
+	小雪2012-08-25 15:28:10：&nbsp;在你Linux系统上输入这串东西:(){ :|:&amp; };</p>
+<p style="text-indent: 2em;">
+	灰猫2012-08-25 15:28:34：&nbsp;长得这么怪？</p>
+<p style="text-indent: 2em;">
+	小雪2012-08-25 15:28:41：&nbsp;试试看看是什么结果。谢了。</p>
+<p style="text-indent: 2em;">
+	灰猫2012-08-25 15:28:44：&nbsp;不好了。终端一直出现下面的提示：</p>
+<pre>
+	-bash: fork: retry: Resource temporarily unavailable
+	-bash: fork: retry: Resource temporarily unavailable
+	-bash: fork: retry: Resource temporarily unavailable
+	-bash: fork: retry: Resource temporarily unavailable
+	-bash: fork: retry: Resource temporarily unavailable
+	-bash: fork: retry: Resource temporarily unavailable
+	-bash: fork: retry: Resource temporarily unavailable
+	-bash: fork: retry: Resource temporarily unavailable
+	-bash: fork: retry: Resource temporarily unavailable
+</pre>
+<p style="text-indent: 2em;">
+	很惨啊。</p>
+<p style="text-indent: 2em;">
+	小雪2012-08-25 15:29:02：&nbsp;哈哈，真的很惨。</p>
+<p style="text-indent: 2em;">
+	灰猫2012-08-25 15:29:21：&nbsp;Ctrl+C都是不管用的。</p>
+<p style="text-indent: 2em;">
+	小雪2012-08-25 15:29:21：&nbsp;即便退出这个终端也是没有用的。</p>
+<p style="text-indent: 2em;">
+	灰猫2012-08-25 15:29:31：&nbsp;最后全都是这个。</p>
+<pre>
+-bash: pipe error: Cannot allocate memory -bash: pipe error: Cannot allocate memory
+</pre></p>
+<p style="text-indent: 2em;">
+	root用户搞不定，因为killall的速度受到了影响，只能重启机器了。</p>
+<p style="text-indent: 2em;">
+	小雪2012-08-25 15:30:15：这就是著名fork炸弹。看来危害不小。</p>
+<p style="text-indent: 2em;">
+	灰猫2012-08-25 15:30:34：别幸灾乐祸了。能告诉我什么原理吗？</p>
+<p style="text-indent: 2em;">
+	小雪2012-08-25 15:31:43：&nbsp;把:(){ :|:&amp; };写成下面格式你就看懂了</p>
+<pre>
+:()
+{
+	:|:&amp;
+};
+</pre>
+<p style="text-indent: 2em;">
+	灰猫2012-08-25 15:32:13：&nbsp;明白了。&ldquo;:&rdquo;函数里面定义操作是后台执行&ldquo;:&rdquo;函数重定向到&ldquo;:&rdquo;函数，&ldquo;:&rdquo;函数的递归调用。</p>
+<p style="text-indent: 2em;">
+	小雪2012-08-25 15:32:15：&nbsp;是滴。系统执行海量的进程直到死亡。</p>
+<p style="text-indent: 2em;">
+	灰猫2012-08-25 15:32:43：&nbsp;这样的代码不好分析，主要是因为不清楚&ldquo;:&rdquo;是可以做为函数名的。</p>
+<p style="text-indent: 2em;">
+	小雪2012-08-25 15:33:12：&nbsp;Quite right。另外为了防止这个问题的出现，要限制赋予root权限的用户数量以及单用户的进程数。</p>
+<p style="text-indent: 2em;">
+	灰猫2012-08-25 15:34:12：&nbsp;哈哈。是的，拥有root权限的用户操作不慎很容易给系统造成破坏。</p>
+<p style="text-indent: 2em;">
+	故事还没有结束。如何限制用户的进程数呢？我们可以在/etc/security/limits.conf文件末尾加入一行：</p>
+<pre>
+	*&nbsp;&nbsp;&nbsp;hard&nbsp;&nbsp;&nbsp;nproc&nbsp;&nbsp;200
+</pre>
+<p style="text-indent: 2em;">
+	限制用户的进程数为200，但root用户不会受这个限制。</p>
+<p style="text-indent: 2em;">
+	这个命令行还涉及shell脚本编程，我们将在后面的章节来学习。</p>
+<p style="text-indent: 2em; text-align: right;">
+	<a href="http://hook.aliapp.com/?p=554" style="color: rgb(51, 51, 51); text-decoration: none; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(51, 51, 51); font-size: 14px; text-align: right; text-indent: 28px; font-family: 宋体; line-height: 28px;">Linux就是这个范儿 &ndash; 本书目录&nbsp;</a></p>

@@ -1,0 +1,19 @@
+<aside id="mzw_admin-2" class="widget mzw_admin">
+    <img src="{{ site.url }}/assets/images/bg_small.jpg">
+    <div class="author-body">
+        <div class="author_img">
+            <img src="{{site.author.avatar}}" alt="{{site.author.name}}"/>
+        </div>
+        <div class="author_bio">
+            <h3>{{site.author.name}} </h3>
+            <p class="muted">{{site.author.motto}} </p>
+        </div>
+    </div>
+
+    <div class="social">
+        {% for social in site.socials%}
+            <a class="{{social.name}}" target="_blank" href="{{ social.url }}" target="_blank"><i class="fa fa-{{social.icon}}"></i></a>
+        {% endfor %}
+       
+    </div>
+</aside>

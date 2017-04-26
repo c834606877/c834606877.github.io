@@ -1,0 +1,48 @@
+---
+layout: post
+title: Errors in Upgrade from Fedora 21 to Fedora 22
+date: 2015-09-28 21:31:57.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- Linux系统
+tags: []
+meta:
+  _edit_last: '1'
+  views: '48'
+author:
+  login: lanbing
+  email: c834606877@163.com
+  display_name: lanbing
+  first_name: ''
+  last_name: ''
+---
+<blockquote><strong>1. Make sure your current system is up-to-date and backed up</strong></p>
+<p>First up, ensure that you have the most up-to-date version of Fedora 21 by updating your system using the Software application, or running the following command in the terminal:</p>
+<pre>sudo dnf update</pre>
+<p><strong>2. Install the FedUp tool</strong></p>
+<p>Now, open up a Terminal and install FedUp package by using the following command line:</p>
+<pre>sudo dnf install fedup</pre>
+<p><strong>3. Start the update with FedUp</strong></p>
+<p>Now your system is fully up-to-date, start the upgrade using the following command:</p>
+<pre>sudo fedup --network 22</pre>
+<p>This command will tell FedUp to download all the appropriate packages from the Fedora repositories, and prep your system for the upgrade.<br />
+<strong>4. Reboot, and upgrade</strong></p>
+<p>Once the FedUp command from step 3 has completed without errors, reboot your system. In the Fedora Boot Menu (i.e. grub), there will be a menu item “System Upgrade”, select that and press enter.<br />
+Boot menu with System Upgrade (fedup) option selected<br />
+<code class="prettyprint">Boot menu with update option selected</code></p>
+<p>All the appropriate packages and upgrade tasks will now be completed automatically, and when completed you will be able to start using your newly upgraded Fedora system.</p></blockquote>
+<pre># fedup --network 22
+setting up repos...
+Error: can't get boot images.
+The installation repo isn't currently available.
+Try again later, or specify a repo using --instrepo.</pre>
+<p>Using --instrepo To special a repo :</p>
+<pre>[lanbing@LanBing-PC ~]$ setting up repos...
+getting boot images...
+
+Downloading failed: couldn't get boot images: No more mirrors to try.
+Last error was: [Errno 14] curl#56 - "Proxy CONNECT aborted"
+
+Change the <code>/etc/yum.conf</code> file to disable Proxy settings ,</pre>

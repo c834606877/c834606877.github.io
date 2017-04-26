@@ -1,0 +1,147 @@
+#---------------------------------------------------------------
+# Theme version infromation
+#---------------------------------------------------------------
+version: 1.0
+
+#---------------------------------------------------------------
+# Build setting
+#---------------------------------------------------------------
+gems: [jekyll-paginate]
+# Config sass build output by sass_dir
+# Config sass output is compressed or not
+#
+# sass:
+#     sass_dir: /assets/stylesheet
+#     style: :compressed
+
+# deploy to coding.net doesn't require the argment, otherwise it would conflict!
+# destination: iziy
+
+#---------------------------------------------------------------
+# Site infromation setting
+#---------------------------------------------------------------
+
+# Site
+## You can create a locale setting at _locales and name *.yml
+title: "IziyIx's Files - MyPress - MyPre.Cn"
+head_title: "IziyIx's Files"
+head_subtitle: "从明天起,做一个幸福的人, 喂马、劈柴、周游世界。 ---Iziy 蓝冰   "
+description: "这里是Iziy蓝冰的个人博客MyPress，记录着Iziy蓝冰的生活点滴."
+keywords: "Iziy, mypre, MyPress, LanBing, jekyll, iziyix"
+notice: "一个人的角落,也许并没人会看到这里~~ anyway, 祝福你,工作顺心,学习快乐~"
+notice_bottom: "notice_BOTTOM"
+
+locale: "zh_CN"
+excerpt_separator: "<!--more-->"
+# URL
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and baseurl as '/child/'
+url: "http://mypre.cn"
+baseurl: ""
+permalink: /:year/:month/:day/:title
+
+# CSS
+## 中英文间自动添加空格
+autospace: false
+sideroll1: '1'
+sideroll2: '2'
+
+# Pagination
+## Set per_page to 0 to disable pagination
+paginate: 8
+paginate_path: "/page:num/"
+
+
+# Writing
+#highlighter: 'Pygments'
+#markdown: redcarpet
+kramdown:
+  input:  GFM
+  # enable_coderay: true
+  # coderay:
+  #   coderay_line_numbers:  nil
+
+
+
+# RSS
+rss:
+  path: "/feed.xml"
+  icon: "rss"
+
+
+#---------------------------------------------------------------
+# Authour infromation setting
+#---------------------------------------------------------------
+
+# Author
+author:
+  name: "Lan Bing"
+  avatar: "/assets/images/2.gif"
+  motto: "My Press Iziy"
+
+# SideBar
+xiami_id: "1775588636" # Sunrise Breeze
+#xiami_id: "1835292" # right here waitting
+#xiami_id: "1283283" # the sound of silence
+#xiami_id: "2100452" # take me to your heart 
+
+
+# Socials
+## If you want the social show,place sure the social no comment
+## The socials icon base font-awesome,you can learn more on http://fontawesome.io/icons/
+socials:
+    - name: "weibo"
+      url: "http://weibo.com/u/2717952951"
+      icon: "weibo"
+    - name: "tweibo"
+      url: "http://t.qq.com/c834606877"
+      icon: "tencent-weibo"
+    - name: "github"
+      url: "https://github.com/c834606877"
+      icon: "github"
+    # - name: "facebook"
+    #   url: "https://www.facebook.com/usename"
+    #   icon: "facebook"
+    - name: "mail"
+      url: "mailto://c834606877@qq.com"
+      icon: "envelope"
+    - name: "rss"
+      url: "/feed.xml"
+      icon: "rss"
+
+
+
+#---------------------------------------------------------------
+# Site comment setting
+#---------------------------------------------------------------
+
+comment:
+  enable: true
+
+# duoshuo
+duoshuo:
+  enable: true
+  short_name: "iziy"
+
+# disqus
+disqus:
+  enable: false
+  short_name: "iziy"
+
+#---------------------------------------------------------------
+# Site share setting
+#---------------------------------------------------------------
+duoshuo_share:
+    enable: true
+
+#---------------------------------------------------------------
+# Site analysis setting
+#---------------------------------------------------------------
+# Baidu analysis
+baidu_analysis:
+  enable: true
+  token: "c18ce105288bdc61337b1ff23ee5cf52"
+
+# Google analysis
+google_analysus:
+  enable: false
+  token: "your google analysis token"

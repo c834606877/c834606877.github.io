@@ -1,0 +1,27 @@
+---
+layout: post
+title: linux 输出重定向问题
+date: 2015-11-29 16:21:03.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- Linux系统
+tags: []
+meta:
+  _edit_last: '1'
+  views: '8'
+author:
+  login: lanbing
+  email: c834606877@163.com
+  display_name: lanbing
+  first_name: ''
+  last_name: ''
+---
+<p>> ：用于左边指定描述符<br />
+&>/dev/null ：此处＆ 指所有输出 ，即全部重定向 至 文件</p>
+<p>2>1 ：用于将错误输出重写向至当前目录的文件名为1的文件中</p>
+<p>2>&1 ：用于将错误输出重写至 标准输出</p>
+<p>sudo 时 内部命令无法使用 IO重定向<br />
+调用 sh -c “command” 来运行命令</p>
+<pre>sudo sh -c "cat hosts >> /etc/hosts"</pre>

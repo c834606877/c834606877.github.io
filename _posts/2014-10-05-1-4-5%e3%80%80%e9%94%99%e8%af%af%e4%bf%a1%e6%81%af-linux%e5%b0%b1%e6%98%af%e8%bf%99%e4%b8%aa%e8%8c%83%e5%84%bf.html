@@ -1,0 +1,69 @@
+---
+layout: post
+title: 1.4.5　错误信息 – Linux就是这个范儿
+date: 2014-10-05 15:54:48.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- Linux就是这个范儿
+tags: []
+meta:
+  _edit_last: '1'
+  views: '76'
+author:
+  login: lanbing
+  email: c834606877@163.com
+  display_name: lanbing
+  first_name: ''
+  last_name: ''
+---
+<pre>
+	$ %boast
+	bash: fg: %boast: No such job.
+</pre>
+<p style="text-indent: 2em;">
+	当命令执行成功的时候终端屏幕上不显示任何信息，但是当发生错误的时候它经常会以一定的形式汇报错误。上面我开了一个关于Linux错误信息提示的玩笑。boast是吹牛的意思。我在终端上敲入&ldquo;%boast&rdquo;后，终端返回错误提示&ldquo;No such job&rdquo;，意思是没有这样的工作。不同的命令返回的错误信息格式有所不同，但是经常有如下格式：</p>
+<p align="center">
+	<strong>命令名:&nbsp;</strong><strong>执行内容:&nbsp;</strong><strong>错误信息</strong></p>
+<p>
+	例如：</p>
+<pre>
+	$ rm jie
+</pre>
+<p style="text-indent: 2em;">
+	给出的错误返回是：</p>
+<pre>
+	rm: cannot remove &#39;jie&#39;: No such file or directory.
+</pre>
+<p style="text-indent: 2em;">
+	那究竟发生了什么情况？当rm命令要删除jie这个文件，jie这个文件不存在，产生了代号为2的错误。这个错误代号的意思就是找不到相应的文件或目录。错误代码就被自动翻译成No such file or directory。由于错误代码有限（大约有一百多种），有可能许多不同问题对应于同一个错误代码，所以理解要执行的命令和错误信息的关系很重要。得到错误信息，让我欢喜让我忧，喜的是知道发生什么样的错误，忧的是对错误信息有可能百思不得其解，不知道如何去解决，这时候就得凭经验了。</p>
+<p style="text-indent: 2em;">
+	errno.h包含一个完整的基本错误代码列表。除此之外，其他一些头文件（.h）也定义了自己的一些错误代码。代码1列出了系统定义的所有错误代码及错误描述。</p>
+<p>
+	代码1：</p>
+<pre>
+#include &lt;string.h&gt;
+#include &lt;errno.h&gt;
+#include &lt;stdio.h&gt;
+int main(intargc, char ** argv) {
+	int i = 0;
+	for(i = 0; i&lt; 256; i++)
+		printf (&quot;errno.%02d is: %s\n&quot;, i, strerror(i));
+	return 0;
+}
+</pre>
+<p>
+	编译此程序用命令：</p>
+<pre>
+	gcc -Wall strerror.c
+</pre>
+<p align="left" style="text-indent: 2em;">
+	执行程序：</p>
+<pre>
+	./a.out
+</pre>
+<p style="text-indent: 2em;">
+	这个程序的输出有点长，所以就不去浪费纸张了，你自己在电脑上看吧。</p>
+<p style="text-indent: 2em; text-align: right;">
+	<a href="http://hook.aliapp.com/?p=554" style="color: rgb(51, 51, 51); text-decoration: none; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(51, 51, 51); font-size: 14px; text-align: right; text-indent: 28px; font-family: 宋体; line-height: 28px;">Linux就是这个范儿 &ndash; 本书目录&nbsp;</a></p>

@@ -1,0 +1,70 @@
+<!--the js include-->
+<!-- <script src="{{ site.baseurl}}/assets/vendor/jquery/jquery.min.js"></script>
+ -->
+
+
+<script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://lib.sinaapp.com/js/jquery.migrate/1.2.1/jquery-migrate-1.2.1.min.js"></script>
+<script src="http://cdn.staticfile.org/flexslider/2.2.0/jquery.flexslider-min.js"></script>
+
+<script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="{{ site.baseurl}}/assets/script/slimbox2.min.js"></script>
+<script src="{{ site.baseurl}}/assets/script/jquery.jplayer.min.js"></script>
+<script src="{{ site.baseurl}}/assets/script/prettify.js"></script>
+
+<script type="text/javascript">
+	var ajax = {
+		'home': '{{ site.url }}'
+	}
+	var asr_1 = {{ site.sideroll1 }};
+	var asr_2 = {{ site.sideroll2 }};
+
+
+	$('.entry-content pre').addClass('prettyprint linenums');
+	$('.entry-content code').addClass('prettyprint');
+	prettyPrint();
+
+</script>
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+<script src="{{ site.baseurl}}/assets/script/global.js"></script>
+<script src="{{ site.baseurl}}/assets/script/ajax.js"></script>
+
+{% if site.autospace %}
+<script src="{{ site.baseurl}}/assets/script/autospace.min.js"></script>
+{% endif %}
+
+<!--
+  the site comment script
+-->
+{% if site.duoshuo.enable %}
+  {% include comment/duoshuo.html%}
+{% endif %}
+{% if site.disqus.enable %}
+  {% include comment/disqus.html%}
+{% endif %}
+
+<!--
+  the site analysis script
+-->
+{% if site.baidu_analysis.enable %}
+  {% include analysis/baidu.html %}
+{% endif %}
+{% if site.google_analysis.enable %}
+  {% include analysis/google.html %}
+{% endif %}

@@ -1,0 +1,501 @@
+---
+layout: post
+title: 1.4.3　基础命令的操作 – Linux就是这个范儿
+date: 2014-10-05 14:55:31.000000000 +08:00
+type: post
+published: true
+status: publish
+categories:
+- Linux就是这个范儿
+tags: []
+meta:
+  _edit_last: '1'
+  views: '71'
+author:
+  login: lanbing
+  email: c834606877@163.com
+  display_name: lanbing
+  first_name: ''
+  last_name: ''
+---
+<p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	提及Linux基本命令，先给你讲述一个浪漫的故事。</p>
+<p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	曾经有个男孩很喜欢一个女孩，可是不敢表白。他想了一个办法，在Linux终端上输入：</p>
+<pre>
+	$ echo&ldquo;这周六下午2:30，能在如嘉咖啡馆一起喝咖啡吗？&rdquo;&gt; love.txt
+</pre>
+<p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	然后回车。接着他找来那张他喜欢的鼓浪屿图片（pic.png），使用命令：</p>
+<pre>
+	$ cat pic.png love.txt &gt; pic1.png
+</pre>
+<p><!--more--></p>
+<p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	重新做了一个图片文件。他鼓起勇气给那个女孩写了封邮件，邮件内容只是：请查阅附件。</p>
+<p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	女孩收到邮件，用图片浏览器打开后，看到的只是一张美丽的风景图片，有点纳闷。但是聪明的她，立刻猜到了那个男孩的用意。她用<code>tail pic1.png</code>，很快发现了秘密。</p>
+<pre>
+	$ tail pic1.png
+</pre>
+<pre>
+	PNG
+	▒
+	IHDRm�▒tEXtSoftwareAdobe ImageReadyq�&lt;IDATxڼA0
+	[图片编码内容，一般人无法直接读懂&hellip;&hellip;]
+	)&#39;EDDD���q��q^�cDDD�/�GDDDDm�y�w/�}!&quot;&quot;&quot;&ldquo;这周六下午2:30，能在如嘉咖啡馆一起喝咖啡吗？&rdquo;
+</pre>
+<p style="border-width: 0px; padding: 0px; margin: 0px 0px 8px; list-style: none; text-indent: 2em; font-family: 宋体; font-size: 14px; line-height: 28px;">
+	太妙了，原来学好Linux通过Linux基础命令还可以交女朋友。（用这法注定孤独一生）加大马力，我们来认识更多的命令吧。不过我们会遇到一个问题，Linux命令太多了，数量至少有200多个，怎么记呀。其实谁也记不住这么多命令，剥茧抽丝抓重点，把重要的和经常使用的搞定了就行。按照它们在系统中所起的作用，我简单地做了一下分类说明，更为详细的下章还有。见表1-1的内容。</p>
+<p>
+	表　1-1</p>
+<table align="center" border="1" cellpadding="0" cellspacing="0" style="width:556px;line-height:normal;" width="556">
+<tbody>
+<tr>
+<td style="width:151px;">
+<p align="center">
+					命　　令
+				</p>
+</td>
+<td style="width:406px;">
+<p align="center">
+					说　　明
+				</p>
+</td>
+</tr>
+<tr>
+<td colspan="2" style="width:558px;">
+<p>
+					目录和文件处理
+				</p>
+</td>
+</tr>
+<tr>
+<td style="width:151px;">
+<p align="center">
+					mkdir
+				</p>
+</td>
+<td style="width:406px;">
+<p>
+					建立目录
+				</p>
+<p>
+					用法：mkdir [OPTION] DIRECTORY...
+				</p>
+<p>
+					例：$&nbsp;mkdir fangru
+				</p>
+</td>
+</tr>
+<tr>
+<td style="width:151px;">
+<p align="center">
+					ls
+				</p>
+</td>
+<td style="width:406px;">
+<p>
+					列出目录下的内容
+				</p>
+<p>
+					用法：ls [OPTION]...[FILE]...
+				</p>
+<p>
+					例：$&nbsp;ls &shy;al fangru
+				</p>
+</td>
+</tr>
+<tr>
+<td style="width:151px;">
+<p align="center">
+					cd
+				</p>
+</td>
+<td style="width:406px;">
+<p>
+					更换工作目录
+				</p>
+<p>
+					用法：cd [DIRECTORY]
+				</p>
+<p>
+					例：$&nbsp;cd fangru
+				</p>
+</td>
+</tr>
+<tr>
+<td style="width:151px;">
+<p align="center">
+					pwd
+				</p>
+</td>
+<td style="width:406px;">
+<p>
+					显示当前工作目录
+				</p>
+<p>
+					用法：pwd
+				</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div style="clear:both;">
+	&nbsp;
+</div>
+<p align="right" style="margin-left:21pt;">
+	&nbsp;</p>
+<p align="right" style="margin-left:21pt;">
+	（续）</p>
+<table align="center" border="1" cellpadding="0" cellspacing="0" style="width:556px;line-height:normal;" width="556">
+<tbody>
+<tr>
+<td style="width:151px;">
+<p align="center">
+					命　　令
+				</p>
+</td>
+<td style="width:406px;">
+<p align="center">
+					说　　明
+				</p>
+</td>
+</tr>
+<tr>
+<td style="width:151px;">
+<p align="center">
+					cp
+				</p>
+</td>
+<td style="width:406px;">
+<p>
+					拷贝文件及其目录
+				</p>
+<p>
+					用法：cp [OPTION]&hellip; SOURCE DEST
+				</p>
+<p>
+					例：$&nbsp;cp jie.txt jie.bak
+				</p>
+</td>
+</tr>
+<tr>
+<td style="width:151px;">
+<p align="center">
+					mv
+				</p>
+</td>
+<td style="width:406px;">
+<p>
+					移动（重命名）文件
+				</p>
+<p>
+					用法：mv [OPTION]&hellip;SOURCE DEST
+				</p>
+<p>
+					例：$&nbsp;mv jieold jienew
+				</p>
+</td>
+</tr>
+<tr>
+<td style="width:151px;height:61px;">
+<p align="center">
+					rm
+				</p>
+</td>
+<td style="width:406px;height:61px;">
+<p>
+					删除文件或目录
+				</p>
+<p>
+					用法：rm [OPTION]&hellip;FILE&hellip;
+				</p>
+<p>
+					例：$&nbsp;rm &shy;rf jie_dir
+				</p>
+</td>
+</tr>
+<tr>
+<td colspan="2" style="width:558px;">
+<p>
+					文本处理
+				</p>
+</td>
+</tr>
+<tr>
+<td style="width:151px;">
+<p align="center">
+					cat
+				</p>
+</td>
+<td style="width:406px;">
+<p>
+					连结文件打印到标准输出
+				</p>
+<p>
+					用法：cat [OPTION] [FILE]&hellip;
+				</p>
+<p>
+					例：$cat pic.png love.txt &gt; pic1.png
+				</p>
+<p>
+					还记得那个命令行的故事吧？这个命令也常被用来查看小文件的内容
+				</p>
+</td>
+</tr>
+<tr>
+<td style="width:151px;">
+<p align="center">
+					More
+				</p>
+</td>
+<td style="width:406px;">
+<p>
+					查看文件内容，当画面在显示满一页的时候暂停，按空格继续或按Q结束
+				</p>
+<p>
+					用法：more [OPTIONS] FILE
+				</p>
+<p>
+					例：$ more /etc/group
+				</p>
+</td>
+</tr>
+<tr>
+<td style="width:151px;">
+<p align="center">
+					less
+				</p>
+</td>
+<td style="width:406px;">
+<p>
+					与more类似，但是less允许利用光标键上下卷动文本内容进行浏览
+				</p>
+<p>
+					用法: less [OPTIONS] FILE
+				</p>
+</td>
+</tr>
+<tr>
+<td style="width:151px;">
+<p align="center">
+					head
+				</p>
+</td>
+<td style="width:406px;">
+<p>
+					查看文件头部内容
+				</p>
+<p>
+					用法：head [OPTION]&hellip;&nbsp;[FILE]&nbsp;&hellip;
+				</p>
+<p>
+					例：$ head /etc/group
+				</p>
+</td>
+</tr>
+<tr>
+<td style="width:151px;">
+<p align="center">
+					tail
+				</p>
+</td>
+<td style="width:406px;">
+<p>
+					查看文件尾部内容
+				</p>
+<p>
+					用法：tail [OPTION]&nbsp;&hellip;&nbsp;[FILE]&nbsp;&hellip;
+				</p>
+<p>
+					例：tail /etc/group
+				</p>
+<p>
+					比较常用的一个命令选项是-f，它可以用于跟随文件的增长，显示文件的最新内容。对于在线监控软件日志非常有帮助
+				</p>
+</td>
+</tr>
+<tr>
+<td style="width:151px;">
+<p align="center">
+					Echo
+				</p>
+</td>
+<td style="width:406px;">
+<p>
+					显示一行文本
+				</p>
+<p>
+					用法：echo [OPTION] [string]
+				</p>
+<p>
+					例：echo $HOME
+				</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div style="clear:both;">
+	&nbsp;
+</div>
+<p align="right" style="margin-left:21pt;">
+	&nbsp;</p>
+<p align="right" style="margin-left:21pt;">
+	&nbsp;</p>
+<p align="right" style="margin-left:21pt;">
+	（续）</p>
+<table align="center" border="1" cellpadding="0" cellspacing="0" style="width:556px;line-height:normal;" width="556">
+<tbody>
+<tr>
+<td style="width:151px;">
+<p align="center">
+					命　　令
+				</p>
+</td>
+<td style="width:406px;">
+<p align="center">
+					说　　明
+				</p>
+</td>
+</tr>
+<tr>
+<td colspan="2" style="width:558px;">
+<p>
+					系统管理
+				</p>
+</td>
+</tr>
+<tr>
+<td style="width:151px;">
+<p align="center">
+					ps
+				</p>
+</td>
+<td style="width:406px;">
+<p>
+					强悍的进程查看命令
+				</p>
+<p>
+					用法：ps [OPTION]
+				</p>
+<p>
+					例：ps&nbsp;&ndash;aef
+				</p>
+</td>
+</tr>
+<tr>
+<td style="width:151px;">
+<p align="center">
+					kill
+				</p>
+</td>
+<td style="width:406px;">
+<p>
+					删除执行中的程序或工作
+				</p>
+<p>
+					用法：kill [OPTION]
+				</p>
+<p>
+					例：kill&nbsp;&shy;9 3154
+				</p>
+</td>
+</tr>
+<tr>
+<td style="width:151px;">
+<p align="center">
+					jobs
+				</p>
+</td>
+<td style="width:406px;">
+<p>
+					通过jobs命令查到后台正在执行的命令的序号（非进程号pid）
+				</p>
+<p>
+					用法：jobs
+				</p>
+</td>
+</tr>
+<tr>
+<td style="width:151px;">
+<p align="center">
+					bg
+				</p>
+</td>
+<td style="width:406px;">
+<p>
+					指定号码（非进程号）的命令进程放到后台运行
+				</p>
+<p>
+					用法：输入&#39;ctrl+z&#39;&nbsp;然后输入&nbsp;&#39;bg&lt;job id&gt;&#39;
+				</p>
+<p>
+					例：bg &lt;job id&gt;
+				</p>
+</td>
+</tr>
+<tr>
+<td style="width:151px;">
+<p align="center">
+					fg
+				</p>
+</td>
+<td style="width:406px;">
+<p>
+					指定号码（非进程号）的命令进程放到前台运行
+				</p>
+<p>
+					用法：fg &lt;jobid&gt;
+				</p>
+</td>
+</tr>
+<tr>
+<td colspan="2" style="width:558px;">
+<p>
+					文件系统
+				</p>
+</td>
+</tr>
+<tr>
+<td style="width:151px;">
+<p align="center">
+					du
+				</p>
+</td>
+<td style="width:406px;">
+<p>
+					查看目录或文件所占用磁盘空间的大小
+				</p>
+<p>
+					用法：du [OPTION]&hellip;&hellip;[FILE]&hellip;&hellip;
+				</p>
+<p>
+					例：du
+				</p>
+</td>
+</tr>
+<tr>
+<td style="width:151px;height:4px;">
+<p align="center">
+					df
+				</p>
+</td>
+<td style="width:406px;height:4px;">
+<p>
+					检查文件系统的磁盘空间占用情况。
+				</p>
+<p>
+					用法：df [OPTION]&hellip;&hellip;[FILE]&hellip;&hellip;
+				</p>
+<p>
+					例：df
+				</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>
+	&nbsp;</p>
+<p style="text-align: right;">
+	<a href="http://hook.aliapp.com/?p=554" style="color: rgb(51, 51, 51); text-decoration: none; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(51, 51, 51); font-family: 宋体; font-size: 14px; line-height: 28px; text-align: right; text-indent: 28px;">Linux就是这个范儿 &ndash; 本书目录&nbsp;</a></p>
