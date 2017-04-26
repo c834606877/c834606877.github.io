@@ -5,9 +5,24 @@
     <description>这里是Iziy蓝冰的个人博客MyPress，记录着Iziy蓝冰的生活点滴.</description>
     <link>http://mypre.cn/</link>
     <atom:link href="http://mypre.cn/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 09 Apr 2017 11:55:06 +0800</pubDate>
-    <lastBuildDate>Sun, 09 Apr 2017 11:55:06 +0800</lastBuildDate>
+    <pubDate>Wed, 26 Apr 2017 15:36:14 +0800</pubDate>
+    <lastBuildDate>Wed, 26 Apr 2017 15:36:14 +0800</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
+    
+      <item>
+        <title>安卓7.x下重新打包第三方ROM</title>
+        <description>&lt;p&gt;最近对安卓底层比较更兴趣，打算研究一番ROM的制作与移植，汉化之类技术，苦于这方面的比较有技术的文章比较少，多数还借鉴国外帖子，在工具方面也比较少，没有形成一个好的技术圈。&lt;/p&gt;
+</description>
+        <pubDate>Wed, 26 Apr 2017 00:00:00 +0800</pubDate>
+        <link>http://mypre.cn/2017/04/26/how-repack-third-ROM</link>
+        <guid isPermaLink="true">http://mypre.cn/2017/04/26/how-repack-third-ROM</guid>
+        
+        <category>Android第三方ROM二次开发重新打包</category>
+        
+        
+        <category>Android</category>
+        
+      </item>
     
       <item>
         <title>瑶湖公园</title>
@@ -709,59 +724,6 @@ Windows 项原本是在&lt;code&gt;/etc/grub.d/30_os-prober&lt;/code&gt;生成&l
         <category>Linux系统</category>
         
         <category>应用技巧</category>
-        
-      </item>
-    
-      <item>
-        <title>On The Way, Forever~</title>
-        <description>&lt;p&gt;一直都挂念着这个地方,想来写一点东西,然而……&lt;/p&gt;
-
-&lt;p&gt;也不知道以后会如何回忆这段的日子,&lt;/p&gt;
-
-&lt;p&gt;原以为一心考研,却只是想的太简单,&lt;/p&gt;
-
-&lt;p&gt;一直想着平静的生活,然而,自从那年高考结束之后,就已经不一样了,&lt;/p&gt;
-
-&lt;p&gt;那种一年两个长徦,除了周未每天都要去上课的时光,不需要自己去决定什么的日子早就再了,&lt;/p&gt;
-
-&lt;h2 id=&quot;section&quot;&gt;2016-12-26 清晨&lt;/h2&gt;
-&lt;p&gt;当被不知道什么时候定好的闹钟惊醒的那一刻,仍然有一种莫名的冲动,结束了吗?结束了,就这样结束了.不知道多少个像这样的日日夜夜夜过去,不知道以后还会有多少个像这样的日日夜夜–我的心,仍在路上.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;h2 id=&quot;section-1&quot;&gt;2016-12-6&lt;/h2&gt;
-&lt;p&gt;结业前,最后一段充实的日子,也许以后都不会再有了,&lt;/p&gt;
-
-&lt;p&gt;太多的忙碌,太多的念想,熟悉的,不熟悉的,认识的,不认识的,路上的一个偶然,也许成了一辈子的永别.再也看不到熟悉的校门,拥挤的站台.等熙攘的楼道,人去楼空,才悲哀的发现&lt;/p&gt;
-
-&lt;p&gt;吉他断了弦 画笔折了腰&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;此去经年,虽有良辰好景,往事重温,青涩年华,情怀不再.&lt;/p&gt;
-
-&lt;h2 id=&quot;section-2&quot;&gt;2016-9-3&lt;/h2&gt;
-
-&lt;p&gt;找一个可以看到太阳升起的地方睡觉~~~&lt;/p&gt;
-
-&lt;h2 id=&quot;section-3&quot;&gt;2016-8-13 07:04&lt;/h2&gt;
-
-&lt;p&gt;对人生来说,是一次考验,更像是一次警钟,安逸太久.已经忘记这个世界还是危险的了吧.&lt;/p&gt;
-
-&lt;h2 id=&quot;section-4&quot;&gt;2016-7-17 22:46&lt;/h2&gt;
-
-&lt;p&gt;如沐春风!感谢老师,感谢东华,给我们这次机会,南昌四人一行已安全返回,此次夏令营获颇丰,交流基金.短短两天,有些同学甚至不知道名字,还望海涵.我是照片第五排右数第九个 陈子炎,我志在上海,有缘怎能相(再)见.再次感谢老师以及志愿工作的同学.&lt;/p&gt;
-
-</description>
-        <pubDate>Mon, 26 Dec 2016 00:00:00 +0800</pubDate>
-        <link>http://mypre.cn/2016/12/26/on-the-way-forever</link>
-        <guid isPermaLink="true">http://mypre.cn/2016/12/26/on-the-way-forever</guid>
-        
-        <category>心情日记，生活随笔</category>
-        
-        
-        <category>生活随笔</category>
-        
-        <category>心情日记</category>
         
       </item>
     

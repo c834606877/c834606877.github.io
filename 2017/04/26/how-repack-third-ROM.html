@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="zh_cn" >
   <head>
-    <title>Errors in Upgrade from Fedora 21 to Fedora 22 - IziyIx's Files - MyPress - MyPre.Cn</title>
+    <title>安卓7.x下重新打包第三方ROM - IziyIx's Files - MyPress - MyPre.Cn</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <meta name="keywords" content="Errors in Upgrade from Fedora 21 to Fedora 22,Linux系统, ,Iziy, mypre, MyPress, LanBing, jekyll, iziyix" />
-    <meta name="description" content="Errors in Upgrade from Fedora 21 to Fedora 22, Linux系统,  1. Make sure your current system is up-to-date and backed upFirst up, ensure that you have the most up-to-date version of Fedora 21 by updating your system u..." />
+    <meta name="keywords" content="安卓7.x下重新打包第三方ROM,Android, Android第三方ROM二次开发重新打包,,Iziy, mypre, MyPress, LanBing, jekyll, iziyix" />
+    <meta name="description" content="安卓7.x下重新打包第三方ROM, Android, Android第三方ROM二次开发重新打包, 最近对安卓底层比较更兴趣，打算研究一番ROM的制作与移植，汉化之类技术，苦于这方面的比较有技术的文章比较少，多数还借鉴国外帖子，在工具方面也比较少，没有形成一个好的技术圈。" />
 
     <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
 
@@ -90,59 +90,32 @@ else
       <article class="post format-standard">
           <header class="entry-header">
           <h2 class="entry-name">
-            <a href="http://mypre.cn/2015/09/28/errors-in-upgrade-from-fedora-21-to-fedora-22" title="Errors in Upgrade from Fedora 21 to Fedora 22" rel="bookmark">Errors in Upgrade from Fedora 21 to Fedora 22</a>
+            <a href="http://mypre.cn/2017/04/26/how-repack-third-ROM" title="安卓7.x下重新打包第三方ROM" rel="bookmark">安卓7.x下重新打包第三方ROM</a>
           </h2>
           <ul class="entry-meta">
-            <li><i class="fa fa-clock-o"></i> 最后编辑 2015年09月28日</li>
+            <li><i class="fa fa-clock-o"></i> 最后编辑 2017年04月26日</li>
             <li><i class="fa fa-pencil-square-o"></i>
                 
-                    <a href="http://mypre.cn/categories/Linux系统">Linux系统</a>
+                    <a href="http://mypre.cn/categories/Android">Android</a>
                 
             </li>
-            <li><i class="fa fa-comments-o"></i> <a href="http://mypre.cn/2015/09/28/errors-in-upgrade-from-fedora-21-to-fedora-22#post-comment"><span class="disqus-comment-count ds-thread-count" data-disqus-url="http://mypre.cn/2015/09/28/errors-in-upgrade-from-fedora-21-to-fedora-22"></span> 评论</a></li>
+            <li><i class="fa fa-comments-o"></i> <a href="http://mypre.cn/2017/04/26/how-repack-third-ROM#post-comment"><span class="disqus-comment-count ds-thread-count" data-disqus-url="http://mypre.cn/2017/04/26/how-repack-third-ROM"></span> 评论</a></li>
             <li><i class="fa fa-eye"></i><span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span></span> Views</li>
 
 
           </ul>
           </header>
           <div class="entry-content" itemprop="description">
-              <blockquote><strong>1. Make sure your current system is up-to-date and backed up</strong></p>
-<p>First up, ensure that you have the most up-to-date version of Fedora 21 by updating your system using the Software application, or running the following command in the terminal:</p>
-<pre>sudo dnf update</pre>
-<p><strong>2. Install the FedUp tool</strong></p>
-<p>Now, open up a Terminal and install FedUp package by using the following command line:</p>
-<pre>sudo dnf install fedup</pre>
-<p><strong>3. Start the update with FedUp</strong></p>
-<p>Now your system is fully up-to-date, start the upgrade using the following command:</p>
-<pre>sudo fedup --network 22</pre>
-<p>This command will tell FedUp to download all the appropriate packages from the Fedora repositories, and prep your system for the upgrade.<br />
-<strong>4. Reboot, and upgrade</strong></p>
-<p>Once the FedUp command from step 3 has completed without errors, reboot your system. In the Fedora Boot Menu (i.e. grub), there will be a menu item “System Upgrade”, select that and press enter.<br />
-Boot menu with System Upgrade (fedup) option selected<br />
-<code class="prettyprint">Boot menu with update option selected</code></p>
-<p>All the appropriate packages and upgrade tasks will now be completed automatically, and when completed you will be able to start using your newly upgraded Fedora system.</p></blockquote>
-<pre># fedup --network 22
-setting up repos...
-Error: can't get boot images.
-The installation repo isn't currently available.
-Try again later, or specify a repo using --instrepo.</pre>
-<p>Using --instrepo To special a repo :</p>
-<pre>[lanbing@LanBing-PC ~]$ setting up repos...
-getting boot images...
-
-Downloading failed: couldn't get boot images: No more mirrors to try.
-Last error was: [Errno 14] curl#56 - "Proxy CONNECT aborted"
-
-Change the <code>/etc/yum.conf</code> file to disable Proxy settings ,</pre>
+              <p>最近对安卓底层比较更兴趣，打算研究一番ROM的制作与移植，汉化之类技术，苦于这方面的比较有技术的文章比较少，多数还借鉴国外帖子，在工具方面也比较少，没有形成一个好的技术圈。</p>
 
           </div>
         <footer class="entry-footer clearfix">
           <div class="post-share">
             <a href="javascript:;"><i class="fa fa-share-alt"></i> 分享</a>
             <ul>
-              <li><a href="http://service.weibo.com/share/share.php?title=Errors in Upgrade from Fedora 21 to Fedora 22&url=http://mypre.cn/2015/09/28/errors-in-upgrade-from-fedora-21-to-fedora-22" target="_blank"><i class="fa fa-weibo"></i></a></li>
-              <li><a href="http://share.renren.com/share/buttonshare?link=http://mypre.cn/2015/09/28/errors-in-upgrade-from-fedora-21-to-fedora-22&title=Errors in Upgrade from Fedora 21 to Fedora 22" target="_blank"><i class="fa fa-renren"></i></a></li>
-              <li><a href="http://twitter.com/share?url=http://mypre.cn/2015/09/28/errors-in-upgrade-from-fedora-21-to-fedora-22&text=Errors in Upgrade from Fedora 21 to Fedora 22" target="_blank"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="http://service.weibo.com/share/share.php?title=安卓7.x下重新打包第三方ROM&url=http://mypre.cn/2017/04/26/how-repack-third-ROM" target="_blank"><i class="fa fa-weibo"></i></a></li>
+              <li><a href="http://share.renren.com/share/buttonshare?link=http://mypre.cn/2017/04/26/how-repack-third-ROM&title=安卓7.x下重新打包第三方ROM" target="_blank"><i class="fa fa-renren"></i></a></li>
+              <li><a href="http://twitter.com/share?url=http://mypre.cn/2017/04/26/how-repack-third-ROM&text=安卓7.x下重新打包第三方ROM" target="_blank"><i class="fa fa-twitter"></i></a></li>
             </ul>
           </div>
           <div class="post-love">
@@ -153,6 +126,8 @@ Change the <code>/etc/yum.conf</code> file to disable Proxy settings ,</pre>
           </div>
           <div class="post-tags">
             Tags:
+              
+                  <a class="tag" href="http://mypre.cn/tag/#Android第三方ROM二次开发重新打包">Android第三方ROM二次开发重新打包</a>
               
           </div>
         </footer>
@@ -174,8 +149,8 @@ Change the <code>/etc/yum.conf</code> file to disable Proxy settings ,</pre>
 <div id="post-comment" class="comments box clearfix">
 	<h5 id="comments-title"><span> Comments</span></h5>
         
-        <div class="ds-thread" data-thread-key="/2015/09/28/errors-in-upgrade-from-fedora-21-to-fedora-22"
-             data-title="Errors in Upgrade from Fedora 21 to Fedora 22" data-url="http://mypre.cn/2015/09/28/errors-in-upgrade-from-fedora-21-to-fedora-22"></div>
+        <div class="ds-thread" data-thread-key="/2017/04/26/how-repack-third-ROM"
+             data-title="安卓7.x下重新打包第三方ROM" data-url="http://mypre.cn/2017/04/26/how-repack-third-ROM"></div>
         
 
         
@@ -227,33 +202,28 @@ Change the <code>/etc/yum.conf</code> file to disable Proxy settings ,</pre>
                           
                             
                           
-                          
-                          
-                            <img id="past_nail" class="rounded" src="http://mypre.cn/assets/images/random/5.jpg" title="安卓7.x下重新打包第三方ROM" alt="安卓7.x下重新打包第三方ROM" width="45" height="45" />
-                          
-
-
-                  </div>
-                  <div class="post-right">
-                      <h3><a href="/2017/04/26/how-repack-third-ROM">安卓7.x下重新打包第三方ROM</a></h3>
-                      <div class="post-meta">
-                          <a href="/2017/04/26/how-repack-third-ROM#post-comment" title="安卓7.x下重新打包第三方ROM 上的评论">No Reply</a></span> | <span>? Views</span>
-                      </div>
-                  </div>
-              </li>
-            
-            
-            
-              <li class="clearfix">
-                  <div class="post-thumb">
-                          
-                          
-                          
+                            
+                                
+                                    
+                                    
+                                    
+                                      
+                                        <img class="rounded" src="/post_res/IMG_20170402_145915.jpg" title="瑶湖公园" alt="瑶湖公园" width="45" height="45" />
+                                        
+                                      
+                                    
+                                      
+                                    
+                                      
+                                    
+                                    
+                                
                             
                           
+                            
+                                
+                            
                           
-                          
-                            <img id="past_nail" class="rounded" src="http://mypre.cn/assets/images/random/7.jpg" title="瑶湖公园" alt="瑶湖公园" width="45" height="45" />
                           
 
 
@@ -277,7 +247,7 @@ Change the <code>/etc/yum.conf</code> file to disable Proxy settings ,</pre>
                           
                           
                           
-                            <img id="past_nail" class="rounded" src="http://mypre.cn/assets/images/random/2.jpg" title="考研日记" alt="考研日记" width="45" height="45" />
+                            <img id="past_nail" class="rounded" src="http://mypre.cn/assets/images/random/4.jpg" title="考研日记" alt="考研日记" width="45" height="45" />
                           
 
 
@@ -301,7 +271,7 @@ Change the <code>/etc/yum.conf</code> file to disable Proxy settings ,</pre>
                           
                           
                           
-                            <img id="past_nail" class="rounded" src="http://mypre.cn/assets/images/random/7.jpg" title="动态规划-最长增长子序列" alt="动态规划-最长增长子序列" width="45" height="45" />
+                            <img id="past_nail" class="rounded" src="http://mypre.cn/assets/images/random/5.jpg" title="动态规划-最长增长子序列" alt="动态规划-最长增长子序列" width="45" height="45" />
                           
 
 
@@ -325,7 +295,7 @@ Change the <code>/etc/yum.conf</code> file to disable Proxy settings ,</pre>
                           
                           
                           
-                            <img id="past_nail" class="rounded" src="http://mypre.cn/assets/images/random/6.jpg" title="整数拆分" alt="整数拆分" width="45" height="45" />
+                            <img id="past_nail" class="rounded" src="http://mypre.cn/assets/images/random/1.jpg" title="整数拆分" alt="整数拆分" width="45" height="45" />
                           
 
 
@@ -349,7 +319,7 @@ Change the <code>/etc/yum.conf</code> file to disable Proxy settings ,</pre>
                           
                           
                           
-                            <img id="past_nail" class="rounded" src="http://mypre.cn/assets/images/random/2.jpg" title="01背包问题" alt="01背包问题" width="45" height="45" />
+                            <img id="past_nail" class="rounded" src="http://mypre.cn/assets/images/random/7.jpg" title="01背包问题" alt="01背包问题" width="45" height="45" />
                           
 
 
@@ -399,7 +369,7 @@ Change the <code>/etc/yum.conf</code> file to disable Proxy settings ,</pre>
                           
                           
                           
-                            <img id="past_nail" class="rounded" src="http://mypre.cn/assets/images/random/4.jpg" title="让 Grub2 记住上次选择的启动项" alt="让 Grub2 记住上次选择的启动项" width="45" height="45" />
+                            <img id="past_nail" class="rounded" src="http://mypre.cn/assets/images/random/1.jpg" title="让 Grub2 记住上次选择的启动项" alt="让 Grub2 记住上次选择的启动项" width="45" height="45" />
                           
 
 
@@ -432,6 +402,30 @@ Change the <code>/etc/yum.conf</code> file to disable Proxy settings ,</pre>
                       <h3><a href="/2017/02/09/grub-cannot-detect-windows">grub-mkconfig 没有Windows项</a></h3>
                       <div class="post-meta">
                           <a href="/2017/02/09/grub-cannot-detect-windows#post-comment" title="grub-mkconfig 没有Windows项 上的评论">No Reply</a></span> | <span>? Views</span>
+                      </div>
+                  </div>
+              </li>
+            
+            
+            
+              <li class="clearfix">
+                  <div class="post-thumb">
+                          
+                          
+                          
+                            
+                          
+                          
+                          
+                            <img id="past_nail" class="rounded" src="http://mypre.cn/assets/images/random/6.jpg" title="On The Way, Forever~" alt="On The Way, Forever~" width="45" height="45" />
+                          
+
+
+                  </div>
+                  <div class="post-right">
+                      <h3><a href="/2016/12/26/on-the-way-forever">On The Way, Forever~</a></h3>
+                      <div class="post-meta">
+                          <a href="/2016/12/26/on-the-way-forever#post-comment" title="On The Way, Forever~ 上的评论">No Reply</a></span> | <span>? Views</span>
                       </div>
                   </div>
               </li>
@@ -663,7 +657,7 @@ Change the <code>/etc/yum.conf</code> file to disable Proxy settings ,</pre>
 </footer>
   </div><!--./warp-->
 
-  <img id="qrimg" src="http://qr.liantu.com/api.php?text=http://mypre.cn/2015/09/28/errors-in-upgrade-from-fedora-21-to-fedora-22"/>
+  <img id="qrimg" src="http://qr.liantu.com/api.php?text=http://mypre.cn/2017/04/26/how-repack-third-ROM"/>
   <a id="qr" href="javascript:;"><i class="fa fa-qrcode"></i></a>
   <a id="gotop" href="javascript:;"><i class="fa fa-arrow-up"></i></a>
   <!--the js include-->
