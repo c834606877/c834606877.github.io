@@ -9,13 +9,13 @@ layout: default
             <a href="{{ page.url | prepend: site.url }}" title="{{page.title}}" rel="bookmark">{{page.title}}</a>
           </h2>
           <ul class="entry-meta">
-            <li><i class="fa fa-clock-o"></i> {{ 'post.update_date' | translate }} {{ page.date | date: "%Y年%m月%d日" }}</li>
+            <li><i class="fa fa-clock-o"></i> 最后编辑 {{ page.date | date: "%Y年%m月%d日" }}</li>
             <li><i class="fa fa-pencil-square-o"></i>
                 {% for category in page.categories %}
                     <a href="{{site.url}}/categories/{{category}}">{{category}}</a>
                 {% endfor %}
             </li>
-            <li><i class="fa fa-comments-o"></i> <a href="{{ page.url | prepend: site.url }}#post-comment"><span class="disqus-comment-count ds-thread-count" data-disqus-url="{{ page.url | prepend: site.url }}"></span> {{ 'list.comment' | translate }}</a></li>
+            <li><i class="fa fa-comments-o"></i> <a href="{{ page.url | prepend: site.url }}#post-comment"><span class="disqus-comment-count ds-thread-count" data-disqus-url="{{ page.url | prepend: site.url }}"></span> 评论</a></li>
             <li><i class="fa fa-eye"></i><span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span></span> Views</li>
           </ul>
           </header>

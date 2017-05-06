@@ -5,13 +5,13 @@
       <a href="{{ post.url | prepend: site.url }}" title="{{post.title}}" rel="bookmark">{{post.title}}</a>
     </h2>
     <ul class="entry-meta">
-      <li><i class="fa fa-clock-o"></i> {{ 'post.update_date' | translate }} {{ post.date | date: "%Y-%m-%d"}}</li>
+      <li><i class="fa fa-clock-o"></i> 最后编辑 {{ post.date | date: "%Y-%m-%d"}}</li>
       <li><i class="fa fa-pencil-square-o"></i>
           {% for category in post.categories %}
             <a href="{{site.url}}/categories/{{category}}">{{category}}</a>
           {% endfor %}
       </li>
-      <li><i class="fa fa-comments-o"></i> <a href="{{ post.url | prepend: site.url }}#post-comment"><span class="disqus-comment-count" data-disqus-url="{{ post.url | prepend: site.url }}"></span> {{ 'list.comment' | translate }}</a></li>
+      <li><i class="fa fa-comments-o"></i> <a href="{{ post.url | prepend: site.url }}#post-comment"><span class="disqus-comment-count" data-disqus-url="{{ post.url | prepend: site.url }}"></span> 评论</a></li>
       <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
     </ul>
     </header>
