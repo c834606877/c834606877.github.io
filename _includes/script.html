@@ -58,6 +58,9 @@
 {% if site.disqus.enable %}
   {% include comment/disqus.html%}
 {% endif %}
+{% if site.cloudtie.enable %}
+  {% include comment/cloudtie.html%}
+{% endif %}
 
 <!--
   the site analysis script

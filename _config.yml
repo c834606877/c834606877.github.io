@@ -119,13 +119,18 @@ comment:
 
 # duoshuo
 duoshuo:
-  enable: true
+  enable: false
   short_name: "iziy"
 
 # disqus
 disqus:
   enable: false
   short_name: "iziy"
+
+# cloud tie 
+cloudtie:
+  enable: true
+  productKey: "51510025e46a4505a8283b177222f758"
 
 #---------------------------------------------------------------
 # Site share setting

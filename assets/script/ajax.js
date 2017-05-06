@@ -220,6 +220,10 @@ function ajaxreload_code() {
     {% if site.disqus.enable %}
     	loadDisqus();
 	{% endif %}
+	{% if site.cloudtie.enable %}
+    	var yunManualLoad = true;
+        Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vbW9iaWxlL2xpdmVzY3JpcHQuaHRtbA==", true);
+	{% endif %}
 }
 
 function ajaxclick_code(thiss) {
