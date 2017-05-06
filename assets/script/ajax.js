@@ -227,14 +227,14 @@ function ajaxreload_code() {
         
         console.log(Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vZXh0ZW5kL2xpc3Rfam9pbl9zY3JpcHQuaHRtbA==", true));
 
-        (function () { // add hint
-        var d = document, s = d.createElement('script');
+        (function () {
 
-        s.src = 'https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js';
-
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
+        var head = $("head").remove("script[role='reload']");
+        $("<scri" + "pt>" + "</scr" + "ipt>").attr({ 
+        					role: 'reload', 
+        					src: 'https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js', 
+        					type: 'text/javascript' }).appendTo(head);
+        })();
 
 	{% endif %}
 }
