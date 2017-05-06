@@ -11,7 +11,7 @@
             <a href="{{site.url}}/categories/{{category}}">{{category}}</a>
           {% endfor %}
       </li>
-      <li><i class="fa fa-comments-o"></i> <a href="{{ post.url | prepend: site.url }}#post-comment"><span class="disqus-comment-count" data-disqus-url="{{ post.url | prepend: site.url }}"></span> 评论</a></li>
+      <li><i class="fa fa-comments-o"></i> <a href="{{ post.url | prepend: site.url }}#post-comment"><span class="disqus-comment-count" data-disqus-url="{{ post.url | prepend: site.url }}"></span><span lang="join-count"   class="join-count"   data-url=""   data-sourceId=""></span> 评论</a></li>
       <!-- <li><i class="fa fa-eye"></i> <?php mzw_post_views(' Views');?></li> -->
     </ul>
     </header>
