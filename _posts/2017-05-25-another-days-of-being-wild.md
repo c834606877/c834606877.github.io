@@ -17,4 +17,4 @@ author:
 
 
 
-![毕业照](/post_res/my-class-photo.jpg)
+![毕业照](/post_res/my-class-photo.jpeg)
