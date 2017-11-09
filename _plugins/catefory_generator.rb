@@ -20,7 +20,7 @@ module Jekyll
             dir = 'categories'
             site.categories.each do |category|
             site.pages << CategoryPage.new(site, site.source, File.join(dir, category.first), category)
-        end
+        #end
       #end
     end
   end
