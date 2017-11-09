@@ -129,8 +129,13 @@ disqus:
 
 # cloud tie 
 cloudtie:
-  enable: true
+  enable: false
   productKey: "51510025e46a4505a8283b177222f758"
+
+# uyan jiathis
+uyan:
+  enable: true
+  uid: "2148526"
 
 #---------------------------------------------------------------
 # Site share setting
