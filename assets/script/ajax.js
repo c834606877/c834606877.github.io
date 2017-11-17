@@ -204,9 +204,10 @@ function ajaxreload_code() {
 	jQuery("img").unveil();
 
 
-	jQuery('.entry-content pre').addClass('prettyprint linenums');
+/*	jQuery('.entry-content pre').addClass('prettyprint linenums');
 	$('.entry-content code').addClass('prettyprint');
 	prettyPrint();
+*/
 
 	(function () { // add hint
         var d = document, s = d.createElement('script');
