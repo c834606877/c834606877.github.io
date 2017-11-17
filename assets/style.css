@@ -257,7 +257,7 @@ code,kbd,pre,samp {
 
 code {
 	color: #d14;
-	white-space: pre-wrap;
+	/*white-space: pre-wrap;*/
 }
 
 pre {
@@ -293,7 +293,7 @@ pre:hover {
 
 
 .highlighter-rouge:hover{
-	border: 1px solid #4682b4;
+	border: 1px solid #47C2DC;
 	background-color: #eee;
 	transitiona: background-color .25s linear;
 	-webkit-transition: background-color .25s linear;
@@ -712,7 +712,17 @@ blockquote cite a {
 }
 
 .entry-content img {
-	background: #ffffff url('images/loading.gif') no-repeat center center
+	background: #ffffff url('images/loading.gif') no-repeat center center;
+
+    -moz-box-shadow: 3px 3px 4px #47C2DC;
+    -webkit-box-shadow: 3px 3px 4px #47C2DC;
+    box-shadow: 3px 3px 4px #47C2DC;
+    /* For IE 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#47C2DC')";
+    /* For IE 5.5 - 7 */
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#47C2DC');
+   
+   
 }
 
 .entry-content>p {
