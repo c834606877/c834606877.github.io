@@ -249,7 +249,7 @@ html.han-la ol > hanla,
 html.han-la ul > hanla {
 	display: none;
 }
-/*
+
 code,kbd,pre,samp {
 	font-size: 1em;
 	font-family: monospace,serif
@@ -284,8 +284,9 @@ pre:hover {
 	-webkit-transition: background-color .25s linear;
 	-moz-transition: background-color .25s linear;
 }
-*/
+
 .highlight  { background: #ffffff; margin: 0 4px; font-size: 0.8em; }
+
 .highlight .c { color: #6a737d; font-style: italic } /* Comment */
 .highlight .err { color: #a61717; background-color: #e3d2d2 } /* Error */
 .highlight .k { font-weight: bold } /* Keyword */
