@@ -259,7 +259,6 @@ code,kbd,pre,samp {
 pre {
 	display: block;
 	padding: 14px;
-	margin: 14px 0px;
 	line-height: 18px;
 	font-size: 12px;
 	white-space: pre-wrap;
@@ -366,9 +365,9 @@ pre:hover {
 .highlight .ent {
  color:#22863a
 }
-.highlight .k {
+/*.highlight .k {
  color:#d73a49
-}
+}*/
 .highlight .s,.highlight .pds,.highlight .s .highlight .pse .highlight .s1,.highlight .sr,.highlight .sr .highlight .cce,.highlight .sr .highlight .sre,.highlight .sr .highlight .sra {
  color:#032f62
 }
