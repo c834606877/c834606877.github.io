@@ -255,13 +255,6 @@ code,kbd,pre,samp {
 	font-family: simsun, monaco, monospace,serif
 }
 
-code {
-	white-space: pre;
-	padding: 2px 4px;
-	border-radius: 2px;
-	font-size: 12px;
-	margin: 0 2px;
-}
 
 pre {
 	display: block;
@@ -286,11 +279,13 @@ pre:hover {
 
 
 .highlighter-rouge {
-	border: 1px solid #4682b4;
-	background-color: #eee;
-	transitiona: background-color .25s linear;
-	-webkit-transition: background-color .25s linear;
-	-moz-transition: background-color .25s linear;
+	border: 1px solid #D9D9D9;
+	white-space: pre;
+	padding: 2px 4px;
+	border-radius: 2px;
+	font-size: 12px;
+	margin: 0 2px;
+	
 }
 
 
