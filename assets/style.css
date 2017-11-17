@@ -257,7 +257,7 @@ code,kbd,pre,samp {
 
 code {
 	color: #d14;
-	white-space: nowrap;
+	white-space: pre-wrap;
 }
 
 pre {
@@ -300,9 +300,10 @@ pre:hover {
 	-moz-transition: background-color .25s linear;
 }
 
+pre .n { color: #505050; } /* Normal */
 pre .c { color: #60a0b0; font-style: italic } /* Comment */
 pre .err { border: 1px solid #FF0000 } /* Error */
-pre .k { color: #007020; font-weight: bold } /* Keyword */
+pre .k { color: #005cc5; font-weight: bold } /* Keyword */
 pre .o { color: #666666 } /* Operator */
 pre .ch { color: #60a0b0; font-style: italic } /* Comment.Hashbang */
 pre .cm { color: #60a0b0; font-style: italic } /* Comment.Multiline */
