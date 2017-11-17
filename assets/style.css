@@ -262,13 +262,12 @@ pre {
 	margin: 14px 0px;
 	line-height: 18px;
 	font-size: 12px;
-	border: 1px solid #D9D9D9;
 	white-space: pre-wrap;
 	word-wrap: break-word;
 	overflow: auto;
 	border-radius: 3px;
 }
-
+/*
 pre:hover {
 	border: 1px solid #4682b4;
 	background-color: #eee;
@@ -276,16 +275,16 @@ pre:hover {
 	-webkit-transition: background-color .25s linear;
 	-moz-transition: background-color .25s linear;
 }
-
+*/
 
 .highlighter-rouge {
 	border: 1px solid #D9D9D9;
 	white-space: pre;
 	padding: 2px 4px;
-	border-radius: 2px;
+	border-radius: 3px;
 	font-size: 12px;
 	margin: 0 2px;
-	
+
 }
 
 
@@ -303,7 +302,7 @@ pre:hover {
 .highlight .o { font-weight: bold } /* Operator */
 .highlight .cm { color: #999988; font-style: italic } /* Comment.Multiline */
 .highlight .cp { color: #999999; font-weight: bold } /* Comment.Preproc */
-.highlight .c1 { color: #005cc5; font-style: italic } /* Comment.Single */
+.highlight .c1,.highlight .k { color: #005cc5; font-style: italic } /* Comment.Single */
 .highlight .cs { color: #999999; font-weight: bold; font-style: italic } /* Comment.Special */
 .highlight .gd { color: #000000; background-color: #ffdddd } /* Generic.Deleted */
 .highlight .gd .x { color: #000000; background-color: #ffaaaa } /* Generic.Deleted.Specific */
