@@ -1,8 +1,9 @@
 ---
 layout: post
-title: On The Way, Forever~
+title: Your Title
 
 categories:
+- Linux
 - 生活随笔
 - 心情日记
 tags: [心情日记，生活随笔]

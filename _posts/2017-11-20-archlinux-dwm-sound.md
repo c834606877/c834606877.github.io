@@ -32,7 +32,6 @@ ALSA是一个集成了声卡驱动和底层接口的东西，而pulseaudio是声
 于是:
 ```bash
 vim ~/.xinitrc
-
 ```
 
 ```bash
