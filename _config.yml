@@ -23,11 +23,11 @@ gems: [jekyll-paginate]
 
 # Site
 ## You can create a locale setting at _locales and name *.yml
-title: "IziyIx's Files - MyPress - MyPre.Cn"
-head_title: "IziyIx's Files"
+title: "IzIy's Files - MyPress - MyPre.Cn"
+head_title: "IzIy's Files"
 head_subtitle: "从明天起,做一个幸福的人, 喂马、劈柴、周游世界。 ---Iziy 蓝冰   "
-description: "这里是Iziy蓝冰的个人博客MyPress，记录着Iziy蓝冰的生活点滴."
-keywords: "Iziy, mypre, MyPress, LanBing, jekyll, iziyix"
+description: "这里是Iziy蓝冰的个人博客MyPress，记录着Iziy蓝冰的生活点滴。"
+keywords: "LanBing, MyPress, iziy, iziyix"
 notice: "一个人的角落,也许并没人会看到这里~~ anyway, 祝福你,工作顺心,学习快乐~"
 notice_bottom: "notice_BOTTOM"
 
@@ -76,10 +76,12 @@ rss:
 author:
   name: "Lan Bing"
   avatar: "/assets/images/2.gif"
-  motto: "My Press Iziy"
+  motto: "我很严肃的！"
 
 # SideBar
-xiami_id: "84054" #知心爱人 163
+song_id: "002OWp281Ra6ho" #知心爱人 tencent
+song_name: "知心爱人"
+song_source: "tencent"
 #xiami_id: "1775588636" # Sunrise Breeze
 #xiami_id: "1835292" # right here waitting
 #xiami_id: "1283283" # the sound of silence

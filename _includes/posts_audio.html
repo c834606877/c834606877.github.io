@@ -1,7 +1,8 @@
 <!-- this is post list -->
 <article class="post type-post status-publish format-audio">
   <div class="entry-music">
-  	<div class="sb-xiami" songid="{{ post.content | split:"[xiami]"|last|split:"[/xiami]"|first }}">
+    <!-- songid="{{ post.content | split:"[xiami]"|last|split:"[/xiami]"|first }}" -->
+  	<div class="sb-xiami"  songid="page.song_id" song_s="{{ page.song_source }}" song_n="{{ page.song_name }}" >
   		<div class="sb-player">
   			<div class="sb-cover"></div>
   			<div class="sb-info clearfix">
