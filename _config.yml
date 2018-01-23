@@ -35,7 +35,7 @@ locale: "zh_CN"
 excerpt_separator: "<!--more-->"
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and baseurl as '/child/'
-url: "http://mypre.cn"
+url: "https://mypre.cn"
 baseurl: ""
 permalink: /:year/:month/:day/:title
 
