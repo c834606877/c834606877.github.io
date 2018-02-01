@@ -81,7 +81,7 @@ author:
 # SideBar
 song_id: "002OWp281Ra6ho" #知心爱人 tencent
 song_name: "知心爱人"
-song_source: "tencent"
+song_source: "qq"
 #song_source: "netease"
 #xiami_id: "1775588636" # Sunrise Breeze
 #xiami_id: "1835292" # right here waitting
@@ -138,9 +138,12 @@ cloudtie:
 
 # uyan jiathis
 uyan:
-  enable: true
+  enable: false
   uid: "2148526"
 
+free_comment:
+  enable: true
+  
 #---------------------------------------------------------------
 # Site share setting
 #---------------------------------------------------------------
