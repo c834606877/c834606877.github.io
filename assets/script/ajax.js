@@ -94,6 +94,8 @@ function ajaxloadPage(url, push, getData){
 					data: getData,
 					cache: false,
 					dataType: "html",
+					tryCount : 0,
+					retryLimit : 3,
 					success: function(data) {
 						ajaxisLoad = false;
 						
@@ -172,6 +174,16 @@ function ajaxloadPage(url, push, getData){
 
 					},
 					error: function(jqXHR, textStatus, errorThrown) {
+
+						if (textStatus == 'timeout') {
+				            this.tryCount++;
+				            if (this.tryCount <= this.retryLimit) {
+				                //try again
+				                $.ajax(this);
+				                return;
+				            }            
+				            //return;
+				        }
 						ajaxisLoad = false;
 						document.title = "Error loading requested page!";
 						document.getElementById(ajaxcontent).innerHTML = ajaxloading_error_code;
@@ -223,9 +235,7 @@ function ajaxreload_code() {
 	{% endif %}
 
 	{% if site.free_comment.enable %}
-	    Commento.init({
-	        serverUrl: "http://free_comment.mypre.cn"
-  	    });
+	    Commento.init();
 	{% endif %}
 	{% if site.cloudtie.enable %}
     	var yunManualLoad = true;
