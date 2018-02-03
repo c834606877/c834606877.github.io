@@ -572,15 +572,15 @@
     Commento.init = function(configuration) {
         _serverUrl = configuration.serverUrl || _serverUrl;
         _honeypot = configuration.honeypot || _honeypot;
-        _showdownUrl = configuration.showdownUrl || (_serverUrl + _showdownUrl);
-        _commentoCssUrl = configuration.commentoCssUrl || (_serverUrl + _commentoCssUrl);
+        _showdownUrl_ = configuration.showdownUrl || (_serverUrl + _showdownUrl);
+        _commentoCssUrl_ = configuration.commentoCssUrl || (_serverUrl + _commentoCssUrl);
 
         _api.get = _serverUrl + '/get';
         _api.create = _serverUrl + '/create';
 
-        loadCSS(_commentoCssUrl);
+        loadCSS(_commentoCssUrl_);
 
-        loadJS(_showdownUrl, function() {
+        loadJS(_showdownUrl_, function() {
             _showdownConverter = new showdown.Converter();
 
             var commento = $(COMMENTO_ID);

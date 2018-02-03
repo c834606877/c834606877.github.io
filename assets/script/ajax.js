@@ -221,6 +221,12 @@ function ajaxreload_code() {
     {% if site.disqus.enable %}
     	loadDisqus();
 	{% endif %}
+
+	{% if site.free_comment.enable %}
+	    Commento.init({
+	        serverUrl: "http://free_comment.mypre.cn"
+  	    });
+	{% endif %}
 	{% if site.cloudtie.enable %}
     	var yunManualLoad = true;
     	var yunTieProductKey = "{{site.cloudtie.productKey}}";
