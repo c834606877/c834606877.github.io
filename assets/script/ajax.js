@@ -175,7 +175,7 @@ function ajaxloadPage(url, push, getData){
 					},
 					error: function(jqXHR, textStatus, errorThrown) {
 
-						if (textStatus == 'timeout') {
+						// if (textStatus == 'timeout') {
 				            this.tryCount++;
 				            if (this.tryCount <= this.retryLimit) {
 				                //try again
@@ -183,7 +183,7 @@ function ajaxloadPage(url, push, getData){
 				                return;
 				            }            
 				            //return;
-				        }
+				        //}
 						ajaxisLoad = false;
 						document.title = "Error loading requested page!";
 						document.getElementById(ajaxcontent).innerHTML = ajaxloading_error_code;
