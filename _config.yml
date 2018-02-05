@@ -6,7 +6,7 @@ version: 1.0
 #---------------------------------------------------------------
 # Build setting
 #---------------------------------------------------------------
-gems: [jekyll-paginate]
+gems: [jekyll-paginate, jekyll-archives]
 # Config sass build output by sass_dir
 # Config sass output is compressed or not
 #
@@ -50,6 +50,17 @@ sideroll2: '2'
 paginate: 8
 paginate_path: "/page:num/"
 
+
+# Archives
+jekyll-archives:
+  enabled: all
+  layout: 'default'
+  permalinks:
+    year: '/:year/'
+    month: '/:year/:month/'
+    day: '/:year/:month/:day/'
+    tag: '/tag/:name/'
+    category: '/categories/:name/'
 
 # Writing
 #highlighter: 'Pygments'
