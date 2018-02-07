@@ -6,7 +6,7 @@ version: 1.0
 #---------------------------------------------------------------
 # Build setting
 #---------------------------------------------------------------
-gems: [jekyll-paginate, jekyll-archives]
+gems: [jekyll-paginate]
 # Config sass build output by sass_dir
 # Config sass output is compressed or not
 #
