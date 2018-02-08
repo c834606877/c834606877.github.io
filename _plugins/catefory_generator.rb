@@ -16,12 +16,12 @@ module Jekyll
     safe true
 
     def generate(site)
-      if site.layouts.key? 'category'
+      #if site.layouts.key? 'category'
             dir = 'categories'
-            site.categories.each_key do |category|
+            site.categories.each do |category|
             site.pages << CategoryPage.new(site, site.source, File.join(dir, category.first), category)
-        end
-      end
+      # end
+       end
     end
   end
 
