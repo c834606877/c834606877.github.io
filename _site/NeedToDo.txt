@@ -1,4 +1,0 @@
-header.php 43 :  is_mobile() can't realty
-header.php 61 :  is_mobile() can't realty
-
-page.php 6 :  post_class() can't realty
