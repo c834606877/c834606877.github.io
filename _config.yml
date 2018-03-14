@@ -6,7 +6,7 @@ version: 1.0
 #---------------------------------------------------------------
 # Build setting
 #---------------------------------------------------------------
-gems: [jekyll-paginate]
+plugins: [jekyll-paginate]
 # Config sass build output by sass_dir
 # Config sass output is compressed or not
 #
@@ -16,6 +16,14 @@ gems: [jekyll-paginate]
 
 # deploy to coding.net doesn't require the argment, otherwise it would conflict!
 # destination: iziy
+
+
+exclude:
+  - "_site"
+  - "LICENSE.md"
+  - "Makefile"
+  - "NeedToDo.txt"
+  - "README.md"
 
 #---------------------------------------------------------------
 # Site infromation setting
@@ -30,6 +38,7 @@ description: "这里是Iziy蓝冰的个人博客MyPress，记录着Iziy蓝冰的
 keywords: "LanBing, MyPress, iziy, iziyix"
 notice: "一个人的角落,也许并没人会看到这里~~ anyway, 祝福你,工作顺心,学习快乐~"
 notice_bottom: "notice_BOTTOM"
+icpsn: "赣ICP备18003024号"
 
 locale: "zh_CN"
 excerpt_separator: "<!--more-->"
