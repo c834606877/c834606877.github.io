@@ -29,9 +29,9 @@ layout: default
                 {% endif %}
             {% endfor %}
 
-            {% if !paginator.next_page %}
+            {% unless paginator.next_page %}
                   <a href="{{ paginator.next_page_path | prepend: site.url}}" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
-            {% endif %}
+            {% endunless %}
         </div><!-- /.pagination -->
     {% endif %}
   </div><!-- /.div.home blog -->

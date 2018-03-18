@@ -35,9 +35,10 @@ layout: default
               </ul>
             </div>
           <div class="entry-content" itemprop="description">
-
-              {% for sp in content | split:"<img "%}
-                  {% for con in sp | split:">" %}
+              {%  assign content_splited = content | split: "<img " %}
+              {% for sp in content_splited %}
+                  {% assign content_s_ended = sp | split:">" %}
+                  {% for con in content_s_ended  %}
                       {% if con contains 'src="' or con contains "src='" %}
                       {% else %}
                         {% if con contains "href=" %}

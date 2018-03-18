@@ -34,7 +34,7 @@ LIS = LIS + arr[m];
 
 
 ```
-int arr[10] = {{2,1,0,5,4,8,9}};
+int arr[10] = {2,1,0,5,4,8,9};
 int n = sizeof(arr) / sizeof(arr[0]);
 
 //返回包含第n个元素作为最后一个元素的子序列的最长长度，
@@ -62,7 +62,7 @@ int lis(int n, int &a)
 方法与之前的背包问题和整分拆分问题非常相似。
 
 ```
-int arr[10] = {{2,1,0,5,4,8,9}};
+int arr[10] = {2,1,0,5,4,8,9};
 int nSize = sizeof(arr) / sizeof(arr[0]);
 int lis2(int nSize)
 {
