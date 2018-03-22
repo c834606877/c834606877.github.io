@@ -41,7 +41,8 @@
     {% include footer.html%}
   </div><!--./warp-->
 
-  <img id="qrimg" src="http://qr.liantu.com/api.php?text={{ page.url | prepend: site.url}}"/>
+  <img id="qrimg" src="https://mrxn.net/mrxnqrapi/api.php?data={{ page.url | prepend: site.url}}"/>
+  
   <a id="qr" href="javascript:;"><i class="fa fa-qrcode"></i></a>
   <a id="gotop" href="javascript:;"><i class="fa fa-arrow-up"></i></a>
   {% include script.html %}
