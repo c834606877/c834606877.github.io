@@ -147,7 +147,8 @@ function ajaxloadPage(url, push, getData){
 						jQuery('#' + ajaxcontent).css("left", "20000px");
 						jQuery('#' + ajaxcontent).show();
 						
-						document.getElementById(ajaxqrimg).src = 'http://qr.liantu.com/api.php?text=' + url ;
+//						document.getElementById(ajaxqrimg).src = 'http://qr.liantu.com/api.php?text=' + url ;
+						document.getElementById(ajaxqrimg).src = 'https://mrxn.net/mrxnqrapi/api.php?data=' + url ;
 
 
 						disqus_config = function () {
