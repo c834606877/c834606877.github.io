@@ -4,7 +4,10 @@
         <ul>
           {% for category in site.categories %}
           <li>
-              <a class="catelink" href="{{site.url}}/categories/{{category.first}}/">
+              <!-- <a class="catelink" href="{{site.url}}/categories/{{category.first}}/">
+                  {{ category.first }}&nbsp;<span class="count">[{{ category.last.size }}]</span>
+              </a> -->
+              <a class="catelink" href="{{site.url}}/cat/{{category.first}}/">
                   {{ category.first }}&nbsp;<span class="count">[{{ category.last.size }}]</span>
               </a>
           </li>
