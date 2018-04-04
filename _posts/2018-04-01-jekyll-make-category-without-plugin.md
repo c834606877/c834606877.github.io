@@ -70,6 +70,8 @@ cat: Linux
 
 此实现只需传入分类名无需带任何content，其它分类同样创建不同分类名文件，并传入分类名。
 
+此外，可通过添加`permalink:`参数自定义目录生成的链接位置。
+
 
 
 __三、自动创建分类页面__
@@ -80,7 +82,25 @@ __三、自动创建分类页面__
 
 首先获取到博客的分类列表，形成txt文档，每行一个。
 
-然后利用awk输出文件列表，较为简单，不再演示。
+在categories目录下创建bash程序`autogencat.sh`：
 
+```
+#!/bin/bash
 
+while read catname
+do
+	cp Linux.html $catname.html
+	sed -i "s/Linux/${catname}/g"  ${catname}.html
+done
+
+```
+
+添加执行权限并且执行：
+
+```
+chmod +x autogencat.sh
+./autogencat.sh < catlist.txt
+```
+
+程序会将Linux.html做为生成模板，复制生成其它分类文件，以后新增分类只需要更新catlist.txt目录列表，运行脚本即可。
 
