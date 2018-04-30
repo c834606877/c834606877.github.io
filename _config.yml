@@ -99,10 +99,14 @@ author:
   motto: "我很严肃的！"
 
 # SideBar
-song_id: "186820" #知心爱人 tencent
-song_name: "路过蜻蜓"
+song_id: "186453" # tencent
+song_name: "春夏秋冬"
 song_source: "wy"
-#song_source: "netease"
+
+# song_id: "186820" # tencent
+# song_name: "路过蜻蜓"
+# song_source: "qq"
+#source_type: wy(163),kg(kugou),qq(qqmusic)
 #xiami_id: "1775588636" # Sunrise Breeze
 #xiami_id: "1835292" # right here waitting
 #xiami_id: "1283283" # the sound of silence
