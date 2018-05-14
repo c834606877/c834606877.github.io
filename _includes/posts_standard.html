@@ -8,7 +8,7 @@
       <li><i class="fa fa-clock-o"></i> 最后编辑 {{ post.date | date: "%Y-%m-%d"}}</li>
       <li><i class="fa fa-pencil-square-o"></i>
           {% for category in post.categories %}
-            <a href="{{site.url}}/categories/{{category}}">{{category}}</a>
+            <a href="{{site.url}}/cat/{{category}}">{{category}}</a>
           {% endfor %}
       </li>
       <li><i class="fa fa-comments-o"></i> <a href="{{ post.url | prepend: site.url }}#post-comment"><span class="disqus-comment-count" data-disqus-url="{{ post.url | prepend: site.url }}"></span><span lang="join-count"   class="join-count"   data-url=""   data-sourceId=""></span> 评论</a></li>
