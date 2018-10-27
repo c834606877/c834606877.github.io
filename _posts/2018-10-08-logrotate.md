@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Linux下的是日志自动打包分割工具
+title: Linux下的日志自动打包分割工具
 
 categories:
 - Linux
