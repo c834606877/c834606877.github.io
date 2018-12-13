@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh_cn" {% if site.autospace %} class="han-la" {% endif %}> 
+
+<head>
+
+
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/bootstrap.min.css">
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/resume_yue.css">
+<style type="text/css">
+body
+{
+    height: 100%;
+    max-height: 100%;
+    font-family: "Hiragino Sans GB","Microsoft YaHei","微软雅黑",Georgia,tahoma,arial,simsun,"宋体";
+    font-size: 2.0rem;
+    line-height: 1.6em;
+    color: #3A4145;
+}
+
+html, body
+{
+    height: 100%;
+}
+
+.site-head
+{
+    position: relative;
+    display: table;
+    width: 100%;
+    height: 300px;
+    margin-bottom: 5rem;
+    text-align: center;
+    color: #fff;
+    background: #303538 no-repeat center center;
+    background-size: cover;
+}
+
+.site-head h1
+{
+    font-size: 36px; 
+    line-height: 40px;
+}
+
+.site-head .subtitle
+{
+    font-size: 24px;
+}
+
+.vertical
+{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.content
+{
+    max-width:768px;
+    margin-left: auto;
+    margin-right: auto;
+    padding:20px;
+    word-break:break-all;
+}
+
+.passbox
+{
+    text-align: center;
+}
+
+.pad40
+{
+    padding:40px;
+}
+
+.ngn
+{
+    /*padding:0px!important;*/
+    bottom: 0px; 
+}
+
+.passinput
+{
+    max-width: 300px;
+}
+
+.shadow-content
+{
+    display: none;
+}
+
+.action-bar
+{
+    position: fixed;
+    top:20px;
+    right:20px;
+    width:100px;
+    height:100px;
+    font-size: 12px;
+    text-align: right;
+}
+
+.action-bar img
+{
+    cursor: pointer;
+}
+
+.action-bar a,.editor-box .top a
+{
+    color:white;
+}
+
+.editor-box .top
+{
+    background:#303538 no-repeat center center; 
+    padding:20px;
+}
+
+.editor-box .top .title
+{
+    font-size: 18px;
+    line-height: 20px; 
+    color:white;
+}
+
+.editor-box .top .action
+{
+    text-align: right;
+}
+
+.editor-box .top .action a:hover
+{
+    color:#eee;
+}
+
+.editor-box .settings
+{
+    background-color: #f4f4f4;
+    padding:20px;
+}
+
+.editor-box .editor,.editor-box .preview
+{
+    padding:20px;
+}
+
+.editor-box .editor
+{
+    width: 100%;
+    height: 100%;
+    border: 0px;
+    border-right: 1px dashed #eee;
+}
+
+.editor-box .preview
+{
+    border: 0px;
+    width: 100%;
+    height: 100%;
+    border-right:1px dashed #eee;
+    font-size: 14px;
+    padding:10px;
+    overflow-y: scroll;
+}
+
+.editor-box .earea
+{
+    height:100%;
+}
+
+.editor-box *
+{
+  outline: none;  
+}
+
+.editor-box
+{
+    clear:both;
+    position: absolute;
+    top:0px;
+    height:100%;
+    width:100%;
+    overflow: hidden; 
+    width: 100vw;
+    height: 100vh;
+}
+
+
+</style>
+<script src="https://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>
+// ============
+function makepdf()
+{
+  //post('http://pdf.ftqq.com',{'title':$('#drtitle').html(),'subtitle':$('#drsubtitle').html(),'content':$('#cvcontent').html(),'pdfkey':'jobdeersocool'});
+  $("#hform [name=title]").val($('#drtitle').html());
+  $("#hform [name=subtitle]").val($('#drsubtitle').html());
+  $("#hform [name=content]").val($('#cvcontent').html());
+  $("#hform [name=pdfkey]").val('jobdeersocool');
+  $("#hform").submit();
+}
+</script>
+</head>
+
+
+<body>
+<div ng-view="" id="resume_body" class="ng-scope">  <header class="site-head ng-scope">
+    <div class="vertical">
+      <h1 id="drtitle" class="ng-binding">{{page.title}}</h1>
+      <p class="subtitle ng-binding" id="drsubtitle">{{page.subtitle}}</p>
+    </div> 
+  </header>  
+  <div class="content yue ng-binding ng-scope" id="cvcontent" ng-bind-html="resume.content | wizMarkdownFltr" ng-show="resume.show==1"><h1>说明</h1>
+<p>这是一个默认的程序员简历模板。点击右上方的「 <img src="http://cvbox.sinaapp.com/client/image/cog.png" alt="cog">  」图标可进入编辑状态。</p>
+
+<hr>
+{{ content }}
+
+</div>
+  <div class="action-bar hidden-xs ng-scope">
+  <a href="https://github.com/geekcompany/DeerResume"><img src="image/home.png"></a>  
+  &nbsp;&nbsp;&nbsp;<a href="#" onclick="makepdf()" title="PDF格式"><img src="image/book.png"></a>
+  <span ng-show="resume.local!=1" class="">&nbsp;&nbsp;&nbsp;<a ng-href="#/admin" href="#/admin"><img src="image/cog.png"></a></span>
+  </div> </div>
+<form action="http://pdf.ftqq.com" method="post" target="_blank" id="hform" class="ng-pristine ng-valid">
+    <input name="title" value="" type="hidden">
+    <input name="subtitle" value="" type="hidden">
+    <input name="content" value="" type="hidden">
+    <input name="pdfkey" value="jobdeersocool" type="hidden">
+</form>
+</body>
+
+
+</html>
