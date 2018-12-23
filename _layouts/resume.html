@@ -3,7 +3,7 @@
 
 <head>
 
-
+<title>{{page.title}} - 简历</title>
 <link rel="stylesheet" href="{{ site.baseurl }}/assets/bootstrap.min.css">
 <link rel="stylesheet" href="{{ site.baseurl }}/assets/resume_yue.css">
 <style type="text/css">
@@ -208,17 +208,20 @@ function makepdf()
       <p class="subtitle ng-binding" id="drsubtitle">{{page.subtitle}}</p>
     </div> 
   </header>  
-  <div class="content yue ng-binding ng-scope" id="cvcontent" ng-bind-html="resume.content | wizMarkdownFltr" ng-show="resume.show==1"><h1>说明</h1>
-<p>这是一个默认的程序员简历模板。点击右上方的「 <img src="http://cvbox.sinaapp.com/client/image/cog.png" alt="cog">  」图标可进入编辑状态。</p>
+  <div class="content yue ng-binding ng-scope" id="cvcontent" ng-bind-html="resume.content | wizMarkdownFltr" ng-show="resume.show==1">
 
-<hr>
+
 {{ content }}
 
 </div>
   <div class="action-bar hidden-xs ng-scope">
-  <a href="https://github.com/geekcompany/DeerResume"><img src="image/home.png"></a>  
-  &nbsp;&nbsp;&nbsp;<a href="#" onclick="makepdf()" title="PDF格式"><img src="image/book.png"></a>
-  <span ng-show="resume.local!=1" class="">&nbsp;&nbsp;&nbsp;<a ng-href="#/admin" href="#/admin"><img src="image/cog.png"></a></span>
+  <a href="https://github.com/geekcompany/DeerResume">
+    <img src="{{ site.baseurl }}/assets/images/resume/home.png">
+  </a>  
+  &nbsp;&nbsp;&nbsp;
+  <a href="#" onclick="makepdf()" title="PDF格式">PDF
+    <img src="{{ site.baseurl }}/assets/images/resume/book.png">
+  </a>
   </div> </div>
 <form action="http://pdf.ftqq.com" method="post" target="_blank" id="hform" class="ng-pristine ng-valid">
     <input name="title" value="" type="hidden">
