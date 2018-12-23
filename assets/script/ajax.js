@@ -3,7 +3,7 @@
 var ajaxcontent = 'content';
 var ajaxsearch_class = 'searchform';
 var ajaxqrimg = 'qrimg';
-var ajaxignore_string = new String('#, /wp-, .pdf, .zip, .rar, /share, javascript'); 
+var ajaxignore_string = new String('#, /wp-, .pdf, .zip, .rar, /share, /resume, javascript'); 
 var ajaxignore = ajaxignore_string.split(', ');
 
 var ajaxtrack_analytics = false
