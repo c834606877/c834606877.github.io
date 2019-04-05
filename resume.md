@@ -2,7 +2,7 @@
 layout: resume
 permalink: /resume/
 title: 陈子炎
-subtitle: 华东师范大学/硕士/在读/嵌入式AI/C/
+subtitle: 华东师范大学/硕士/在读/嵌入式AI/C
 ---
 
 # 联系方式
