@@ -101,7 +101,7 @@ author:
 
 
 
-###　三、刷入Padavan
+### 三、刷入Padavan
 
 刷入了breed之后就可以对路由器为所欲为了
 

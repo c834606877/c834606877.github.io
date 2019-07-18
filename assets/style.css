@@ -41,7 +41,7 @@ audio, canvas, video {
 	outline: 0;
 }
 
-address, caption, cite, code, dfn,em, strong, th, var, optgroup {
+address, caption, cite, code, dfn,em, /*strong,*/ th, var, optgroup {
 	font-style: normal;
 	font-weight: normal;
 }
