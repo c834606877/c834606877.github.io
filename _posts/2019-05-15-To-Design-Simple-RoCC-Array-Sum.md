@@ -27,8 +27,6 @@ RoCC加速器模块是由LazyRoCC类继承而来，该模块包含一个由LazyR
 
 ```scala
 
-
-
 class ArraySumCoP(opcodes: OpcodeSet)(implicit p: Parameters) extends LazyRoCC(opcodes) {
   override lazy val module = new ArraySumCoPImp(this)
 }

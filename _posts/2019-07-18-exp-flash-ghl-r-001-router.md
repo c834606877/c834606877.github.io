@@ -17,8 +17,9 @@ author:
 
  
 
->> 一入恩山深似海，从此节操是路人。。。
->> 本文纯属闲扯，用到的方法恩山都有，但没有一个路径完全整合的方法，这里记录一下。
+> 一入恩山深似海，从此节操是路人。。。
+>
+> 本文纯属闲扯，用到的方法恩山都有，但没有一个路径完全整合的方法，这里记录一下。
 
 
 
@@ -58,11 +59,12 @@ author:
 
 接下来准备好工具以及要刷的固件。
 
-1.  tftp服务器软件：[tftpd64](/post_res/2019-07-18-exp-flash-ghl-r-001-router.assets/tftpd64.462.zip)
-2.  Http服务器软件: [HFS](/post_res/exp-flash-ghl-r-001-router.assets/Http+File+Server+2.3i+Build+297.zip)
-3.  [breed](/post_res/2019-07-18-exp-flash-ghl-r-001-router.assets/breed-mt7621-pbr-m1.bin)
-4.  歌华链1.21固件：[1.21固件](/post_res/2019-07-18-exp-flash-ghl-r-001-router.assets/GCloud_gh-a1_Build20180404_v1.21.bin)
-5.  Padavan ：[Padavan](/post_res/2019-07-18-exp-flash-ghl-r-001-router.assets/MT7621_7603_7612_512M_3.4.3.9-099.trx)
+1.  tftp服务器软件：[tftpd64](/post_res/2019-07-18-exp-flash-ghl-r-001-router.assets/tftpd64.462.zip){:target="_blank"}
+2.  Http服务器软件: [HFS](/post_res/exp-flash-ghl-r-001-router.assets/Http+File+Server+2.3i+Build+297.zip){:target="_blank"}
+3.  [breed](/post_res/2019-07-18-exp-flash-ghl-r-001-router.assets/breed-mt7621-pbr-m1.bin){:target="_blank"}
+4.  歌华链1.21固件：[1.21固件](/post_res/2019-07-18-exp-flash-ghl-r-001-router.assets/GCloud_gh-a1_Build20180404_v1.21.bin){:target="_blank"}
+5.  Padavan ：[Padavan](/post_res/2019-07-18-exp-flash-ghl-r-001-router.assets/MT7621_7603_7612_512M_3.4.3.9-099.trx){:target="_blank"}
+
 
 
 

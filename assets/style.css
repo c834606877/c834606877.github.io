@@ -252,7 +252,7 @@ html.han-la ul > hanla {
 
 code,kbd,pre,samp {
 	font-size: 1em;
-	font-family: simsun, monaco, monospace,serif
+	font-family: Monaco, SimSun, monospace, serif
 }
 
 code {
