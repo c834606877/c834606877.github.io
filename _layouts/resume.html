@@ -203,10 +203,10 @@ function makepdf()
 
 <body>
 <div ng-view="" id="resume_body" class="ng-scope">  <header class="site-head ng-scope">
-    <div class="vertical" style="text-align: right;">
-        <img style="margin-right: 20px; box-shadow: 4px 3px 20px 1px black;" src="{{ site.baseurl }}/assets/images/resume/myphoto_small.png" />
+    <div class="vertical" style="text-align: right; width: 38%;">
+        <img style="margin-right: 20px; box-shadow: 4px 3px 20px 1px black; height: 180px; " src="{{ site.baseurl }}/assets/images/resume/myphoto_small.png" />
     </div>
-    <div class="vertical">
+    <div class="vertical" style="text-align: left;">
       <h1 id="drtitle" class="ng-binding">{{page.title}}</h1>
       <p class="subtitle ng-binding" id="drsubtitle">{{page.subtitle}}</p>
     </div> 
