@@ -193,7 +193,7 @@ function makepdf()
   //post('http://pdf.ftqq.com',{'title':$('#drtitle').html(),'subtitle':$('#drsubtitle').html(),'content':$('#cvcontent').html(),'pdfkey':'jobdeersocool'});
   $("#hform [name=title]").val($('#drtitle').html());
   $("#hform [name=subtitle]").val($('#drsubtitle').html());
-  $("#hform [name=content]").val($('#cvcontent').html());
+  $("#hform [name=content]").val($('#resume_body').html());
   $("#hform [name=pdfkey]").val('ftqqsocool');
   $("#hform").submit();
 }
@@ -203,6 +203,9 @@ function makepdf()
 
 <body>
 <div ng-view="" id="resume_body" class="ng-scope">  <header class="site-head ng-scope">
+    <div class="vertical" style="text-align: right;">
+        <img style="margin-right: 20px; box-shadow: 4px 3px 20px 1px black;" src="{{ site.baseurl }}/assets/images/resume/myphoto_small.png" />
+    </div>
     <div class="vertical">
       <h1 id="drtitle" class="ng-binding">{{page.title}}</h1>
       <p class="subtitle ng-binding" id="drsubtitle">{{page.subtitle}}</p>
