@@ -204,11 +204,11 @@ function makepdf()
 <body>
 <div ng-view="" id="resume_body" class="ng-scope">  <header class="site-head ng-scope">
     <div class="vertical" style="text-align: right; width: 38%;">
-        <img style="margin-right: 20px; box-shadow: 4px 3px 20px 1px black; height: 180px; " src="{{ site.baseurl }}/assets/images/resume/myphoto_small.png" />
+        <img style="margin-right: 20px; box-shadow: 4px 3px 20px 1px black; height: 180px; border: 0px;" src="http://mypre.cn/assets/images/resume/myphoto_small.png" />
     </div>
     <div class="vertical" style="text-align: left;">
-      <h1 id="drtitle" class="ng-binding">{{page.title}}</h1>
-      <p class="subtitle ng-binding" id="drsubtitle">{{page.subtitle}}</p>
+      <h1 id="drtitle" class="ng-binding" style="color: #fff;">{{page.title}}</h1>
+      <p class="subtitle ng-binding" id="drsubtitle"  style="color: #fff;">{{page.subtitle}}</p>
     </div> 
   </header>  
   <div class="content yue ng-binding ng-scope" id="cvcontent" ng-bind-html="resume.content | wizMarkdownFltr" ng-show="resume.show==1">
