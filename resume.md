@@ -28,7 +28,7 @@ subtitle: 华东师范大学/硕士/在读/嵌入式AI/C
 
 __研究生__：
 
-- 基于Cotex-M4F处理器核的嵌入式唤醒词系统【包括云端训练、设备端实现】
+- 基于Cotex-M4F处理器核的语音唤醒系统【包括训练、设备端实现】
 
   - 系统使用MFCC做为特征向量输入，DNN做为识别模型，使用tensorflow进行模型训练, 并在Cotex-M4F 200Mhz处理器核上面运行。
   - 系统tensorflow测试正向样本识别率为91%左右，每100小时误唤醒20次左右。
@@ -145,8 +145,6 @@ __本科__：
 ### you can contact me by the way of below:
 <hr>
 
->
-> 网络昵称：LanBing 蓝冰_Iziy 
 >
 > 电子邮件：iziy【AT】mypre.cn
 >
