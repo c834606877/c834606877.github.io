@@ -37,9 +37,9 @@ __研究生__：
 - 基于RISC-V处理器核的语音唤醒混合架构研究与实现【毕业论文】
 
   - 在Arty-35T FPGA开发板上跑通RocketChip的RISC-V核并利用ROCC接口开发FFT，矩阵处理硬件加速模块。
-  - 并尝试将嵌入式唤醒词系统整合到FPGA上。
+  - 并将嵌入式唤醒词系统整合到FPGA上。
 
-- 在Cotex-M架构中移植音频相关算法：VAD、Noise Suppression、AEC。
+- 在Cotex-M架构中移植WebRTC音频相关算法：VAD、Noise Suppression、AEC。
 - 在类树莓派上实现6麦阵列DoA(声源定位)算法
 - 在Cotex-M架构上实现声波配网
 - 在Cotex-M实现特定人关键词识别（MFCC+DTW）
