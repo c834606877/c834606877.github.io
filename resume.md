@@ -93,7 +93,7 @@ __2018,07 ~ 2018,09__
 
 __2018,09 ~ 至今__
 
-1. 研究RiscV处理器核，在Arty-35T FPGA开发析上跑通RiscV RocketChip以及ROCC和FFT DSP。
+1. 研究RiscV处理器核，在Arty-35T FPGA开发板上跑通RiscV RocketChip以及ROCC和FFT DSP。
    一些学习经历在博客中有提及。
 2. 为庆科公司继续提供一些研发性工作的支持，比如一种超低成本的PWM语音实现等。
 3. 基于RealTek的AmebaD芯片开发一些语音处理的工具。
@@ -105,13 +105,13 @@ __2018,09 ~ 至今__
 
 以下均为我在校期间了解并使用过的技能（熟悉程度由前到后）
 
-- 编程语言：C / Python / C++
+- 编程语言：C / Python / C++ / scala
 - Web开发： Flask / Bootstrap / Jekyll
 - 数据库：SQLite / SQLAlchemy(ORMs)
-- 操作系统： Ubuntu / ArchLinux / Centos / Fedora 
+- 操作系统： Ubuntu / ArchLinux / Centos 
 - 安全：OD / IDA / x64dbg
-- AI：Tensorflows
-- MCU：STM32-f103 f412 TI-CC3220SF MSP432
+- AI：Tensorflow
+- MCU：STM32-f103 f412 TI-CC3220SF MSP432 AmebaD ARM968-E
 
 ----
 
@@ -123,7 +123,8 @@ __研究生__:
 3. 获2018年全国大学生物联网设计竞赛(TI杯)  华东赛区 一等奖
 4. 获2018年全国大学生物联网设计竞赛(TI杯)  全国一等奖
 5. 获2019年全国大学生物联网设计竞赛(华为杯)  华东赛区 一等奖
-6. 获华东师范大学志愿者服务证书
+6. 获2019年全国大学生物联网设计竞赛(华为杯) 全国二等奖
+7. 获华东师范大学志愿者服务证书
 
 
 __本科__：
