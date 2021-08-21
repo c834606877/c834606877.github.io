@@ -40,6 +40,7 @@ discourse/containers/app.yml
 
 ```
 gem sources --add https://gems.ruby-china.com/ --remove https://rubygems.org/
+gem update bundler
 ```
 
 对于bundle可以使用`bundle config mirror.https://rubygems.org https://gems.ruby-china.com`来添加镜像网站。
@@ -80,39 +81,7 @@ index 28fb22d..bb0010c 100644
 
    - exec:
 ...skipping...
-diff --git a/templates/web.template.yml b/templates/web.template.yml
-index 28fb22d..bb0010c 100644
---- a/templates/web.template.yml
-+++ b/templates/web.template.yml
-@@ -86,6 +86,9 @@ run:
-       cd: $home
-       hook: code
-       cmd:
-+        - git remote -v
-+        - git remote set-url origin https://github.com.cnpmjs.org/discourse/discourse.git
-+        - gem sources --add https://gems.ruby-china.com/ --remove https://rubygems.org/
-         - git reset --hard
-         - git clean -f
-         - git remote set-branches --add origin master
-@@ -145,6 +148,7 @@ run:
-       hook: web
-       cmd:
-         # ensure we are on latest bundler
-+        - gem sources --add https://gems.ruby-china.com/ --remove https://rubygems.org/
-         - gem update bundler
-         - find $home ! -user discourse -exec chown discourse {} \+
 
-@@ -152,6 +156,9 @@ run:
-       cd: $home
-       hook: bundle_exec
-       cmd:
-+        - su discourse -c 'gem sources --add https://gems.ruby-china.com/ --remove https://rubygems.org/'
-+        - su discourse -c 'gem update bundler'
-+        - su discourse -c 'bundle config mirror.https://rubygems.org https://gems.ruby-china.com'
-         - su discourse -c 'bundle install --deployment --retry 3 --jobs 4 --verbose --without test developme
-
-   - exec:
-~
 ```
 
 
