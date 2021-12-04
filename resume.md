@@ -7,9 +7,7 @@ subtitle: 华东师范大学/硕士/在读/嵌入式/C
 
 # 联系方式
 
-- 手机：180-1859-1659
 - Email: iziy【AT】MyPre.Cn
-- QQ: 834606877
 
 ----
 
@@ -151,21 +149,3 @@ __本科__：
 
 此简历于 _2020/5/14_ 最后更新。
 
-
-
-
-### you can contact me by the way of below:
-<hr>
-
->
-> 电子邮件：iziy【AT】mypre.cn
->
-> 联系电话：15979400947
->
-> QQ：834606877 
->
-> 新浪微博：http://weibo.com/u/2717952951
->
-> Home：江西省萍乡市
->
-> For Now：ShangHai
