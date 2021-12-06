@@ -46,7 +46,7 @@ excerpt_separator: "<!--more-->"
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and baseurl as '/child/'
 url: "https://mypre.cn"
 baseurl: ""
-permalink: /:year/:month/:day/:title
+permalink: /:year/:month/:day/:title/
 
 # CSS
 ## 中英文间自动添加空格
