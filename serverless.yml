@@ -1,0 +1,45 @@
+# serverless.yml
+
+component: website
+name: lanbing_website
+org: dev
+app: websiteApp
+stage: dev
+
+inputs:
+  src:
+    src: ./_site
+    index: index.html
+    error: 404.html
+  region: ap-shanghai
+  bucketName: serverless-page-bucket-2022
+  protocol: https
+  replace: true # 是否覆盖式部署
+  ignoreHtmlExt: true # 是否是否忽略 html 扩展名，默认 false
+  disableErrorStatus: false # 是否禁用错误码，默认 false
+  hosts:
+    - host: mypre.cn
+      async: true # 是否同步等待 CDN 配置。配置为 false 时，参数 autoRefresh 自动刷新才会生效，如果关联多域名时，为防止超时建议配置为 true。
+      area: mainland
+      autoRefresh: true #开启自动 CDN 刷新，用于快速更新和同步加速域名中展示的站点内容
+      onlyRefresh: false #建议首次部署后，将此参数配置为 true，即忽略其他 CDN 配置，只进行刷新操作
+      https:
+        switch: on
+        http2: on
+        certInfo:
+          certId: 'n1R2lkAf'
+      referer:
+        switch: off
+        refererRules:
+          - ruleType: all
+            rulePaths:
+              - '*'
+            refererType: blacklist
+            allowEmpty: true
+            referers:
+              - 'mypre.cn'
+              - '*.getblog.cn'
+      forceRedirect:
+        switch: on
+        redirectType: https
+        redirectStatusCode: 301

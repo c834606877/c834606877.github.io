@@ -21,6 +21,8 @@ push:
 	git commit -m "pushed by make"
 	git push
 
+upload:
+	serverless deploy
 
 clean:
 	rm -rf ${temp-folder}
