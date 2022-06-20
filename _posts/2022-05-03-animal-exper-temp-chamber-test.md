@@ -22,17 +22,17 @@ author:
 
 方案主体框架如下：
 
-![system_flow](/2022-05-03-animal-exper-temp-chamber-test.assets/system_flow.png)
+![system_flow](/post_res/2022-05-03-animal-exper-temp-chamber-test.assets/system_flow.png)
 
 
 
 一些国内用户的使用范例：
 
-![example_all](/2022-05-03-animal-exper-temp-chamber-test.assets/example_all.png)
+![example_all](/post_res/2022-05-03-animal-exper-temp-chamber-test.assets/example_all.png)
 
-![view_2](/2022-05-03-animal-exper-temp-chamber-test.assets/view_2.png)
+![view_2](/post_res/2022-05-03-animal-exper-temp-chamber-test.assets/view_2.png)
 
-![example_view](/2022-05-03-animal-exper-temp-chamber-test.assets/example_view.jpg)
+![example_view](/post_res/2022-05-03-animal-exper-temp-chamber-test.assets/example_view.jpg)
 
 类似竞品论文参考：
 
