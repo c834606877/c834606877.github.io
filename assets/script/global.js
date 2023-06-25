@@ -407,7 +407,7 @@ function update_qrimage() {
     mPosX: 0.5,
     mPosY: 0.5,
 
-    label: 'This Page',
+    label: 'This Page URL',
     fontname: 'Ubuntu Mono',
     fontcolor: '#13B7ED',
 
