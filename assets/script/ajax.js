@@ -149,7 +149,8 @@ function ajaxloadPage(url, push, getData){
 						
 //						document.getElementById(ajaxqrimg).src = 'http://qr.liantu.com/api.php?text=' + url ;
 						//document.getElementById(ajaxqrimg).src = 'https://mrxn.net/mrxnqrapi/api.php?data=' + url ;
-						document.getElementById(ajaxqrimg).src = 'https://tool.kd128.com/qrcode?water=0.8&text=' + url ;
+						//document.getElementById(ajaxqrimg).src = 'https://tool.kd128.com/qrcode?water=0.8&text=' + url ;
+						update_qrimage();
 
 
 						disqus_config = function () {

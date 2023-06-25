@@ -41,8 +41,11 @@
     {% include footer.html%}
   </div><!--./warp-->
 
-  <img id="qrimg" src="https://tool.kd128.com/qrcode?water=0.7&text={{ page.url | prepend: site.url}}"/>
   
+  <div id="qrimg-wrap">
+  <!-- <img id="qrimg" src="https://tool.kd128.com/qrcode?water=0.7&text={{ page.url | prepend: site.url}}"/> -->
+  <!-- <img id="qrimg" src=""> -->
+  </div>
   <a id="qr" href="javascript:;"><i class="fa fa-qrcode"></i></a>
   <a id="gotop" href="javascript:;"><i class="fa fa-arrow-up"></i></a>
   {% include script.html %}
