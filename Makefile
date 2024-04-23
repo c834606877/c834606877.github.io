@@ -21,7 +21,11 @@ push:
 	git commit -m "pushed by make"
 	git push
 
+serverless:
+	jekyll build
+	scf deploy
 
 clean:
 	rm -rf ${temp-folder}
+
 

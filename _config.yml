@@ -38,7 +38,7 @@ description: "这里是Iziy蓝冰的个人博客MyPress，记录着Iziy蓝冰的
 keywords: "LanBing, MyPress, iziy, iziyix"
 notice: "一个人的角落,也许并没人会看到这里~~ 祝福你,工作顺心,学习快乐~"
 notice_bottom: "notice_BOTTOM"
-icpsn: "赣ICP备18003024号"
+icpsn: "赣ICP备18003024号-1"
 
 locale: "zh_CN"
 excerpt_separator: "<!--more-->"
@@ -46,7 +46,7 @@ excerpt_separator: "<!--more-->"
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and baseurl as '/child/'
 url: "https://mypre.cn"
 baseurl: ""
-permalink: /:year/:month/:day/:title
+permalink: /:year/:month/:day/:title/
 
 # CSS
 ## 中英文间自动添加空格
@@ -106,7 +106,7 @@ author:
 song_id: "1818488109" 
 song_name: "永恒的回忆(杀破狼 演奏曲)"
 song_source: "wy"
-
+song_img: "/assets/images/song.jpg"
 
 # song_id: "186453" 
 # song_name: "春夏秋冬"
@@ -176,6 +176,7 @@ uyan:
 
 free_comment:
   enable: true
+  serverUrl: "https://commento.getblog.cn"
   
 #---------------------------------------------------------------
 # Site share setting

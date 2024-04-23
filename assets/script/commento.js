@@ -95,15 +95,15 @@
 
     function getColor(name) {
         var colors = [
-            "#c10000",
-            "#c16a00",
-            "#005b0c",
-            "#009385",
-            "#006192",
-            "#3a00a8",
-            "#8e00a8",
-            "#e50076",
-            "#383838",
+            "#7CFC00",
+            "#00CED1",
+            "#8FBC8F",
+            "#66CDAA",
+            "#48D1CC",
+            "#F5DEB3",
+            "#EEE8AA",
+            "#FFC0CB",
+            "#4682B4",
         ];
 
         var total = 0;
@@ -244,7 +244,8 @@
     var CARD_CLASS = 'card';
     var CARD_HEADER_CLASS = 'card-header';
     var CARD_AVATAR_CLASS = 'card-avatar';
-    var CARD_NAME_CLASS = 'name-header';
+    //var CARD_NAME_CLASS = 'name-header';
+    var CARD_NAME_CLASS = 'card-name';
     var CARD_OPTIONS_CLASS = 'card-options';
     var CARD_SUBTITLE_CLASS = 'card-subtitle';
     var CARD_BODY_CLASS = 'card-body';
@@ -327,10 +328,10 @@
             collapse.id = COLLAPSE_BTN_ID + comment.id;
             contents.id = CONTENTS_ID + comment.id;
 
-            card.style["borderLeft"] = "3px solid " + color;
+            card.style["borderLeft"] = "1px solid " + color;
             name.innerHTML = comment.name;
             avatar.style["background"] = color;
-            avatar.style["boxShadow"] = "0px 0px 0px 2px " + color;
+            avatar.style["boxShadow"] = "0px 0px 0px 1px " + color;
             avatar.innerHTML = comment.name[0].toUpperCase();
             body.innerHTML = _showdownConverter.makeHtml(comment.comment);
             subtitle.innerHTML = timeDifference(Date.now(), Date.parse(comment.timestamp));
@@ -517,8 +518,9 @@
         addClass(submit, SUBMIT_JS);
 
         textarea.oninput = autoExpander(textarea);
+        setAttr(textarea, "placeholder", "Content ...");
 
-        setAttr(name, "placeholder", "Name");
+        setAttr(name, "placeholder", "Name *");
 
         append($body, textarea);
         append(otherFields, name);
@@ -609,9 +611,11 @@
             addClass(button, POST_PRIMARY_BTN_CLASS);
             addClass(honeypot, HIDDEN_CLASS);
 
-            setAttr(name, "placeholder", "Name");
+            setAttr(name, "placeholder", "Name *");
 
             textarea.oninput = autoExpander(textarea);
+
+            setAttr(textarea, "placeholder", "Content ...");
 
             addEvent(button, 'click', _postRoot);
             addEvent(name, 'keypress', function(e) { if (e.keyCode === 13) _postRoot() });

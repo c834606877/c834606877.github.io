@@ -2123,6 +2123,15 @@ thead tr {
 	color: #333;
 }
 
+#footer .right {
+	margin-top:3px;
+	color:#888;
+	text-align:center;
+	font-size:12px;
+	font-family:Palatino,Optima,Georgia,serif;
+	font-style:italic;
+}
+
 #footer a {
 	color: #333;
 	margin-bottom: 1px;

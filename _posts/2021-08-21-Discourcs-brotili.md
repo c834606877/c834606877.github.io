@@ -14,9 +14,9 @@ author:
 ---
 
 
-上文讲述了!(在国内环境下加速Discourse的部署)[/2021/02/17/Discourcs-setup-on-cvm-ecs]过程。
+上文讲述了[在国内环境下加速Discourse的部署](/2021/02/17/Discourcs-setup-on-cvm-ecs)过程。
 
-Discourse官方并不建议在同一主机上部署多个站点，但也提供了方案：!(Running other websites on the same machine as Discourse)[https://meta.discourse.org/t/running-other-websites-on-the-same-machine-as-discourse/17247]。
+Discourse官方并不建议在同一主机上部署多个站点，但也提供了方案：[Running other websites on the same machine as Discourse](https://meta.discourse.org/t/running-other-websites-on-the-same-machine-as-discourse/17247)。
 
 按照官方的提供方案部署，通常可以正常将Discourse运行在standlone模式下，再通过Nginx反代访问。https的实现通过certbot也可以简单完成。
 
@@ -61,7 +61,7 @@ server {
 
 其中，需要注意的是，X-Forwarded-Proto用于将前端nginx接收到的请求ssl/no_ssl类型传递到后端，后端根据https或者是http生成包含不同静态资源链接的内容.
 
-在一次今年4月的一次更新中，Discourse社区的!(一次改动)[https://review.discourse.org/t/feature-remove-compress-brotli-optional-behavior/2786] 决定，只要前端连接为https，后端则会__无条件__使用brotli压缩数据并返回内容。返回的Header包含 `Content-Encoding: br`。
+在一次今年4月的一次更新中，Discourse社区的[一次改动](https://review.discourse.org/t/feature-remove-compress-brotli-optional-behavior/2786) 决定，只要前端连接为https，后端则会__无条件__使用brotli压缩数据并返回内容。返回的Header包含 `Content-Encoding: br`。
 
 Brotli是一种专门为http协议优化过的压缩方式，比gzip压缩率提升20%左右。虽然brotli算法在实际使用中已经存在五六年多了，主流浏览器早已支持，也相当成熟。
 浏览器在访问https页面时，通常会在请求header中包含：`Accept-Encoding: gzip, deflate, br`，br即brotli。
