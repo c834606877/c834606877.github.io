@@ -176,6 +176,7 @@ uyan:
 
 free_comment:
   enable: true
+  serverUrl: "https://commento.getblog.cn"
   
 #---------------------------------------------------------------
 # Site share setting

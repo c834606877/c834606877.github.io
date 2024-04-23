@@ -23,7 +23,7 @@ push:
 
 serverless:
 	jekyll build
-	serverless deploy
+	scf deploy
 
 clean:
 	rm -rf ${temp-folder}

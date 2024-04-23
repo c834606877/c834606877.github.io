@@ -238,8 +238,9 @@ function ajaxreload_code() {
 	{% endif %}
 
 	{% if site.free_comment.enable %}
-	    Commento.init();
+	    Commento.init({serverUrl: "{{site.free_comment.serverUrl}}"});
 	{% endif %}
+
 	{% if site.cloudtie.enable %}
     	var yunManualLoad = true;
     	var yunTieProductKey = "{{site.cloudtie.productKey}}";

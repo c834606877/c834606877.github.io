@@ -4,3 +4,4 @@ _site
 .env
 .jekyll-cache
 */.DS_Store
+*/._.DS_Store
