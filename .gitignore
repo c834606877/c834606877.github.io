@@ -3,5 +3,7 @@ _site
 .jekyll-metadata
 .env
 .jekyll-cache
+._.DS_Store
+.DS_Store
 */.DS_Store
 */._.DS_Store
