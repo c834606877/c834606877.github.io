@@ -196,3 +196,7 @@ baidu_analysis:
 google_analysus:
   enable: false
   token: "your google analysis token"
+
+# support mermaid block, use {% mermaid|endmermaid %}
+mermaid:
+  src: 'https://cdn.staticfile.net/mermaid/10.7.0/mermaid.min.js'
